@@ -11,5 +11,6 @@
     "strict": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true
-  }
+  },
+  "include": ["src/**/*.ts"]
 }
