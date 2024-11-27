@@ -1,0 +1,11 @@
+{
+  "biome.enabled": true,
+  "deno.enable": false,
+  "editor.defaultFormatter": "biomejs.biome",
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  }
+}
