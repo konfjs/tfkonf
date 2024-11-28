@@ -26,7 +26,7 @@ export abstract class TerraformResource {
          * The name of the resource. It can be omitted for some block types.
          * @example "my_service_account"
          */
-        readonly name?: string,
+        readonly resourceName?: string,
         /**
          * The type of the resource. It can be omitted for some block types.
          * @example "google_service_account"
@@ -62,9 +62,9 @@ export abstract class TerraformResource {
         switch (this.blockType) {
             case 'resource':
             case 'data':
-                return `${this.blockType} "${this.resourceType}" "${this.name}" {\n${attributes}\n}`;
+                return `${this.blockType} "${this.resourceType}" "${this.resourceName}" {\n${attributes}\n}`;
             case 'module':
-                return `${this.blockType} "${this.name}" {\n${attributes}\n}`;
+                return `${this.blockType} "${this.resourceName}" {\n${attributes}\n}`;
             case 'terraform':
             case 'import':
             case 'check':
