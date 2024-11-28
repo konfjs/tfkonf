@@ -1,4 +1,5 @@
 import * as t from '@babel/types';
+import type { Block } from './schema.js';
 import { toPascalCase } from './utils.js';
 
 function constructorParams(className: string): t.Identifier[] {
@@ -7,39 +8,45 @@ function constructorParams(className: string): t.Identifier[] {
         t.tsTypeReference(t.identifier('TerraformConfig')),
     );
 
-    const nameParam = t.identifier('name');
-    nameParam.typeAnnotation = t.tsTypeAnnotation(t.tsStringKeyword());
+    const resourceNameParam = t.identifier('resourceName');
+    resourceNameParam.typeAnnotation = t.tsTypeAnnotation(t.tsStringKeyword());
 
     const argsParam = t.identifier('args');
     argsParam.typeAnnotation = t.tsTypeAnnotation(
         t.tsTypeReference(t.identifier(`${toPascalCase(className)}Args`)),
     );
-    return [configParam, nameParam, argsParam];
+    return [configParam, resourceNameParam, argsParam];
 }
 
-export function generateClassDeclaration(className: string): t.ExportNamedDeclaration {
-    return t.exportNamedDeclaration(
-        t.classDeclaration(
-            t.identifier(className),
-            t.identifier('TerraformResource'),
-            t.classBody([
-                t.classMethod(
-                    'constructor',
-                    t.identifier('constructor'),
-                    constructorParams(className),
-                    t.blockStatement([
-                        t.expressionStatement(
-                            t.callExpression(t.super(), [
-                                t.identifier('config'),
-                                t.stringLiteral('resource'),
-                                t.identifier('args'),
-                                t.identifier('name'),
-                                t.stringLiteral(className),
-                            ]),
-                        ),
+export function generateClassDeclaration(ast: t.Program, className: string, block: Block) {
+    const classBody = t.classBody([]);
+
+    classBody.body.push(
+        t.classMethod(
+            'constructor',
+            t.identifier('constructor'),
+            constructorParams(className),
+            t.blockStatement([
+                t.expressionStatement(
+                    t.callExpression(t.super(), [
+                        t.identifier('config'),
+                        t.stringLiteral('resource'),
+                        t.identifier('args'),
+                        t.identifier('resourceName'),
+                        t.stringLiteral(className),
                     ]),
                 ),
             ]),
+        ),
+    );
+
+    ast.body.push(
+        t.exportNamedDeclaration(
+            t.classDeclaration(
+                t.identifier(className),
+                t.identifier('TerraformResource'),
+                classBody,
+            ),
         ),
     );
 }
