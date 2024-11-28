@@ -1,4 +1,4 @@
-import { TerraformConfig } from './config';
+import { TerraformConfig } from './config.js';
 
 /**
  * Represents a Terraform resource.

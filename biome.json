@@ -3,7 +3,8 @@
   "files": {
     "ignoreUnknown": false,
     "ignore": [
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "dist/**/*"
     ],
     "maxSize": 100000000
   },
