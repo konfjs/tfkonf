@@ -1,65 +1,64 @@
 import * as t from '@babel/types';
 import chalk from 'chalk';
-import type { Attribute, Block } from './schema.js';
+import type { Attribute, AttributeType, Block } from './schema.js';
 import { toPascalCase } from './utils.js';
 
-// TODO: Handle all attribute types
-function getTSType(attribute: Attribute): t.TSType {
-    if (Array.isArray(attribute.type)) {
-        if (attribute.type.length === 2) {
-            if (attribute.type[0] === 'list' || attribute.type[0] === 'set') {
-                if (attribute.type[1] === 'string') {
-                    return t.tsArrayType(t.tsStringKeyword());
-                }
-                if (attribute.type[1] === 'number') {
-                    return t.tsArrayType(t.tsNumberKeyword());
-                }
-            }
-            if (attribute.type[0] === 'map') {
-                if (attribute.type[1] === 'string') {
-                    return t.tsTypeLiteral([
-                        t.tsIndexSignature(
-                            [t.identifier('key: string')],
-                            t.tsTypeAnnotation(t.tsStringKeyword()),
-                        ),
-                    ]);
-                }
-                if (attribute.type[1] === 'number') {
-                    return t.tsTypeLiteral([
-                        t.tsIndexSignature(
-                            [t.identifier('key: string')],
-                            t.tsTypeAnnotation(t.tsNumberKeyword()),
-                        ),
-                    ]);
-                }
-            }
+/**
+ * Array's first element is always "list", "set" or "map".
+ * jq '[.[] | select(type == "array")[0]] | unique' types.json
+ */
+function getListType(type: AttributeType): t.TSType {
+    if (type[0] === 'list' || type[0] === 'set') {
+        if (type[1] === 'string') {
+            return t.tsArrayType(t.tsStringKeyword());
+        }
+        if (type[1] === 'number') {
+            return t.tsArrayType(t.tsNumberKeyword());
         }
     }
+    if (type[0] === 'map') {
+        let mapType: t.TSType = t.tsAnyKeyword();
+        if (type[1] === 'string') {
+            mapType = t.tsStringKeyword();
+        }
+        if (type[1] === 'number') {
+            mapType = t.tsNumberKeyword();
+        }
+        return t.tsTypeLiteral([
+            t.tsIndexSignature([t.identifier('key: string')], t.tsTypeAnnotation(mapType)),
+        ]);
+    }
+    /**
+     * Unreachable code, but it's here to make TypeScript happy.
+     */
+    return t.tsArrayType(t.tsAnyKeyword());
+}
 
-    switch (attribute.type) {
+/**
+ * Extract all the types from the providers.json file.
+ * jq '[.. | select(type == "object" and has("type") and (.type | type != "object" )) | .type] | unique' providers.json > types.json
+ *
+ * Type array has always the same length of 2. The second element can be N number of nested types.
+ * jq '[.[] | select(type == "array") | length] | unique' types.json
+ *
+ * It seems attribute type is either "bool", "number", "string" or "array".
+ * jq '.[] | select(type != "array")' types.json
+ */
+function getTSType(attr: Attribute): t.TSType {
+    if (Array.isArray(attr.type) && attr.type.length === 2) {
+        return getListType(attr.type);
+    }
+
+    switch (attr.type) {
         case 'string':
             return t.tsStringKeyword();
         case 'number':
             return t.tsNumberKeyword();
         case 'bool':
             return t.tsBooleanKeyword();
-        case 'list':
-        case 'tuple':
-        case 'set':
-            return t.tsArrayType(t.tsAnyKeyword());
-        case 'map':
-        case 'object':
-            return t.tsTypeLiteral([
-                t.tsIndexSignature(
-                    [t.identifier('key: string')],
-                    t.tsTypeAnnotation(t.tsAnyKeyword()),
-                ),
-            ]);
-        case 'null':
-            return t.tsNullKeyword();
         default:
-            console.log(chalk.dim(JSON.stringify(attribute, null, 2)));
-            throw new Error(`Unknown attribute type: ${chalk.red(attribute.type)}`);
+            console.log(chalk.dim(JSON.stringify(attr, null, 2)));
+            throw new Error(`Unknown attribute type: ${chalk.red(attr.type)}`);
     }
 }
 
