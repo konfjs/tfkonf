@@ -17,7 +17,7 @@ function constructorParams(className: string): t.Identifier[] {
     return [configParam, nameParam, argsParam];
 }
 
-export function generateClassDeclaration(className: string) {
+export function generateClassDeclaration(className: string): t.ExportNamedDeclaration {
     return t.exportNamedDeclaration(
         t.classDeclaration(
             t.identifier(className),

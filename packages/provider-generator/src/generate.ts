@@ -4,6 +4,7 @@ import generate from '@babel/generator';
 import * as t from '@babel/types';
 import chalk from 'chalk';
 import { generateClassDeclaration } from './class.js';
+import { generateInterfaceDeclaration } from './interface.js';
 import type { ProviderSchema } from './schema.js';
 
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
@@ -31,7 +32,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                         ],
                         t.stringLiteral('tfs'),
                     ),
-                    // TODO: Generate Interfaces here
+                    generateInterfaceDeclaration(resourceName, resourceBlock.block),
                     generateClassDeclaration(resourceName),
                 ],
                 [],
