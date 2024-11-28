@@ -1,4 +1,5 @@
 import * as t from '@babel/types';
+import { getTSType } from './interface.js';
 import type { Block } from './schema.js';
 import { toPascalCase } from './utils.js';
 
@@ -20,6 +21,7 @@ function constructorParams(className: string): t.Identifier[] {
 
 export function generateClassDeclaration(ast: t.Program, className: string, block: Block) {
     const classBody = t.classBody([]);
+    generateClassProperties(classBody, block);
 
     classBody.body.push(
         t.classMethod(
@@ -49,4 +51,23 @@ export function generateClassDeclaration(ast: t.Program, className: string, bloc
             ),
         ),
     );
+}
+
+function generateClassProperties(classBody: t.ClassBody, block: Block) {
+    if (block.attributes) {
+        for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
+            if (attributeBody.computed) {
+                const id = attributeBody.optional
+                    ? t.identifier(attributeName)
+                    : t.identifier(`${attributeName}!`);
+                const i = t.classProperty(id, null, t.tsTypeAnnotation(getTSType(attributeBody)));
+                i.optional = attributeBody.optional;
+                i.readonly = true;
+                classBody.body.push(i);
+            }
+        }
+    }
+
+    // TODO: block_types are currently being generated as any.
+    // Their interfaces should be generated.
 }
