@@ -44,7 +44,7 @@ function getListType(type: AttributeType): t.TSType {
  * It seems attribute type is either "bool", "number", "string" or "array".
  * jq '.[] | select(type != "array")' types.json
  */
-function getTSType(attr: Attribute): t.TSType {
+export function getTSType(attr: Attribute): t.TSType {
     if (Array.isArray(attr.type) && attr.type.length === 2) {
         return getListType(attr.type);
     }
@@ -79,7 +79,6 @@ export function generateInterfaceDeclaration(
 
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
-            // TODO: Computed attributes should be added as class properties.
             if (!attributeBody.computed) {
                 const i = t.tsPropertySignature(
                     t.identifier(attributeName),
