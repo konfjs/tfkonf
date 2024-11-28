@@ -15,6 +15,9 @@ function getListType(type: AttributeType): t.TSType {
         if (type[1] === 'number') {
             return t.tsArrayType(t.tsNumberKeyword());
         }
+        if (Array.isArray(type[1])) {
+            // TODO: Recursively handle nested types.
+        }
     }
     if (type[0] === 'map') {
         let mapType: t.TSType = t.tsAnyKeyword();
@@ -28,9 +31,6 @@ function getListType(type: AttributeType): t.TSType {
             t.tsIndexSignature([t.identifier('key: string')], t.tsTypeAnnotation(mapType)),
         ]);
     }
-    /**
-     * Unreachable code, but it's here to make TypeScript happy.
-     */
     return t.tsArrayType(t.tsAnyKeyword());
 }
 
@@ -79,11 +79,14 @@ export function generateInterfaceDeclaration(
 
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
-            const i = t.tsPropertySignature(
-                t.identifier(attributeName),
-                t.tsTypeAnnotation(getTSType(attributeBody)),
-            );
-            properties.push(i);
+            // TODO: Computed attributes should be added as class properties.
+            if (!attributeBody.computed) {
+                const i = t.tsPropertySignature(
+                    t.identifier(attributeName),
+                    t.tsTypeAnnotation(getTSType(attributeBody)),
+                );
+                properties.push(i);
+            }
         }
     }
 
