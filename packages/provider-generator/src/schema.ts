@@ -1,18 +1,12 @@
+export type AttributeType = 'bool' | 'number' | 'string' | unknown[];
+
 export interface Attribute {
     /**
      * https://developer.hashicorp.com/terraform/language/expressions/types
      *
      * Type of the attribute must be one of the following:
      */
-    type:
-        | 'string'
-        | 'number'
-        | 'bool'
-        | ('list' | 'tuple')
-        | 'set'
-        | ('map' | 'object')
-        | 'null'
-        | string[];
+    type: AttributeType;
     description?: string;
     /**
      * If attribute is marked as optional, then it should be optional in the interface.
