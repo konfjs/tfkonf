@@ -1,5 +1,5 @@
-import { TerraformConfig } from './config';
-import { TerraformResource } from './resource';
+import { TerraformConfig } from './config.js';
+import { TerraformResource } from './resource.js';
 
 interface TerraformArgs {
     [key: string]: any;

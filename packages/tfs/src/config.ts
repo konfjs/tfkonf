@@ -1,5 +1,5 @@
 import * as fs from 'node:fs';
-import { TerraformResource } from './resource';
+import { TerraformResource } from './resource.js';
 
 /**
  * Represents a Terraform configuration file.
