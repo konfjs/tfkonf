@@ -33,8 +33,12 @@ export interface BlockType {
 
 export interface Block {
     description?: string;
-    attributes?: Record<string, Attribute>;
-    block_types?: Record<string, BlockType>;
+    attributes?: {
+        [key: string]: Attribute;
+    };
+    block_types?: {
+        [key: string]: BlockType;
+    };
 }
 
 export interface ProviderSchema {
