@@ -32,12 +32,12 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                         ],
                         t.stringLiteral('tfs'),
                     ),
-                    generateInterfaceDeclaration(resourceName, resourceBlock.block),
-                    generateClassDeclaration(resourceName),
                 ],
                 [],
                 'module',
             );
+            generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, true);
+            ast.body.push(generateClassDeclaration(resourceName));
             // @ts-expect-error
             const { code } = generate(ast, {});
 
