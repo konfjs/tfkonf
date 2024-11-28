@@ -85,6 +85,7 @@ export function generateInterfaceDeclaration(
                     t.identifier(attributeName),
                     t.tsTypeAnnotation(getTSType(attributeBody)),
                 );
+                i.optional = attributeBody.optional;
                 properties.push(i);
             }
         }
