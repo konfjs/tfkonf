@@ -39,7 +39,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                 [],
                 'module',
             );
-            generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, true);
+            generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, '', true);
             generateClassDeclaration(ast, resourceName, resourceBlock.block);
             // @ts-expect-error
             const { code } = generate(ast, {});
