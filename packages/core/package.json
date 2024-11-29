@@ -1,6 +1,6 @@
 {
   "name": "@konfjs/core",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": {
     "name": "konfjs",
     "url": "https://github.com/konfjs"
@@ -21,7 +21,13 @@
     "cdk"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
   },
   "type": "module",
   "exports": {
@@ -31,9 +37,8 @@
     }
   },
   "scripts": {
-    "updatePackage": "yq -i '.exports[\".\"] |= {\"import\": \"./dist/index.js\", \"types\": \"./dist/index.d.ts\" }' package.json",
     "build": "rm -rf dist && tsc",
-    "prepack": "bun run build && bun run updatePackage"
+    "prepack": "pnpm run build"
   },
   "files": [
     "dist"
