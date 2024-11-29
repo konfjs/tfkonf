@@ -3,7 +3,7 @@ export interface AwsSfnAliasArgsRoutingConfiguration {
   state_machine_version_arn: string;
   weight: number;
 }
-export interface AwsSfnAliasArgstimeouts {
+export interface AwsSfnAliasArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsSfnAliasArgs {
   description?: string;
   name: string;
   routing_configuration: AwsSfnAliasArgsRoutingConfiguration;
-  timeouts: AwsSfnAliasArgstimeouts;
+  timeouts: AwsSfnAliasArgsTimeouts;
 }
 export class aws_sfn_alias extends TerraformResource {
   readonly arn!: string;

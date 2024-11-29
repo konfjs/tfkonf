@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleOracleDatabaseCloudExadataInfrastructureArgspropertiesCustomerContacts {
+export interface GoogleOracleDatabaseCloudExadataInfrastructureArgsPropertiesCustomerContacts {
   email: string;
 }
-export interface GoogleOracleDatabaseCloudExadataInfrastructureArgspropertiesMaintenanceWindow {}
-export interface GoogleOracleDatabaseCloudExadataInfrastructureArgsproperties {
+export interface GoogleOracleDatabaseCloudExadataInfrastructureArgsPropertiesMaintenanceWindow {}
+export interface GoogleOracleDatabaseCloudExadataInfrastructureArgsProperties {
   compute_count?: number;
   shape: string;
   storage_count?: number;
-  customer_contacts: GoogleOracleDatabaseCloudExadataInfrastructureArgspropertiesCustomerContacts;
-  maintenance_window: GoogleOracleDatabaseCloudExadataInfrastructureArgspropertiesMaintenanceWindow;
+  customer_contacts: GoogleOracleDatabaseCloudExadataInfrastructureArgsPropertiesCustomerContacts;
+  maintenance_window: GoogleOracleDatabaseCloudExadataInfrastructureArgsPropertiesMaintenanceWindow;
 }
-export interface GoogleOracleDatabaseCloudExadataInfrastructureArgstimeouts {
+export interface GoogleOracleDatabaseCloudExadataInfrastructureArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface GoogleOracleDatabaseCloudExadataInfrastructureArgs {
     [key: string]: string;
   };
   location: string;
-  properties: GoogleOracleDatabaseCloudExadataInfrastructureArgsproperties;
-  timeouts: GoogleOracleDatabaseCloudExadataInfrastructureArgstimeouts;
+  properties: GoogleOracleDatabaseCloudExadataInfrastructureArgsProperties;
+  timeouts: GoogleOracleDatabaseCloudExadataInfrastructureArgsTimeouts;
 }
 export class google_oracle_database_cloud_exadata_infrastructure extends TerraformResource {
   readonly create_time!: string;

@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVerifiedpermissionsPolicyArgsdefinitionstatic {
+export interface AwsVerifiedpermissionsPolicyArgsDefinitionStatic {
   description?: string;
   statement: string;
 }
-export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedprincipal {
+export interface AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinkedPrincipal {
   entity_id: string;
   entity_type: string;
 }
-export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedresource {
+export interface AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinkedResource {
   entity_id: string;
   entity_type: string;
 }
-export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinked {
+export interface AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinked {
   policy_template_id: string;
-  principal: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedprincipal;
-  resource: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedresource;
+  principal: AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinkedPrincipal;
+  resource: AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinkedResource;
 }
-export interface AwsVerifiedpermissionsPolicyArgsdefinition {
-  static: AwsVerifiedpermissionsPolicyArgsdefinitionstatic;
-  template_linked: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinked;
+export interface AwsVerifiedpermissionsPolicyArgsDefinition {
+  static: AwsVerifiedpermissionsPolicyArgsDefinitionStatic;
+  template_linked: AwsVerifiedpermissionsPolicyArgsDefinitionTemplateLinked;
 }
 export interface AwsVerifiedpermissionsPolicyArgs {
   policy_store_id: string;
-  definition: AwsVerifiedpermissionsPolicyArgsdefinition;
+  definition: AwsVerifiedpermissionsPolicyArgsDefinition;
 }
 export class aws_verifiedpermissions_policy extends TerraformResource {
   readonly created_date!: string;

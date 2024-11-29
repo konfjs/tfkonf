@@ -24,7 +24,7 @@ export interface GoogleNetworkSecurityServerTlsPolicyArgsServerCertificate {
   certificate_provider_instance: GoogleNetworkSecurityServerTlsPolicyArgsServerCertificateCertificateProviderInstance;
   grpc_endpoint: GoogleNetworkSecurityServerTlsPolicyArgsServerCertificateGrpcEndpoint;
 }
-export interface GoogleNetworkSecurityServerTlsPolicyArgstimeouts {
+export interface GoogleNetworkSecurityServerTlsPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,7 +39,7 @@ export interface GoogleNetworkSecurityServerTlsPolicyArgs {
   name: string;
   mtls_policy: GoogleNetworkSecurityServerTlsPolicyArgsMtlsPolicy;
   server_certificate: GoogleNetworkSecurityServerTlsPolicyArgsServerCertificate;
-  timeouts: GoogleNetworkSecurityServerTlsPolicyArgstimeouts;
+  timeouts: GoogleNetworkSecurityServerTlsPolicyArgsTimeouts;
 }
 export class google_network_security_server_tls_policy extends TerraformResource {
   readonly create_time!: string;

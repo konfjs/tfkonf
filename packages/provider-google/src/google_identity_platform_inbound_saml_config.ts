@@ -12,7 +12,7 @@ export interface GoogleIdentityPlatformInboundSamlConfigArgsSpConfig {
   callback_uri?: string;
   sp_entity_id?: string;
 }
-export interface GoogleIdentityPlatformInboundSamlConfigArgstimeouts {
+export interface GoogleIdentityPlatformInboundSamlConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,7 +23,7 @@ export interface GoogleIdentityPlatformInboundSamlConfigArgs {
   name: string;
   idp_config: GoogleIdentityPlatformInboundSamlConfigArgsIdpConfig;
   sp_config: GoogleIdentityPlatformInboundSamlConfigArgsSpConfig;
-  timeouts: GoogleIdentityPlatformInboundSamlConfigArgstimeouts;
+  timeouts: GoogleIdentityPlatformInboundSamlConfigArgsTimeouts;
 }
 export class google_identity_platform_inbound_saml_config extends TerraformResource {
   readonly id?: string;

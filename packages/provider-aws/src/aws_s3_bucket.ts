@@ -6,13 +6,13 @@ export interface AwsS3BucketArgsCorsRule {
   expose_headers?: string[];
   max_age_seconds?: number;
 }
-export interface AwsS3BucketArgsgrant {
+export interface AwsS3BucketArgsGrant {
   id?: string;
   permissions: string[];
   type: string;
   uri?: string;
 }
-export interface AwsS3BucketArgsLifecycleRuleexpiration {
+export interface AwsS3BucketArgsLifecycleRuleExpiration {
   date?: string;
   days?: number;
   expired_object_delete_marker?: boolean;
@@ -24,7 +24,7 @@ export interface AwsS3BucketArgsLifecycleRuleNoncurrentVersionTransition {
   days?: number;
   storage_class: string;
 }
-export interface AwsS3BucketArgsLifecycleRuletransition {
+export interface AwsS3BucketArgsLifecycleRuleTransition {
   date?: string;
   days?: number;
   storage_class: string;
@@ -36,95 +36,95 @@ export interface AwsS3BucketArgsLifecycleRule {
   tags?: {
     [key: string]: string;
   };
-  expiration: AwsS3BucketArgsLifecycleRuleexpiration;
+  expiration: AwsS3BucketArgsLifecycleRuleExpiration;
   noncurrent_version_expiration: AwsS3BucketArgsLifecycleRuleNoncurrentVersionExpiration;
   noncurrent_version_transition: AwsS3BucketArgsLifecycleRuleNoncurrentVersionTransition;
-  transition: AwsS3BucketArgsLifecycleRuletransition;
+  transition: AwsS3BucketArgsLifecycleRuleTransition;
 }
-export interface AwsS3BucketArgslogging {
+export interface AwsS3BucketArgsLogging {
   target_bucket: string;
   target_prefix?: string;
 }
-export interface AwsS3BucketArgsObjectLockConfigurationruleDefaultRetention {
+export interface AwsS3BucketArgsObjectLockConfigurationRuleDefaultRetention {
   days?: number;
   mode: string;
   years?: number;
 }
-export interface AwsS3BucketArgsObjectLockConfigurationrule {
-  default_retention: AwsS3BucketArgsObjectLockConfigurationruleDefaultRetention;
+export interface AwsS3BucketArgsObjectLockConfigurationRule {
+  default_retention: AwsS3BucketArgsObjectLockConfigurationRuleDefaultRetention;
 }
 export interface AwsS3BucketArgsObjectLockConfiguration {
   object_lock_enabled?: string;
-  rule: AwsS3BucketArgsObjectLockConfigurationrule;
+  rule: AwsS3BucketArgsObjectLockConfigurationRule;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesdestinationAccessControlTranslation {
+export interface AwsS3BucketArgsReplicationConfigurationRulesDestinationAccessControlTranslation {
   owner: string;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesdestinationmetrics {
+export interface AwsS3BucketArgsReplicationConfigurationRulesDestinationMetrics {
   minutes?: number;
   status?: string;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesdestinationReplicationTime {
+export interface AwsS3BucketArgsReplicationConfigurationRulesDestinationReplicationTime {
   minutes?: number;
   status?: string;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesdestination {
+export interface AwsS3BucketArgsReplicationConfigurationRulesDestination {
   account_id?: string;
   bucket: string;
   replica_kms_key_id?: string;
   storage_class?: string;
-  access_control_translation: AwsS3BucketArgsReplicationConfigurationrulesdestinationAccessControlTranslation;
-  metrics: AwsS3BucketArgsReplicationConfigurationrulesdestinationmetrics;
-  replication_time: AwsS3BucketArgsReplicationConfigurationrulesdestinationReplicationTime;
+  access_control_translation: AwsS3BucketArgsReplicationConfigurationRulesDestinationAccessControlTranslation;
+  metrics: AwsS3BucketArgsReplicationConfigurationRulesDestinationMetrics;
+  replication_time: AwsS3BucketArgsReplicationConfigurationRulesDestinationReplicationTime;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesfilter {
+export interface AwsS3BucketArgsReplicationConfigurationRulesFilter {
   prefix?: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesSourceSelectionCriteriaSseKmsEncryptedObjects {
+export interface AwsS3BucketArgsReplicationConfigurationRulesSourceSelectionCriteriaSseKmsEncryptedObjects {
   enabled: boolean;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrulesSourceSelectionCriteria {
-  sse_kms_encrypted_objects: AwsS3BucketArgsReplicationConfigurationrulesSourceSelectionCriteriaSseKmsEncryptedObjects;
+export interface AwsS3BucketArgsReplicationConfigurationRulesSourceSelectionCriteria {
+  sse_kms_encrypted_objects: AwsS3BucketArgsReplicationConfigurationRulesSourceSelectionCriteriaSseKmsEncryptedObjects;
 }
-export interface AwsS3BucketArgsReplicationConfigurationrules {
+export interface AwsS3BucketArgsReplicationConfigurationRules {
   delete_marker_replication_status?: string;
   id?: string;
   prefix?: string;
   priority?: number;
   status: string;
-  destination: AwsS3BucketArgsReplicationConfigurationrulesdestination;
-  filter: AwsS3BucketArgsReplicationConfigurationrulesfilter;
-  source_selection_criteria: AwsS3BucketArgsReplicationConfigurationrulesSourceSelectionCriteria;
+  destination: AwsS3BucketArgsReplicationConfigurationRulesDestination;
+  filter: AwsS3BucketArgsReplicationConfigurationRulesFilter;
+  source_selection_criteria: AwsS3BucketArgsReplicationConfigurationRulesSourceSelectionCriteria;
 }
 export interface AwsS3BucketArgsReplicationConfiguration {
   role: string;
-  rules: AwsS3BucketArgsReplicationConfigurationrules;
+  rules: AwsS3BucketArgsReplicationConfigurationRules;
 }
-export interface AwsS3BucketArgsServerSideEncryptionConfigurationruleApplyServerSideEncryptionByDefault {
+export interface AwsS3BucketArgsServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault {
   kms_master_key_id?: string;
   sse_algorithm: string;
 }
-export interface AwsS3BucketArgsServerSideEncryptionConfigurationrule {
+export interface AwsS3BucketArgsServerSideEncryptionConfigurationRule {
   bucket_key_enabled?: boolean;
-  apply_server_side_encryption_by_default: AwsS3BucketArgsServerSideEncryptionConfigurationruleApplyServerSideEncryptionByDefault;
+  apply_server_side_encryption_by_default: AwsS3BucketArgsServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault;
 }
 export interface AwsS3BucketArgsServerSideEncryptionConfiguration {
-  rule: AwsS3BucketArgsServerSideEncryptionConfigurationrule;
+  rule: AwsS3BucketArgsServerSideEncryptionConfigurationRule;
 }
-export interface AwsS3BucketArgstimeouts {
+export interface AwsS3BucketArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
   update?: string;
 }
-export interface AwsS3BucketArgsversioning {
+export interface AwsS3BucketArgsVersioning {
   enabled?: boolean;
   mfa_delete?: boolean;
 }
-export interface AwsS3BucketArgswebsite {
+export interface AwsS3BucketArgsWebsite {
   error_document?: string;
   index_document?: string;
   redirect_all_requests_to?: string;
@@ -136,15 +136,15 @@ export interface AwsS3BucketArgs {
     [key: string]: string;
   };
   cors_rule: AwsS3BucketArgsCorsRule;
-  grant: AwsS3BucketArgsgrant;
+  grant: AwsS3BucketArgsGrant;
   lifecycle_rule: AwsS3BucketArgsLifecycleRule;
-  logging: AwsS3BucketArgslogging;
+  logging: AwsS3BucketArgsLogging;
   object_lock_configuration: AwsS3BucketArgsObjectLockConfiguration;
   replication_configuration: AwsS3BucketArgsReplicationConfiguration;
   server_side_encryption_configuration: AwsS3BucketArgsServerSideEncryptionConfiguration;
-  timeouts: AwsS3BucketArgstimeouts;
-  versioning: AwsS3BucketArgsversioning;
-  website: AwsS3BucketArgswebsite;
+  timeouts: AwsS3BucketArgsTimeouts;
+  versioning: AwsS3BucketArgsVersioning;
+  website: AwsS3BucketArgsWebsite;
 }
 export class aws_s3_bucket extends TerraformResource {
   readonly acceleration_status?: string;

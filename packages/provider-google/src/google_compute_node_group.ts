@@ -11,7 +11,7 @@ export interface GoogleComputeNodeGroupArgsShareSettings {
   share_type: string;
   project_map: GoogleComputeNodeGroupArgsShareSettingsProjectMap;
 }
-export interface GoogleComputeNodeGroupArgstimeouts {
+export interface GoogleComputeNodeGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface GoogleComputeNodeGroupArgs {
   autoscaling_policy: GoogleComputeNodeGroupArgsAutoscalingPolicy;
   maintenance_window: GoogleComputeNodeGroupArgsMaintenanceWindow;
   share_settings: GoogleComputeNodeGroupArgsShareSettings;
-  timeouts: GoogleComputeNodeGroupArgstimeouts;
+  timeouts: GoogleComputeNodeGroupArgsTimeouts;
 }
 export class google_compute_node_group extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -22,13 +22,13 @@ export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideAction {
 export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginRedirect {
   redirect_conditions?: string[];
 }
-export interface GoogleNetworkServicesEdgeCacheOriginArgstimeout {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsTimeout {
   connect_timeout?: string;
   max_attempts_timeout?: string;
   read_timeout?: string;
   response_timeout?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheOriginArgstimeouts {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,8 +45,8 @@ export interface GoogleNetworkServicesEdgeCacheOriginArgs {
   aws_v4_authentication: GoogleNetworkServicesEdgeCacheOriginArgsAwsV4Authentication;
   origin_override_action: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideAction;
   origin_redirect: GoogleNetworkServicesEdgeCacheOriginArgsOriginRedirect;
-  timeout: GoogleNetworkServicesEdgeCacheOriginArgstimeout;
-  timeouts: GoogleNetworkServicesEdgeCacheOriginArgstimeouts;
+  timeout: GoogleNetworkServicesEdgeCacheOriginArgsTimeout;
+  timeouts: GoogleNetworkServicesEdgeCacheOriginArgsTimeouts;
 }
 export class google_network_services_edge_cache_origin extends TerraformResource {
   readonly effective_labels!: {

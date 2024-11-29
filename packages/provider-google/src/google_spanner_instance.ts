@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverridesAutoscalingLimits {
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits {
   max_nodes: number;
   min_nodes: number;
 }
-export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverrides {
-  autoscaling_limits: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverridesAutoscalingLimits;
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsOverrides {
+  autoscaling_limits: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits;
 }
 export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection {
   location: string;
 }
 export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptions {
-  overrides: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverrides;
+  overrides: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsOverrides;
   replica_selection: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection;
 }
 export interface GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingLimits {
@@ -28,7 +28,7 @@ export interface GoogleSpannerInstanceArgsAutoscalingConfig {
   autoscaling_limits: GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingLimits;
   autoscaling_targets: GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingTargets;
 }
-export interface GoogleSpannerInstanceArgstimeouts {
+export interface GoogleSpannerInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,7 +41,7 @@ export interface GoogleSpannerInstanceArgs {
     [key: string]: string;
   };
   autoscaling_config: GoogleSpannerInstanceArgsAutoscalingConfig;
-  timeouts: GoogleSpannerInstanceArgstimeouts;
+  timeouts: GoogleSpannerInstanceArgsTimeouts;
 }
 export class google_spanner_instance extends TerraformResource {
   readonly default_backup_schedule_type?: string;

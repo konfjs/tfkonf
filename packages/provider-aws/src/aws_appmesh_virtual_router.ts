@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppmeshVirtualRouterArgsspeclistenerPortMapping {
+export interface AwsAppmeshVirtualRouterArgsSpecListenerPortMapping {
   port: number;
   protocol: string;
 }
-export interface AwsAppmeshVirtualRouterArgsspeclistener {
-  port_mapping: AwsAppmeshVirtualRouterArgsspeclistenerPortMapping;
+export interface AwsAppmeshVirtualRouterArgsSpecListener {
+  port_mapping: AwsAppmeshVirtualRouterArgsSpecListenerPortMapping;
 }
-export interface AwsAppmeshVirtualRouterArgsspec {
-  listener: AwsAppmeshVirtualRouterArgsspeclistener;
+export interface AwsAppmeshVirtualRouterArgsSpec {
+  listener: AwsAppmeshVirtualRouterArgsSpecListener;
 }
 export interface AwsAppmeshVirtualRouterArgs {
   mesh_name: string;
@@ -15,7 +15,7 @@ export interface AwsAppmeshVirtualRouterArgs {
   tags?: {
     [key: string]: string;
   };
-  spec: AwsAppmeshVirtualRouterArgsspec;
+  spec: AwsAppmeshVirtualRouterArgsSpec;
 }
 export class aws_appmesh_virtual_router extends TerraformResource {
   readonly arn!: string;

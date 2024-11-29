@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsKendraIndexArgsCapacityUnits {}
-export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesrelevance {}
-export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatessearch {}
+export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesRelevance {}
+export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesSearch {}
 export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdates {
   name: string;
   type: string;
-  relevance: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesrelevance;
-  search: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatessearch;
+  relevance: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesRelevance;
+  search: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesSearch;
 }
 export interface AwsKendraIndexArgsServerSideEncryptionConfiguration {
   kms_key_id?: string;
 }
-export interface AwsKendraIndexArgstimeouts {
+export interface AwsKendraIndexArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -48,7 +48,7 @@ export interface AwsKendraIndexArgs {
   capacity_units: AwsKendraIndexArgsCapacityUnits;
   document_metadata_configuration_updates: AwsKendraIndexArgsDocumentMetadataConfigurationUpdates;
   server_side_encryption_configuration: AwsKendraIndexArgsServerSideEncryptionConfiguration;
-  timeouts: AwsKendraIndexArgstimeouts;
+  timeouts: AwsKendraIndexArgsTimeouts;
   user_group_resolution_configuration: AwsKendraIndexArgsUserGroupResolutionConfiguration;
   user_token_configurations: AwsKendraIndexArgsUserTokenConfigurations;
 }

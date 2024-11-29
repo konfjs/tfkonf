@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSqlSourceRepresentationInstanceArgstimeouts {
+export interface GoogleSqlSourceRepresentationInstanceArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -14,7 +14,7 @@ export interface GoogleSqlSourceRepresentationInstanceArgs {
   password?: string;
   port?: number;
   username?: string;
-  timeouts: GoogleSqlSourceRepresentationInstanceArgstimeouts;
+  timeouts: GoogleSqlSourceRepresentationInstanceArgsTimeouts;
 }
 export class google_sql_source_representation_instance extends TerraformResource {
   readonly id?: string;

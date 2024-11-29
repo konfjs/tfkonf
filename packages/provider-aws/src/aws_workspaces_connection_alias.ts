@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsWorkspacesConnectionAliasArgstimeouts {
+export interface AwsWorkspacesConnectionAliasArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsWorkspacesConnectionAliasArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsWorkspacesConnectionAliasArgstimeouts;
+  timeouts: AwsWorkspacesConnectionAliasArgsTimeouts;
 }
 export class aws_workspaces_connection_alias extends TerraformResource {
   readonly id!: string;

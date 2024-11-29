@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceNlbResource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResourceNlbResource {
   arn?: string;
 }
-export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceR53Resource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResourceR53Resource {
   domain_name?: string;
   record_set_id?: string;
 }
-export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResource {
-  nlb_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceNlbResource;
-  r53_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceR53Resource;
+export interface AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResource {
+  nlb_resource: AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResourceNlbResource;
+  r53_resource: AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResourceR53Resource;
 }
-export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResource {
   domain_name: string;
   hosted_zone_arn?: string;
   record_set_id?: string;
   record_type?: string;
-  target_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResource;
+  target_resource: AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResourceTargetResource;
 }
-export interface AwsRoute53recoveryreadinessResourceSetArgsresources {
+export interface AwsRoute53recoveryreadinessResourceSetArgsResources {
   readiness_scopes?: string[];
   resource_arn?: string;
-  dns_target_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResource;
+  dns_target_resource: AwsRoute53recoveryreadinessResourceSetArgsResourcesDnsTargetResource;
 }
-export interface AwsRoute53recoveryreadinessResourceSetArgstimeouts {
+export interface AwsRoute53recoveryreadinessResourceSetArgsTimeouts {
   delete?: string;
 }
 export interface AwsRoute53recoveryreadinessResourceSetArgs {
@@ -31,8 +31,8 @@ export interface AwsRoute53recoveryreadinessResourceSetArgs {
   tags?: {
     [key: string]: string;
   };
-  resources: AwsRoute53recoveryreadinessResourceSetArgsresources;
-  timeouts: AwsRoute53recoveryreadinessResourceSetArgstimeouts;
+  resources: AwsRoute53recoveryreadinessResourceSetArgsResources;
+  timeouts: AwsRoute53recoveryreadinessResourceSetArgsTimeouts;
 }
 export class aws_route53recoveryreadiness_resource_set extends TerraformResource {
   readonly arn!: string;

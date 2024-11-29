@@ -2,23 +2,23 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleFolderOrganizationPolicyArgsBooleanPolicy {
   enforced: boolean;
 }
-export interface GoogleFolderOrganizationPolicyArgsListPolicyallow {
+export interface GoogleFolderOrganizationPolicyArgsListPolicyAllow {
   all?: boolean;
   values?: string[];
 }
-export interface GoogleFolderOrganizationPolicyArgsListPolicydeny {
+export interface GoogleFolderOrganizationPolicyArgsListPolicyDeny {
   all?: boolean;
   values?: string[];
 }
 export interface GoogleFolderOrganizationPolicyArgsListPolicy {
   inherit_from_parent?: boolean;
-  allow: GoogleFolderOrganizationPolicyArgsListPolicyallow;
-  deny: GoogleFolderOrganizationPolicyArgsListPolicydeny;
+  allow: GoogleFolderOrganizationPolicyArgsListPolicyAllow;
+  deny: GoogleFolderOrganizationPolicyArgsListPolicyDeny;
 }
 export interface GoogleFolderOrganizationPolicyArgsRestorePolicy {
   default: boolean;
 }
-export interface GoogleFolderOrganizationPolicyArgstimeouts {
+export interface GoogleFolderOrganizationPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -30,7 +30,7 @@ export interface GoogleFolderOrganizationPolicyArgs {
   boolean_policy: GoogleFolderOrganizationPolicyArgsBooleanPolicy;
   list_policy: GoogleFolderOrganizationPolicyArgsListPolicy;
   restore_policy: GoogleFolderOrganizationPolicyArgsRestorePolicy;
-  timeouts: GoogleFolderOrganizationPolicyArgstimeouts;
+  timeouts: GoogleFolderOrganizationPolicyArgsTimeouts;
 }
 export class google_folder_organization_policy extends TerraformResource {
   readonly etag!: string;

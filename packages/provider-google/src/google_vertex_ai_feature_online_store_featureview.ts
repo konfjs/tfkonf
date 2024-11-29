@@ -12,7 +12,7 @@ export interface GoogleVertexAiFeatureOnlineStoreFeatureviewArgsFeatureRegistryS
   feature_groups: GoogleVertexAiFeatureOnlineStoreFeatureviewArgsFeatureRegistrySourceFeatureGroups;
 }
 export interface GoogleVertexAiFeatureOnlineStoreFeatureviewArgsSyncConfig {}
-export interface GoogleVertexAiFeatureOnlineStoreFeatureviewArgstimeouts {
+export interface GoogleVertexAiFeatureOnlineStoreFeatureviewArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,7 +27,7 @@ export interface GoogleVertexAiFeatureOnlineStoreFeatureviewArgs {
   big_query_source: GoogleVertexAiFeatureOnlineStoreFeatureviewArgsBigQuerySource;
   feature_registry_source: GoogleVertexAiFeatureOnlineStoreFeatureviewArgsFeatureRegistrySource;
   sync_config: GoogleVertexAiFeatureOnlineStoreFeatureviewArgsSyncConfig;
-  timeouts: GoogleVertexAiFeatureOnlineStoreFeatureviewArgstimeouts;
+  timeouts: GoogleVertexAiFeatureOnlineStoreFeatureviewArgsTimeouts;
 }
 export class google_vertex_ai_feature_online_store_featureview extends TerraformResource {
   readonly create_time!: string;

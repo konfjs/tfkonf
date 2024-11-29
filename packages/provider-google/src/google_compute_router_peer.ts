@@ -3,7 +3,7 @@ export interface GoogleComputeRouterPeerArgsAdvertisedIpRanges {
   description?: string;
   range: string;
 }
-export interface GoogleComputeRouterPeerArgsbfd {
+export interface GoogleComputeRouterPeerArgsBfd {
   min_receive_interval?: number;
   min_transmit_interval?: number;
   multiplier?: number;
@@ -16,7 +16,7 @@ export interface GoogleComputeRouterPeerArgsMd5AuthenticationKey {
   key: string;
   name: string;
 }
-export interface GoogleComputeRouterPeerArgstimeouts {
+export interface GoogleComputeRouterPeerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,10 +34,10 @@ export interface GoogleComputeRouterPeerArgs {
   router: string;
   router_appliance_instance?: string;
   advertised_ip_ranges: GoogleComputeRouterPeerArgsAdvertisedIpRanges;
-  bfd: GoogleComputeRouterPeerArgsbfd;
+  bfd: GoogleComputeRouterPeerArgsBfd;
   custom_learned_ip_ranges: GoogleComputeRouterPeerArgsCustomLearnedIpRanges;
   md5_authentication_key: GoogleComputeRouterPeerArgsMd5AuthenticationKey;
-  timeouts: GoogleComputeRouterPeerArgstimeouts;
+  timeouts: GoogleComputeRouterPeerArgsTimeouts;
 }
 export class google_compute_router_peer extends TerraformResource {
   readonly enable_ipv4?: boolean;

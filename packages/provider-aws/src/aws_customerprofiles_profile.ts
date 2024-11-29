@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCustomerprofilesProfileArgsaddress {
+export interface AwsCustomerprofilesProfileArgsAddress {
   address_1?: string;
   address_2?: string;
   address_3?: string;
@@ -68,7 +68,7 @@ export interface AwsCustomerprofilesProfileArgs {
   party_type_string?: string;
   personal_email_address?: string;
   phone_number?: string;
-  address: AwsCustomerprofilesProfileArgsaddress;
+  address: AwsCustomerprofilesProfileArgsAddress;
   billing_address: AwsCustomerprofilesProfileArgsBillingAddress;
   mailing_address: AwsCustomerprofilesProfileArgsMailingAddress;
   shipping_address: AwsCustomerprofilesProfileArgsShippingAddress;

@@ -7,7 +7,7 @@ export interface AwsComputeoptimizerRecommendationPreferencesArgsPreferredResour
   include_list?: string[];
   name: string;
 }
-export interface AwsComputeoptimizerRecommendationPreferencesArgsscope {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsScope {
   name: string;
   value: string;
 }
@@ -26,7 +26,7 @@ export interface AwsComputeoptimizerRecommendationPreferencesArgs {
   savings_estimation_mode?: string;
   external_metrics_preference: AwsComputeoptimizerRecommendationPreferencesArgsExternalMetricsPreference;
   preferred_resource: AwsComputeoptimizerRecommendationPreferencesArgsPreferredResource;
-  scope: AwsComputeoptimizerRecommendationPreferencesArgsscope;
+  scope: AwsComputeoptimizerRecommendationPreferencesArgsScope;
   utilization_preference: AwsComputeoptimizerRecommendationPreferencesArgsUtilizationPreference;
 }
 export class aws_computeoptimizer_recommendation_preferences extends TerraformResource {

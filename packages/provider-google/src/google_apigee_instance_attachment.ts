@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeInstanceAttachmentArgstimeouts {
+export interface GoogleApigeeInstanceAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleApigeeInstanceAttachmentArgs {
   environment: string;
   instance_id: string;
-  timeouts: GoogleApigeeInstanceAttachmentArgstimeouts;
+  timeouts: GoogleApigeeInstanceAttachmentArgsTimeouts;
 }
 export class google_apigee_instance_attachment extends TerraformResource {
   readonly id?: string;

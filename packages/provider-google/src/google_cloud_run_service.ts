@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCloudRunServiceArgsmetadata {
+export interface GoogleCloudRunServiceArgsMetadata {
   annotations?: {
     [key: string]: string;
   };
@@ -7,150 +7,150 @@ export interface GoogleCloudRunServiceArgsmetadata {
     [key: string]: string;
   };
 }
-export interface GoogleCloudRunServiceArgstemplatemetadata {}
-export interface GoogleCloudRunServiceArgstemplatespeccontainersenvValueFromSecretKeyRef {
+export interface GoogleCloudRunServiceArgsTemplateMetadata {}
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvValueFromSecretKeyRef {
   key: string;
   name: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersenvValueFrom {
-  secret_key_ref: GoogleCloudRunServiceArgstemplatespeccontainersenvValueFromSecretKeyRef;
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvValueFrom {
+  secret_key_ref: GoogleCloudRunServiceArgsTemplateSpecContainersEnvValueFromSecretKeyRef;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersenv {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnv {
   name?: string;
   value?: string;
-  value_from: GoogleCloudRunServiceArgstemplatespeccontainersenvValueFrom;
+  value_from: GoogleCloudRunServiceArgsTemplateSpecContainersEnvValueFrom;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersEnvFromConfigMapRefLocalObjectReference {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference {
   name: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersEnvFromConfigMapRef {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromConfigMapRef {
   optional?: boolean;
-  local_object_reference: GoogleCloudRunServiceArgstemplatespeccontainersEnvFromConfigMapRefLocalObjectReference;
+  local_object_reference: GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromConfigMapRefLocalObjectReference;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersEnvFromSecretRefLocalObjectReference {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromSecretRefLocalObjectReference {
   name: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersEnvFromSecretRef {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromSecretRef {
   optional?: boolean;
-  local_object_reference: GoogleCloudRunServiceArgstemplatespeccontainersEnvFromSecretRefLocalObjectReference;
+  local_object_reference: GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromSecretRefLocalObjectReference;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersEnvFrom {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersEnvFrom {
   prefix?: string;
-  config_map_ref: GoogleCloudRunServiceArgstemplatespeccontainersEnvFromConfigMapRef;
-  secret_ref: GoogleCloudRunServiceArgstemplatespeccontainersEnvFromSecretRef;
+  config_map_ref: GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromConfigMapRef;
+  secret_ref: GoogleCloudRunServiceArgsTemplateSpecContainersEnvFromSecretRef;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbegrpc {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeGrpc {
   service?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbeHttpGetHttpHeaders {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeHttpGetHttpHeaders {
   name: string;
   value?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbeHttpGet {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeHttpGet {
   path?: string;
-  http_headers: GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbeHttpGetHttpHeaders;
+  http_headers: GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeHttpGetHttpHeaders;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbe {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbe {
   failure_threshold?: number;
   initial_delay_seconds?: number;
   period_seconds?: number;
   timeout_seconds?: number;
-  grpc: GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbegrpc;
-  http_get: GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbeHttpGet;
+  grpc: GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeGrpc;
+  http_get: GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbeHttpGet;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersports {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersPorts {
   container_port?: number;
   protocol?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersresources {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersResources {
   requests?: {
     [key: string]: string;
   };
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersStartupProbegrpc {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeGrpc {
   service?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeHttpGetHttpHeaders {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeHttpGetHttpHeaders {
   name: string;
   value?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeHttpGet {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeHttpGet {
   path?: string;
-  http_headers: GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeHttpGetHttpHeaders;
+  http_headers: GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeHttpGetHttpHeaders;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeTcpSocket {}
-export interface GoogleCloudRunServiceArgstemplatespeccontainersStartupProbe {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeTcpSocket {}
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbe {
   failure_threshold?: number;
   initial_delay_seconds?: number;
   period_seconds?: number;
   timeout_seconds?: number;
-  grpc: GoogleCloudRunServiceArgstemplatespeccontainersStartupProbegrpc;
-  http_get: GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeHttpGet;
-  tcp_socket: GoogleCloudRunServiceArgstemplatespeccontainersStartupProbeTcpSocket;
+  grpc: GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeGrpc;
+  http_get: GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeHttpGet;
+  tcp_socket: GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbeTcpSocket;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainersVolumeMounts {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainersVolumeMounts {
   mount_path: string;
   name: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespeccontainers {
+export interface GoogleCloudRunServiceArgsTemplateSpecContainers {
   args?: string[];
   command?: string[];
   image: string;
   working_dir?: string;
-  env: GoogleCloudRunServiceArgstemplatespeccontainersenv;
-  env_from: GoogleCloudRunServiceArgstemplatespeccontainersEnvFrom;
-  liveness_probe: GoogleCloudRunServiceArgstemplatespeccontainersLivenessProbe;
-  ports: GoogleCloudRunServiceArgstemplatespeccontainersports;
-  resources: GoogleCloudRunServiceArgstemplatespeccontainersresources;
-  startup_probe: GoogleCloudRunServiceArgstemplatespeccontainersStartupProbe;
-  volume_mounts: GoogleCloudRunServiceArgstemplatespeccontainersVolumeMounts;
+  env: GoogleCloudRunServiceArgsTemplateSpecContainersEnv;
+  env_from: GoogleCloudRunServiceArgsTemplateSpecContainersEnvFrom;
+  liveness_probe: GoogleCloudRunServiceArgsTemplateSpecContainersLivenessProbe;
+  ports: GoogleCloudRunServiceArgsTemplateSpecContainersPorts;
+  resources: GoogleCloudRunServiceArgsTemplateSpecContainersResources;
+  startup_probe: GoogleCloudRunServiceArgsTemplateSpecContainersStartupProbe;
+  volume_mounts: GoogleCloudRunServiceArgsTemplateSpecContainersVolumeMounts;
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumescsi {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumesCsi {
   driver: string;
   volume_attributes?: {
     [key: string]: string;
   };
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumesEmptyDir {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumesEmptyDir {
   medium?: string;
   size_limit?: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumesnfs {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumesNfs {
   path: string;
   read_only?: boolean;
   server: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumessecretitems {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumesSecretItems {
   key: string;
   mode?: number;
   path: string;
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumessecret {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumesSecret {
   default_mode?: number;
   secret_name: string;
-  items: GoogleCloudRunServiceArgstemplatespecvolumessecretitems;
+  items: GoogleCloudRunServiceArgsTemplateSpecVolumesSecretItems;
 }
-export interface GoogleCloudRunServiceArgstemplatespecvolumes {
+export interface GoogleCloudRunServiceArgsTemplateSpecVolumes {
   name: string;
-  csi: GoogleCloudRunServiceArgstemplatespecvolumescsi;
-  empty_dir: GoogleCloudRunServiceArgstemplatespecvolumesEmptyDir;
-  nfs: GoogleCloudRunServiceArgstemplatespecvolumesnfs;
-  secret: GoogleCloudRunServiceArgstemplatespecvolumessecret;
+  csi: GoogleCloudRunServiceArgsTemplateSpecVolumesCsi;
+  empty_dir: GoogleCloudRunServiceArgsTemplateSpecVolumesEmptyDir;
+  nfs: GoogleCloudRunServiceArgsTemplateSpecVolumesNfs;
+  secret: GoogleCloudRunServiceArgsTemplateSpecVolumesSecret;
 }
-export interface GoogleCloudRunServiceArgstemplatespec {
-  containers: GoogleCloudRunServiceArgstemplatespeccontainers;
-  volumes: GoogleCloudRunServiceArgstemplatespecvolumes;
+export interface GoogleCloudRunServiceArgsTemplateSpec {
+  containers: GoogleCloudRunServiceArgsTemplateSpecContainers;
+  volumes: GoogleCloudRunServiceArgsTemplateSpecVolumes;
 }
-export interface GoogleCloudRunServiceArgstemplate {
-  metadata: GoogleCloudRunServiceArgstemplatemetadata;
-  spec: GoogleCloudRunServiceArgstemplatespec;
+export interface GoogleCloudRunServiceArgsTemplate {
+  metadata: GoogleCloudRunServiceArgsTemplateMetadata;
+  spec: GoogleCloudRunServiceArgsTemplateSpec;
 }
-export interface GoogleCloudRunServiceArgstimeouts {
+export interface GoogleCloudRunServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface GoogleCloudRunServiceArgstraffic {
+export interface GoogleCloudRunServiceArgsTraffic {
   latest_revision?: boolean;
   percent: number;
   revision_name?: string;
@@ -160,10 +160,10 @@ export interface GoogleCloudRunServiceArgs {
   autogenerate_revision_name?: boolean;
   location: string;
   name: string;
-  metadata: GoogleCloudRunServiceArgsmetadata;
-  template: GoogleCloudRunServiceArgstemplate;
-  timeouts: GoogleCloudRunServiceArgstimeouts;
-  traffic: GoogleCloudRunServiceArgstraffic;
+  metadata: GoogleCloudRunServiceArgsMetadata;
+  template: GoogleCloudRunServiceArgsTemplate;
+  timeouts: GoogleCloudRunServiceArgsTimeouts;
+  traffic: GoogleCloudRunServiceArgsTraffic;
 }
 export class google_cloud_run_service extends TerraformResource {
   readonly id?: string;

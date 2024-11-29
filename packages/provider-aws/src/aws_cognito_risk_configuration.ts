@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsHighAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsHighAction {
   event_action: string;
   notify: boolean;
 }
-export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsLowAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsLowAction {
   event_action: string;
   notify: boolean;
 }
-export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsMediumAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsMediumAction {
   event_action: string;
   notify: boolean;
 }
-export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactions {
-  high_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsHighAction;
-  low_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsLowAction;
-  medium_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsMediumAction;
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActions {
+  high_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsHighAction;
+  low_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsLowAction;
+  medium_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActionsMediumAction;
 }
 export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail {
   html_body: string;
@@ -40,14 +40,14 @@ export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfiguration
   no_action_email: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail;
 }
 export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfiguration {
-  actions: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactions;
+  actions: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationActions;
   notify_configuration: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfiguration;
 }
-export interface AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationactions {
+export interface AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationActions {
   event_action: string;
 }
 export interface AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfiguration {
-  actions: AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationactions;
+  actions: AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationActions;
 }
 export interface AwsCognitoRiskConfigurationArgsRiskExceptionConfiguration {
   blocked_ip_range_list?: string[];

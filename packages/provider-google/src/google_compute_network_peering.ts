@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeNetworkPeeringArgstimeouts {
+export interface GoogleComputeNetworkPeeringArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleComputeNetworkPeeringArgs {
   network: string;
   peer_network: string;
   stack_type?: string;
-  timeouts: GoogleComputeNetworkPeeringArgstimeouts;
+  timeouts: GoogleComputeNetworkPeeringArgsTimeouts;
 }
 export class google_compute_network_peering extends TerraformResource {
   readonly id?: string;

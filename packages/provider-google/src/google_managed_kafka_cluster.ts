@@ -16,7 +16,7 @@ export interface GoogleManagedKafkaClusterArgsGcpConfig {
 export interface GoogleManagedKafkaClusterArgsRebalanceConfig {
   mode?: string;
 }
-export interface GoogleManagedKafkaClusterArgstimeouts {
+export interface GoogleManagedKafkaClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,7 +30,7 @@ export interface GoogleManagedKafkaClusterArgs {
   capacity_config: GoogleManagedKafkaClusterArgsCapacityConfig;
   gcp_config: GoogleManagedKafkaClusterArgsGcpConfig;
   rebalance_config: GoogleManagedKafkaClusterArgsRebalanceConfig;
-  timeouts: GoogleManagedKafkaClusterArgstimeouts;
+  timeouts: GoogleManagedKafkaClusterArgsTimeouts;
 }
 export class google_managed_kafka_cluster extends TerraformResource {
   readonly create_time!: string;

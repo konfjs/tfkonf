@@ -5,7 +5,7 @@ export interface GoogleSqlUserArgsPasswordPolicy {
   enable_password_verification?: boolean;
   password_expiration_duration?: string;
 }
-export interface GoogleSqlUserArgstimeouts {
+export interface GoogleSqlUserArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleSqlUserArgs {
   password?: string;
   type?: string;
   password_policy: GoogleSqlUserArgsPasswordPolicy;
-  timeouts: GoogleSqlUserArgstimeouts;
+  timeouts: GoogleSqlUserArgsTimeouts;
 }
 export class google_sql_user extends TerraformResource {
   readonly host?: string;

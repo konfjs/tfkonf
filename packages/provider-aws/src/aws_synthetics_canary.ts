@@ -12,7 +12,7 @@ export interface AwsSyntheticsCanaryArgsRunConfig {
     [key: string]: string;
   };
 }
-export interface AwsSyntheticsCanaryArgsschedule {
+export interface AwsSyntheticsCanaryArgsSchedule {
   duration_in_seconds?: number;
   expression: string;
 }
@@ -39,7 +39,7 @@ export interface AwsSyntheticsCanaryArgs {
   zip_file?: string;
   artifact_config: AwsSyntheticsCanaryArgsArtifactConfig;
   run_config: AwsSyntheticsCanaryArgsRunConfig;
-  schedule: AwsSyntheticsCanaryArgsschedule;
+  schedule: AwsSyntheticsCanaryArgsSchedule;
   vpc_config: AwsSyntheticsCanaryArgsVpcConfig;
 }
 export class aws_synthetics_canary extends TerraformResource {

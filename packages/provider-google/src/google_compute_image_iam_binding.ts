@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeImageIamBindingArgscondition {
+export interface GoogleComputeImageIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeImageIamBindingArgs {
   image: string;
   members: string[];
   role: string;
-  condition: GoogleComputeImageIamBindingArgscondition;
+  condition: GoogleComputeImageIamBindingArgsCondition;
 }
 export class google_compute_image_iam_binding extends TerraformResource {
   readonly etag!: string;

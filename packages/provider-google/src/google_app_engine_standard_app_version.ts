@@ -17,26 +17,26 @@ export interface GoogleAppEngineStandardAppVersionArgsBasicScaling {
   idle_timeout?: string;
   max_instances: number;
 }
-export interface GoogleAppEngineStandardAppVersionArgsdeploymentfiles {
+export interface GoogleAppEngineStandardAppVersionArgsDeploymentFiles {
   name: string;
   sha1_sum?: string;
   source_url: string;
 }
-export interface GoogleAppEngineStandardAppVersionArgsdeploymentzip {
+export interface GoogleAppEngineStandardAppVersionArgsDeploymentZip {
   files_count?: number;
   source_url: string;
 }
-export interface GoogleAppEngineStandardAppVersionArgsdeployment {
-  files: GoogleAppEngineStandardAppVersionArgsdeploymentfiles;
-  zip: GoogleAppEngineStandardAppVersionArgsdeploymentzip;
+export interface GoogleAppEngineStandardAppVersionArgsDeployment {
+  files: GoogleAppEngineStandardAppVersionArgsDeploymentFiles;
+  zip: GoogleAppEngineStandardAppVersionArgsDeploymentZip;
 }
-export interface GoogleAppEngineStandardAppVersionArgsentrypoint {
+export interface GoogleAppEngineStandardAppVersionArgsEntrypoint {
   shell: string;
 }
-export interface GoogleAppEngineStandardAppVersionArgshandlersscript {
+export interface GoogleAppEngineStandardAppVersionArgsHandlersScript {
   script_path: string;
 }
-export interface GoogleAppEngineStandardAppVersionArgshandlersStaticFiles {
+export interface GoogleAppEngineStandardAppVersionArgsHandlersStaticFiles {
   application_readable?: boolean;
   expiration?: string;
   http_headers?: {
@@ -47,23 +47,23 @@ export interface GoogleAppEngineStandardAppVersionArgshandlersStaticFiles {
   require_matching_file?: boolean;
   upload_path_regex?: string;
 }
-export interface GoogleAppEngineStandardAppVersionArgshandlers {
+export interface GoogleAppEngineStandardAppVersionArgsHandlers {
   auth_fail_action?: string;
   login?: string;
   redirect_http_response_code?: string;
   security_level?: string;
   url_regex?: string;
-  script: GoogleAppEngineStandardAppVersionArgshandlersscript;
-  static_files: GoogleAppEngineStandardAppVersionArgshandlersStaticFiles;
+  script: GoogleAppEngineStandardAppVersionArgsHandlersScript;
+  static_files: GoogleAppEngineStandardAppVersionArgsHandlersStaticFiles;
 }
-export interface GoogleAppEngineStandardAppVersionArgslibraries {
+export interface GoogleAppEngineStandardAppVersionArgsLibraries {
   name?: string;
   version?: string;
 }
 export interface GoogleAppEngineStandardAppVersionArgsManualScaling {
   instances: number;
 }
-export interface GoogleAppEngineStandardAppVersionArgstimeouts {
+export interface GoogleAppEngineStandardAppVersionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -87,12 +87,12 @@ export interface GoogleAppEngineStandardAppVersionArgs {
   version_id?: string;
   automatic_scaling: GoogleAppEngineStandardAppVersionArgsAutomaticScaling;
   basic_scaling: GoogleAppEngineStandardAppVersionArgsBasicScaling;
-  deployment: GoogleAppEngineStandardAppVersionArgsdeployment;
-  entrypoint: GoogleAppEngineStandardAppVersionArgsentrypoint;
-  handlers: GoogleAppEngineStandardAppVersionArgshandlers;
-  libraries: GoogleAppEngineStandardAppVersionArgslibraries;
+  deployment: GoogleAppEngineStandardAppVersionArgsDeployment;
+  entrypoint: GoogleAppEngineStandardAppVersionArgsEntrypoint;
+  handlers: GoogleAppEngineStandardAppVersionArgsHandlers;
+  libraries: GoogleAppEngineStandardAppVersionArgsLibraries;
   manual_scaling: GoogleAppEngineStandardAppVersionArgsManualScaling;
-  timeouts: GoogleAppEngineStandardAppVersionArgstimeouts;
+  timeouts: GoogleAppEngineStandardAppVersionArgsTimeouts;
   vpc_access_connector: GoogleAppEngineStandardAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_standard_app_version extends TerraformResource {

@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecuritylakeCustomLogSourceArgsconfigurationCrawlerConfiguration {
+export interface AwsSecuritylakeCustomLogSourceArgsConfigurationCrawlerConfiguration {
   role_arn: string;
 }
-export interface AwsSecuritylakeCustomLogSourceArgsconfigurationProviderIdentity {
+export interface AwsSecuritylakeCustomLogSourceArgsConfigurationProviderIdentity {
   external_id: string;
   principal: string;
 }
-export interface AwsSecuritylakeCustomLogSourceArgsconfiguration {
-  crawler_configuration: AwsSecuritylakeCustomLogSourceArgsconfigurationCrawlerConfiguration;
-  provider_identity: AwsSecuritylakeCustomLogSourceArgsconfigurationProviderIdentity;
+export interface AwsSecuritylakeCustomLogSourceArgsConfiguration {
+  crawler_configuration: AwsSecuritylakeCustomLogSourceArgsConfigurationCrawlerConfiguration;
+  provider_identity: AwsSecuritylakeCustomLogSourceArgsConfigurationProviderIdentity;
 }
 export interface AwsSecuritylakeCustomLogSourceArgs {
   event_classes?: string[];
   source_name: string;
-  configuration: AwsSecuritylakeCustomLogSourceArgsconfiguration;
+  configuration: AwsSecuritylakeCustomLogSourceArgsConfiguration;
 }
 export class aws_securitylake_custom_log_source extends TerraformResource {
   readonly attributes!: any[];

@@ -14,7 +14,7 @@ export interface GoogleApigeeTargetServerArgsSSlInfo {
   trust_store?: string;
   common_name: GoogleApigeeTargetServerArgsSSlInfoCommonName;
 }
-export interface GoogleApigeeTargetServerArgstimeouts {
+export interface GoogleApigeeTargetServerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,7 +27,7 @@ export interface GoogleApigeeTargetServerArgs {
   name: string;
   port: number;
   s_sl_info: GoogleApigeeTargetServerArgsSSlInfo;
-  timeouts: GoogleApigeeTargetServerArgstimeouts;
+  timeouts: GoogleApigeeTargetServerArgsTimeouts;
 }
 export class google_apigee_target_server extends TerraformResource {
   readonly id?: string;

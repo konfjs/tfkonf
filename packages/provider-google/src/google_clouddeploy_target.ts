@@ -10,7 +10,7 @@ export interface GoogleClouddeployTargetArgsExecutionConfigs {
   verbose?: boolean;
   worker_pool?: string;
 }
-export interface GoogleClouddeployTargetArgsgke {
+export interface GoogleClouddeployTargetArgsGke {
   cluster?: string;
   internal_ip?: boolean;
   proxy_url?: string;
@@ -18,10 +18,10 @@ export interface GoogleClouddeployTargetArgsgke {
 export interface GoogleClouddeployTargetArgsMultiTarget {
   target_ids: string[];
 }
-export interface GoogleClouddeployTargetArgsrun {
+export interface GoogleClouddeployTargetArgsRun {
   location: string;
 }
-export interface GoogleClouddeployTargetArgstimeouts {
+export interface GoogleClouddeployTargetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -43,10 +43,10 @@ export interface GoogleClouddeployTargetArgs {
   anthos_cluster: GoogleClouddeployTargetArgsAnthosCluster;
   custom_target: GoogleClouddeployTargetArgsCustomTarget;
   execution_configs: GoogleClouddeployTargetArgsExecutionConfigs;
-  gke: GoogleClouddeployTargetArgsgke;
+  gke: GoogleClouddeployTargetArgsGke;
   multi_target: GoogleClouddeployTargetArgsMultiTarget;
-  run: GoogleClouddeployTargetArgsrun;
-  timeouts: GoogleClouddeployTargetArgstimeouts;
+  run: GoogleClouddeployTargetArgsRun;
+  timeouts: GoogleClouddeployTargetArgsTimeouts;
 }
 export class google_clouddeploy_target extends TerraformResource {
   readonly create_time!: string;

@@ -9,7 +9,7 @@ export interface AwsBatchJobQueueArgsJobStateTimeLimitAction {
   reason: string;
   state: string;
 }
-export interface AwsBatchJobQueueArgstimeouts {
+export interface AwsBatchJobQueueArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface AwsBatchJobQueueArgs {
   };
   compute_environment_order: AwsBatchJobQueueArgsComputeEnvironmentOrder;
   job_state_time_limit_action: AwsBatchJobQueueArgsJobStateTimeLimitAction;
-  timeouts: AwsBatchJobQueueArgstimeouts;
+  timeouts: AwsBatchJobQueueArgsTimeouts;
 }
 export class aws_batch_job_queue extends TerraformResource {
   readonly arn!: string;

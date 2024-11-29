@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStatedisk {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateDisk {
   delete_rule?: string;
   device_name: string;
   mode?: string;
@@ -25,11 +25,11 @@ export interface GoogleComputeRegionPerInstanceConfigArgsPreservedState {
   metadata?: {
     [key: string]: string;
   };
-  disk: GoogleComputeRegionPerInstanceConfigArgsPreservedStatedisk;
+  disk: GoogleComputeRegionPerInstanceConfigArgsPreservedStateDisk;
   external_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIp;
   internal_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIp;
 }
-export interface GoogleComputeRegionPerInstanceConfigArgstimeouts {
+export interface GoogleComputeRegionPerInstanceConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,7 +42,7 @@ export interface GoogleComputeRegionPerInstanceConfigArgs {
   remove_instance_on_destroy?: boolean;
   remove_instance_state_on_destroy?: boolean;
   preserved_state: GoogleComputeRegionPerInstanceConfigArgsPreservedState;
-  timeouts: GoogleComputeRegionPerInstanceConfigArgstimeouts;
+  timeouts: GoogleComputeRegionPerInstanceConfigArgsTimeouts;
 }
 export class google_compute_region_per_instance_config extends TerraformResource {
   readonly id?: string;

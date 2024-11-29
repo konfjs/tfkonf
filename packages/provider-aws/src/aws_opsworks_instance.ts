@@ -10,7 +10,7 @@ export interface AwsOpsworksInstanceArgsEphemeralBlockDevice {
 export interface AwsOpsworksInstanceArgsRootBlockDevice {
   delete_on_termination?: boolean;
 }
-export interface AwsOpsworksInstanceArgstimeouts {
+export interface AwsOpsworksInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,7 +30,7 @@ export interface AwsOpsworksInstanceArgs {
   ebs_block_device: AwsOpsworksInstanceArgsEbsBlockDevice;
   ephemeral_block_device: AwsOpsworksInstanceArgsEphemeralBlockDevice;
   root_block_device: AwsOpsworksInstanceArgsRootBlockDevice;
-  timeouts: AwsOpsworksInstanceArgstimeouts;
+  timeouts: AwsOpsworksInstanceArgsTimeouts;
 }
 export class aws_opsworks_instance extends TerraformResource {
   readonly ami_id?: string;

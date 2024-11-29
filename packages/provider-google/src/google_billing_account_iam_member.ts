@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBillingAccountIamMemberArgscondition {
+export interface GoogleBillingAccountIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBillingAccountIamMemberArgs {
   billing_account_id: string;
   member: string;
   role: string;
-  condition: GoogleBillingAccountIamMemberArgscondition;
+  condition: GoogleBillingAccountIamMemberArgsCondition;
 }
 export class google_billing_account_iam_member extends TerraformResource {
   readonly etag!: string;

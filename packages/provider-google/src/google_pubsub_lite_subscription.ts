@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GooglePubsubLiteSubscriptionArgsDeliveryConfig {
   delivery_requirement: string;
 }
-export interface GooglePubsubLiteSubscriptionArgstimeouts {
+export interface GooglePubsubLiteSubscriptionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GooglePubsubLiteSubscriptionArgs {
   topic: string;
   zone?: string;
   delivery_config: GooglePubsubLiteSubscriptionArgsDeliveryConfig;
-  timeouts: GooglePubsubLiteSubscriptionArgstimeouts;
+  timeouts: GooglePubsubLiteSubscriptionArgsTimeouts;
 }
 export class google_pubsub_lite_subscription extends TerraformResource {
   readonly id?: string;

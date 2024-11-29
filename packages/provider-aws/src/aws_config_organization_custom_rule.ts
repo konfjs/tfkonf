@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsConfigOrganizationCustomRuleArgstimeouts {
+export interface AwsConfigOrganizationCustomRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface AwsConfigOrganizationCustomRuleArgs {
   tag_key_scope?: string;
   tag_value_scope?: string;
   trigger_types: string[];
-  timeouts: AwsConfigOrganizationCustomRuleArgstimeouts;
+  timeouts: AwsConfigOrganizationCustomRuleArgsTimeouts;
 }
 export class aws_config_organization_custom_rule extends TerraformResource {
   readonly arn!: string;

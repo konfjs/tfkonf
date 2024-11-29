@@ -26,7 +26,7 @@ export interface AwsFsxOntapVolumeArgsSnaplockConfiguration {
   retention_period: AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriod;
 }
 export interface AwsFsxOntapVolumeArgsTieringPolicy {}
-export interface AwsFsxOntapVolumeArgstimeouts {
+export interface AwsFsxOntapVolumeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,7 +49,7 @@ export interface AwsFsxOntapVolumeArgs {
   aggregate_configuration: AwsFsxOntapVolumeArgsAggregateConfiguration;
   snaplock_configuration: AwsFsxOntapVolumeArgsSnaplockConfiguration;
   tiering_policy: AwsFsxOntapVolumeArgsTieringPolicy;
-  timeouts: AwsFsxOntapVolumeArgstimeouts;
+  timeouts: AwsFsxOntapVolumeArgsTimeouts;
 }
 export class aws_fsx_ontap_volume extends TerraformResource {
   readonly arn!: string;

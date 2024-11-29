@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeKeystoresAliasesPkcs12Argstimeouts {
+export interface GoogleApigeeKeystoresAliasesPkcs12ArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleApigeeKeystoresAliasesPkcs12Args {
   filehash: string;
   keystore: string;
   org_id: string;
-  timeouts: GoogleApigeeKeystoresAliasesPkcs12Argstimeouts;
+  timeouts: GoogleApigeeKeystoresAliasesPkcs12ArgsTimeouts;
 }
 export class google_apigee_keystores_aliases_pkcs12 extends TerraformResource {
   readonly certs_info!: any[];

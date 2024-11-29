@@ -2,25 +2,25 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsRekognitionStreamProcessorArgsDataSharingPreference {
   opt_in: boolean;
 }
-export interface AwsRekognitionStreamProcessorArgsinputKinesisVideoStream {
+export interface AwsRekognitionStreamProcessorArgsInputKinesisVideoStream {
   arn: string;
 }
-export interface AwsRekognitionStreamProcessorArgsinput {
-  kinesis_video_stream: AwsRekognitionStreamProcessorArgsinputKinesisVideoStream;
+export interface AwsRekognitionStreamProcessorArgsInput {
+  kinesis_video_stream: AwsRekognitionStreamProcessorArgsInputKinesisVideoStream;
 }
 export interface AwsRekognitionStreamProcessorArgsNotificationChannel {
   sns_topic_arn?: string;
 }
-export interface AwsRekognitionStreamProcessorArgsoutputKinesisDataStream {
+export interface AwsRekognitionStreamProcessorArgsOutputKinesisDataStream {
   arn?: string;
 }
-export interface AwsRekognitionStreamProcessorArgsoutputS3Destination {
+export interface AwsRekognitionStreamProcessorArgsOutputS3Destination {
   bucket?: string;
   key_prefix?: string;
 }
-export interface AwsRekognitionStreamProcessorArgsoutput {
-  kinesis_data_stream: AwsRekognitionStreamProcessorArgsoutputKinesisDataStream;
-  s3_destination: AwsRekognitionStreamProcessorArgsoutputS3Destination;
+export interface AwsRekognitionStreamProcessorArgsOutput {
+  kinesis_data_stream: AwsRekognitionStreamProcessorArgsOutputKinesisDataStream;
+  s3_destination: AwsRekognitionStreamProcessorArgsOutputS3Destination;
 }
 export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestBoundingBox {
   height?: number;
@@ -28,25 +28,25 @@ export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestBoundingBox {
   top?: number;
   width?: number;
 }
-export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestpolygon {
+export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestPolygon {
   x?: number;
   y?: number;
 }
 export interface AwsRekognitionStreamProcessorArgsRegionsOfInterest {
   bounding_box: AwsRekognitionStreamProcessorArgsRegionsOfInterestBoundingBox;
-  polygon: AwsRekognitionStreamProcessorArgsRegionsOfInterestpolygon;
+  polygon: AwsRekognitionStreamProcessorArgsRegionsOfInterestPolygon;
 }
-export interface AwsRekognitionStreamProcessorArgssettingsConnectedHome {
+export interface AwsRekognitionStreamProcessorArgsSettingsConnectedHome {
   labels?: string[];
 }
-export interface AwsRekognitionStreamProcessorArgssettingsFaceSearch {
+export interface AwsRekognitionStreamProcessorArgsSettingsFaceSearch {
   collection_id: string;
 }
-export interface AwsRekognitionStreamProcessorArgssettings {
-  connected_home: AwsRekognitionStreamProcessorArgssettingsConnectedHome;
-  face_search: AwsRekognitionStreamProcessorArgssettingsFaceSearch;
+export interface AwsRekognitionStreamProcessorArgsSettings {
+  connected_home: AwsRekognitionStreamProcessorArgsSettingsConnectedHome;
+  face_search: AwsRekognitionStreamProcessorArgsSettingsFaceSearch;
 }
-export interface AwsRekognitionStreamProcessorArgstimeouts {
+export interface AwsRekognitionStreamProcessorArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -59,12 +59,12 @@ export interface AwsRekognitionStreamProcessorArgs {
     [key: string]: string;
   };
   data_sharing_preference: AwsRekognitionStreamProcessorArgsDataSharingPreference;
-  input: AwsRekognitionStreamProcessorArgsinput;
+  input: AwsRekognitionStreamProcessorArgsInput;
   notification_channel: AwsRekognitionStreamProcessorArgsNotificationChannel;
-  output: AwsRekognitionStreamProcessorArgsoutput;
+  output: AwsRekognitionStreamProcessorArgsOutput;
   regions_of_interest: AwsRekognitionStreamProcessorArgsRegionsOfInterest;
-  settings: AwsRekognitionStreamProcessorArgssettings;
-  timeouts: AwsRekognitionStreamProcessorArgstimeouts;
+  settings: AwsRekognitionStreamProcessorArgsSettings;
+  timeouts: AwsRekognitionStreamProcessorArgsTimeouts;
 }
 export class aws_rekognition_stream_processor extends TerraformResource {
   readonly stream_processor_arn!: string;

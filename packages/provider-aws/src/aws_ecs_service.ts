@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEcsServiceArgsalarms {
+export interface AwsEcsServiceArgsAlarms {
   alarm_names: string[];
   enable: boolean;
   rollback: boolean;
@@ -43,35 +43,35 @@ export interface AwsEcsServiceArgsServiceConnectConfigurationLogConfiguration {
   log_driver: string;
   secret_option: AwsEcsServiceArgsServiceConnectConfigurationLogConfigurationSecretOption;
 }
-export interface AwsEcsServiceArgsServiceConnectConfigurationserviceClientAlias {
+export interface AwsEcsServiceArgsServiceConnectConfigurationServiceClientAlias {
   dns_name?: string;
   port: number;
 }
-export interface AwsEcsServiceArgsServiceConnectConfigurationservicetimeout {
+export interface AwsEcsServiceArgsServiceConnectConfigurationServiceTimeout {
   idle_timeout_seconds?: number;
   per_request_timeout_seconds?: number;
 }
-export interface AwsEcsServiceArgsServiceConnectConfigurationservicetlsIssuerCertAuthority {
+export interface AwsEcsServiceArgsServiceConnectConfigurationServiceTlsIssuerCertAuthority {
   aws_pca_authority_arn: string;
 }
-export interface AwsEcsServiceArgsServiceConnectConfigurationservicetls {
+export interface AwsEcsServiceArgsServiceConnectConfigurationServiceTls {
   kms_key?: string;
   role_arn?: string;
-  issuer_cert_authority: AwsEcsServiceArgsServiceConnectConfigurationservicetlsIssuerCertAuthority;
+  issuer_cert_authority: AwsEcsServiceArgsServiceConnectConfigurationServiceTlsIssuerCertAuthority;
 }
-export interface AwsEcsServiceArgsServiceConnectConfigurationservice {
+export interface AwsEcsServiceArgsServiceConnectConfigurationService {
   discovery_name?: string;
   ingress_port_override?: number;
   port_name: string;
-  client_alias: AwsEcsServiceArgsServiceConnectConfigurationserviceClientAlias;
-  timeout: AwsEcsServiceArgsServiceConnectConfigurationservicetimeout;
-  tls: AwsEcsServiceArgsServiceConnectConfigurationservicetls;
+  client_alias: AwsEcsServiceArgsServiceConnectConfigurationServiceClientAlias;
+  timeout: AwsEcsServiceArgsServiceConnectConfigurationServiceTimeout;
+  tls: AwsEcsServiceArgsServiceConnectConfigurationServiceTls;
 }
 export interface AwsEcsServiceArgsServiceConnectConfiguration {
   enabled: boolean;
   namespace?: string;
   log_configuration: AwsEcsServiceArgsServiceConnectConfigurationLogConfiguration;
-  service: AwsEcsServiceArgsServiceConnectConfigurationservice;
+  service: AwsEcsServiceArgsServiceConnectConfigurationService;
 }
 export interface AwsEcsServiceArgsServiceRegistries {
   container_name?: string;
@@ -79,7 +79,7 @@ export interface AwsEcsServiceArgsServiceRegistries {
   port?: number;
   registry_arn: string;
 }
-export interface AwsEcsServiceArgstimeouts {
+export interface AwsEcsServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -130,7 +130,7 @@ export interface AwsEcsServiceArgs {
   };
   task_definition?: string;
   wait_for_steady_state?: boolean;
-  alarms: AwsEcsServiceArgsalarms;
+  alarms: AwsEcsServiceArgsAlarms;
   capacity_provider_strategy: AwsEcsServiceArgsCapacityProviderStrategy;
   deployment_circuit_breaker: AwsEcsServiceArgsDeploymentCircuitBreaker;
   deployment_controller: AwsEcsServiceArgsDeploymentController;
@@ -140,7 +140,7 @@ export interface AwsEcsServiceArgs {
   placement_constraints: AwsEcsServiceArgsPlacementConstraints;
   service_connect_configuration: AwsEcsServiceArgsServiceConnectConfiguration;
   service_registries: AwsEcsServiceArgsServiceRegistries;
-  timeouts: AwsEcsServiceArgstimeouts;
+  timeouts: AwsEcsServiceArgsTimeouts;
   volume_configuration: AwsEcsServiceArgsVolumeConfiguration;
   vpc_lattice_configurations: AwsEcsServiceArgsVpcLatticeConfigurations;
 }

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsControltowerLandingZoneArgstimeouts {
+export interface AwsControltowerLandingZoneArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsControltowerLandingZoneArgs {
     [key: string]: string;
   };
   version: string;
-  timeouts: AwsControltowerLandingZoneArgstimeouts;
+  timeouts: AwsControltowerLandingZoneArgsTimeouts;
 }
 export class aws_controltower_landing_zone extends TerraformResource {
   readonly arn!: string;

@@ -2,12 +2,12 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsEksClusterArgsAccessConfig {
   bootstrap_cluster_creator_admin_permissions?: boolean;
 }
-export interface AwsEksClusterArgsEncryptionConfigprovider {
+export interface AwsEksClusterArgsEncryptionConfigProvider {
   key_arn: string;
 }
 export interface AwsEksClusterArgsEncryptionConfig {
   resources: string[];
-  provider: AwsEksClusterArgsEncryptionConfigprovider;
+  provider: AwsEksClusterArgsEncryptionConfigProvider;
 }
 export interface AwsEksClusterArgsKubernetesNetworkConfig {}
 export interface AwsEksClusterArgsOutpostConfigControlPlanePlacement {
@@ -18,7 +18,7 @@ export interface AwsEksClusterArgsOutpostConfig {
   outpost_arns: string[];
   control_plane_placement: AwsEksClusterArgsOutpostConfigControlPlanePlacement;
 }
-export interface AwsEksClusterArgstimeouts {
+export interface AwsEksClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,7 +45,7 @@ export interface AwsEksClusterArgs {
   encryption_config: AwsEksClusterArgsEncryptionConfig;
   kubernetes_network_config: AwsEksClusterArgsKubernetesNetworkConfig;
   outpost_config: AwsEksClusterArgsOutpostConfig;
-  timeouts: AwsEksClusterArgstimeouts;
+  timeouts: AwsEksClusterArgsTimeouts;
   upgrade_policy: AwsEksClusterArgsUpgradePolicy;
   vpc_config: AwsEksClusterArgsVpcConfig;
   zonal_shift_config: AwsEksClusterArgsZonalShiftConfig;

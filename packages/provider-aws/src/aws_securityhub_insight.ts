@@ -1,510 +1,510 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecurityhubInsightArgsfiltersAwsAccountId {
+export interface AwsSecurityhubInsightArgsFiltersAwsAccountId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersCompanyName {
+export interface AwsSecurityhubInsightArgsFiltersCompanyName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersComplianceStatus {
+export interface AwsSecurityhubInsightArgsFiltersComplianceStatus {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersconfidence {
+export interface AwsSecurityhubInsightArgsFiltersConfidence {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersCreatedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersCreatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersCreatedAt {
+export interface AwsSecurityhubInsightArgsFiltersCreatedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersCreatedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersCreatedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfilterscriticality {
+export interface AwsSecurityhubInsightArgsFiltersCriticality {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersdescription {
+export interface AwsSecurityhubInsightArgsFiltersDescription {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsConfidence {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsConfidence {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsCriticality {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsCriticality {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsRelatedFindingsId {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsRelatedFindingsId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsRelatedFindingsProductArn {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsRelatedFindingsProductArn {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsSeverityLabel {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsSeverityLabel {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsSeverityOriginal {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsSeverityOriginal {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFindingProviderFieldsTypes {
+export interface AwsSecurityhubInsightArgsFiltersFindingProviderFieldsTypes {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersFirstObservedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersFirstObservedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersFirstObservedAt {
+export interface AwsSecurityhubInsightArgsFiltersFirstObservedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersFirstObservedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersFirstObservedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersGeneratorId {
+export interface AwsSecurityhubInsightArgsFiltersGeneratorId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersid {
+export interface AwsSecurityhubInsightArgsFiltersId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfilterskeyword {
+export interface AwsSecurityhubInsightArgsFiltersKeyword {
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersLastObservedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersLastObservedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersLastObservedAt {
+export interface AwsSecurityhubInsightArgsFiltersLastObservedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersLastObservedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersLastObservedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersMalwareName {
+export interface AwsSecurityhubInsightArgsFiltersMalwareName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersMalwarePath {
+export interface AwsSecurityhubInsightArgsFiltersMalwarePath {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersMalwareState {
+export interface AwsSecurityhubInsightArgsFiltersMalwareState {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersMalwareType {
+export interface AwsSecurityhubInsightArgsFiltersMalwareType {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkDestinationDomain {
+export interface AwsSecurityhubInsightArgsFiltersNetworkDestinationDomain {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkDestinationIpv4 {
+export interface AwsSecurityhubInsightArgsFiltersNetworkDestinationIpv4 {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkDestinationIpv6 {
+export interface AwsSecurityhubInsightArgsFiltersNetworkDestinationIpv6 {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkDestinationPort {
+export interface AwsSecurityhubInsightArgsFiltersNetworkDestinationPort {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkDirection {
+export interface AwsSecurityhubInsightArgsFiltersNetworkDirection {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkProtocol {
+export interface AwsSecurityhubInsightArgsFiltersNetworkProtocol {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkSourceDomain {
+export interface AwsSecurityhubInsightArgsFiltersNetworkSourceDomain {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkSourceIpv4 {
+export interface AwsSecurityhubInsightArgsFiltersNetworkSourceIpv4 {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkSourceIpv6 {
+export interface AwsSecurityhubInsightArgsFiltersNetworkSourceIpv6 {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkSourceMac {
+export interface AwsSecurityhubInsightArgsFiltersNetworkSourceMac {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNetworkSourcePort {
+export interface AwsSecurityhubInsightArgsFiltersNetworkSourcePort {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNoteText {
+export interface AwsSecurityhubInsightArgsFiltersNoteText {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersNoteUpdatedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersNoteUpdatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersNoteUpdatedAt {
+export interface AwsSecurityhubInsightArgsFiltersNoteUpdatedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersNoteUpdatedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersNoteUpdatedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersNoteUpdatedBy {
+export interface AwsSecurityhubInsightArgsFiltersNoteUpdatedBy {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessLaunchedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersProcessLaunchedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessLaunchedAt {
+export interface AwsSecurityhubInsightArgsFiltersProcessLaunchedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersProcessLaunchedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersProcessLaunchedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessName {
+export interface AwsSecurityhubInsightArgsFiltersProcessName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessParentPid {
+export interface AwsSecurityhubInsightArgsFiltersProcessParentPid {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessPath {
+export interface AwsSecurityhubInsightArgsFiltersProcessPath {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessPid {
+export interface AwsSecurityhubInsightArgsFiltersProcessPid {
   eq?: string;
   gte?: string;
   lte?: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessTerminatedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersProcessTerminatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersProcessTerminatedAt {
+export interface AwsSecurityhubInsightArgsFiltersProcessTerminatedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersProcessTerminatedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersProcessTerminatedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersProductArn {
+export interface AwsSecurityhubInsightArgsFiltersProductArn {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProductFields {
+export interface AwsSecurityhubInsightArgsFiltersProductFields {
   comparison: string;
   key: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersProductName {
+export interface AwsSecurityhubInsightArgsFiltersProductName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersRecommendationText {
+export interface AwsSecurityhubInsightArgsFiltersRecommendationText {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersRecordState {
+export interface AwsSecurityhubInsightArgsFiltersRecordState {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersRelatedFindingsId {
+export interface AwsSecurityhubInsightArgsFiltersRelatedFindingsId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersRelatedFindingsProductArn {
+export interface AwsSecurityhubInsightArgsFiltersRelatedFindingsProductArn {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIamInstanceProfileArn {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIamInstanceProfileArn {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceImageId {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceImageId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIpv4Addresses {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIpv4Addresses {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIpv6Addresses {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIpv6Addresses {
   cidr: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceKeyName {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceKeyName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceLaunchedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceLaunchedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceLaunchedAt {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceLaunchedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceLaunchedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceLaunchedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceSubnetId {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceSubnetId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceType {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceType {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceVpcId {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceVpcId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyCreatedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyCreatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyCreatedAt {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyCreatedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyCreatedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyCreatedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyStatus {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyStatus {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyUserName {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyUserName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsS3BucketOwnerId {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsS3BucketOwnerId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceAwsS3BucketOwnerName {
+export interface AwsSecurityhubInsightArgsFiltersResourceAwsS3BucketOwnerName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceContainerImageId {
+export interface AwsSecurityhubInsightArgsFiltersResourceContainerImageId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceContainerImageName {
+export interface AwsSecurityhubInsightArgsFiltersResourceContainerImageName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceContainerLaunchedAtDateRange {
+export interface AwsSecurityhubInsightArgsFiltersResourceContainerLaunchedAtDateRange {
   unit: string;
   value: number;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceContainerLaunchedAt {
+export interface AwsSecurityhubInsightArgsFiltersResourceContainerLaunchedAt {
   end?: string;
   start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersResourceContainerLaunchedAtDateRange;
+  date_range: AwsSecurityhubInsightArgsFiltersResourceContainerLaunchedAtDateRange;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceContainerName {
+export interface AwsSecurityhubInsightArgsFiltersResourceContainerName {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceDetailsOther {
+export interface AwsSecurityhubInsightArgsFiltersResourceDetailsOther {
   comparison: string;
   key: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceId {
+export interface AwsSecurityhubInsightArgsFiltersResourceId {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourcePartition {
+export interface AwsSecurityhubInsightArgsFiltersResourcePartition {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceRegion {
+export interface AwsSecurityhubInsightArgsFiltersResourceRegion {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersResourceTags {
-  comparison: string;
-  key: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersResourceType {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersSeverityLabel {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersSourceUrl {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorCategory {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorLastObservedAtDateRange {
-  unit: string;
-  value: number;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorLastObservedAt {
-  end?: string;
-  start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorLastObservedAtDateRange;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorSource {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorSourceUrl {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorType {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorValue {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfilterstitle {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfilterstype {
-  comparison: string;
-  value: string;
-}
-export interface AwsSecurityhubInsightArgsfiltersUpdatedAtDateRange {
-  unit: string;
-  value: number;
-}
-export interface AwsSecurityhubInsightArgsfiltersUpdatedAt {
-  end?: string;
-  start?: string;
-  date_range: AwsSecurityhubInsightArgsfiltersUpdatedAtDateRange;
-}
-export interface AwsSecurityhubInsightArgsfiltersUserDefinedValues {
+export interface AwsSecurityhubInsightArgsFiltersResourceTags {
   comparison: string;
   key: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersVerificationState {
+export interface AwsSecurityhubInsightArgsFiltersResourceType {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfiltersWorkflowStatus {
+export interface AwsSecurityhubInsightArgsFiltersSeverityLabel {
   comparison: string;
   value: string;
 }
-export interface AwsSecurityhubInsightArgsfilters {
-  aws_account_id: AwsSecurityhubInsightArgsfiltersAwsAccountId;
-  company_name: AwsSecurityhubInsightArgsfiltersCompanyName;
-  compliance_status: AwsSecurityhubInsightArgsfiltersComplianceStatus;
-  confidence: AwsSecurityhubInsightArgsfiltersconfidence;
-  created_at: AwsSecurityhubInsightArgsfiltersCreatedAt;
-  criticality: AwsSecurityhubInsightArgsfilterscriticality;
-  description: AwsSecurityhubInsightArgsfiltersdescription;
-  finding_provider_fields_confidence: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsConfidence;
-  finding_provider_fields_criticality: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsCriticality;
-  finding_provider_fields_related_findings_id: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsRelatedFindingsId;
-  finding_provider_fields_related_findings_product_arn: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsRelatedFindingsProductArn;
-  finding_provider_fields_severity_label: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsSeverityLabel;
-  finding_provider_fields_severity_original: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsSeverityOriginal;
-  finding_provider_fields_types: AwsSecurityhubInsightArgsfiltersFindingProviderFieldsTypes;
-  first_observed_at: AwsSecurityhubInsightArgsfiltersFirstObservedAt;
-  generator_id: AwsSecurityhubInsightArgsfiltersGeneratorId;
-  id: AwsSecurityhubInsightArgsfiltersid;
-  keyword: AwsSecurityhubInsightArgsfilterskeyword;
-  last_observed_at: AwsSecurityhubInsightArgsfiltersLastObservedAt;
-  malware_name: AwsSecurityhubInsightArgsfiltersMalwareName;
-  malware_path: AwsSecurityhubInsightArgsfiltersMalwarePath;
-  malware_state: AwsSecurityhubInsightArgsfiltersMalwareState;
-  malware_type: AwsSecurityhubInsightArgsfiltersMalwareType;
-  network_destination_domain: AwsSecurityhubInsightArgsfiltersNetworkDestinationDomain;
-  network_destination_ipv4: AwsSecurityhubInsightArgsfiltersNetworkDestinationIpv4;
-  network_destination_ipv6: AwsSecurityhubInsightArgsfiltersNetworkDestinationIpv6;
-  network_destination_port: AwsSecurityhubInsightArgsfiltersNetworkDestinationPort;
-  network_direction: AwsSecurityhubInsightArgsfiltersNetworkDirection;
-  network_protocol: AwsSecurityhubInsightArgsfiltersNetworkProtocol;
-  network_source_domain: AwsSecurityhubInsightArgsfiltersNetworkSourceDomain;
-  network_source_ipv4: AwsSecurityhubInsightArgsfiltersNetworkSourceIpv4;
-  network_source_ipv6: AwsSecurityhubInsightArgsfiltersNetworkSourceIpv6;
-  network_source_mac: AwsSecurityhubInsightArgsfiltersNetworkSourceMac;
-  network_source_port: AwsSecurityhubInsightArgsfiltersNetworkSourcePort;
-  note_text: AwsSecurityhubInsightArgsfiltersNoteText;
-  note_updated_at: AwsSecurityhubInsightArgsfiltersNoteUpdatedAt;
-  note_updated_by: AwsSecurityhubInsightArgsfiltersNoteUpdatedBy;
-  process_launched_at: AwsSecurityhubInsightArgsfiltersProcessLaunchedAt;
-  process_name: AwsSecurityhubInsightArgsfiltersProcessName;
-  process_parent_pid: AwsSecurityhubInsightArgsfiltersProcessParentPid;
-  process_path: AwsSecurityhubInsightArgsfiltersProcessPath;
-  process_pid: AwsSecurityhubInsightArgsfiltersProcessPid;
-  process_terminated_at: AwsSecurityhubInsightArgsfiltersProcessTerminatedAt;
-  product_arn: AwsSecurityhubInsightArgsfiltersProductArn;
-  product_fields: AwsSecurityhubInsightArgsfiltersProductFields;
-  product_name: AwsSecurityhubInsightArgsfiltersProductName;
-  recommendation_text: AwsSecurityhubInsightArgsfiltersRecommendationText;
-  record_state: AwsSecurityhubInsightArgsfiltersRecordState;
-  related_findings_id: AwsSecurityhubInsightArgsfiltersRelatedFindingsId;
-  related_findings_product_arn: AwsSecurityhubInsightArgsfiltersRelatedFindingsProductArn;
-  resource_aws_ec2_instance_iam_instance_profile_arn: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIamInstanceProfileArn;
-  resource_aws_ec2_instance_image_id: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceImageId;
-  resource_aws_ec2_instance_ipv4_addresses: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIpv4Addresses;
-  resource_aws_ec2_instance_ipv6_addresses: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceIpv6Addresses;
-  resource_aws_ec2_instance_key_name: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceKeyName;
-  resource_aws_ec2_instance_launched_at: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceLaunchedAt;
-  resource_aws_ec2_instance_subnet_id: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceSubnetId;
-  resource_aws_ec2_instance_type: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceType;
-  resource_aws_ec2_instance_vpc_id: AwsSecurityhubInsightArgsfiltersResourceAwsEc2InstanceVpcId;
-  resource_aws_iam_access_key_created_at: AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyCreatedAt;
-  resource_aws_iam_access_key_status: AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyStatus;
-  resource_aws_iam_access_key_user_name: AwsSecurityhubInsightArgsfiltersResourceAwsIamAccessKeyUserName;
-  resource_aws_s3_bucket_owner_id: AwsSecurityhubInsightArgsfiltersResourceAwsS3BucketOwnerId;
-  resource_aws_s3_bucket_owner_name: AwsSecurityhubInsightArgsfiltersResourceAwsS3BucketOwnerName;
-  resource_container_image_id: AwsSecurityhubInsightArgsfiltersResourceContainerImageId;
-  resource_container_image_name: AwsSecurityhubInsightArgsfiltersResourceContainerImageName;
-  resource_container_launched_at: AwsSecurityhubInsightArgsfiltersResourceContainerLaunchedAt;
-  resource_container_name: AwsSecurityhubInsightArgsfiltersResourceContainerName;
-  resource_details_other: AwsSecurityhubInsightArgsfiltersResourceDetailsOther;
-  resource_id: AwsSecurityhubInsightArgsfiltersResourceId;
-  resource_partition: AwsSecurityhubInsightArgsfiltersResourcePartition;
-  resource_region: AwsSecurityhubInsightArgsfiltersResourceRegion;
-  resource_tags: AwsSecurityhubInsightArgsfiltersResourceTags;
-  resource_type: AwsSecurityhubInsightArgsfiltersResourceType;
-  severity_label: AwsSecurityhubInsightArgsfiltersSeverityLabel;
-  source_url: AwsSecurityhubInsightArgsfiltersSourceUrl;
-  threat_intel_indicator_category: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorCategory;
-  threat_intel_indicator_last_observed_at: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorLastObservedAt;
-  threat_intel_indicator_source: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorSource;
-  threat_intel_indicator_source_url: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorSourceUrl;
-  threat_intel_indicator_type: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorType;
-  threat_intel_indicator_value: AwsSecurityhubInsightArgsfiltersThreatIntelIndicatorValue;
-  title: AwsSecurityhubInsightArgsfilterstitle;
-  type: AwsSecurityhubInsightArgsfilterstype;
-  updated_at: AwsSecurityhubInsightArgsfiltersUpdatedAt;
-  user_defined_values: AwsSecurityhubInsightArgsfiltersUserDefinedValues;
-  verification_state: AwsSecurityhubInsightArgsfiltersVerificationState;
-  workflow_status: AwsSecurityhubInsightArgsfiltersWorkflowStatus;
+export interface AwsSecurityhubInsightArgsFiltersSourceUrl {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorCategory {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorLastObservedAtDateRange {
+  unit: string;
+  value: number;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorLastObservedAt {
+  end?: string;
+  start?: string;
+  date_range: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorLastObservedAtDateRange;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorSource {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorSourceUrl {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorType {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorValue {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersTitle {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersType {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersUpdatedAtDateRange {
+  unit: string;
+  value: number;
+}
+export interface AwsSecurityhubInsightArgsFiltersUpdatedAt {
+  end?: string;
+  start?: string;
+  date_range: AwsSecurityhubInsightArgsFiltersUpdatedAtDateRange;
+}
+export interface AwsSecurityhubInsightArgsFiltersUserDefinedValues {
+  comparison: string;
+  key: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersVerificationState {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFiltersWorkflowStatus {
+  comparison: string;
+  value: string;
+}
+export interface AwsSecurityhubInsightArgsFilters {
+  aws_account_id: AwsSecurityhubInsightArgsFiltersAwsAccountId;
+  company_name: AwsSecurityhubInsightArgsFiltersCompanyName;
+  compliance_status: AwsSecurityhubInsightArgsFiltersComplianceStatus;
+  confidence: AwsSecurityhubInsightArgsFiltersConfidence;
+  created_at: AwsSecurityhubInsightArgsFiltersCreatedAt;
+  criticality: AwsSecurityhubInsightArgsFiltersCriticality;
+  description: AwsSecurityhubInsightArgsFiltersDescription;
+  finding_provider_fields_confidence: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsConfidence;
+  finding_provider_fields_criticality: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsCriticality;
+  finding_provider_fields_related_findings_id: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsRelatedFindingsId;
+  finding_provider_fields_related_findings_product_arn: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsRelatedFindingsProductArn;
+  finding_provider_fields_severity_label: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsSeverityLabel;
+  finding_provider_fields_severity_original: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsSeverityOriginal;
+  finding_provider_fields_types: AwsSecurityhubInsightArgsFiltersFindingProviderFieldsTypes;
+  first_observed_at: AwsSecurityhubInsightArgsFiltersFirstObservedAt;
+  generator_id: AwsSecurityhubInsightArgsFiltersGeneratorId;
+  id: AwsSecurityhubInsightArgsFiltersId;
+  keyword: AwsSecurityhubInsightArgsFiltersKeyword;
+  last_observed_at: AwsSecurityhubInsightArgsFiltersLastObservedAt;
+  malware_name: AwsSecurityhubInsightArgsFiltersMalwareName;
+  malware_path: AwsSecurityhubInsightArgsFiltersMalwarePath;
+  malware_state: AwsSecurityhubInsightArgsFiltersMalwareState;
+  malware_type: AwsSecurityhubInsightArgsFiltersMalwareType;
+  network_destination_domain: AwsSecurityhubInsightArgsFiltersNetworkDestinationDomain;
+  network_destination_ipv4: AwsSecurityhubInsightArgsFiltersNetworkDestinationIpv4;
+  network_destination_ipv6: AwsSecurityhubInsightArgsFiltersNetworkDestinationIpv6;
+  network_destination_port: AwsSecurityhubInsightArgsFiltersNetworkDestinationPort;
+  network_direction: AwsSecurityhubInsightArgsFiltersNetworkDirection;
+  network_protocol: AwsSecurityhubInsightArgsFiltersNetworkProtocol;
+  network_source_domain: AwsSecurityhubInsightArgsFiltersNetworkSourceDomain;
+  network_source_ipv4: AwsSecurityhubInsightArgsFiltersNetworkSourceIpv4;
+  network_source_ipv6: AwsSecurityhubInsightArgsFiltersNetworkSourceIpv6;
+  network_source_mac: AwsSecurityhubInsightArgsFiltersNetworkSourceMac;
+  network_source_port: AwsSecurityhubInsightArgsFiltersNetworkSourcePort;
+  note_text: AwsSecurityhubInsightArgsFiltersNoteText;
+  note_updated_at: AwsSecurityhubInsightArgsFiltersNoteUpdatedAt;
+  note_updated_by: AwsSecurityhubInsightArgsFiltersNoteUpdatedBy;
+  process_launched_at: AwsSecurityhubInsightArgsFiltersProcessLaunchedAt;
+  process_name: AwsSecurityhubInsightArgsFiltersProcessName;
+  process_parent_pid: AwsSecurityhubInsightArgsFiltersProcessParentPid;
+  process_path: AwsSecurityhubInsightArgsFiltersProcessPath;
+  process_pid: AwsSecurityhubInsightArgsFiltersProcessPid;
+  process_terminated_at: AwsSecurityhubInsightArgsFiltersProcessTerminatedAt;
+  product_arn: AwsSecurityhubInsightArgsFiltersProductArn;
+  product_fields: AwsSecurityhubInsightArgsFiltersProductFields;
+  product_name: AwsSecurityhubInsightArgsFiltersProductName;
+  recommendation_text: AwsSecurityhubInsightArgsFiltersRecommendationText;
+  record_state: AwsSecurityhubInsightArgsFiltersRecordState;
+  related_findings_id: AwsSecurityhubInsightArgsFiltersRelatedFindingsId;
+  related_findings_product_arn: AwsSecurityhubInsightArgsFiltersRelatedFindingsProductArn;
+  resource_aws_ec2_instance_iam_instance_profile_arn: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIamInstanceProfileArn;
+  resource_aws_ec2_instance_image_id: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceImageId;
+  resource_aws_ec2_instance_ipv4_addresses: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIpv4Addresses;
+  resource_aws_ec2_instance_ipv6_addresses: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceIpv6Addresses;
+  resource_aws_ec2_instance_key_name: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceKeyName;
+  resource_aws_ec2_instance_launched_at: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceLaunchedAt;
+  resource_aws_ec2_instance_subnet_id: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceSubnetId;
+  resource_aws_ec2_instance_type: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceType;
+  resource_aws_ec2_instance_vpc_id: AwsSecurityhubInsightArgsFiltersResourceAwsEc2InstanceVpcId;
+  resource_aws_iam_access_key_created_at: AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyCreatedAt;
+  resource_aws_iam_access_key_status: AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyStatus;
+  resource_aws_iam_access_key_user_name: AwsSecurityhubInsightArgsFiltersResourceAwsIamAccessKeyUserName;
+  resource_aws_s3_bucket_owner_id: AwsSecurityhubInsightArgsFiltersResourceAwsS3BucketOwnerId;
+  resource_aws_s3_bucket_owner_name: AwsSecurityhubInsightArgsFiltersResourceAwsS3BucketOwnerName;
+  resource_container_image_id: AwsSecurityhubInsightArgsFiltersResourceContainerImageId;
+  resource_container_image_name: AwsSecurityhubInsightArgsFiltersResourceContainerImageName;
+  resource_container_launched_at: AwsSecurityhubInsightArgsFiltersResourceContainerLaunchedAt;
+  resource_container_name: AwsSecurityhubInsightArgsFiltersResourceContainerName;
+  resource_details_other: AwsSecurityhubInsightArgsFiltersResourceDetailsOther;
+  resource_id: AwsSecurityhubInsightArgsFiltersResourceId;
+  resource_partition: AwsSecurityhubInsightArgsFiltersResourcePartition;
+  resource_region: AwsSecurityhubInsightArgsFiltersResourceRegion;
+  resource_tags: AwsSecurityhubInsightArgsFiltersResourceTags;
+  resource_type: AwsSecurityhubInsightArgsFiltersResourceType;
+  severity_label: AwsSecurityhubInsightArgsFiltersSeverityLabel;
+  source_url: AwsSecurityhubInsightArgsFiltersSourceUrl;
+  threat_intel_indicator_category: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorCategory;
+  threat_intel_indicator_last_observed_at: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorLastObservedAt;
+  threat_intel_indicator_source: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorSource;
+  threat_intel_indicator_source_url: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorSourceUrl;
+  threat_intel_indicator_type: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorType;
+  threat_intel_indicator_value: AwsSecurityhubInsightArgsFiltersThreatIntelIndicatorValue;
+  title: AwsSecurityhubInsightArgsFiltersTitle;
+  type: AwsSecurityhubInsightArgsFiltersType;
+  updated_at: AwsSecurityhubInsightArgsFiltersUpdatedAt;
+  user_defined_values: AwsSecurityhubInsightArgsFiltersUserDefinedValues;
+  verification_state: AwsSecurityhubInsightArgsFiltersVerificationState;
+  workflow_status: AwsSecurityhubInsightArgsFiltersWorkflowStatus;
 }
 export interface AwsSecurityhubInsightArgs {
   group_by_attribute: string;
   name: string;
-  filters: AwsSecurityhubInsightArgsfilters;
+  filters: AwsSecurityhubInsightArgsFilters;
 }
 export class aws_securityhub_insight extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleEventarcChannelArgstimeouts {
+export interface GoogleEventarcChannelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleEventarcChannelArgs {
   location: string;
   name: string;
   third_party_provider?: string;
-  timeouts: GoogleEventarcChannelArgstimeouts;
+  timeouts: GoogleEventarcChannelArgsTimeouts;
 }
 export class google_eventarc_channel extends TerraformResource {
   readonly activation_token!: string;

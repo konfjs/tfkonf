@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeEnvironmentKeyvaluemapsArgstimeouts {
+export interface GoogleApigeeEnvironmentKeyvaluemapsArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleApigeeEnvironmentKeyvaluemapsArgs {
   env_id: string;
   name: string;
-  timeouts: GoogleApigeeEnvironmentKeyvaluemapsArgstimeouts;
+  timeouts: GoogleApigeeEnvironmentKeyvaluemapsArgsTimeouts;
 }
 export class google_apigee_environment_keyvaluemaps extends TerraformResource {
   readonly id?: string;

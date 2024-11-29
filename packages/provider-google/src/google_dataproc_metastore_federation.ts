@@ -4,7 +4,7 @@ export interface GoogleDataprocMetastoreFederationArgsBackendMetastores {
   name: string;
   rank: string;
 }
-export interface GoogleDataprocMetastoreFederationArgstimeouts {
+export interface GoogleDataprocMetastoreFederationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleDataprocMetastoreFederationArgs {
   location?: string;
   version: string;
   backend_metastores: GoogleDataprocMetastoreFederationArgsBackendMetastores;
-  timeouts: GoogleDataprocMetastoreFederationArgstimeouts;
+  timeouts: GoogleDataprocMetastoreFederationArgsTimeouts;
 }
 export class google_dataproc_metastore_federation extends TerraformResource {
   readonly effective_labels!: {

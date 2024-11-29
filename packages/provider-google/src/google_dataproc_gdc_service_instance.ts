@@ -3,7 +3,7 @@ export interface GoogleDataprocGdcServiceInstanceArgsGdceCluster {
   gdce_cluster: string;
 }
 export interface GoogleDataprocGdcServiceInstanceArgsSparkServiceInstanceConfig {}
-export interface GoogleDataprocGdcServiceInstanceArgstimeouts {
+export interface GoogleDataprocGdcServiceInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface GoogleDataprocGdcServiceInstanceArgs {
   service_instance_id: string;
   gdce_cluster: GoogleDataprocGdcServiceInstanceArgsGdceCluster;
   spark_service_instance_config: GoogleDataprocGdcServiceInstanceArgsSparkServiceInstanceConfig;
-  timeouts: GoogleDataprocGdcServiceInstanceArgstimeouts;
+  timeouts: GoogleDataprocGdcServiceInstanceArgsTimeouts;
 }
 export class google_dataproc_gdc_service_instance extends TerraformResource {
   readonly create_time!: string;

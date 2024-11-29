@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsImagebuilderContainerRecipeArgscomponentparameter {
+export interface AwsImagebuilderContainerRecipeArgsComponentParameter {
   name: string;
   value: string;
 }
-export interface AwsImagebuilderContainerRecipeArgscomponent {
+export interface AwsImagebuilderContainerRecipeArgsComponent {
   component_arn: string;
-  parameter: AwsImagebuilderContainerRecipeArgscomponentparameter;
+  parameter: AwsImagebuilderContainerRecipeArgsComponentParameter;
 }
-export interface AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDeviceMappingebs {
+export interface AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDeviceMappingEbs {
   delete_on_termination?: string;
   encrypted?: string;
   iops?: number;
@@ -20,7 +20,7 @@ export interface AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDev
 export interface AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDeviceMapping {
   device_name?: string;
   virtual_name?: string;
-  ebs: AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDeviceMappingebs;
+  ebs: AwsImagebuilderContainerRecipeArgsInstanceConfigurationBlockDeviceMappingEbs;
 }
 export interface AwsImagebuilderContainerRecipeArgsInstanceConfiguration {
   image?: string;
@@ -43,7 +43,7 @@ export interface AwsImagebuilderContainerRecipeArgs {
   };
   version: string;
   working_directory?: string;
-  component: AwsImagebuilderContainerRecipeArgscomponent;
+  component: AwsImagebuilderContainerRecipeArgsComponent;
   instance_configuration: AwsImagebuilderContainerRecipeArgsInstanceConfiguration;
   target_repository: AwsImagebuilderContainerRecipeArgsTargetRepository;
 }

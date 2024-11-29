@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfigurationexpiration {
+export interface AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfigurationExpiration {
   days?: number;
 }
-export interface AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfigurationtransition {
+export interface AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfigurationTransition {
   days?: number;
   storage_class?: string;
 }
-export interface AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfiguration {
-  expiration: AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfigurationexpiration;
-  transition: AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfigurationtransition;
+export interface AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfiguration {
+  expiration: AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfigurationExpiration;
+  transition: AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfigurationTransition;
 }
-export interface AwsSecuritylakeDataLakeArgsconfigurationReplicationConfiguration {
+export interface AwsSecuritylakeDataLakeArgsConfigurationReplicationConfiguration {
   regions?: string[];
   role_arn?: string;
 }
-export interface AwsSecuritylakeDataLakeArgsconfiguration {
+export interface AwsSecuritylakeDataLakeArgsConfiguration {
   region: string;
-  lifecycle_configuration: AwsSecuritylakeDataLakeArgsconfigurationLifecycleConfiguration;
-  replication_configuration: AwsSecuritylakeDataLakeArgsconfigurationReplicationConfiguration;
+  lifecycle_configuration: AwsSecuritylakeDataLakeArgsConfigurationLifecycleConfiguration;
+  replication_configuration: AwsSecuritylakeDataLakeArgsConfigurationReplicationConfiguration;
 }
-export interface AwsSecuritylakeDataLakeArgstimeouts {
+export interface AwsSecuritylakeDataLakeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,8 +29,8 @@ export interface AwsSecuritylakeDataLakeArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: AwsSecuritylakeDataLakeArgsconfiguration;
-  timeouts: AwsSecuritylakeDataLakeArgstimeouts;
+  configuration: AwsSecuritylakeDataLakeArgsConfiguration;
+  timeouts: AwsSecuritylakeDataLakeArgsTimeouts;
 }
 export class aws_securitylake_data_lake extends TerraformResource {
   readonly arn!: string;

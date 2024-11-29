@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleMonitoringSloArgsBasicSliavailability {
+export interface GoogleMonitoringSloArgsBasicSliAvailability {
   enabled?: boolean;
 }
-export interface GoogleMonitoringSloArgsBasicSlilatency {
+export interface GoogleMonitoringSloArgsBasicSliLatency {
   threshold: string;
 }
 export interface GoogleMonitoringSloArgsBasicSli {
   location?: string[];
   method?: string[];
   version?: string[];
-  availability: GoogleMonitoringSloArgsBasicSliavailability;
-  latency: GoogleMonitoringSloArgsBasicSlilatency;
+  availability: GoogleMonitoringSloArgsBasicSliAvailability;
+  latency: GoogleMonitoringSloArgsBasicSliLatency;
 }
-export interface GoogleMonitoringSloArgsRequestBasedSliDistributionCutrange {
+export interface GoogleMonitoringSloArgsRequestBasedSliDistributionCutRange {
   max?: number;
   min?: number;
 }
 export interface GoogleMonitoringSloArgsRequestBasedSliDistributionCut {
   distribution_filter: string;
-  range: GoogleMonitoringSloArgsRequestBasedSliDistributionCutrange;
+  range: GoogleMonitoringSloArgsRequestBasedSliDistributionCutRange;
 }
 export interface GoogleMonitoringSloArgsRequestBasedSliGoodTotalRatio {
   bad_service_filter?: string;
@@ -29,61 +29,61 @@ export interface GoogleMonitoringSloArgsRequestBasedSli {
   distribution_cut: GoogleMonitoringSloArgsRequestBasedSliDistributionCut;
   good_total_ratio: GoogleMonitoringSloArgsRequestBasedSliGoodTotalRatio;
 }
-export interface GoogleMonitoringSloArgstimeouts {
+export interface GoogleMonitoringSloArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceavailability {
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability {
   enabled?: boolean;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformancelatency {
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency {
   threshold: string;
 }
 export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
   location?: string[];
   method?: string[];
   version?: string[];
-  availability: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceavailability;
-  latency: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformancelatency;
+  availability: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability;
+  latency: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceDistributionCutrange {
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange {
   max?: number;
   min?: number;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceDistributionCut {
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
   distribution_filter: string;
-  range: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceDistributionCutrange;
+  range: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceGoodTotalRatio {
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio {
   bad_service_filter?: string;
   good_service_filter?: string;
   total_service_filter?: string;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformance {
-  distribution_cut: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceDistributionCut;
-  good_total_ratio: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformanceGoodTotalRatio;
+export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformance {
+  distribution_cut: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut;
+  good_total_ratio: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio;
 }
 export interface GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThreshold {
   threshold?: number;
   basic_sli_performance: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance;
-  performance: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdperformance;
+  performance: GoogleMonitoringSloArgsWindowsBasedSliGoodTotalRatioThresholdPerformance;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliMetricMeanInRangerange {
+export interface GoogleMonitoringSloArgsWindowsBasedSliMetricMeanInRangeRange {
   max?: number;
   min?: number;
 }
 export interface GoogleMonitoringSloArgsWindowsBasedSliMetricMeanInRange {
   time_series: string;
-  range: GoogleMonitoringSloArgsWindowsBasedSliMetricMeanInRangerange;
+  range: GoogleMonitoringSloArgsWindowsBasedSliMetricMeanInRangeRange;
 }
-export interface GoogleMonitoringSloArgsWindowsBasedSliMetricSumInRangerange {
+export interface GoogleMonitoringSloArgsWindowsBasedSliMetricSumInRangeRange {
   max?: number;
   min?: number;
 }
 export interface GoogleMonitoringSloArgsWindowsBasedSliMetricSumInRange {
   time_series: string;
-  range: GoogleMonitoringSloArgsWindowsBasedSliMetricSumInRangerange;
+  range: GoogleMonitoringSloArgsWindowsBasedSliMetricSumInRangeRange;
 }
 export interface GoogleMonitoringSloArgsWindowsBasedSli {
   good_bad_metric_filter?: string;
@@ -103,7 +103,7 @@ export interface GoogleMonitoringSloArgs {
   };
   basic_sli: GoogleMonitoringSloArgsBasicSli;
   request_based_sli: GoogleMonitoringSloArgsRequestBasedSli;
-  timeouts: GoogleMonitoringSloArgstimeouts;
+  timeouts: GoogleMonitoringSloArgsTimeouts;
   windows_based_sli: GoogleMonitoringSloArgsWindowsBasedSli;
 }
 export class google_monitoring_slo extends TerraformResource {

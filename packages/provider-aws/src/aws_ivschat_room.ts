@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsIvschatRoomArgsMessageReviewHandler {
   uri?: string;
 }
-export interface AwsIvschatRoomArgstimeouts {
+export interface AwsIvschatRoomArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsIvschatRoomArgs {
     [key: string]: string;
   };
   message_review_handler: AwsIvschatRoomArgsMessageReviewHandler;
-  timeouts: AwsIvschatRoomArgstimeouts;
+  timeouts: AwsIvschatRoomArgsTimeouts;
 }
 export class aws_ivschat_room extends TerraformResource {
   readonly arn!: string;

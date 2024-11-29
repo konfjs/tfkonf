@@ -61,22 +61,22 @@ export interface AwsCognitoUserPoolArgsPasswordPolicy {
   require_symbols?: boolean;
   require_uppercase?: boolean;
 }
-export interface AwsCognitoUserPoolArgsschemaNumberAttributeConstraints {
+export interface AwsCognitoUserPoolArgsSchemaNumberAttributeConstraints {
   max_value?: string;
   min_value?: string;
 }
-export interface AwsCognitoUserPoolArgsschemaStringAttributeConstraints {
+export interface AwsCognitoUserPoolArgsSchemaStringAttributeConstraints {
   max_length?: string;
   min_length?: string;
 }
-export interface AwsCognitoUserPoolArgsschema {
+export interface AwsCognitoUserPoolArgsSchema {
   attribute_data_type: string;
   developer_only_attribute?: boolean;
   mutable?: boolean;
   name: string;
   required?: boolean;
-  number_attribute_constraints: AwsCognitoUserPoolArgsschemaNumberAttributeConstraints;
-  string_attribute_constraints: AwsCognitoUserPoolArgsschemaStringAttributeConstraints;
+  number_attribute_constraints: AwsCognitoUserPoolArgsSchemaNumberAttributeConstraints;
+  string_attribute_constraints: AwsCognitoUserPoolArgsSchemaStringAttributeConstraints;
 }
 export interface AwsCognitoUserPoolArgsSmsConfiguration {
   external_id: string;
@@ -114,7 +114,7 @@ export interface AwsCognitoUserPoolArgs {
   email_configuration: AwsCognitoUserPoolArgsEmailConfiguration;
   lambda_config: AwsCognitoUserPoolArgsLambdaConfig;
   password_policy: AwsCognitoUserPoolArgsPasswordPolicy;
-  schema: AwsCognitoUserPoolArgsschema;
+  schema: AwsCognitoUserPoolArgsSchema;
   sms_configuration: AwsCognitoUserPoolArgsSmsConfiguration;
   software_token_mfa_configuration: AwsCognitoUserPoolArgsSoftwareTokenMfaConfiguration;
   user_attribute_update_settings: AwsCognitoUserPoolArgsUserAttributeUpdateSettings;

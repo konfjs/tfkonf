@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSagemakerModelArgscontainerImageConfigRepositoryAuthConfig {
+export interface AwsSagemakerModelArgsContainerImageConfigRepositoryAuthConfig {
   repository_credentials_provider_arn: string;
 }
-export interface AwsSagemakerModelArgscontainerImageConfig {
+export interface AwsSagemakerModelArgsContainerImageConfig {
   repository_access_mode: string;
-  repository_auth_config: AwsSagemakerModelArgscontainerImageConfigRepositoryAuthConfig;
+  repository_auth_config: AwsSagemakerModelArgsContainerImageConfigRepositoryAuthConfig;
 }
-export interface AwsSagemakerModelArgscontainerModelDataSourceS3DataSourceModelAccessConfig {
+export interface AwsSagemakerModelArgsContainerModelDataSourceS3DataSourceModelAccessConfig {
   accept_eula: boolean;
 }
-export interface AwsSagemakerModelArgscontainerModelDataSourceS3DataSource {
+export interface AwsSagemakerModelArgsContainerModelDataSourceS3DataSource {
   compression_type: string;
   s3_data_type: string;
   s3_uri: string;
-  model_access_config: AwsSagemakerModelArgscontainerModelDataSourceS3DataSourceModelAccessConfig;
+  model_access_config: AwsSagemakerModelArgsContainerModelDataSourceS3DataSourceModelAccessConfig;
 }
-export interface AwsSagemakerModelArgscontainerModelDataSource {
-  s3_data_source: AwsSagemakerModelArgscontainerModelDataSourceS3DataSource;
+export interface AwsSagemakerModelArgsContainerModelDataSource {
+  s3_data_source: AwsSagemakerModelArgsContainerModelDataSourceS3DataSource;
 }
-export interface AwsSagemakerModelArgscontainerMultiModelConfig {
+export interface AwsSagemakerModelArgsContainerMultiModelConfig {
   model_cache_setting?: string;
 }
-export interface AwsSagemakerModelArgscontainer {
+export interface AwsSagemakerModelArgsContainer {
   container_hostname?: string;
   environment?: {
     [key: string]: string;
@@ -31,9 +31,9 @@ export interface AwsSagemakerModelArgscontainer {
   mode?: string;
   model_data_url?: string;
   model_package_name?: string;
-  image_config: AwsSagemakerModelArgscontainerImageConfig;
-  model_data_source: AwsSagemakerModelArgscontainerModelDataSource;
-  multi_model_config: AwsSagemakerModelArgscontainerMultiModelConfig;
+  image_config: AwsSagemakerModelArgsContainerImageConfig;
+  model_data_source: AwsSagemakerModelArgsContainerModelDataSource;
+  multi_model_config: AwsSagemakerModelArgsContainerMultiModelConfig;
 }
 export interface AwsSagemakerModelArgsInferenceExecutionConfig {
   mode: string;
@@ -84,7 +84,7 @@ export interface AwsSagemakerModelArgs {
   tags?: {
     [key: string]: string;
   };
-  container: AwsSagemakerModelArgscontainer;
+  container: AwsSagemakerModelArgsContainer;
   inference_execution_config: AwsSagemakerModelArgsInferenceExecutionConfig;
   primary_container: AwsSagemakerModelArgsPrimaryContainer;
   vpc_config: AwsSagemakerModelArgsVpcConfig;

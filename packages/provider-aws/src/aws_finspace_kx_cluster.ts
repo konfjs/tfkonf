@@ -15,20 +15,20 @@ export interface AwsFinspaceKxClusterArgsCapacityConfiguration {
   node_count: number;
   node_type: string;
 }
-export interface AwsFinspaceKxClusterArgscode {
+export interface AwsFinspaceKxClusterArgsCode {
   s3_bucket: string;
   s3_key: string;
   s3_object_version?: string;
 }
-export interface AwsFinspaceKxClusterArgsdatabaseCacheConfigurations {
+export interface AwsFinspaceKxClusterArgsDatabaseCacheConfigurations {
   cache_type: string;
   db_paths?: string[];
 }
-export interface AwsFinspaceKxClusterArgsdatabase {
+export interface AwsFinspaceKxClusterArgsDatabase {
   changeset_id?: string;
   database_name: string;
   dataview_name?: string;
-  cache_configurations: AwsFinspaceKxClusterArgsdatabaseCacheConfigurations;
+  cache_configurations: AwsFinspaceKxClusterArgsDatabaseCacheConfigurations;
 }
 export interface AwsFinspaceKxClusterArgsSavedownStorageConfiguration {
   size?: number;
@@ -45,7 +45,7 @@ export interface AwsFinspaceKxClusterArgsScalingGroupConfiguration {
 export interface AwsFinspaceKxClusterArgsTickerplantLogConfiguration {
   tickerplant_log_volumes: string[];
 }
-export interface AwsFinspaceKxClusterArgstimeouts {
+export interface AwsFinspaceKxClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -75,12 +75,12 @@ export interface AwsFinspaceKxClusterArgs {
   auto_scaling_configuration: AwsFinspaceKxClusterArgsAutoScalingConfiguration;
   cache_storage_configurations: AwsFinspaceKxClusterArgsCacheStorageConfigurations;
   capacity_configuration: AwsFinspaceKxClusterArgsCapacityConfiguration;
-  code: AwsFinspaceKxClusterArgscode;
-  database: AwsFinspaceKxClusterArgsdatabase;
+  code: AwsFinspaceKxClusterArgsCode;
+  database: AwsFinspaceKxClusterArgsDatabase;
   savedown_storage_configuration: AwsFinspaceKxClusterArgsSavedownStorageConfiguration;
   scaling_group_configuration: AwsFinspaceKxClusterArgsScalingGroupConfiguration;
   tickerplant_log_configuration: AwsFinspaceKxClusterArgsTickerplantLogConfiguration;
-  timeouts: AwsFinspaceKxClusterArgstimeouts;
+  timeouts: AwsFinspaceKxClusterArgsTimeouts;
   vpc_configuration: AwsFinspaceKxClusterArgsVpcConfiguration;
 }
 export class aws_finspace_kx_cluster extends TerraformResource {

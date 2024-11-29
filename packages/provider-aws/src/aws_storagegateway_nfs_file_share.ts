@@ -8,7 +8,7 @@ export interface AwsStoragegatewayNfsFileShareArgsNfsFileShareDefaults {
   group_id?: string;
   owner_id?: string;
 }
-export interface AwsStoragegatewayNfsFileShareArgstimeouts {
+export interface AwsStoragegatewayNfsFileShareArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -35,7 +35,7 @@ export interface AwsStoragegatewayNfsFileShareArgs {
   vpc_endpoint_dns_name?: string;
   cache_attributes: AwsStoragegatewayNfsFileShareArgsCacheAttributes;
   nfs_file_share_defaults: AwsStoragegatewayNfsFileShareArgsNfsFileShareDefaults;
-  timeouts: AwsStoragegatewayNfsFileShareArgstimeouts;
+  timeouts: AwsStoragegatewayNfsFileShareArgsTimeouts;
 }
 export class aws_storagegateway_nfs_file_share extends TerraformResource {
   readonly arn!: string;

@@ -17,7 +17,7 @@ export interface GoogleNotebooksInstanceArgsShieldedInstanceConfig {
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface GoogleNotebooksInstanceArgstimeouts {
+export interface GoogleNotebooksInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -55,7 +55,7 @@ export interface GoogleNotebooksInstanceArgs {
   container_image: GoogleNotebooksInstanceArgsContainerImage;
   reservation_affinity: GoogleNotebooksInstanceArgsReservationAffinity;
   shielded_instance_config: GoogleNotebooksInstanceArgsShieldedInstanceConfig;
-  timeouts: GoogleNotebooksInstanceArgstimeouts;
+  timeouts: GoogleNotebooksInstanceArgsTimeouts;
   vm_image: GoogleNotebooksInstanceArgsVmImage;
 }
 export class google_notebooks_instance extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDbInstanceRoleAssociationArgstimeouts {
+export interface AwsDbInstanceRoleAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsDbInstanceRoleAssociationArgs {
   db_instance_identifier: string;
   feature_name: string;
   role_arn: string;
-  timeouts: AwsDbInstanceRoleAssociationArgstimeouts;
+  timeouts: AwsDbInstanceRoleAssociationArgsTimeouts;
 }
 export class aws_db_instance_role_association extends TerraformResource {
   readonly id?: string;

@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesitems {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesItems {
   content_type: string;
   format: string;
   profile_id?: string;
 }
 export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfiles {
-  items: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesitems;
+  items: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesItems;
 }
 export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfig {
   forward_when_content_type_is_unknown: boolean;
   content_type_profiles: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfiles;
 }
-export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesitems {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesItems {
   profile_id: string;
   query_arg: string;
 }
 export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfiles {
-  items: AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesitems;
+  items: AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesItems;
 }
 export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfig {
   forward_when_query_arg_profile_is_unknown: boolean;

@@ -6,7 +6,7 @@ export interface GoogleComputeAutoscalerArgsAutoscalingPolicyCpuUtilization {
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization {
   target: number;
 }
-export interface GoogleComputeAutoscalerArgsAutoscalingPolicymetric {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyMetric {
   name: string;
   target?: number;
   type?: string;
@@ -35,11 +35,11 @@ export interface GoogleComputeAutoscalerArgsAutoscalingPolicy {
   mode?: string;
   cpu_utilization: GoogleComputeAutoscalerArgsAutoscalingPolicyCpuUtilization;
   load_balancing_utilization: GoogleComputeAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization;
-  metric: GoogleComputeAutoscalerArgsAutoscalingPolicymetric;
+  metric: GoogleComputeAutoscalerArgsAutoscalingPolicyMetric;
   scale_in_control: GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControl;
   scaling_schedules: GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules;
 }
-export interface GoogleComputeAutoscalerArgstimeouts {
+export interface GoogleComputeAutoscalerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,7 +49,7 @@ export interface GoogleComputeAutoscalerArgs {
   name: string;
   target: string;
   autoscaling_policy: GoogleComputeAutoscalerArgsAutoscalingPolicy;
-  timeouts: GoogleComputeAutoscalerArgstimeouts;
+  timeouts: GoogleComputeAutoscalerArgsTimeouts;
 }
 export class google_compute_autoscaler extends TerraformResource {
   readonly creation_timestamp!: string;

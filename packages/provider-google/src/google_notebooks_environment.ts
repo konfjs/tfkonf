@@ -3,7 +3,7 @@ export interface GoogleNotebooksEnvironmentArgsContainerImage {
   repository: string;
   tag?: string;
 }
-export interface GoogleNotebooksEnvironmentArgstimeouts {
+export interface GoogleNotebooksEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleNotebooksEnvironmentArgs {
   name: string;
   post_startup_script?: string;
   container_image: GoogleNotebooksEnvironmentArgsContainerImage;
-  timeouts: GoogleNotebooksEnvironmentArgstimeouts;
+  timeouts: GoogleNotebooksEnvironmentArgsTimeouts;
   vm_image: GoogleNotebooksEnvironmentArgsVmImage;
 }
 export class google_notebooks_environment extends TerraformResource {

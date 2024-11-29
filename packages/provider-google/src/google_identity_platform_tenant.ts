@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIdentityPlatformTenantArgstimeouts {
+export interface GoogleIdentityPlatformTenantArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleIdentityPlatformTenantArgs {
   disable_auth?: boolean;
   display_name: string;
   enable_email_link_signin?: boolean;
-  timeouts: GoogleIdentityPlatformTenantArgstimeouts;
+  timeouts: GoogleIdentityPlatformTenantArgsTimeouts;
 }
 export class google_identity_platform_tenant extends TerraformResource {
   readonly id?: string;

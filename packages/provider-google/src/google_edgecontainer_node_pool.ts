@@ -3,7 +3,7 @@ export interface GoogleEdgecontainerNodePoolArgsLocalDiskEncryption {
   kms_key?: string;
 }
 export interface GoogleEdgecontainerNodePoolArgsNodeConfig {}
-export interface GoogleEdgecontainerNodePoolArgstimeouts {
+export interface GoogleEdgecontainerNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleEdgecontainerNodePoolArgs {
   node_location: string;
   local_disk_encryption: GoogleEdgecontainerNodePoolArgsLocalDiskEncryption;
   node_config: GoogleEdgecontainerNodePoolArgsNodeConfig;
-  timeouts: GoogleEdgecontainerNodePoolArgstimeouts;
+  timeouts: GoogleEdgecontainerNodePoolArgsTimeouts;
 }
 export class google_edgecontainer_node_pool extends TerraformResource {
   readonly create_time!: string;

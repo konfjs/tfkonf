@@ -25,7 +25,7 @@ export interface AwsOpsworksMemcachedLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksMemcachedLayerArgs {
   allocated_memory?: number;

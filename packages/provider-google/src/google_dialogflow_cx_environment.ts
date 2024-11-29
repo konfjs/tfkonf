@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowCxEnvironmentArgstimeouts {
+export interface GoogleDialogflowCxEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleDialogflowCxEnvironmentArgs {
   description?: string;
   display_name: string;
   parent?: string;
-  timeouts: GoogleDialogflowCxEnvironmentArgstimeouts;
+  timeouts: GoogleDialogflowCxEnvironmentArgsTimeouts;
   version_configs: GoogleDialogflowCxEnvironmentArgsVersionConfigs;
 }
 export class google_dialogflow_cx_environment extends TerraformResource {

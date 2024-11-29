@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCloudRunServiceIamBindingArgscondition {
+export interface GoogleCloudRunServiceIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudRunServiceIamBindingArgs {
   members: string[];
   role: string;
   service: string;
-  condition: GoogleCloudRunServiceIamBindingArgscondition;
+  condition: GoogleCloudRunServiceIamBindingArgsCondition;
 }
 export class google_cloud_run_service_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -3,7 +3,7 @@ export interface AwsSsoadminCustomerManagedPolicyAttachmentArgsCustomerManagedPo
   name: string;
   path?: string;
 }
-export interface AwsSsoadminCustomerManagedPolicyAttachmentArgstimeouts {
+export interface AwsSsoadminCustomerManagedPolicyAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -11,7 +11,7 @@ export interface AwsSsoadminCustomerManagedPolicyAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
   customer_managed_policy_reference: AwsSsoadminCustomerManagedPolicyAttachmentArgsCustomerManagedPolicyReference;
-  timeouts: AwsSsoadminCustomerManagedPolicyAttachmentArgstimeouts;
+  timeouts: AwsSsoadminCustomerManagedPolicyAttachmentArgsTimeouts;
 }
 export class aws_ssoadmin_customer_managed_policy_attachment extends TerraformResource {
   readonly id?: string;

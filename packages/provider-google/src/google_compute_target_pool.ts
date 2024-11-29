@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeTargetPoolArgstimeouts {
+export interface GoogleComputeTargetPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleComputeTargetPoolArgs {
   health_checks?: string[];
   name: string;
   session_affinity?: string;
-  timeouts: GoogleComputeTargetPoolArgstimeouts;
+  timeouts: GoogleComputeTargetPoolArgsTimeouts;
 }
 export class google_compute_target_pool extends TerraformResource {
   readonly id?: string;

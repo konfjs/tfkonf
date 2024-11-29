@@ -24,7 +24,7 @@ export interface GoogleHealthcareFhirStoreArgsStreamConfigs {
   resource_types?: string[];
   bigquery_destination: GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestination;
 }
-export interface GoogleHealthcareFhirStoreArgstimeouts {
+export interface GoogleHealthcareFhirStoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -44,7 +44,7 @@ export interface GoogleHealthcareFhirStoreArgs {
   notification_config: GoogleHealthcareFhirStoreArgsNotificationConfig;
   notification_configs: GoogleHealthcareFhirStoreArgsNotificationConfigs;
   stream_configs: GoogleHealthcareFhirStoreArgsStreamConfigs;
-  timeouts: GoogleHealthcareFhirStoreArgstimeouts;
+  timeouts: GoogleHealthcareFhirStoreArgsTimeouts;
 }
 export class google_healthcare_fhir_store extends TerraformResource {
   readonly complex_data_type_reference_parsing?: string;

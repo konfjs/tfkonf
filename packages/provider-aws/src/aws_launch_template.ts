@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsLaunchTemplateArgsBlockDeviceMappingsebs {
+export interface AwsLaunchTemplateArgsBlockDeviceMappingsEbs {
   delete_on_termination?: string;
   encrypted?: string;
   kms_key_id?: string;
@@ -9,7 +9,7 @@ export interface AwsLaunchTemplateArgsBlockDeviceMappings {
   device_name?: string;
   no_device?: string;
   virtual_name?: string;
-  ebs: AwsLaunchTemplateArgsBlockDeviceMappingsebs;
+  ebs: AwsLaunchTemplateArgsBlockDeviceMappingsEbs;
 }
 export interface AwsLaunchTemplateArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
@@ -122,7 +122,7 @@ export interface AwsLaunchTemplateArgsMaintenanceOptions {
   auto_recovery?: string;
 }
 export interface AwsLaunchTemplateArgsMetadataOptions {}
-export interface AwsLaunchTemplateArgsmonitoring {
+export interface AwsLaunchTemplateArgsMonitoring {
   enabled?: boolean;
 }
 export interface AwsLaunchTemplateArgsNetworkInterfaces {
@@ -147,7 +147,7 @@ export interface AwsLaunchTemplateArgsNetworkInterfaces {
   security_groups?: string[];
   subnet_id?: string;
 }
-export interface AwsLaunchTemplateArgsplacement {
+export interface AwsLaunchTemplateArgsPlacement {
   affinity?: string;
   availability_zone?: string;
   group_name?: string;
@@ -200,9 +200,9 @@ export interface AwsLaunchTemplateArgs {
   license_specification: AwsLaunchTemplateArgsLicenseSpecification;
   maintenance_options: AwsLaunchTemplateArgsMaintenanceOptions;
   metadata_options: AwsLaunchTemplateArgsMetadataOptions;
-  monitoring: AwsLaunchTemplateArgsmonitoring;
+  monitoring: AwsLaunchTemplateArgsMonitoring;
   network_interfaces: AwsLaunchTemplateArgsNetworkInterfaces;
-  placement: AwsLaunchTemplateArgsplacement;
+  placement: AwsLaunchTemplateArgsPlacement;
   private_dns_name_options: AwsLaunchTemplateArgsPrivateDnsNameOptions;
   tag_specifications: AwsLaunchTemplateArgsTagSpecifications;
 }

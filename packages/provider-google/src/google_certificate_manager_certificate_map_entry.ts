@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCertificateManagerCertificateMapEntryArgstimeouts {
+export interface GoogleCertificateManagerCertificateMapEntryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleCertificateManagerCertificateMapEntryArgs {
   map: string;
   matcher?: string;
   name: string;
-  timeouts: GoogleCertificateManagerCertificateMapEntryArgstimeouts;
+  timeouts: GoogleCertificateManagerCertificateMapEntryArgsTimeouts;
 }
 export class google_certificate_manager_certificate_map_entry extends TerraformResource {
   readonly create_time!: string;

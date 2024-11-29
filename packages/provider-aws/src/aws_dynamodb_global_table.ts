@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDynamodbGlobalTableArgsreplica {
+export interface AwsDynamodbGlobalTableArgsReplica {
   region_name: string;
 }
-export interface AwsDynamodbGlobalTableArgstimeouts {
+export interface AwsDynamodbGlobalTableArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsDynamodbGlobalTableArgs {
   name: string;
-  replica: AwsDynamodbGlobalTableArgsreplica;
-  timeouts: AwsDynamodbGlobalTableArgstimeouts;
+  replica: AwsDynamodbGlobalTableArgsReplica;
+  timeouts: AwsDynamodbGlobalTableArgsTimeouts;
 }
 export class aws_dynamodb_global_table extends TerraformResource {
   readonly arn!: string;

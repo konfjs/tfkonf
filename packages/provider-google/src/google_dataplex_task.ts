@@ -8,11 +8,11 @@ export interface GoogleDataplexTaskArgsExecutionSpec {
   project?: string;
   service_account: string;
 }
-export interface GoogleDataplexTaskArgsnotebookInfrastructureSpecbatch {
+export interface GoogleDataplexTaskArgsNotebookInfrastructureSpecBatch {
   executors_count?: number;
   max_executors_count?: number;
 }
-export interface GoogleDataplexTaskArgsnotebookInfrastructureSpecContainerImage {
+export interface GoogleDataplexTaskArgsNotebookInfrastructureSpecContainerImage {
   image?: string;
   java_jars?: string[];
   properties?: {
@@ -20,27 +20,27 @@ export interface GoogleDataplexTaskArgsnotebookInfrastructureSpecContainerImage 
   };
   python_packages?: string[];
 }
-export interface GoogleDataplexTaskArgsnotebookInfrastructureSpecVpcNetwork {
+export interface GoogleDataplexTaskArgsNotebookInfrastructureSpecVpcNetwork {
   network?: string;
   network_tags?: string[];
   sub_network?: string;
 }
-export interface GoogleDataplexTaskArgsnotebookInfrastructureSpec {
-  batch: GoogleDataplexTaskArgsnotebookInfrastructureSpecbatch;
-  container_image: GoogleDataplexTaskArgsnotebookInfrastructureSpecContainerImage;
-  vpc_network: GoogleDataplexTaskArgsnotebookInfrastructureSpecVpcNetwork;
+export interface GoogleDataplexTaskArgsNotebookInfrastructureSpec {
+  batch: GoogleDataplexTaskArgsNotebookInfrastructureSpecBatch;
+  container_image: GoogleDataplexTaskArgsNotebookInfrastructureSpecContainerImage;
+  vpc_network: GoogleDataplexTaskArgsNotebookInfrastructureSpecVpcNetwork;
 }
-export interface GoogleDataplexTaskArgsnotebook {
+export interface GoogleDataplexTaskArgsNotebook {
   archive_uris?: string[];
   file_uris?: string[];
   notebook: string;
-  infrastructure_spec: GoogleDataplexTaskArgsnotebookInfrastructureSpec;
+  infrastructure_spec: GoogleDataplexTaskArgsNotebookInfrastructureSpec;
 }
-export interface GoogleDataplexTaskArgssparkInfrastructureSpecbatch {
+export interface GoogleDataplexTaskArgsSparkInfrastructureSpecBatch {
   executors_count?: number;
   max_executors_count?: number;
 }
-export interface GoogleDataplexTaskArgssparkInfrastructureSpecContainerImage {
+export interface GoogleDataplexTaskArgsSparkInfrastructureSpecContainerImage {
   image?: string;
   java_jars?: string[];
   properties?: {
@@ -48,17 +48,17 @@ export interface GoogleDataplexTaskArgssparkInfrastructureSpecContainerImage {
   };
   python_packages?: string[];
 }
-export interface GoogleDataplexTaskArgssparkInfrastructureSpecVpcNetwork {
+export interface GoogleDataplexTaskArgsSparkInfrastructureSpecVpcNetwork {
   network?: string;
   network_tags?: string[];
   sub_network?: string;
 }
-export interface GoogleDataplexTaskArgssparkInfrastructureSpec {
-  batch: GoogleDataplexTaskArgssparkInfrastructureSpecbatch;
-  container_image: GoogleDataplexTaskArgssparkInfrastructureSpecContainerImage;
-  vpc_network: GoogleDataplexTaskArgssparkInfrastructureSpecVpcNetwork;
+export interface GoogleDataplexTaskArgsSparkInfrastructureSpec {
+  batch: GoogleDataplexTaskArgsSparkInfrastructureSpecBatch;
+  container_image: GoogleDataplexTaskArgsSparkInfrastructureSpecContainerImage;
+  vpc_network: GoogleDataplexTaskArgsSparkInfrastructureSpecVpcNetwork;
 }
-export interface GoogleDataplexTaskArgsspark {
+export interface GoogleDataplexTaskArgsSpark {
   archive_uris?: string[];
   file_uris?: string[];
   main_class?: string;
@@ -66,9 +66,9 @@ export interface GoogleDataplexTaskArgsspark {
   python_script_file?: string;
   sql_script?: string;
   sql_script_file?: string;
-  infrastructure_spec: GoogleDataplexTaskArgssparkInfrastructureSpec;
+  infrastructure_spec: GoogleDataplexTaskArgsSparkInfrastructureSpec;
 }
-export interface GoogleDataplexTaskArgstimeouts {
+export interface GoogleDataplexTaskArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -90,9 +90,9 @@ export interface GoogleDataplexTaskArgs {
   location?: string;
   task_id?: string;
   execution_spec: GoogleDataplexTaskArgsExecutionSpec;
-  notebook: GoogleDataplexTaskArgsnotebook;
-  spark: GoogleDataplexTaskArgsspark;
-  timeouts: GoogleDataplexTaskArgstimeouts;
+  notebook: GoogleDataplexTaskArgsNotebook;
+  spark: GoogleDataplexTaskArgsSpark;
+  timeouts: GoogleDataplexTaskArgsTimeouts;
   trigger_spec: GoogleDataplexTaskArgsTriggerSpec;
 }
 export class google_dataplex_task extends TerraformResource {

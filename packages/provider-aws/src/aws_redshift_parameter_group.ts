@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRedshiftParameterGroupArgsparameter {
+export interface AwsRedshiftParameterGroupArgsParameter {
   name: string;
   value: string;
 }
@@ -10,7 +10,7 @@ export interface AwsRedshiftParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: AwsRedshiftParameterGroupArgsparameter;
+  parameter: AwsRedshiftParameterGroupArgsParameter;
 }
 export class aws_redshift_parameter_group extends TerraformResource {
   readonly arn!: string;

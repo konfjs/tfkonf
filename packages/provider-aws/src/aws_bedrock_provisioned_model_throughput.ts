@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBedrockProvisionedModelThroughputArgstimeouts {
+export interface AwsBedrockProvisionedModelThroughputArgsTimeouts {
   create?: string;
 }
 export interface AwsBedrockProvisionedModelThroughputArgs {
@@ -10,7 +10,7 @@ export interface AwsBedrockProvisionedModelThroughputArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBedrockProvisionedModelThroughputArgstimeouts;
+  timeouts: AwsBedrockProvisionedModelThroughputArgsTimeouts;
 }
 export class aws_bedrock_provisioned_model_throughput extends TerraformResource {
   readonly id!: string;

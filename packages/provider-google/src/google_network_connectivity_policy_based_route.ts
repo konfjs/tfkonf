@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetworkConnectivityPolicyBasedRouteArgsfilter {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgsFilter {
   dest_range?: string;
   ip_protocol?: string;
   protocol_version: string;
@@ -8,7 +8,7 @@ export interface GoogleNetworkConnectivityPolicyBasedRouteArgsfilter {
 export interface GoogleNetworkConnectivityPolicyBasedRouteArgsInterconnectAttachment {
   region: string;
 }
-export interface GoogleNetworkConnectivityPolicyBasedRouteArgstimeouts {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,9 +26,9 @@ export interface GoogleNetworkConnectivityPolicyBasedRouteArgs {
   next_hop_ilb_ip?: string;
   next_hop_other_routes?: string;
   priority?: number;
-  filter: GoogleNetworkConnectivityPolicyBasedRouteArgsfilter;
+  filter: GoogleNetworkConnectivityPolicyBasedRouteArgsFilter;
   interconnect_attachment: GoogleNetworkConnectivityPolicyBasedRouteArgsInterconnectAttachment;
-  timeouts: GoogleNetworkConnectivityPolicyBasedRouteArgstimeouts;
+  timeouts: GoogleNetworkConnectivityPolicyBasedRouteArgsTimeouts;
   virtual_machine: GoogleNetworkConnectivityPolicyBasedRouteArgsVirtualMachine;
 }
 export class google_network_connectivity_policy_based_route extends TerraformResource {

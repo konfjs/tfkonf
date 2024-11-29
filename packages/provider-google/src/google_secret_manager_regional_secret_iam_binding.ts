@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSecretManagerRegionalSecretIamBindingArgscondition {
+export interface GoogleSecretManagerRegionalSecretIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSecretManagerRegionalSecretIamBindingArgs {
   members: string[];
   role: string;
   secret_id: string;
-  condition: GoogleSecretManagerRegionalSecretIamBindingArgscondition;
+  condition: GoogleSecretManagerRegionalSecretIamBindingArgsCondition;
 }
 export class google_secret_manager_regional_secret_iam_binding extends TerraformResource {
   readonly etag!: string;

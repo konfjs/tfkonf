@@ -5,7 +5,7 @@ export interface GoogleBeyondcorpAppConnectorArgsPrincipalInfoServiceAccount {
 export interface GoogleBeyondcorpAppConnectorArgsPrincipalInfo {
   service_account: GoogleBeyondcorpAppConnectorArgsPrincipalInfoServiceAccount;
 }
-export interface GoogleBeyondcorpAppConnectorArgstimeouts {
+export interface GoogleBeyondcorpAppConnectorArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface GoogleBeyondcorpAppConnectorArgs {
   name: string;
   region?: string;
   principal_info: GoogleBeyondcorpAppConnectorArgsPrincipalInfo;
-  timeouts: GoogleBeyondcorpAppConnectorArgstimeouts;
+  timeouts: GoogleBeyondcorpAppConnectorArgsTimeouts;
 }
 export class google_beyondcorp_app_connector extends TerraformResource {
   readonly effective_labels!: {

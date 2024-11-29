@@ -5,7 +5,7 @@ export interface GoogleSecureSourceManagerRepositoryArgsInitialConfig {
   license?: string;
   readme?: string;
 }
-export interface GoogleSecureSourceManagerRepositoryArgstimeouts {
+export interface GoogleSecureSourceManagerRepositoryArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,7 +15,7 @@ export interface GoogleSecureSourceManagerRepositoryArgs {
   location: string;
   repository_id: string;
   initial_config: GoogleSecureSourceManagerRepositoryArgsInitialConfig;
-  timeouts: GoogleSecureSourceManagerRepositoryArgstimeouts;
+  timeouts: GoogleSecureSourceManagerRepositoryArgsTimeouts;
 }
 export class google_secure_source_manager_repository extends TerraformResource {
   readonly create_time!: string;

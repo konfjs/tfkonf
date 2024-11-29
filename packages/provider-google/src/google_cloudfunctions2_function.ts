@@ -1,7 +1,7 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleCloudfunctions2FunctionArgsBuildConfigAutomaticUpdatePolicy {}
 export interface GoogleCloudfunctions2FunctionArgsBuildConfigOnDeployUpdatePolicy {}
-export interface GoogleCloudfunctions2FunctionArgsBuildConfigsourceRepoSource {
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigSourceRepoSource {
   branch_name?: string;
   commit_sha?: string;
   dir?: string;
@@ -10,13 +10,13 @@ export interface GoogleCloudfunctions2FunctionArgsBuildConfigsourceRepoSource {
   repo_name?: string;
   tag_name?: string;
 }
-export interface GoogleCloudfunctions2FunctionArgsBuildConfigsourceStorageSource {
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigSourceStorageSource {
   bucket?: string;
   object?: string;
 }
-export interface GoogleCloudfunctions2FunctionArgsBuildConfigsource {
-  repo_source: GoogleCloudfunctions2FunctionArgsBuildConfigsourceRepoSource;
-  storage_source: GoogleCloudfunctions2FunctionArgsBuildConfigsourceStorageSource;
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigSource {
+  repo_source: GoogleCloudfunctions2FunctionArgsBuildConfigSourceRepoSource;
+  storage_source: GoogleCloudfunctions2FunctionArgsBuildConfigSourceStorageSource;
 }
 export interface GoogleCloudfunctions2FunctionArgsBuildConfig {
   entry_point?: string;
@@ -24,7 +24,7 @@ export interface GoogleCloudfunctions2FunctionArgsBuildConfig {
   worker_pool?: string;
   automatic_update_policy: GoogleCloudfunctions2FunctionArgsBuildConfigAutomaticUpdatePolicy;
   on_deploy_update_policy: GoogleCloudfunctions2FunctionArgsBuildConfigOnDeployUpdatePolicy;
-  source: GoogleCloudfunctions2FunctionArgsBuildConfigsource;
+  source: GoogleCloudfunctions2FunctionArgsBuildConfigSource;
 }
 export interface GoogleCloudfunctions2FunctionArgsEventTriggerEventFilters {
   attribute: string;
@@ -42,7 +42,7 @@ export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretEnvironment
   secret: string;
   version: string;
 }
-export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesversions {
+export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesVersions {
   path: string;
   version: string;
 }
@@ -50,7 +50,7 @@ export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumes {
   mount_path: string;
   project_id: string;
   secret: string;
-  versions: GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesversions;
+  versions: GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesVersions;
 }
 export interface GoogleCloudfunctions2FunctionArgsServiceConfig {
   all_traffic_on_latest_revision?: boolean;
@@ -61,7 +61,7 @@ export interface GoogleCloudfunctions2FunctionArgsServiceConfig {
   secret_environment_variables: GoogleCloudfunctions2FunctionArgsServiceConfigSecretEnvironmentVariables;
   secret_volumes: GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumes;
 }
-export interface GoogleCloudfunctions2FunctionArgstimeouts {
+export interface GoogleCloudfunctions2FunctionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -77,7 +77,7 @@ export interface GoogleCloudfunctions2FunctionArgs {
   build_config: GoogleCloudfunctions2FunctionArgsBuildConfig;
   event_trigger: GoogleCloudfunctions2FunctionArgsEventTrigger;
   service_config: GoogleCloudfunctions2FunctionArgsServiceConfig;
-  timeouts: GoogleCloudfunctions2FunctionArgstimeouts;
+  timeouts: GoogleCloudfunctions2FunctionArgsTimeouts;
 }
 export class google_cloudfunctions2_function extends TerraformResource {
   readonly effective_labels!: {

@@ -14,7 +14,7 @@ export interface GoogleGkeHubFleetArgsDefaultClusterConfig {
   binary_authorization_config: GoogleGkeHubFleetArgsDefaultClusterConfigBinaryAuthorizationConfig;
   security_posture_config: GoogleGkeHubFleetArgsDefaultClusterConfigSecurityPostureConfig;
 }
-export interface GoogleGkeHubFleetArgstimeouts {
+export interface GoogleGkeHubFleetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface GoogleGkeHubFleetArgstimeouts {
 export interface GoogleGkeHubFleetArgs {
   display_name?: string;
   default_cluster_config: GoogleGkeHubFleetArgsDefaultClusterConfig;
-  timeouts: GoogleGkeHubFleetArgstimeouts;
+  timeouts: GoogleGkeHubFleetArgsTimeouts;
 }
 export class google_gke_hub_fleet extends TerraformResource {
   readonly create_time!: string;

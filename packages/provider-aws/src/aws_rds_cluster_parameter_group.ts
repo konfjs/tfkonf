@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRdsClusterParameterGroupArgsparameter {
+export interface AwsRdsClusterParameterGroupArgsParameter {
   apply_method?: string;
   name: string;
   value: string;
@@ -10,7 +10,7 @@ export interface AwsRdsClusterParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: AwsRdsClusterParameterGroupArgsparameter;
+  parameter: AwsRdsClusterParameterGroupArgsParameter;
 }
 export class aws_rds_cluster_parameter_group extends TerraformResource {
   readonly arn!: string;

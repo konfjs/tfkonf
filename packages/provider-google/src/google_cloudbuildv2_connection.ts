@@ -64,7 +64,7 @@ export interface GoogleCloudbuildv2ConnectionArgsGitlabConfig {
   read_authorizer_credential: GoogleCloudbuildv2ConnectionArgsGitlabConfigReadAuthorizerCredential;
   service_directory_config: GoogleCloudbuildv2ConnectionArgsGitlabConfigServiceDirectoryConfig;
 }
-export interface GoogleCloudbuildv2ConnectionArgstimeouts {
+export interface GoogleCloudbuildv2ConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -81,7 +81,7 @@ export interface GoogleCloudbuildv2ConnectionArgs {
   github_config: GoogleCloudbuildv2ConnectionArgsGithubConfig;
   github_enterprise_config: GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfig;
   gitlab_config: GoogleCloudbuildv2ConnectionArgsGitlabConfig;
-  timeouts: GoogleCloudbuildv2ConnectionArgstimeouts;
+  timeouts: GoogleCloudbuildv2ConnectionArgsTimeouts;
 }
 export class google_cloudbuildv2_connection extends TerraformResource {
   readonly create_time!: string;

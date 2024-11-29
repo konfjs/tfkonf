@@ -6,10 +6,10 @@ export interface GoogleDnsPolicyArgsAlternativeNameServerConfigTargetNameServers
 export interface GoogleDnsPolicyArgsAlternativeNameServerConfig {
   target_name_servers: GoogleDnsPolicyArgsAlternativeNameServerConfigTargetNameServers;
 }
-export interface GoogleDnsPolicyArgsnetworks {
+export interface GoogleDnsPolicyArgsNetworks {
   network_url: string;
 }
-export interface GoogleDnsPolicyArgstimeouts {
+export interface GoogleDnsPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface GoogleDnsPolicyArgs {
   enable_logging?: boolean;
   name: string;
   alternative_name_server_config: GoogleDnsPolicyArgsAlternativeNameServerConfig;
-  networks: GoogleDnsPolicyArgsnetworks;
-  timeouts: GoogleDnsPolicyArgstimeouts;
+  networks: GoogleDnsPolicyArgsNetworks;
+  timeouts: GoogleDnsPolicyArgsTimeouts;
 }
 export class google_dns_policy extends TerraformResource {
   readonly id?: string;

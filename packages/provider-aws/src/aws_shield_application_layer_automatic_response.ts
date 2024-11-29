@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsShieldApplicationLayerAutomaticResponseArgstimeouts {
+export interface AwsShieldApplicationLayerAutomaticResponseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface AwsShieldApplicationLayerAutomaticResponseArgstimeouts {
 export interface AwsShieldApplicationLayerAutomaticResponseArgs {
   action: string;
   resource_arn: string;
-  timeouts: AwsShieldApplicationLayerAutomaticResponseArgstimeouts;
+  timeouts: AwsShieldApplicationLayerAutomaticResponseArgsTimeouts;
 }
 export class aws_shield_application_layer_automatic_response extends TerraformResource {
   readonly id!: string;

@@ -4,12 +4,12 @@ export interface GoogleCloudTasksQueueArgsAppEngineRoutingOverride {
   service?: string;
   version?: string;
 }
-export interface GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesheader {
+export interface GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesHeader {
   key: string;
   value: string;
 }
 export interface GoogleCloudTasksQueueArgsHttpTargetHeaderOverrides {
-  header: GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesheader;
+  header: GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesHeader;
 }
 export interface GoogleCloudTasksQueueArgsHttpTargetOauthToken {
   service_account_email: string;
@@ -36,7 +36,7 @@ export interface GoogleCloudTasksQueueArgsRetryConfig {}
 export interface GoogleCloudTasksQueueArgsStackdriverLoggingConfig {
   sampling_ratio: number;
 }
-export interface GoogleCloudTasksQueueArgstimeouts {
+export interface GoogleCloudTasksQueueArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,7 +49,7 @@ export interface GoogleCloudTasksQueueArgs {
   rate_limits: GoogleCloudTasksQueueArgsRateLimits;
   retry_config: GoogleCloudTasksQueueArgsRetryConfig;
   stackdriver_logging_config: GoogleCloudTasksQueueArgsStackdriverLoggingConfig;
-  timeouts: GoogleCloudTasksQueueArgstimeouts;
+  timeouts: GoogleCloudTasksQueueArgsTimeouts;
 }
 export class google_cloud_tasks_queue extends TerraformResource {
   readonly id?: string;

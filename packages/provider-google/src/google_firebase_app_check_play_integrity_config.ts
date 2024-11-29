@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFirebaseAppCheckPlayIntegrityConfigArgstimeouts {
+export interface GoogleFirebaseAppCheckPlayIntegrityConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleFirebaseAppCheckPlayIntegrityConfigArgs {
   app_id: string;
-  timeouts: GoogleFirebaseAppCheckPlayIntegrityConfigArgstimeouts;
+  timeouts: GoogleFirebaseAppCheckPlayIntegrityConfigArgsTimeouts;
 }
 export class google_firebase_app_check_play_integrity_config extends TerraformResource {
   readonly id?: string;

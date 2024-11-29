@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicyOsConstraints {
+export interface GoogleAccessContextManagerAccessLevelArgsBasicConditionsDevicePolicyOsConstraints {
   minimum_version?: string;
   os_type: string;
   require_verified_chrome_os?: boolean;
 }
-export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicy {
+export interface GoogleAccessContextManagerAccessLevelArgsBasicConditionsDevicePolicy {
   allowed_device_management_levels?: string[];
   allowed_encryption_statuses?: string[];
   require_admin_approval?: boolean;
   require_corp_owned?: boolean;
   require_screen_lock?: boolean;
-  os_constraints: GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicyOsConstraints;
+  os_constraints: GoogleAccessContextManagerAccessLevelArgsBasicConditionsDevicePolicyOsConstraints;
 }
-export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSourcesVpcSubnetwork {
+export interface GoogleAccessContextManagerAccessLevelArgsBasicConditionsVpcNetworkSourcesVpcSubnetwork {
   network: string;
   vpc_ip_subnetworks?: string[];
 }
-export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSources {
-  vpc_subnetwork: GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSourcesVpcSubnetwork;
+export interface GoogleAccessContextManagerAccessLevelArgsBasicConditionsVpcNetworkSources {
+  vpc_subnetwork: GoogleAccessContextManagerAccessLevelArgsBasicConditionsVpcNetworkSourcesVpcSubnetwork;
 }
-export interface GoogleAccessContextManagerAccessLevelArgsbasicconditions {
+export interface GoogleAccessContextManagerAccessLevelArgsBasicConditions {
   ip_subnetworks?: string[];
   members?: string[];
   negate?: boolean;
   regions?: string[];
   required_access_levels?: string[];
-  device_policy: GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicy;
-  vpc_network_sources: GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSources;
+  device_policy: GoogleAccessContextManagerAccessLevelArgsBasicConditionsDevicePolicy;
+  vpc_network_sources: GoogleAccessContextManagerAccessLevelArgsBasicConditionsVpcNetworkSources;
 }
-export interface GoogleAccessContextManagerAccessLevelArgsbasic {
+export interface GoogleAccessContextManagerAccessLevelArgsBasic {
   combining_function?: string;
-  conditions: GoogleAccessContextManagerAccessLevelArgsbasicconditions;
+  conditions: GoogleAccessContextManagerAccessLevelArgsBasicConditions;
 }
-export interface GoogleAccessContextManagerAccessLevelArgscustomexpr {
+export interface GoogleAccessContextManagerAccessLevelArgsCustomExpr {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface GoogleAccessContextManagerAccessLevelArgscustom {
-  expr: GoogleAccessContextManagerAccessLevelArgscustomexpr;
+export interface GoogleAccessContextManagerAccessLevelArgsCustom {
+  expr: GoogleAccessContextManagerAccessLevelArgsCustomExpr;
 }
-export interface GoogleAccessContextManagerAccessLevelArgstimeouts {
+export interface GoogleAccessContextManagerAccessLevelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -51,9 +51,9 @@ export interface GoogleAccessContextManagerAccessLevelArgs {
   name: string;
   parent: string;
   title: string;
-  basic: GoogleAccessContextManagerAccessLevelArgsbasic;
-  custom: GoogleAccessContextManagerAccessLevelArgscustom;
-  timeouts: GoogleAccessContextManagerAccessLevelArgstimeouts;
+  basic: GoogleAccessContextManagerAccessLevelArgsBasic;
+  custom: GoogleAccessContextManagerAccessLevelArgsCustom;
+  timeouts: GoogleAccessContextManagerAccessLevelArgsTimeouts;
 }
 export class google_access_context_manager_access_level extends TerraformResource {
   readonly id?: string;

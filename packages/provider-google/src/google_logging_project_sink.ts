@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleLoggingProjectSinkArgsBigqueryOptions {
   use_partitioned_tables: boolean;
 }
-export interface GoogleLoggingProjectSinkArgsexclusions {
+export interface GoogleLoggingProjectSinkArgsExclusions {
   description?: string;
   disabled?: boolean;
   filter: string;
@@ -17,7 +17,7 @@ export interface GoogleLoggingProjectSinkArgs {
   name: string;
   unique_writer_identity?: boolean;
   bigquery_options: GoogleLoggingProjectSinkArgsBigqueryOptions;
-  exclusions: GoogleLoggingProjectSinkArgsexclusions;
+  exclusions: GoogleLoggingProjectSinkArgsExclusions;
 }
 export class google_logging_project_sink extends TerraformResource {
   readonly id?: string;

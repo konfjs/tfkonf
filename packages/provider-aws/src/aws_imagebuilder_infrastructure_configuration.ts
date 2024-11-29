@@ -3,12 +3,12 @@ export interface AwsImagebuilderInfrastructureConfigurationArgsInstanceMetadataO
   http_put_response_hop_limit?: number;
   http_tokens?: string;
 }
-export interface AwsImagebuilderInfrastructureConfigurationArgsloggingS3Logs {
+export interface AwsImagebuilderInfrastructureConfigurationArgsLoggingS3Logs {
   s3_bucket_name: string;
   s3_key_prefix?: string;
 }
-export interface AwsImagebuilderInfrastructureConfigurationArgslogging {
-  s3_logs: AwsImagebuilderInfrastructureConfigurationArgsloggingS3Logs;
+export interface AwsImagebuilderInfrastructureConfigurationArgsLogging {
+  s3_logs: AwsImagebuilderInfrastructureConfigurationArgsLoggingS3Logs;
 }
 export interface AwsImagebuilderInfrastructureConfigurationArgs {
   description?: string;
@@ -27,7 +27,7 @@ export interface AwsImagebuilderInfrastructureConfigurationArgs {
   };
   terminate_instance_on_failure?: boolean;
   instance_metadata_options: AwsImagebuilderInfrastructureConfigurationArgsInstanceMetadataOptions;
-  logging: AwsImagebuilderInfrastructureConfigurationArgslogging;
+  logging: AwsImagebuilderInfrastructureConfigurationArgsLogging;
 }
 export class aws_imagebuilder_infrastructure_configuration extends TerraformResource {
   readonly arn!: string;

@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsPrometheusScraperArgsdestinationamp {
+export interface AwsPrometheusScraperArgsDestinationAmp {
   workspace_arn: string;
 }
-export interface AwsPrometheusScraperArgsdestination {
-  amp: AwsPrometheusScraperArgsdestinationamp;
+export interface AwsPrometheusScraperArgsDestination {
+  amp: AwsPrometheusScraperArgsDestinationAmp;
 }
-export interface AwsPrometheusScraperArgssourceeks {
+export interface AwsPrometheusScraperArgsSourceEks {
   cluster_arn: string;
   subnet_ids: string[];
 }
-export interface AwsPrometheusScraperArgssource {
-  eks: AwsPrometheusScraperArgssourceeks;
+export interface AwsPrometheusScraperArgsSource {
+  eks: AwsPrometheusScraperArgsSourceEks;
 }
-export interface AwsPrometheusScraperArgstimeouts {
+export interface AwsPrometheusScraperArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -22,9 +22,9 @@ export interface AwsPrometheusScraperArgs {
   tags?: {
     [key: string]: string;
   };
-  destination: AwsPrometheusScraperArgsdestination;
-  source: AwsPrometheusScraperArgssource;
-  timeouts: AwsPrometheusScraperArgstimeouts;
+  destination: AwsPrometheusScraperArgsDestination;
+  source: AwsPrometheusScraperArgsSource;
+  timeouts: AwsPrometheusScraperArgsTimeouts;
 }
 export class aws_prometheus_scraper extends TerraformResource {
   readonly arn!: string;

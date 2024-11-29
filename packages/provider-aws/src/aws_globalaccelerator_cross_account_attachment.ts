@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGlobalacceleratorCrossAccountAttachmentArgsresource {
+export interface AwsGlobalacceleratorCrossAccountAttachmentArgsResource {
   cidr_block?: string;
   endpoint_id?: string;
   region?: string;
@@ -10,7 +10,7 @@ export interface AwsGlobalacceleratorCrossAccountAttachmentArgs {
   tags?: {
     [key: string]: string;
   };
-  resource: AwsGlobalacceleratorCrossAccountAttachmentArgsresource;
+  resource: AwsGlobalacceleratorCrossAccountAttachmentArgsResource;
 }
 export class aws_globalaccelerator_cross_account_attachment extends TerraformResource {
   readonly arn!: string;

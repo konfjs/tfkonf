@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSchedulerScheduleGroupArgstimeouts {
+export interface AwsSchedulerScheduleGroupArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsSchedulerScheduleGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSchedulerScheduleGroupArgstimeouts;
+  timeouts: AwsSchedulerScheduleGroupArgsTimeouts;
 }
 export class aws_scheduler_schedule_group extends TerraformResource {
   readonly arn!: string;

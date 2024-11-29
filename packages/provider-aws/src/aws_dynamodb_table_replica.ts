@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDynamodbTableReplicaArgstimeouts {
+export interface AwsDynamodbTableReplicaArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsDynamodbTableReplicaArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDynamodbTableReplicaArgstimeouts;
+  timeouts: AwsDynamodbTableReplicaArgsTimeouts;
 }
 export class aws_dynamodb_table_replica extends TerraformResource {
   readonly arn!: string;

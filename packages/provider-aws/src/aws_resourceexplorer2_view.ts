@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsResourceexplorer2ViewArgsfilters {
+export interface AwsResourceexplorer2ViewArgsFilters {
   filter_string: string;
 }
 export interface AwsResourceexplorer2ViewArgsIncludedProperty {
@@ -10,7 +10,7 @@ export interface AwsResourceexplorer2ViewArgs {
   tags?: {
     [key: string]: string;
   };
-  filters: AwsResourceexplorer2ViewArgsfilters;
+  filters: AwsResourceexplorer2ViewArgsFilters;
   included_property: AwsResourceexplorer2ViewArgsIncludedProperty;
 }
 export class aws_resourceexplorer2_view extends TerraformResource {

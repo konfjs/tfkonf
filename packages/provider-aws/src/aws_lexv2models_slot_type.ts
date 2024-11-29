@@ -6,13 +6,13 @@ export interface AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSettingSubSlots {
 export interface AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSetting {
   sub_slots: AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSettingSubSlots;
 }
-export interface AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingsource {
+export interface AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingSource {
   kms_key_arn: string;
   s3_bucket_name: string;
   s3_object_key: string;
 }
 export interface AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSetting {
-  source: AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingsource;
+  source: AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingSource;
 }
 export interface AwsLexv2modelsSlotTypeArgsExternalSourceSetting {
   grammar_slot_type_setting: AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSetting;
@@ -20,14 +20,14 @@ export interface AwsLexv2modelsSlotTypeArgsExternalSourceSetting {
 export interface AwsLexv2modelsSlotTypeArgsSlotTypeValuesSampleValue {
   value: string;
 }
-export interface AwsLexv2modelsSlotTypeArgsSlotTypeValuessynonyms {
+export interface AwsLexv2modelsSlotTypeArgsSlotTypeValuesSynonyms {
   value: string;
 }
 export interface AwsLexv2modelsSlotTypeArgsSlotTypeValues {
   sample_value: AwsLexv2modelsSlotTypeArgsSlotTypeValuesSampleValue;
-  synonyms: AwsLexv2modelsSlotTypeArgsSlotTypeValuessynonyms;
+  synonyms: AwsLexv2modelsSlotTypeArgsSlotTypeValuesSynonyms;
 }
-export interface AwsLexv2modelsSlotTypeArgstimeouts {
+export interface AwsLexv2modelsSlotTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -53,7 +53,7 @@ export interface AwsLexv2modelsSlotTypeArgs {
   composite_slot_type_setting: AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSetting;
   external_source_setting: AwsLexv2modelsSlotTypeArgsExternalSourceSetting;
   slot_type_values: AwsLexv2modelsSlotTypeArgsSlotTypeValues;
-  timeouts: AwsLexv2modelsSlotTypeArgstimeouts;
+  timeouts: AwsLexv2modelsSlotTypeArgsTimeouts;
   value_selection_setting: AwsLexv2modelsSlotTypeArgsValueSelectionSetting;
 }
 export class aws_lexv2models_slot_type extends TerraformResource {

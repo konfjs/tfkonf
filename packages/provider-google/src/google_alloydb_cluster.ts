@@ -71,7 +71,7 @@ export interface GoogleAlloydbClusterArgsRestoreContinuousBackupSource {
 export interface GoogleAlloydbClusterArgsSecondaryConfig {
   primary_cluster_name: string;
 }
-export interface GoogleAlloydbClusterArgstimeouts {
+export interface GoogleAlloydbClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -99,7 +99,7 @@ export interface GoogleAlloydbClusterArgs {
   restore_backup_source: GoogleAlloydbClusterArgsRestoreBackupSource;
   restore_continuous_backup_source: GoogleAlloydbClusterArgsRestoreContinuousBackupSource;
   secondary_config: GoogleAlloydbClusterArgsSecondaryConfig;
-  timeouts: GoogleAlloydbClusterArgstimeouts;
+  timeouts: GoogleAlloydbClusterArgsTimeouts;
 }
 export class google_alloydb_cluster extends TerraformResource {
   readonly backup_source!: any[];

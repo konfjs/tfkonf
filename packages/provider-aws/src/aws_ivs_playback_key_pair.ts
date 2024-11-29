@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsIvsPlaybackKeyPairArgstimeouts {
+export interface AwsIvsPlaybackKeyPairArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsIvsPlaybackKeyPairArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIvsPlaybackKeyPairArgstimeouts;
+  timeouts: AwsIvsPlaybackKeyPairArgsTimeouts;
 }
 export class aws_ivs_playback_key_pair extends TerraformResource {
   readonly arn!: string;

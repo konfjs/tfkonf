@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeFlowhookArgstimeouts {
+export interface GoogleApigeeFlowhookArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleApigeeFlowhookArgs {
   flow_hook_point: string;
   org_id: string;
   sharedflow: string;
-  timeouts: GoogleApigeeFlowhookArgstimeouts;
+  timeouts: GoogleApigeeFlowhookArgsTimeouts;
 }
 export class google_apigee_flowhook extends TerraformResource {
   readonly id?: string;

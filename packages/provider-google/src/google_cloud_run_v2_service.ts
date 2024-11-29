@@ -4,136 +4,136 @@ export interface GoogleCloudRunV2ServiceArgsBinaryAuthorization {
   policy?: string;
   use_default?: boolean;
 }
-export interface GoogleCloudRunV2ServiceArgsscaling {
+export interface GoogleCloudRunV2ServiceArgsScaling {
   min_instance_count?: number;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersenvValueSourceSecretKeyRef {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersEnvValueSourceSecretKeyRef {
   secret: string;
   version?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersenvValueSource {
-  secret_key_ref: GoogleCloudRunV2ServiceArgstemplatecontainersenvValueSourceSecretKeyRef;
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersEnvValueSource {
+  secret_key_ref: GoogleCloudRunV2ServiceArgsTemplateContainersEnvValueSourceSecretKeyRef;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersenv {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersEnv {
   name: string;
   value?: string;
-  value_source: GoogleCloudRunV2ServiceArgstemplatecontainersenvValueSource;
+  value_source: GoogleCloudRunV2ServiceArgsTemplateContainersEnvValueSource;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbegrpc {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeGrpc {
   service?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeHttpGetHttpHeaders {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeHttpGetHttpHeaders {
   name: string;
   value?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeHttpGet {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeHttpGet {
   path?: string;
-  http_headers: GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeHttpGetHttpHeaders;
+  http_headers: GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeHttpGetHttpHeaders;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeTcpSocket {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeTcpSocket {
   port: number;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbe {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbe {
   failure_threshold?: number;
   initial_delay_seconds?: number;
   period_seconds?: number;
   timeout_seconds?: number;
-  grpc: GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbegrpc;
-  http_get: GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeHttpGet;
-  tcp_socket: GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbeTcpSocket;
+  grpc: GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeGrpc;
+  http_get: GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeHttpGet;
+  tcp_socket: GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbeTcpSocket;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersports {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersPorts {
   container_port?: number;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersresources {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersResources {
   cpu_idle?: boolean;
   startup_cpu_boost?: boolean;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbegrpc {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeGrpc {
   service?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeHttpGetHttpHeaders {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeHttpGetHttpHeaders {
   name: string;
   value?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeHttpGet {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeHttpGet {
   path?: string;
-  http_headers: GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeHttpGetHttpHeaders;
+  http_headers: GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeHttpGetHttpHeaders;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeTcpSocket {}
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbe {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeTcpSocket {}
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbe {
   failure_threshold?: number;
   initial_delay_seconds?: number;
   period_seconds?: number;
   timeout_seconds?: number;
-  grpc: GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbegrpc;
-  http_get: GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeHttpGet;
-  tcp_socket: GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbeTcpSocket;
+  grpc: GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeGrpc;
+  http_get: GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeHttpGet;
+  tcp_socket: GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbeTcpSocket;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainersVolumeMounts {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainersVolumeMounts {
   mount_path: string;
   name: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatecontainers {
+export interface GoogleCloudRunV2ServiceArgsTemplateContainers {
   args?: string[];
   command?: string[];
   depends_on?: string[];
   image: string;
   name?: string;
   working_dir?: string;
-  env: GoogleCloudRunV2ServiceArgstemplatecontainersenv;
-  liveness_probe: GoogleCloudRunV2ServiceArgstemplatecontainersLivenessProbe;
-  ports: GoogleCloudRunV2ServiceArgstemplatecontainersports;
-  resources: GoogleCloudRunV2ServiceArgstemplatecontainersresources;
-  startup_probe: GoogleCloudRunV2ServiceArgstemplatecontainersStartupProbe;
-  volume_mounts: GoogleCloudRunV2ServiceArgstemplatecontainersVolumeMounts;
+  env: GoogleCloudRunV2ServiceArgsTemplateContainersEnv;
+  liveness_probe: GoogleCloudRunV2ServiceArgsTemplateContainersLivenessProbe;
+  ports: GoogleCloudRunV2ServiceArgsTemplateContainersPorts;
+  resources: GoogleCloudRunV2ServiceArgsTemplateContainersResources;
+  startup_probe: GoogleCloudRunV2ServiceArgsTemplateContainersStartupProbe;
+  volume_mounts: GoogleCloudRunV2ServiceArgsTemplateContainersVolumeMounts;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatescaling {
+export interface GoogleCloudRunV2ServiceArgsTemplateScaling {
   max_instance_count?: number;
   min_instance_count?: number;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumesCloudSqlInstance {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesCloudSqlInstance {
   instances?: string[];
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumesEmptyDir {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesEmptyDir {
   medium?: string;
   size_limit?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumesgcs {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesGcs {
   bucket: string;
   read_only?: boolean;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumesnfs {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesNfs {
   path: string;
   read_only?: boolean;
   server: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumessecretitems {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesSecretItems {
   mode?: number;
   path: string;
   version?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumessecret {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumesSecret {
   default_mode?: number;
   secret: string;
-  items: GoogleCloudRunV2ServiceArgstemplatevolumessecretitems;
+  items: GoogleCloudRunV2ServiceArgsTemplateVolumesSecretItems;
 }
-export interface GoogleCloudRunV2ServiceArgstemplatevolumes {
+export interface GoogleCloudRunV2ServiceArgsTemplateVolumes {
   name: string;
-  cloud_sql_instance: GoogleCloudRunV2ServiceArgstemplatevolumesCloudSqlInstance;
-  empty_dir: GoogleCloudRunV2ServiceArgstemplatevolumesEmptyDir;
-  gcs: GoogleCloudRunV2ServiceArgstemplatevolumesgcs;
-  nfs: GoogleCloudRunV2ServiceArgstemplatevolumesnfs;
-  secret: GoogleCloudRunV2ServiceArgstemplatevolumessecret;
+  cloud_sql_instance: GoogleCloudRunV2ServiceArgsTemplateVolumesCloudSqlInstance;
+  empty_dir: GoogleCloudRunV2ServiceArgsTemplateVolumesEmptyDir;
+  gcs: GoogleCloudRunV2ServiceArgsTemplateVolumesGcs;
+  nfs: GoogleCloudRunV2ServiceArgsTemplateVolumesNfs;
+  secret: GoogleCloudRunV2ServiceArgsTemplateVolumesSecret;
 }
-export interface GoogleCloudRunV2ServiceArgstemplateVpcAccessNetworkInterfaces {
+export interface GoogleCloudRunV2ServiceArgsTemplateVpcAccessNetworkInterfaces {
   tags?: string[];
 }
-export interface GoogleCloudRunV2ServiceArgstemplateVpcAccess {
+export interface GoogleCloudRunV2ServiceArgsTemplateVpcAccess {
   connector?: string;
-  network_interfaces: GoogleCloudRunV2ServiceArgstemplateVpcAccessNetworkInterfaces;
+  network_interfaces: GoogleCloudRunV2ServiceArgsTemplateVpcAccessNetworkInterfaces;
 }
-export interface GoogleCloudRunV2ServiceArgstemplate {
+export interface GoogleCloudRunV2ServiceArgsTemplate {
   annotations?: {
     [key: string]: string;
   };
@@ -144,17 +144,17 @@ export interface GoogleCloudRunV2ServiceArgstemplate {
   };
   revision?: string;
   session_affinity?: boolean;
-  containers: GoogleCloudRunV2ServiceArgstemplatecontainers;
-  scaling: GoogleCloudRunV2ServiceArgstemplatescaling;
-  volumes: GoogleCloudRunV2ServiceArgstemplatevolumes;
-  vpc_access: GoogleCloudRunV2ServiceArgstemplateVpcAccess;
+  containers: GoogleCloudRunV2ServiceArgsTemplateContainers;
+  scaling: GoogleCloudRunV2ServiceArgsTemplateScaling;
+  volumes: GoogleCloudRunV2ServiceArgsTemplateVolumes;
+  vpc_access: GoogleCloudRunV2ServiceArgsTemplateVpcAccess;
 }
-export interface GoogleCloudRunV2ServiceArgstimeouts {
+export interface GoogleCloudRunV2ServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface GoogleCloudRunV2ServiceArgstraffic {
+export interface GoogleCloudRunV2ServiceArgsTraffic {
   revision?: string;
   tag?: string;
   type?: string;
@@ -175,10 +175,10 @@ export interface GoogleCloudRunV2ServiceArgs {
   location: string;
   name: string;
   binary_authorization: GoogleCloudRunV2ServiceArgsBinaryAuthorization;
-  scaling: GoogleCloudRunV2ServiceArgsscaling;
-  template: GoogleCloudRunV2ServiceArgstemplate;
-  timeouts: GoogleCloudRunV2ServiceArgstimeouts;
-  traffic: GoogleCloudRunV2ServiceArgstraffic;
+  scaling: GoogleCloudRunV2ServiceArgsScaling;
+  template: GoogleCloudRunV2ServiceArgsTemplate;
+  timeouts: GoogleCloudRunV2ServiceArgsTimeouts;
+  traffic: GoogleCloudRunV2ServiceArgsTraffic;
 }
 export class google_cloud_run_v2_service extends TerraformResource {
   readonly conditions!: any[];

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAccessanalyzerArchiveRuleArgsfilter {
+export interface AwsAccessanalyzerArchiveRuleArgsFilter {
   criteria: string;
 }
 export interface AwsAccessanalyzerArchiveRuleArgs {
   analyzer_name: string;
   rule_name: string;
-  filter: AwsAccessanalyzerArchiveRuleArgsfilter;
+  filter: AwsAccessanalyzerArchiveRuleArgsFilter;
 }
 export class aws_accessanalyzer_archive_rule extends TerraformResource {
   readonly id?: string;

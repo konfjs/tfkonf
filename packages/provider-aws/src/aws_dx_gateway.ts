@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDxGatewayArgstimeouts {
+export interface AwsDxGatewayArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsDxGatewayArgs {
   amazon_side_asn: string;
   name: string;
-  timeouts: AwsDxGatewayArgstimeouts;
+  timeouts: AwsDxGatewayArgsTimeouts;
 }
 export class aws_dx_gateway extends TerraformResource {
   readonly id?: string;

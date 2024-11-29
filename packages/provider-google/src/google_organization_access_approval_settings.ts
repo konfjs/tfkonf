@@ -3,7 +3,7 @@ export interface GoogleOrganizationAccessApprovalSettingsArgsEnrolledServices {
   cloud_product: string;
   enrollment_level?: string;
 }
-export interface GoogleOrganizationAccessApprovalSettingsArgstimeouts {
+export interface GoogleOrganizationAccessApprovalSettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleOrganizationAccessApprovalSettingsArgs {
   active_key_version?: string;
   organization_id: string;
   enrolled_services: GoogleOrganizationAccessApprovalSettingsArgsEnrolledServices;
-  timeouts: GoogleOrganizationAccessApprovalSettingsArgstimeouts;
+  timeouts: GoogleOrganizationAccessApprovalSettingsArgsTimeouts;
 }
 export class google_organization_access_approval_settings extends TerraformResource {
   readonly ancestor_has_active_key_version!: boolean;

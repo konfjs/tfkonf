@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromsources {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromSources {
   access_level?: string;
   resource?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFrom {
   identities?: string[];
   identity_type?: string;
-  sources: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromsources;
+  sources: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromSources;
 }
-export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperationsMethodSelectors {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressToOperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperations {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressToOperations {
   service_name?: string;
-  method_selectors: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperationsMethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressToOperationsMethodSelectors;
 }
 export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTo {
   resources?: string[];
-  operations: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperations;
+  operations: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressToOperations;
 }
-export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgstimeouts {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -28,7 +28,7 @@ export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgs {
   perimeter: string;
   ingress_from: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFrom;
   ingress_to: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTo;
-  timeouts: GoogleAccessContextManagerServicePerimeterIngressPolicyArgstimeouts;
+  timeouts: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter_ingress_policy extends TerraformResource {
   readonly id?: string;

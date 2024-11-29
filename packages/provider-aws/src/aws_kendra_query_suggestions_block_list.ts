@@ -3,7 +3,7 @@ export interface AwsKendraQuerySuggestionsBlockListArgsSourceS3Path {
   bucket: string;
   key: string;
 }
-export interface AwsKendraQuerySuggestionsBlockListArgstimeouts {
+export interface AwsKendraQuerySuggestionsBlockListArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface AwsKendraQuerySuggestionsBlockListArgs {
     [key: string]: string;
   };
   source_s3_path: AwsKendraQuerySuggestionsBlockListArgsSourceS3Path;
-  timeouts: AwsKendraQuerySuggestionsBlockListArgstimeouts;
+  timeouts: AwsKendraQuerySuggestionsBlockListArgsTimeouts;
 }
 export class aws_kendra_query_suggestions_block_list extends TerraformResource {
   readonly arn!: string;

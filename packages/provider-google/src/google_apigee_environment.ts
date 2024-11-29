@@ -3,7 +3,7 @@ export interface GoogleApigeeEnvironmentArgsNodeConfig {
   max_node_count?: string;
   min_node_count?: string;
 }
-export interface GoogleApigeeEnvironmentArgstimeouts {
+export interface GoogleApigeeEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleApigeeEnvironmentArgs {
   name: string;
   org_id: string;
   node_config: GoogleApigeeEnvironmentArgsNodeConfig;
-  timeouts: GoogleApigeeEnvironmentArgstimeouts;
+  timeouts: GoogleApigeeEnvironmentArgsTimeouts;
 }
 export class google_apigee_environment extends TerraformResource {
   readonly api_proxy_type?: string;

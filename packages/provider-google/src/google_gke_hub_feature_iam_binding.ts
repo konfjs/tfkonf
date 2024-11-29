@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeHubFeatureIamBindingArgscondition {
+export interface GoogleGkeHubFeatureIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleGkeHubFeatureIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleGkeHubFeatureIamBindingArgscondition;
+  condition: GoogleGkeHubFeatureIamBindingArgsCondition;
 }
 export class google_gke_hub_feature_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -5,7 +5,7 @@ export interface AwsDmsReplicationConfigArgsComputeConfig {
   min_capacity_units?: number;
   replication_subnet_group_id: string;
 }
-export interface AwsDmsReplicationConfigArgstimeouts {
+export interface AwsDmsReplicationConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface AwsDmsReplicationConfigArgs {
   };
   target_endpoint_arn: string;
   compute_config: AwsDmsReplicationConfigArgsComputeConfig;
-  timeouts: AwsDmsReplicationConfigArgstimeouts;
+  timeouts: AwsDmsReplicationConfigArgsTimeouts;
 }
 export class aws_dms_replication_config extends TerraformResource {
   readonly arn!: string;

@@ -11,18 +11,18 @@ export interface AwsImagebuilderImageArgsImageTestsConfiguration {
   image_tests_enabled?: boolean;
   timeout_minutes?: number;
 }
-export interface AwsImagebuilderImageArgstimeouts {
+export interface AwsImagebuilderImageArgsTimeouts {
   create?: string;
 }
-export interface AwsImagebuilderImageArgsworkflowparameter {
+export interface AwsImagebuilderImageArgsWorkflowParameter {
   name: string;
   value: string;
 }
-export interface AwsImagebuilderImageArgsworkflow {
+export interface AwsImagebuilderImageArgsWorkflow {
   on_failure?: string;
   parallel_group?: string;
   workflow_arn: string;
-  parameter: AwsImagebuilderImageArgsworkflowparameter;
+  parameter: AwsImagebuilderImageArgsWorkflowParameter;
 }
 export interface AwsImagebuilderImageArgs {
   container_recipe_arn?: string;
@@ -35,8 +35,8 @@ export interface AwsImagebuilderImageArgs {
   };
   image_scanning_configuration: AwsImagebuilderImageArgsImageScanningConfiguration;
   image_tests_configuration: AwsImagebuilderImageArgsImageTestsConfiguration;
-  timeouts: AwsImagebuilderImageArgstimeouts;
-  workflow: AwsImagebuilderImageArgsworkflow;
+  timeouts: AwsImagebuilderImageArgsTimeouts;
+  workflow: AwsImagebuilderImageArgsWorkflow;
 }
 export class aws_imagebuilder_image extends TerraformResource {
   readonly arn!: string;

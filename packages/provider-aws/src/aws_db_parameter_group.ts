@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDbParameterGroupArgsparameter {
+export interface AwsDbParameterGroupArgsParameter {
   apply_method?: string;
   name: string;
   value: string;
@@ -11,7 +11,7 @@ export interface AwsDbParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: AwsDbParameterGroupArgsparameter;
+  parameter: AwsDbParameterGroupArgsParameter;
 }
 export class aws_db_parameter_group extends TerraformResource {
   readonly arn!: string;

@@ -1,122 +1,122 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificatefile {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificateFile {
   certificate_chain: string;
   private_key: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificatesds {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificateSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificate {
-  file: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificatefile;
-  sds: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificatesds;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificate {
+  file: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificateFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificateSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationSubjectAlternativeNamesmatch {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch {
   exact: string[];
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationSubjectAlternativeNames {
-  match: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationSubjectAlternativeNamesmatch;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames {
+  match: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNamesMatch;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustacm {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm {
   certificate_authority_arns: string[];
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustfile {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile {
   certificate_chain: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustsds {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrust {
-  acm: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustacm;
-  file: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustfile;
-  sds: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrustsds;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrust {
+  acm: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustAcm;
+  file: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrustSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidation {
-  subject_alternative_names: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationSubjectAlternativeNames;
-  trust: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidationtrust;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidation {
+  subject_alternative_names: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationSubjectAlternativeNames;
+  trust: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidationTrust;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytls {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTls {
   enforce?: boolean;
   ports?: number[];
-  certificate: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlscertificate;
-  validation: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytlsvalidation;
+  certificate: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsCertificate;
+  validation: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTlsValidation;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicy {
-  tls: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicytls;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicy {
+  tls: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicyTls;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackendVirtualService {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendVirtualService {
   virtual_service_name: string;
-  client_policy: AwsAppmeshVirtualNodeArgsspecbackendVirtualServiceClientPolicy;
+  client_policy: AwsAppmeshVirtualNodeArgsSpecBackendVirtualServiceClientPolicy;
 }
-export interface AwsAppmeshVirtualNodeArgsspecbackend {
-  virtual_service: AwsAppmeshVirtualNodeArgsspecbackendVirtualService;
+export interface AwsAppmeshVirtualNodeArgsSpecBackend {
+  virtual_service: AwsAppmeshVirtualNodeArgsSpecBackendVirtualService;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificatefile {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificateFile {
   certificate_chain: string;
   private_key: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificatesds {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificateSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificate {
-  file: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificatefile;
-  sds: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificatesds;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificate {
+  file: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificateFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificateSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNamesmatch {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch {
   exact: string[];
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNames {
-  match: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNamesmatch;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames {
+  match: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNamesMatch;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustacm {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustAcm {
   certificate_authority_arns: string[];
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustfile {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustFile {
   certificate_chain: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustsds {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrust {
-  acm: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustacm;
-  file: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustfile;
-  sds: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrustsds;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrust {
+  acm: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustAcm;
+  file: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrustSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidation {
-  subject_alternative_names: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNames;
-  trust: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidationtrust;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidation {
+  subject_alternative_names: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationSubjectAlternativeNames;
+  trust: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidationTrust;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytls {
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTls {
   enforce?: boolean;
   ports?: number[];
-  certificate: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlscertificate;
-  validation: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytlsvalidation;
+  certificate: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsCertificate;
+  validation: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTlsValidation;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicy {
-  tls: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicytls;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicy {
+  tls: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicyTls;
 }
-export interface AwsAppmeshVirtualNodeArgsspecBackendDefaults {
-  client_policy: AwsAppmeshVirtualNodeArgsspecBackendDefaultsClientPolicy;
+export interface AwsAppmeshVirtualNodeArgsSpecBackendDefaults {
+  client_policy: AwsAppmeshVirtualNodeArgsSpecBackendDefaultsClientPolicy;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolgrpc {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolGrpc {
   max_requests: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolhttp {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolHttp {
   max_connections: number;
   max_pending_requests?: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolhttp2 {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolHttp2 {
   max_requests: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerConnectionPooltcp {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolTcp {
   max_connections: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerConnectionPool {
-  grpc: AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolgrpc;
-  http: AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolhttp;
-  http2: AwsAppmeshVirtualNodeArgsspeclistenerConnectionPoolhttp2;
-  tcp: AwsAppmeshVirtualNodeArgsspeclistenerConnectionPooltcp;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerConnectionPool {
+  grpc: AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolGrpc;
+  http: AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolHttp;
+  http2: AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolHttp2;
+  tcp: AwsAppmeshVirtualNodeArgsSpecListenerConnectionPoolTcp;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerHealthCheck {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerHealthCheck {
   healthy_threshold: number;
   interval_millis: number;
   path?: string;
@@ -124,161 +124,161 @@ export interface AwsAppmeshVirtualNodeArgsspeclistenerHealthCheck {
   timeout_millis: number;
   unhealthy_threshold: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetectionBaseEjectionDuration {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetectionBaseEjectionDuration {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetectioninterval {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetectionInterval {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetection {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetection {
   max_ejection_percent: number;
   max_server_errors: number;
-  base_ejection_duration: AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetectionBaseEjectionDuration;
-  interval: AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetectioninterval;
+  base_ejection_duration: AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetectionBaseEjectionDuration;
+  interval: AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetectionInterval;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenerPortMapping {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerPortMapping {
   port: number;
   protocol: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpcidle {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpcIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpcPerRequest {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpcPerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpc {
-  idle: AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpcidle;
-  per_request: AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpcPerRequest;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpc {
+  idle: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpcIdle;
+  per_request: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpcPerRequest;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttpidle {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttpIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttpPerRequest {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttpPerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp {
-  idle: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttpidle;
-  per_request: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttpPerRequest;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp {
+  idle: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttpIdle;
+  per_request: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttpPerRequest;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2idle {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2Idle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2PerRequest {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2PerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2 {
-  idle: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2idle;
-  per_request: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2PerRequest;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2 {
+  idle: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2Idle;
+  per_request: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2PerRequest;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouttcpidle {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutTcpIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeouttcp {
-  idle: AwsAppmeshVirtualNodeArgsspeclistenertimeouttcpidle;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeoutTcp {
+  idle: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutTcpIdle;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertimeout {
-  grpc: AwsAppmeshVirtualNodeArgsspeclistenertimeoutgrpc;
-  http: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp;
-  http2: AwsAppmeshVirtualNodeArgsspeclistenertimeouthttp2;
-  tcp: AwsAppmeshVirtualNodeArgsspeclistenertimeouttcp;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTimeout {
+  grpc: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutGrpc;
+  http: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp;
+  http2: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutHttp2;
+  tcp: AwsAppmeshVirtualNodeArgsSpecListenerTimeoutTcp;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlscertificateacm {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateAcm {
   certificate_arn: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlscertificatefile {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateFile {
   certificate_chain: string;
   private_key: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlscertificatesds {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlscertificate {
-  acm: AwsAppmeshVirtualNodeArgsspeclistenertlscertificateacm;
-  file: AwsAppmeshVirtualNodeArgsspeclistenertlscertificatefile;
-  sds: AwsAppmeshVirtualNodeArgsspeclistenertlscertificatesds;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificate {
+  acm: AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateAcm;
+  file: AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificateSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationSubjectAlternativeNamesmatch {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationSubjectAlternativeNamesMatch {
   exact: string[];
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationSubjectAlternativeNames {
-  match: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationSubjectAlternativeNamesmatch;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationSubjectAlternativeNames {
+  match: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationSubjectAlternativeNamesMatch;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrustfile {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrustFile {
   certificate_chain: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrustsds {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrustSds {
   secret_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrust {
-  file: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrustfile;
-  sds: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrustsds;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrust {
+  file: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrustFile;
+  sds: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrustSds;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertlsvalidation {
-  subject_alternative_names: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationSubjectAlternativeNames;
-  trust: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidationtrust;
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTlsValidation {
+  subject_alternative_names: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationSubjectAlternativeNames;
+  trust: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidationTrust;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistenertls {
+export interface AwsAppmeshVirtualNodeArgsSpecListenerTls {
   mode: string;
-  certificate: AwsAppmeshVirtualNodeArgsspeclistenertlscertificate;
-  validation: AwsAppmeshVirtualNodeArgsspeclistenertlsvalidation;
+  certificate: AwsAppmeshVirtualNodeArgsSpecListenerTlsCertificate;
+  validation: AwsAppmeshVirtualNodeArgsSpecListenerTlsValidation;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclistener {
-  connection_pool: AwsAppmeshVirtualNodeArgsspeclistenerConnectionPool;
-  health_check: AwsAppmeshVirtualNodeArgsspeclistenerHealthCheck;
-  outlier_detection: AwsAppmeshVirtualNodeArgsspeclistenerOutlierDetection;
-  port_mapping: AwsAppmeshVirtualNodeArgsspeclistenerPortMapping;
-  timeout: AwsAppmeshVirtualNodeArgsspeclistenertimeout;
-  tls: AwsAppmeshVirtualNodeArgsspeclistenertls;
+export interface AwsAppmeshVirtualNodeArgsSpecListener {
+  connection_pool: AwsAppmeshVirtualNodeArgsSpecListenerConnectionPool;
+  health_check: AwsAppmeshVirtualNodeArgsSpecListenerHealthCheck;
+  outlier_detection: AwsAppmeshVirtualNodeArgsSpecListenerOutlierDetection;
+  port_mapping: AwsAppmeshVirtualNodeArgsSpecListenerPortMapping;
+  timeout: AwsAppmeshVirtualNodeArgsSpecListenerTimeout;
+  tls: AwsAppmeshVirtualNodeArgsSpecListenerTls;
 }
-export interface AwsAppmeshVirtualNodeArgsspecloggingAccessLogfileformatjson {
+export interface AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFileFormatJson {
   key: string;
   value: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecloggingAccessLogfileformat {
+export interface AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFileFormat {
   text?: string;
-  json: AwsAppmeshVirtualNodeArgsspecloggingAccessLogfileformatjson;
+  json: AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFileFormatJson;
 }
-export interface AwsAppmeshVirtualNodeArgsspecloggingAccessLogfile {
+export interface AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFile {
   path: string;
-  format: AwsAppmeshVirtualNodeArgsspecloggingAccessLogfileformat;
+  format: AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFileFormat;
 }
-export interface AwsAppmeshVirtualNodeArgsspecloggingAccessLog {
-  file: AwsAppmeshVirtualNodeArgsspecloggingAccessLogfile;
+export interface AwsAppmeshVirtualNodeArgsSpecLoggingAccessLog {
+  file: AwsAppmeshVirtualNodeArgsSpecLoggingAccessLogFile;
 }
-export interface AwsAppmeshVirtualNodeArgsspeclogging {
-  access_log: AwsAppmeshVirtualNodeArgsspecloggingAccessLog;
+export interface AwsAppmeshVirtualNodeArgsSpecLogging {
+  access_log: AwsAppmeshVirtualNodeArgsSpecLoggingAccessLog;
 }
-export interface AwsAppmeshVirtualNodeArgsspecServiceDiscoveryAwsCloudMap {
+export interface AwsAppmeshVirtualNodeArgsSpecServiceDiscoveryAwsCloudMap {
   attributes?: {
     [key: string]: string;
   };
   namespace_name: string;
   service_name: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecServiceDiscoverydns {
+export interface AwsAppmeshVirtualNodeArgsSpecServiceDiscoveryDns {
   hostname: string;
   ip_preference?: string;
   response_type?: string;
 }
-export interface AwsAppmeshVirtualNodeArgsspecServiceDiscovery {
-  aws_cloud_map: AwsAppmeshVirtualNodeArgsspecServiceDiscoveryAwsCloudMap;
-  dns: AwsAppmeshVirtualNodeArgsspecServiceDiscoverydns;
+export interface AwsAppmeshVirtualNodeArgsSpecServiceDiscovery {
+  aws_cloud_map: AwsAppmeshVirtualNodeArgsSpecServiceDiscoveryAwsCloudMap;
+  dns: AwsAppmeshVirtualNodeArgsSpecServiceDiscoveryDns;
 }
-export interface AwsAppmeshVirtualNodeArgsspec {
-  backend: AwsAppmeshVirtualNodeArgsspecbackend;
-  backend_defaults: AwsAppmeshVirtualNodeArgsspecBackendDefaults;
-  listener: AwsAppmeshVirtualNodeArgsspeclistener;
-  logging: AwsAppmeshVirtualNodeArgsspeclogging;
-  service_discovery: AwsAppmeshVirtualNodeArgsspecServiceDiscovery;
+export interface AwsAppmeshVirtualNodeArgsSpec {
+  backend: AwsAppmeshVirtualNodeArgsSpecBackend;
+  backend_defaults: AwsAppmeshVirtualNodeArgsSpecBackendDefaults;
+  listener: AwsAppmeshVirtualNodeArgsSpecListener;
+  logging: AwsAppmeshVirtualNodeArgsSpecLogging;
+  service_discovery: AwsAppmeshVirtualNodeArgsSpecServiceDiscovery;
 }
 export interface AwsAppmeshVirtualNodeArgs {
   mesh_name: string;
@@ -286,7 +286,7 @@ export interface AwsAppmeshVirtualNodeArgs {
   tags?: {
     [key: string]: string;
   };
-  spec: AwsAppmeshVirtualNodeArgsspec;
+  spec: AwsAppmeshVirtualNodeArgsSpec;
 }
 export class aws_appmesh_virtual_node extends TerraformResource {
   readonly arn!: string;

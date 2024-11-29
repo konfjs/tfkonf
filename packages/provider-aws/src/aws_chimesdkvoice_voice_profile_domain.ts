@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsChimesdkvoiceVoiceProfileDomainArgsServerSideEncryptionConfiguration {
   kms_key_arn: string;
 }
-export interface AwsChimesdkvoiceVoiceProfileDomainArgstimeouts {
+export interface AwsChimesdkvoiceVoiceProfileDomainArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsChimesdkvoiceVoiceProfileDomainArgs {
     [key: string]: string;
   };
   server_side_encryption_configuration: AwsChimesdkvoiceVoiceProfileDomainArgsServerSideEncryptionConfiguration;
-  timeouts: AwsChimesdkvoiceVoiceProfileDomainArgstimeouts;
+  timeouts: AwsChimesdkvoiceVoiceProfileDomainArgsTimeouts;
 }
 export class aws_chimesdkvoice_voice_profile_domain extends TerraformResource {
   readonly arn!: string;

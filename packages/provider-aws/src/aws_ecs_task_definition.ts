@@ -21,7 +21,7 @@ export interface AwsEcsTaskDefinitionArgsRuntimePlatform {
   cpu_architecture?: string;
   operating_system_family?: string;
 }
-export interface AwsEcsTaskDefinitionArgsvolumeDockerVolumeConfiguration {
+export interface AwsEcsTaskDefinitionArgsVolumeDockerVolumeConfiguration {
   autoprovision?: boolean;
   driver?: string;
   driver_opts?: {
@@ -31,32 +31,32 @@ export interface AwsEcsTaskDefinitionArgsvolumeDockerVolumeConfiguration {
     [key: string]: string;
   };
 }
-export interface AwsEcsTaskDefinitionArgsvolumeEfsVolumeConfigurationAuthorizationConfig {
+export interface AwsEcsTaskDefinitionArgsVolumeEfsVolumeConfigurationAuthorizationConfig {
   access_point_id?: string;
   iam?: string;
 }
-export interface AwsEcsTaskDefinitionArgsvolumeEfsVolumeConfiguration {
+export interface AwsEcsTaskDefinitionArgsVolumeEfsVolumeConfiguration {
   file_system_id: string;
   root_directory?: string;
   transit_encryption?: string;
   transit_encryption_port?: number;
-  authorization_config: AwsEcsTaskDefinitionArgsvolumeEfsVolumeConfigurationAuthorizationConfig;
+  authorization_config: AwsEcsTaskDefinitionArgsVolumeEfsVolumeConfigurationAuthorizationConfig;
 }
-export interface AwsEcsTaskDefinitionArgsvolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig {
+export interface AwsEcsTaskDefinitionArgsVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig {
   credentials_parameter: string;
   domain: string;
 }
-export interface AwsEcsTaskDefinitionArgsvolumeFsxWindowsFileServerVolumeConfiguration {
+export interface AwsEcsTaskDefinitionArgsVolumeFsxWindowsFileServerVolumeConfiguration {
   file_system_id: string;
   root_directory: string;
-  authorization_config: AwsEcsTaskDefinitionArgsvolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig;
+  authorization_config: AwsEcsTaskDefinitionArgsVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig;
 }
-export interface AwsEcsTaskDefinitionArgsvolume {
+export interface AwsEcsTaskDefinitionArgsVolume {
   host_path?: string;
   name: string;
-  docker_volume_configuration: AwsEcsTaskDefinitionArgsvolumeDockerVolumeConfiguration;
-  efs_volume_configuration: AwsEcsTaskDefinitionArgsvolumeEfsVolumeConfiguration;
-  fsx_windows_file_server_volume_configuration: AwsEcsTaskDefinitionArgsvolumeFsxWindowsFileServerVolumeConfiguration;
+  docker_volume_configuration: AwsEcsTaskDefinitionArgsVolumeDockerVolumeConfiguration;
+  efs_volume_configuration: AwsEcsTaskDefinitionArgsVolumeEfsVolumeConfiguration;
+  fsx_windows_file_server_volume_configuration: AwsEcsTaskDefinitionArgsVolumeFsxWindowsFileServerVolumeConfiguration;
 }
 export interface AwsEcsTaskDefinitionArgs {
   container_definitions: string;
@@ -78,7 +78,7 @@ export interface AwsEcsTaskDefinitionArgs {
   placement_constraints: AwsEcsTaskDefinitionArgsPlacementConstraints;
   proxy_configuration: AwsEcsTaskDefinitionArgsProxyConfiguration;
   runtime_platform: AwsEcsTaskDefinitionArgsRuntimePlatform;
-  volume: AwsEcsTaskDefinitionArgsvolume;
+  volume: AwsEcsTaskDefinitionArgsVolume;
 }
 export class aws_ecs_task_definition extends TerraformResource {
   readonly arn!: string;

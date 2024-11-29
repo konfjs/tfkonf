@@ -3,7 +3,7 @@ export interface GoogleCloudIdentityGroupArgsGroupKey {
   id: string;
   namespace?: string;
 }
-export interface GoogleCloudIdentityGroupArgstimeouts {
+export interface GoogleCloudIdentityGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleCloudIdentityGroupArgs {
   };
   parent: string;
   group_key: GoogleCloudIdentityGroupArgsGroupKey;
-  timeouts: GoogleCloudIdentityGroupArgstimeouts;
+  timeouts: GoogleCloudIdentityGroupArgsTimeouts;
 }
 export class google_cloud_identity_group extends TerraformResource {
   readonly additional_group_keys!: any[];

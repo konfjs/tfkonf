@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEc2TransitGatewayArgstimeouts {
+export interface AwsEc2TransitGatewayArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface AwsEc2TransitGatewayArgs {
   };
   transit_gateway_cidr_blocks?: string[];
   vpn_ecmp_support?: string;
-  timeouts: AwsEc2TransitGatewayArgstimeouts;
+  timeouts: AwsEc2TransitGatewayArgsTimeouts;
 }
 export class aws_ec2_transit_gateway extends TerraformResource {
   readonly arn!: string;

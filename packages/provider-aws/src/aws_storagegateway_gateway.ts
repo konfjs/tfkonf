@@ -13,7 +13,7 @@ export interface AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings {
   timeout_in_seconds?: number;
   username: string;
 }
-export interface AwsStoragegatewayGatewayArgstimeouts {
+export interface AwsStoragegatewayGatewayArgsTimeouts {
   create?: string;
 }
 export interface AwsStoragegatewayGatewayArgs {
@@ -33,7 +33,7 @@ export interface AwsStoragegatewayGatewayArgs {
   tape_drive_type?: string;
   maintenance_start_time: AwsStoragegatewayGatewayArgsMaintenanceStartTime;
   smb_active_directory_settings: AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings;
-  timeouts: AwsStoragegatewayGatewayArgstimeouts;
+  timeouts: AwsStoragegatewayGatewayArgsTimeouts;
 }
 export class aws_storagegateway_gateway extends TerraformResource {
   readonly activation_key?: string;

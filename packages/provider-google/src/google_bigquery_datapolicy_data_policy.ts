@@ -3,7 +3,7 @@ export interface GoogleBigqueryDatapolicyDataPolicyArgsDataMaskingPolicy {
   predefined_expression?: string;
   routine?: string;
 }
-export interface GoogleBigqueryDatapolicyDataPolicyArgstimeouts {
+export interface GoogleBigqueryDatapolicyDataPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleBigqueryDatapolicyDataPolicyArgs {
   location: string;
   policy_tag: string;
   data_masking_policy: GoogleBigqueryDatapolicyDataPolicyArgsDataMaskingPolicy;
-  timeouts: GoogleBigqueryDatapolicyDataPolicyArgstimeouts;
+  timeouts: GoogleBigqueryDatapolicyDataPolicyArgsTimeouts;
 }
 export class google_bigquery_datapolicy_data_policy extends TerraformResource {
   readonly id?: string;

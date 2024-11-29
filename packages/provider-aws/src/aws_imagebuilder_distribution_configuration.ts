@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionAmiDistributionConfigurationLaunchPermission {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionAmiDistributionConfigurationLaunchPermission {
   organization_arns?: string[];
   organizational_unit_arns?: string[];
   user_groups?: string[];
   user_ids?: string[];
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionAmiDistributionConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionAmiDistributionConfiguration {
   ami_tags?: {
     [key: string]: string;
   };
@@ -13,51 +13,51 @@ export interface AwsImagebuilderDistributionConfigurationArgsdistributionAmiDist
   kms_key_id?: string;
   name?: string;
   target_account_ids?: string[];
-  launch_permission: AwsImagebuilderDistributionConfigurationArgsdistributionAmiDistributionConfigurationLaunchPermission;
+  launch_permission: AwsImagebuilderDistributionConfigurationArgsDistributionAmiDistributionConfigurationLaunchPermission;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionContainerDistributionConfigurationTargetRepository {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionContainerDistributionConfigurationTargetRepository {
   repository_name: string;
   service: string;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionContainerDistributionConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionContainerDistributionConfiguration {
   container_tags?: string[];
   description?: string;
-  target_repository: AwsImagebuilderDistributionConfigurationArgsdistributionContainerDistributionConfigurationTargetRepository;
+  target_repository: AwsImagebuilderDistributionConfigurationArgsDistributionContainerDistributionConfigurationTargetRepository;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfigurationLaunchTemplate {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfigurationLaunchTemplate {
   launch_template_id?: string;
   launch_template_name?: string;
   launch_template_version?: string;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfigurationSnapshotConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfigurationSnapshotConfiguration {
   target_resource_count?: number;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfiguration {
   account_id: string;
   enabled: boolean;
   max_parallel_launches?: number;
-  launch_template: AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfigurationLaunchTemplate;
-  snapshot_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfigurationSnapshotConfiguration;
+  launch_template: AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfigurationLaunchTemplate;
+  snapshot_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfigurationSnapshotConfiguration;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionLaunchTemplateConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionLaunchTemplateConfiguration {
   account_id?: string;
   default?: boolean;
   launch_template_id: string;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistributionS3ExportConfiguration {
+export interface AwsImagebuilderDistributionConfigurationArgsDistributionS3ExportConfiguration {
   disk_image_format: string;
   role_name: string;
   s3_bucket: string;
   s3_prefix?: string;
 }
-export interface AwsImagebuilderDistributionConfigurationArgsdistribution {
+export interface AwsImagebuilderDistributionConfigurationArgsDistribution {
   license_configuration_arns?: string[];
   region: string;
-  ami_distribution_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionAmiDistributionConfiguration;
-  container_distribution_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionContainerDistributionConfiguration;
-  fast_launch_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionFastLaunchConfiguration;
-  launch_template_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionLaunchTemplateConfiguration;
-  s3_export_configuration: AwsImagebuilderDistributionConfigurationArgsdistributionS3ExportConfiguration;
+  ami_distribution_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionAmiDistributionConfiguration;
+  container_distribution_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionContainerDistributionConfiguration;
+  fast_launch_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionFastLaunchConfiguration;
+  launch_template_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionLaunchTemplateConfiguration;
+  s3_export_configuration: AwsImagebuilderDistributionConfigurationArgsDistributionS3ExportConfiguration;
 }
 export interface AwsImagebuilderDistributionConfigurationArgs {
   description?: string;
@@ -65,7 +65,7 @@ export interface AwsImagebuilderDistributionConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  distribution: AwsImagebuilderDistributionConfigurationArgsdistribution;
+  distribution: AwsImagebuilderDistributionConfigurationArgsDistribution;
 }
 export class aws_imagebuilder_distribution_configuration extends TerraformResource {
   readonly arn!: string;

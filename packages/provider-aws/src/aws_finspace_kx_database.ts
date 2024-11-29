@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsFinspaceKxDatabaseArgstimeouts {
+export interface AwsFinspaceKxDatabaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsFinspaceKxDatabaseArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsFinspaceKxDatabaseArgstimeouts;
+  timeouts: AwsFinspaceKxDatabaseArgsTimeouts;
 }
 export class aws_finspace_kx_database extends TerraformResource {
   readonly arn!: string;

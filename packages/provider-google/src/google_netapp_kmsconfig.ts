@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetappKmsconfigArgstimeouts {
+export interface GoogleNetappKmsconfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleNetappKmsconfigArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleNetappKmsconfigArgstimeouts;
+  timeouts: GoogleNetappKmsconfigArgsTimeouts;
 }
 export class google_netapp_kmsconfig extends TerraformResource {
   readonly effective_labels!: {

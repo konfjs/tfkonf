@@ -3,7 +3,7 @@ export interface GoogleNotebooksRuntimeArgsAccessConfig {
   access_type?: string;
   runtime_owner?: string;
 }
-export interface GoogleNotebooksRuntimeArgsSoftwareConfigkernels {
+export interface GoogleNotebooksRuntimeArgsSoftwareConfigKernels {
   repository: string;
   tag?: string;
 }
@@ -16,9 +16,9 @@ export interface GoogleNotebooksRuntimeArgsSoftwareConfig {
   notebook_upgrade_schedule?: string;
   post_startup_script?: string;
   post_startup_script_behavior?: string;
-  kernels: GoogleNotebooksRuntimeArgsSoftwareConfigkernels;
+  kernels: GoogleNotebooksRuntimeArgsSoftwareConfigKernels;
 }
-export interface GoogleNotebooksRuntimeArgstimeouts {
+export interface GoogleNotebooksRuntimeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -76,7 +76,7 @@ export interface GoogleNotebooksRuntimeArgs {
   name: string;
   access_config: GoogleNotebooksRuntimeArgsAccessConfig;
   software_config: GoogleNotebooksRuntimeArgsSoftwareConfig;
-  timeouts: GoogleNotebooksRuntimeArgstimeouts;
+  timeouts: GoogleNotebooksRuntimeArgsTimeouts;
   virtual_machine: GoogleNotebooksRuntimeArgsVirtualMachine;
 }
 export class google_notebooks_runtime extends TerraformResource {

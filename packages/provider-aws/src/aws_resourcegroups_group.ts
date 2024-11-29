@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsResourcegroupsGroupArgsconfigurationparameters {
+export interface AwsResourcegroupsGroupArgsConfigurationParameters {
   name: string;
   values: string[];
 }
-export interface AwsResourcegroupsGroupArgsconfiguration {
+export interface AwsResourcegroupsGroupArgsConfiguration {
   type: string;
-  parameters: AwsResourcegroupsGroupArgsconfigurationparameters;
+  parameters: AwsResourcegroupsGroupArgsConfigurationParameters;
 }
 export interface AwsResourcegroupsGroupArgsResourceQuery {
   query: string;
   type?: string;
 }
-export interface AwsResourcegroupsGroupArgstimeouts {
+export interface AwsResourcegroupsGroupArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -21,9 +21,9 @@ export interface AwsResourcegroupsGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: AwsResourcegroupsGroupArgsconfiguration;
+  configuration: AwsResourcegroupsGroupArgsConfiguration;
   resource_query: AwsResourcegroupsGroupArgsResourceQuery;
-  timeouts: AwsResourcegroupsGroupArgstimeouts;
+  timeouts: AwsResourcegroupsGroupArgsTimeouts;
 }
 export class aws_resourcegroups_group extends TerraformResource {
   readonly arn!: string;

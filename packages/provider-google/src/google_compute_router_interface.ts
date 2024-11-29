@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRouterInterfaceArgstimeouts {
+export interface GoogleComputeRouterInterfaceArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleComputeRouterInterfaceArgs {
   router: string;
   subnetwork?: string;
   vpn_tunnel?: string;
-  timeouts: GoogleComputeRouterInterfaceArgstimeouts;
+  timeouts: GoogleComputeRouterInterfaceArgsTimeouts;
 }
 export class google_compute_router_interface extends TerraformResource {
   readonly id?: string;

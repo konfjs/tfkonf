@@ -3,30 +3,30 @@ export interface AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails {
   encryption_option?: string;
   kms_key_id?: string;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgsrepositorybitbucket {
+export interface AwsCodegurureviewerRepositoryAssociationArgsRepositoryBitbucket {
   connection_arn: string;
   name: string;
   owner: string;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgsrepositorycodecommit {
+export interface AwsCodegurureviewerRepositoryAssociationArgsRepositoryCodecommit {
   name: string;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgsrepositoryGithubEnterpriseServer {
+export interface AwsCodegurureviewerRepositoryAssociationArgsRepositoryGithubEnterpriseServer {
   connection_arn: string;
   name: string;
   owner: string;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgsrepositoryS3Bucket {
+export interface AwsCodegurureviewerRepositoryAssociationArgsRepositoryS3Bucket {
   bucket_name: string;
   name: string;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgsrepository {
-  bitbucket: AwsCodegurureviewerRepositoryAssociationArgsrepositorybitbucket;
-  codecommit: AwsCodegurureviewerRepositoryAssociationArgsrepositorycodecommit;
-  github_enterprise_server: AwsCodegurureviewerRepositoryAssociationArgsrepositoryGithubEnterpriseServer;
-  s3_bucket: AwsCodegurureviewerRepositoryAssociationArgsrepositoryS3Bucket;
+export interface AwsCodegurureviewerRepositoryAssociationArgsRepository {
+  bitbucket: AwsCodegurureviewerRepositoryAssociationArgsRepositoryBitbucket;
+  codecommit: AwsCodegurureviewerRepositoryAssociationArgsRepositoryCodecommit;
+  github_enterprise_server: AwsCodegurureviewerRepositoryAssociationArgsRepositoryGithubEnterpriseServer;
+  s3_bucket: AwsCodegurureviewerRepositoryAssociationArgsRepositoryS3Bucket;
 }
-export interface AwsCodegurureviewerRepositoryAssociationArgstimeouts {
+export interface AwsCodegurureviewerRepositoryAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,8 +36,8 @@ export interface AwsCodegurureviewerRepositoryAssociationArgs {
     [key: string]: string;
   };
   kms_key_details: AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails;
-  repository: AwsCodegurureviewerRepositoryAssociationArgsrepository;
-  timeouts: AwsCodegurureviewerRepositoryAssociationArgstimeouts;
+  repository: AwsCodegurureviewerRepositoryAssociationArgsRepository;
+  timeouts: AwsCodegurureviewerRepositoryAssociationArgsTimeouts;
 }
 export class aws_codegurureviewer_repository_association extends TerraformResource {
   readonly arn!: string;

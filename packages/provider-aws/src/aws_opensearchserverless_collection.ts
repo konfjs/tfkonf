@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsOpensearchserverlessCollectionArgstimeouts {
+export interface AwsOpensearchserverlessCollectionArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsOpensearchserverlessCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsOpensearchserverlessCollectionArgstimeouts;
+  timeouts: AwsOpensearchserverlessCollectionArgsTimeouts;
 }
 export class aws_opensearchserverless_collection extends TerraformResource {
   readonly arn!: string;

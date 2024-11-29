@@ -9,7 +9,7 @@ export interface AwsCodepipelineArgsArtifactStore {
   type: string;
   encryption_key: AwsCodepipelineArgsArtifactStoreEncryptionKey;
 }
-export interface AwsCodepipelineArgsstageaction {
+export interface AwsCodepipelineArgsStageAction {
   category: string;
   configuration?: {
     [key: string]: string;
@@ -24,50 +24,50 @@ export interface AwsCodepipelineArgsstageaction {
   timeout_in_minutes?: number;
   version: string;
 }
-export interface AwsCodepipelineArgsstage {
+export interface AwsCodepipelineArgsStage {
   name: string;
-  action: AwsCodepipelineArgsstageaction;
+  action: AwsCodepipelineArgsStageAction;
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationPullRequestbranches {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPullRequestBranches {
   excludes?: string[];
   includes?: string[];
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationPullRequestFilePaths {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPullRequestFilePaths {
   excludes?: string[];
   includes?: string[];
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationPullRequest {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPullRequest {
   events?: string[];
-  branches: AwsCodepipelineArgstriggerGitConfigurationPullRequestbranches;
-  file_paths: AwsCodepipelineArgstriggerGitConfigurationPullRequestFilePaths;
+  branches: AwsCodepipelineArgsTriggerGitConfigurationPullRequestBranches;
+  file_paths: AwsCodepipelineArgsTriggerGitConfigurationPullRequestFilePaths;
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationpushbranches {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPushBranches {
   excludes?: string[];
   includes?: string[];
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationpushFilePaths {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPushFilePaths {
   excludes?: string[];
   includes?: string[];
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationpushtags {
+export interface AwsCodepipelineArgsTriggerGitConfigurationPushTags {
   excludes?: string[];
   includes?: string[];
 }
-export interface AwsCodepipelineArgstriggerGitConfigurationpush {
-  branches: AwsCodepipelineArgstriggerGitConfigurationpushbranches;
-  file_paths: AwsCodepipelineArgstriggerGitConfigurationpushFilePaths;
-  tags: AwsCodepipelineArgstriggerGitConfigurationpushtags;
+export interface AwsCodepipelineArgsTriggerGitConfigurationPush {
+  branches: AwsCodepipelineArgsTriggerGitConfigurationPushBranches;
+  file_paths: AwsCodepipelineArgsTriggerGitConfigurationPushFilePaths;
+  tags: AwsCodepipelineArgsTriggerGitConfigurationPushTags;
 }
-export interface AwsCodepipelineArgstriggerGitConfiguration {
+export interface AwsCodepipelineArgsTriggerGitConfiguration {
   source_action_name: string;
-  pull_request: AwsCodepipelineArgstriggerGitConfigurationPullRequest;
-  push: AwsCodepipelineArgstriggerGitConfigurationpush;
+  pull_request: AwsCodepipelineArgsTriggerGitConfigurationPullRequest;
+  push: AwsCodepipelineArgsTriggerGitConfigurationPush;
 }
-export interface AwsCodepipelineArgstrigger {
+export interface AwsCodepipelineArgsTrigger {
   provider_type: string;
-  git_configuration: AwsCodepipelineArgstriggerGitConfiguration;
+  git_configuration: AwsCodepipelineArgsTriggerGitConfiguration;
 }
-export interface AwsCodepipelineArgsvariable {
+export interface AwsCodepipelineArgsVariable {
   default_value?: string;
   description?: string;
   name: string;
@@ -81,9 +81,9 @@ export interface AwsCodepipelineArgs {
     [key: string]: string;
   };
   artifact_store: AwsCodepipelineArgsArtifactStore;
-  stage: AwsCodepipelineArgsstage;
-  trigger: AwsCodepipelineArgstrigger;
-  variable: AwsCodepipelineArgsvariable;
+  stage: AwsCodepipelineArgsStage;
+  trigger: AwsCodepipelineArgsTrigger;
+  variable: AwsCodepipelineArgsVariable;
 }
 export class aws_codepipeline extends TerraformResource {
   readonly arn!: string;

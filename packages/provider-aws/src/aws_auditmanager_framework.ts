@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAuditmanagerFrameworkArgsControlSetscontrols {
+export interface AwsAuditmanagerFrameworkArgsControlSetsControls {
   id: string;
 }
 export interface AwsAuditmanagerFrameworkArgsControlSets {
   name: string;
-  controls: AwsAuditmanagerFrameworkArgsControlSetscontrols;
+  controls: AwsAuditmanagerFrameworkArgsControlSetsControls;
 }
 export interface AwsAuditmanagerFrameworkArgs {
   compliance_type?: string;

@@ -5,7 +5,7 @@ export interface GoogleMonitoringServiceArgsBasicService {
   };
   service_type?: string;
 }
-export interface GoogleMonitoringServiceArgstimeouts {
+export interface GoogleMonitoringServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleMonitoringServiceArgs {
     [key: string]: string;
   };
   basic_service: GoogleMonitoringServiceArgsBasicService;
-  timeouts: GoogleMonitoringServiceArgstimeouts;
+  timeouts: GoogleMonitoringServiceArgsTimeouts;
 }
 export class google_monitoring_service extends TerraformResource {
   readonly id?: string;

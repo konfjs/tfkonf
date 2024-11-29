@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpcIpamPoolArgstimeouts {
+export interface AwsVpcIpamPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,7 +24,7 @@ export interface AwsVpcIpamPoolArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpcIpamPoolArgstimeouts;
+  timeouts: AwsVpcIpamPoolArgsTimeouts;
 }
 export class aws_vpc_ipam_pool extends TerraformResource {
   readonly arn!: string;

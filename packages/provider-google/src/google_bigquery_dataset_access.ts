@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryDatasetAccessArgsdatasetdataset {
+export interface GoogleBigqueryDatasetAccessArgsDatasetDataset {
   dataset_id: string;
   project_id: string;
 }
-export interface GoogleBigqueryDatasetAccessArgsdataset {
+export interface GoogleBigqueryDatasetAccessArgsDataset {
   target_types: string[];
-  dataset: GoogleBigqueryDatasetAccessArgsdatasetdataset;
+  dataset: GoogleBigqueryDatasetAccessArgsDatasetDataset;
 }
-export interface GoogleBigqueryDatasetAccessArgsroutine {
+export interface GoogleBigqueryDatasetAccessArgsRoutine {
   dataset_id: string;
   project_id: string;
   routine_id: string;
 }
-export interface GoogleBigqueryDatasetAccessArgstimeouts {
+export interface GoogleBigqueryDatasetAccessArgsTimeouts {
   create?: string;
   delete?: string;
 }
-export interface GoogleBigqueryDatasetAccessArgsview {
+export interface GoogleBigqueryDatasetAccessArgsView {
   dataset_id: string;
   project_id: string;
   table_id: string;
@@ -29,10 +29,10 @@ export interface GoogleBigqueryDatasetAccessArgs {
   role?: string;
   special_group?: string;
   user_by_email?: string;
-  dataset: GoogleBigqueryDatasetAccessArgsdataset;
-  routine: GoogleBigqueryDatasetAccessArgsroutine;
-  timeouts: GoogleBigqueryDatasetAccessArgstimeouts;
-  view: GoogleBigqueryDatasetAccessArgsview;
+  dataset: GoogleBigqueryDatasetAccessArgsDataset;
+  routine: GoogleBigqueryDatasetAccessArgsRoutine;
+  timeouts: GoogleBigqueryDatasetAccessArgsTimeouts;
+  view: GoogleBigqueryDatasetAccessArgsView;
 }
 export class google_bigquery_dataset_access extends TerraformResource {
   readonly api_updated_member!: boolean;

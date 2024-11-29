@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecretvalue {
+export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecretValue {
   plain_text: string;
 }
 export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecret {
-  value: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecretvalue;
+  value: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecretValue;
 }
 export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientQueryParameters {
   filter?: string;
@@ -15,28 +15,28 @@ export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2Client {
   client_secret: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecret;
   query_parameters: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientQueryParameters;
 }
-export interface GoogleIamWorkforcePoolProviderArgsoidcClientSecretvalue {
+export interface GoogleIamWorkforcePoolProviderArgsOidcClientSecretValue {
   plain_text: string;
 }
-export interface GoogleIamWorkforcePoolProviderArgsoidcClientSecret {
-  value: GoogleIamWorkforcePoolProviderArgsoidcClientSecretvalue;
+export interface GoogleIamWorkforcePoolProviderArgsOidcClientSecret {
+  value: GoogleIamWorkforcePoolProviderArgsOidcClientSecretValue;
 }
-export interface GoogleIamWorkforcePoolProviderArgsoidcWebSsoConfig {
+export interface GoogleIamWorkforcePoolProviderArgsOidcWebSsoConfig {
   additional_scopes?: string[];
   assertion_claims_behavior: string;
   response_type: string;
 }
-export interface GoogleIamWorkforcePoolProviderArgsoidc {
+export interface GoogleIamWorkforcePoolProviderArgsOidc {
   client_id: string;
   issuer_uri: string;
   jwks_json?: string;
-  client_secret: GoogleIamWorkforcePoolProviderArgsoidcClientSecret;
-  web_sso_config: GoogleIamWorkforcePoolProviderArgsoidcWebSsoConfig;
+  client_secret: GoogleIamWorkforcePoolProviderArgsOidcClientSecret;
+  web_sso_config: GoogleIamWorkforcePoolProviderArgsOidcWebSsoConfig;
 }
-export interface GoogleIamWorkforcePoolProviderArgssaml {
+export interface GoogleIamWorkforcePoolProviderArgsSaml {
   idp_metadata_xml: string;
 }
-export interface GoogleIamWorkforcePoolProviderArgstimeouts {
+export interface GoogleIamWorkforcePoolProviderArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -53,9 +53,9 @@ export interface GoogleIamWorkforcePoolProviderArgs {
   provider_id: string;
   workforce_pool_id: string;
   extra_attributes_oauth2_client: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2Client;
-  oidc: GoogleIamWorkforcePoolProviderArgsoidc;
-  saml: GoogleIamWorkforcePoolProviderArgssaml;
-  timeouts: GoogleIamWorkforcePoolProviderArgstimeouts;
+  oidc: GoogleIamWorkforcePoolProviderArgsOidc;
+  saml: GoogleIamWorkforcePoolProviderArgsSaml;
+  timeouts: GoogleIamWorkforcePoolProviderArgsTimeouts;
 }
 export class google_iam_workforce_pool_provider extends TerraformResource {
   readonly id?: string;

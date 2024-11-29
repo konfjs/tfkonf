@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudcontrolapiResourceArgstimeouts {
+export interface AwsCloudcontrolapiResourceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsCloudcontrolapiResourceArgs {
   role_arn?: string;
   type_name: string;
   type_version_id?: string;
-  timeouts: AwsCloudcontrolapiResourceArgstimeouts;
+  timeouts: AwsCloudcontrolapiResourceArgsTimeouts;
 }
 export class aws_cloudcontrolapi_resource extends TerraformResource {
   readonly id?: string;

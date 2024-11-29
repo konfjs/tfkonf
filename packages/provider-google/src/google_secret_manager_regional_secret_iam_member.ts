@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSecretManagerRegionalSecretIamMemberArgscondition {
+export interface GoogleSecretManagerRegionalSecretIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSecretManagerRegionalSecretIamMemberArgs {
   member: string;
   role: string;
   secret_id: string;
-  condition: GoogleSecretManagerRegionalSecretIamMemberArgscondition;
+  condition: GoogleSecretManagerRegionalSecretIamMemberArgsCondition;
 }
 export class google_secret_manager_regional_secret_iam_member extends TerraformResource {
   readonly etag!: string;

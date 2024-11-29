@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeNatAddressArgstimeouts {
+export interface GoogleApigeeNatAddressArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleApigeeNatAddressArgs {
   activate?: boolean;
   instance_id: string;
   name: string;
-  timeouts: GoogleApigeeNatAddressArgstimeouts;
+  timeouts: GoogleApigeeNatAddressArgsTimeouts;
 }
 export class google_apigee_nat_address extends TerraformResource {
   readonly id?: string;

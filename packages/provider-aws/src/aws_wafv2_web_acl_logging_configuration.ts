@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilterconditionActionCondition {
+export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterConditionActionCondition {
   action: string;
 }
-export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilterconditionLabelNameCondition {
+export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterConditionLabelNameCondition {
   label_name: string;
 }
-export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfiltercondition {
-  action_condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilterconditionActionCondition;
-  label_name_condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilterconditionLabelNameCondition;
+export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterCondition {
+  action_condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterConditionActionCondition;
+  label_name_condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterConditionLabelNameCondition;
 }
-export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilter {
+export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilter {
   behavior: string;
   requirement: string;
-  condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfiltercondition;
+  condition: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilterCondition;
 }
 export interface AwsWafv2WebAclLoggingConfigurationArgsLoggingFilter {
   default_behavior: string;
-  filter: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterfilter;
+  filter: AwsWafv2WebAclLoggingConfigurationArgsLoggingFilterFilter;
 }
-export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsmethod {}
+export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsMethod {}
 export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsQueryString {}
 export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsSingleHeader {
   name: string;
 }
 export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsUriPath {}
 export interface AwsWafv2WebAclLoggingConfigurationArgsRedactedFields {
-  method: AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsmethod;
+  method: AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsMethod;
   query_string: AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsQueryString;
   single_header: AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsSingleHeader;
   uri_path: AwsWafv2WebAclLoggingConfigurationArgsRedactedFieldsUriPath;

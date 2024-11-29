@@ -7,7 +7,7 @@ export interface AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundary
   managed_policy_arn?: string;
   customer_managed_policy_reference: AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundaryCustomerManagedPolicyReference;
 }
-export interface AwsSsoadminPermissionsBoundaryAttachmentArgstimeouts {
+export interface AwsSsoadminPermissionsBoundaryAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,7 +15,7 @@ export interface AwsSsoadminPermissionsBoundaryAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
   permissions_boundary: AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundary;
-  timeouts: AwsSsoadminPermissionsBoundaryAttachmentArgstimeouts;
+  timeouts: AwsSsoadminPermissionsBoundaryAttachmentArgsTimeouts;
 }
 export class aws_ssoadmin_permissions_boundary_attachment extends TerraformResource {
   readonly id?: string;

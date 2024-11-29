@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCodestarconnectionsHostArgstimeouts {
+export interface AwsCodestarconnectionsHostArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsCodestarconnectionsHostArgs {
   name: string;
   provider_endpoint: string;
   provider_type: string;
-  timeouts: AwsCodestarconnectionsHostArgstimeouts;
+  timeouts: AwsCodestarconnectionsHostArgsTimeouts;
   vpc_configuration: AwsCodestarconnectionsHostArgsVpcConfiguration;
 }
 export class aws_codestarconnections_host extends TerraformResource {

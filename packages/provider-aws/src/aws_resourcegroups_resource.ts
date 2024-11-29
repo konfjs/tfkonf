@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsResourcegroupsResourceArgstimeouts {
+export interface AwsResourcegroupsResourceArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsResourcegroupsResourceArgs {
   group_arn: string;
   resource_arn: string;
-  timeouts: AwsResourcegroupsResourceArgstimeouts;
+  timeouts: AwsResourcegroupsResourceArgsTimeouts;
 }
 export class aws_resourcegroups_resource extends TerraformResource {
   readonly id?: string;

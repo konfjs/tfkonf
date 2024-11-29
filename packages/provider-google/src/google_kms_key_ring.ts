@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleKmsKeyRingArgstimeouts {
+export interface GoogleKmsKeyRingArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleKmsKeyRingArgs {
   location: string;
   name: string;
-  timeouts: GoogleKmsKeyRingArgstimeouts;
+  timeouts: GoogleKmsKeyRingArgsTimeouts;
 }
 export class google_kms_key_ring extends TerraformResource {
   readonly id?: string;

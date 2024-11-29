@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRouteTableAssociationArgstimeouts {
+export interface AwsRouteTableAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface AwsRouteTableAssociationArgs {
   gateway_id?: string;
   route_table_id: string;
   subnet_id?: string;
-  timeouts: AwsRouteTableAssociationArgstimeouts;
+  timeouts: AwsRouteTableAssociationArgsTimeouts;
 }
 export class aws_route_table_association extends TerraformResource {
   readonly id?: string;

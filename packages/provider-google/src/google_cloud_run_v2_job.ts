@@ -4,96 +4,96 @@ export interface GoogleCloudRunV2JobArgsBinaryAuthorization {
   policy?: string;
   use_default?: boolean;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersenvValueSourceSecretKeyRef {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersEnvValueSourceSecretKeyRef {
   secret: string;
   version: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersenvValueSource {
-  secret_key_ref: GoogleCloudRunV2JobArgstemplatetemplatecontainersenvValueSourceSecretKeyRef;
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersEnvValueSource {
+  secret_key_ref: GoogleCloudRunV2JobArgsTemplateTemplateContainersEnvValueSourceSecretKeyRef;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersenv {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersEnv {
   name: string;
   value?: string;
-  value_source: GoogleCloudRunV2JobArgstemplatetemplatecontainersenvValueSource;
+  value_source: GoogleCloudRunV2JobArgsTemplateTemplateContainersEnvValueSource;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersports {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersPorts {
   container_port?: number;
   name?: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersresources {}
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainersVolumeMounts {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersResources {}
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainersVolumeMounts {
   mount_path: string;
   name: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatecontainers {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateContainers {
   args?: string[];
   command?: string[];
   image: string;
   name?: string;
   working_dir?: string;
-  env: GoogleCloudRunV2JobArgstemplatetemplatecontainersenv;
-  ports: GoogleCloudRunV2JobArgstemplatetemplatecontainersports;
-  resources: GoogleCloudRunV2JobArgstemplatetemplatecontainersresources;
-  volume_mounts: GoogleCloudRunV2JobArgstemplatetemplatecontainersVolumeMounts;
+  env: GoogleCloudRunV2JobArgsTemplateTemplateContainersEnv;
+  ports: GoogleCloudRunV2JobArgsTemplateTemplateContainersPorts;
+  resources: GoogleCloudRunV2JobArgsTemplateTemplateContainersResources;
+  volume_mounts: GoogleCloudRunV2JobArgsTemplateTemplateContainersVolumeMounts;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumesCloudSqlInstance {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesCloudSqlInstance {
   instances?: string[];
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumesEmptyDir {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesEmptyDir {
   medium?: string;
   size_limit?: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumesgcs {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesGcs {
   bucket: string;
   read_only?: boolean;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumesnfs {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesNfs {
   path?: string;
   read_only?: boolean;
   server: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumessecretitems {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesSecretItems {
   mode?: number;
   path: string;
   version: string;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumessecret {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumesSecret {
   default_mode?: number;
   secret: string;
-  items: GoogleCloudRunV2JobArgstemplatetemplatevolumessecretitems;
+  items: GoogleCloudRunV2JobArgsTemplateTemplateVolumesSecretItems;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplatevolumes {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVolumes {
   name: string;
-  cloud_sql_instance: GoogleCloudRunV2JobArgstemplatetemplatevolumesCloudSqlInstance;
-  empty_dir: GoogleCloudRunV2JobArgstemplatetemplatevolumesEmptyDir;
-  gcs: GoogleCloudRunV2JobArgstemplatetemplatevolumesgcs;
-  nfs: GoogleCloudRunV2JobArgstemplatetemplatevolumesnfs;
-  secret: GoogleCloudRunV2JobArgstemplatetemplatevolumessecret;
+  cloud_sql_instance: GoogleCloudRunV2JobArgsTemplateTemplateVolumesCloudSqlInstance;
+  empty_dir: GoogleCloudRunV2JobArgsTemplateTemplateVolumesEmptyDir;
+  gcs: GoogleCloudRunV2JobArgsTemplateTemplateVolumesGcs;
+  nfs: GoogleCloudRunV2JobArgsTemplateTemplateVolumesNfs;
+  secret: GoogleCloudRunV2JobArgsTemplateTemplateVolumesSecret;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplateVpcAccessNetworkInterfaces {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVpcAccessNetworkInterfaces {
   tags?: string[];
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplateVpcAccess {
+export interface GoogleCloudRunV2JobArgsTemplateTemplateVpcAccess {
   connector?: string;
-  network_interfaces: GoogleCloudRunV2JobArgstemplatetemplateVpcAccessNetworkInterfaces;
+  network_interfaces: GoogleCloudRunV2JobArgsTemplateTemplateVpcAccessNetworkInterfaces;
 }
-export interface GoogleCloudRunV2JobArgstemplatetemplate {
+export interface GoogleCloudRunV2JobArgsTemplateTemplate {
   encryption_key?: string;
   max_retries?: number;
-  containers: GoogleCloudRunV2JobArgstemplatetemplatecontainers;
-  volumes: GoogleCloudRunV2JobArgstemplatetemplatevolumes;
-  vpc_access: GoogleCloudRunV2JobArgstemplatetemplateVpcAccess;
+  containers: GoogleCloudRunV2JobArgsTemplateTemplateContainers;
+  volumes: GoogleCloudRunV2JobArgsTemplateTemplateVolumes;
+  vpc_access: GoogleCloudRunV2JobArgsTemplateTemplateVpcAccess;
 }
-export interface GoogleCloudRunV2JobArgstemplate {
+export interface GoogleCloudRunV2JobArgsTemplate {
   annotations?: {
     [key: string]: string;
   };
   labels?: {
     [key: string]: string;
   };
-  template: GoogleCloudRunV2JobArgstemplatetemplate;
+  template: GoogleCloudRunV2JobArgsTemplateTemplate;
 }
-export interface GoogleCloudRunV2JobArgstimeouts {
+export interface GoogleCloudRunV2JobArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -111,8 +111,8 @@ export interface GoogleCloudRunV2JobArgs {
   location: string;
   name: string;
   binary_authorization: GoogleCloudRunV2JobArgsBinaryAuthorization;
-  template: GoogleCloudRunV2JobArgstemplate;
-  timeouts: GoogleCloudRunV2JobArgstimeouts;
+  template: GoogleCloudRunV2JobArgsTemplate;
+  timeouts: GoogleCloudRunV2JobArgsTimeouts;
 }
 export class google_cloud_run_v2_job extends TerraformResource {
   readonly conditions!: any[];

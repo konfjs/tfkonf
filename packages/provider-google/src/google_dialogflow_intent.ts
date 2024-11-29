@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowIntentArgstimeouts {
+export interface GoogleDialogflowIntentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleDialogflowIntentArgs {
   display_name: string;
   events?: string[];
   input_context_names?: string[];
-  timeouts: GoogleDialogflowIntentArgstimeouts;
+  timeouts: GoogleDialogflowIntentArgsTimeouts;
 }
 export class google_dialogflow_intent extends TerraformResource {
   readonly action?: string;

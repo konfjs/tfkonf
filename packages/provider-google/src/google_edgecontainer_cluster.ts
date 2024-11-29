@@ -1,48 +1,48 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleEdgecontainerClusterArgsauthorizationAdminUsers {
+export interface GoogleEdgecontainerClusterArgsAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleEdgecontainerClusterArgsauthorization {
-  admin_users: GoogleEdgecontainerClusterArgsauthorizationAdminUsers;
+export interface GoogleEdgecontainerClusterArgsAuthorization {
+  admin_users: GoogleEdgecontainerClusterArgsAuthorizationAdminUsers;
 }
-export interface GoogleEdgecontainerClusterArgsControlPlanelocal {
+export interface GoogleEdgecontainerClusterArgsControlPlaneLocal {
   machine_filter?: string;
 }
-export interface GoogleEdgecontainerClusterArgsControlPlaneremote {}
+export interface GoogleEdgecontainerClusterArgsControlPlaneRemote {}
 export interface GoogleEdgecontainerClusterArgsControlPlane {
-  local: GoogleEdgecontainerClusterArgsControlPlanelocal;
-  remote: GoogleEdgecontainerClusterArgsControlPlaneremote;
+  local: GoogleEdgecontainerClusterArgsControlPlaneLocal;
+  remote: GoogleEdgecontainerClusterArgsControlPlaneRemote;
 }
 export interface GoogleEdgecontainerClusterArgsControlPlaneEncryption {}
-export interface GoogleEdgecontainerClusterArgsfleet {
+export interface GoogleEdgecontainerClusterArgsFleet {
   project: string;
 }
-export interface GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionswindow {}
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionsWindow {}
 export interface GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusions {
-  window: GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionswindow;
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionsWindow;
 }
-export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindowwindow {}
-export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindow {
-  window: GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindowwindow;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyWindowRecurringWindowWindow {}
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyWindowRecurringWindow {
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicyWindowRecurringWindowWindow;
 }
-export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindow {
-  recurring_window: GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindow;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyWindow {
+  recurring_window: GoogleEdgecontainerClusterArgsMaintenancePolicyWindowRecurringWindow;
 }
 export interface GoogleEdgecontainerClusterArgsMaintenancePolicy {
   maintenance_exclusions: GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusions;
-  window: GoogleEdgecontainerClusterArgsMaintenancePolicywindow;
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicyWindow;
 }
-export interface GoogleEdgecontainerClusterArgsnetworking {
+export interface GoogleEdgecontainerClusterArgsNetworking {
   cluster_ipv4_cidr_blocks: string[];
   cluster_ipv6_cidr_blocks?: string[];
   services_ipv4_cidr_blocks: string[];
   services_ipv6_cidr_blocks?: string[];
 }
-export interface GoogleEdgecontainerClusterArgsSystemAddonsConfigingress {}
+export interface GoogleEdgecontainerClusterArgsSystemAddonsConfigIngress {}
 export interface GoogleEdgecontainerClusterArgsSystemAddonsConfig {
-  ingress: GoogleEdgecontainerClusterArgsSystemAddonsConfigingress;
+  ingress: GoogleEdgecontainerClusterArgsSystemAddonsConfigIngress;
 }
-export interface GoogleEdgecontainerClusterArgstimeouts {
+export interface GoogleEdgecontainerClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -53,14 +53,14 @@ export interface GoogleEdgecontainerClusterArgs {
   };
   location: string;
   name: string;
-  authorization: GoogleEdgecontainerClusterArgsauthorization;
+  authorization: GoogleEdgecontainerClusterArgsAuthorization;
   control_plane: GoogleEdgecontainerClusterArgsControlPlane;
   control_plane_encryption: GoogleEdgecontainerClusterArgsControlPlaneEncryption;
-  fleet: GoogleEdgecontainerClusterArgsfleet;
+  fleet: GoogleEdgecontainerClusterArgsFleet;
   maintenance_policy: GoogleEdgecontainerClusterArgsMaintenancePolicy;
-  networking: GoogleEdgecontainerClusterArgsnetworking;
+  networking: GoogleEdgecontainerClusterArgsNetworking;
   system_addons_config: GoogleEdgecontainerClusterArgsSystemAddonsConfig;
-  timeouts: GoogleEdgecontainerClusterArgstimeouts;
+  timeouts: GoogleEdgecontainerClusterArgsTimeouts;
 }
 export class google_edgecontainer_cluster extends TerraformResource {
   readonly cluster_ca_certificate!: string;

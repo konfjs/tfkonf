@@ -16,7 +16,7 @@ export interface GoogleRedisInstanceArgsMaintenancePolicy {
 export interface GoogleRedisInstanceArgsPersistenceConfig {
   rdb_snapshot_period?: string;
 }
-export interface GoogleRedisInstanceArgstimeouts {
+export interface GoogleRedisInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,7 +38,7 @@ export interface GoogleRedisInstanceArgs {
   transit_encryption_mode?: string;
   maintenance_policy: GoogleRedisInstanceArgsMaintenancePolicy;
   persistence_config: GoogleRedisInstanceArgsPersistenceConfig;
-  timeouts: GoogleRedisInstanceArgstimeouts;
+  timeouts: GoogleRedisInstanceArgsTimeouts;
 }
 export class google_redis_instance extends TerraformResource {
   readonly alternative_location_id?: string;

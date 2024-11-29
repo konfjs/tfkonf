@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleSccNotificationConfigArgsStreamingConfig {
   filter: string;
 }
-export interface GoogleSccNotificationConfigArgstimeouts {
+export interface GoogleSccNotificationConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleSccNotificationConfigArgs {
   organization: string;
   pubsub_topic: string;
   streaming_config: GoogleSccNotificationConfigArgsStreamingConfig;
-  timeouts: GoogleSccNotificationConfigArgstimeouts;
+  timeouts: GoogleSccNotificationConfigArgsTimeouts;
 }
 export class google_scc_notification_config extends TerraformResource {
   readonly id?: string;

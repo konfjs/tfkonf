@@ -7,7 +7,7 @@ export interface GoogleKmsEkmConnectionArgsServiceResolvers {
   service_directory_service: string;
   server_certificates: GoogleKmsEkmConnectionArgsServiceResolversServerCertificates;
 }
-export interface GoogleKmsEkmConnectionArgstimeouts {
+export interface GoogleKmsEkmConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleKmsEkmConnectionArgs {
   location: string;
   name: string;
   service_resolvers: GoogleKmsEkmConnectionArgsServiceResolvers;
-  timeouts: GoogleKmsEkmConnectionArgstimeouts;
+  timeouts: GoogleKmsEkmConnectionArgsTimeouts;
 }
 export class google_kms_ekm_connection extends TerraformResource {
   readonly create_time!: string;

@@ -9,13 +9,13 @@ export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigAuxiliaryV
   key: string;
   version: string;
 }
-export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigkeytab {
+export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigKeytab {
   cloud_secret: string;
 }
 export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfig {
   krb5_config_gcs_uri: string;
   principal: string;
-  keytab: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigkeytab;
+  keytab: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigKeytab;
 }
 export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfig {
   endpoint_protocol?: string;
@@ -33,11 +33,11 @@ export interface GoogleDataprocMetastoreServiceArgsMetadataIntegrationDataCatalo
 export interface GoogleDataprocMetastoreServiceArgsMetadataIntegration {
   data_catalog_config: GoogleDataprocMetastoreServiceArgsMetadataIntegrationDataCatalogConfig;
 }
-export interface GoogleDataprocMetastoreServiceArgsNetworkConfigconsumers {
+export interface GoogleDataprocMetastoreServiceArgsNetworkConfigConsumers {
   subnetwork: string;
 }
 export interface GoogleDataprocMetastoreServiceArgsNetworkConfig {
-  consumers: GoogleDataprocMetastoreServiceArgsNetworkConfigconsumers;
+  consumers: GoogleDataprocMetastoreServiceArgsNetworkConfigConsumers;
 }
 export interface GoogleDataprocMetastoreServiceArgsScalingConfig {
   instance_size?: string;
@@ -50,7 +50,7 @@ export interface GoogleDataprocMetastoreServiceArgsScheduledBackup {
 export interface GoogleDataprocMetastoreServiceArgsTelemetryConfig {
   log_format?: string;
 }
-export interface GoogleDataprocMetastoreServiceArgstimeouts {
+export interface GoogleDataprocMetastoreServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -72,7 +72,7 @@ export interface GoogleDataprocMetastoreServiceArgs {
   scaling_config: GoogleDataprocMetastoreServiceArgsScalingConfig;
   scheduled_backup: GoogleDataprocMetastoreServiceArgsScheduledBackup;
   telemetry_config: GoogleDataprocMetastoreServiceArgsTelemetryConfig;
-  timeouts: GoogleDataprocMetastoreServiceArgstimeouts;
+  timeouts: GoogleDataprocMetastoreServiceArgsTimeouts;
 }
 export class google_dataproc_metastore_service extends TerraformResource {
   readonly artifact_gcs_uri!: string;

@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDatazoneFormTypeArgsmodel {
+export interface AwsDatazoneFormTypeArgsModel {
   smithy: string;
 }
-export interface AwsDatazoneFormTypeArgstimeouts {
+export interface AwsDatazoneFormTypeArgsTimeouts {
   create?: string;
 }
 export interface AwsDatazoneFormTypeArgs {
@@ -10,8 +10,8 @@ export interface AwsDatazoneFormTypeArgs {
   domain_identifier: string;
   name: string;
   owning_project_identifier: string;
-  model: AwsDatazoneFormTypeArgsmodel;
-  timeouts: AwsDatazoneFormTypeArgstimeouts;
+  model: AwsDatazoneFormTypeArgsModel;
+  timeouts: AwsDatazoneFormTypeArgsTimeouts;
 }
 export class aws_datazone_form_type extends TerraformResource {
   readonly created_at!: string;

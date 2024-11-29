@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEksAccessEntryArgstimeouts {
+export interface AwsEksAccessEntryArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsEksAccessEntryArgs {
     [key: string]: string;
   };
   type?: string;
-  timeouts: AwsEksAccessEntryArgstimeouts;
+  timeouts: AwsEksAccessEntryArgsTimeouts;
 }
 export class aws_eks_access_entry extends TerraformResource {
   readonly access_entry_arn!: string;

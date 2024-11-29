@@ -11,12 +11,12 @@ export interface AwsEksNodeGroupArgsScalingConfig {
   max_size: number;
   min_size: number;
 }
-export interface AwsEksNodeGroupArgstaint {
+export interface AwsEksNodeGroupArgsTaint {
   effect: string;
   key: string;
   value?: string;
 }
-export interface AwsEksNodeGroupArgstimeouts {
+export interface AwsEksNodeGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,8 +39,8 @@ export interface AwsEksNodeGroupArgs {
   launch_template: AwsEksNodeGroupArgsLaunchTemplate;
   remote_access: AwsEksNodeGroupArgsRemoteAccess;
   scaling_config: AwsEksNodeGroupArgsScalingConfig;
-  taint: AwsEksNodeGroupArgstaint;
-  timeouts: AwsEksNodeGroupArgstimeouts;
+  taint: AwsEksNodeGroupArgsTaint;
+  timeouts: AwsEksNodeGroupArgsTimeouts;
   update_config: AwsEksNodeGroupArgsUpdateConfig;
 }
 export class aws_eks_node_group extends TerraformResource {

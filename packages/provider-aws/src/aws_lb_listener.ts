@@ -22,19 +22,19 @@ export interface AwsLbListenerArgsDefaultActionFixedResponse {
   content_type: string;
   message_body?: string;
 }
-export interface AwsLbListenerArgsDefaultActionforwardstickiness {
+export interface AwsLbListenerArgsDefaultActionForwardStickiness {
   duration: number;
   enabled?: boolean;
 }
-export interface AwsLbListenerArgsDefaultActionforwardTargetGroup {
+export interface AwsLbListenerArgsDefaultActionForwardTargetGroup {
   arn: string;
   weight?: number;
 }
-export interface AwsLbListenerArgsDefaultActionforward {
-  stickiness: AwsLbListenerArgsDefaultActionforwardstickiness;
-  target_group: AwsLbListenerArgsDefaultActionforwardTargetGroup;
+export interface AwsLbListenerArgsDefaultActionForward {
+  stickiness: AwsLbListenerArgsDefaultActionForwardStickiness;
+  target_group: AwsLbListenerArgsDefaultActionForwardTargetGroup;
 }
-export interface AwsLbListenerArgsDefaultActionredirect {
+export interface AwsLbListenerArgsDefaultActionRedirect {
   host?: string;
   path?: string;
   port?: string;
@@ -48,15 +48,15 @@ export interface AwsLbListenerArgsDefaultAction {
   authenticate_cognito: AwsLbListenerArgsDefaultActionAuthenticateCognito;
   authenticate_oidc: AwsLbListenerArgsDefaultActionAuthenticateOidc;
   fixed_response: AwsLbListenerArgsDefaultActionFixedResponse;
-  forward: AwsLbListenerArgsDefaultActionforward;
-  redirect: AwsLbListenerArgsDefaultActionredirect;
+  forward: AwsLbListenerArgsDefaultActionForward;
+  redirect: AwsLbListenerArgsDefaultActionRedirect;
 }
 export interface AwsLbListenerArgsMutualAuthentication {
   ignore_client_certificate_expiry?: boolean;
   mode: string;
   trust_store_arn?: string;
 }
-export interface AwsLbListenerArgstimeouts {
+export interface AwsLbListenerArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -70,7 +70,7 @@ export interface AwsLbListenerArgs {
   };
   default_action: AwsLbListenerArgsDefaultAction;
   mutual_authentication: AwsLbListenerArgsMutualAuthentication;
-  timeouts: AwsLbListenerArgstimeouts;
+  timeouts: AwsLbListenerArgsTimeouts;
 }
 export class aws_lb_listener extends TerraformResource {
   readonly arn!: string;

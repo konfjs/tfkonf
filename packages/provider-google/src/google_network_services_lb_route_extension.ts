@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsextensions {
+export interface GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsExtensions {
   authority?: string;
   fail_open?: boolean;
   forward_headers?: string[];
@@ -12,10 +12,10 @@ export interface GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsMatchCo
 }
 export interface GoogleNetworkServicesLbRouteExtensionArgsExtensionChains {
   name: string;
-  extensions: GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsextensions;
+  extensions: GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsExtensions;
   match_condition: GoogleNetworkServicesLbRouteExtensionArgsExtensionChainsMatchCondition;
 }
-export interface GoogleNetworkServicesLbRouteExtensionArgstimeouts {
+export interface GoogleNetworkServicesLbRouteExtensionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,7 +30,7 @@ export interface GoogleNetworkServicesLbRouteExtensionArgs {
   location: string;
   name: string;
   extension_chains: GoogleNetworkServicesLbRouteExtensionArgsExtensionChains;
-  timeouts: GoogleNetworkServicesLbRouteExtensionArgstimeouts;
+  timeouts: GoogleNetworkServicesLbRouteExtensionArgsTimeouts;
 }
 export class google_network_services_lb_route_extension extends TerraformResource {
   readonly effective_labels!: {

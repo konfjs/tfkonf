@@ -3,7 +3,7 @@ export interface AwsEksAddonArgsPodIdentityAssociation {
   role_arn: string;
   service_account: string;
 }
-export interface AwsEksAddonArgstimeouts {
+export interface AwsEksAddonArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface AwsEksAddonArgs {
     [key: string]: string;
   };
   pod_identity_association: AwsEksAddonArgsPodIdentityAssociation;
-  timeouts: AwsEksAddonArgstimeouts;
+  timeouts: AwsEksAddonArgsTimeouts;
 }
 export class aws_eks_addon extends TerraformResource {
   readonly addon_version?: string;

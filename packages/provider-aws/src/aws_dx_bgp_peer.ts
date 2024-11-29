@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDxBgpPeerArgstimeouts {
+export interface AwsDxBgpPeerArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsDxBgpPeerArgs {
   address_family: string;
   bgp_asn: number;
   virtual_interface_id: string;
-  timeouts: AwsDxBgpPeerArgstimeouts;
+  timeouts: AwsDxBgpPeerArgsTimeouts;
 }
 export class aws_dx_bgp_peer extends TerraformResource {
   readonly amazon_address?: string;

@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSignerSigningJobArgsdestinations3 {
+export interface AwsSignerSigningJobArgsDestinationS3 {
   bucket: string;
   prefix?: string;
 }
-export interface AwsSignerSigningJobArgsdestination {
-  s3: AwsSignerSigningJobArgsdestinations3;
+export interface AwsSignerSigningJobArgsDestination {
+  s3: AwsSignerSigningJobArgsDestinationS3;
 }
-export interface AwsSignerSigningJobArgssources3 {
+export interface AwsSignerSigningJobArgsSourceS3 {
   bucket: string;
   key: string;
   version: string;
 }
-export interface AwsSignerSigningJobArgssource {
-  s3: AwsSignerSigningJobArgssources3;
+export interface AwsSignerSigningJobArgsSource {
+  s3: AwsSignerSigningJobArgsSourceS3;
 }
 export interface AwsSignerSigningJobArgs {
   ignore_signing_job_failure?: boolean;
   profile_name: string;
-  destination: AwsSignerSigningJobArgsdestination;
-  source: AwsSignerSigningJobArgssource;
+  destination: AwsSignerSigningJobArgsDestination;
+  source: AwsSignerSigningJobArgsSource;
 }
 export class aws_signer_signing_job extends TerraformResource {
   readonly completed_at!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeBackendServiceArgsbackend {
+export interface GoogleComputeBackendServiceArgsBackend {
   balancing_mode?: string;
   capacity_scaler?: number;
   description?: string;
@@ -34,21 +34,21 @@ export interface GoogleComputeBackendServiceArgsCircuitBreakers {
   max_requests_per_connection?: number;
   max_retries?: number;
 }
-export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookiettl {
+export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookieTtl {
   nanos?: number;
   seconds: number;
 }
 export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
-  ttl: GoogleComputeBackendServiceArgsConsistentHashHttpCookiettl;
+  ttl: GoogleComputeBackendServiceArgsConsistentHashHttpCookieTtl;
 }
 export interface GoogleComputeBackendServiceArgsConsistentHash {
   http_header_name?: string;
   minimum_ring_size?: number;
   http_cookie: GoogleComputeBackendServiceArgsConsistentHashHttpCookie;
 }
-export interface GoogleComputeBackendServiceArgsiap {
+export interface GoogleComputeBackendServiceArgsIap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
@@ -57,12 +57,12 @@ export interface GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy {
   data?: string;
   name: string;
 }
-export interface GoogleComputeBackendServiceArgsLocalityLbPoliciespolicy {
+export interface GoogleComputeBackendServiceArgsLocalityLbPoliciesPolicy {
   name: string;
 }
 export interface GoogleComputeBackendServiceArgsLocalityLbPolicies {
   custom_policy: GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy;
-  policy: GoogleComputeBackendServiceArgsLocalityLbPoliciespolicy;
+  policy: GoogleComputeBackendServiceArgsLocalityLbPoliciesPolicy;
 }
 export interface GoogleComputeBackendServiceArgsLogConfig {
   enable?: boolean;
@@ -72,7 +72,7 @@ export interface GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime
   nanos?: number;
   seconds: number;
 }
-export interface GoogleComputeBackendServiceArgsOutlierDetectioninterval {
+export interface GoogleComputeBackendServiceArgsOutlierDetectionInterval {
   nanos?: number;
   seconds: number;
 }
@@ -87,7 +87,7 @@ export interface GoogleComputeBackendServiceArgsOutlierDetection {
   success_rate_request_volume?: number;
   success_rate_stdev_factor?: number;
   base_ejection_time: GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime;
-  interval: GoogleComputeBackendServiceArgsOutlierDetectioninterval;
+  interval: GoogleComputeBackendServiceArgsOutlierDetectionInterval;
 }
 export interface GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication {
   access_key?: string;
@@ -100,16 +100,16 @@ export interface GoogleComputeBackendServiceArgsSecuritySettings {
   subject_alt_names?: string[];
   aws_v4_authentication: GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication;
 }
-export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookiettl {
+export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookieTtl {
   nanos?: number;
   seconds: number;
 }
 export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
-  ttl: GoogleComputeBackendServiceArgsStrongSessionAffinityCookiettl;
+  ttl: GoogleComputeBackendServiceArgsStrongSessionAffinityCookieTtl;
 }
-export interface GoogleComputeBackendServiceArgstimeouts {
+export interface GoogleComputeBackendServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -130,17 +130,17 @@ export interface GoogleComputeBackendServiceArgs {
   name: string;
   security_policy?: string;
   service_lb_policy?: string;
-  backend: GoogleComputeBackendServiceArgsbackend;
+  backend: GoogleComputeBackendServiceArgsBackend;
   cdn_policy: GoogleComputeBackendServiceArgsCdnPolicy;
   circuit_breakers: GoogleComputeBackendServiceArgsCircuitBreakers;
   consistent_hash: GoogleComputeBackendServiceArgsConsistentHash;
-  iap: GoogleComputeBackendServiceArgsiap;
+  iap: GoogleComputeBackendServiceArgsIap;
   locality_lb_policies: GoogleComputeBackendServiceArgsLocalityLbPolicies;
   log_config: GoogleComputeBackendServiceArgsLogConfig;
   outlier_detection: GoogleComputeBackendServiceArgsOutlierDetection;
   security_settings: GoogleComputeBackendServiceArgsSecuritySettings;
   strong_session_affinity_cookie: GoogleComputeBackendServiceArgsStrongSessionAffinityCookie;
-  timeouts: GoogleComputeBackendServiceArgstimeouts;
+  timeouts: GoogleComputeBackendServiceArgsTimeouts;
 }
 export class google_compute_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

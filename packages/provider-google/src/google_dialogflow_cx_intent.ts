@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowCxIntentArgsparameters {
+export interface GoogleDialogflowCxIntentArgsParameters {
   entity_type: string;
   id: string;
   is_list?: boolean;
   redact?: boolean;
 }
-export interface GoogleDialogflowCxIntentArgstimeouts {
+export interface GoogleDialogflowCxIntentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface GoogleDialogflowCxIntentArgsTrainingPhrasesparts {
+export interface GoogleDialogflowCxIntentArgsTrainingPhrasesParts {
   parameter_id?: string;
   text: string;
 }
 export interface GoogleDialogflowCxIntentArgsTrainingPhrases {
   repeat_count?: number;
-  parts: GoogleDialogflowCxIntentArgsTrainingPhrasesparts;
+  parts: GoogleDialogflowCxIntentArgsTrainingPhrasesParts;
 }
 export interface GoogleDialogflowCxIntentArgs {
   description?: string;
@@ -30,8 +30,8 @@ export interface GoogleDialogflowCxIntentArgs {
   language_code?: string;
   parent?: string;
   priority?: number;
-  parameters: GoogleDialogflowCxIntentArgsparameters;
-  timeouts: GoogleDialogflowCxIntentArgstimeouts;
+  parameters: GoogleDialogflowCxIntentArgsParameters;
+  timeouts: GoogleDialogflowCxIntentArgsTimeouts;
   training_phrases: GoogleDialogflowCxIntentArgsTrainingPhrases;
 }
 export class google_dialogflow_cx_intent extends TerraformResource {

@@ -59,7 +59,7 @@ export interface GoogleMonitoringUptimeCheckConfigArgsTcpCheck {
   port: number;
   ping_config: GoogleMonitoringUptimeCheckConfigArgsTcpCheckPingConfig;
 }
-export interface GoogleMonitoringUptimeCheckConfigArgstimeouts {
+export interface GoogleMonitoringUptimeCheckConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -78,7 +78,7 @@ export interface GoogleMonitoringUptimeCheckConfigArgs {
   resource_group: GoogleMonitoringUptimeCheckConfigArgsResourceGroup;
   synthetic_monitor: GoogleMonitoringUptimeCheckConfigArgsSyntheticMonitor;
   tcp_check: GoogleMonitoringUptimeCheckConfigArgsTcpCheck;
-  timeouts: GoogleMonitoringUptimeCheckConfigArgstimeouts;
+  timeouts: GoogleMonitoringUptimeCheckConfigArgsTimeouts;
 }
 export class google_monitoring_uptime_check_config extends TerraformResource {
   readonly checker_type?: string;

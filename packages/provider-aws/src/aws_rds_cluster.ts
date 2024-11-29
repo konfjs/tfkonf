@@ -25,7 +25,7 @@ export interface AwsRdsClusterArgsServerlessv2ScalingConfiguration {
   max_capacity: number;
   min_capacity: number;
 }
-export interface AwsRdsClusterArgstimeouts {
+export interface AwsRdsClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -64,7 +64,7 @@ export interface AwsRdsClusterArgs {
   s3_import: AwsRdsClusterArgsS3Import;
   scaling_configuration: AwsRdsClusterArgsScalingConfiguration;
   serverlessv2_scaling_configuration: AwsRdsClusterArgsServerlessv2ScalingConfiguration;
-  timeouts: AwsRdsClusterArgstimeouts;
+  timeouts: AwsRdsClusterArgsTimeouts;
 }
 export class aws_rds_cluster extends TerraformResource {
   readonly allocated_storage?: number;

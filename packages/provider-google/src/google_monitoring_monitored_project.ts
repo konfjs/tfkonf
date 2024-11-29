@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleMonitoringMonitoredProjectArgstimeouts {
+export interface GoogleMonitoringMonitoredProjectArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleMonitoringMonitoredProjectArgs {
   metrics_scope: string;
   name: string;
-  timeouts: GoogleMonitoringMonitoredProjectArgstimeouts;
+  timeouts: GoogleMonitoringMonitoredProjectArgsTimeouts;
 }
 export class google_monitoring_monitored_project extends TerraformResource {
   readonly create_time!: string;

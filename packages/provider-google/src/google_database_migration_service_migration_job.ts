@@ -16,7 +16,7 @@ export interface GoogleDatabaseMigrationServiceMigrationJobArgsReverseSshConnect
   vpc?: string;
 }
 export interface GoogleDatabaseMigrationServiceMigrationJobArgsStaticIpConnectivity {}
-export interface GoogleDatabaseMigrationServiceMigrationJobArgstimeouts {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,7 +40,7 @@ export interface GoogleDatabaseMigrationServiceMigrationJobArgs {
   performance_config: GoogleDatabaseMigrationServiceMigrationJobArgsPerformanceConfig;
   reverse_ssh_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsReverseSshConnectivity;
   static_ip_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsStaticIpConnectivity;
-  timeouts: GoogleDatabaseMigrationServiceMigrationJobArgstimeouts;
+  timeouts: GoogleDatabaseMigrationServiceMigrationJobArgsTimeouts;
   vpc_peering_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsVpcPeeringConnectivity;
 }
 export class google_database_migration_service_migration_job extends TerraformResource {

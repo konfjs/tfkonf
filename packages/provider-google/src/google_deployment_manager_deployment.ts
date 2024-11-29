@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDeploymentManagerDeploymentArgslabels {
+export interface GoogleDeploymentManagerDeploymentArgsLabels {
   key?: string;
   value?: string;
 }
-export interface GoogleDeploymentManagerDeploymentArgstargetconfig {
+export interface GoogleDeploymentManagerDeploymentArgsTargetConfig {
   content: string;
 }
-export interface GoogleDeploymentManagerDeploymentArgstargetimports {
+export interface GoogleDeploymentManagerDeploymentArgsTargetImports {
   content?: string;
   name?: string;
 }
-export interface GoogleDeploymentManagerDeploymentArgstarget {
-  config: GoogleDeploymentManagerDeploymentArgstargetconfig;
-  imports: GoogleDeploymentManagerDeploymentArgstargetimports;
+export interface GoogleDeploymentManagerDeploymentArgsTarget {
+  config: GoogleDeploymentManagerDeploymentArgsTargetConfig;
+  imports: GoogleDeploymentManagerDeploymentArgsTargetImports;
 }
-export interface GoogleDeploymentManagerDeploymentArgstimeouts {
+export interface GoogleDeploymentManagerDeploymentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,9 +25,9 @@ export interface GoogleDeploymentManagerDeploymentArgs {
   description?: string;
   name: string;
   preview?: boolean;
-  labels: GoogleDeploymentManagerDeploymentArgslabels;
-  target: GoogleDeploymentManagerDeploymentArgstarget;
-  timeouts: GoogleDeploymentManagerDeploymentArgstimeouts;
+  labels: GoogleDeploymentManagerDeploymentArgsLabels;
+  target: GoogleDeploymentManagerDeploymentArgsTarget;
+  timeouts: GoogleDeploymentManagerDeploymentArgsTimeouts;
 }
 export class google_deployment_manager_deployment extends TerraformResource {
   readonly deployment_id!: string;

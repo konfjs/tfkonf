@@ -12,7 +12,7 @@ export interface AwsOsisPipelineArgsLogPublishingOptions {
   is_logging_enabled?: boolean;
   cloudwatch_log_destination: AwsOsisPipelineArgsLogPublishingOptionsCloudwatchLogDestination;
 }
-export interface AwsOsisPipelineArgstimeouts {
+export interface AwsOsisPipelineArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -32,7 +32,7 @@ export interface AwsOsisPipelineArgs {
   buffer_options: AwsOsisPipelineArgsBufferOptions;
   encryption_at_rest_options: AwsOsisPipelineArgsEncryptionAtRestOptions;
   log_publishing_options: AwsOsisPipelineArgsLogPublishingOptions;
-  timeouts: AwsOsisPipelineArgstimeouts;
+  timeouts: AwsOsisPipelineArgsTimeouts;
   vpc_options: AwsOsisPipelineArgsVpcOptions;
 }
 export class aws_osis_pipeline extends TerraformResource {

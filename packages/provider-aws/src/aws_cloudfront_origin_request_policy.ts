@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudfrontOriginRequestPolicyArgsCookiesConfigcookies {
+export interface AwsCloudfrontOriginRequestPolicyArgsCookiesConfigCookies {
   items?: string[];
 }
 export interface AwsCloudfrontOriginRequestPolicyArgsCookiesConfig {
   cookie_behavior: string;
-  cookies: AwsCloudfrontOriginRequestPolicyArgsCookiesConfigcookies;
+  cookies: AwsCloudfrontOriginRequestPolicyArgsCookiesConfigCookies;
 }
-export interface AwsCloudfrontOriginRequestPolicyArgsHeadersConfigheaders {
+export interface AwsCloudfrontOriginRequestPolicyArgsHeadersConfigHeaders {
   items?: string[];
 }
 export interface AwsCloudfrontOriginRequestPolicyArgsHeadersConfig {
   header_behavior?: string;
-  headers: AwsCloudfrontOriginRequestPolicyArgsHeadersConfigheaders;
+  headers: AwsCloudfrontOriginRequestPolicyArgsHeadersConfigHeaders;
 }
 export interface AwsCloudfrontOriginRequestPolicyArgsQueryStringsConfigQueryStrings {
   items?: string[];

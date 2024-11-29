@@ -11,7 +11,7 @@ export interface GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfile
   severity_overrides: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileSeverityOverrides;
   threat_overrides: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileThreatOverrides;
 }
-export interface GoogleNetworkSecuritySecurityProfileArgstimeouts {
+export interface GoogleNetworkSecuritySecurityProfileArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,7 +26,7 @@ export interface GoogleNetworkSecuritySecurityProfileArgs {
   parent?: string;
   type: string;
   threat_prevention_profile: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfile;
-  timeouts: GoogleNetworkSecuritySecurityProfileArgstimeouts;
+  timeouts: GoogleNetworkSecuritySecurityProfileArgsTimeouts;
 }
 export class google_network_security_security_profile extends TerraformResource {
   readonly create_time!: string;

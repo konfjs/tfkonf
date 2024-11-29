@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataprocAutoscalingPolicyIamBindingArgscondition {
+export interface GoogleDataprocAutoscalingPolicyIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataprocAutoscalingPolicyIamBindingArgs {
   members: string[];
   policy_id: string;
   role: string;
-  condition: GoogleDataprocAutoscalingPolicyIamBindingArgscondition;
+  condition: GoogleDataprocAutoscalingPolicyIamBindingArgsCondition;
 }
 export class google_dataproc_autoscaling_policy_iam_binding extends TerraformResource {
   readonly etag!: string;

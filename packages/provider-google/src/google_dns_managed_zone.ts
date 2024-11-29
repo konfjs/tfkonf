@@ -29,14 +29,14 @@ export interface GoogleDnsManagedZoneArgsPeeringConfig {
 export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfigGkeClusters {
   gke_cluster_name: string;
 }
-export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfignetworks {
+export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfigNetworks {
   network_url: string;
 }
 export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfig {
   gke_clusters: GoogleDnsManagedZoneArgsPrivateVisibilityConfigGkeClusters;
-  networks: GoogleDnsManagedZoneArgsPrivateVisibilityConfignetworks;
+  networks: GoogleDnsManagedZoneArgsPrivateVisibilityConfigNetworks;
 }
-export interface GoogleDnsManagedZoneArgstimeouts {
+export interface GoogleDnsManagedZoneArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -55,7 +55,7 @@ export interface GoogleDnsManagedZoneArgs {
   forwarding_config: GoogleDnsManagedZoneArgsForwardingConfig;
   peering_config: GoogleDnsManagedZoneArgsPeeringConfig;
   private_visibility_config: GoogleDnsManagedZoneArgsPrivateVisibilityConfig;
-  timeouts: GoogleDnsManagedZoneArgstimeouts;
+  timeouts: GoogleDnsManagedZoneArgsTimeouts;
 }
 export class google_dns_managed_zone extends TerraformResource {
   readonly creation_time!: string;

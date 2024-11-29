@@ -10,7 +10,7 @@ export interface AwsFsxOpenzfsVolumeArgsOriginSnapshot {
   copy_strategy: string;
   snapshot_arn: string;
 }
-export interface AwsFsxOpenzfsVolumeArgstimeouts {
+export interface AwsFsxOpenzfsVolumeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,7 +33,7 @@ export interface AwsFsxOpenzfsVolumeArgs {
   volume_type?: string;
   nfs_exports: AwsFsxOpenzfsVolumeArgsNfsExports;
   origin_snapshot: AwsFsxOpenzfsVolumeArgsOriginSnapshot;
-  timeouts: AwsFsxOpenzfsVolumeArgstimeouts;
+  timeouts: AwsFsxOpenzfsVolumeArgsTimeouts;
   user_and_group_quotas: AwsFsxOpenzfsVolumeArgsUserAndGroupQuotas;
 }
 export class aws_fsx_openzfs_volume extends TerraformResource {

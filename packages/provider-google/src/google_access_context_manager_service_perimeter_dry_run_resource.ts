@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleAccessContextManagerServicePerimeterDryRunResourceArgstimeouts {
+export interface GoogleAccessContextManagerServicePerimeterDryRunResourceArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterDryRunResourceArgs {
   perimeter_name: string;
   resource: string;
-  timeouts: GoogleAccessContextManagerServicePerimeterDryRunResourceArgstimeouts;
+  timeouts: GoogleAccessContextManagerServicePerimeterDryRunResourceArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter_dry_run_resource extends TerraformResource {
   readonly id?: string;

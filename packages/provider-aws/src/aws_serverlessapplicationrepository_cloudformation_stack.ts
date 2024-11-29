@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsServerlessapplicationrepositoryCloudformationStackArgstimeouts {
+export interface AwsServerlessapplicationrepositoryCloudformationStackArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsServerlessapplicationrepositoryCloudformationStackArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsServerlessapplicationrepositoryCloudformationStackArgstimeouts;
+  timeouts: AwsServerlessapplicationrepositoryCloudformationStackArgsTimeouts;
 }
 export class aws_serverlessapplicationrepository_cloudformation_stack extends TerraformResource {
   readonly id?: string;

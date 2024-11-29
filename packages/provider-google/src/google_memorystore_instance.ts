@@ -9,7 +9,7 @@ export interface GoogleMemorystoreInstanceArgsPersistenceConfig {
   aof_config: GoogleMemorystoreInstanceArgsPersistenceConfigAofConfig;
   rdb_config: GoogleMemorystoreInstanceArgsPersistenceConfigRdbConfig;
 }
-export interface GoogleMemorystoreInstanceArgstimeouts {
+export interface GoogleMemorystoreInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,7 +30,7 @@ export interface GoogleMemorystoreInstanceArgs {
   shard_count: number;
   desired_psc_auto_connections: GoogleMemorystoreInstanceArgsDesiredPscAutoConnections;
   persistence_config: GoogleMemorystoreInstanceArgsPersistenceConfig;
-  timeouts: GoogleMemorystoreInstanceArgstimeouts;
+  timeouts: GoogleMemorystoreInstanceArgsTimeouts;
   zone_distribution_config: GoogleMemorystoreInstanceArgsZoneDistributionConfig;
 }
 export class google_memorystore_instance extends TerraformResource {

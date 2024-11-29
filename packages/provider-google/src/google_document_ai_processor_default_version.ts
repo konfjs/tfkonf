@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDocumentAiProcessorDefaultVersionArgstimeouts {
+export interface GoogleDocumentAiProcessorDefaultVersionArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleDocumentAiProcessorDefaultVersionArgs {
   processor: string;
   version: string;
-  timeouts: GoogleDocumentAiProcessorDefaultVersionArgstimeouts;
+  timeouts: GoogleDocumentAiProcessorDefaultVersionArgsTimeouts;
 }
 export class google_document_ai_processor_default_version extends TerraformResource {
   readonly id?: string;

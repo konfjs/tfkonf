@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCodebuildWebhookArgsFilterGroupfilter {
+export interface AwsCodebuildWebhookArgsFilterGroupFilter {
   exclude_matched_pattern?: boolean;
   pattern: string;
   type: string;
 }
 export interface AwsCodebuildWebhookArgsFilterGroup {
-  filter: AwsCodebuildWebhookArgsFilterGroupfilter;
+  filter: AwsCodebuildWebhookArgsFilterGroupFilter;
 }
 export interface AwsCodebuildWebhookArgsScopeConfiguration {
   domain?: string;

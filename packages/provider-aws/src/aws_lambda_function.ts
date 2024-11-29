@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsLambdaFunctionArgsDeadLetterConfig {
   target_arn: string;
 }
-export interface AwsLambdaFunctionArgsenvironment {
+export interface AwsLambdaFunctionArgsEnvironment {
   variables?: {
     [key: string]: string;
   };
@@ -25,7 +25,7 @@ export interface AwsLambdaFunctionArgsLoggingConfig {
 export interface AwsLambdaFunctionArgsSnapStart {
   apply_on: string;
 }
-export interface AwsLambdaFunctionArgstimeouts {
+export interface AwsLambdaFunctionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -64,13 +64,13 @@ export interface AwsLambdaFunctionArgs {
   };
   timeout?: number;
   dead_letter_config: AwsLambdaFunctionArgsDeadLetterConfig;
-  environment: AwsLambdaFunctionArgsenvironment;
+  environment: AwsLambdaFunctionArgsEnvironment;
   ephemeral_storage: AwsLambdaFunctionArgsEphemeralStorage;
   file_system_config: AwsLambdaFunctionArgsFileSystemConfig;
   image_config: AwsLambdaFunctionArgsImageConfig;
   logging_config: AwsLambdaFunctionArgsLoggingConfig;
   snap_start: AwsLambdaFunctionArgsSnapStart;
-  timeouts: AwsLambdaFunctionArgstimeouts;
+  timeouts: AwsLambdaFunctionArgsTimeouts;
   tracing_config: AwsLambdaFunctionArgsTracingConfig;
   vpc_config: AwsLambdaFunctionArgsVpcConfig;
 }

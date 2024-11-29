@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEipArgstimeouts {
+export interface AwsEipArgsTimeouts {
   delete?: string;
   read?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsEipArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEipArgstimeouts;
+  timeouts: AwsEipArgsTimeouts;
 }
 export class aws_eip extends TerraformResource {
   readonly allocation_id!: string;

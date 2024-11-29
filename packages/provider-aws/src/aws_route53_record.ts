@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRoute53RecordArgsalias {
+export interface AwsRoute53RecordArgsAlias {
   evaluate_target_health: boolean;
   name: string;
   zone_id: string;
@@ -16,7 +16,7 @@ export interface AwsRoute53RecordArgsGeolocationRoutingPolicy {
   country?: string;
   subdivision?: string;
 }
-export interface AwsRoute53RecordArgsGeoproximityRoutingPolicycoordinates {
+export interface AwsRoute53RecordArgsGeoproximityRoutingPolicyCoordinates {
   latitude: string;
   longitude: string;
 }
@@ -24,7 +24,7 @@ export interface AwsRoute53RecordArgsGeoproximityRoutingPolicy {
   aws_region?: string;
   bias?: number;
   local_zone_group?: string;
-  coordinates: AwsRoute53RecordArgsGeoproximityRoutingPolicycoordinates;
+  coordinates: AwsRoute53RecordArgsGeoproximityRoutingPolicyCoordinates;
 }
 export interface AwsRoute53RecordArgsLatencyRoutingPolicy {
   region: string;
@@ -41,7 +41,7 @@ export interface AwsRoute53RecordArgs {
   ttl?: number;
   type: string;
   zone_id: string;
-  alias: AwsRoute53RecordArgsalias;
+  alias: AwsRoute53RecordArgsAlias;
   cidr_routing_policy: AwsRoute53RecordArgsCidrRoutingPolicy;
   failover_routing_policy: AwsRoute53RecordArgsFailoverRoutingPolicy;
   geolocation_routing_policy: AwsRoute53RecordArgsGeolocationRoutingPolicy;

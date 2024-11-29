@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsConnectPhoneNumberArgstimeouts {
+export interface AwsConnectPhoneNumberArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface AwsConnectPhoneNumberArgs {
   };
   target_arn: string;
   type: string;
-  timeouts: AwsConnectPhoneNumberArgstimeouts;
+  timeouts: AwsConnectPhoneNumberArgsTimeouts;
 }
 export class aws_connect_phone_number extends TerraformResource {
   readonly arn!: string;

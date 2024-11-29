@@ -7,7 +7,7 @@ export interface AwsServicecatalogProductArgsProvisioningArtifactParameters {
   template_url?: string;
   type?: string;
 }
-export interface AwsServicecatalogProductArgstimeouts {
+export interface AwsServicecatalogProductArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -22,7 +22,7 @@ export interface AwsServicecatalogProductArgs {
   };
   type: string;
   provisioning_artifact_parameters: AwsServicecatalogProductArgsProvisioningArtifactParameters;
-  timeouts: AwsServicecatalogProductArgstimeouts;
+  timeouts: AwsServicecatalogProductArgsTimeouts;
 }
 export class aws_servicecatalog_product extends TerraformResource {
   readonly arn!: string;

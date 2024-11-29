@@ -3,7 +3,7 @@ export interface AwsKendraThesaurusArgsSourceS3Path {
   bucket: string;
   key: string;
 }
-export interface AwsKendraThesaurusArgstimeouts {
+export interface AwsKendraThesaurusArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface AwsKendraThesaurusArgs {
     [key: string]: string;
   };
   source_s3_path: AwsKendraThesaurusArgsSourceS3Path;
-  timeouts: AwsKendraThesaurusArgstimeouts;
+  timeouts: AwsKendraThesaurusArgsTimeouts;
 }
 export class aws_kendra_thesaurus extends TerraformResource {
   readonly arn!: string;

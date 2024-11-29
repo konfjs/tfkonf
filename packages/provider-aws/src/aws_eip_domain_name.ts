@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEipDomainNameArgstimeouts {
+export interface AwsEipDomainNameArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface AwsEipDomainNameArgstimeouts {
 export interface AwsEipDomainNameArgs {
   allocation_id: string;
   domain_name: string;
-  timeouts: AwsEipDomainNameArgstimeouts;
+  timeouts: AwsEipDomainNameArgsTimeouts;
 }
 export class aws_eip_domain_name extends TerraformResource {
   readonly id!: string;

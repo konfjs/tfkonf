@@ -4,14 +4,14 @@ export interface AwsRoute53domainsDelegationSignerRecordArgsSigningAttributes {
   flags: number;
   public_key: string;
 }
-export interface AwsRoute53domainsDelegationSignerRecordArgstimeouts {
+export interface AwsRoute53domainsDelegationSignerRecordArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsRoute53domainsDelegationSignerRecordArgs {
   domain_name: string;
   signing_attributes: AwsRoute53domainsDelegationSignerRecordArgsSigningAttributes;
-  timeouts: AwsRoute53domainsDelegationSignerRecordArgstimeouts;
+  timeouts: AwsRoute53domainsDelegationSignerRecordArgsTimeouts;
 }
 export class aws_route53domains_delegation_signer_record extends TerraformResource {
   readonly dnssec_key_id!: string;

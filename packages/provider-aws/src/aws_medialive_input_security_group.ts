@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMedialiveInputSecurityGroupArgstimeouts {
+export interface AwsMedialiveInputSecurityGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsMedialiveInputSecurityGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMedialiveInputSecurityGroupArgstimeouts;
+  timeouts: AwsMedialiveInputSecurityGroupArgsTimeouts;
   whitelist_rules: AwsMedialiveInputSecurityGroupArgsWhitelistRules;
 }
 export class aws_medialive_input_security_group extends TerraformResource {

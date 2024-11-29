@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryReservationAssignmentArgstimeouts {
+export interface GoogleBigqueryReservationAssignmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleBigqueryReservationAssignmentArgs {
   assignee: string;
   job_type: string;
   reservation: string;
-  timeouts: GoogleBigqueryReservationAssignmentArgstimeouts;
+  timeouts: GoogleBigqueryReservationAssignmentArgsTimeouts;
 }
 export class google_bigquery_reservation_assignment extends TerraformResource {
   readonly id?: string;

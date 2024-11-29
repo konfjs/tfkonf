@@ -12,7 +12,7 @@ export interface GoogleDiscoveryEngineChatEngineArgsChatEngineConfig {
 export interface GoogleDiscoveryEngineChatEngineArgsCommonConfig {
   company_name?: string;
 }
-export interface GoogleDiscoveryEngineChatEngineArgstimeouts {
+export interface GoogleDiscoveryEngineChatEngineArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,7 +26,7 @@ export interface GoogleDiscoveryEngineChatEngineArgs {
   location: string;
   chat_engine_config: GoogleDiscoveryEngineChatEngineArgsChatEngineConfig;
   common_config: GoogleDiscoveryEngineChatEngineArgsCommonConfig;
-  timeouts: GoogleDiscoveryEngineChatEngineArgstimeouts;
+  timeouts: GoogleDiscoveryEngineChatEngineArgsTimeouts;
 }
 export class google_discovery_engine_chat_engine extends TerraformResource {
   readonly chat_engine_metadata!: any[];

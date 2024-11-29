@@ -31,7 +31,7 @@ export interface GoogleStorageInsightsReportConfigArgsObjectMetadataReportOption
   storage_destination_options: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageDestinationOptions;
   storage_filters: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageFilters;
 }
-export interface GoogleStorageInsightsReportConfigArgstimeouts {
+export interface GoogleStorageInsightsReportConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,7 +42,7 @@ export interface GoogleStorageInsightsReportConfigArgs {
   csv_options: GoogleStorageInsightsReportConfigArgsCsvOptions;
   frequency_options: GoogleStorageInsightsReportConfigArgsFrequencyOptions;
   object_metadata_report_options: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptions;
-  timeouts: GoogleStorageInsightsReportConfigArgstimeouts;
+  timeouts: GoogleStorageInsightsReportConfigArgsTimeouts;
 }
 export class google_storage_insights_report_config extends TerraformResource {
   readonly id?: string;

@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDirectoryServiceSharedDirectoryArgstarget {
+export interface AwsDirectoryServiceSharedDirectoryArgsTarget {
   id: string;
   type?: string;
 }
-export interface AwsDirectoryServiceSharedDirectoryArgstimeouts {
+export interface AwsDirectoryServiceSharedDirectoryArgsTimeouts {
   delete?: string;
 }
 export interface AwsDirectoryServiceSharedDirectoryArgs {
   directory_id: string;
   method?: string;
   notes?: string;
-  target: AwsDirectoryServiceSharedDirectoryArgstarget;
-  timeouts: AwsDirectoryServiceSharedDirectoryArgstimeouts;
+  target: AwsDirectoryServiceSharedDirectoryArgsTarget;
+  timeouts: AwsDirectoryServiceSharedDirectoryArgsTimeouts;
 }
 export class aws_directory_service_shared_directory extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeHubMembershipBindingArgstimeouts {
+export interface GoogleGkeHubMembershipBindingArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleGkeHubMembershipBindingArgs {
   membership_binding_id: string;
   membership_id: string;
   scope: string;
-  timeouts: GoogleGkeHubMembershipBindingArgstimeouts;
+  timeouts: GoogleGkeHubMembershipBindingArgsTimeouts;
 }
 export class google_gke_hub_membership_binding extends TerraformResource {
   readonly create_time!: string;

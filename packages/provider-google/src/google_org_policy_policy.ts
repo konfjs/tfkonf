@@ -1,49 +1,49 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleOrgPolicyPolicyArgsDryRunSpecrulescondition {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecRulesCondition {
   description?: string;
   expression?: string;
   location?: string;
   title?: string;
 }
-export interface GoogleOrgPolicyPolicyArgsDryRunSpecrulesvalues {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecRulesValues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface GoogleOrgPolicyPolicyArgsDryRunSpecrules {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecRules {
   allow_all?: string;
   deny_all?: string;
   enforce?: string;
-  condition: GoogleOrgPolicyPolicyArgsDryRunSpecrulescondition;
-  values: GoogleOrgPolicyPolicyArgsDryRunSpecrulesvalues;
+  condition: GoogleOrgPolicyPolicyArgsDryRunSpecRulesCondition;
+  values: GoogleOrgPolicyPolicyArgsDryRunSpecRulesValues;
 }
 export interface GoogleOrgPolicyPolicyArgsDryRunSpec {
   inherit_from_parent?: boolean;
   reset?: boolean;
-  rules: GoogleOrgPolicyPolicyArgsDryRunSpecrules;
+  rules: GoogleOrgPolicyPolicyArgsDryRunSpecRules;
 }
-export interface GoogleOrgPolicyPolicyArgsspecrulescondition {
+export interface GoogleOrgPolicyPolicyArgsSpecRulesCondition {
   description?: string;
   expression?: string;
   location?: string;
   title?: string;
 }
-export interface GoogleOrgPolicyPolicyArgsspecrulesvalues {
+export interface GoogleOrgPolicyPolicyArgsSpecRulesValues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface GoogleOrgPolicyPolicyArgsspecrules {
+export interface GoogleOrgPolicyPolicyArgsSpecRules {
   allow_all?: string;
   deny_all?: string;
   enforce?: string;
-  condition: GoogleOrgPolicyPolicyArgsspecrulescondition;
-  values: GoogleOrgPolicyPolicyArgsspecrulesvalues;
+  condition: GoogleOrgPolicyPolicyArgsSpecRulesCondition;
+  values: GoogleOrgPolicyPolicyArgsSpecRulesValues;
 }
-export interface GoogleOrgPolicyPolicyArgsspec {
+export interface GoogleOrgPolicyPolicyArgsSpec {
   inherit_from_parent?: boolean;
   reset?: boolean;
-  rules: GoogleOrgPolicyPolicyArgsspecrules;
+  rules: GoogleOrgPolicyPolicyArgsSpecRules;
 }
-export interface GoogleOrgPolicyPolicyArgstimeouts {
+export interface GoogleOrgPolicyPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -52,8 +52,8 @@ export interface GoogleOrgPolicyPolicyArgs {
   name: string;
   parent: string;
   dry_run_spec: GoogleOrgPolicyPolicyArgsDryRunSpec;
-  spec: GoogleOrgPolicyPolicyArgsspec;
-  timeouts: GoogleOrgPolicyPolicyArgstimeouts;
+  spec: GoogleOrgPolicyPolicyArgsSpec;
+  timeouts: GoogleOrgPolicyPolicyArgsTimeouts;
 }
 export class google_org_policy_policy extends TerraformResource {
   readonly etag!: string;

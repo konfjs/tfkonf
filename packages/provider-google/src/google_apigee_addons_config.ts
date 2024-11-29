@@ -21,7 +21,7 @@ export interface GoogleApigeeAddonsConfigArgsAddonsConfig {
   integration_config: GoogleApigeeAddonsConfigArgsAddonsConfigIntegrationConfig;
   monetization_config: GoogleApigeeAddonsConfigArgsAddonsConfigMonetizationConfig;
 }
-export interface GoogleApigeeAddonsConfigArgstimeouts {
+export interface GoogleApigeeAddonsConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,7 +29,7 @@ export interface GoogleApigeeAddonsConfigArgstimeouts {
 export interface GoogleApigeeAddonsConfigArgs {
   org: string;
   addons_config: GoogleApigeeAddonsConfigArgsAddonsConfig;
-  timeouts: GoogleApigeeAddonsConfigArgstimeouts;
+  timeouts: GoogleApigeeAddonsConfigArgsTimeouts;
 }
 export class google_apigee_addons_config extends TerraformResource {
   readonly id?: string;

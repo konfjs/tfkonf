@@ -10,7 +10,7 @@ export interface AwsEvidentlyProjectArgsDataDelivery {
   cloudwatch_logs: AwsEvidentlyProjectArgsDataDeliveryCloudwatchLogs;
   s3_destination: AwsEvidentlyProjectArgsDataDeliveryS3Destination;
 }
-export interface AwsEvidentlyProjectArgstimeouts {
+export interface AwsEvidentlyProjectArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface AwsEvidentlyProjectArgs {
     [key: string]: string;
   };
   data_delivery: AwsEvidentlyProjectArgsDataDelivery;
-  timeouts: AwsEvidentlyProjectArgstimeouts;
+  timeouts: AwsEvidentlyProjectArgsTimeouts;
 }
 export class aws_evidently_project extends TerraformResource {
   readonly active_experiment_count!: number;

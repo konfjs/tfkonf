@@ -22,19 +22,19 @@ export interface AwsAlbListenerArgsDefaultActionFixedResponse {
   content_type: string;
   message_body?: string;
 }
-export interface AwsAlbListenerArgsDefaultActionforwardstickiness {
+export interface AwsAlbListenerArgsDefaultActionForwardStickiness {
   duration: number;
   enabled?: boolean;
 }
-export interface AwsAlbListenerArgsDefaultActionforwardTargetGroup {
+export interface AwsAlbListenerArgsDefaultActionForwardTargetGroup {
   arn: string;
   weight?: number;
 }
-export interface AwsAlbListenerArgsDefaultActionforward {
-  stickiness: AwsAlbListenerArgsDefaultActionforwardstickiness;
-  target_group: AwsAlbListenerArgsDefaultActionforwardTargetGroup;
+export interface AwsAlbListenerArgsDefaultActionForward {
+  stickiness: AwsAlbListenerArgsDefaultActionForwardStickiness;
+  target_group: AwsAlbListenerArgsDefaultActionForwardTargetGroup;
 }
-export interface AwsAlbListenerArgsDefaultActionredirect {
+export interface AwsAlbListenerArgsDefaultActionRedirect {
   host?: string;
   path?: string;
   port?: string;
@@ -48,15 +48,15 @@ export interface AwsAlbListenerArgsDefaultAction {
   authenticate_cognito: AwsAlbListenerArgsDefaultActionAuthenticateCognito;
   authenticate_oidc: AwsAlbListenerArgsDefaultActionAuthenticateOidc;
   fixed_response: AwsAlbListenerArgsDefaultActionFixedResponse;
-  forward: AwsAlbListenerArgsDefaultActionforward;
-  redirect: AwsAlbListenerArgsDefaultActionredirect;
+  forward: AwsAlbListenerArgsDefaultActionForward;
+  redirect: AwsAlbListenerArgsDefaultActionRedirect;
 }
 export interface AwsAlbListenerArgsMutualAuthentication {
   ignore_client_certificate_expiry?: boolean;
   mode: string;
   trust_store_arn?: string;
 }
-export interface AwsAlbListenerArgstimeouts {
+export interface AwsAlbListenerArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -70,7 +70,7 @@ export interface AwsAlbListenerArgs {
   };
   default_action: AwsAlbListenerArgsDefaultAction;
   mutual_authentication: AwsAlbListenerArgsMutualAuthentication;
-  timeouts: AwsAlbListenerArgstimeouts;
+  timeouts: AwsAlbListenerArgsTimeouts;
 }
 export class aws_alb_listener extends TerraformResource {
   readonly arn!: string;

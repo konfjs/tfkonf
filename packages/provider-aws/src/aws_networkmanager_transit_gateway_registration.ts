@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerTransitGatewayRegistrationArgstimeouts {
+export interface AwsNetworkmanagerTransitGatewayRegistrationArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsNetworkmanagerTransitGatewayRegistrationArgs {
   global_network_id: string;
   transit_gateway_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayRegistrationArgstimeouts;
+  timeouts: AwsNetworkmanagerTransitGatewayRegistrationArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_registration extends TerraformResource {
   readonly id?: string;

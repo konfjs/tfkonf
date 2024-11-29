@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBinaryAuthorizationAttestorIamMemberArgscondition {
+export interface GoogleBinaryAuthorizationAttestorIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBinaryAuthorizationAttestorIamMemberArgs {
   attestor: string;
   member: string;
   role: string;
-  condition: GoogleBinaryAuthorizationAttestorIamMemberArgscondition;
+  condition: GoogleBinaryAuthorizationAttestorIamMemberArgsCondition;
 }
 export class google_binary_authorization_attestor_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgstimeouts {
+export interface GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgs {
   enabled?: boolean;
   idp_id: string;
   tenant: string;
-  timeouts: GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgstimeouts;
+  timeouts: GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgsTimeouts;
 }
 export class google_identity_platform_tenant_default_supported_idp_config extends TerraformResource {
   readonly id?: string;

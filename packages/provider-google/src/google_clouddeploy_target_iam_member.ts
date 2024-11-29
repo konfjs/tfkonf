@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleClouddeployTargetIamMemberArgscondition {
+export interface GoogleClouddeployTargetIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleClouddeployTargetIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: GoogleClouddeployTargetIamMemberArgscondition;
+  condition: GoogleClouddeployTargetIamMemberArgsCondition;
 }
 export class google_clouddeploy_target_iam_member extends TerraformResource {
   readonly etag!: string;

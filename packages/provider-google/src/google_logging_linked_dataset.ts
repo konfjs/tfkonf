@@ -1,6 +1,6 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleLoggingLinkedDatasetArgsBigqueryDataset {}
-export interface GoogleLoggingLinkedDatasetArgstimeouts {
+export interface GoogleLoggingLinkedDatasetArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface GoogleLoggingLinkedDatasetArgs {
   description?: string;
   link_id: string;
   bigquery_dataset: GoogleLoggingLinkedDatasetArgsBigqueryDataset;
-  timeouts: GoogleLoggingLinkedDatasetArgstimeouts;
+  timeouts: GoogleLoggingLinkedDatasetArgsTimeouts;
 }
 export class google_logging_linked_dataset extends TerraformResource {
   readonly create_time!: string;

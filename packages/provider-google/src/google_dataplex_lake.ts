@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataplexLakeArgsmetastore {
+export interface GoogleDataplexLakeArgsMetastore {
   service?: string;
 }
-export interface GoogleDataplexLakeArgstimeouts {
+export interface GoogleDataplexLakeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface GoogleDataplexLakeArgs {
   };
   location: string;
   name: string;
-  metastore: GoogleDataplexLakeArgsmetastore;
-  timeouts: GoogleDataplexLakeArgstimeouts;
+  metastore: GoogleDataplexLakeArgsMetastore;
+  timeouts: GoogleDataplexLakeArgsTimeouts;
 }
 export class google_dataplex_lake extends TerraformResource {
   readonly asset_status!: any[];

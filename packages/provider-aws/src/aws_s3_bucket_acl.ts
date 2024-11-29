@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketAclArgsAccessControlPolicygrantgrantee {
+export interface AwsS3BucketAclArgsAccessControlPolicyGrantGrantee {
   email_address?: string;
   id?: string;
   type: string;
   uri?: string;
 }
-export interface AwsS3BucketAclArgsAccessControlPolicygrant {
+export interface AwsS3BucketAclArgsAccessControlPolicyGrant {
   permission: string;
-  grantee: AwsS3BucketAclArgsAccessControlPolicygrantgrantee;
+  grantee: AwsS3BucketAclArgsAccessControlPolicyGrantGrantee;
 }
-export interface AwsS3BucketAclArgsAccessControlPolicyowner {
+export interface AwsS3BucketAclArgsAccessControlPolicyOwner {
   id: string;
 }
 export interface AwsS3BucketAclArgsAccessControlPolicy {
-  grant: AwsS3BucketAclArgsAccessControlPolicygrant;
-  owner: AwsS3BucketAclArgsAccessControlPolicyowner;
+  grant: AwsS3BucketAclArgsAccessControlPolicyGrant;
+  owner: AwsS3BucketAclArgsAccessControlPolicyOwner;
 }
 export interface AwsS3BucketAclArgs {
   acl?: string;

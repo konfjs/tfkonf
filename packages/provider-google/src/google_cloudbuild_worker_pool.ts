@@ -3,7 +3,7 @@ export interface GoogleCloudbuildWorkerPoolArgsNetworkConfig {
   peered_network: string;
   peered_network_ip_range?: string;
 }
-export interface GoogleCloudbuildWorkerPoolArgstimeouts {
+export interface GoogleCloudbuildWorkerPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleCloudbuildWorkerPoolArgs {
   location: string;
   name: string;
   network_config: GoogleCloudbuildWorkerPoolArgsNetworkConfig;
-  timeouts: GoogleCloudbuildWorkerPoolArgstimeouts;
+  timeouts: GoogleCloudbuildWorkerPoolArgsTimeouts;
   worker_config: GoogleCloudbuildWorkerPoolArgsWorkerConfig;
 }
 export class google_cloudbuild_worker_pool extends TerraformResource {

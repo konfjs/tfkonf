@@ -67,7 +67,7 @@ export interface GoogleDocumentAiWarehouseDocumentSchemaArgsPropertyDefinitions 
   text_type_options: GoogleDocumentAiWarehouseDocumentSchemaArgsPropertyDefinitionsTextTypeOptions;
   timestamp_type_options: GoogleDocumentAiWarehouseDocumentSchemaArgsPropertyDefinitionsTimestampTypeOptions;
 }
-export interface GoogleDocumentAiWarehouseDocumentSchemaArgstimeouts {
+export interface GoogleDocumentAiWarehouseDocumentSchemaArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -77,7 +77,7 @@ export interface GoogleDocumentAiWarehouseDocumentSchemaArgs {
   location: string;
   project_number: string;
   property_definitions: GoogleDocumentAiWarehouseDocumentSchemaArgsPropertyDefinitions;
-  timeouts: GoogleDocumentAiWarehouseDocumentSchemaArgstimeouts;
+  timeouts: GoogleDocumentAiWarehouseDocumentSchemaArgsTimeouts;
 }
 export class google_document_ai_warehouse_document_schema extends TerraformResource {
   readonly id?: string;

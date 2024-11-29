@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDirectoryServiceRadiusSettingsArgstimeouts {
+export interface AwsDirectoryServiceRadiusSettingsArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -13,7 +13,7 @@ export interface AwsDirectoryServiceRadiusSettingsArgs {
   radius_timeout: number;
   shared_secret: string;
   use_same_username?: boolean;
-  timeouts: AwsDirectoryServiceRadiusSettingsArgstimeouts;
+  timeouts: AwsDirectoryServiceRadiusSettingsArgsTimeouts;
 }
 export class aws_directory_service_radius_settings extends TerraformResource {
   readonly id?: string;

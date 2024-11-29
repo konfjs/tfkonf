@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleStorageManagedFolderIamMemberArgscondition {
+export interface GoogleStorageManagedFolderIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleStorageManagedFolderIamMemberArgs {
   managed_folder: string;
   member: string;
   role: string;
-  condition: GoogleStorageManagedFolderIamMemberArgscondition;
+  condition: GoogleStorageManagedFolderIamMemberArgsCondition;
 }
 export class google_storage_managed_folder_iam_member extends TerraformResource {
   readonly etag!: string;

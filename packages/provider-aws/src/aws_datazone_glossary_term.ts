@@ -3,7 +3,7 @@ export interface AwsDatazoneGlossaryTermArgsTermRelations {
   classifies?: string[];
   is_a?: string[];
 }
-export interface AwsDatazoneGlossaryTermArgstimeouts {
+export interface AwsDatazoneGlossaryTermArgsTimeouts {
   create?: string;
 }
 export interface AwsDatazoneGlossaryTermArgs {
@@ -14,7 +14,7 @@ export interface AwsDatazoneGlossaryTermArgs {
   short_description?: string;
   status?: string;
   term_relations: AwsDatazoneGlossaryTermArgsTermRelations;
-  timeouts: AwsDatazoneGlossaryTermArgstimeouts;
+  timeouts: AwsDatazoneGlossaryTermArgsTimeouts;
 }
 export class aws_datazone_glossary_term extends TerraformResource {
   readonly created_at!: string;

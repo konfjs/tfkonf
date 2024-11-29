@@ -13,7 +13,7 @@ export interface GoogleComputeRegionNetworkEndpointGroupArgsCloudRun {
   tag?: string;
   url_mask?: string;
 }
-export interface GoogleComputeRegionNetworkEndpointGroupArgstimeouts {
+export interface GoogleComputeRegionNetworkEndpointGroupArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -28,7 +28,7 @@ export interface GoogleComputeRegionNetworkEndpointGroupArgs {
   app_engine: GoogleComputeRegionNetworkEndpointGroupArgsAppEngine;
   cloud_function: GoogleComputeRegionNetworkEndpointGroupArgsCloudFunction;
   cloud_run: GoogleComputeRegionNetworkEndpointGroupArgsCloudRun;
-  timeouts: GoogleComputeRegionNetworkEndpointGroupArgstimeouts;
+  timeouts: GoogleComputeRegionNetworkEndpointGroupArgsTimeouts;
 }
 export class google_compute_region_network_endpoint_group extends TerraformResource {
   readonly id?: string;

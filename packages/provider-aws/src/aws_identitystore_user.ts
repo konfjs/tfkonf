@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsIdentitystoreUserArgsaddresses {
+export interface AwsIdentitystoreUserArgsAddresses {
   country?: string;
   formatted?: string;
   locality?: string;
@@ -9,12 +9,12 @@ export interface AwsIdentitystoreUserArgsaddresses {
   street_address?: string;
   type?: string;
 }
-export interface AwsIdentitystoreUserArgsemails {
+export interface AwsIdentitystoreUserArgsEmails {
   primary?: boolean;
   type?: string;
   value?: string;
 }
-export interface AwsIdentitystoreUserArgsname {
+export interface AwsIdentitystoreUserArgsName {
   family_name: string;
   formatted?: string;
   given_name: string;
@@ -38,9 +38,9 @@ export interface AwsIdentitystoreUserArgs {
   title?: string;
   user_name: string;
   user_type?: string;
-  addresses: AwsIdentitystoreUserArgsaddresses;
-  emails: AwsIdentitystoreUserArgsemails;
-  name: AwsIdentitystoreUserArgsname;
+  addresses: AwsIdentitystoreUserArgsAddresses;
+  emails: AwsIdentitystoreUserArgsEmails;
+  name: AwsIdentitystoreUserArgsName;
   phone_numbers: AwsIdentitystoreUserArgsPhoneNumbers;
 }
 export class aws_identitystore_user extends TerraformResource {

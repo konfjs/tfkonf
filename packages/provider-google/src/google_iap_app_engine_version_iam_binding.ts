@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIapAppEngineVersionIamBindingArgscondition {
+export interface GoogleIapAppEngineVersionIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -10,7 +10,7 @@ export interface GoogleIapAppEngineVersionIamBindingArgs {
   role: string;
   service: string;
   version_id: string;
-  condition: GoogleIapAppEngineVersionIamBindingArgscondition;
+  condition: GoogleIapAppEngineVersionIamBindingArgsCondition;
 }
 export class google_iap_app_engine_version_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGluePartitionArgsStorageDescriptorcolumns {
+export interface AwsGluePartitionArgsStorageDescriptorColumns {
   comment?: string;
   name: string;
   type?: string;
@@ -33,7 +33,7 @@ export interface AwsGluePartitionArgsStorageDescriptor {
     [key: string]: string;
   };
   stored_as_sub_directories?: boolean;
-  columns: AwsGluePartitionArgsStorageDescriptorcolumns;
+  columns: AwsGluePartitionArgsStorageDescriptorColumns;
   ser_de_info: AwsGluePartitionArgsStorageDescriptorSerDeInfo;
   skewed_info: AwsGluePartitionArgsStorageDescriptorSkewedInfo;
   sort_columns: AwsGluePartitionArgsStorageDescriptorSortColumns;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsInternetGatewayAttachmentArgstimeouts {
+export interface AwsInternetGatewayAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsInternetGatewayAttachmentArgs {
   internet_gateway_id: string;
   vpc_id: string;
-  timeouts: AwsInternetGatewayAttachmentArgstimeouts;
+  timeouts: AwsInternetGatewayAttachmentArgsTimeouts;
 }
 export class aws_internet_gateway_attachment extends TerraformResource {
   readonly id?: string;

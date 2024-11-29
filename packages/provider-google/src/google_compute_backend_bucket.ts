@@ -17,7 +17,7 @@ export interface GoogleComputeBackendBucketArgsCdnPolicy {
   cache_key_policy: GoogleComputeBackendBucketArgsCdnPolicyCacheKeyPolicy;
   negative_caching_policy: GoogleComputeBackendBucketArgsCdnPolicyNegativeCachingPolicy;
 }
-export interface GoogleComputeBackendBucketArgstimeouts {
+export interface GoogleComputeBackendBucketArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,7 +31,7 @@ export interface GoogleComputeBackendBucketArgs {
   enable_cdn?: boolean;
   name: string;
   cdn_policy: GoogleComputeBackendBucketArgsCdnPolicy;
-  timeouts: GoogleComputeBackendBucketArgstimeouts;
+  timeouts: GoogleComputeBackendBucketArgsTimeouts;
 }
 export class google_compute_backend_bucket extends TerraformResource {
   readonly creation_timestamp!: string;

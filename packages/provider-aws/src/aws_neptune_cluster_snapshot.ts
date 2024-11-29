@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNeptuneClusterSnapshotArgstimeouts {
+export interface AwsNeptuneClusterSnapshotArgsTimeouts {
   create?: string;
 }
 export interface AwsNeptuneClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
-  timeouts: AwsNeptuneClusterSnapshotArgstimeouts;
+  timeouts: AwsNeptuneClusterSnapshotArgsTimeouts;
 }
 export class aws_neptune_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;

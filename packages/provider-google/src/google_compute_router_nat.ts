@@ -3,22 +3,22 @@ export interface GoogleComputeRouterNatArgsLogConfig {
   enable: boolean;
   filter: string;
 }
-export interface GoogleComputeRouterNatArgsrulesaction {
+export interface GoogleComputeRouterNatArgsRulesAction {
   source_nat_active_ips?: string[];
   source_nat_drain_ips?: string[];
 }
-export interface GoogleComputeRouterNatArgsrules {
+export interface GoogleComputeRouterNatArgsRules {
   description?: string;
   match: string;
   rule_number: number;
-  action: GoogleComputeRouterNatArgsrulesaction;
+  action: GoogleComputeRouterNatArgsRulesAction;
 }
-export interface GoogleComputeRouterNatArgssubnetwork {
+export interface GoogleComputeRouterNatArgsSubnetwork {
   name: string;
   secondary_ip_range_names?: string[];
   source_ip_ranges_to_nat: string[];
 }
-export interface GoogleComputeRouterNatArgstimeouts {
+export interface GoogleComputeRouterNatArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,9 +36,9 @@ export interface GoogleComputeRouterNatArgs {
   tcp_transitory_idle_timeout_sec?: number;
   udp_idle_timeout_sec?: number;
   log_config: GoogleComputeRouterNatArgsLogConfig;
-  rules: GoogleComputeRouterNatArgsrules;
-  subnetwork: GoogleComputeRouterNatArgssubnetwork;
-  timeouts: GoogleComputeRouterNatArgstimeouts;
+  rules: GoogleComputeRouterNatArgsRules;
+  subnetwork: GoogleComputeRouterNatArgsSubnetwork;
+  timeouts: GoogleComputeRouterNatArgsTimeouts;
 }
 export class google_compute_router_nat extends TerraformResource {
   readonly auto_network_tier?: string;

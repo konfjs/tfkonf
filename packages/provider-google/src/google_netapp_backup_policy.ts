@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetappBackupPolicyArgstimeouts {
+export interface GoogleNetappBackupPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleNetappBackupPolicyArgs {
   monthly_backup_limit: number;
   name: string;
   weekly_backup_limit: number;
-  timeouts: GoogleNetappBackupPolicyArgstimeouts;
+  timeouts: GoogleNetappBackupPolicyArgsTimeouts;
 }
 export class google_netapp_backup_policy extends TerraformResource {
   readonly assigned_volume_count!: number;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsComprehendEntityRecognizerArgsInputDataConfigannotations {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigAnnotations {
   s3_uri: string;
   test_s3_uri?: string;
 }
@@ -11,7 +11,7 @@ export interface AwsComprehendEntityRecognizerArgsInputDataConfigAugmentedManife
   source_documents_s3_uri?: string;
   split?: string;
 }
-export interface AwsComprehendEntityRecognizerArgsInputDataConfigdocuments {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigDocuments {
   input_format?: string;
   s3_uri: string;
   test_s3_uri?: string;
@@ -24,13 +24,13 @@ export interface AwsComprehendEntityRecognizerArgsInputDataConfigEntityTypes {
 }
 export interface AwsComprehendEntityRecognizerArgsInputDataConfig {
   data_format?: string;
-  annotations: AwsComprehendEntityRecognizerArgsInputDataConfigannotations;
+  annotations: AwsComprehendEntityRecognizerArgsInputDataConfigAnnotations;
   augmented_manifests: AwsComprehendEntityRecognizerArgsInputDataConfigAugmentedManifests;
-  documents: AwsComprehendEntityRecognizerArgsInputDataConfigdocuments;
+  documents: AwsComprehendEntityRecognizerArgsInputDataConfigDocuments;
   entity_list: AwsComprehendEntityRecognizerArgsInputDataConfigEntityList;
   entity_types: AwsComprehendEntityRecognizerArgsInputDataConfigEntityTypes;
 }
-export interface AwsComprehendEntityRecognizerArgstimeouts {
+export interface AwsComprehendEntityRecognizerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,7 +49,7 @@ export interface AwsComprehendEntityRecognizerArgs {
   };
   volume_kms_key_id?: string;
   input_data_config: AwsComprehendEntityRecognizerArgsInputDataConfig;
-  timeouts: AwsComprehendEntityRecognizerArgstimeouts;
+  timeouts: AwsComprehendEntityRecognizerArgsTimeouts;
   vpc_config: AwsComprehendEntityRecognizerArgsVpcConfig;
 }
 export class aws_comprehend_entity_recognizer extends TerraformResource {

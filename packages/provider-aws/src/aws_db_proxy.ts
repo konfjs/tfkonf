@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDbProxyArgsauth {
+export interface AwsDbProxyArgsAuth {
   auth_scheme?: string;
   description?: string;
   iam_auth?: string;
   secret_arn?: string;
   username?: string;
 }
-export interface AwsDbProxyArgstimeouts {
+export interface AwsDbProxyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface AwsDbProxyArgs {
     [key: string]: string;
   };
   vpc_subnet_ids: string[];
-  auth: AwsDbProxyArgsauth;
-  timeouts: AwsDbProxyArgstimeouts;
+  auth: AwsDbProxyArgsAuth;
+  timeouts: AwsDbProxyArgsTimeouts;
 }
 export class aws_db_proxy extends TerraformResource {
   readonly arn!: string;

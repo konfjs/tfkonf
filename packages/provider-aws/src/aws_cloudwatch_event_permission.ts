@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudwatchEventPermissionArgscondition {
+export interface AwsCloudwatchEventPermissionArgsCondition {
   key: string;
   type: string;
   value: string;
@@ -9,7 +9,7 @@ export interface AwsCloudwatchEventPermissionArgs {
   event_bus_name?: string;
   principal: string;
   statement_id: string;
-  condition: AwsCloudwatchEventPermissionArgscondition;
+  condition: AwsCloudwatchEventPermissionArgsCondition;
 }
 export class aws_cloudwatch_event_permission extends TerraformResource {
   readonly id?: string;

@@ -3,12 +3,12 @@ export interface GoogleCloudbuildBitbucketServerConfigArgsConnectedRepositories 
   project_key: string;
   repo_slug: string;
 }
-export interface GoogleCloudbuildBitbucketServerConfigArgssecrets {
+export interface GoogleCloudbuildBitbucketServerConfigArgsSecrets {
   admin_access_token_version_name: string;
   read_access_token_version_name: string;
   webhook_secret_version_name: string;
 }
-export interface GoogleCloudbuildBitbucketServerConfigArgstimeouts {
+export interface GoogleCloudbuildBitbucketServerConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface GoogleCloudbuildBitbucketServerConfigArgs {
   ssl_ca?: string;
   username: string;
   connected_repositories: GoogleCloudbuildBitbucketServerConfigArgsConnectedRepositories;
-  secrets: GoogleCloudbuildBitbucketServerConfigArgssecrets;
-  timeouts: GoogleCloudbuildBitbucketServerConfigArgstimeouts;
+  secrets: GoogleCloudbuildBitbucketServerConfigArgsSecrets;
+  timeouts: GoogleCloudbuildBitbucketServerConfigArgsTimeouts;
 }
 export class google_cloudbuild_bitbucket_server_config extends TerraformResource {
   readonly id?: string;

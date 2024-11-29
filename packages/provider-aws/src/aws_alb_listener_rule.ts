@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAlbListenerRuleArgsactionAuthenticateCognito {
+export interface AwsAlbListenerRuleArgsActionAuthenticateCognito {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -10,7 +10,7 @@ export interface AwsAlbListenerRuleArgsactionAuthenticateCognito {
   user_pool_client_id: string;
   user_pool_domain: string;
 }
-export interface AwsAlbListenerRuleArgsactionAuthenticateOidc {
+export interface AwsAlbListenerRuleArgsActionAuthenticateOidc {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -24,23 +24,23 @@ export interface AwsAlbListenerRuleArgsactionAuthenticateOidc {
   token_endpoint: string;
   user_info_endpoint: string;
 }
-export interface AwsAlbListenerRuleArgsactionFixedResponse {
+export interface AwsAlbListenerRuleArgsActionFixedResponse {
   content_type: string;
   message_body?: string;
 }
-export interface AwsAlbListenerRuleArgsactionforwardstickiness {
+export interface AwsAlbListenerRuleArgsActionForwardStickiness {
   duration: number;
   enabled?: boolean;
 }
-export interface AwsAlbListenerRuleArgsactionforwardTargetGroup {
+export interface AwsAlbListenerRuleArgsActionForwardTargetGroup {
   arn: string;
   weight?: number;
 }
-export interface AwsAlbListenerRuleArgsactionforward {
-  stickiness: AwsAlbListenerRuleArgsactionforwardstickiness;
-  target_group: AwsAlbListenerRuleArgsactionforwardTargetGroup;
+export interface AwsAlbListenerRuleArgsActionForward {
+  stickiness: AwsAlbListenerRuleArgsActionForwardStickiness;
+  target_group: AwsAlbListenerRuleArgsActionForwardTargetGroup;
 }
-export interface AwsAlbListenerRuleArgsactionredirect {
+export interface AwsAlbListenerRuleArgsActionRedirect {
   host?: string;
   path?: string;
   port?: string;
@@ -48,50 +48,50 @@ export interface AwsAlbListenerRuleArgsactionredirect {
   query?: string;
   status_code: string;
 }
-export interface AwsAlbListenerRuleArgsaction {
+export interface AwsAlbListenerRuleArgsAction {
   target_group_arn?: string;
   type: string;
-  authenticate_cognito: AwsAlbListenerRuleArgsactionAuthenticateCognito;
-  authenticate_oidc: AwsAlbListenerRuleArgsactionAuthenticateOidc;
-  fixed_response: AwsAlbListenerRuleArgsactionFixedResponse;
-  forward: AwsAlbListenerRuleArgsactionforward;
-  redirect: AwsAlbListenerRuleArgsactionredirect;
+  authenticate_cognito: AwsAlbListenerRuleArgsActionAuthenticateCognito;
+  authenticate_oidc: AwsAlbListenerRuleArgsActionAuthenticateOidc;
+  fixed_response: AwsAlbListenerRuleArgsActionFixedResponse;
+  forward: AwsAlbListenerRuleArgsActionForward;
+  redirect: AwsAlbListenerRuleArgsActionRedirect;
 }
-export interface AwsAlbListenerRuleArgsconditionHostHeader {
+export interface AwsAlbListenerRuleArgsConditionHostHeader {
   values: string[];
 }
-export interface AwsAlbListenerRuleArgsconditionHttpHeader {
+export interface AwsAlbListenerRuleArgsConditionHttpHeader {
   http_header_name: string;
   values: string[];
 }
-export interface AwsAlbListenerRuleArgsconditionHttpRequestMethod {
+export interface AwsAlbListenerRuleArgsConditionHttpRequestMethod {
   values: string[];
 }
-export interface AwsAlbListenerRuleArgsconditionPathPattern {
+export interface AwsAlbListenerRuleArgsConditionPathPattern {
   values: string[];
 }
-export interface AwsAlbListenerRuleArgsconditionQueryString {
+export interface AwsAlbListenerRuleArgsConditionQueryString {
   key?: string;
   value: string;
 }
-export interface AwsAlbListenerRuleArgsconditionSourceIp {
+export interface AwsAlbListenerRuleArgsConditionSourceIp {
   values: string[];
 }
-export interface AwsAlbListenerRuleArgscondition {
-  host_header: AwsAlbListenerRuleArgsconditionHostHeader;
-  http_header: AwsAlbListenerRuleArgsconditionHttpHeader;
-  http_request_method: AwsAlbListenerRuleArgsconditionHttpRequestMethod;
-  path_pattern: AwsAlbListenerRuleArgsconditionPathPattern;
-  query_string: AwsAlbListenerRuleArgsconditionQueryString;
-  source_ip: AwsAlbListenerRuleArgsconditionSourceIp;
+export interface AwsAlbListenerRuleArgsCondition {
+  host_header: AwsAlbListenerRuleArgsConditionHostHeader;
+  http_header: AwsAlbListenerRuleArgsConditionHttpHeader;
+  http_request_method: AwsAlbListenerRuleArgsConditionHttpRequestMethod;
+  path_pattern: AwsAlbListenerRuleArgsConditionPathPattern;
+  query_string: AwsAlbListenerRuleArgsConditionQueryString;
+  source_ip: AwsAlbListenerRuleArgsConditionSourceIp;
 }
 export interface AwsAlbListenerRuleArgs {
   listener_arn: string;
   tags?: {
     [key: string]: string;
   };
-  action: AwsAlbListenerRuleArgsaction;
-  condition: AwsAlbListenerRuleArgscondition;
+  action: AwsAlbListenerRuleArgsAction;
+  condition: AwsAlbListenerRuleArgsCondition;
 }
 export class aws_alb_listener_rule extends TerraformResource {
   readonly arn!: string;

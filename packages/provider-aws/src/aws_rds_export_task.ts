@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRdsExportTaskArgstimeouts {
+export interface AwsRdsExportTaskArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsRdsExportTaskArgs {
   kms_key_id: string;
   s3_bucket_name: string;
   source_arn: string;
-  timeouts: AwsRdsExportTaskArgstimeouts;
+  timeouts: AwsRdsExportTaskArgsTimeouts;
 }
 export class aws_rds_export_task extends TerraformResource {
   readonly failure_cause!: string;

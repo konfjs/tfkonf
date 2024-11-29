@@ -6,7 +6,7 @@ export interface GoogleIamWorkforcePoolArgsAccessRestrictions {
   disable_programmatic_signin?: boolean;
   allowed_services: GoogleIamWorkforcePoolArgsAccessRestrictionsAllowedServices;
 }
-export interface GoogleIamWorkforcePoolArgstimeouts {
+export interface GoogleIamWorkforcePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleIamWorkforcePoolArgs {
   session_duration?: string;
   workforce_pool_id: string;
   access_restrictions: GoogleIamWorkforcePoolArgsAccessRestrictions;
-  timeouts: GoogleIamWorkforcePoolArgstimeouts;
+  timeouts: GoogleIamWorkforcePoolArgsTimeouts;
 }
 export class google_iam_workforce_pool extends TerraformResource {
   readonly id?: string;

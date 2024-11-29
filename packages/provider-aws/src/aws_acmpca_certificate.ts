@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAcmpcaCertificateArgsvalidity {
+export interface AwsAcmpcaCertificateArgsValidity {
   type: string;
   value: string;
 }
@@ -9,7 +9,7 @@ export interface AwsAcmpcaCertificateArgs {
   certificate_signing_request: string;
   signing_algorithm: string;
   template_arn?: string;
-  validity: AwsAcmpcaCertificateArgsvalidity;
+  validity: AwsAcmpcaCertificateArgsValidity;
 }
 export class aws_acmpca_certificate extends TerraformResource {
   readonly arn!: string;

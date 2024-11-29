@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputePublicDelegatedPrefixArgstimeouts {
+export interface GoogleComputePublicDelegatedPrefixArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleComputePublicDelegatedPrefixArgs {
   name: string;
   parent_prefix: string;
   region: string;
-  timeouts: GoogleComputePublicDelegatedPrefixArgstimeouts;
+  timeouts: GoogleComputePublicDelegatedPrefixArgsTimeouts;
 }
 export class google_compute_public_delegated_prefix extends TerraformResource {
   readonly id?: string;

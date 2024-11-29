@@ -5,7 +5,7 @@ export interface GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig {
   };
   preferred_value: string;
 }
-export interface GoogleCloudQuotasQuotaPreferenceArgstimeouts {
+export interface GoogleCloudQuotasQuotaPreferenceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleCloudQuotasQuotaPreferenceArgs {
   ignore_safety_checks?: string;
   justification?: string;
   quota_config: GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig;
-  timeouts: GoogleCloudQuotasQuotaPreferenceArgstimeouts;
+  timeouts: GoogleCloudQuotasQuotaPreferenceArgsTimeouts;
 }
 export class google_cloud_quotas_quota_preference extends TerraformResource {
   readonly create_time!: string;

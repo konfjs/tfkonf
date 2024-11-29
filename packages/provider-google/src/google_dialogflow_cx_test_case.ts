@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputdtmf {
+export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputDtmf {
   digits?: string;
   finish_digit?: string;
 }
-export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputevent {
+export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputEvent {
   event: string;
 }
-export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputtext {
+export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputText {
   text: string;
 }
-export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinput {
+export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInput {
   language_code?: string;
-  dtmf: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputdtmf;
-  event: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputevent;
-  text: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinputtext;
+  dtmf: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputDtmf;
+  event: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputEvent;
+  text: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInputText;
 }
 export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInput {
   enable_sentiment_analysis?: boolean;
   injected_parameters?: string;
   is_webhook_enabled?: boolean;
-  input: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputinput;
+  input: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsUserInputInput;
 }
 export interface GoogleDialogflowCxTestCaseArgsTestCaseConversationTurnsVirtualAgentOutputCurrentPage {
   name?: string;
@@ -45,7 +45,7 @@ export interface GoogleDialogflowCxTestCaseArgsTestConfig {
   page?: string;
   tracking_parameters?: string[];
 }
-export interface GoogleDialogflowCxTestCaseArgstimeouts {
+export interface GoogleDialogflowCxTestCaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -57,7 +57,7 @@ export interface GoogleDialogflowCxTestCaseArgs {
   tags?: string[];
   test_case_conversation_turns: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurns;
   test_config: GoogleDialogflowCxTestCaseArgsTestConfig;
-  timeouts: GoogleDialogflowCxTestCaseArgstimeouts;
+  timeouts: GoogleDialogflowCxTestCaseArgsTimeouts;
 }
 export class google_dialogflow_cx_test_case extends TerraformResource {
   readonly creation_time!: string;

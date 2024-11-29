@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMedialiveInputArgsdestinations {
+export interface AwsMedialiveInputArgsDestinations {
   stream_name: string;
 }
 export interface AwsMedialiveInputArgsInputDevices {
@@ -8,17 +8,17 @@ export interface AwsMedialiveInputArgsInputDevices {
 export interface AwsMedialiveInputArgsMediaConnectFlows {
   flow_arn: string;
 }
-export interface AwsMedialiveInputArgssources {
+export interface AwsMedialiveInputArgsSources {
   password_param: string;
   url: string;
   username: string;
 }
-export interface AwsMedialiveInputArgstimeouts {
+export interface AwsMedialiveInputArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AwsMedialiveInputArgsvpc {
+export interface AwsMedialiveInputArgsVpc {
   security_group_ids?: string[];
   subnet_ids: string[];
 }
@@ -29,12 +29,12 @@ export interface AwsMedialiveInputArgs {
     [key: string]: string;
   };
   type: string;
-  destinations: AwsMedialiveInputArgsdestinations;
+  destinations: AwsMedialiveInputArgsDestinations;
   input_devices: AwsMedialiveInputArgsInputDevices;
   media_connect_flows: AwsMedialiveInputArgsMediaConnectFlows;
-  sources: AwsMedialiveInputArgssources;
-  timeouts: AwsMedialiveInputArgstimeouts;
-  vpc: AwsMedialiveInputArgsvpc;
+  sources: AwsMedialiveInputArgsSources;
+  timeouts: AwsMedialiveInputArgsTimeouts;
+  vpc: AwsMedialiveInputArgsVpc;
 }
 export class aws_medialive_input extends TerraformResource {
   readonly arn!: string;

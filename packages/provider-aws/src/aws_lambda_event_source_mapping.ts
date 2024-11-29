@@ -11,11 +11,11 @@ export interface AwsLambdaEventSourceMappingArgsDocumentDbEventSourceConfig {
   database_name: string;
   full_document?: string;
 }
-export interface AwsLambdaEventSourceMappingArgsFilterCriteriafilter {
+export interface AwsLambdaEventSourceMappingArgsFilterCriteriaFilter {
   pattern?: string;
 }
 export interface AwsLambdaEventSourceMappingArgsFilterCriteria {
-  filter: AwsLambdaEventSourceMappingArgsFilterCriteriafilter;
+  filter: AwsLambdaEventSourceMappingArgsFilterCriteriaFilter;
 }
 export interface AwsLambdaEventSourceMappingArgsScalingConfig {
   maximum_concurrency?: number;

@@ -12,7 +12,7 @@ export interface AwsAmiArgsEphemeralBlockDevice {
   device_name: string;
   virtual_name: string;
 }
-export interface AwsAmiArgstimeouts {
+export interface AwsAmiArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,7 +36,7 @@ export interface AwsAmiArgs {
   virtualization_type?: string;
   ebs_block_device: AwsAmiArgsEbsBlockDevice;
   ephemeral_block_device: AwsAmiArgsEphemeralBlockDevice;
-  timeouts: AwsAmiArgstimeouts;
+  timeouts: AwsAmiArgsTimeouts;
 }
 export class aws_ami extends TerraformResource {
   readonly arn!: string;

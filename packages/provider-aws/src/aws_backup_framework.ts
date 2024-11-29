@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBackupFrameworkArgscontrolInputParameter {
+export interface AwsBackupFrameworkArgsControlInputParameter {
   name?: string;
   value?: string;
 }
-export interface AwsBackupFrameworkArgscontrolscope {
+export interface AwsBackupFrameworkArgsControlScope {
   tags?: {
     [key: string]: string;
   };
 }
-export interface AwsBackupFrameworkArgscontrol {
+export interface AwsBackupFrameworkArgsControl {
   name: string;
-  input_parameter: AwsBackupFrameworkArgscontrolInputParameter;
-  scope: AwsBackupFrameworkArgscontrolscope;
+  input_parameter: AwsBackupFrameworkArgsControlInputParameter;
+  scope: AwsBackupFrameworkArgsControlScope;
 }
-export interface AwsBackupFrameworkArgstimeouts {
+export interface AwsBackupFrameworkArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,8 +24,8 @@ export interface AwsBackupFrameworkArgs {
   tags?: {
     [key: string]: string;
   };
-  control: AwsBackupFrameworkArgscontrol;
-  timeouts: AwsBackupFrameworkArgstimeouts;
+  control: AwsBackupFrameworkArgsControl;
+  timeouts: AwsBackupFrameworkArgsTimeouts;
 }
 export class aws_backup_framework extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEc2TransitGatewayMulticastDomainAssociationArgstimeouts {
+export interface AwsEc2TransitGatewayMulticastDomainAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsEc2TransitGatewayMulticastDomainAssociationArgs {
   subnet_id: string;
   transit_gateway_attachment_id: string;
   transit_gateway_multicast_domain_id: string;
-  timeouts: AwsEc2TransitGatewayMulticastDomainAssociationArgstimeouts;
+  timeouts: AwsEc2TransitGatewayMulticastDomainAssociationArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_multicast_domain_association extends TerraformResource {
   readonly id?: string;

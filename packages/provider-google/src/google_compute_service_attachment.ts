@@ -4,7 +4,7 @@ export interface GoogleComputeServiceAttachmentArgsConsumerAcceptLists {
   network_url?: string;
   project_id_or_num?: string;
 }
-export interface GoogleComputeServiceAttachmentArgstimeouts {
+export interface GoogleComputeServiceAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleComputeServiceAttachmentArgs {
   nat_subnets: string[];
   target_service: string;
   consumer_accept_lists: GoogleComputeServiceAttachmentArgsConsumerAcceptLists;
-  timeouts: GoogleComputeServiceAttachmentArgstimeouts;
+  timeouts: GoogleComputeServiceAttachmentArgsTimeouts;
 }
 export class google_compute_service_attachment extends TerraformResource {
   readonly connected_endpoints!: any[];

@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeonpremVmwareNodePoolArgsconfigtaints {
+export interface GoogleGkeonpremVmwareNodePoolArgsConfigTaints {
   effect?: string;
   key: string;
   value: string;
 }
-export interface GoogleGkeonpremVmwareNodePoolArgsconfigVsphereConfigtags {
+export interface GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfigTags {
   category?: string;
   tag?: string;
 }
-export interface GoogleGkeonpremVmwareNodePoolArgsconfigVsphereConfig {
+export interface GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfig {
   datastore?: string;
   host_groups?: string[];
-  tags: GoogleGkeonpremVmwareNodePoolArgsconfigVsphereConfigtags;
+  tags: GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfigTags;
 }
-export interface GoogleGkeonpremVmwareNodePoolArgsconfig {
+export interface GoogleGkeonpremVmwareNodePoolArgsConfig {
   boot_disk_size_gb?: number;
   cpus?: number;
   enable_load_balancer?: boolean;
@@ -21,14 +21,14 @@ export interface GoogleGkeonpremVmwareNodePoolArgsconfig {
   image_type: string;
   memory_mb?: number;
   replicas?: number;
-  taints: GoogleGkeonpremVmwareNodePoolArgsconfigtaints;
-  vsphere_config: GoogleGkeonpremVmwareNodePoolArgsconfigVsphereConfig;
+  taints: GoogleGkeonpremVmwareNodePoolArgsConfigTaints;
+  vsphere_config: GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfig;
 }
 export interface GoogleGkeonpremVmwareNodePoolArgsNodePoolAutoscaling {
   max_replicas: number;
   min_replicas: number;
 }
-export interface GoogleGkeonpremVmwareNodePoolArgstimeouts {
+export interface GoogleGkeonpremVmwareNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,9 +41,9 @@ export interface GoogleGkeonpremVmwareNodePoolArgs {
   location: string;
   name: string;
   vmware_cluster: string;
-  config: GoogleGkeonpremVmwareNodePoolArgsconfig;
+  config: GoogleGkeonpremVmwareNodePoolArgsConfig;
   node_pool_autoscaling: GoogleGkeonpremVmwareNodePoolArgsNodePoolAutoscaling;
-  timeouts: GoogleGkeonpremVmwareNodePoolArgstimeouts;
+  timeouts: GoogleGkeonpremVmwareNodePoolArgsTimeouts;
 }
 export class google_gkeonprem_vmware_node_pool extends TerraformResource {
   readonly create_time!: string;

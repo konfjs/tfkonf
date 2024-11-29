@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationconfigurations {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationConfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
@@ -10,7 +10,7 @@ export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOver
   properties?: {
     [key: string]: string;
   };
-  configurations: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationconfigurations;
+  configurations: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationConfigurations;
 }
 export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfigurationCloudWatchMonitoringConfiguration {
   log_group_name: string;
@@ -50,7 +50,7 @@ export interface AwsEmrcontainersJobTemplateArgsJobTemplateData {
   configuration_overrides: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverrides;
   job_driver: AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriver;
 }
-export interface AwsEmrcontainersJobTemplateArgstimeouts {
+export interface AwsEmrcontainersJobTemplateArgsTimeouts {
   delete?: string;
 }
 export interface AwsEmrcontainersJobTemplateArgs {
@@ -60,7 +60,7 @@ export interface AwsEmrcontainersJobTemplateArgs {
     [key: string]: string;
   };
   job_template_data: AwsEmrcontainersJobTemplateArgsJobTemplateData;
-  timeouts: AwsEmrcontainersJobTemplateArgstimeouts;
+  timeouts: AwsEmrcontainersJobTemplateArgsTimeouts;
 }
 export class aws_emrcontainers_job_template extends TerraformResource {
   readonly arn!: string;

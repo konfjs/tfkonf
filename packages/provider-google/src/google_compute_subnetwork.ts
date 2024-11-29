@@ -10,7 +10,7 @@ export interface GoogleComputeSubnetworkArgsSecondaryIpRange {
   range_name: string;
   reserved_internal_range?: string;
 }
-export interface GoogleComputeSubnetworkArgstimeouts {
+export interface GoogleComputeSubnetworkArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface GoogleComputeSubnetworkArgs {
   send_secondary_ip_range_if_empty?: boolean;
   log_config: GoogleComputeSubnetworkArgsLogConfig;
   secondary_ip_range: GoogleComputeSubnetworkArgsSecondaryIpRange;
-  timeouts: GoogleComputeSubnetworkArgstimeouts;
+  timeouts: GoogleComputeSubnetworkArgsTimeouts;
 }
 export class google_compute_subnetwork extends TerraformResource {
   readonly creation_timestamp!: string;

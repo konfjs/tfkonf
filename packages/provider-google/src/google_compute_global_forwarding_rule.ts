@@ -10,7 +10,7 @@ export interface GoogleComputeGlobalForwardingRuleArgsMetadataFilters {
 export interface GoogleComputeGlobalForwardingRuleArgsServiceDirectoryRegistrations {
   service_directory_region?: string;
 }
-export interface GoogleComputeGlobalForwardingRuleArgstimeouts {
+export interface GoogleComputeGlobalForwardingRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,7 +29,7 @@ export interface GoogleComputeGlobalForwardingRuleArgs {
   target: string;
   metadata_filters: GoogleComputeGlobalForwardingRuleArgsMetadataFilters;
   service_directory_registrations: GoogleComputeGlobalForwardingRuleArgsServiceDirectoryRegistrations;
-  timeouts: GoogleComputeGlobalForwardingRuleArgstimeouts;
+  timeouts: GoogleComputeGlobalForwardingRuleArgsTimeouts;
 }
 export class google_compute_global_forwarding_rule extends TerraformResource {
   readonly base_forwarding_rule!: string;

@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleContainerAwsNodePoolArgsautoscaling {
+export interface GoogleContainerAwsNodePoolArgsAutoscaling {
   max_node_count: number;
   min_node_count: number;
 }
-export interface GoogleContainerAwsNodePoolArgsconfigAutoscalingMetricsCollection {
+export interface GoogleContainerAwsNodePoolArgsConfigAutoscalingMetricsCollection {
   granularity: string;
   metrics?: string[];
 }
-export interface GoogleContainerAwsNodePoolArgsconfigConfigEncryption {
+export interface GoogleContainerAwsNodePoolArgsConfigConfigEncryption {
   kms_key_arn: string;
 }
-export interface GoogleContainerAwsNodePoolArgsconfigProxyConfig {
+export interface GoogleContainerAwsNodePoolArgsConfigProxyConfig {
   secret_arn: string;
   secret_version: string;
 }
-export interface GoogleContainerAwsNodePoolArgsconfigRootVolume {
+export interface GoogleContainerAwsNodePoolArgsConfigRootVolume {
   kms_key_arn?: string;
 }
-export interface GoogleContainerAwsNodePoolArgsconfigSshConfig {
+export interface GoogleContainerAwsNodePoolArgsConfigSshConfig {
   ec2_key_pair: string;
 }
-export interface GoogleContainerAwsNodePoolArgsconfigtaints {
+export interface GoogleContainerAwsNodePoolArgsConfigTaints {
   effect: string;
   key: string;
   value: string;
 }
-export interface GoogleContainerAwsNodePoolArgsconfig {
+export interface GoogleContainerAwsNodePoolArgsConfig {
   iam_instance_profile: string;
   labels?: {
     [key: string]: string;
@@ -34,22 +34,22 @@ export interface GoogleContainerAwsNodePoolArgsconfig {
   tags?: {
     [key: string]: string;
   };
-  autoscaling_metrics_collection: GoogleContainerAwsNodePoolArgsconfigAutoscalingMetricsCollection;
-  config_encryption: GoogleContainerAwsNodePoolArgsconfigConfigEncryption;
-  proxy_config: GoogleContainerAwsNodePoolArgsconfigProxyConfig;
-  root_volume: GoogleContainerAwsNodePoolArgsconfigRootVolume;
-  ssh_config: GoogleContainerAwsNodePoolArgsconfigSshConfig;
-  taints: GoogleContainerAwsNodePoolArgsconfigtaints;
+  autoscaling_metrics_collection: GoogleContainerAwsNodePoolArgsConfigAutoscalingMetricsCollection;
+  config_encryption: GoogleContainerAwsNodePoolArgsConfigConfigEncryption;
+  proxy_config: GoogleContainerAwsNodePoolArgsConfigProxyConfig;
+  root_volume: GoogleContainerAwsNodePoolArgsConfigRootVolume;
+  ssh_config: GoogleContainerAwsNodePoolArgsConfigSshConfig;
+  taints: GoogleContainerAwsNodePoolArgsConfigTaints;
 }
 export interface GoogleContainerAwsNodePoolArgsKubeletConfig {
   cpu_cfs_quota_period?: string;
   pod_pids_limit?: number;
 }
-export interface GoogleContainerAwsNodePoolArgsmanagement {}
+export interface GoogleContainerAwsNodePoolArgsManagement {}
 export interface GoogleContainerAwsNodePoolArgsMaxPodsConstraint {
   max_pods_per_node: number;
 }
-export interface GoogleContainerAwsNodePoolArgstimeouts {
+export interface GoogleContainerAwsNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -67,12 +67,12 @@ export interface GoogleContainerAwsNodePoolArgs {
   name: string;
   subnet_id: string;
   version: string;
-  autoscaling: GoogleContainerAwsNodePoolArgsautoscaling;
-  config: GoogleContainerAwsNodePoolArgsconfig;
+  autoscaling: GoogleContainerAwsNodePoolArgsAutoscaling;
+  config: GoogleContainerAwsNodePoolArgsConfig;
   kubelet_config: GoogleContainerAwsNodePoolArgsKubeletConfig;
-  management: GoogleContainerAwsNodePoolArgsmanagement;
+  management: GoogleContainerAwsNodePoolArgsManagement;
   max_pods_constraint: GoogleContainerAwsNodePoolArgsMaxPodsConstraint;
-  timeouts: GoogleContainerAwsNodePoolArgstimeouts;
+  timeouts: GoogleContainerAwsNodePoolArgsTimeouts;
   update_settings: GoogleContainerAwsNodePoolArgsUpdateSettings;
 }
 export class google_container_aws_node_pool extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIapWebIamMemberArgscondition {
+export interface GoogleIapWebIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -7,7 +7,7 @@ export interface GoogleIapWebIamMemberArgscondition {
 export interface GoogleIapWebIamMemberArgs {
   member: string;
   role: string;
-  condition: GoogleIapWebIamMemberArgscondition;
+  condition: GoogleIapWebIamMemberArgsCondition;
 }
 export class google_iap_web_iam_member extends TerraformResource {
   readonly etag!: string;

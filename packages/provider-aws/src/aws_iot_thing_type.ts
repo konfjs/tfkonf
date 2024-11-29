@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsIotThingTypeArgsproperties {
+export interface AwsIotThingTypeArgsProperties {
   description?: string;
 }
 export interface AwsIotThingTypeArgs {
@@ -8,7 +8,7 @@ export interface AwsIotThingTypeArgs {
   tags?: {
     [key: string]: string;
   };
-  properties: AwsIotThingTypeArgsproperties;
+  properties: AwsIotThingTypeArgsProperties;
 }
 export class aws_iot_thing_type extends TerraformResource {
   readonly arn!: string;

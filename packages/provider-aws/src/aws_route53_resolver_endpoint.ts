@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsRoute53ResolverEndpointArgsIpAddress {
   subnet_id: string;
 }
-export interface AwsRoute53ResolverEndpointArgstimeouts {
+export interface AwsRoute53ResolverEndpointArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface AwsRoute53ResolverEndpointArgs {
     [key: string]: string;
   };
   ip_address: AwsRoute53ResolverEndpointArgsIpAddress;
-  timeouts: AwsRoute53ResolverEndpointArgstimeouts;
+  timeouts: AwsRoute53ResolverEndpointArgsTimeouts;
 }
 export class aws_route53_resolver_endpoint extends TerraformResource {
   readonly arn!: string;

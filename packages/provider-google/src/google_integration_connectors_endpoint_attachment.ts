@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIntegrationConnectorsEndpointAttachmentArgstimeouts {
+export interface GoogleIntegrationConnectorsEndpointAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleIntegrationConnectorsEndpointAttachmentArgs {
   location: string;
   name: string;
   service_attachment: string;
-  timeouts: GoogleIntegrationConnectorsEndpointAttachmentArgstimeouts;
+  timeouts: GoogleIntegrationConnectorsEndpointAttachmentArgsTimeouts;
 }
 export class google_integration_connectors_endpoint_attachment extends TerraformResource {
   readonly create_time!: string;

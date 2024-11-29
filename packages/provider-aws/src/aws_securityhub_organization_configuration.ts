@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsSecurityhubOrganizationConfigurationArgsOrganizationConfiguration {
   configuration_type: string;
 }
-export interface AwsSecurityhubOrganizationConfigurationArgstimeouts {
+export interface AwsSecurityhubOrganizationConfigurationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsSecurityhubOrganizationConfigurationArgstimeouts {
 export interface AwsSecurityhubOrganizationConfigurationArgs {
   auto_enable: boolean;
   organization_configuration: AwsSecurityhubOrganizationConfigurationArgsOrganizationConfiguration;
-  timeouts: AwsSecurityhubOrganizationConfigurationArgstimeouts;
+  timeouts: AwsSecurityhubOrganizationConfigurationArgsTimeouts;
 }
 export class aws_securityhub_organization_configuration extends TerraformResource {
   readonly auto_enable_standards?: string;

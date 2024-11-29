@@ -15,96 +15,96 @@ export interface GoogleComputeSecurityPolicyArgsAdvancedOptionsConfig {
 export interface GoogleComputeSecurityPolicyArgsRecaptchaOptionsConfig {
   redirect_site_key: string;
 }
-export interface GoogleComputeSecurityPolicyArgsruleHeaderActionRequestHeadersToAdds {
+export interface GoogleComputeSecurityPolicyArgsRuleHeaderActionRequestHeadersToAdds {
   header_name: string;
   header_value?: string;
 }
-export interface GoogleComputeSecurityPolicyArgsruleHeaderAction {
-  request_headers_to_adds: GoogleComputeSecurityPolicyArgsruleHeaderActionRequestHeadersToAdds;
+export interface GoogleComputeSecurityPolicyArgsRuleHeaderAction {
+  request_headers_to_adds: GoogleComputeSecurityPolicyArgsRuleHeaderActionRequestHeadersToAdds;
 }
-export interface GoogleComputeSecurityPolicyArgsrulematchconfig {
+export interface GoogleComputeSecurityPolicyArgsRuleMatchConfig {
   src_ip_ranges: string[];
 }
-export interface GoogleComputeSecurityPolicyArgsrulematchexpr {
+export interface GoogleComputeSecurityPolicyArgsRuleMatchExpr {
   expression: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrulematchExprOptionsRecaptchaOptions {
+export interface GoogleComputeSecurityPolicyArgsRuleMatchExprOptionsRecaptchaOptions {
   action_token_site_keys?: string[];
   session_token_site_keys?: string[];
 }
-export interface GoogleComputeSecurityPolicyArgsrulematchExprOptions {
-  recaptcha_options: GoogleComputeSecurityPolicyArgsrulematchExprOptionsRecaptchaOptions;
+export interface GoogleComputeSecurityPolicyArgsRuleMatchExprOptions {
+  recaptcha_options: GoogleComputeSecurityPolicyArgsRuleMatchExprOptionsRecaptchaOptions;
 }
-export interface GoogleComputeSecurityPolicyArgsrulematch {
+export interface GoogleComputeSecurityPolicyArgsRuleMatch {
   versioned_expr?: string;
-  config: GoogleComputeSecurityPolicyArgsrulematchconfig;
-  expr: GoogleComputeSecurityPolicyArgsrulematchexpr;
-  expr_options: GoogleComputeSecurityPolicyArgsrulematchExprOptions;
+  config: GoogleComputeSecurityPolicyArgsRuleMatchConfig;
+  expr: GoogleComputeSecurityPolicyArgsRuleMatchExpr;
+  expr_options: GoogleComputeSecurityPolicyArgsRuleMatchExprOptions;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestCookie {
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestCookie {
   operator: string;
   value?: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestHeader {
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestHeader {
   operator: string;
   value?: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestQueryParam {
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestQueryParam {
   operator: string;
   value?: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestUri {
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestUri {
   operator: string;
   value?: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusion {
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusion {
   target_rule_ids?: string[];
   target_rule_set: string;
-  request_cookie: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestCookie;
-  request_header: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestHeader;
-  request_query_param: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestQueryParam;
-  request_uri: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestUri;
+  request_cookie: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestCookie;
+  request_header: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestHeader;
+  request_query_param: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestQueryParam;
+  request_uri: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusionRequestUri;
 }
-export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfig {
-  exclusion: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusion;
+export interface GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfig {
+  exclusion: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfigExclusion;
 }
-export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsBanThreshold {
+export interface GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsBanThreshold {
   count: number;
   interval_sec: number;
 }
-export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsExceedRedirectOptions {
+export interface GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsExceedRedirectOptions {
   target?: string;
   type: string;
 }
-export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsRateLimitThreshold {
+export interface GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsRateLimitThreshold {
   count: number;
   interval_sec: number;
 }
-export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptions {
+export interface GoogleComputeSecurityPolicyArgsRuleRateLimitOptions {
   ban_duration_sec?: number;
   conform_action: string;
   enforce_on_key?: string;
   enforce_on_key_name?: string;
   exceed_action: string;
-  ban_threshold: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsBanThreshold;
-  exceed_redirect_options: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsExceedRedirectOptions;
-  rate_limit_threshold: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsRateLimitThreshold;
+  ban_threshold: GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsBanThreshold;
+  exceed_redirect_options: GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsExceedRedirectOptions;
+  rate_limit_threshold: GoogleComputeSecurityPolicyArgsRuleRateLimitOptionsRateLimitThreshold;
 }
-export interface GoogleComputeSecurityPolicyArgsruleRedirectOptions {
+export interface GoogleComputeSecurityPolicyArgsRuleRedirectOptions {
   target?: string;
   type: string;
 }
-export interface GoogleComputeSecurityPolicyArgsrule {
+export interface GoogleComputeSecurityPolicyArgsRule {
   action: string;
   description?: string;
   priority: number;
-  header_action: GoogleComputeSecurityPolicyArgsruleHeaderAction;
-  match: GoogleComputeSecurityPolicyArgsrulematch;
-  preconfigured_waf_config: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfig;
-  rate_limit_options: GoogleComputeSecurityPolicyArgsruleRateLimitOptions;
-  redirect_options: GoogleComputeSecurityPolicyArgsruleRedirectOptions;
+  header_action: GoogleComputeSecurityPolicyArgsRuleHeaderAction;
+  match: GoogleComputeSecurityPolicyArgsRuleMatch;
+  preconfigured_waf_config: GoogleComputeSecurityPolicyArgsRulePreconfiguredWafConfig;
+  rate_limit_options: GoogleComputeSecurityPolicyArgsRuleRateLimitOptions;
+  redirect_options: GoogleComputeSecurityPolicyArgsRuleRedirectOptions;
 }
-export interface GoogleComputeSecurityPolicyArgstimeouts {
+export interface GoogleComputeSecurityPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -115,8 +115,8 @@ export interface GoogleComputeSecurityPolicyArgs {
   adaptive_protection_config: GoogleComputeSecurityPolicyArgsAdaptiveProtectionConfig;
   advanced_options_config: GoogleComputeSecurityPolicyArgsAdvancedOptionsConfig;
   recaptcha_options_config: GoogleComputeSecurityPolicyArgsRecaptchaOptionsConfig;
-  rule: GoogleComputeSecurityPolicyArgsrule;
-  timeouts: GoogleComputeSecurityPolicyArgstimeouts;
+  rule: GoogleComputeSecurityPolicyArgsRule;
+  timeouts: GoogleComputeSecurityPolicyArgsTimeouts;
 }
 export class google_compute_security_policy extends TerraformResource {
   readonly fingerprint!: string;

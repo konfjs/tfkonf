@@ -14,7 +14,7 @@ export interface AwsRbinRuleArgsRetentionPeriod {
   retention_period_unit: string;
   retention_period_value: number;
 }
-export interface AwsRbinRuleArgstimeouts {
+export interface AwsRbinRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,7 +27,7 @@ export interface AwsRbinRuleArgs {
   lock_configuration: AwsRbinRuleArgsLockConfiguration;
   resource_tags: AwsRbinRuleArgsResourceTags;
   retention_period: AwsRbinRuleArgsRetentionPeriod;
-  timeouts: AwsRbinRuleArgstimeouts;
+  timeouts: AwsRbinRuleArgsTimeouts;
 }
 export class aws_rbin_rule extends TerraformResource {
   readonly arn!: string;

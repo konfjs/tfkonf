@@ -3,32 +3,32 @@ export interface AwsBedrockagentAgentActionGroupArgsActionGroupExecutor {
   custom_control?: string;
   lambda?: string;
 }
-export interface AwsBedrockagentAgentActionGroupArgsApiSchemas3 {
+export interface AwsBedrockagentAgentActionGroupArgsApiSchemaS3 {
   s3_bucket_name?: string;
   s3_object_key?: string;
 }
 export interface AwsBedrockagentAgentActionGroupArgsApiSchema {
   payload?: string;
-  s3: AwsBedrockagentAgentActionGroupArgsApiSchemas3;
+  s3: AwsBedrockagentAgentActionGroupArgsApiSchemaS3;
 }
-export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctionsparameters {
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsFunctionsParameters {
   description?: string;
   map_block_key: string;
   required?: boolean;
   type: string;
 }
-export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctions {
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsFunctions {
   description?: string;
   name: string;
-  parameters: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctionsparameters;
+  parameters: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsFunctionsParameters;
 }
 export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctions {
-  functions: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctions;
+  functions: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsFunctions;
 }
 export interface AwsBedrockagentAgentActionGroupArgsFunctionSchema {
   member_functions: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctions;
 }
-export interface AwsBedrockagentAgentActionGroupArgstimeouts {
+export interface AwsBedrockagentAgentActionGroupArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -41,7 +41,7 @@ export interface AwsBedrockagentAgentActionGroupArgs {
   action_group_executor: AwsBedrockagentAgentActionGroupArgsActionGroupExecutor;
   api_schema: AwsBedrockagentAgentActionGroupArgsApiSchema;
   function_schema: AwsBedrockagentAgentActionGroupArgsFunctionSchema;
-  timeouts: AwsBedrockagentAgentActionGroupArgstimeouts;
+  timeouts: AwsBedrockagentAgentActionGroupArgsTimeouts;
 }
 export class aws_bedrockagent_agent_action_group extends TerraformResource {
   readonly action_group_id!: string;

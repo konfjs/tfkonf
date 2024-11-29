@@ -14,7 +14,7 @@ export interface AwsSsmPatchBaselineArgsGlobalFilter {
   key: string;
   values: string[];
 }
-export interface AwsSsmPatchBaselineArgssource {
+export interface AwsSsmPatchBaselineArgsSource {
   configuration: string;
   name: string;
   products: string[];
@@ -32,7 +32,7 @@ export interface AwsSsmPatchBaselineArgs {
   };
   approval_rule: AwsSsmPatchBaselineArgsApprovalRule;
   global_filter: AwsSsmPatchBaselineArgsGlobalFilter;
-  source: AwsSsmPatchBaselineArgssource;
+  source: AwsSsmPatchBaselineArgsSource;
 }
 export class aws_ssm_patch_baseline extends TerraformResource {
   readonly arn!: string;

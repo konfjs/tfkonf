@@ -11,10 +11,10 @@ export interface AwsAutoscalingGroupArgsInstanceMaintenancePolicy {
   max_healthy_percentage: number;
   min_healthy_percentage: number;
 }
-export interface AwsAutoscalingGroupArgsInstanceRefreshpreferencesAlarmSpecification {
+export interface AwsAutoscalingGroupArgsInstanceRefreshPreferencesAlarmSpecification {
   alarms?: string[];
 }
-export interface AwsAutoscalingGroupArgsInstanceRefreshpreferences {
+export interface AwsAutoscalingGroupArgsInstanceRefreshPreferences {
   auto_rollback?: boolean;
   checkpoint_delay?: string;
   checkpoint_percentages?: number[];
@@ -24,55 +24,55 @@ export interface AwsAutoscalingGroupArgsInstanceRefreshpreferences {
   scale_in_protected_instances?: string;
   skip_matching?: boolean;
   standby_instances?: string;
-  alarm_specification: AwsAutoscalingGroupArgsInstanceRefreshpreferencesAlarmSpecification;
+  alarm_specification: AwsAutoscalingGroupArgsInstanceRefreshPreferencesAlarmSpecification;
 }
 export interface AwsAutoscalingGroupArgsInstanceRefresh {
   strategy: string;
   triggers?: string[];
-  preferences: AwsAutoscalingGroupArgsInstanceRefreshpreferences;
+  preferences: AwsAutoscalingGroupArgsInstanceRefreshPreferences;
 }
 export interface AwsAutoscalingGroupArgsLaunchTemplate {}
 export interface AwsAutoscalingGroupArgsMixedInstancesPolicyInstancesDistribution {
   spot_max_price?: string;
 }
 export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification {}
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorTotalMemoryMib {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsBaselineEbsBandwidthMbps {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryGibPerVcpu {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryMib {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkBandwidthGbps {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkInterfaceCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsTotalLocalStorageGb {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsVcpuCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount {
   max?: number;
   min?: number;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirements {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements {
   accelerator_manufacturers?: string[];
   accelerator_names?: string[];
   accelerator_types?: string[];
@@ -88,37 +88,37 @@ export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverri
   on_demand_max_price_percentage_over_lowest_price?: number;
   require_hibernate_support?: boolean;
   spot_max_price_percentage_over_lowest_price?: number;
-  accelerator_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorCount;
-  accelerator_total_memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorTotalMemoryMib;
-  baseline_ebs_bandwidth_mbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsBaselineEbsBandwidthMbps;
-  memory_gib_per_vcpu: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryGibPerVcpu;
-  memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryMib;
-  network_bandwidth_gbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkBandwidthGbps;
-  network_interface_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkInterfaceCount;
-  total_local_storage_gb: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsTotalLocalStorageGb;
-  vcpu_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsVcpuCount;
+  accelerator_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorCount;
+  accelerator_total_memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsAcceleratorTotalMemoryMib;
+  baseline_ebs_bandwidth_mbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsBaselineEbsBandwidthMbps;
+  memory_gib_per_vcpu: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryGibPerVcpu;
+  memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsMemoryMib;
+  network_bandwidth_gbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkBandwidthGbps;
+  network_interface_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsNetworkInterfaceCount;
+  total_local_storage_gb: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsTotalLocalStorageGb;
+  vcpu_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirementsVcpuCount;
 }
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideLaunchTemplateSpecification {}
-export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverride {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification {}
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverride {
   instance_type?: string;
   weighted_capacity?: string;
-  instance_requirements: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirements;
-  launch_template_specification: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideLaunchTemplateSpecification;
+  instance_requirements: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideInstanceRequirements;
+  launch_template_specification: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification;
 }
 export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplate {
   launch_template_specification: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification;
-  override: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverride;
+  override: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateOverride;
 }
 export interface AwsAutoscalingGroupArgsMixedInstancesPolicy {
   instances_distribution: AwsAutoscalingGroupArgsMixedInstancesPolicyInstancesDistribution;
   launch_template: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplate;
 }
-export interface AwsAutoscalingGroupArgstag {
+export interface AwsAutoscalingGroupArgsTag {
   key: string;
   propagate_at_launch: boolean;
   value: string;
 }
-export interface AwsAutoscalingGroupArgstimeouts {
+export interface AwsAutoscalingGroupArgsTimeouts {
   delete?: string;
   update?: string;
 }
@@ -162,8 +162,8 @@ export interface AwsAutoscalingGroupArgs {
   instance_refresh: AwsAutoscalingGroupArgsInstanceRefresh;
   launch_template: AwsAutoscalingGroupArgsLaunchTemplate;
   mixed_instances_policy: AwsAutoscalingGroupArgsMixedInstancesPolicy;
-  tag: AwsAutoscalingGroupArgstag;
-  timeouts: AwsAutoscalingGroupArgstimeouts;
+  tag: AwsAutoscalingGroupArgsTag;
+  timeouts: AwsAutoscalingGroupArgsTimeouts;
   traffic_source: AwsAutoscalingGroupArgsTrafficSource;
   warm_pool: AwsAutoscalingGroupArgsWarmPool;
 }

@@ -12,7 +12,7 @@ export interface AwsServicecatalogProvisionedProductArgsStackSetProvisioningPref
   max_concurrency_percentage?: number;
   regions?: string[];
 }
-export interface AwsServicecatalogProvisionedProductArgstimeouts {
+export interface AwsServicecatalogProvisionedProductArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -32,7 +32,7 @@ export interface AwsServicecatalogProvisionedProductArgs {
   };
   provisioning_parameters: AwsServicecatalogProvisionedProductArgsProvisioningParameters;
   stack_set_provisioning_preferences: AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences;
-  timeouts: AwsServicecatalogProvisionedProductArgstimeouts;
+  timeouts: AwsServicecatalogProvisionedProductArgsTimeouts;
 }
 export class aws_servicecatalog_provisioned_product extends TerraformResource {
   readonly arn!: string;

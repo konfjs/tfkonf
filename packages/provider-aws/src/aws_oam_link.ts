@@ -9,7 +9,7 @@ export interface AwsOamLinkArgsLinkConfiguration {
   log_group_configuration: AwsOamLinkArgsLinkConfigurationLogGroupConfiguration;
   metric_configuration: AwsOamLinkArgsLinkConfigurationMetricConfiguration;
 }
-export interface AwsOamLinkArgstimeouts {
+export interface AwsOamLinkArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface AwsOamLinkArgs {
     [key: string]: string;
   };
   link_configuration: AwsOamLinkArgsLinkConfiguration;
-  timeouts: AwsOamLinkArgstimeouts;
+  timeouts: AwsOamLinkArgsTimeouts;
 }
 export class aws_oam_link extends TerraformResource {
   readonly arn!: string;

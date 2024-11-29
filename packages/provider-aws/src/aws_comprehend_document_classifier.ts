@@ -17,7 +17,7 @@ export interface AwsComprehendDocumentClassifierArgsOutputDataConfig {
   kms_key_id?: string;
   s3_uri: string;
 }
-export interface AwsComprehendDocumentClassifierArgstimeouts {
+export interface AwsComprehendDocumentClassifierArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,7 +38,7 @@ export interface AwsComprehendDocumentClassifierArgs {
   volume_kms_key_id?: string;
   input_data_config: AwsComprehendDocumentClassifierArgsInputDataConfig;
   output_data_config: AwsComprehendDocumentClassifierArgsOutputDataConfig;
-  timeouts: AwsComprehendDocumentClassifierArgstimeouts;
+  timeouts: AwsComprehendDocumentClassifierArgsTimeouts;
   vpc_config: AwsComprehendDocumentClassifierArgsVpcConfig;
 }
 export class aws_comprehend_document_classifier extends TerraformResource {

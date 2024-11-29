@@ -6,13 +6,13 @@ export interface GoogleBillingBudgetArgsAllUpdatesRule {
   pubsub_topic?: string;
   schema_version?: string;
 }
-export interface GoogleBillingBudgetArgsamountSpecifiedAmount {
+export interface GoogleBillingBudgetArgsAmountSpecifiedAmount {
   nanos?: number;
   units?: string;
 }
-export interface GoogleBillingBudgetArgsamount {
+export interface GoogleBillingBudgetArgsAmount {
   last_period_amount?: boolean;
-  specified_amount: GoogleBillingBudgetArgsamountSpecifiedAmount;
+  specified_amount: GoogleBillingBudgetArgsAmountSpecifiedAmount;
 }
 export interface GoogleBillingBudgetArgsBudgetFilterCustomPeriodEndDate {
   day: number;
@@ -39,7 +39,7 @@ export interface GoogleBillingBudgetArgsThresholdRules {
   spend_basis?: string;
   threshold_percent: number;
 }
-export interface GoogleBillingBudgetArgstimeouts {
+export interface GoogleBillingBudgetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,10 +49,10 @@ export interface GoogleBillingBudgetArgs {
   display_name?: string;
   ownership_scope?: string;
   all_updates_rule: GoogleBillingBudgetArgsAllUpdatesRule;
-  amount: GoogleBillingBudgetArgsamount;
+  amount: GoogleBillingBudgetArgsAmount;
   budget_filter: GoogleBillingBudgetArgsBudgetFilter;
   threshold_rules: GoogleBillingBudgetArgsThresholdRules;
-  timeouts: GoogleBillingBudgetArgstimeouts;
+  timeouts: GoogleBillingBudgetArgsTimeouts;
 }
 export class google_billing_budget extends TerraformResource {
   readonly id?: string;

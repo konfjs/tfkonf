@@ -14,7 +14,7 @@ export interface AwsVerifiedaccessEndpointArgsSseSpecification {
   customer_managed_key_enabled?: boolean;
   kms_key_arn?: string;
 }
-export interface AwsVerifiedaccessEndpointArgstimeouts {
+export interface AwsVerifiedaccessEndpointArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -35,7 +35,7 @@ export interface AwsVerifiedaccessEndpointArgs {
   load_balancer_options: AwsVerifiedaccessEndpointArgsLoadBalancerOptions;
   network_interface_options: AwsVerifiedaccessEndpointArgsNetworkInterfaceOptions;
   sse_specification: AwsVerifiedaccessEndpointArgsSseSpecification;
-  timeouts: AwsVerifiedaccessEndpointArgstimeouts;
+  timeouts: AwsVerifiedaccessEndpointArgsTimeouts;
 }
 export class aws_verifiedaccess_endpoint extends TerraformResource {
   readonly device_validation_domain!: string;

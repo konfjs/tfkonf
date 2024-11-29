@@ -15,7 +15,7 @@ export interface AwsGlueCatalogTableArgsPartitionKeys {
   name: string;
   type?: string;
 }
-export interface AwsGlueCatalogTableArgsStorageDescriptorcolumns {
+export interface AwsGlueCatalogTableArgsStorageDescriptorColumns {
   comment?: string;
   name: string;
   parameters?: {
@@ -63,7 +63,7 @@ export interface AwsGlueCatalogTableArgsStorageDescriptor {
     [key: string]: string;
   };
   stored_as_sub_directories?: boolean;
-  columns: AwsGlueCatalogTableArgsStorageDescriptorcolumns;
+  columns: AwsGlueCatalogTableArgsStorageDescriptorColumns;
   schema_reference: AwsGlueCatalogTableArgsStorageDescriptorSchemaReference;
   ser_de_info: AwsGlueCatalogTableArgsStorageDescriptorSerDeInfo;
   skewed_info: AwsGlueCatalogTableArgsStorageDescriptorSkewedInfo;

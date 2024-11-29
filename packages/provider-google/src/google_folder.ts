@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFolderArgstimeouts {
+export interface GoogleFolderArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -12,7 +12,7 @@ export interface GoogleFolderArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: GoogleFolderArgstimeouts;
+  timeouts: GoogleFolderArgsTimeouts;
 }
 export class google_folder extends TerraformResource {
   readonly create_time!: string;

@@ -3,17 +3,17 @@ export interface GooglePrivilegedAccessManagerEntitlementArgsAdditionalNotificat
   admin_email_recipients?: string[];
   requester_email_recipients?: string[];
 }
-export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsstepsapprovers {
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsStepsApprovers {
   principals: string[];
 }
-export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalssteps {
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsSteps {
   approvals_needed?: number;
   approver_email_recipients?: string[];
-  approvers: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsstepsapprovers;
+  approvers: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsStepsApprovers;
 }
 export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovals {
   require_approver_justification?: boolean;
-  steps: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalssteps;
+  steps: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsSteps;
 }
 export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflow {
   manual_approvals: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovals;
@@ -34,12 +34,12 @@ export interface GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccess {
   gcp_iam_access: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccessGcpIamAccess;
 }
 export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigNotMandatory {}
-export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigunstructured {}
+export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigUnstructured {}
 export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfig {
   not_mandatory: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigNotMandatory;
-  unstructured: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigunstructured;
+  unstructured: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigUnstructured;
 }
-export interface GooglePrivilegedAccessManagerEntitlementArgstimeouts {
+export interface GooglePrivilegedAccessManagerEntitlementArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -54,7 +54,7 @@ export interface GooglePrivilegedAccessManagerEntitlementArgs {
   eligible_users: GooglePrivilegedAccessManagerEntitlementArgsEligibleUsers;
   privileged_access: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccess;
   requester_justification_config: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfig;
-  timeouts: GooglePrivilegedAccessManagerEntitlementArgstimeouts;
+  timeouts: GooglePrivilegedAccessManagerEntitlementArgsTimeouts;
 }
 export class google_privileged_access_manager_entitlement extends TerraformResource {
   readonly create_time!: string;

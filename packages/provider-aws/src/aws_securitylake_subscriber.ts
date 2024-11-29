@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecuritylakeSubscriberArgssourceAwsLogSourceResource {
+export interface AwsSecuritylakeSubscriberArgsSourceAwsLogSourceResource {
   source_name: string;
 }
-export interface AwsSecuritylakeSubscriberArgssourceCustomLogSourceResource {
+export interface AwsSecuritylakeSubscriberArgsSourceCustomLogSourceResource {
   source_name: string;
 }
-export interface AwsSecuritylakeSubscriberArgssource {
-  aws_log_source_resource: AwsSecuritylakeSubscriberArgssourceAwsLogSourceResource;
-  custom_log_source_resource: AwsSecuritylakeSubscriberArgssourceCustomLogSourceResource;
+export interface AwsSecuritylakeSubscriberArgsSource {
+  aws_log_source_resource: AwsSecuritylakeSubscriberArgsSourceAwsLogSourceResource;
+  custom_log_source_resource: AwsSecuritylakeSubscriberArgsSourceCustomLogSourceResource;
 }
 export interface AwsSecuritylakeSubscriberArgsSubscriberIdentity {
   external_id: string;
   principal: string;
 }
-export interface AwsSecuritylakeSubscriberArgstimeouts {
+export interface AwsSecuritylakeSubscriberArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,9 +24,9 @@ export interface AwsSecuritylakeSubscriberArgs {
   tags?: {
     [key: string]: string;
   };
-  source: AwsSecuritylakeSubscriberArgssource;
+  source: AwsSecuritylakeSubscriberArgsSource;
   subscriber_identity: AwsSecuritylakeSubscriberArgsSubscriberIdentity;
-  timeouts: AwsSecuritylakeSubscriberArgstimeouts;
+  timeouts: AwsSecuritylakeSubscriberArgsTimeouts;
 }
 export class aws_securitylake_subscriber extends TerraformResource {
   readonly access_type?: string;

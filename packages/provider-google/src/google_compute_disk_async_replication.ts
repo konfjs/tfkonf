@@ -2,14 +2,14 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleComputeDiskAsyncReplicationArgsSecondaryDisk {
   disk: string;
 }
-export interface GoogleComputeDiskAsyncReplicationArgstimeouts {
+export interface GoogleComputeDiskAsyncReplicationArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleComputeDiskAsyncReplicationArgs {
   primary_disk: string;
   secondary_disk: GoogleComputeDiskAsyncReplicationArgsSecondaryDisk;
-  timeouts: GoogleComputeDiskAsyncReplicationArgstimeouts;
+  timeouts: GoogleComputeDiskAsyncReplicationArgsTimeouts;
 }
 export class google_compute_disk_async_replication extends TerraformResource {
   readonly id?: string;

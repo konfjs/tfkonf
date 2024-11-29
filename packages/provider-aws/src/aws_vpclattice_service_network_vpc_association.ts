@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpclatticeServiceNetworkVpcAssociationArgstimeouts {
+export interface AwsVpclatticeServiceNetworkVpcAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsVpclatticeServiceNetworkVpcAssociationArgs {
     [key: string]: string;
   };
   vpc_identifier: string;
-  timeouts: AwsVpclatticeServiceNetworkVpcAssociationArgstimeouts;
+  timeouts: AwsVpclatticeServiceNetworkVpcAssociationArgsTimeouts;
 }
 export class aws_vpclattice_service_network_vpc_association extends TerraformResource {
   readonly arn!: string;

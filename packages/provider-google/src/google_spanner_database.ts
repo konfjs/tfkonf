@@ -3,7 +3,7 @@ export interface GoogleSpannerDatabaseArgsEncryptionConfig {
   kms_key_name?: string;
   kms_key_names?: string[];
 }
-export interface GoogleSpannerDatabaseArgstimeouts {
+export interface GoogleSpannerDatabaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleSpannerDatabaseArgs {
   instance: string;
   name: string;
   encryption_config: GoogleSpannerDatabaseArgsEncryptionConfig;
-  timeouts: GoogleSpannerDatabaseArgstimeouts;
+  timeouts: GoogleSpannerDatabaseArgsTimeouts;
 }
 export class google_spanner_database extends TerraformResource {
   readonly database_dialect?: string;

@@ -19,7 +19,7 @@ export interface GoogleDataplexZoneArgsDiscoverySpec {
 export interface GoogleDataplexZoneArgsResourceSpec {
   location_type: string;
 }
-export interface GoogleDataplexZoneArgstimeouts {
+export interface GoogleDataplexZoneArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,7 +36,7 @@ export interface GoogleDataplexZoneArgs {
   type: string;
   discovery_spec: GoogleDataplexZoneArgsDiscoverySpec;
   resource_spec: GoogleDataplexZoneArgsResourceSpec;
-  timeouts: GoogleDataplexZoneArgstimeouts;
+  timeouts: GoogleDataplexZoneArgsTimeouts;
 }
 export class google_dataplex_zone extends TerraformResource {
   readonly asset_status!: any[];

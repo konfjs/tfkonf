@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleEdgenetworkSubnetArgstimeouts {
+export interface GoogleEdgenetworkSubnetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleEdgenetworkSubnetArgs {
   network: string;
   subnet_id: string;
   zone: string;
-  timeouts: GoogleEdgenetworkSubnetArgstimeouts;
+  timeouts: GoogleEdgenetworkSubnetArgsTimeouts;
 }
 export class google_edgenetwork_subnet extends TerraformResource {
   readonly create_time!: string;

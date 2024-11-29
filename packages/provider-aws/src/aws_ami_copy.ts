@@ -1,7 +1,7 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsAmiCopyArgsEbsBlockDevice {}
 export interface AwsAmiCopyArgsEphemeralBlockDevice {}
-export interface AwsAmiCopyArgstimeouts {
+export interface AwsAmiCopyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface AwsAmiCopyArgs {
   };
   ebs_block_device: AwsAmiCopyArgsEbsBlockDevice;
   ephemeral_block_device: AwsAmiCopyArgsEphemeralBlockDevice;
-  timeouts: AwsAmiCopyArgstimeouts;
+  timeouts: AwsAmiCopyArgsTimeouts;
 }
 export class aws_ami_copy extends TerraformResource {
   readonly architecture!: string;

@@ -16,7 +16,7 @@ export interface AwsDbInstanceArgsS3Import {
   source_engine: string;
   source_engine_version: string;
 }
-export interface AwsDbInstanceArgstimeouts {
+export interface AwsDbInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -56,7 +56,7 @@ export interface AwsDbInstanceArgs {
   blue_green_update: AwsDbInstanceArgsBlueGreenUpdate;
   restore_to_point_in_time: AwsDbInstanceArgsRestoreToPointInTime;
   s3_import: AwsDbInstanceArgsS3Import;
-  timeouts: AwsDbInstanceArgstimeouts;
+  timeouts: AwsDbInstanceArgsTimeouts;
 }
 export class aws_db_instance extends TerraformResource {
   readonly address!: string;

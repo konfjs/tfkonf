@@ -4,7 +4,7 @@ export interface AwsPinpointAppArgsCampaignHook {
   mode?: string;
   web_url?: string;
 }
-export interface AwsPinpointAppArgslimits {
+export interface AwsPinpointAppArgsLimits {
   daily?: number;
   maximum_duration?: number;
   messages_per_second?: number;
@@ -19,7 +19,7 @@ export interface AwsPinpointAppArgs {
     [key: string]: string;
   };
   campaign_hook: AwsPinpointAppArgsCampaignHook;
-  limits: AwsPinpointAppArgslimits;
+  limits: AwsPinpointAppArgsLimits;
   quiet_time: AwsPinpointAppArgsQuietTime;
 }
 export class aws_pinpoint_app extends TerraformResource {

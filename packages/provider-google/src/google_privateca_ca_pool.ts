@@ -6,13 +6,13 @@ export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedIssuanceModes {
 export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesEllipticCurve {
   signature_algorithm: string;
 }
-export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesrsa {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesRsa {
   max_modulus_size?: string;
   min_modulus_size?: string;
 }
 export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypes {
   elliptic_curve: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesEllipticCurve;
-  rsa: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesrsa;
+  rsa: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesRsa;
 }
 export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesAdditionalExtensionsObjectId {
   object_id_path: number[];
@@ -100,7 +100,7 @@ export interface GooglePrivatecaCaPoolArgsPublishingOptions {
   publish_ca_cert: boolean;
   publish_crl: boolean;
 }
-export interface GooglePrivatecaCaPoolArgstimeouts {
+export interface GooglePrivatecaCaPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -114,7 +114,7 @@ export interface GooglePrivatecaCaPoolArgs {
   tier: string;
   issuance_policy: GooglePrivatecaCaPoolArgsIssuancePolicy;
   publishing_options: GooglePrivatecaCaPoolArgsPublishingOptions;
-  timeouts: GooglePrivatecaCaPoolArgstimeouts;
+  timeouts: GooglePrivatecaCaPoolArgsTimeouts;
 }
 export class google_privateca_ca_pool extends TerraformResource {
   readonly effective_labels!: {

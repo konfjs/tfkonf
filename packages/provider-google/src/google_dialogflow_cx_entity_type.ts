@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowCxEntityTypeArgsentities {
+export interface GoogleDialogflowCxEntityTypeArgsEntities {
   synonyms?: string[];
   value?: string;
 }
 export interface GoogleDialogflowCxEntityTypeArgsExcludedPhrases {
   value?: string;
 }
-export interface GoogleDialogflowCxEntityTypeArgstimeouts {
+export interface GoogleDialogflowCxEntityTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,9 +19,9 @@ export interface GoogleDialogflowCxEntityTypeArgs {
   language_code?: string;
   parent?: string;
   redact?: boolean;
-  entities: GoogleDialogflowCxEntityTypeArgsentities;
+  entities: GoogleDialogflowCxEntityTypeArgsEntities;
   excluded_phrases: GoogleDialogflowCxEntityTypeArgsExcludedPhrases;
-  timeouts: GoogleDialogflowCxEntityTypeArgstimeouts;
+  timeouts: GoogleDialogflowCxEntityTypeArgsTimeouts;
 }
 export class google_dialogflow_cx_entity_type extends TerraformResource {
   readonly id?: string;

@@ -30,7 +30,7 @@ export interface GoogleVmwareengineClusterArgsNodeTypeConfigs {
   node_count: number;
   node_type_id: string;
 }
-export interface GoogleVmwareengineClusterArgstimeouts {
+export interface GoogleVmwareengineClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,7 +40,7 @@ export interface GoogleVmwareengineClusterArgs {
   parent: string;
   autoscaling_settings: GoogleVmwareengineClusterArgsAutoscalingSettings;
   node_type_configs: GoogleVmwareengineClusterArgsNodeTypeConfigs;
-  timeouts: GoogleVmwareengineClusterArgstimeouts;
+  timeouts: GoogleVmwareengineClusterArgsTimeouts;
 }
 export class google_vmwareengine_cluster extends TerraformResource {
   readonly id?: string;

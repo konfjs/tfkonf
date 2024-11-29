@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression {
+export interface GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputPropertiesValueExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputproperties {
+export interface GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputProperties {
   name?: string;
-  value_expression: GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression;
+  value_expression: GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputPropertiesValueExpression;
 }
 export interface GoogleSccFolderCustomModuleArgsCustomConfigCustomOutput {
-  properties: GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputproperties;
+  properties: GoogleSccFolderCustomModuleArgsCustomConfigCustomOutputProperties;
 }
-export interface GoogleSccFolderCustomModuleArgsCustomConfigpredicate {
+export interface GoogleSccFolderCustomModuleArgsCustomConfigPredicate {
   description?: string;
   expression: string;
   location?: string;
@@ -26,10 +26,10 @@ export interface GoogleSccFolderCustomModuleArgsCustomConfig {
   recommendation: string;
   severity: string;
   custom_output: GoogleSccFolderCustomModuleArgsCustomConfigCustomOutput;
-  predicate: GoogleSccFolderCustomModuleArgsCustomConfigpredicate;
+  predicate: GoogleSccFolderCustomModuleArgsCustomConfigPredicate;
   resource_selector: GoogleSccFolderCustomModuleArgsCustomConfigResourceSelector;
 }
-export interface GoogleSccFolderCustomModuleArgstimeouts {
+export interface GoogleSccFolderCustomModuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,7 +39,7 @@ export interface GoogleSccFolderCustomModuleArgs {
   enablement_state: string;
   folder: string;
   custom_config: GoogleSccFolderCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccFolderCustomModuleArgstimeouts;
+  timeouts: GoogleSccFolderCustomModuleArgsTimeouts;
 }
 export class google_scc_folder_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

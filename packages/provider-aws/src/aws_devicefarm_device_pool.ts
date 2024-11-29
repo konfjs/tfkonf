@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDevicefarmDevicePoolArgsrule {
+export interface AwsDevicefarmDevicePoolArgsRule {
   attribute?: string;
   operator?: string;
   value?: string;
@@ -12,7 +12,7 @@ export interface AwsDevicefarmDevicePoolArgs {
   tags?: {
     [key: string]: string;
   };
-  rule: AwsDevicefarmDevicePoolArgsrule;
+  rule: AwsDevicefarmDevicePoolArgsRule;
 }
 export class aws_devicefarm_device_pool extends TerraformResource {
   readonly arn!: string;

@@ -12,7 +12,7 @@ export interface GoogleComputeRegionDiskArgsGuestOsFeatures {
 export interface GoogleComputeRegionDiskArgsSourceSnapshotEncryptionKey {
   raw_key?: string;
 }
-export interface GoogleComputeRegionDiskArgstimeouts {
+export interface GoogleComputeRegionDiskArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,7 +31,7 @@ export interface GoogleComputeRegionDiskArgs {
   disk_encryption_key: GoogleComputeRegionDiskArgsDiskEncryptionKey;
   guest_os_features: GoogleComputeRegionDiskArgsGuestOsFeatures;
   source_snapshot_encryption_key: GoogleComputeRegionDiskArgsSourceSnapshotEncryptionKey;
-  timeouts: GoogleComputeRegionDiskArgstimeouts;
+  timeouts: GoogleComputeRegionDiskArgsTimeouts;
 }
 export class google_compute_region_disk extends TerraformResource {
   readonly creation_timestamp!: string;

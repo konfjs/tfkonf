@@ -3,7 +3,7 @@ export interface AwsLexSlotTypeArgsEnumerationValue {
   synonyms?: string[];
   value: string;
 }
-export interface AwsLexSlotTypeArgstimeouts {
+export interface AwsLexSlotTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsLexSlotTypeArgs {
   name: string;
   value_selection_strategy?: string;
   enumeration_value: AwsLexSlotTypeArgsEnumerationValue;
-  timeouts: AwsLexSlotTypeArgstimeouts;
+  timeouts: AwsLexSlotTypeArgsTimeouts;
 }
 export class aws_lex_slot_type extends TerraformResource {
   readonly checksum!: string;

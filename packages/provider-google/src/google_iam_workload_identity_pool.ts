@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIamWorkloadIdentityPoolArgstimeouts {
+export interface GoogleIamWorkloadIdentityPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleIamWorkloadIdentityPoolArgs {
   disabled?: boolean;
   display_name?: string;
   workload_identity_pool_id: string;
-  timeouts: GoogleIamWorkloadIdentityPoolArgstimeouts;
+  timeouts: GoogleIamWorkloadIdentityPoolArgsTimeouts;
 }
 export class google_iam_workload_identity_pool extends TerraformResource {
   readonly id?: string;

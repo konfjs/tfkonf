@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDnsManagedZoneIamMemberArgscondition {
+export interface GoogleDnsManagedZoneIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDnsManagedZoneIamMemberArgs {
   managed_zone: string;
   member: string;
   role: string;
-  condition: GoogleDnsManagedZoneIamMemberArgscondition;
+  condition: GoogleDnsManagedZoneIamMemberArgsCondition;
 }
 export class google_dns_managed_zone_iam_member extends TerraformResource {
   readonly etag!: string;

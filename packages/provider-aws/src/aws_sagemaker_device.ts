@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSagemakerDeviceArgsdevice {
+export interface AwsSagemakerDeviceArgsDevice {
   description?: string;
   device_name: string;
   iot_thing_name?: string;
 }
 export interface AwsSagemakerDeviceArgs {
   device_fleet_name: string;
-  device: AwsSagemakerDeviceArgsdevice;
+  device: AwsSagemakerDeviceArgsDevice;
 }
 export class aws_sagemaker_device extends TerraformResource {
   readonly agent_version!: string;

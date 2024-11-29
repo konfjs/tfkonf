@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataCatalogTaxonomyArgstimeouts {
+export interface GoogleDataCatalogTaxonomyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogTaxonomyArgs {
   activated_policy_types?: string[];
   description?: string;
   display_name: string;
-  timeouts: GoogleDataCatalogTaxonomyArgstimeouts;
+  timeouts: GoogleDataCatalogTaxonomyArgsTimeouts;
 }
 export class google_data_catalog_taxonomy extends TerraformResource {
   readonly id?: string;

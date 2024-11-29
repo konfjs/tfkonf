@@ -6,14 +6,14 @@ export interface AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig {
   max_idle_connections_percent?: number;
   session_pinning_filters?: string[];
 }
-export interface AwsDbProxyDefaultTargetGroupArgstimeouts {
+export interface AwsDbProxyDefaultTargetGroupArgsTimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsDbProxyDefaultTargetGroupArgs {
   db_proxy_name: string;
   connection_pool_config: AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig;
-  timeouts: AwsDbProxyDefaultTargetGroupArgstimeouts;
+  timeouts: AwsDbProxyDefaultTargetGroupArgsTimeouts;
 }
 export class aws_db_proxy_default_target_group extends TerraformResource {
   readonly arn!: string;

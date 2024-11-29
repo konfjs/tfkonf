@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeHubScopeIamMemberArgscondition {
+export interface GoogleGkeHubScopeIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleGkeHubScopeIamMemberArgs {
   member: string;
   role: string;
   scope_id: string;
-  condition: GoogleGkeHubScopeIamMemberArgscondition;
+  condition: GoogleGkeHubScopeIamMemberArgsCondition;
 }
 export class google_gke_hub_scope_iam_member extends TerraformResource {
   readonly etag!: string;

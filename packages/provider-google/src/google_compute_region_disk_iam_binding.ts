@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionDiskIamBindingArgscondition {
+export interface GoogleComputeRegionDiskIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeRegionDiskIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleComputeRegionDiskIamBindingArgscondition;
+  condition: GoogleComputeRegionDiskIamBindingArgsCondition;
 }
 export class google_compute_region_disk_iam_binding extends TerraformResource {
   readonly etag!: string;

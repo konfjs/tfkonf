@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesgit {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGit {
   path?: string;
   ref?: string;
   repo: string;
@@ -15,7 +15,7 @@ export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffo
 }
 export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModules {
   configs?: string[];
-  git: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesgit;
+  git: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGit;
   google_cloud_build_repo: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo;
   google_cloud_storage: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudStorage;
 }
@@ -24,7 +24,7 @@ export interface GoogleClouddeployCustomTargetTypeArgsCustomActions {
   render_action?: string;
   include_skaffold_modules: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModules;
 }
-export interface GoogleClouddeployCustomTargetTypeArgstimeouts {
+export interface GoogleClouddeployCustomTargetTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,7 +40,7 @@ export interface GoogleClouddeployCustomTargetTypeArgs {
   location: string;
   name: string;
   custom_actions: GoogleClouddeployCustomTargetTypeArgsCustomActions;
-  timeouts: GoogleClouddeployCustomTargetTypeArgstimeouts;
+  timeouts: GoogleClouddeployCustomTargetTypeArgsTimeouts;
 }
 export class google_clouddeploy_custom_target_type extends TerraformResource {
   readonly create_time!: string;

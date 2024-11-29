@@ -11,7 +11,7 @@ export interface AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfiguratio
   netbios_name?: string;
   self_managed_active_directory_configuration: AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration;
 }
-export interface AwsFsxOntapStorageVirtualMachineArgstimeouts {
+export interface AwsFsxOntapStorageVirtualMachineArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface AwsFsxOntapStorageVirtualMachineArgs {
     [key: string]: string;
   };
   active_directory_configuration: AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfiguration;
-  timeouts: AwsFsxOntapStorageVirtualMachineArgstimeouts;
+  timeouts: AwsFsxOntapStorageVirtualMachineArgsTimeouts;
 }
 export class aws_fsx_ontap_storage_virtual_machine extends TerraformResource {
   readonly arn!: string;

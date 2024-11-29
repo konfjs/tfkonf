@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigtableInstanceArgsclusterAutoscalingConfig {
+export interface GoogleBigtableInstanceArgsClusterAutoscalingConfig {
   cpu_target: number;
   max_nodes: number;
   min_nodes: number;
 }
-export interface GoogleBigtableInstanceArgscluster {
+export interface GoogleBigtableInstanceArgsCluster {
   cluster_id: string;
   storage_type?: string;
-  autoscaling_config: GoogleBigtableInstanceArgsclusterAutoscalingConfig;
+  autoscaling_config: GoogleBigtableInstanceArgsClusterAutoscalingConfig;
 }
-export interface GoogleBigtableInstanceArgstimeouts {
+export interface GoogleBigtableInstanceArgsTimeouts {
   create?: string;
   read?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface GoogleBigtableInstanceArgs {
     [key: string]: string;
   };
   name: string;
-  cluster: GoogleBigtableInstanceArgscluster;
-  timeouts: GoogleBigtableInstanceArgstimeouts;
+  cluster: GoogleBigtableInstanceArgsCluster;
+  timeouts: GoogleBigtableInstanceArgsTimeouts;
 }
 export class google_bigtable_instance extends TerraformResource {
   readonly display_name?: string;

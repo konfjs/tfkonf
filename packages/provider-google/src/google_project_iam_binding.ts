@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleProjectIamBindingArgscondition {
+export interface GoogleProjectIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleProjectIamBindingArgs {
   members: string[];
   project: string;
   role: string;
-  condition: GoogleProjectIamBindingArgscondition;
+  condition: GoogleProjectIamBindingArgsCondition;
 }
 export class google_project_iam_binding extends TerraformResource {
   readonly etag!: string;

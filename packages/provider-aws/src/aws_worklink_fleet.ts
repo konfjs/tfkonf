@@ -3,7 +3,7 @@ export interface AwsWorklinkFleetArgsIdentityProvider {
   saml_metadata: string;
   type: string;
 }
-export interface AwsWorklinkFleetArgsnetwork {
+export interface AwsWorklinkFleetArgsNetwork {
   security_group_ids: string[];
   subnet_ids: string[];
   vpc_id: string;
@@ -15,7 +15,7 @@ export interface AwsWorklinkFleetArgs {
   name: string;
   optimize_for_end_user_location?: boolean;
   identity_provider: AwsWorklinkFleetArgsIdentityProvider;
-  network: AwsWorklinkFleetArgsnetwork;
+  network: AwsWorklinkFleetArgsNetwork;
 }
 export class aws_worklink_fleet extends TerraformResource {
   readonly arn!: string;

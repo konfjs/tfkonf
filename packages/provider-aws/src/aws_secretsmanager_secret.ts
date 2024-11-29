@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecretsmanagerSecretArgsreplica {
+export interface AwsSecretsmanagerSecretArgsReplica {
   region: string;
 }
 export interface AwsSecretsmanagerSecretArgs {
@@ -10,7 +10,7 @@ export interface AwsSecretsmanagerSecretArgs {
   tags?: {
     [key: string]: string;
   };
-  replica: AwsSecretsmanagerSecretArgsreplica;
+  replica: AwsSecretsmanagerSecretArgsReplica;
 }
 export class aws_secretsmanager_secret extends TerraformResource {
   readonly arn!: string;

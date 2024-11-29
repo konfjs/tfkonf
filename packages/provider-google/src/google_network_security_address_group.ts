@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetworkSecurityAddressGroupArgstimeouts {
+export interface GoogleNetworkSecurityAddressGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleNetworkSecurityAddressGroupArgs {
   name: string;
   parent?: string;
   type: string;
-  timeouts: GoogleNetworkSecurityAddressGroupArgstimeouts;
+  timeouts: GoogleNetworkSecurityAddressGroupArgsTimeouts;
 }
 export class google_network_security_address_group extends TerraformResource {
   readonly create_time!: string;

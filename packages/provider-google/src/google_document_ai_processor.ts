@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDocumentAiProcessorArgstimeouts {
+export interface GoogleDocumentAiProcessorArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleDocumentAiProcessorArgs {
   kms_key_name?: string;
   location: string;
   type: string;
-  timeouts: GoogleDocumentAiProcessorArgstimeouts;
+  timeouts: GoogleDocumentAiProcessorArgsTimeouts;
 }
 export class google_document_ai_processor extends TerraformResource {
   readonly id?: string;

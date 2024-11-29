@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeTargetInstanceArgstimeouts {
+export interface GoogleComputeTargetInstanceArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleComputeTargetInstanceArgs {
   instance: string;
   name: string;
   nat_policy?: string;
-  timeouts: GoogleComputeTargetInstanceArgstimeouts;
+  timeouts: GoogleComputeTargetInstanceArgsTimeouts;
 }
 export class google_compute_target_instance extends TerraformResource {
   readonly creation_timestamp!: string;

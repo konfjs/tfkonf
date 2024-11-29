@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleLoggingLogViewIamMemberArgscondition {
+export interface GoogleLoggingLogViewIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -10,7 +10,7 @@ export interface GoogleLoggingLogViewIamMemberArgs {
   name: string;
   parent: string;
   role: string;
-  condition: GoogleLoggingLogViewIamMemberArgscondition;
+  condition: GoogleLoggingLogViewIamMemberArgsCondition;
 }
 export class google_logging_log_view_iam_member extends TerraformResource {
   readonly etag!: string;

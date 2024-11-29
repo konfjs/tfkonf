@@ -3,7 +3,7 @@ export interface GoogleFolderAccessApprovalSettingsArgsEnrolledServices {
   cloud_product: string;
   enrollment_level?: string;
 }
-export interface GoogleFolderAccessApprovalSettingsArgstimeouts {
+export interface GoogleFolderAccessApprovalSettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleFolderAccessApprovalSettingsArgs {
   active_key_version?: string;
   folder_id: string;
   enrolled_services: GoogleFolderAccessApprovalSettingsArgsEnrolledServices;
-  timeouts: GoogleFolderAccessApprovalSettingsArgstimeouts;
+  timeouts: GoogleFolderAccessApprovalSettingsArgsTimeouts;
 }
 export class google_folder_access_approval_settings extends TerraformResource {
   readonly ancestor_has_active_key_version!: boolean;

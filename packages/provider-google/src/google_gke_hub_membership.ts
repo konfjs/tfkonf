@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeHubMembershipArgsauthority {
+export interface GoogleGkeHubMembershipArgsAuthority {
   issuer: string;
 }
-export interface GoogleGkeHubMembershipArgsendpointGkeCluster {
+export interface GoogleGkeHubMembershipArgsEndpointGkeCluster {
   resource_link: string;
 }
-export interface GoogleGkeHubMembershipArgsendpoint {
-  gke_cluster: GoogleGkeHubMembershipArgsendpointGkeCluster;
+export interface GoogleGkeHubMembershipArgsEndpoint {
+  gke_cluster: GoogleGkeHubMembershipArgsEndpointGkeCluster;
 }
-export interface GoogleGkeHubMembershipArgstimeouts {
+export interface GoogleGkeHubMembershipArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,9 +19,9 @@ export interface GoogleGkeHubMembershipArgs {
   };
   location?: string;
   membership_id: string;
-  authority: GoogleGkeHubMembershipArgsauthority;
-  endpoint: GoogleGkeHubMembershipArgsendpoint;
-  timeouts: GoogleGkeHubMembershipArgstimeouts;
+  authority: GoogleGkeHubMembershipArgsAuthority;
+  endpoint: GoogleGkeHubMembershipArgsEndpoint;
+  timeouts: GoogleGkeHubMembershipArgsTimeouts;
 }
 export class google_gke_hub_membership extends TerraformResource {
   readonly effective_labels!: {

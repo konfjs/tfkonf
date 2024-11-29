@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsIvsChannelArgstimeouts {
+export interface AwsIvsChannelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface AwsIvsChannelArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIvsChannelArgstimeouts;
+  timeouts: AwsIvsChannelArgsTimeouts;
 }
 export class aws_ivs_channel extends TerraformResource {
   readonly arn!: string;

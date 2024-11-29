@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDatabaseMigrationServicePrivateConnectionArgstimeouts {
+export interface GoogleDatabaseMigrationServicePrivateConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleDatabaseMigrationServicePrivateConnectionArgs {
   };
   location: string;
   private_connection_id: string;
-  timeouts: GoogleDatabaseMigrationServicePrivateConnectionArgstimeouts;
+  timeouts: GoogleDatabaseMigrationServicePrivateConnectionArgsTimeouts;
   vpc_peering_config: GoogleDatabaseMigrationServicePrivateConnectionArgsVpcPeeringConfig;
 }
 export class google_database_migration_service_private_connection extends TerraformResource {

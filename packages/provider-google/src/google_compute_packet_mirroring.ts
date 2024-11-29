@@ -2,26 +2,26 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleComputePacketMirroringArgsCollectorIlb {
   url: string;
 }
-export interface GoogleComputePacketMirroringArgsfilter {
+export interface GoogleComputePacketMirroringArgsFilter {
   cidr_ranges?: string[];
   direction?: string;
   ip_protocols?: string[];
 }
-export interface GoogleComputePacketMirroringArgsMirroredResourcesinstances {
+export interface GoogleComputePacketMirroringArgsMirroredResourcesInstances {
   url: string;
 }
-export interface GoogleComputePacketMirroringArgsMirroredResourcessubnetworks {
+export interface GoogleComputePacketMirroringArgsMirroredResourcesSubnetworks {
   url: string;
 }
 export interface GoogleComputePacketMirroringArgsMirroredResources {
   tags?: string[];
-  instances: GoogleComputePacketMirroringArgsMirroredResourcesinstances;
-  subnetworks: GoogleComputePacketMirroringArgsMirroredResourcessubnetworks;
+  instances: GoogleComputePacketMirroringArgsMirroredResourcesInstances;
+  subnetworks: GoogleComputePacketMirroringArgsMirroredResourcesSubnetworks;
 }
-export interface GoogleComputePacketMirroringArgsnetwork {
+export interface GoogleComputePacketMirroringArgsNetwork {
   url: string;
 }
-export interface GoogleComputePacketMirroringArgstimeouts {
+export interface GoogleComputePacketMirroringArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,10 +30,10 @@ export interface GoogleComputePacketMirroringArgs {
   description?: string;
   name: string;
   collector_ilb: GoogleComputePacketMirroringArgsCollectorIlb;
-  filter: GoogleComputePacketMirroringArgsfilter;
+  filter: GoogleComputePacketMirroringArgsFilter;
   mirrored_resources: GoogleComputePacketMirroringArgsMirroredResources;
-  network: GoogleComputePacketMirroringArgsnetwork;
-  timeouts: GoogleComputePacketMirroringArgstimeouts;
+  network: GoogleComputePacketMirroringArgsNetwork;
+  timeouts: GoogleComputePacketMirroringArgsTimeouts;
 }
 export class google_compute_packet_mirroring extends TerraformResource {
   readonly id?: string;

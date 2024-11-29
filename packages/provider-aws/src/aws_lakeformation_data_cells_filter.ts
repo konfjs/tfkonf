@@ -14,12 +14,12 @@ export interface AwsLakeformationDataCellsFilterArgsTableData {
   column_wildcard: AwsLakeformationDataCellsFilterArgsTableDataColumnWildcard;
   row_filter: AwsLakeformationDataCellsFilterArgsTableDataRowFilter;
 }
-export interface AwsLakeformationDataCellsFilterArgstimeouts {
+export interface AwsLakeformationDataCellsFilterArgsTimeouts {
   create?: string;
 }
 export interface AwsLakeformationDataCellsFilterArgs {
   table_data: AwsLakeformationDataCellsFilterArgsTableData;
-  timeouts: AwsLakeformationDataCellsFilterArgstimeouts;
+  timeouts: AwsLakeformationDataCellsFilterArgsTimeouts;
 }
 export class aws_lakeformation_data_cells_filter extends TerraformResource {
   readonly id!: string;

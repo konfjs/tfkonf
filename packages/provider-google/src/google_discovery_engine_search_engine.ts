@@ -6,7 +6,7 @@ export interface GoogleDiscoveryEngineSearchEngineArgsSearchEngineConfig {
   search_add_ons?: string[];
   search_tier?: string;
 }
-export interface GoogleDiscoveryEngineSearchEngineArgstimeouts {
+export interface GoogleDiscoveryEngineSearchEngineArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleDiscoveryEngineSearchEngineArgs {
   location: string;
   common_config: GoogleDiscoveryEngineSearchEngineArgsCommonConfig;
   search_engine_config: GoogleDiscoveryEngineSearchEngineArgsSearchEngineConfig;
-  timeouts: GoogleDiscoveryEngineSearchEngineArgstimeouts;
+  timeouts: GoogleDiscoveryEngineSearchEngineArgsTimeouts;
 }
 export class google_discovery_engine_search_engine extends TerraformResource {
   readonly create_time!: string;

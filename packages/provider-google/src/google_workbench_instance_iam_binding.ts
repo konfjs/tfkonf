@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleWorkbenchInstanceIamBindingArgscondition {
+export interface GoogleWorkbenchInstanceIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleWorkbenchInstanceIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleWorkbenchInstanceIamBindingArgscondition;
+  condition: GoogleWorkbenchInstanceIamBindingArgsCondition;
 }
 export class google_workbench_instance_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketMetricArgsfilter {
+export interface AwsS3BucketMetricArgsFilter {
   access_point?: string;
   prefix?: string;
   tags?: {
@@ -9,7 +9,7 @@ export interface AwsS3BucketMetricArgsfilter {
 export interface AwsS3BucketMetricArgs {
   bucket: string;
   name: string;
-  filter: AwsS3BucketMetricArgsfilter;
+  filter: AwsS3BucketMetricArgsFilter;
 }
 export class aws_s3_bucket_metric extends TerraformResource {
   readonly id?: string;

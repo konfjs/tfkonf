@@ -55,12 +55,12 @@ export interface GoogleIntegrationConnectorsConnectionArgsAuthConfigSshPublicKey
   ssh_client_cert: GoogleIntegrationConnectorsConnectionArgsAuthConfigSshPublicKeySshClientCert;
   ssh_client_cert_pass: GoogleIntegrationConnectorsConnectionArgsAuthConfigSshPublicKeySshClientCertPass;
 }
-export interface GoogleIntegrationConnectorsConnectionArgsAuthConfigUserPasswordpassword {
+export interface GoogleIntegrationConnectorsConnectionArgsAuthConfigUserPasswordPassword {
   secret_version: string;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsAuthConfigUserPassword {
   username: string;
-  password: GoogleIntegrationConnectorsConnectionArgsAuthConfigUserPasswordpassword;
+  password: GoogleIntegrationConnectorsConnectionArgsAuthConfigUserPasswordPassword;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsAuthConfig {
   auth_key?: string;
@@ -87,14 +87,14 @@ export interface GoogleIntegrationConnectorsConnectionArgsConfigVariable {
   encryption_key_value: GoogleIntegrationConnectorsConnectionArgsConfigVariableEncryptionKeyValue;
   secret_value: GoogleIntegrationConnectorsConnectionArgsConfigVariableSecretValue;
 }
-export interface GoogleIntegrationConnectorsConnectionArgsDestinationConfigdestination {
+export interface GoogleIntegrationConnectorsConnectionArgsDestinationConfigDestination {
   host?: string;
   port?: number;
   service_attachment?: string;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsDestinationConfig {
   key: string;
-  destination: GoogleIntegrationConnectorsConnectionArgsDestinationConfigdestination;
+  destination: GoogleIntegrationConnectorsConnectionArgsDestinationConfigDestination;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAdditionalVariableEncryptionKeyValue {
   kms_key_name?: string;
@@ -126,12 +126,12 @@ export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConf
   encryption_key_value: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigAdditionalVariableEncryptionKeyValue;
   secret_value: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigAdditionalVariableSecretValue;
 }
-export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPasswordpassword {
+export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPasswordPassword {
   secret_version: string;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPassword {
   username?: string;
-  password: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPasswordpassword;
+  password: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPasswordPassword;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfig {
   auth_key?: string;
@@ -139,14 +139,14 @@ export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConf
   additional_variable: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigAdditionalVariable;
   user_password: GoogleIntegrationConnectorsConnectionArgsEventingConfigAuthConfigUserPassword;
 }
-export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigRegistrationDestinationConfigdestination {
+export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigRegistrationDestinationConfigDestination {
   host?: string;
   port?: number;
   service_attachment?: string;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsEventingConfigRegistrationDestinationConfig {
   key?: string;
-  destination: GoogleIntegrationConnectorsConnectionArgsEventingConfigRegistrationDestinationConfigdestination;
+  destination: GoogleIntegrationConnectorsConnectionArgsEventingConfigRegistrationDestinationConfigDestination;
 }
 export interface GoogleIntegrationConnectorsConnectionArgsEventingConfig {
   enrichment_enabled?: boolean;
@@ -201,7 +201,7 @@ export interface GoogleIntegrationConnectorsConnectionArgsSslConfig {
   client_private_key_pass: GoogleIntegrationConnectorsConnectionArgsSslConfigClientPrivateKeyPass;
   private_server_certificate: GoogleIntegrationConnectorsConnectionArgsSslConfigPrivateServerCertificate;
 }
-export interface GoogleIntegrationConnectorsConnectionArgstimeouts {
+export interface GoogleIntegrationConnectorsConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -224,7 +224,7 @@ export interface GoogleIntegrationConnectorsConnectionArgs {
   log_config: GoogleIntegrationConnectorsConnectionArgsLogConfig;
   node_config: GoogleIntegrationConnectorsConnectionArgsNodeConfig;
   ssl_config: GoogleIntegrationConnectorsConnectionArgsSslConfig;
-  timeouts: GoogleIntegrationConnectorsConnectionArgstimeouts;
+  timeouts: GoogleIntegrationConnectorsConnectionArgsTimeouts;
 }
 export class google_integration_connectors_connection extends TerraformResource {
   readonly connection_revision!: string;

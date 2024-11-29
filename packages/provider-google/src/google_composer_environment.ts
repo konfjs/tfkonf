@@ -1,58 +1,58 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComposerEnvironmentArgsconfigDataRetentionConfigTaskLogsRetentionConfig {
+export interface GoogleComposerEnvironmentArgsConfigDataRetentionConfigTaskLogsRetentionConfig {
   storage_mode?: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigDataRetentionConfig {
-  task_logs_retention_config: GoogleComposerEnvironmentArgsconfigDataRetentionConfigTaskLogsRetentionConfig;
+export interface GoogleComposerEnvironmentArgsConfigDataRetentionConfig {
+  task_logs_retention_config: GoogleComposerEnvironmentArgsConfigDataRetentionConfigTaskLogsRetentionConfig;
 }
-export interface GoogleComposerEnvironmentArgsconfigDatabaseConfig {
+export interface GoogleComposerEnvironmentArgsConfigDatabaseConfig {
   machine_type?: string;
   zone?: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigEncryptionConfig {
+export interface GoogleComposerEnvironmentArgsConfigEncryptionConfig {
   kms_key_name: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigMaintenanceWindow {
+export interface GoogleComposerEnvironmentArgsConfigMaintenanceWindow {
   end_time: string;
   recurrence: string;
   start_time: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigMasterAuthorizedNetworksConfigCidrBlocks {
+export interface GoogleComposerEnvironmentArgsConfigMasterAuthorizedNetworksConfigCidrBlocks {
   cidr_block: string;
   display_name?: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigMasterAuthorizedNetworksConfig {
+export interface GoogleComposerEnvironmentArgsConfigMasterAuthorizedNetworksConfig {
   enabled: boolean;
-  cidr_blocks: GoogleComposerEnvironmentArgsconfigMasterAuthorizedNetworksConfigCidrBlocks;
+  cidr_blocks: GoogleComposerEnvironmentArgsConfigMasterAuthorizedNetworksConfigCidrBlocks;
 }
-export interface GoogleComposerEnvironmentArgsconfigNodeConfigIpAllocationPolicy {
+export interface GoogleComposerEnvironmentArgsConfigNodeConfigIpAllocationPolicy {
   cluster_ipv4_cidr_block?: string;
   cluster_secondary_range_name?: string;
   services_ipv4_cidr_block?: string;
   services_secondary_range_name?: string;
   use_ip_aliases?: boolean;
 }
-export interface GoogleComposerEnvironmentArgsconfigNodeConfig {
+export interface GoogleComposerEnvironmentArgsConfigNodeConfig {
   subnetwork?: string;
   tags?: string[];
-  ip_allocation_policy: GoogleComposerEnvironmentArgsconfigNodeConfigIpAllocationPolicy;
+  ip_allocation_policy: GoogleComposerEnvironmentArgsConfigNodeConfigIpAllocationPolicy;
 }
-export interface GoogleComposerEnvironmentArgsconfigPrivateEnvironmentConfig {
+export interface GoogleComposerEnvironmentArgsConfigPrivateEnvironmentConfig {
   enable_private_endpoint?: boolean;
 }
-export interface GoogleComposerEnvironmentArgsconfigRecoveryConfigScheduledSnapshotsConfig {
+export interface GoogleComposerEnvironmentArgsConfigRecoveryConfigScheduledSnapshotsConfig {
   enabled: boolean;
   snapshot_creation_schedule?: string;
   snapshot_location?: string;
   time_zone?: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigRecoveryConfig {
-  scheduled_snapshots_config: GoogleComposerEnvironmentArgsconfigRecoveryConfigScheduledSnapshotsConfig;
+export interface GoogleComposerEnvironmentArgsConfigRecoveryConfig {
+  scheduled_snapshots_config: GoogleComposerEnvironmentArgsConfigRecoveryConfigScheduledSnapshotsConfig;
 }
-export interface GoogleComposerEnvironmentArgsconfigSoftwareConfigCloudDataLineageIntegration {
+export interface GoogleComposerEnvironmentArgsConfigSoftwareConfigCloudDataLineageIntegration {
   enabled: boolean;
 }
-export interface GoogleComposerEnvironmentArgsconfigSoftwareConfig {
+export interface GoogleComposerEnvironmentArgsConfigSoftwareConfig {
   airflow_config_overrides?: {
     [key: string]: string;
   };
@@ -62,50 +62,50 @@ export interface GoogleComposerEnvironmentArgsconfigSoftwareConfig {
   pypi_packages?: {
     [key: string]: string;
   };
-  cloud_data_lineage_integration: GoogleComposerEnvironmentArgsconfigSoftwareConfigCloudDataLineageIntegration;
+  cloud_data_lineage_integration: GoogleComposerEnvironmentArgsConfigSoftwareConfigCloudDataLineageIntegration;
 }
-export interface GoogleComposerEnvironmentArgsconfigWebServerConfig {
+export interface GoogleComposerEnvironmentArgsConfigWebServerConfig {
   machine_type: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigWebServerNetworkAccessControlAllowedIpRange {
+export interface GoogleComposerEnvironmentArgsConfigWebServerNetworkAccessControlAllowedIpRange {
   description?: string;
   value: string;
 }
-export interface GoogleComposerEnvironmentArgsconfigWebServerNetworkAccessControl {
-  allowed_ip_range: GoogleComposerEnvironmentArgsconfigWebServerNetworkAccessControlAllowedIpRange;
+export interface GoogleComposerEnvironmentArgsConfigWebServerNetworkAccessControl {
+  allowed_ip_range: GoogleComposerEnvironmentArgsConfigWebServerNetworkAccessControlAllowedIpRange;
 }
-export interface GoogleComposerEnvironmentArgsconfigWorkloadsConfigscheduler {}
-export interface GoogleComposerEnvironmentArgsconfigWorkloadsConfigtriggerer {
+export interface GoogleComposerEnvironmentArgsConfigWorkloadsConfigScheduler {}
+export interface GoogleComposerEnvironmentArgsConfigWorkloadsConfigTriggerer {
   count: number;
   cpu: number;
   memory_gb: number;
 }
-export interface GoogleComposerEnvironmentArgsconfigWorkloadsConfigWebServer {}
-export interface GoogleComposerEnvironmentArgsconfigWorkloadsConfigworker {}
-export interface GoogleComposerEnvironmentArgsconfigWorkloadsConfig {
-  scheduler: GoogleComposerEnvironmentArgsconfigWorkloadsConfigscheduler;
-  triggerer: GoogleComposerEnvironmentArgsconfigWorkloadsConfigtriggerer;
-  web_server: GoogleComposerEnvironmentArgsconfigWorkloadsConfigWebServer;
-  worker: GoogleComposerEnvironmentArgsconfigWorkloadsConfigworker;
+export interface GoogleComposerEnvironmentArgsConfigWorkloadsConfigWebServer {}
+export interface GoogleComposerEnvironmentArgsConfigWorkloadsConfigWorker {}
+export interface GoogleComposerEnvironmentArgsConfigWorkloadsConfig {
+  scheduler: GoogleComposerEnvironmentArgsConfigWorkloadsConfigScheduler;
+  triggerer: GoogleComposerEnvironmentArgsConfigWorkloadsConfigTriggerer;
+  web_server: GoogleComposerEnvironmentArgsConfigWorkloadsConfigWebServer;
+  worker: GoogleComposerEnvironmentArgsConfigWorkloadsConfigWorker;
 }
-export interface GoogleComposerEnvironmentArgsconfig {
-  data_retention_config: GoogleComposerEnvironmentArgsconfigDataRetentionConfig;
-  database_config: GoogleComposerEnvironmentArgsconfigDatabaseConfig;
-  encryption_config: GoogleComposerEnvironmentArgsconfigEncryptionConfig;
-  maintenance_window: GoogleComposerEnvironmentArgsconfigMaintenanceWindow;
-  master_authorized_networks_config: GoogleComposerEnvironmentArgsconfigMasterAuthorizedNetworksConfig;
-  node_config: GoogleComposerEnvironmentArgsconfigNodeConfig;
-  private_environment_config: GoogleComposerEnvironmentArgsconfigPrivateEnvironmentConfig;
-  recovery_config: GoogleComposerEnvironmentArgsconfigRecoveryConfig;
-  software_config: GoogleComposerEnvironmentArgsconfigSoftwareConfig;
-  web_server_config: GoogleComposerEnvironmentArgsconfigWebServerConfig;
-  web_server_network_access_control: GoogleComposerEnvironmentArgsconfigWebServerNetworkAccessControl;
-  workloads_config: GoogleComposerEnvironmentArgsconfigWorkloadsConfig;
+export interface GoogleComposerEnvironmentArgsConfig {
+  data_retention_config: GoogleComposerEnvironmentArgsConfigDataRetentionConfig;
+  database_config: GoogleComposerEnvironmentArgsConfigDatabaseConfig;
+  encryption_config: GoogleComposerEnvironmentArgsConfigEncryptionConfig;
+  maintenance_window: GoogleComposerEnvironmentArgsConfigMaintenanceWindow;
+  master_authorized_networks_config: GoogleComposerEnvironmentArgsConfigMasterAuthorizedNetworksConfig;
+  node_config: GoogleComposerEnvironmentArgsConfigNodeConfig;
+  private_environment_config: GoogleComposerEnvironmentArgsConfigPrivateEnvironmentConfig;
+  recovery_config: GoogleComposerEnvironmentArgsConfigRecoveryConfig;
+  software_config: GoogleComposerEnvironmentArgsConfigSoftwareConfig;
+  web_server_config: GoogleComposerEnvironmentArgsConfigWebServerConfig;
+  web_server_network_access_control: GoogleComposerEnvironmentArgsConfigWebServerNetworkAccessControl;
+  workloads_config: GoogleComposerEnvironmentArgsConfigWorkloadsConfig;
 }
 export interface GoogleComposerEnvironmentArgsStorageConfig {
   bucket: string;
 }
-export interface GoogleComposerEnvironmentArgstimeouts {
+export interface GoogleComposerEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -115,9 +115,9 @@ export interface GoogleComposerEnvironmentArgs {
     [key: string]: string;
   };
   name: string;
-  config: GoogleComposerEnvironmentArgsconfig;
+  config: GoogleComposerEnvironmentArgsConfig;
   storage_config: GoogleComposerEnvironmentArgsStorageConfig;
-  timeouts: GoogleComposerEnvironmentArgstimeouts;
+  timeouts: GoogleComposerEnvironmentArgsTimeouts;
 }
 export class google_composer_environment extends TerraformResource {
   readonly effective_labels!: {

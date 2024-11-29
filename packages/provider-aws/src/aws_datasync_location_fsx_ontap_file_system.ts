@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfsMountOptions {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsProtocolNfsMountOptions {
   version?: string;
 }
-export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfs {
-  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfsMountOptions;
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsProtocolNfs {
+  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsProtocolNfsMountOptions;
 }
-export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmbMountOptions {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsProtocolSmbMountOptions {
   version?: string;
 }
-export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmb {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsProtocolSmb {
   domain?: string;
   password: string;
   user: string;
-  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmbMountOptions;
+  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsProtocolSmbMountOptions;
 }
-export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocol {
-  nfs: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfs;
-  smb: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmb;
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsProtocol {
+  nfs: AwsDatasyncLocationFsxOntapFileSystemArgsProtocolNfs;
+  smb: AwsDatasyncLocationFsxOntapFileSystemArgsProtocolSmb;
 }
 export interface AwsDatasyncLocationFsxOntapFileSystemArgs {
   security_group_arns: string[];
@@ -24,7 +24,7 @@ export interface AwsDatasyncLocationFsxOntapFileSystemArgs {
   tags?: {
     [key: string]: string;
   };
-  protocol: AwsDatasyncLocationFsxOntapFileSystemArgsprotocol;
+  protocol: AwsDatasyncLocationFsxOntapFileSystemArgsProtocol;
 }
 export class aws_datasync_location_fsx_ontap_file_system extends TerraformResource {
   readonly arn!: string;

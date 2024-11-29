@@ -19,13 +19,13 @@ export interface GoogleIapSettingsArgsAccessSettingsReauthSettings {
   method: string;
   policy_type: string;
 }
-export interface GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsoauth2 {
+export interface GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsOauth2 {
   client_id?: string;
   client_secret?: string;
 }
 export interface GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettings {
   workforce_pools?: string[];
-  oauth2: GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsoauth2;
+  oauth2: GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsOauth2;
 }
 export interface GoogleIapSettingsArgsAccessSettings {
   identity_sources?: string[];
@@ -55,7 +55,7 @@ export interface GoogleIapSettingsArgsApplicationSettings {
   attribute_propagation_settings: GoogleIapSettingsArgsApplicationSettingsAttributePropagationSettings;
   csm_settings: GoogleIapSettingsArgsApplicationSettingsCsmSettings;
 }
-export interface GoogleIapSettingsArgstimeouts {
+export interface GoogleIapSettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -64,7 +64,7 @@ export interface GoogleIapSettingsArgs {
   name: string;
   access_settings: GoogleIapSettingsArgsAccessSettings;
   application_settings: GoogleIapSettingsArgsApplicationSettings;
-  timeouts: GoogleIapSettingsArgstimeouts;
+  timeouts: GoogleIapSettingsArgsTimeouts;
 }
 export class google_iap_settings extends TerraformResource {
   readonly id?: string;

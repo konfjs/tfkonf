@@ -24,25 +24,25 @@ export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyRetentionP
   max_retention_days: number;
   on_source_disk_delete?: string;
 }
-export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleDailySchedule {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleDailySchedule {
   days_in_cycle: number;
   start_time: string;
 }
-export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleHourlySchedule {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleHourlySchedule {
   hours_in_cycle: number;
   start_time: string;
 }
-export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklyScheduleDayOfWeeks {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks {
   day: string;
   start_time: string;
 }
-export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklySchedule {
-  day_of_weeks: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklyScheduleDayOfWeeks;
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleWeeklySchedule {
+  day_of_weeks: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks;
 }
-export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyschedule {
-  daily_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleDailySchedule;
-  hourly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleHourlySchedule;
-  weekly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklySchedule;
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySchedule {
+  daily_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleDailySchedule;
+  hourly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleHourlySchedule;
+  weekly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyScheduleWeeklySchedule;
 }
 export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySnapshotProperties {
   chain_name?: string;
@@ -54,10 +54,10 @@ export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySnapshotPr
 }
 export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicy {
   retention_policy: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyRetentionPolicy;
-  schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyschedule;
+  schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySchedule;
   snapshot_properties: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySnapshotProperties;
 }
-export interface GoogleComputeResourcePolicyArgstimeouts {
+export interface GoogleComputeResourcePolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -69,7 +69,7 @@ export interface GoogleComputeResourcePolicyArgs {
   group_placement_policy: GoogleComputeResourcePolicyArgsGroupPlacementPolicy;
   instance_schedule_policy: GoogleComputeResourcePolicyArgsInstanceSchedulePolicy;
   snapshot_schedule_policy: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicy;
-  timeouts: GoogleComputeResourcePolicyArgstimeouts;
+  timeouts: GoogleComputeResourcePolicyArgsTimeouts;
 }
 export class google_compute_resource_policy extends TerraformResource {
   readonly id?: string;

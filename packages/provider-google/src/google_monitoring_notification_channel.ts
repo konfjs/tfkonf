@@ -4,7 +4,7 @@ export interface GoogleMonitoringNotificationChannelArgsSensitiveLabels {
   password?: string;
   service_key?: string;
 }
-export interface GoogleMonitoringNotificationChannelArgstimeouts {
+export interface GoogleMonitoringNotificationChannelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface GoogleMonitoringNotificationChannelArgs {
     [key: string]: string;
   };
   sensitive_labels: GoogleMonitoringNotificationChannelArgsSensitiveLabels;
-  timeouts: GoogleMonitoringNotificationChannelArgstimeouts;
+  timeouts: GoogleMonitoringNotificationChannelArgsTimeouts;
 }
 export class google_monitoring_notification_channel extends TerraformResource {
   readonly id?: string;

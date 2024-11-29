@@ -3,7 +3,7 @@ export interface GoogleHealthcareDicomStoreArgsNotificationConfig {
   pubsub_topic: string;
   send_for_bulk_import?: boolean;
 }
-export interface GoogleHealthcareDicomStoreArgstimeouts {
+export interface GoogleHealthcareDicomStoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleHealthcareDicomStoreArgs {
   };
   name: string;
   notification_config: GoogleHealthcareDicomStoreArgsNotificationConfig;
-  timeouts: GoogleHealthcareDicomStoreArgstimeouts;
+  timeouts: GoogleHealthcareDicomStoreArgsTimeouts;
 }
 export class google_healthcare_dicom_store extends TerraformResource {
   readonly effective_labels!: {

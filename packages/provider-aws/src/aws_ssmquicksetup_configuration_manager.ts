@@ -7,7 +7,7 @@ export interface AwsSsmquicksetupConfigurationManagerArgsConfigurationDefinition
   };
   type: string;
 }
-export interface AwsSsmquicksetupConfigurationManagerArgstimeouts {
+export interface AwsSsmquicksetupConfigurationManagerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface AwsSsmquicksetupConfigurationManagerArgs {
     [key: string]: string;
   };
   configuration_definition: AwsSsmquicksetupConfigurationManagerArgsConfigurationDefinition;
-  timeouts: AwsSsmquicksetupConfigurationManagerArgstimeouts;
+  timeouts: AwsSsmquicksetupConfigurationManagerArgsTimeouts;
 }
 export class aws_ssmquicksetup_configuration_manager extends TerraformResource {
   readonly description?: string;

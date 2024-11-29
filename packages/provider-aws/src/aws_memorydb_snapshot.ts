@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMemorydbSnapshotArgstimeouts {
+export interface AwsMemorydbSnapshotArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsMemorydbSnapshotArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMemorydbSnapshotArgstimeouts;
+  timeouts: AwsMemorydbSnapshotArgsTimeouts;
 }
 export class aws_memorydb_snapshot extends TerraformResource {
   readonly arn!: string;

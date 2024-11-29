@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GooglePubsubTopicIamMemberArgscondition {
+export interface GooglePubsubTopicIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GooglePubsubTopicIamMemberArgs {
   member: string;
   role: string;
   topic: string;
-  condition: GooglePubsubTopicIamMemberArgscondition;
+  condition: GooglePubsubTopicIamMemberArgsCondition;
 }
 export class google_pubsub_topic_iam_member extends TerraformResource {
   readonly etag!: string;

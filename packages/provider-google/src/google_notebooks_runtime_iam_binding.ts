@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNotebooksRuntimeIamBindingArgscondition {
+export interface GoogleNotebooksRuntimeIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleNotebooksRuntimeIamBindingArgs {
   members: string[];
   role: string;
   runtime_name: string;
-  condition: GoogleNotebooksRuntimeIamBindingArgscondition;
+  condition: GoogleNotebooksRuntimeIamBindingArgsCondition;
 }
 export class google_notebooks_runtime_iam_binding extends TerraformResource {
   readonly etag!: string;

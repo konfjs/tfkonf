@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeEndpointAttachmentArgstimeouts {
+export interface GoogleApigeeEndpointAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleApigeeEndpointAttachmentArgs {
   location: string;
   org_id: string;
   service_attachment: string;
-  timeouts: GoogleApigeeEndpointAttachmentArgstimeouts;
+  timeouts: GoogleApigeeEndpointAttachmentArgsTimeouts;
 }
 export class google_apigee_endpoint_attachment extends TerraformResource {
   readonly connection_state!: string;

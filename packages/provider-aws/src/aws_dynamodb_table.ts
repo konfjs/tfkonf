@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDynamodbTableArgsattribute {
+export interface AwsDynamodbTableArgsAttribute {
   name: string;
   type: string;
 }
@@ -12,12 +12,12 @@ export interface AwsDynamodbTableArgsGlobalSecondaryIndex {
   range_key?: string;
   on_demand_throughput: AwsDynamodbTableArgsGlobalSecondaryIndexOnDemandThroughput;
 }
-export interface AwsDynamodbTableArgsImportTableInputFormatOptionscsv {
+export interface AwsDynamodbTableArgsImportTableInputFormatOptionsCsv {
   delimiter?: string;
   header_list?: string[];
 }
 export interface AwsDynamodbTableArgsImportTableInputFormatOptions {
-  csv: AwsDynamodbTableArgsImportTableInputFormatOptionscsv;
+  csv: AwsDynamodbTableArgsImportTableInputFormatOptionsCsv;
 }
 export interface AwsDynamodbTableArgsImportTableS3BucketSource {
   bucket: string;
@@ -40,7 +40,7 @@ export interface AwsDynamodbTableArgsOnDemandThroughput {}
 export interface AwsDynamodbTableArgsPointInTimeRecovery {
   enabled: boolean;
 }
-export interface AwsDynamodbTableArgsreplica {
+export interface AwsDynamodbTableArgsReplica {
   point_in_time_recovery?: boolean;
   propagate_tags?: boolean;
   region_name: string;
@@ -48,12 +48,12 @@ export interface AwsDynamodbTableArgsreplica {
 export interface AwsDynamodbTableArgsServerSideEncryption {
   enabled: boolean;
 }
-export interface AwsDynamodbTableArgstimeouts {
+export interface AwsDynamodbTableArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AwsDynamodbTableArgsttl {
+export interface AwsDynamodbTableArgsTtl {
   attribute_name?: string;
   enabled?: boolean;
 }
@@ -71,16 +71,16 @@ export interface AwsDynamodbTableArgs {
   tags?: {
     [key: string]: string;
   };
-  attribute: AwsDynamodbTableArgsattribute;
+  attribute: AwsDynamodbTableArgsAttribute;
   global_secondary_index: AwsDynamodbTableArgsGlobalSecondaryIndex;
   import_table: AwsDynamodbTableArgsImportTable;
   local_secondary_index: AwsDynamodbTableArgsLocalSecondaryIndex;
   on_demand_throughput: AwsDynamodbTableArgsOnDemandThroughput;
   point_in_time_recovery: AwsDynamodbTableArgsPointInTimeRecovery;
-  replica: AwsDynamodbTableArgsreplica;
+  replica: AwsDynamodbTableArgsReplica;
   server_side_encryption: AwsDynamodbTableArgsServerSideEncryption;
-  timeouts: AwsDynamodbTableArgstimeouts;
-  ttl: AwsDynamodbTableArgsttl;
+  timeouts: AwsDynamodbTableArgsTimeouts;
+  ttl: AwsDynamodbTableArgsTtl;
 }
 export class aws_dynamodb_table extends TerraformResource {
   readonly arn!: string;

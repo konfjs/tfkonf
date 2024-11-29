@@ -3,7 +3,7 @@ export interface AwsRedshiftserverlessWorkgroupArgsConfigParameter {
   parameter_key: string;
   parameter_value: string;
 }
-export interface AwsRedshiftserverlessWorkgroupArgstimeouts {
+export interface AwsRedshiftserverlessWorkgroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface AwsRedshiftserverlessWorkgroupArgs {
   };
   workgroup_name: string;
   config_parameter: AwsRedshiftserverlessWorkgroupArgsConfigParameter;
-  timeouts: AwsRedshiftserverlessWorkgroupArgstimeouts;
+  timeouts: AwsRedshiftserverlessWorkgroupArgsTimeouts;
 }
 export class aws_redshiftserverless_workgroup extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsServicecatalogProvisioningArtifactArgstimeouts {
+export interface AwsServicecatalogProvisioningArtifactArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -14,7 +14,7 @@ export interface AwsServicecatalogProvisioningArtifactArgs {
   template_physical_id?: string;
   template_url?: string;
   type?: string;
-  timeouts: AwsServicecatalogProvisioningArtifactArgstimeouts;
+  timeouts: AwsServicecatalogProvisioningArtifactArgsTimeouts;
 }
 export class aws_servicecatalog_provisioning_artifact extends TerraformResource {
   readonly created_time!: string;

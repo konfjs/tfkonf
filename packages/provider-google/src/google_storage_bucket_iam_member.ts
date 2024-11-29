@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleStorageBucketIamMemberArgscondition {
+export interface GoogleStorageBucketIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleStorageBucketIamMemberArgs {
   bucket: string;
   member: string;
   role: string;
-  condition: GoogleStorageBucketIamMemberArgscondition;
+  condition: GoogleStorageBucketIamMemberArgsCondition;
 }
 export class google_storage_bucket_iam_member extends TerraformResource {
   readonly etag!: string;

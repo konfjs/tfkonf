@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleWorkflowsWorkflowArgstimeouts {
+export interface GoogleWorkflowsWorkflowArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface GoogleWorkflowsWorkflowArgs {
   user_env_vars?: {
     [key: string]: string;
   };
-  timeouts: GoogleWorkflowsWorkflowArgstimeouts;
+  timeouts: GoogleWorkflowsWorkflowArgsTimeouts;
 }
 export class google_workflows_workflow extends TerraformResource {
   readonly create_time!: string;

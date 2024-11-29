@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRamResourceShareArgstimeouts {
+export interface AwsRamResourceShareArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsRamResourceShareArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRamResourceShareArgstimeouts;
+  timeouts: AwsRamResourceShareArgsTimeouts;
 }
 export class aws_ram_resource_share extends TerraformResource {
   readonly arn!: string;

@@ -1,79 +1,79 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketReplicationConfigurationArgsruleDeleteMarkerReplication {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDeleteMarkerReplication {
   status: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationAccessControlTranslation {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationAccessControlTranslation {
   owner: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationEncryptionConfiguration {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationEncryptionConfiguration {
   replica_kms_key_id: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationmetricsEventThreshold {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationMetricsEventThreshold {
   minutes: number;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationmetrics {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationMetrics {
   status: string;
-  event_threshold: AwsS3BucketReplicationConfigurationArgsruledestinationmetricsEventThreshold;
+  event_threshold: AwsS3BucketReplicationConfigurationArgsRuleDestinationMetricsEventThreshold;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationReplicationTimetime {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationReplicationTimeTime {
   minutes: number;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestinationReplicationTime {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestinationReplicationTime {
   status: string;
-  time: AwsS3BucketReplicationConfigurationArgsruledestinationReplicationTimetime;
+  time: AwsS3BucketReplicationConfigurationArgsRuleDestinationReplicationTimeTime;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruledestination {
+export interface AwsS3BucketReplicationConfigurationArgsRuleDestination {
   account?: string;
   bucket: string;
   storage_class?: string;
-  access_control_translation: AwsS3BucketReplicationConfigurationArgsruledestinationAccessControlTranslation;
-  encryption_configuration: AwsS3BucketReplicationConfigurationArgsruledestinationEncryptionConfiguration;
-  metrics: AwsS3BucketReplicationConfigurationArgsruledestinationmetrics;
-  replication_time: AwsS3BucketReplicationConfigurationArgsruledestinationReplicationTime;
+  access_control_translation: AwsS3BucketReplicationConfigurationArgsRuleDestinationAccessControlTranslation;
+  encryption_configuration: AwsS3BucketReplicationConfigurationArgsRuleDestinationEncryptionConfiguration;
+  metrics: AwsS3BucketReplicationConfigurationArgsRuleDestinationMetrics;
+  replication_time: AwsS3BucketReplicationConfigurationArgsRuleDestinationReplicationTime;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruleExistingObjectReplication {
+export interface AwsS3BucketReplicationConfigurationArgsRuleExistingObjectReplication {
   status: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsrulefilterand {
+export interface AwsS3BucketReplicationConfigurationArgsRuleFilterAnd {
   prefix?: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface AwsS3BucketReplicationConfigurationArgsrulefiltertag {
+export interface AwsS3BucketReplicationConfigurationArgsRuleFilterTag {
   key: string;
   value: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsrulefilter {
+export interface AwsS3BucketReplicationConfigurationArgsRuleFilter {
   prefix?: string;
-  and: AwsS3BucketReplicationConfigurationArgsrulefilterand;
-  tag: AwsS3BucketReplicationConfigurationArgsrulefiltertag;
+  and: AwsS3BucketReplicationConfigurationArgsRuleFilterAnd;
+  tag: AwsS3BucketReplicationConfigurationArgsRuleFilterTag;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteriaReplicaModifications {
+export interface AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteriaReplicaModifications {
   status: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteriaSseKmsEncryptedObjects {
+export interface AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteriaSseKmsEncryptedObjects {
   status: string;
 }
-export interface AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteria {
-  replica_modifications: AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteriaReplicaModifications;
-  sse_kms_encrypted_objects: AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteriaSseKmsEncryptedObjects;
+export interface AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteria {
+  replica_modifications: AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteriaReplicaModifications;
+  sse_kms_encrypted_objects: AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteriaSseKmsEncryptedObjects;
 }
-export interface AwsS3BucketReplicationConfigurationArgsrule {
+export interface AwsS3BucketReplicationConfigurationArgsRule {
   prefix?: string;
   priority?: number;
   status: string;
-  delete_marker_replication: AwsS3BucketReplicationConfigurationArgsruleDeleteMarkerReplication;
-  destination: AwsS3BucketReplicationConfigurationArgsruledestination;
-  existing_object_replication: AwsS3BucketReplicationConfigurationArgsruleExistingObjectReplication;
-  filter: AwsS3BucketReplicationConfigurationArgsrulefilter;
-  source_selection_criteria: AwsS3BucketReplicationConfigurationArgsruleSourceSelectionCriteria;
+  delete_marker_replication: AwsS3BucketReplicationConfigurationArgsRuleDeleteMarkerReplication;
+  destination: AwsS3BucketReplicationConfigurationArgsRuleDestination;
+  existing_object_replication: AwsS3BucketReplicationConfigurationArgsRuleExistingObjectReplication;
+  filter: AwsS3BucketReplicationConfigurationArgsRuleFilter;
+  source_selection_criteria: AwsS3BucketReplicationConfigurationArgsRuleSourceSelectionCriteria;
 }
 export interface AwsS3BucketReplicationConfigurationArgs {
   bucket: string;
   role: string;
   token?: string;
-  rule: AwsS3BucketReplicationConfigurationArgsrule;
+  rule: AwsS3BucketReplicationConfigurationArgsRule;
 }
 export class aws_s3_bucket_replication_configuration extends TerraformResource {
   readonly id?: string;

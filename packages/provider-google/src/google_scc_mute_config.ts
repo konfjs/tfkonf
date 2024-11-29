@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSccMuteConfigArgstimeouts {
+export interface GoogleSccMuteConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleSccMuteConfigArgs {
   filter: string;
   mute_config_id: string;
   parent: string;
-  timeouts: GoogleSccMuteConfigArgstimeouts;
+  timeouts: GoogleSccMuteConfigArgsTimeouts;
 }
 export class google_scc_mute_config extends TerraformResource {
   readonly create_time!: string;

@@ -7,7 +7,7 @@ export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgsDestinationCo
 export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgsEndpointConfiguration {
   endpoint_id?: string;
 }
-export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgstimeouts {
+export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,7 +15,7 @@ export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgs {
   listener_arn: string;
   destination_configuration: AwsGlobalacceleratorCustomRoutingEndpointGroupArgsDestinationConfiguration;
   endpoint_configuration: AwsGlobalacceleratorCustomRoutingEndpointGroupArgsEndpointConfiguration;
-  timeouts: AwsGlobalacceleratorCustomRoutingEndpointGroupArgstimeouts;
+  timeouts: AwsGlobalacceleratorCustomRoutingEndpointGroupArgsTimeouts;
 }
 export class aws_globalaccelerator_custom_routing_endpoint_group extends TerraformResource {
   readonly arn!: string;

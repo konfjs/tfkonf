@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleArtifactRegistryRepositoryIamMemberArgscondition {
+export interface GoogleArtifactRegistryRepositoryIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleArtifactRegistryRepositoryIamMemberArgs {
   member: string;
   repository: string;
   role: string;
-  condition: GoogleArtifactRegistryRepositoryIamMemberArgscondition;
+  condition: GoogleArtifactRegistryRepositoryIamMemberArgsCondition;
 }
 export class google_artifact_registry_repository_iam_member extends TerraformResource {
   readonly etag!: string;

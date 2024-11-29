@@ -45,7 +45,7 @@ export interface AwsSpotInstanceRequestArgsRootBlockDevice {
     [key: string]: string;
   };
 }
-export interface AwsSpotInstanceRequestArgstimeouts {
+export interface AwsSpotInstanceRequestArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -78,7 +78,7 @@ export interface AwsSpotInstanceRequestArgs {
   network_interface: AwsSpotInstanceRequestArgsNetworkInterface;
   private_dns_name_options: AwsSpotInstanceRequestArgsPrivateDnsNameOptions;
   root_block_device: AwsSpotInstanceRequestArgsRootBlockDevice;
-  timeouts: AwsSpotInstanceRequestArgstimeouts;
+  timeouts: AwsSpotInstanceRequestArgsTimeouts;
 }
 export class aws_spot_instance_request extends TerraformResource {
   readonly ami?: string;

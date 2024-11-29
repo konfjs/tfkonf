@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GooglePrivatecaCertificateTemplateIamBindingArgscondition {
+export interface GooglePrivatecaCertificateTemplateIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GooglePrivatecaCertificateTemplateIamBindingArgs {
   certificate_template: string;
   members: string[];
   role: string;
-  condition: GooglePrivatecaCertificateTemplateIamBindingArgscondition;
+  condition: GooglePrivatecaCertificateTemplateIamBindingArgsCondition;
 }
 export class google_privateca_certificate_template_iam_binding extends TerraformResource {
   readonly etag!: string;

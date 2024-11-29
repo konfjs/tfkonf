@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleVertexAiFeatureOnlineStoreArgsbigtableAutoScaling {
+export interface GoogleVertexAiFeatureOnlineStoreArgsBigtableAutoScaling {
   max_node_count: number;
   min_node_count: number;
 }
-export interface GoogleVertexAiFeatureOnlineStoreArgsbigtable {
-  auto_scaling: GoogleVertexAiFeatureOnlineStoreArgsbigtableAutoScaling;
+export interface GoogleVertexAiFeatureOnlineStoreArgsBigtable {
+  auto_scaling: GoogleVertexAiFeatureOnlineStoreArgsBigtableAutoScaling;
 }
 export interface GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpointPrivateServiceConnectConfig {
   enable_private_service_connect: boolean;
@@ -13,8 +13,8 @@ export interface GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpointPri
 export interface GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpoint {
   private_service_connect_config: GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpointPrivateServiceConnectConfig;
 }
-export interface GoogleVertexAiFeatureOnlineStoreArgsoptimized {}
-export interface GoogleVertexAiFeatureOnlineStoreArgstimeouts {
+export interface GoogleVertexAiFeatureOnlineStoreArgsOptimized {}
+export interface GoogleVertexAiFeatureOnlineStoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,10 +25,10 @@ export interface GoogleVertexAiFeatureOnlineStoreArgs {
     [key: string]: string;
   };
   name: string;
-  bigtable: GoogleVertexAiFeatureOnlineStoreArgsbigtable;
+  bigtable: GoogleVertexAiFeatureOnlineStoreArgsBigtable;
   dedicated_serving_endpoint: GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpoint;
-  optimized: GoogleVertexAiFeatureOnlineStoreArgsoptimized;
-  timeouts: GoogleVertexAiFeatureOnlineStoreArgstimeouts;
+  optimized: GoogleVertexAiFeatureOnlineStoreArgsOptimized;
+  timeouts: GoogleVertexAiFeatureOnlineStoreArgsTimeouts;
 }
 export class google_vertex_ai_feature_online_store extends TerraformResource {
   readonly create_time!: string;

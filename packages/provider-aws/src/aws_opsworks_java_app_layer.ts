@@ -25,7 +25,7 @@ export interface AwsOpsworksJavaAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksJavaAppLayerArgs {
   app_server?: string;

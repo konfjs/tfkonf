@@ -9,18 +9,18 @@ export interface GoogleComputeInstanceTemplateArgsConfidentialInstanceConfig {
   confidential_instance_type?: string;
   enable_confidential_compute?: boolean;
 }
-export interface GoogleComputeInstanceTemplateArgsdiskDiskEncryptionKey {
+export interface GoogleComputeInstanceTemplateArgsDiskDiskEncryptionKey {
   kms_key_self_link: string;
 }
-export interface GoogleComputeInstanceTemplateArgsdiskSourceImageEncryptionKey {
-  kms_key_self_link: string;
-  kms_key_service_account?: string;
-}
-export interface GoogleComputeInstanceTemplateArgsdiskSourceSnapshotEncryptionKey {
+export interface GoogleComputeInstanceTemplateArgsDiskSourceImageEncryptionKey {
   kms_key_self_link: string;
   kms_key_service_account?: string;
 }
-export interface GoogleComputeInstanceTemplateArgsdisk {
+export interface GoogleComputeInstanceTemplateArgsDiskSourceSnapshotEncryptionKey {
+  kms_key_self_link: string;
+  kms_key_service_account?: string;
+}
+export interface GoogleComputeInstanceTemplateArgsDisk {
   auto_delete?: boolean;
   disk_name?: string;
   labels?: {
@@ -32,9 +32,9 @@ export interface GoogleComputeInstanceTemplateArgsdisk {
   resource_policies?: string[];
   source?: string;
   source_snapshot?: string;
-  disk_encryption_key: GoogleComputeInstanceTemplateArgsdiskDiskEncryptionKey;
-  source_image_encryption_key: GoogleComputeInstanceTemplateArgsdiskSourceImageEncryptionKey;
-  source_snapshot_encryption_key: GoogleComputeInstanceTemplateArgsdiskSourceSnapshotEncryptionKey;
+  disk_encryption_key: GoogleComputeInstanceTemplateArgsDiskDiskEncryptionKey;
+  source_image_encryption_key: GoogleComputeInstanceTemplateArgsDiskSourceImageEncryptionKey;
+  source_snapshot_encryption_key: GoogleComputeInstanceTemplateArgsDiskSourceSnapshotEncryptionKey;
 }
 export interface GoogleComputeInstanceTemplateArgsGuestAccelerator {
   count: number;
@@ -67,31 +67,31 @@ export interface GoogleComputeInstanceTemplateArgsReservationAffinity {
   type: string;
   specific_reservation: GoogleComputeInstanceTemplateArgsReservationAffinitySpecificReservation;
 }
-export interface GoogleComputeInstanceTemplateArgsschedulingLocalSsdRecoveryTimeout {
+export interface GoogleComputeInstanceTemplateArgsSchedulingLocalSsdRecoveryTimeout {
   nanos?: number;
   seconds: number;
 }
-export interface GoogleComputeInstanceTemplateArgsschedulingMaxRunDuration {
+export interface GoogleComputeInstanceTemplateArgsSchedulingMaxRunDuration {
   nanos?: number;
   seconds: number;
 }
-export interface GoogleComputeInstanceTemplateArgsschedulingNodeAffinities {
+export interface GoogleComputeInstanceTemplateArgsSchedulingNodeAffinities {
   key: string;
   operator: string;
   values: string[];
 }
-export interface GoogleComputeInstanceTemplateArgsschedulingOnInstanceStopAction {
+export interface GoogleComputeInstanceTemplateArgsSchedulingOnInstanceStopAction {
   discard_local_ssd?: boolean;
 }
-export interface GoogleComputeInstanceTemplateArgsscheduling {
+export interface GoogleComputeInstanceTemplateArgsScheduling {
   automatic_restart?: boolean;
   instance_termination_action?: string;
   min_node_cpus?: number;
   preemptible?: boolean;
-  local_ssd_recovery_timeout: GoogleComputeInstanceTemplateArgsschedulingLocalSsdRecoveryTimeout;
-  max_run_duration: GoogleComputeInstanceTemplateArgsschedulingMaxRunDuration;
-  node_affinities: GoogleComputeInstanceTemplateArgsschedulingNodeAffinities;
-  on_instance_stop_action: GoogleComputeInstanceTemplateArgsschedulingOnInstanceStopAction;
+  local_ssd_recovery_timeout: GoogleComputeInstanceTemplateArgsSchedulingLocalSsdRecoveryTimeout;
+  max_run_duration: GoogleComputeInstanceTemplateArgsSchedulingMaxRunDuration;
+  node_affinities: GoogleComputeInstanceTemplateArgsSchedulingNodeAffinities;
+  on_instance_stop_action: GoogleComputeInstanceTemplateArgsSchedulingOnInstanceStopAction;
 }
 export interface GoogleComputeInstanceTemplateArgsServiceAccount {
   scopes: string[];
@@ -101,7 +101,7 @@ export interface GoogleComputeInstanceTemplateArgsShieldedInstanceConfig {
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface GoogleComputeInstanceTemplateArgstimeouts {
+export interface GoogleComputeInstanceTemplateArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -126,15 +126,15 @@ export interface GoogleComputeInstanceTemplateArgs {
   tags?: string[];
   advanced_machine_features: GoogleComputeInstanceTemplateArgsAdvancedMachineFeatures;
   confidential_instance_config: GoogleComputeInstanceTemplateArgsConfidentialInstanceConfig;
-  disk: GoogleComputeInstanceTemplateArgsdisk;
+  disk: GoogleComputeInstanceTemplateArgsDisk;
   guest_accelerator: GoogleComputeInstanceTemplateArgsGuestAccelerator;
   network_interface: GoogleComputeInstanceTemplateArgsNetworkInterface;
   network_performance_config: GoogleComputeInstanceTemplateArgsNetworkPerformanceConfig;
   reservation_affinity: GoogleComputeInstanceTemplateArgsReservationAffinity;
-  scheduling: GoogleComputeInstanceTemplateArgsscheduling;
+  scheduling: GoogleComputeInstanceTemplateArgsScheduling;
   service_account: GoogleComputeInstanceTemplateArgsServiceAccount;
   shielded_instance_config: GoogleComputeInstanceTemplateArgsShieldedInstanceConfig;
-  timeouts: GoogleComputeInstanceTemplateArgstimeouts;
+  timeouts: GoogleComputeInstanceTemplateArgsTimeouts;
 }
 export class google_compute_instance_template extends TerraformResource {
   readonly creation_timestamp!: string;

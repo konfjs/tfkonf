@@ -13,18 +13,18 @@ export interface AwsWafWebAclArgsLoggingConfiguration {
   log_destination: string;
   redacted_fields: AwsWafWebAclArgsLoggingConfigurationRedactedFields;
 }
-export interface AwsWafWebAclArgsrulesaction {
+export interface AwsWafWebAclArgsRulesAction {
   type: string;
 }
-export interface AwsWafWebAclArgsrulesOverrideAction {
+export interface AwsWafWebAclArgsRulesOverrideAction {
   type: string;
 }
-export interface AwsWafWebAclArgsrules {
+export interface AwsWafWebAclArgsRules {
   priority: number;
   rule_id: string;
   type?: string;
-  action: AwsWafWebAclArgsrulesaction;
-  override_action: AwsWafWebAclArgsrulesOverrideAction;
+  action: AwsWafWebAclArgsRulesAction;
+  override_action: AwsWafWebAclArgsRulesOverrideAction;
 }
 export interface AwsWafWebAclArgs {
   metric_name: string;
@@ -34,7 +34,7 @@ export interface AwsWafWebAclArgs {
   };
   default_action: AwsWafWebAclArgsDefaultAction;
   logging_configuration: AwsWafWebAclArgsLoggingConfiguration;
-  rules: AwsWafWebAclArgsrules;
+  rules: AwsWafWebAclArgsRules;
 }
 export class aws_waf_web_acl extends TerraformResource {
   readonly arn!: string;

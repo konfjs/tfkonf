@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecuritylakeAwsLogSourceArgssource {
+export interface AwsSecuritylakeAwsLogSourceArgsSource {
   regions: string[];
   source_name: string;
 }
 export interface AwsSecuritylakeAwsLogSourceArgs {
-  source: AwsSecuritylakeAwsLogSourceArgssource;
+  source: AwsSecuritylakeAwsLogSourceArgsSource;
 }
 export class aws_securitylake_aws_log_source extends TerraformResource {
   readonly id!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerSiteToSiteVpnAttachmentArgstimeouts {
+export interface AwsNetworkmanagerSiteToSiteVpnAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsNetworkmanagerSiteToSiteVpnAttachmentArgs {
     [key: string]: string;
   };
   vpn_connection_arn: string;
-  timeouts: AwsNetworkmanagerSiteToSiteVpnAttachmentArgstimeouts;
+  timeouts: AwsNetworkmanagerSiteToSiteVpnAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_site_to_site_vpn_attachment extends TerraformResource {
   readonly arn!: string;

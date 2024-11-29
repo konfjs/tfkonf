@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDxHostedTransitVirtualInterfaceAccepterArgstimeouts {
+export interface AwsDxHostedTransitVirtualInterfaceAccepterArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsDxHostedTransitVirtualInterfaceAccepterArgs {
     [key: string]: string;
   };
   virtual_interface_id: string;
-  timeouts: AwsDxHostedTransitVirtualInterfaceAccepterArgstimeouts;
+  timeouts: AwsDxHostedTransitVirtualInterfaceAccepterArgsTimeouts;
 }
 export class aws_dx_hosted_transit_virtual_interface_accepter extends TerraformResource {
   readonly arn!: string;

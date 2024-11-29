@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsM2ApplicationArgsdefinition {
+export interface AwsM2ApplicationArgsDefinition {
   content?: string;
   s3_location?: string;
 }
-export interface AwsM2ApplicationArgstimeouts {
+export interface AwsM2ApplicationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface AwsM2ApplicationArgs {
   tags?: {
     [key: string]: string;
   };
-  definition: AwsM2ApplicationArgsdefinition;
-  timeouts: AwsM2ApplicationArgstimeouts;
+  definition: AwsM2ApplicationArgsDefinition;
+  timeouts: AwsM2ApplicationArgsTimeouts;
 }
 export class aws_m2_application extends TerraformResource {
   readonly application_id!: string;

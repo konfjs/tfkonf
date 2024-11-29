@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVerifiedpermissionsSchemaArgsdefinition {
+export interface AwsVerifiedpermissionsSchemaArgsDefinition {
   value: string;
 }
 export interface AwsVerifiedpermissionsSchemaArgs {
   policy_store_id: string;
-  definition: AwsVerifiedpermissionsSchemaArgsdefinition;
+  definition: AwsVerifiedpermissionsSchemaArgsDefinition;
 }
 export class aws_verifiedpermissions_schema extends TerraformResource {
   readonly id!: string;

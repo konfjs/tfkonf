@@ -25,7 +25,7 @@ export interface AwsOpsworksMysqlLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksMysqlLayerArgs {
   auto_assign_elastic_ips?: boolean;

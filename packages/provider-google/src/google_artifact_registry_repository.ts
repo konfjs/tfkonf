@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciescondition {
+export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciesCondition {
   newer_than?: string;
   older_than?: string;
   package_name_prefixes?: string[];
@@ -14,7 +14,7 @@ export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciesMostRecentVe
 export interface GoogleArtifactRegistryRepositoryArgsCleanupPolicies {
   action?: string;
   id: string;
-  condition: GoogleArtifactRegistryRepositoryArgsCleanupPoliciescondition;
+  condition: GoogleArtifactRegistryRepositoryArgsCleanupPoliciesCondition;
   most_recent_versions: GoogleArtifactRegistryRepositoryArgsCleanupPoliciesMostRecentVersions;
 }
 export interface GoogleArtifactRegistryRepositoryArgsDockerConfig {
@@ -88,7 +88,7 @@ export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfig {
   upstream_credentials: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigUpstreamCredentials;
   yum_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigYumRepository;
 }
-export interface GoogleArtifactRegistryRepositoryArgstimeouts {
+export interface GoogleArtifactRegistryRepositoryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -115,7 +115,7 @@ export interface GoogleArtifactRegistryRepositoryArgs {
   docker_config: GoogleArtifactRegistryRepositoryArgsDockerConfig;
   maven_config: GoogleArtifactRegistryRepositoryArgsMavenConfig;
   remote_repository_config: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfig;
-  timeouts: GoogleArtifactRegistryRepositoryArgstimeouts;
+  timeouts: GoogleArtifactRegistryRepositoryArgsTimeouts;
   virtual_repository_config: GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfig;
 }
 export class google_artifact_registry_repository extends TerraformResource {

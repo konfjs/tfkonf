@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFilestoreSnapshotArgstimeouts {
+export interface GoogleFilestoreSnapshotArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleFilestoreSnapshotArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleFilestoreSnapshotArgstimeouts;
+  timeouts: GoogleFilestoreSnapshotArgsTimeouts;
 }
 export class google_filestore_snapshot extends TerraformResource {
   readonly create_time!: string;
