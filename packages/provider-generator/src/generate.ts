@@ -10,7 +10,7 @@ import type { ProviderSchema } from './schema.js';
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
     for (const [providerName, schema] of Object.entries(providerSchemas)) {
         console.log(`Generating TypeScript code for provider: ${chalk.green(providerName)}`);
-        const outDir = path.join('@tfs', `provider-${path.basename(providerName)}`);
+        const outDir = `provider-${path.basename(providerName)}`;
         fs.rmdirSync(outDir, { recursive: true });
         fs.mkdirSync(outDir, { recursive: true });
 
