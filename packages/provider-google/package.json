@@ -1,3 +1,41 @@
 {
-  "name": "@tfs/provider-google"
+  "name": "@tfs/provider-google",
+  "version": "0.0.1",
+  "author": {
+    "name": "shinebayar-g",
+    "url": "https://github.com/shinebayar-g"
+  },
+  "license": "MPL-2.0",
+  "homepage": "https://github.com/shinebayar-g/tfs",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:shinebayar-g/tfs.git",
+    "directory": "packages/provider-google"
+  },
+  "bugs": {
+    "url": "https://github.com/shinebayar-g/tfs/issues"
+  },
+  "keywords": [
+    "terraform",
+    "cdktf",
+    "cdk"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "updatePackage": "yq -i '.exports[\".\"] |= {\"import\": \"./dist/index.js\", \"types\": \"./dist/index.d.ts\" }' package.json",
+    "build": "rm -rf dist && tsc",
+    "prepack": "bun run build && bun run updatePackage"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "tfs": "workspace:*"
+  }
 }

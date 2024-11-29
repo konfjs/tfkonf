@@ -1,0 +1,25 @@
+import { TerraformConfig, TerraformResource } from "tfs";
+export interface CmekSettings {
+  kms_key_name: string;
+}
+export interface IndexConfigs {
+  field_path: string;
+  type: string;
+}
+export interface GoogleLoggingFolderBucketConfigArgs {
+  bucket_id: string;
+  folder: string;
+  location: string;
+  retention_days?: number;
+  cmek_settings: CmekSettings;
+  index_configs: IndexConfigs;
+}
+export class google_logging_folder_bucket_config extends TerraformResource {
+  readonly description?: string;
+  readonly id?: string;
+  readonly lifecycle_state!: string;
+  readonly name!: string;
+  constructor(config: TerraformConfig, resourceName: string, args: GoogleLoggingFolderBucketConfigArgs) {
+    super(config, "resource", args, resourceName, "google_logging_folder_bucket_config");
+  }
+}
