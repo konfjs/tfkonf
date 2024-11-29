@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppsyncDatasourceArgsDynamodbConfigDeltaSyncConfig {
   base_table_ttl?: number;
   delta_sync_table_name: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleVertexAiIndexEndpointArgsPrivateServiceConnectConfig {
   enable_private_service_connect: boolean;
   project_allowlist?: string[];

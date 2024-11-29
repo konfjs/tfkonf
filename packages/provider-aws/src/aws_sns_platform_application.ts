@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSnsPlatformApplicationArgs {
   apple_platform_bundle_id?: string;
   apple_platform_team_id?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsApiGatewayRequestValidatorArgs {
   name: string;
   rest_api_id: string;

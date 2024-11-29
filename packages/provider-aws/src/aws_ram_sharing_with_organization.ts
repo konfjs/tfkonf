@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRamSharingWithOrganizationArgs {}
 export class aws_ram_sharing_with_organization extends TerraformResource {
   readonly id?: string;

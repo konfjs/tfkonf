@@ -7,7 +7,7 @@ import type { ProviderSchema } from './schema.js';
 function main() {
     const program = new Command();
     program
-        .name('@tfs/provider-generator')
+        .name('@konfjs/provider-generator')
         .argument('<schema-path>', 'Terraform provider schema JSON file path')
         .parse();
 

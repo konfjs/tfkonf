@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpcPeeringConnectionAccepterArgsAccepter {
   allow_remote_vpc_dns_resolution?: boolean;
 }

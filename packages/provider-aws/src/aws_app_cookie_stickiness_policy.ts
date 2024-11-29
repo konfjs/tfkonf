@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppCookieStickinessPolicyArgs {
   cookie_name: string;
   lb_port: number;

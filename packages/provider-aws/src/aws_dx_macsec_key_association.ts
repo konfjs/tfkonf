@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDxMacsecKeyAssociationArgs {
   cak?: string;
   connection_id: string;

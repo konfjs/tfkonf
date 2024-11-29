@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesv2EmailIdentityMailFromAttributesArgs {
   behavior_on_mx_failure?: string;
   email_identity: string;

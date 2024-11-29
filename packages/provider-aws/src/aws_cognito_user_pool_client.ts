@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCognitoUserPoolClientArgsAnalyticsConfiguration {
   application_arn?: string;
   application_id?: string;

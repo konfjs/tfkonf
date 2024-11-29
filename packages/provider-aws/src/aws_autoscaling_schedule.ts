@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAutoscalingScheduleArgs {
   autoscaling_group_name: string;
   scheduled_action_name: string;

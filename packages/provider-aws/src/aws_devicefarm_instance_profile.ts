@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDevicefarmInstanceProfileArgs {
   description?: string;
   exclude_app_packages_from_cleanup?: string[];

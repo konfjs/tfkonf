@@ -1,19 +1,19 @@
 {
-  "name": "tfs",
+  "name": "@konfjs/core",
   "version": "0.0.1",
   "author": {
-    "name": "shinebayar-g",
-    "url": "https://github.com/shinebayar-g"
+    "name": "konfjs",
+    "url": "https://github.com/konfjs"
   },
   "license": "MPL-2.0",
-  "homepage": "https://github.com/shinebayar-g/tfs",
+  "homepage": "https://github.com/konfjs/tfkonf",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/shinebayar-g/tfs.git",
-    "directory": "packages/tfs"
+    "url": "git+ssh://git@github.com/konfjs/tfkonf.git",
+    "directory": "packages/core"
   },
   "bugs": {
-    "url": "https://github.com/shinebayar-g/tfs/issues"
+    "url": "https://github.com/konfjs/tfkonf/issues"
   },
   "keywords": [
     "terraform",

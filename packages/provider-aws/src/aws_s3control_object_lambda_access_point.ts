@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfigurationContentTransformationAwsLambda {
   function_arn: string;
   function_payload?: string;

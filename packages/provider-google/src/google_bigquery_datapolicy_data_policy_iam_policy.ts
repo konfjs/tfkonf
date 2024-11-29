@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleBigqueryDatapolicyDataPolicyIamPolicyArgs {
   data_policy_id: string;
   policy_data: string;

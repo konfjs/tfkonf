@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataLossPreventionDiscoveryConfigArgsActionsExportDataProfileTable {
   dataset_id?: string;
   project_id?: string;

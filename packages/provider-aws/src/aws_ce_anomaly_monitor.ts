@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCeAnomalyMonitorArgs {
   monitor_dimension?: string;
   monitor_specification?: string;

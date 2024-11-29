@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppmeshRouteArgsSpecGrpcRouteActionWeightedTarget {
   virtual_node: string;
   weight: number;

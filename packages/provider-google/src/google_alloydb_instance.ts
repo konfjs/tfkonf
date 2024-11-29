@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleAlloydbInstanceArgsClientConnectionConfigSslConfig {}
 export interface GoogleAlloydbInstanceArgsClientConnectionConfig {
   require_connectors?: boolean;

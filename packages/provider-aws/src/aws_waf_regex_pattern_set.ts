@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsWafRegexPatternSetArgs {
   name: string;
   regex_pattern_strings?: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleOsLoginSshPublicKeyArgsTimeouts {
   create?: string;
   delete?: string;

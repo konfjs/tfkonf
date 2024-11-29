@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsNetworkfirewallFirewallArgsEncryptionConfiguration {
   key_id?: string;
   type: string;

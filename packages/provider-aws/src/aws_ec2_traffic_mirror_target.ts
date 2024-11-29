@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TrafficMirrorTargetArgs {
   description?: string;
   gateway_load_balancer_endpoint_id?: string;

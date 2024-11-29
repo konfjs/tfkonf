@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsChimeVoiceConnectorOriginationArgsRoute {
   host: string;
   port?: number;

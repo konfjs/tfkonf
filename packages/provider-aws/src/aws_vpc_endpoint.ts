@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpcEndpointArgsDnsOptions {
   private_dns_only_for_inbound_resolver_endpoint?: boolean;
 }

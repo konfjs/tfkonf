@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53HealthCheckArgs {
   child_health_threshold?: number;
   child_healthchecks?: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsIotThingGroupMembershipArgs {
   override_dynamic_group?: boolean;
   thing_group_name: string;

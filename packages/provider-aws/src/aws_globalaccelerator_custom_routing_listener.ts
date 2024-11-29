@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlobalacceleratorCustomRoutingListenerArgsPortRange {
   from_port?: number;
   to_port?: number;

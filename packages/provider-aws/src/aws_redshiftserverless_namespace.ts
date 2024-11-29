@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftserverlessNamespaceArgs {
   admin_user_password?: string;
   default_iam_role_arn?: string;

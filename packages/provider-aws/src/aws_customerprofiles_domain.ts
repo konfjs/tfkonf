@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCustomerprofilesDomainArgsMatchingAutoMergingConflictResolution {
   conflict_resolving_model: string;
   source_name?: string;

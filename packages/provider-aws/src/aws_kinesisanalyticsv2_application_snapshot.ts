@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsKinesisanalyticsv2ApplicationSnapshotArgsTimeouts {
   create?: string;
   delete?: string;

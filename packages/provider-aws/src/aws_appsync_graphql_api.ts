@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderLambdaAuthorizerConfig {
   authorizer_result_ttl_in_seconds?: number;
   authorizer_uri: string;

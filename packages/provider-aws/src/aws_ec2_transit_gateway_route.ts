@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TransitGatewayRouteArgs {
   blackhole?: boolean;
   destination_cidr_block: string;

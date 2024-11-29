@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleFirebaseAppCheckRecaptchaV3ConfigArgsTimeouts {
   create?: string;
   delete?: string;

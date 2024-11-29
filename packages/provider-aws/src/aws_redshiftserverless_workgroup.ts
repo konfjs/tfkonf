@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftserverlessWorkgroupArgsConfigParameter {
   parameter_key: string;
   parameter_value: string;

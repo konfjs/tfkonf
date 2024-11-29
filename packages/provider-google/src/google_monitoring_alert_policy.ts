@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleMonitoringAlertPolicyArgsAlertStrategyNotificationChannelStrategy {
   notification_channel_names?: string[];
   renotify_interval?: string;

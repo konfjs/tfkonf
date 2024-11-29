@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAmplifyBackendEnvironmentArgs {
   app_id: string;
   environment_name: string;

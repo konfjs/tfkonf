@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLightsailDatabaseArgs {
   backup_retention_enabled?: boolean;
   blueprint_id: string;

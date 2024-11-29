@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRamPrincipalAssociationArgs {
   principal: string;
   resource_share_arn: string;

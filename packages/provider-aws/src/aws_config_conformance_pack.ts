@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsConfigConformancePackArgsInputParameter {
   parameter_name: string;
   parameter_value: string;

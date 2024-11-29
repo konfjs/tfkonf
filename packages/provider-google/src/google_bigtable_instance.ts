@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleBigtableInstanceArgsClusterAutoscalingConfig {
   cpu_target: number;
   max_nodes: number;

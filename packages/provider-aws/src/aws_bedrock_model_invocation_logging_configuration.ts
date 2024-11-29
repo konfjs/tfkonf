@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigCloudwatchConfigLargeDataDeliveryS3Config {
   bucket_name?: string;
   key_prefix?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfigurationS3Configuration {
   bucket_name: string;
   enabled: boolean;

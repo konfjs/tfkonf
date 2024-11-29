@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsFlowLogArgsDestinationOptions {
   file_format?: string;
   hive_compatible_partitions?: boolean;

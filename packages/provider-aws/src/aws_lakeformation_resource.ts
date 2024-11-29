@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLakeformationResourceArgs {
   arn: string;
   use_service_linked_role?: boolean;

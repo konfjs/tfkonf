@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53CidrLocationArgs {
   cidr_blocks: string[];
   cidr_collection_id: string;

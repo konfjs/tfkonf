@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLbCookieStickinessPolicyArgs {
   cookie_expiration_period?: number;
   lb_port: number;

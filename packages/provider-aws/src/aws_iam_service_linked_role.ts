@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsIamServiceLinkedRoleArgs {
   aws_service_name: string;
   custom_suffix?: string;

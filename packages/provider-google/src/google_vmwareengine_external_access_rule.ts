@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleVmwareengineExternalAccessRuleArgsDestinationIpRanges {
   external_address?: string;
   ip_address_range?: string;

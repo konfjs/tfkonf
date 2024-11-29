@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsOsisPipelineArgsBufferOptions {
   persistent_buffer_enabled: boolean;
 }

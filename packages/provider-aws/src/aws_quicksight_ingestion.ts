@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsQuicksightIngestionArgs {
   data_set_id: string;
   ingestion_id: string;

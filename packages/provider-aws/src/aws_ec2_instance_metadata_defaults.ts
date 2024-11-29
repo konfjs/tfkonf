@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2InstanceMetadataDefaultsArgs {}
 export class aws_ec2_instance_metadata_defaults extends TerraformResource {
   readonly http_endpoint?: string;

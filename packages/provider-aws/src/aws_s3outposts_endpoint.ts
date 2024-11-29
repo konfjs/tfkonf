@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsS3outpostsEndpointArgs {
   customer_owned_ipv4_pool?: string;
   outpost_id: string;

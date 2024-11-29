@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDirectoryServiceDirectoryArgsConnectSettings {
   customer_dns_ips: string[];
   customer_username: string;

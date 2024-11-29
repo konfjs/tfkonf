@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpcIpamPreviewNextCidrArgs {
   disallowed_cidrs?: string[];
   ipam_pool_id: string;

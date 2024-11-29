@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSchedulerScheduleArgsFlexibleTimeWindow {
   maximum_window_in_minutes?: number;
   mode: string;

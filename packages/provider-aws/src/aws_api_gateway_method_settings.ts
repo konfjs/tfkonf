@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsApiGatewayMethodSettingsArgsSettings {
   throttling_burst_limit?: number;
   throttling_rate_limit?: number;

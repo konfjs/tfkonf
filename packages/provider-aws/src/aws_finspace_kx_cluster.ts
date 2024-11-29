@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsFinspaceKxClusterArgsAutoScalingConfiguration {
   auto_scaling_metric: string;
   max_node_count: number;

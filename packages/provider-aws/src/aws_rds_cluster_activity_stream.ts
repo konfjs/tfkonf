@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRdsClusterActivityStreamArgs {
   engine_native_audit_fields_included?: boolean;
   kms_key_id: string;

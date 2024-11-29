@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlobalacceleratorCustomRoutingAcceleratorArgsAttributes {
   flow_logs_enabled?: boolean;
   flow_logs_s3_bucket?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53ResolverFirewallRuleArgs {
   action: string;
   block_override_dns_type?: string;

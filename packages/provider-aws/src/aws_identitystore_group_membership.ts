@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsIdentitystoreGroupMembershipArgs {
   group_id: string;
   identity_store_id: string;

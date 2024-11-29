@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleServiceAccountIamPolicyArgs {
   policy_data: string;
   service_account_id: string;

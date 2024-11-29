@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSsmcontactsPlanArgsStageTargetChannelTargetInfo {
   contact_channel_id: string;
   retry_interval_in_minutes?: number;

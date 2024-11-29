@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfigAuthorizerCredential {
   user_token_secret_version: string;
 }

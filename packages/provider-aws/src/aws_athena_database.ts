@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAthenaDatabaseArgsAclConfiguration {
   s3_acl_option: string;
 }

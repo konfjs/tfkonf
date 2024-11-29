@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftHsmClientCertificateArgs {
   hsm_client_certificate_identifier: string;
   tags?: {

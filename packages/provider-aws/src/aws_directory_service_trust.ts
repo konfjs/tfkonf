@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDirectoryServiceTrustArgs {
   conditional_forwarder_ip_addrs?: string[];
   directory_id: string;

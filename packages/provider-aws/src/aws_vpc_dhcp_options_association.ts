@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpcDhcpOptionsAssociationArgs {
   dhcp_options_id: string;
   vpc_id: string;

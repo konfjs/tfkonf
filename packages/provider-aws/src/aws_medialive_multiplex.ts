@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMedialiveMultiplexArgsMultiplexSettings {
   transport_stream_bitrate: number;
   transport_stream_id: number;

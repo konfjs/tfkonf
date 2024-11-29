@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlueMlTransformArgsInputRecordTables {
   catalog_id?: string;
   connection_name?: string;

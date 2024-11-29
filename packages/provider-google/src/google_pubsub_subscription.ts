@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GooglePubsubSubscriptionArgsBigqueryConfig {
   drop_unknown_fields?: boolean;
   service_account_email?: string;

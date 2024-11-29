@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDxGatewayAssociationProposalArgs {
   associated_gateway_id: string;
   dx_gateway_id: string;

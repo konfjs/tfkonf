@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeSecurityPolicyRuleArgsHeaderActionRequestHeadersToAdds {
   header_name?: string;
   header_value?: string;

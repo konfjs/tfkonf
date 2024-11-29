@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSnsTopicSubscriptionArgs {
   confirmation_timeout_in_minutes?: number;
   delivery_policy?: string;

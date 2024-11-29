@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeBackendServiceArgsBackend {
   balancing_mode?: string;
   capacity_scaler?: number;

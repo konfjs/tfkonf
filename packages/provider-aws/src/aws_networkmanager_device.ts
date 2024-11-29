@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsNetworkmanagerDeviceArgsAwsLocation {
   subnet_arn?: string;
   zone?: string;

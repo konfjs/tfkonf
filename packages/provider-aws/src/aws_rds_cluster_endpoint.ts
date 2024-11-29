@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRdsClusterEndpointArgs {
   cluster_endpoint_identifier: string;
   cluster_identifier: string;

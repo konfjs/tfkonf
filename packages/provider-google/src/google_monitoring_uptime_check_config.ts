@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleMonitoringUptimeCheckConfigArgsContentMatchersJsonPathMatcher {
   json_matcher?: string;
   json_path: string;

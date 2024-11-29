@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailActionIncludeResources {}
 export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailAction {
   type: string;

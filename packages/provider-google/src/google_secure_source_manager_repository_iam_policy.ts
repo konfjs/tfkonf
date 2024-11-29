@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleSecureSourceManagerRepositoryIamPolicyArgs {
   policy_data: string;
   repository_id: string;

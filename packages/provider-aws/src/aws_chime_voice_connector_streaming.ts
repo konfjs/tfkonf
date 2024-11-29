@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsChimeVoiceConnectorStreamingArgsMediaInsightsConfiguration {
   configuration_arn?: string;
   disabled?: boolean;

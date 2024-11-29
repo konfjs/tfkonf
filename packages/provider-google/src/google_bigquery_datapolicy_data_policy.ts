@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleBigqueryDatapolicyDataPolicyArgsDataMaskingPolicy {
   predefined_expression?: string;
   routine?: string;

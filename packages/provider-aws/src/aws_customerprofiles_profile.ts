@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCustomerprofilesProfileArgsAddress {
   address_1?: string;
   address_2?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails {
   encryption_option?: string;
   kms_key_id?: string;

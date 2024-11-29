@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDirectoryServiceLogSubscriptionArgs {
   directory_id: string;
   log_group_name: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpnConnectionRouteArgs {
   destination_cidr_block: string;
   vpn_connection_id: string;

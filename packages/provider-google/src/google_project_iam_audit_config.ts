@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleProjectIamAuditConfigArgsAuditLogConfig {
   exempted_members?: string[];
   log_type: string;

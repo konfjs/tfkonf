@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsOpsworksMysqlLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;

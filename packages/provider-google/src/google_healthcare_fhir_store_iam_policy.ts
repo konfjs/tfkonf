@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleHealthcareFhirStoreIamPolicyArgs {
   fhir_store_id: string;
   policy_data: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSagemakerDomainArgsDefaultSpaceSettingsCustomFileSystemConfigEfsFileSystemConfig {
   file_system_id: string;
   file_system_path: string;

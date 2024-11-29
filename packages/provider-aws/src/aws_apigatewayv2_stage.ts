@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsApigatewayv2StageArgsAccessLogSettings {
   destination_arn: string;
   format: string;

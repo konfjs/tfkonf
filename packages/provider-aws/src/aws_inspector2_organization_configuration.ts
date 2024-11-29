@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsInspector2OrganizationConfigurationArgsAutoEnable {
   ec2: boolean;
   ecr: boolean;

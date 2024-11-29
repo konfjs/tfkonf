@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsConfigRemediationConfigurationArgsExecutionControlsSsmControls {
   concurrent_execution_rate_percentage?: number;
   error_percentage?: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppautoscalingTargetArgsSuspendedState {
   dynamic_scaling_in_suspended?: boolean;
   dynamic_scaling_out_suspended?: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GooglePublicCaExternalAccountKeyArgsTimeouts {
   create?: string;
   delete?: string;

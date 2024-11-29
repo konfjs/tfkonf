@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleRecaptchaEnterpriseKeyArgsAndroidSettings {
   allow_all_package_names?: boolean;
   allowed_package_names?: string[];

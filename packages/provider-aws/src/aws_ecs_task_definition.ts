@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEcsTaskDefinitionArgsEphemeralStorage {
   size_in_gib: number;
 }

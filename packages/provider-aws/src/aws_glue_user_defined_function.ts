@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlueUserDefinedFunctionArgsResourceUris {
   resource_type: string;
   uri: string;

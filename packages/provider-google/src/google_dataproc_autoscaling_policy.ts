@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataprocAutoscalingPolicyArgsBasicAlgorithmYarnConfig {
   graceful_decommission_timeout: string;
   scale_down_factor: number;

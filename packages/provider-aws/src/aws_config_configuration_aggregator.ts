@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsConfigConfigurationAggregatorArgsAccountAggregationSource {
   account_ids: string[];
   all_regions?: boolean;

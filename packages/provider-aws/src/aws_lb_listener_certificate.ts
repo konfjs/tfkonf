@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLbListenerCertificateArgs {
   certificate_arn: string;
   listener_arn: string;

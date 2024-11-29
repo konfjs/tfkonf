@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsNeptuneClusterParameterGroupArgsParameter {
   apply_method?: string;
   name: string;

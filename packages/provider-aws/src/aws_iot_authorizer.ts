@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsIotAuthorizerArgs {
   authorizer_function_arn: string;
   enable_caching_for_http?: boolean;

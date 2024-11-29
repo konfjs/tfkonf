@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53TrafficPolicyInstanceArgs {
   hosted_zone_id: string;
   name: string;

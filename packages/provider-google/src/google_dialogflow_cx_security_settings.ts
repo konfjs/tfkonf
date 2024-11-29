@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings {
   audio_export_pattern?: string;
   audio_format?: string;

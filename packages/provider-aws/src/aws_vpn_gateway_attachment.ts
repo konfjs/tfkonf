@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpnGatewayAttachmentArgs {
   vpc_id: string;
   vpn_gateway_id: string;

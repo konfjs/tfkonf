@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleApigeeEnvReferencesArgsTimeouts {
   create?: string;
   delete?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAuditmanagerAccountRegistrationArgs {
   delegated_admin_account?: string;
   deregister_on_destroy?: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftserverlessCustomDomainAssociationArgs {
   custom_domain_certificate_arn: string;
   custom_domain_name: string;

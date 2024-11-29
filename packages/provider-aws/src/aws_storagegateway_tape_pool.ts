@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsStoragegatewayTapePoolArgs {
   pool_name: string;
   retention_lock_time_in_days?: number;

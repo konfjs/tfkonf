@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsTimestreamwriteTableArgsMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration {
   bucket_name?: string;
   encryption_option?: string;

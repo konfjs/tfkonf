@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLicensemanagerAssociationArgs {
   license_configuration_arn: string;
   resource_arn: string;

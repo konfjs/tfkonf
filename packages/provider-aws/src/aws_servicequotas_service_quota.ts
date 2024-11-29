@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsServicequotasServiceQuotaArgs {
   quota_code: string;
   service_code: string;

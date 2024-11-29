@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppmeshGatewayRouteArgsSpecGrpcRouteActionTargetVirtualService {
   virtual_service_name: string;
 }

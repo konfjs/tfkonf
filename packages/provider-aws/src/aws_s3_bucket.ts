@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsS3BucketArgsCorsRule {
   allowed_headers?: string[];
   allowed_methods: string[];

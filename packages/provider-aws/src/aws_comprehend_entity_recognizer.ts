@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsComprehendEntityRecognizerArgsInputDataConfigAnnotations {
   s3_uri: string;
   test_s3_uri?: string;

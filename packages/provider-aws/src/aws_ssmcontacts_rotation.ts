@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSsmcontactsRotationArgsRecurrenceDailySettings {
   hour_of_day: number;
   minute_of_hour: number;

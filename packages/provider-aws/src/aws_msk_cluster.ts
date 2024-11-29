@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoPublicAccess {}
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl {}
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication {
