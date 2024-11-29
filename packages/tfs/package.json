@@ -20,6 +20,9 @@
     "cdktf",
     "cdk"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "exports": {
     ".": {
