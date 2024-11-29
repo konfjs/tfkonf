@@ -8,7 +8,7 @@ interface TerraformArgs {
 
 export class Terraform extends TerraformResource {
     constructor(config: TerraformConfig, args: TerraformArgs) {
-        super(config, 'resource', args, 'terraform', 'terraform');
+        super(config, 'terraform', args);
     }
 }
 
@@ -56,5 +56,15 @@ interface CheckArgs {
 export class Check extends TerraformResource {
     constructor(config: TerraformConfig, args: CheckArgs) {
         super(config, 'check', args);
+    }
+}
+
+interface ProviderArgs {
+    [key: string]: string;
+}
+
+export class Provider extends TerraformResource {
+    constructor(config: TerraformConfig, name: string, args: ProviderArgs) {
+        super(config, 'provider', args, name);
     }
 }

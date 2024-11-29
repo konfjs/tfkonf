@@ -12,6 +12,7 @@ export abstract class TerraformResource {
          */
         private readonly blockType:
             | 'terraform'
+            | 'provider'
             | 'check'
             | 'import'
             | 'resource'
@@ -38,6 +39,7 @@ export abstract class TerraformResource {
 
     /**
      * Format resource attributes to HCL.
+     * TODO: Refactor this monstrosity.
      */
     private formatAttributes(key: string, value: any, level: number): string {
         if (typeof value === 'object' && !Array.isArray(value)) {
@@ -46,6 +48,30 @@ export abstract class TerraformResource {
                     return this.formatAttributes(nestedKey, nestedValue, level + 1);
                 })
                 .join('\n');
+            if (key === 'backend') {
+                const backendType = Object.keys(value)[0];
+                const backendAttributes = Object.entries(value[backendType])
+                    .map(([nestedKey, nestedValue]) => {
+                        return this.formatAttributes(nestedKey, nestedValue, level + 1);
+                    })
+                    .join('\n');
+                return `${'  '.repeat(level)}${key} "${backendType}" {\n${backendAttributes}\n${'  '.repeat(level)}}`;
+            }
+            if (key === 'required_providers') {
+                const providerAttributes = Object.entries(value)
+                    .map(([providerKey, providerValue]) => {
+                        return `${'  '.repeat(level + 1)}${providerKey} = {\n${Object.entries(
+                            // @ts-expect-error
+                            providerValue,
+                        )
+                            .map(([nestedKey, nestedValue]) => {
+                                return this.formatAttributes(nestedKey, nestedValue, level + 2);
+                            })
+                            .join('\n')}\n${'  '.repeat(level + 1)}}`;
+                    })
+                    .join('\n');
+                return `${'  '.repeat(level)}${key} {\n${providerAttributes}\n${'  '.repeat(level)}}`;
+            }
             return `${'  '.repeat(level)}${key} {\n${nestedBlock}\n${'  '.repeat(level)}}`;
         }
         return `${'  '.repeat(level)}${key} = ${JSON.stringify(value)}`;
@@ -66,10 +92,15 @@ export abstract class TerraformResource {
             case 'module':
                 return `${this.blockType} "${this.resourceName}" {\n${attributes}\n}`;
             case 'terraform':
+                return `${this.blockType} {\n${attributes}\n}`;
+            case 'provider':
+                return `${this.blockType} "${this.resourceName}" {\n${attributes}\n}`;
             case 'import':
             case 'check':
             case 'moved':
                 return `${this.blockType} {\n${attributes}\n}`;
+            default:
+                throw new Error(`Unsupported block type: ${this.blockType}`);
         }
     }
 }
