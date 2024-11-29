@@ -1,5 +1,5 @@
 import * as t from '@babel/types';
-import chalk from 'chalk';
+import pc from 'picocolors';
 import type { Attribute, AttributeType, Block } from './schema.js';
 import { toPascalCase } from './utils.js';
 
@@ -57,8 +57,8 @@ export function getTSType(attr: Attribute): t.TSType {
         case 'bool':
             return t.tsBooleanKeyword();
         default:
-            console.log(chalk.dim(JSON.stringify(attr, null, 2)));
-            throw new Error(`Unknown attribute type: ${chalk.red(attr.type)}`);
+            console.log(pc.dim(JSON.stringify(attr, null, 2)));
+            throw new Error('Unknown attribute type');
     }
 }
 
