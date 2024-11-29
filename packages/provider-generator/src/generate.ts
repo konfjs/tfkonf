@@ -2,14 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import generate from '@babel/generator';
 import * as t from '@babel/types';
-import chalk from 'chalk';
+import pc from 'picocolors';
 import { generateClassDeclaration } from './class.js';
 import { generateInterfaceDeclaration } from './interface.js';
 import type { ProviderSchema } from './schema.js';
 
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
     for (const [providerName, schema] of Object.entries(providerSchemas)) {
-        console.log(`Generating TypeScript code for provider: ${chalk.green(providerName)}`);
+        console.log(`Generating TypeScript code for provider: ${pc.green(providerName)}`);
         const outDir = `provider-${path.basename(providerName)}`;
         fs.rmSync(outDir, { recursive: true, force: true });
         fs.mkdirSync(outDir, { recursive: true });
@@ -18,7 +18,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
 
         for (const [resourceName, resourceBlock] of Object.entries(schema.resource_schemas)) {
             console.log(
-                `Generating TypeScript code for resource: ${chalk.yellowBright(resourceName)}`,
+                `Generating TypeScript code for resource: ${pc.yellowBright(resourceName)}`,
             );
             const ast = t.program(
                 [
@@ -41,7 +41,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
             );
             generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, '', true);
             generateClassDeclaration(ast, resourceName, resourceBlock.block);
-            const { code } = generate.default(ast, {});
+            const { code } = generate(ast, {});
             resources.push(resourceName);
 
             fs.writeFileSync(path.join(outDir, `${resourceName}.ts`), code, {
@@ -59,7 +59,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                 ),
             );
         }
-        const { code } = generate.default(ast, {});
+        const { code } = generate(ast, {});
 
         fs.writeFileSync(path.join(outDir, 'index.ts'), code, { encoding: 'utf8' });
     }
