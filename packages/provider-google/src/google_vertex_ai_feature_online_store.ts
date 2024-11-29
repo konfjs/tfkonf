@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoScaling {
+export interface GoogleVertexAiFeatureOnlineStoreArgsbigtableAutoScaling {
   max_node_count: number;
   min_node_count: number;
 }
-export interface Bigtable {
-  auto_scaling: AutoScaling;
+export interface GoogleVertexAiFeatureOnlineStoreArgsbigtable {
+  auto_scaling: GoogleVertexAiFeatureOnlineStoreArgsbigtableAutoScaling;
 }
-export interface PrivateServiceConnectConfig {
+export interface GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpointPrivateServiceConnectConfig {
   enable_private_service_connect: boolean;
   project_allowlist?: string[];
 }
-export interface DedicatedServingEndpoint {
-  private_service_connect_config: PrivateServiceConnectConfig;
+export interface GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpoint {
+  private_service_connect_config: GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpointPrivateServiceConnectConfig;
 }
-export interface Optimized {}
-export interface Timeouts {
+export interface GoogleVertexAiFeatureOnlineStoreArgsoptimized {}
+export interface GoogleVertexAiFeatureOnlineStoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,10 +25,10 @@ export interface GoogleVertexAiFeatureOnlineStoreArgs {
     [key: string]: string;
   };
   name: string;
-  bigtable: Bigtable;
-  dedicated_serving_endpoint: DedicatedServingEndpoint;
-  optimized: Optimized;
-  timeouts: Timeouts;
+  bigtable: GoogleVertexAiFeatureOnlineStoreArgsbigtable;
+  dedicated_serving_endpoint: GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpoint;
+  optimized: GoogleVertexAiFeatureOnlineStoreArgsoptimized;
+  timeouts: GoogleVertexAiFeatureOnlineStoreArgstimeouts;
 }
 export class google_vertex_ai_feature_online_store extends TerraformResource {
   readonly create_time!: string;

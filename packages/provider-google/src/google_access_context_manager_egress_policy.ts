@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleAccessContextManagerEgressPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerEgressPolicyArgs {
   egress_policy_name: string;
   resource: string;
-  timeouts: Timeouts;
+  timeouts: GoogleAccessContextManagerEgressPolicyArgstimeouts;
 }
 export class google_access_context_manager_egress_policy extends TerraformResource {
   readonly id?: string;

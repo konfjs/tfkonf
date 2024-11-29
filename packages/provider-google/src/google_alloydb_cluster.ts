@@ -1,77 +1,77 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfig {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicyEncryptionConfig {
   kms_key_name?: string;
 }
-export interface QuantityBasedRetention {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicyQuantityBasedRetention {
   count?: number;
 }
-export interface TimeBasedRetention {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicyTimeBasedRetention {
   retention_period?: string;
 }
-export interface StartTimes {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicyWeeklyScheduleStartTimes {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface WeeklySchedule {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicyWeeklySchedule {
   days_of_week?: string[];
-  start_times: StartTimes;
+  start_times: GoogleAlloydbClusterArgsAutomatedBackupPolicyWeeklyScheduleStartTimes;
 }
-export interface AutomatedBackupPolicy {
+export interface GoogleAlloydbClusterArgsAutomatedBackupPolicy {
   labels?: {
     [key: string]: string;
   };
-  encryption_config: EncryptionConfig;
-  quantity_based_retention: QuantityBasedRetention;
-  time_based_retention: TimeBasedRetention;
-  weekly_schedule: WeeklySchedule;
+  encryption_config: GoogleAlloydbClusterArgsAutomatedBackupPolicyEncryptionConfig;
+  quantity_based_retention: GoogleAlloydbClusterArgsAutomatedBackupPolicyQuantityBasedRetention;
+  time_based_retention: GoogleAlloydbClusterArgsAutomatedBackupPolicyTimeBasedRetention;
+  weekly_schedule: GoogleAlloydbClusterArgsAutomatedBackupPolicyWeeklySchedule;
 }
-export interface EncryptionConfig {
+export interface GoogleAlloydbClusterArgsContinuousBackupConfigEncryptionConfig {
   kms_key_name?: string;
 }
-export interface ContinuousBackupConfig {
+export interface GoogleAlloydbClusterArgsContinuousBackupConfig {
   enabled?: boolean;
-  encryption_config: EncryptionConfig;
+  encryption_config: GoogleAlloydbClusterArgsContinuousBackupConfigEncryptionConfig;
 }
-export interface EncryptionConfig {
+export interface GoogleAlloydbClusterArgsEncryptionConfig {
   kms_key_name?: string;
 }
-export interface InitialUser {
+export interface GoogleAlloydbClusterArgsInitialUser {
   password: string;
   user?: string;
 }
-export interface StartTime {
+export interface GoogleAlloydbClusterArgsMaintenanceUpdatePolicyMaintenanceWindowsStartTime {
   hours: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface MaintenanceWindows {
+export interface GoogleAlloydbClusterArgsMaintenanceUpdatePolicyMaintenanceWindows {
   day: string;
-  start_time: StartTime;
+  start_time: GoogleAlloydbClusterArgsMaintenanceUpdatePolicyMaintenanceWindowsStartTime;
 }
-export interface MaintenanceUpdatePolicy {
-  maintenance_windows: MaintenanceWindows;
+export interface GoogleAlloydbClusterArgsMaintenanceUpdatePolicy {
+  maintenance_windows: GoogleAlloydbClusterArgsMaintenanceUpdatePolicyMaintenanceWindows;
 }
-export interface NetworkConfig {
+export interface GoogleAlloydbClusterArgsNetworkConfig {
   allocated_ip_range?: string;
   network?: string;
 }
-export interface PscConfig {
+export interface GoogleAlloydbClusterArgsPscConfig {
   psc_enabled?: boolean;
 }
-export interface RestoreBackupSource {
+export interface GoogleAlloydbClusterArgsRestoreBackupSource {
   backup_name: string;
 }
-export interface RestoreContinuousBackupSource {
+export interface GoogleAlloydbClusterArgsRestoreContinuousBackupSource {
   cluster: string;
   point_in_time: string;
 }
-export interface SecondaryConfig {
+export interface GoogleAlloydbClusterArgsSecondaryConfig {
   primary_cluster_name: string;
 }
-export interface Timeouts {
+export interface GoogleAlloydbClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -89,17 +89,17 @@ export interface GoogleAlloydbClusterArgs {
     [key: string]: string;
   };
   location: string;
-  automated_backup_policy: AutomatedBackupPolicy;
-  continuous_backup_config: ContinuousBackupConfig;
-  encryption_config: EncryptionConfig;
-  initial_user: InitialUser;
-  maintenance_update_policy: MaintenanceUpdatePolicy;
-  network_config: NetworkConfig;
-  psc_config: PscConfig;
-  restore_backup_source: RestoreBackupSource;
-  restore_continuous_backup_source: RestoreContinuousBackupSource;
-  secondary_config: SecondaryConfig;
-  timeouts: Timeouts;
+  automated_backup_policy: GoogleAlloydbClusterArgsAutomatedBackupPolicy;
+  continuous_backup_config: GoogleAlloydbClusterArgsContinuousBackupConfig;
+  encryption_config: GoogleAlloydbClusterArgsEncryptionConfig;
+  initial_user: GoogleAlloydbClusterArgsInitialUser;
+  maintenance_update_policy: GoogleAlloydbClusterArgsMaintenanceUpdatePolicy;
+  network_config: GoogleAlloydbClusterArgsNetworkConfig;
+  psc_config: GoogleAlloydbClusterArgsPscConfig;
+  restore_backup_source: GoogleAlloydbClusterArgsRestoreBackupSource;
+  restore_continuous_backup_source: GoogleAlloydbClusterArgsRestoreContinuousBackupSource;
+  secondary_config: GoogleAlloydbClusterArgsSecondaryConfig;
+  timeouts: GoogleAlloydbClusterArgstimeouts;
 }
 export class google_alloydb_cluster extends TerraformResource {
   readonly backup_source!: any[];

@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ComplianceStandards {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesComplianceStandards {
   control?: string;
   standard?: string;
 }
-export interface Condition {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRulescondition {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Values {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRulesvalues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface PolicyRules {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRules {
   allow_all?: boolean;
   deny_all?: boolean;
   enforce?: boolean;
-  condition: Condition;
-  values: Values;
+  condition: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRulescondition;
+  values: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRulesvalues;
 }
-export interface OrgPolicyConstraint {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraint {
   canned_constraint_id: string;
-  policy_rules: PolicyRules;
+  policy_rules: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintPolicyRules;
 }
-export interface CustomConstraint {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomCustomConstraint {
   action_type: string;
   condition: string;
   description?: string;
@@ -33,84 +33,84 @@ export interface CustomConstraint {
   name: string;
   resource_types: string[];
 }
-export interface Condition {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRulescondition {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Values {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRulesvalues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface PolicyRules {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRules {
   allow_all?: boolean;
   deny_all?: boolean;
   enforce?: boolean;
-  condition: Condition;
-  values: Values;
+  condition: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRulescondition;
+  values: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRulesvalues;
 }
-export interface OrgPolicyConstraintCustom {
-  custom_constraint: CustomConstraint;
-  policy_rules: PolicyRules;
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustom {
+  custom_constraint: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomCustomConstraint;
+  policy_rules: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustomPolicyRules;
 }
-export interface ValueExpression {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutputpropertiesValueExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Properties {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutputproperties {
   name: string;
-  value_expression: ValueExpression;
+  value_expression: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutputpropertiesValueExpression;
 }
-export interface CustomOutput {
-  properties: Properties;
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutput {
+  properties: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutputproperties;
 }
-export interface Predicate {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigpredicate {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface ResourceSelector {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigResourceSelector {
   resource_types: string[];
 }
-export interface Config {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfig {
   description?: string;
   recommendation?: string;
   severity: string;
-  custom_output: CustomOutput;
-  predicate: Predicate;
-  resource_selector: ResourceSelector;
+  custom_output: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigCustomOutput;
+  predicate: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigpredicate;
+  resource_selector: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfigResourceSelector;
 }
-export interface SecurityHealthAnalyticsCustomModule {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModule {
   display_name?: string;
   module_enablement_state?: string;
-  config: Config;
+  config: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModuleconfig;
 }
-export interface SecurityHealthAnalyticsModule {
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsModule {
   module_enablement_state?: string;
   module_name: string;
 }
-export interface Constraint {
-  org_policy_constraint: OrgPolicyConstraint;
-  org_policy_constraint_custom: OrgPolicyConstraintCustom;
-  security_health_analytics_custom_module: SecurityHealthAnalyticsCustomModule;
-  security_health_analytics_module: SecurityHealthAnalyticsModule;
+export interface GoogleSecurityposturePostureArgsPolicySetspoliciesconstraint {
+  org_policy_constraint: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraint;
+  org_policy_constraint_custom: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintOrgPolicyConstraintCustom;
+  security_health_analytics_custom_module: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsCustomModule;
+  security_health_analytics_module: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraintSecurityHealthAnalyticsModule;
 }
-export interface Policies {
+export interface GoogleSecurityposturePostureArgsPolicySetspolicies {
   description?: string;
   policy_id: string;
-  compliance_standards: ComplianceStandards;
-  constraint: Constraint;
+  compliance_standards: GoogleSecurityposturePostureArgsPolicySetspoliciesComplianceStandards;
+  constraint: GoogleSecurityposturePostureArgsPolicySetspoliciesconstraint;
 }
-export interface PolicySets {
+export interface GoogleSecurityposturePostureArgsPolicySets {
   description?: string;
   policy_set_id: string;
-  policies: Policies;
+  policies: GoogleSecurityposturePostureArgsPolicySetspolicies;
 }
-export interface Timeouts {
+export interface GoogleSecurityposturePostureArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -121,8 +121,8 @@ export interface GoogleSecurityposturePostureArgs {
   parent: string;
   posture_id: string;
   state: string;
-  policy_sets: PolicySets;
-  timeouts: Timeouts;
+  policy_sets: GoogleSecurityposturePostureArgsPolicySets;
+  timeouts: GoogleSecurityposturePostureArgstimeouts;
 }
 export class google_securityposture_posture extends TerraformResource {
   readonly create_time!: string;

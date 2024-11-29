@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationOptions {
+export interface AwsFlowLogArgsDestinationOptions {
   file_format?: string;
   hive_compatible_partitions?: boolean;
   per_hour_partition?: boolean;
@@ -18,7 +18,7 @@ export interface AwsFlowLogArgs {
   transit_gateway_attachment_id?: string;
   transit_gateway_id?: string;
   vpc_id?: string;
-  destination_options: DestinationOptions;
+  destination_options: AwsFlowLogArgsDestinationOptions;
 }
 export class aws_flow_log extends TerraformResource {
   readonly arn!: string;

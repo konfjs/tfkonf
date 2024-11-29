@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CorsRule {
+export interface AwsS3BucketCorsConfigurationArgsCorsRule {
   allowed_headers?: string[];
   allowed_methods: string[];
   allowed_origins: string[];
@@ -10,7 +10,7 @@ export interface CorsRule {
 export interface AwsS3BucketCorsConfigurationArgs {
   bucket: string;
   expected_bucket_owner?: string;
-  cors_rule: CorsRule;
+  cors_rule: AwsS3BucketCorsConfigurationArgsCorsRule;
 }
 export class aws_s3_bucket_cors_configuration extends TerraformResource {
   readonly id?: string;

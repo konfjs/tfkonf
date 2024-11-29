@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleSccSourceIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleSccSourceIamMemberArgs {
   organization: string;
   role: string;
   source: string;
-  condition: Condition;
+  condition: GoogleSccSourceIamMemberArgscondition;
 }
 export class google_scc_source_iam_member extends TerraformResource {
   readonly etag!: string;

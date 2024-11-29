@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ElasticsearchSettings {
+export interface AwsDmsEndpointArgsElasticsearchSettings {
   endpoint_uri: string;
   error_retry_duration?: number;
   full_load_error_percentage?: number;
   service_access_role_arn: string;
   use_new_mapping_type?: boolean;
 }
-export interface KafkaSettings {
+export interface AwsDmsEndpointArgsKafkaSettings {
   broker: string;
   include_control_details?: boolean;
   include_null_and_empty?: boolean;
@@ -26,7 +26,7 @@ export interface KafkaSettings {
   ssl_client_key_password?: string;
   topic?: string;
 }
-export interface KinesisSettings {
+export interface AwsDmsEndpointArgsKinesisSettings {
   include_control_details?: boolean;
   include_null_and_empty?: boolean;
   include_partition_value?: boolean;
@@ -37,7 +37,7 @@ export interface KinesisSettings {
   service_access_role_arn?: string;
   stream_arn?: string;
 }
-export interface MongodbSettings {
+export interface AwsDmsEndpointArgsMongodbSettings {
   auth_mechanism?: string;
   auth_source?: string;
   auth_type?: string;
@@ -45,7 +45,7 @@ export interface MongodbSettings {
   extract_doc_id?: string;
   nesting_level?: string;
 }
-export interface PostgresSettings {
+export interface AwsDmsEndpointArgsPostgresSettings {
   after_connect_script?: string;
   babelfish_database_name?: string;
   capture_ddls?: boolean;
@@ -63,7 +63,7 @@ export interface PostgresSettings {
   plugin_name?: string;
   slot_name?: string;
 }
-export interface RedisSettings {
+export interface AwsDmsEndpointArgsRedisSettings {
   auth_password?: string;
   auth_type: string;
   auth_user_name?: string;
@@ -72,14 +72,14 @@ export interface RedisSettings {
   ssl_ca_certificate_arn?: string;
   ssl_security_protocol?: string;
 }
-export interface RedshiftSettings {
+export interface AwsDmsEndpointArgsRedshiftSettings {
   bucket_folder?: string;
   bucket_name?: string;
   encryption_mode?: string;
   server_side_encryption_kms_key_id?: string;
   service_access_role_arn?: string;
 }
-export interface S3Settings {
+export interface AwsDmsEndpointArgsS3Settings {
   add_column_name?: boolean;
   bucket_folder?: string;
   bucket_name?: string;
@@ -119,7 +119,7 @@ export interface S3Settings {
   use_csv_no_sup_value?: boolean;
   use_task_start_time_for_full_load_timestamp?: boolean;
 }
-export interface Timeouts {
+export interface AwsDmsEndpointArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -139,15 +139,15 @@ export interface AwsDmsEndpointArgs {
     [key: string]: string;
   };
   username?: string;
-  elasticsearch_settings: ElasticsearchSettings;
-  kafka_settings: KafkaSettings;
-  kinesis_settings: KinesisSettings;
-  mongodb_settings: MongodbSettings;
-  postgres_settings: PostgresSettings;
-  redis_settings: RedisSettings;
-  redshift_settings: RedshiftSettings;
-  s3_settings: S3Settings;
-  timeouts: Timeouts;
+  elasticsearch_settings: AwsDmsEndpointArgsElasticsearchSettings;
+  kafka_settings: AwsDmsEndpointArgsKafkaSettings;
+  kinesis_settings: AwsDmsEndpointArgsKinesisSettings;
+  mongodb_settings: AwsDmsEndpointArgsMongodbSettings;
+  postgres_settings: AwsDmsEndpointArgsPostgresSettings;
+  redis_settings: AwsDmsEndpointArgsRedisSettings;
+  redshift_settings: AwsDmsEndpointArgsRedshiftSettings;
+  s3_settings: AwsDmsEndpointArgsS3Settings;
+  timeouts: AwsDmsEndpointArgstimeouts;
 }
 export class aws_dms_endpoint extends TerraformResource {
   readonly certificate_arn?: string;

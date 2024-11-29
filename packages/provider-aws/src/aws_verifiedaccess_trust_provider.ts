@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeviceOptions {
+export interface AwsVerifiedaccessTrustProviderArgsDeviceOptions {
   tenant_id?: string;
 }
-export interface OidcOptions {
+export interface AwsVerifiedaccessTrustProviderArgsOidcOptions {
   authorization_endpoint?: string;
   client_id?: string;
   client_secret: string;
@@ -11,7 +11,7 @@ export interface OidcOptions {
   token_endpoint?: string;
   user_info_endpoint?: string;
 }
-export interface Timeouts {
+export interface AwsVerifiedaccessTrustProviderArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,9 +25,9 @@ export interface AwsVerifiedaccessTrustProviderArgs {
   };
   trust_provider_type: string;
   user_trust_provider_type?: string;
-  device_options: DeviceOptions;
-  oidc_options: OidcOptions;
-  timeouts: Timeouts;
+  device_options: AwsVerifiedaccessTrustProviderArgsDeviceOptions;
+  oidc_options: AwsVerifiedaccessTrustProviderArgsOidcOptions;
+  timeouts: AwsVerifiedaccessTrustProviderArgstimeouts;
 }
 export class aws_verifiedaccess_trust_provider extends TerraformResource {
   readonly id?: string;

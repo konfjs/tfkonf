@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsHadoopConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface HadoopConfig {
+export interface GoogleDataprocJobArgsHadoopConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -14,9 +14,9 @@ export interface HadoopConfig {
   properties?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsHadoopConfigLoggingConfig;
 }
-export interface HiveConfig {
+export interface GoogleDataprocJobArgsHiveConfig {
   continue_on_failure?: boolean;
   jar_file_uris?: string[];
   properties?: {
@@ -28,12 +28,12 @@ export interface HiveConfig {
     [key: string]: string;
   };
 }
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsPigConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface PigConfig {
+export interface GoogleDataprocJobArgsPigConfig {
   continue_on_failure?: boolean;
   jar_file_uris?: string[];
   properties?: {
@@ -44,17 +44,17 @@ export interface PigConfig {
   script_variables?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsPigConfigLoggingConfig;
 }
-export interface Placement {
+export interface GoogleDataprocJobArgsplacement {
   cluster_name: string;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsPrestoConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface PrestoConfig {
+export interface GoogleDataprocJobArgsPrestoConfig {
   client_tags?: string[];
   continue_on_failure?: boolean;
   output_format?: string;
@@ -63,14 +63,14 @@ export interface PrestoConfig {
   };
   query_file_uri?: string;
   query_list?: string[];
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsPrestoConfigLoggingConfig;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsPysparkConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface PysparkConfig {
+export interface GoogleDataprocJobArgsPysparkConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -80,19 +80,19 @@ export interface PysparkConfig {
     [key: string]: string;
   };
   python_file_uris?: string[];
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsPysparkConfigLoggingConfig;
 }
-export interface Reference {}
-export interface Scheduling {
+export interface GoogleDataprocJobArgsreference {}
+export interface GoogleDataprocJobArgsscheduling {
   max_failures_per_hour: number;
   max_failures_total: number;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsSparkConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface SparkConfig {
+export interface GoogleDataprocJobArgsSparkConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -102,14 +102,14 @@ export interface SparkConfig {
   properties?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsSparkConfigLoggingConfig;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocJobArgsSparksqlConfigLoggingConfig {
   driver_log_levels: {
     [key: string]: string;
   };
 }
-export interface SparksqlConfig {
+export interface GoogleDataprocJobArgsSparksqlConfig {
   jar_file_uris?: string[];
   properties?: {
     [key: string]: string;
@@ -119,9 +119,9 @@ export interface SparksqlConfig {
   script_variables?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocJobArgsSparksqlConfigLoggingConfig;
 }
-export interface Timeouts {
+export interface GoogleDataprocJobArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -131,17 +131,17 @@ export interface GoogleDataprocJobArgs {
     [key: string]: string;
   };
   region?: string;
-  hadoop_config: HadoopConfig;
-  hive_config: HiveConfig;
-  pig_config: PigConfig;
-  placement: Placement;
-  presto_config: PrestoConfig;
-  pyspark_config: PysparkConfig;
-  reference: Reference;
-  scheduling: Scheduling;
-  spark_config: SparkConfig;
-  sparksql_config: SparksqlConfig;
-  timeouts: Timeouts;
+  hadoop_config: GoogleDataprocJobArgsHadoopConfig;
+  hive_config: GoogleDataprocJobArgsHiveConfig;
+  pig_config: GoogleDataprocJobArgsPigConfig;
+  placement: GoogleDataprocJobArgsplacement;
+  presto_config: GoogleDataprocJobArgsPrestoConfig;
+  pyspark_config: GoogleDataprocJobArgsPysparkConfig;
+  reference: GoogleDataprocJobArgsreference;
+  scheduling: GoogleDataprocJobArgsscheduling;
+  spark_config: GoogleDataprocJobArgsSparkConfig;
+  sparksql_config: GoogleDataprocJobArgsSparksqlConfig;
+  timeouts: GoogleDataprocJobArgstimeouts;
 }
 export class google_dataproc_job extends TerraformResource {
   readonly driver_controls_files_uri!: string;

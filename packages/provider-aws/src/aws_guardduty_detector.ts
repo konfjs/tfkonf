@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuditLogs {
+export interface AwsGuarddutyDetectorArgsdatasourceskubernetesAuditLogs {
   enable: boolean;
 }
-export interface Kubernetes {
-  audit_logs: AuditLogs;
+export interface AwsGuarddutyDetectorArgsdatasourceskubernetes {
+  audit_logs: AwsGuarddutyDetectorArgsdatasourceskubernetesAuditLogs;
 }
-export interface EbsVolumes {
+export interface AwsGuarddutyDetectorArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes {
   enable: boolean;
 }
-export interface ScanEc2InstanceWithFindings {
-  ebs_volumes: EbsVolumes;
+export interface AwsGuarddutyDetectorArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindings {
+  ebs_volumes: AwsGuarddutyDetectorArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes;
 }
-export interface MalwareProtection {
-  scan_ec2_instance_with_findings: ScanEc2InstanceWithFindings;
+export interface AwsGuarddutyDetectorArgsdatasourcesMalwareProtection {
+  scan_ec2_instance_with_findings: AwsGuarddutyDetectorArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindings;
 }
-export interface S3Logs {
+export interface AwsGuarddutyDetectorArgsdatasourcesS3Logs {
   enable: boolean;
 }
-export interface Datasources {
-  kubernetes: Kubernetes;
-  malware_protection: MalwareProtection;
-  s3_logs: S3Logs;
+export interface AwsGuarddutyDetectorArgsdatasources {
+  kubernetes: AwsGuarddutyDetectorArgsdatasourceskubernetes;
+  malware_protection: AwsGuarddutyDetectorArgsdatasourcesMalwareProtection;
+  s3_logs: AwsGuarddutyDetectorArgsdatasourcesS3Logs;
 }
 export interface AwsGuarddutyDetectorArgs {
   enable?: boolean;
   tags?: {
     [key: string]: string;
   };
-  datasources: Datasources;
+  datasources: AwsGuarddutyDetectorArgsdatasources;
 }
 export class aws_guardduty_detector extends TerraformResource {
   readonly account_id!: string;

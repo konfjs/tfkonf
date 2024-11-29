@@ -1,55 +1,55 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CatalogTarget {
+export interface AwsGlueCrawlerArgsCatalogTarget {
   connection_name?: string;
   database_name: string;
   dlq_event_queue_arn?: string;
   event_queue_arn?: string;
   tables: string[];
 }
-export interface DeltaTarget {
+export interface AwsGlueCrawlerArgsDeltaTarget {
   connection_name?: string;
   create_native_delta_table?: boolean;
   delta_tables: string[];
   write_manifest: boolean;
 }
-export interface DynamodbTarget {
+export interface AwsGlueCrawlerArgsDynamodbTarget {
   path: string;
   scan_all?: boolean;
   scan_rate?: number;
 }
-export interface HudiTarget {
+export interface AwsGlueCrawlerArgsHudiTarget {
   connection_name?: string;
   exclusions?: string[];
   maximum_traversal_depth: number;
   paths: string[];
 }
-export interface IcebergTarget {
+export interface AwsGlueCrawlerArgsIcebergTarget {
   connection_name?: string;
   exclusions?: string[];
   maximum_traversal_depth: number;
   paths: string[];
 }
-export interface JdbcTarget {
+export interface AwsGlueCrawlerArgsJdbcTarget {
   connection_name: string;
   enable_additional_metadata?: string[];
   exclusions?: string[];
   path: string;
 }
-export interface LakeFormationConfiguration {
+export interface AwsGlueCrawlerArgsLakeFormationConfiguration {
   use_lake_formation_credentials?: boolean;
 }
-export interface LineageConfiguration {
+export interface AwsGlueCrawlerArgsLineageConfiguration {
   crawler_lineage_settings?: string;
 }
-export interface MongodbTarget {
+export interface AwsGlueCrawlerArgsMongodbTarget {
   connection_name: string;
   path: string;
   scan_all?: boolean;
 }
-export interface RecrawlPolicy {
+export interface AwsGlueCrawlerArgsRecrawlPolicy {
   recrawl_behavior?: string;
 }
-export interface S3Target {
+export interface AwsGlueCrawlerArgsS3Target {
   connection_name?: string;
   dlq_event_queue_arn?: string;
   event_queue_arn?: string;
@@ -57,7 +57,7 @@ export interface S3Target {
   path: string;
   sample_size?: number;
 }
-export interface SchemaChangePolicy {
+export interface AwsGlueCrawlerArgsSchemaChangePolicy {
   delete_behavior?: string;
   update_behavior?: string;
 }
@@ -74,18 +74,18 @@ export interface AwsGlueCrawlerArgs {
   tags?: {
     [key: string]: string;
   };
-  catalog_target: CatalogTarget;
-  delta_target: DeltaTarget;
-  dynamodb_target: DynamodbTarget;
-  hudi_target: HudiTarget;
-  iceberg_target: IcebergTarget;
-  jdbc_target: JdbcTarget;
-  lake_formation_configuration: LakeFormationConfiguration;
-  lineage_configuration: LineageConfiguration;
-  mongodb_target: MongodbTarget;
-  recrawl_policy: RecrawlPolicy;
-  s3_target: S3Target;
-  schema_change_policy: SchemaChangePolicy;
+  catalog_target: AwsGlueCrawlerArgsCatalogTarget;
+  delta_target: AwsGlueCrawlerArgsDeltaTarget;
+  dynamodb_target: AwsGlueCrawlerArgsDynamodbTarget;
+  hudi_target: AwsGlueCrawlerArgsHudiTarget;
+  iceberg_target: AwsGlueCrawlerArgsIcebergTarget;
+  jdbc_target: AwsGlueCrawlerArgsJdbcTarget;
+  lake_formation_configuration: AwsGlueCrawlerArgsLakeFormationConfiguration;
+  lineage_configuration: AwsGlueCrawlerArgsLineageConfiguration;
+  mongodb_target: AwsGlueCrawlerArgsMongodbTarget;
+  recrawl_policy: AwsGlueCrawlerArgsRecrawlPolicy;
+  s3_target: AwsGlueCrawlerArgsS3Target;
+  schema_change_policy: AwsGlueCrawlerArgsSchemaChangePolicy;
 }
 export class aws_glue_crawler extends TerraformResource {
   readonly arn!: string;

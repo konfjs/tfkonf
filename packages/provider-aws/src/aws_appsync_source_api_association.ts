@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsAppsyncSourceApiAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsAppsyncSourceApiAssociationArgs {
   description?: string;
-  timeouts: Timeouts;
+  timeouts: AwsAppsyncSourceApiAssociationArgstimeouts;
 }
 export class aws_appsync_source_api_association extends TerraformResource {
   readonly arn!: string;

@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VirtualNode {
+export interface AwsAppmeshVirtualServiceArgsspecproviderVirtualNode {
   virtual_node_name: string;
 }
-export interface VirtualRouter {
+export interface AwsAppmeshVirtualServiceArgsspecproviderVirtualRouter {
   virtual_router_name: string;
 }
-export interface Provider {
-  virtual_node: VirtualNode;
-  virtual_router: VirtualRouter;
+export interface AwsAppmeshVirtualServiceArgsspecprovider {
+  virtual_node: AwsAppmeshVirtualServiceArgsspecproviderVirtualNode;
+  virtual_router: AwsAppmeshVirtualServiceArgsspecproviderVirtualRouter;
 }
-export interface Spec {
-  provider: Provider;
+export interface AwsAppmeshVirtualServiceArgsspec {
+  provider: AwsAppmeshVirtualServiceArgsspecprovider;
 }
 export interface AwsAppmeshVirtualServiceArgs {
   mesh_name: string;
@@ -18,7 +18,7 @@ export interface AwsAppmeshVirtualServiceArgs {
   tags?: {
     [key: string]: string;
   };
-  spec: Spec;
+  spec: AwsAppmeshVirtualServiceArgsspec;
 }
 export class aws_appmesh_virtual_service extends TerraformResource {
   readonly arn!: string;

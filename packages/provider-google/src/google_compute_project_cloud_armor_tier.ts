@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeProjectCloudArmorTierArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleComputeProjectCloudArmorTierArgs {
   cloud_armor_tier: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeProjectCloudArmorTierArgstimeouts;
 }
 export class google_compute_project_cloud_armor_tier extends TerraformResource {
   readonly id?: string;

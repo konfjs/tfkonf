@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ComputeLimits {
+export interface AwsEmrManagedScalingPolicyArgsComputeLimits {
   maximum_capacity_units: number;
   maximum_core_capacity_units?: number;
   maximum_ondemand_capacity_units?: number;
@@ -8,7 +8,7 @@ export interface ComputeLimits {
 }
 export interface AwsEmrManagedScalingPolicyArgs {
   cluster_id: string;
-  compute_limits: ComputeLimits;
+  compute_limits: AwsEmrManagedScalingPolicyArgsComputeLimits;
 }
 export class aws_emr_managed_scaling_policy extends TerraformResource {
   readonly id?: string;

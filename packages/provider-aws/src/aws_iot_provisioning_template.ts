@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PreProvisioningHook {
+export interface AwsIotProvisioningTemplateArgsPreProvisioningHook {
   payload_version?: string;
   target_arn: string;
 }
@@ -12,7 +12,7 @@ export interface AwsIotProvisioningTemplateArgs {
     [key: string]: string;
   };
   template_body: string;
-  pre_provisioning_hook: PreProvisioningHook;
+  pre_provisioning_hook: AwsIotProvisioningTemplateArgsPreProvisioningHook;
 }
 export class aws_iot_provisioning_template extends TerraformResource {
   readonly arn!: string;

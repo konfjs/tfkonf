@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeRegionSslPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleComputeRegionSslPolicyArgs {
   min_tls_version?: string;
   name: string;
   profile?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeRegionSslPolicyArgstimeouts;
 }
 export class google_compute_region_ssl_policy extends TerraformResource {
   readonly creation_timestamp!: string;

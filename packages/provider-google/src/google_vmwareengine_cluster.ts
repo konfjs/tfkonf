@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConsumedMemoryThresholds {
+export interface GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface CpuThresholds {
+export interface GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesCpuThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface StorageThresholds {
+export interface GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesStorageThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface AutoscalingPolicies {
+export interface GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPolicies {
   autoscale_policy_id: string;
   node_type_id: string;
   scale_out_size: number;
-  consumed_memory_thresholds: ConsumedMemoryThresholds;
-  cpu_thresholds: CpuThresholds;
-  storage_thresholds: StorageThresholds;
+  consumed_memory_thresholds: GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds;
+  cpu_thresholds: GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesCpuThresholds;
+  storage_thresholds: GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPoliciesStorageThresholds;
 }
-export interface AutoscalingSettings {
+export interface GoogleVmwareengineClusterArgsAutoscalingSettings {
   cool_down_period?: string;
   max_cluster_node_count?: number;
   min_cluster_node_count?: number;
-  autoscaling_policies: AutoscalingPolicies;
+  autoscaling_policies: GoogleVmwareengineClusterArgsAutoscalingSettingsAutoscalingPolicies;
 }
-export interface NodeTypeConfigs {
+export interface GoogleVmwareengineClusterArgsNodeTypeConfigs {
   custom_core_count?: number;
   node_count: number;
   node_type_id: string;
 }
-export interface Timeouts {
+export interface GoogleVmwareengineClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,9 +38,9 @@ export interface Timeouts {
 export interface GoogleVmwareengineClusterArgs {
   name: string;
   parent: string;
-  autoscaling_settings: AutoscalingSettings;
-  node_type_configs: NodeTypeConfigs;
-  timeouts: Timeouts;
+  autoscaling_settings: GoogleVmwareengineClusterArgsAutoscalingSettings;
+  node_type_configs: GoogleVmwareengineClusterArgsNodeTypeConfigs;
+  timeouts: GoogleVmwareengineClusterArgstimeouts;
 }
 export class google_vmwareengine_cluster extends TerraformResource {
   readonly id?: string;

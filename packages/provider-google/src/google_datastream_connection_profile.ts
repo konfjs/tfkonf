@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BigqueryProfile {}
-export interface ForwardSshConnectivity {
+export interface GoogleDatastreamConnectionProfileArgsBigqueryProfile {}
+export interface GoogleDatastreamConnectionProfileArgsForwardSshConnectivity {
   hostname: string;
   password?: string;
   port?: number;
   private_key?: string;
   username: string;
 }
-export interface GcsProfile {
+export interface GoogleDatastreamConnectionProfileArgsGcsProfile {
   bucket: string;
   root_path?: string;
 }
-export interface SslConfig {
+export interface GoogleDatastreamConnectionProfileArgsMysqlProfileSslConfig {
   ca_certificate?: string;
   client_certificate?: string;
   client_key?: string;
 }
-export interface MysqlProfile {
+export interface GoogleDatastreamConnectionProfileArgsMysqlProfile {
   hostname: string;
   password: string;
   port?: number;
   username: string;
-  ssl_config: SslConfig;
+  ssl_config: GoogleDatastreamConnectionProfileArgsMysqlProfileSslConfig;
 }
-export interface OracleProfile {
+export interface GoogleDatastreamConnectionProfileArgsOracleProfile {
   connection_attributes?: {
     [key: string]: string;
   };
@@ -33,24 +33,24 @@ export interface OracleProfile {
   port?: number;
   username: string;
 }
-export interface PostgresqlProfile {
+export interface GoogleDatastreamConnectionProfileArgsPostgresqlProfile {
   database: string;
   hostname: string;
   password: string;
   port?: number;
   username: string;
 }
-export interface PrivateConnectivity {
+export interface GoogleDatastreamConnectionProfileArgsPrivateConnectivity {
   private_connection: string;
 }
-export interface SqlServerProfile {
+export interface GoogleDatastreamConnectionProfileArgsSqlServerProfile {
   database: string;
   hostname: string;
   password: string;
   port?: number;
   username: string;
 }
-export interface Timeouts {
+export interface GoogleDatastreamConnectionProfileArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -63,15 +63,15 @@ export interface GoogleDatastreamConnectionProfileArgs {
     [key: string]: string;
   };
   location: string;
-  bigquery_profile: BigqueryProfile;
-  forward_ssh_connectivity: ForwardSshConnectivity;
-  gcs_profile: GcsProfile;
-  mysql_profile: MysqlProfile;
-  oracle_profile: OracleProfile;
-  postgresql_profile: PostgresqlProfile;
-  private_connectivity: PrivateConnectivity;
-  sql_server_profile: SqlServerProfile;
-  timeouts: Timeouts;
+  bigquery_profile: GoogleDatastreamConnectionProfileArgsBigqueryProfile;
+  forward_ssh_connectivity: GoogleDatastreamConnectionProfileArgsForwardSshConnectivity;
+  gcs_profile: GoogleDatastreamConnectionProfileArgsGcsProfile;
+  mysql_profile: GoogleDatastreamConnectionProfileArgsMysqlProfile;
+  oracle_profile: GoogleDatastreamConnectionProfileArgsOracleProfile;
+  postgresql_profile: GoogleDatastreamConnectionProfileArgsPostgresqlProfile;
+  private_connectivity: GoogleDatastreamConnectionProfileArgsPrivateConnectivity;
+  sql_server_profile: GoogleDatastreamConnectionProfileArgsSqlServerProfile;
+  timeouts: GoogleDatastreamConnectionProfileArgstimeouts;
 }
 export class google_datastream_connection_profile extends TerraformResource {
   readonly effective_labels!: {

@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Metadata {
+export interface GoogleComputeInstanceSettingsArgsmetadata {
   items?: {
     [key: string]: string;
   };
 }
-export interface Timeouts {
+export interface GoogleComputeInstanceSettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleComputeInstanceSettingsArgs {
   zone: string;
-  metadata: Metadata;
-  timeouts: Timeouts;
+  metadata: GoogleComputeInstanceSettingsArgsmetadata;
+  timeouts: GoogleComputeInstanceSettingsArgstimeouts;
 }
 export class google_compute_instance_settings extends TerraformResource {
   readonly fingerprint!: string;

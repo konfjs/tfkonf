@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdminContact {}
-export interface BillingContact {}
-export interface NameServer {
+export interface AwsRoute53domainsRegisteredDomainArgsAdminContact {}
+export interface AwsRoute53domainsRegisteredDomainArgsBillingContact {}
+export interface AwsRoute53domainsRegisteredDomainArgsNameServer {
   glue_ips?: string[];
   name: string;
 }
-export interface RegistrantContact {}
-export interface TechContact {}
-export interface Timeouts {
+export interface AwsRoute53domainsRegisteredDomainArgsRegistrantContact {}
+export interface AwsRoute53domainsRegisteredDomainArgsTechContact {}
+export interface AwsRoute53domainsRegisteredDomainArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -22,12 +22,12 @@ export interface AwsRoute53domainsRegisteredDomainArgs {
   };
   tech_privacy?: boolean;
   transfer_lock?: boolean;
-  admin_contact: AdminContact;
-  billing_contact: BillingContact;
-  name_server: NameServer;
-  registrant_contact: RegistrantContact;
-  tech_contact: TechContact;
-  timeouts: Timeouts;
+  admin_contact: AwsRoute53domainsRegisteredDomainArgsAdminContact;
+  billing_contact: AwsRoute53domainsRegisteredDomainArgsBillingContact;
+  name_server: AwsRoute53domainsRegisteredDomainArgsNameServer;
+  registrant_contact: AwsRoute53domainsRegisteredDomainArgsRegistrantContact;
+  tech_contact: AwsRoute53domainsRegisteredDomainArgsTechContact;
+  timeouts: AwsRoute53domainsRegisteredDomainArgstimeouts;
 }
 export class aws_route53domains_registered_domain extends TerraformResource {
   readonly abuse_contact_email!: string;

@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StartTime {
+export interface GoogleMemcacheInstanceArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface WeeklyMaintenanceWindow {
+export interface GoogleMemcacheInstanceArgsMaintenancePolicyWeeklyMaintenanceWindow {
   day: string;
   duration: string;
-  start_time: StartTime;
+  start_time: GoogleMemcacheInstanceArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 }
-export interface MaintenancePolicy {
+export interface GoogleMemcacheInstanceArgsMaintenancePolicy {
   description?: string;
-  weekly_maintenance_window: WeeklyMaintenanceWindow;
+  weekly_maintenance_window: GoogleMemcacheInstanceArgsMaintenancePolicyWeeklyMaintenanceWindow;
 }
-export interface MemcacheParameters {
+export interface GoogleMemcacheInstanceArgsMemcacheParameters {
   params?: {
     [key: string]: string;
   };
 }
-export interface NodeConfig {
+export interface GoogleMemcacheInstanceArgsNodeConfig {
   cpu_count: number;
   memory_size_mb: number;
 }
-export interface Timeouts {
+export interface GoogleMemcacheInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,10 +36,10 @@ export interface GoogleMemcacheInstanceArgs {
   name: string;
   node_count: number;
   reserved_ip_range_id?: string[];
-  maintenance_policy: MaintenancePolicy;
-  memcache_parameters: MemcacheParameters;
-  node_config: NodeConfig;
-  timeouts: Timeouts;
+  maintenance_policy: GoogleMemcacheInstanceArgsMaintenancePolicy;
+  memcache_parameters: GoogleMemcacheInstanceArgsMemcacheParameters;
+  node_config: GoogleMemcacheInstanceArgsNodeConfig;
+  timeouts: GoogleMemcacheInstanceArgstimeouts;
 }
 export class google_memcache_instance extends TerraformResource {
   readonly authorized_network?: string;

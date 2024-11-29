@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface UnusedAccess {
+export interface AwsAccessanalyzerAnalyzerArgsconfigurationUnusedAccess {
   unused_access_age?: number;
 }
-export interface Configuration {
-  unused_access: UnusedAccess;
+export interface AwsAccessanalyzerAnalyzerArgsconfiguration {
+  unused_access: AwsAccessanalyzerAnalyzerArgsconfigurationUnusedAccess;
 }
 export interface AwsAccessanalyzerAnalyzerArgs {
   analyzer_name: string;
@@ -11,7 +11,7 @@ export interface AwsAccessanalyzerAnalyzerArgs {
     [key: string]: string;
   };
   type?: string;
-  configuration: Configuration;
+  configuration: AwsAccessanalyzerAnalyzerArgsconfiguration;
 }
 export class aws_accessanalyzer_analyzer extends TerraformResource {
   readonly arn!: string;

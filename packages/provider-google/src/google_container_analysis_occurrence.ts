@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Signatures {
+export interface GoogleContainerAnalysisOccurrenceArgsattestationsignatures {
   public_key_id: string;
   signature?: string;
 }
-export interface Attestation {
+export interface GoogleContainerAnalysisOccurrenceArgsattestation {
   serialized_payload: string;
-  signatures: Signatures;
+  signatures: GoogleContainerAnalysisOccurrenceArgsattestationsignatures;
 }
-export interface Timeouts {
+export interface GoogleContainerAnalysisOccurrenceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleContainerAnalysisOccurrenceArgs {
   note_name: string;
   remediation?: string;
   resource_uri: string;
-  attestation: Attestation;
-  timeouts: Timeouts;
+  attestation: GoogleContainerAnalysisOccurrenceArgsattestation;
+  timeouts: GoogleContainerAnalysisOccurrenceArgstimeouts;
 }
 export class google_container_analysis_occurrence extends TerraformResource {
   readonly create_time!: string;

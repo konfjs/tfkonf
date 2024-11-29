@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoscalingLimits {
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverridesAutoscalingLimits {
   max_nodes: number;
   min_nodes: number;
 }
-export interface Overrides {
-  autoscaling_limits: AutoscalingLimits;
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverrides {
+  autoscaling_limits: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverridesAutoscalingLimits;
 }
-export interface ReplicaSelection {
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection {
   location: string;
 }
-export interface AsymmetricAutoscalingOptions {
-  overrides: Overrides;
-  replica_selection: ReplicaSelection;
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptions {
+  overrides: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsoverrides;
+  replica_selection: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection;
 }
-export interface AutoscalingLimits {
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingLimits {
   max_nodes?: number;
   max_processing_units?: number;
   min_nodes?: number;
   min_processing_units?: number;
 }
-export interface AutoscalingTargets {
+export interface GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingTargets {
   high_priority_cpu_utilization_percent?: number;
   storage_utilization_percent?: number;
 }
-export interface AutoscalingConfig {
-  asymmetric_autoscaling_options: AsymmetricAutoscalingOptions;
-  autoscaling_limits: AutoscalingLimits;
-  autoscaling_targets: AutoscalingTargets;
+export interface GoogleSpannerInstanceArgsAutoscalingConfig {
+  asymmetric_autoscaling_options: GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptions;
+  autoscaling_limits: GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingLimits;
+  autoscaling_targets: GoogleSpannerInstanceArgsAutoscalingConfigAutoscalingTargets;
 }
-export interface Timeouts {
+export interface GoogleSpannerInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,8 +40,8 @@ export interface GoogleSpannerInstanceArgs {
   labels?: {
     [key: string]: string;
   };
-  autoscaling_config: AutoscalingConfig;
-  timeouts: Timeouts;
+  autoscaling_config: GoogleSpannerInstanceArgsAutoscalingConfig;
+  timeouts: GoogleSpannerInstanceArgstimeouts;
 }
 export class google_spanner_instance extends TerraformResource {
   readonly default_backup_schedule_type?: string;

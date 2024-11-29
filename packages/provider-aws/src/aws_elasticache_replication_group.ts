@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogDeliveryConfiguration {
+export interface AwsElasticacheReplicationGroupArgsLogDeliveryConfiguration {
   destination: string;
   destination_type: string;
   log_format: string;
   log_type: string;
 }
-export interface Timeouts {
+export interface AwsElasticacheReplicationGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,8 +30,8 @@ export interface AwsElasticacheReplicationGroupArgs {
     [key: string]: string;
   };
   user_group_ids?: string[];
-  log_delivery_configuration: LogDeliveryConfiguration;
-  timeouts: Timeouts;
+  log_delivery_configuration: AwsElasticacheReplicationGroupArgsLogDeliveryConfiguration;
+  timeouts: AwsElasticacheReplicationGroupArgstimeouts;
 }
 export class aws_elasticache_replication_group extends TerraformResource {
   readonly apply_immediately?: boolean;

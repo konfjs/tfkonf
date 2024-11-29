@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeHttpHealthCheckArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleComputeHttpHealthCheckArgs {
   request_path?: string;
   timeout_sec?: number;
   unhealthy_threshold?: number;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeHttpHealthCheckArgstimeouts;
 }
 export class google_compute_http_health_check extends TerraformResource {
   readonly creation_timestamp!: string;

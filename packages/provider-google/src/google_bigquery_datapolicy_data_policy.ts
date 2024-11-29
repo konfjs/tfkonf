@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataMaskingPolicy {
+export interface GoogleBigqueryDatapolicyDataPolicyArgsDataMaskingPolicy {
   predefined_expression?: string;
   routine?: string;
 }
-export interface Timeouts {
+export interface GoogleBigqueryDatapolicyDataPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface GoogleBigqueryDatapolicyDataPolicyArgs {
   data_policy_type: string;
   location: string;
   policy_tag: string;
-  data_masking_policy: DataMaskingPolicy;
-  timeouts: Timeouts;
+  data_masking_policy: GoogleBigqueryDatapolicyDataPolicyArgsDataMaskingPolicy;
+  timeouts: GoogleBigqueryDatapolicyDataPolicyArgstimeouts;
 }
 export class google_bigquery_datapolicy_data_policy extends TerraformResource {
   readonly id?: string;

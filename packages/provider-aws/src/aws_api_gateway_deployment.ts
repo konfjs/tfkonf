@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CanarySettings {
+export interface AwsApiGatewayDeploymentArgsCanarySettings {
   percent_traffic?: number;
   stage_variable_overrides?: {
     [key: string]: string;
@@ -17,7 +17,7 @@ export interface AwsApiGatewayDeploymentArgs {
   variables?: {
     [key: string]: string;
   };
-  canary_settings: CanarySettings;
+  canary_settings: AwsApiGatewayDeploymentArgsCanarySettings;
 }
 export class aws_api_gateway_deployment extends TerraformResource {
   readonly created_date!: string;

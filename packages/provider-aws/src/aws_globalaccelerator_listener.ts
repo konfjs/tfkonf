@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PortRange {
+export interface AwsGlobalacceleratorListenerArgsPortRange {
   from_port?: number;
   to_port?: number;
 }
-export interface Timeouts {
+export interface AwsGlobalacceleratorListenerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface AwsGlobalacceleratorListenerArgs {
   accelerator_arn: string;
   client_affinity?: string;
   protocol: string;
-  port_range: PortRange;
-  timeouts: Timeouts;
+  port_range: AwsGlobalacceleratorListenerArgsPortRange;
+  timeouts: AwsGlobalacceleratorListenerArgstimeouts;
 }
 export class aws_globalaccelerator_listener extends TerraformResource {
   readonly id?: string;

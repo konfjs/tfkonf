@@ -1,40 +1,40 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AmazonMskCluster {
+export interface AwsMskReplicatorArgsKafkaClusterAmazonMskCluster {
   msk_cluster_arn: string;
 }
-export interface VpcConfig {
+export interface AwsMskReplicatorArgsKafkaClusterVpcConfig {
   security_groups_ids?: string[];
   subnet_ids: string[];
 }
-export interface KafkaCluster {
-  amazon_msk_cluster: AmazonMskCluster;
-  vpc_config: VpcConfig;
+export interface AwsMskReplicatorArgsKafkaCluster {
+  amazon_msk_cluster: AwsMskReplicatorArgsKafkaClusterAmazonMskCluster;
+  vpc_config: AwsMskReplicatorArgsKafkaClusterVpcConfig;
 }
-export interface ConsumerGroupReplication {
+export interface AwsMskReplicatorArgsReplicationInfoListConsumerGroupReplication {
   consumer_groups_to_exclude?: string[];
   consumer_groups_to_replicate: string[];
   detect_and_copy_new_consumer_groups?: boolean;
   synchronise_consumer_group_offsets?: boolean;
 }
-export interface StartingPosition {
+export interface AwsMskReplicatorArgsReplicationInfoListTopicReplicationStartingPosition {
   type?: string;
 }
-export interface TopicReplication {
+export interface AwsMskReplicatorArgsReplicationInfoListTopicReplication {
   copy_access_control_lists_for_topics?: boolean;
   copy_topic_configurations?: boolean;
   detect_and_copy_new_topics?: boolean;
   topics_to_exclude?: string[];
   topics_to_replicate: string[];
-  starting_position: StartingPosition;
+  starting_position: AwsMskReplicatorArgsReplicationInfoListTopicReplicationStartingPosition;
 }
-export interface ReplicationInfoList {
+export interface AwsMskReplicatorArgsReplicationInfoList {
   source_kafka_cluster_arn: string;
   target_compression_type: string;
   target_kafka_cluster_arn: string;
-  consumer_group_replication: ConsumerGroupReplication;
-  topic_replication: TopicReplication;
+  consumer_group_replication: AwsMskReplicatorArgsReplicationInfoListConsumerGroupReplication;
+  topic_replication: AwsMskReplicatorArgsReplicationInfoListTopicReplication;
 }
-export interface Timeouts {
+export interface AwsMskReplicatorArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -46,9 +46,9 @@ export interface AwsMskReplicatorArgs {
   tags?: {
     [key: string]: string;
   };
-  kafka_cluster: KafkaCluster;
-  replication_info_list: ReplicationInfoList;
-  timeouts: Timeouts;
+  kafka_cluster: AwsMskReplicatorArgsKafkaCluster;
+  replication_info_list: AwsMskReplicatorArgsReplicationInfoList;
+  timeouts: AwsMskReplicatorArgstimeouts;
 }
 export class aws_msk_replicator extends TerraformResource {
   readonly arn!: string;

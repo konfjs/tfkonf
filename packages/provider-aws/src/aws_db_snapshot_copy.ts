@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDbSnapshotCopyArgstimeouts {
   create?: string;
 }
 export interface AwsDbSnapshotCopyArgs {
@@ -14,7 +14,7 @@ export interface AwsDbSnapshotCopyArgs {
   };
   target_custom_availability_zone?: string;
   target_db_snapshot_identifier: string;
-  timeouts: Timeouts;
+  timeouts: AwsDbSnapshotCopyArgstimeouts;
 }
 export class aws_db_snapshot_copy extends TerraformResource {
   readonly allocated_storage!: number;

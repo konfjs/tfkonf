@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Grantee {
+export interface AwsS3BucketLoggingArgsTargetGrantgrantee {
   email_address?: string;
   id?: string;
   type: string;
   uri?: string;
 }
-export interface TargetGrant {
+export interface AwsS3BucketLoggingArgsTargetGrant {
   permission: string;
-  grantee: Grantee;
+  grantee: AwsS3BucketLoggingArgsTargetGrantgrantee;
 }
-export interface PartitionedPrefix {
+export interface AwsS3BucketLoggingArgsTargetObjectKeyFormatPartitionedPrefix {
   partition_date_source: string;
 }
-export interface SimplePrefix {}
-export interface TargetObjectKeyFormat {
-  partitioned_prefix: PartitionedPrefix;
-  simple_prefix: SimplePrefix;
+export interface AwsS3BucketLoggingArgsTargetObjectKeyFormatSimplePrefix {}
+export interface AwsS3BucketLoggingArgsTargetObjectKeyFormat {
+  partitioned_prefix: AwsS3BucketLoggingArgsTargetObjectKeyFormatPartitionedPrefix;
+  simple_prefix: AwsS3BucketLoggingArgsTargetObjectKeyFormatSimplePrefix;
 }
 export interface AwsS3BucketLoggingArgs {
   bucket: string;
   expected_bucket_owner?: string;
   target_bucket: string;
   target_prefix: string;
-  target_grant: TargetGrant;
-  target_object_key_format: TargetObjectKeyFormat;
+  target_grant: AwsS3BucketLoggingArgsTargetGrant;
+  target_object_key_format: AwsS3BucketLoggingArgsTargetObjectKeyFormat;
 }
 export class aws_s3_bucket_logging extends TerraformResource {
   readonly id?: string;

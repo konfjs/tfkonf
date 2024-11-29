@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ShareDistribution {
+export interface AwsBatchSchedulingPolicyArgsFairSharePolicyShareDistribution {
   share_identifier: string;
   weight_factor?: number;
 }
-export interface FairSharePolicy {
+export interface AwsBatchSchedulingPolicyArgsFairSharePolicy {
   compute_reservation?: number;
   share_decay_seconds?: number;
-  share_distribution: ShareDistribution;
+  share_distribution: AwsBatchSchedulingPolicyArgsFairSharePolicyShareDistribution;
 }
 export interface AwsBatchSchedulingPolicyArgs {
   name: string;
   tags?: {
     [key: string]: string;
   };
-  fair_share_policy: FairSharePolicy;
+  fair_share_policy: AwsBatchSchedulingPolicyArgsFairSharePolicy;
 }
 export class aws_batch_scheduling_policy extends TerraformResource {
   readonly arn!: string;

@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeliveryOptions {
+export interface AwsSesConfigurationSetArgsDeliveryOptions {
   tls_policy?: string;
 }
-export interface TrackingOptions {
+export interface AwsSesConfigurationSetArgsTrackingOptions {
   custom_redirect_domain?: string;
 }
 export interface AwsSesConfigurationSetArgs {
   name: string;
   reputation_metrics_enabled?: boolean;
   sending_enabled?: boolean;
-  delivery_options: DeliveryOptions;
-  tracking_options: TrackingOptions;
+  delivery_options: AwsSesConfigurationSetArgsDeliveryOptions;
+  tracking_options: AwsSesConfigurationSetArgsTrackingOptions;
 }
 export class aws_ses_configuration_set extends TerraformResource {
   readonly arn!: string;

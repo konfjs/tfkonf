@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CommonName {
+export interface GoogleApigeeTargetServerArgsSSlInfoCommonName {
   value?: string;
   wildcard_match?: boolean;
 }
-export interface SSlInfo {
+export interface GoogleApigeeTargetServerArgsSSlInfo {
   ciphers?: string[];
   client_auth_enabled?: boolean;
   enabled: boolean;
@@ -12,9 +12,9 @@ export interface SSlInfo {
   key_store?: string;
   protocols?: string[];
   trust_store?: string;
-  common_name: CommonName;
+  common_name: GoogleApigeeTargetServerArgsSSlInfoCommonName;
 }
-export interface Timeouts {
+export interface GoogleApigeeTargetServerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,8 +26,8 @@ export interface GoogleApigeeTargetServerArgs {
   is_enabled?: boolean;
   name: string;
   port: number;
-  s_sl_info: SSlInfo;
-  timeouts: Timeouts;
+  s_sl_info: GoogleApigeeTargetServerArgsSSlInfo;
+  timeouts: GoogleApigeeTargetServerArgstimeouts;
 }
 export class google_apigee_target_server extends TerraformResource {
   readonly id?: string;

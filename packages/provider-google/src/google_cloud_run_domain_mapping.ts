@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Metadata {
+export interface GoogleCloudRunDomainMappingArgsmetadata {
   annotations?: {
     [key: string]: string;
   };
@@ -8,21 +8,21 @@ export interface Metadata {
   };
   namespace: string;
 }
-export interface Spec {
+export interface GoogleCloudRunDomainMappingArgsspec {
   certificate_mode?: string;
   force_override?: boolean;
   route_name: string;
 }
-export interface Timeouts {
+export interface GoogleCloudRunDomainMappingArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleCloudRunDomainMappingArgs {
   location: string;
   name: string;
-  metadata: Metadata;
-  spec: Spec;
-  timeouts: Timeouts;
+  metadata: GoogleCloudRunDomainMappingArgsmetadata;
+  spec: GoogleCloudRunDomainMappingArgsspec;
+  timeouts: GoogleCloudRunDomainMappingArgstimeouts;
 }
 export class google_cloud_run_domain_mapping extends TerraformResource {
   readonly id?: string;

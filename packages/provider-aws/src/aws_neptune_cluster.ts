@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ServerlessV2ScalingConfiguration {
+export interface AwsNeptuneClusterArgsServerlessV2ScalingConfiguration {
   max_capacity?: number;
   min_capacity?: number;
 }
-export interface Timeouts {
+export interface AwsNeptuneClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,8 +27,8 @@ export interface AwsNeptuneClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  serverless_v2_scaling_configuration: ServerlessV2ScalingConfiguration;
-  timeouts: Timeouts;
+  serverless_v2_scaling_configuration: AwsNeptuneClusterArgsServerlessV2ScalingConfiguration;
+  timeouts: AwsNeptuneClusterArgstimeouts;
 }
 export class aws_neptune_cluster extends TerraformResource {
   readonly allow_major_version_upgrade?: boolean;

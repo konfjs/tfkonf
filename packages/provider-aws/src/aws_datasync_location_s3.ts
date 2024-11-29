@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Config {
+export interface AwsDatasyncLocationS3ArgsS3Config {
   bucket_access_role_arn: string;
 }
 export interface AwsDatasyncLocationS3Args {
@@ -9,7 +9,7 @@ export interface AwsDatasyncLocationS3Args {
   tags?: {
     [key: string]: string;
   };
-  s3_config: S3Config;
+  s3_config: AwsDatasyncLocationS3ArgsS3Config;
 }
 export class aws_datasync_location_s3 extends TerraformResource {
   readonly arn!: string;

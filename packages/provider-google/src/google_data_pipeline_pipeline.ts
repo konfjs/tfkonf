@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ScheduleInfo {
+export interface GoogleDataPipelinePipelineArgsScheduleInfo {
   schedule?: string;
   time_zone?: string;
 }
-export interface Timeouts {
+export interface GoogleDataPipelinePipelineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Environment {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequestLaunchParameterenvironment {
   additional_experiments?: string[];
   additional_user_labels?: {
     [key: string]: string;
@@ -28,7 +28,7 @@ export interface Environment {
   worker_zone?: string;
   zone?: string;
 }
-export interface LaunchParameter {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequestLaunchParameter {
   container_spec_gcs_path?: string;
   job_name: string;
   launch_options?: {
@@ -41,15 +41,15 @@ export interface LaunchParameter {
     [key: string]: string;
   };
   update?: boolean;
-  environment: Environment;
+  environment: GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequestLaunchParameterenvironment;
 }
-export interface DataflowFlexTemplateRequest {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequest {
   location: string;
   project_id: string;
   validate_only?: boolean;
-  launch_parameter: LaunchParameter;
+  launch_parameter: GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequestLaunchParameter;
 }
-export interface Environment {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequestLaunchParametersenvironment {
   additional_experiments?: string[];
   additional_user_labels?: {
     [key: string]: string;
@@ -68,7 +68,7 @@ export interface Environment {
   worker_zone?: string;
   zone?: string;
 }
-export interface LaunchParameters {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequestLaunchParameters {
   job_name: string;
   parameters?: {
     [key: string]: string;
@@ -77,18 +77,18 @@ export interface LaunchParameters {
     [key: string]: string;
   };
   update?: boolean;
-  environment: Environment;
+  environment: GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequestLaunchParametersenvironment;
 }
-export interface DataflowLaunchTemplateRequest {
+export interface GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequest {
   gcs_path?: string;
   location?: string;
   project_id: string;
   validate_only?: boolean;
-  launch_parameters: LaunchParameters;
+  launch_parameters: GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequestLaunchParameters;
 }
-export interface Workload {
-  dataflow_flex_template_request: DataflowFlexTemplateRequest;
-  dataflow_launch_template_request: DataflowLaunchTemplateRequest;
+export interface GoogleDataPipelinePipelineArgsworkload {
+  dataflow_flex_template_request: GoogleDataPipelinePipelineArgsworkloadDataflowFlexTemplateRequest;
+  dataflow_launch_template_request: GoogleDataPipelinePipelineArgsworkloadDataflowLaunchTemplateRequest;
 }
 export interface GoogleDataPipelinePipelineArgs {
   display_name?: string;
@@ -99,9 +99,9 @@ export interface GoogleDataPipelinePipelineArgs {
   region?: string;
   state: string;
   type: string;
-  schedule_info: ScheduleInfo;
-  timeouts: Timeouts;
-  workload: Workload;
+  schedule_info: GoogleDataPipelinePipelineArgsScheduleInfo;
+  timeouts: GoogleDataPipelinePipelineArgstimeouts;
+  workload: GoogleDataPipelinePipelineArgsworkload;
 }
 export class google_data_pipeline_pipeline extends TerraformResource {
   readonly create_time!: string;

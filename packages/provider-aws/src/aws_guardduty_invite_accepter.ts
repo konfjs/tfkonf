@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsGuarddutyInviteAccepterArgstimeouts {
   create?: string;
 }
 export interface AwsGuarddutyInviteAccepterArgs {
   detector_id: string;
   master_account_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsGuarddutyInviteAccepterArgstimeouts;
 }
 export class aws_guardduty_invite_accepter extends TerraformResource {
   readonly id?: string;

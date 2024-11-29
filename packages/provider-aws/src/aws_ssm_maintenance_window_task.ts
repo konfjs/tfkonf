@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Targets {
+export interface AwsSsmMaintenanceWindowTaskArgstargets {
   key: string;
   values: string[];
 }
-export interface Parameter {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersparameter {
   name: string;
   values: string[];
 }
-export interface AutomationParameters {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParameters {
   document_version?: string;
-  parameter: Parameter;
+  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersparameter;
 }
-export interface LambdaParameters {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersLambdaParameters {
   client_context?: string;
   payload?: string;
   qualifier?: string;
 }
-export interface CloudwatchConfig {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersCloudwatchConfig {
   cloudwatch_output_enabled?: boolean;
 }
-export interface NotificationConfig {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersNotificationConfig {
   notification_arn?: string;
   notification_events?: string[];
   notification_type?: string;
 }
-export interface Parameter {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersparameter {
   name: string;
   values: string[];
 }
-export interface RunCommandParameters {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParameters {
   comment?: string;
   document_hash?: string;
   document_hash_type?: string;
@@ -37,19 +37,19 @@ export interface RunCommandParameters {
   output_s3_key_prefix?: string;
   service_role_arn?: string;
   timeout_seconds?: number;
-  cloudwatch_config: CloudwatchConfig;
-  notification_config: NotificationConfig;
-  parameter: Parameter;
+  cloudwatch_config: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersCloudwatchConfig;
+  notification_config: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersNotificationConfig;
+  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersparameter;
 }
-export interface StepFunctionsParameters {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersStepFunctionsParameters {
   input?: string;
   name?: string;
 }
-export interface TaskInvocationParameters {
-  automation_parameters: AutomationParameters;
-  lambda_parameters: LambdaParameters;
-  run_command_parameters: RunCommandParameters;
-  step_functions_parameters: StepFunctionsParameters;
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParameters {
+  automation_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParameters;
+  lambda_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersLambdaParameters;
+  run_command_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParameters;
+  step_functions_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersStepFunctionsParameters;
 }
 export interface AwsSsmMaintenanceWindowTaskArgs {
   cutoff_behavior?: string;
@@ -59,8 +59,8 @@ export interface AwsSsmMaintenanceWindowTaskArgs {
   task_arn: string;
   task_type: string;
   window_id: string;
-  targets: Targets;
-  task_invocation_parameters: TaskInvocationParameters;
+  targets: AwsSsmMaintenanceWindowTaskArgstargets;
+  task_invocation_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParameters;
 }
 export class aws_ssm_maintenance_window_task extends TerraformResource {
   readonly arn!: string;

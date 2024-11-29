@@ -1,50 +1,50 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConsumedMemoryThresholds {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface CpuThresholds {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface StorageThresholds {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds {
   scale_in: number;
   scale_out: number;
 }
-export interface AutoscalingPolicies {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPolicies {
   autoscale_policy_id: string;
   node_type_id: string;
   scale_out_size: number;
-  consumed_memory_thresholds: ConsumedMemoryThresholds;
-  cpu_thresholds: CpuThresholds;
-  storage_thresholds: StorageThresholds;
+  consumed_memory_thresholds: GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds;
+  cpu_thresholds: GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesCpuThresholds;
+  storage_thresholds: GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesStorageThresholds;
 }
-export interface AutoscalingSettings {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettings {
   cool_down_period?: string;
   max_cluster_node_count?: number;
   min_cluster_node_count?: number;
-  autoscaling_policies: AutoscalingPolicies;
+  autoscaling_policies: GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPolicies;
 }
-export interface NodeTypeConfigs {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterNodeTypeConfigs {
   custom_core_count?: number;
   node_count: number;
   node_type_id: string;
 }
-export interface StretchedClusterConfig {
+export interface GoogleVmwareenginePrivateCloudArgsManagementClusterStretchedClusterConfig {
   preferred_location?: string;
   secondary_location?: string;
 }
-export interface ManagementCluster {
+export interface GoogleVmwareenginePrivateCloudArgsManagementCluster {
   cluster_id: string;
-  autoscaling_settings: AutoscalingSettings;
-  node_type_configs: NodeTypeConfigs;
-  stretched_cluster_config: StretchedClusterConfig;
+  autoscaling_settings: GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettings;
+  node_type_configs: GoogleVmwareenginePrivateCloudArgsManagementClusterNodeTypeConfigs;
+  stretched_cluster_config: GoogleVmwareenginePrivateCloudArgsManagementClusterStretchedClusterConfig;
 }
-export interface NetworkConfig {
+export interface GoogleVmwareenginePrivateCloudArgsNetworkConfig {
   management_cidr: string;
   vmware_engine_network?: string;
 }
-export interface Timeouts {
+export interface GoogleVmwareenginePrivateCloudArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -56,9 +56,9 @@ export interface GoogleVmwareenginePrivateCloudArgs {
   name: string;
   send_deletion_delay_hours_if_zero?: boolean;
   type?: string;
-  management_cluster: ManagementCluster;
-  network_config: NetworkConfig;
-  timeouts: Timeouts;
+  management_cluster: GoogleVmwareenginePrivateCloudArgsManagementCluster;
+  network_config: GoogleVmwareenginePrivateCloudArgsNetworkConfig;
+  timeouts: GoogleVmwareenginePrivateCloudArgstimeouts;
 }
 export class google_vmwareengine_private_cloud extends TerraformResource {
   readonly hcx!: any[];

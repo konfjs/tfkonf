@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InstanceMetadataOptions {
+export interface AwsImagebuilderInfrastructureConfigurationArgsInstanceMetadataOptions {
   http_put_response_hop_limit?: number;
   http_tokens?: string;
 }
-export interface S3Logs {
+export interface AwsImagebuilderInfrastructureConfigurationArgsloggingS3Logs {
   s3_bucket_name: string;
   s3_key_prefix?: string;
 }
-export interface Logging {
-  s3_logs: S3Logs;
+export interface AwsImagebuilderInfrastructureConfigurationArgslogging {
+  s3_logs: AwsImagebuilderInfrastructureConfigurationArgsloggingS3Logs;
 }
 export interface AwsImagebuilderInfrastructureConfigurationArgs {
   description?: string;
@@ -26,8 +26,8 @@ export interface AwsImagebuilderInfrastructureConfigurationArgs {
     [key: string]: string;
   };
   terminate_instance_on_failure?: boolean;
-  instance_metadata_options: InstanceMetadataOptions;
-  logging: Logging;
+  instance_metadata_options: AwsImagebuilderInfrastructureConfigurationArgsInstanceMetadataOptions;
+  logging: AwsImagebuilderInfrastructureConfigurationArgslogging;
 }
 export class aws_imagebuilder_infrastructure_configuration extends TerraformResource {
   readonly arn!: string;

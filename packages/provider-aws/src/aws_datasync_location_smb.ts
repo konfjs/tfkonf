@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MountOptions {
+export interface AwsDatasyncLocationSmbArgsMountOptions {
   version?: string;
 }
 export interface AwsDatasyncLocationSmbArgs {
@@ -11,7 +11,7 @@ export interface AwsDatasyncLocationSmbArgs {
     [key: string]: string;
   };
   user: string;
-  mount_options: MountOptions;
+  mount_options: AwsDatasyncLocationSmbArgsMountOptions;
 }
 export class aws_datasync_location_smb extends TerraformResource {
   readonly arn!: string;

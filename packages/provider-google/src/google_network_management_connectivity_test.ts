@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Destination {
+export interface GoogleNetworkManagementConnectivityTestArgsdestination {
   instance?: string;
   ip_address?: string;
   network?: string;
   port?: number;
   project_id?: string;
 }
-export interface Source {
+export interface GoogleNetworkManagementConnectivityTestArgssource {
   instance?: string;
   ip_address?: string;
   network?: string;
@@ -14,7 +14,7 @@ export interface Source {
   port?: number;
   project_id?: string;
 }
-export interface Timeouts {
+export interface GoogleNetworkManagementConnectivityTestArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,9 +27,9 @@ export interface GoogleNetworkManagementConnectivityTestArgs {
   name: string;
   protocol?: string;
   related_projects?: string[];
-  destination: Destination;
-  source: Source;
-  timeouts: Timeouts;
+  destination: GoogleNetworkManagementConnectivityTestArgsdestination;
+  source: GoogleNetworkManagementConnectivityTestArgssource;
+  timeouts: GoogleNetworkManagementConnectivityTestArgstimeouts;
 }
 export class google_network_management_connectivity_test extends TerraformResource {
   readonly effective_labels!: {

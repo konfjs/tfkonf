@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutomaticResources {}
-export interface MachineSpec {
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgsAutomaticResources {}
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResourcesMachineSpec {
   machine_type?: string;
 }
-export interface DedicatedResources {
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResources {
   min_replica_count: number;
-  machine_spec: MachineSpec;
+  machine_spec: GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResourcesMachineSpec;
 }
-export interface AuthProvider {
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgsDeployedIndexAuthConfigAuthProvider {
   allowed_issuers?: string[];
   audiences?: string[];
 }
-export interface DeployedIndexAuthConfig {
-  auth_provider: AuthProvider;
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgsDeployedIndexAuthConfig {
+  auth_provider: GoogleVertexAiIndexEndpointDeployedIndexArgsDeployedIndexAuthConfigAuthProvider;
 }
-export interface Timeouts {
+export interface GoogleVertexAiIndexEndpointDeployedIndexArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,10 +27,10 @@ export interface GoogleVertexAiIndexEndpointDeployedIndexArgs {
   index: string;
   index_endpoint: string;
   reserved_ip_ranges?: string[];
-  automatic_resources: AutomaticResources;
-  dedicated_resources: DedicatedResources;
-  deployed_index_auth_config: DeployedIndexAuthConfig;
-  timeouts: Timeouts;
+  automatic_resources: GoogleVertexAiIndexEndpointDeployedIndexArgsAutomaticResources;
+  dedicated_resources: GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResources;
+  deployed_index_auth_config: GoogleVertexAiIndexEndpointDeployedIndexArgsDeployedIndexAuthConfig;
+  timeouts: GoogleVertexAiIndexEndpointDeployedIndexArgstimeouts;
 }
 export class google_vertex_ai_index_endpoint_deployed_index extends TerraformResource {
   readonly create_time!: string;

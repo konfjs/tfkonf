@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleCloudRunV2JobIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudRunV2JobIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleCloudRunV2JobIamBindingArgscondition;
 }
 export class google_cloud_run_v2_job_iam_binding extends TerraformResource {
   readonly etag!: string;

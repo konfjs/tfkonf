@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AnalyticsConfiguration {
+export interface AwsCognitoUserPoolClientArgsAnalyticsConfiguration {
   application_arn?: string;
   application_id?: string;
   external_id?: string;
 }
-export interface TokenValidityUnits {}
+export interface AwsCognitoUserPoolClientArgsTokenValidityUnits {}
 export interface AwsCognitoUserPoolClientArgs {
   generate_secret?: boolean;
   name: string;
   user_pool_id: string;
-  analytics_configuration: AnalyticsConfiguration;
-  token_validity_units: TokenValidityUnits;
+  analytics_configuration: AwsCognitoUserPoolClientArgsAnalyticsConfiguration;
+  token_validity_units: AwsCognitoUserPoolClientArgsTokenValidityUnits;
 }
 export class aws_cognito_user_pool_client extends TerraformResource {
   readonly access_token_validity?: number;

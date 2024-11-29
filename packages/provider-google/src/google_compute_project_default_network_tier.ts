@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeProjectDefaultNetworkTierArgstimeouts {
   create?: string;
 }
 export interface GoogleComputeProjectDefaultNetworkTierArgs {
   network_tier: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeProjectDefaultNetworkTierArgstimeouts;
 }
 export class google_compute_project_default_network_tier extends TerraformResource {
   readonly id?: string;

@@ -1,70 +1,70 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AllowedDomainsSettings {
+export interface GoogleIapSettingsArgsAccessSettingsAllowedDomainsSettings {
   domains?: string[];
   enable?: boolean;
 }
-export interface CorsSettings {
+export interface GoogleIapSettingsArgsAccessSettingsCorsSettings {
   allow_http_options?: boolean;
 }
-export interface GcipSettings {
+export interface GoogleIapSettingsArgsAccessSettingsGcipSettings {
   login_page_uri?: string;
   tenant_ids?: string[];
 }
-export interface OauthSettings {
+export interface GoogleIapSettingsArgsAccessSettingsOauthSettings {
   login_hint?: string;
   programmatic_clients?: string[];
 }
-export interface ReauthSettings {
+export interface GoogleIapSettingsArgsAccessSettingsReauthSettings {
   max_age: string;
   method: string;
   policy_type: string;
 }
-export interface Oauth2 {
+export interface GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsoauth2 {
   client_id?: string;
   client_secret?: string;
 }
-export interface WorkforceIdentitySettings {
+export interface GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettings {
   workforce_pools?: string[];
-  oauth2: Oauth2;
+  oauth2: GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettingsoauth2;
 }
-export interface AccessSettings {
+export interface GoogleIapSettingsArgsAccessSettings {
   identity_sources?: string[];
-  allowed_domains_settings: AllowedDomainsSettings;
-  cors_settings: CorsSettings;
-  gcip_settings: GcipSettings;
-  oauth_settings: OauthSettings;
-  reauth_settings: ReauthSettings;
-  workforce_identity_settings: WorkforceIdentitySettings;
+  allowed_domains_settings: GoogleIapSettingsArgsAccessSettingsAllowedDomainsSettings;
+  cors_settings: GoogleIapSettingsArgsAccessSettingsCorsSettings;
+  gcip_settings: GoogleIapSettingsArgsAccessSettingsGcipSettings;
+  oauth_settings: GoogleIapSettingsArgsAccessSettingsOauthSettings;
+  reauth_settings: GoogleIapSettingsArgsAccessSettingsReauthSettings;
+  workforce_identity_settings: GoogleIapSettingsArgsAccessSettingsWorkforceIdentitySettings;
 }
-export interface AccessDeniedPageSettings {
+export interface GoogleIapSettingsArgsApplicationSettingsAccessDeniedPageSettings {
   access_denied_page_uri?: string;
   generate_troubleshooting_uri?: boolean;
   remediation_token_generation_enabled?: boolean;
 }
-export interface AttributePropagationSettings {
+export interface GoogleIapSettingsArgsApplicationSettingsAttributePropagationSettings {
   enable?: boolean;
   expression?: string;
   output_credentials?: string[];
 }
-export interface CsmSettings {
+export interface GoogleIapSettingsArgsApplicationSettingsCsmSettings {
   rctoken_aud?: string;
 }
-export interface ApplicationSettings {
+export interface GoogleIapSettingsArgsApplicationSettings {
   cookie_domain?: string;
-  access_denied_page_settings: AccessDeniedPageSettings;
-  attribute_propagation_settings: AttributePropagationSettings;
-  csm_settings: CsmSettings;
+  access_denied_page_settings: GoogleIapSettingsArgsApplicationSettingsAccessDeniedPageSettings;
+  attribute_propagation_settings: GoogleIapSettingsArgsApplicationSettingsAttributePropagationSettings;
+  csm_settings: GoogleIapSettingsArgsApplicationSettingsCsmSettings;
 }
-export interface Timeouts {
+export interface GoogleIapSettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleIapSettingsArgs {
   name: string;
-  access_settings: AccessSettings;
-  application_settings: ApplicationSettings;
-  timeouts: Timeouts;
+  access_settings: GoogleIapSettingsArgsAccessSettings;
+  application_settings: GoogleIapSettingsArgsApplicationSettings;
+  timeouts: GoogleIapSettingsArgstimeouts;
 }
 export class google_iap_settings extends TerraformResource {
   readonly id?: string;

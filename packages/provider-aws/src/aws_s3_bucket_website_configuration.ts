@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ErrorDocument {
+export interface AwsS3BucketWebsiteConfigurationArgsErrorDocument {
   key: string;
 }
-export interface IndexDocument {
+export interface AwsS3BucketWebsiteConfigurationArgsIndexDocument {
   suffix: string;
 }
-export interface RedirectAllRequestsTo {
+export interface AwsS3BucketWebsiteConfigurationArgsRedirectAllRequestsTo {
   host_name: string;
   protocol?: string;
 }
-export interface Condition {
+export interface AwsS3BucketWebsiteConfigurationArgsRoutingRulecondition {
   http_error_code_returned_equals?: string;
   key_prefix_equals?: string;
 }
-export interface Redirect {
+export interface AwsS3BucketWebsiteConfigurationArgsRoutingRuleredirect {
   host_name?: string;
   http_redirect_code?: string;
   protocol?: string;
   replace_key_prefix_with?: string;
   replace_key_with?: string;
 }
-export interface RoutingRule {
-  condition: Condition;
-  redirect: Redirect;
+export interface AwsS3BucketWebsiteConfigurationArgsRoutingRule {
+  condition: AwsS3BucketWebsiteConfigurationArgsRoutingRulecondition;
+  redirect: AwsS3BucketWebsiteConfigurationArgsRoutingRuleredirect;
 }
 export interface AwsS3BucketWebsiteConfigurationArgs {
   bucket: string;
   expected_bucket_owner?: string;
-  error_document: ErrorDocument;
-  index_document: IndexDocument;
-  redirect_all_requests_to: RedirectAllRequestsTo;
-  routing_rule: RoutingRule;
+  error_document: AwsS3BucketWebsiteConfigurationArgsErrorDocument;
+  index_document: AwsS3BucketWebsiteConfigurationArgsIndexDocument;
+  redirect_all_requests_to: AwsS3BucketWebsiteConfigurationArgsRedirectAllRequestsTo;
+  routing_rule: AwsS3BucketWebsiteConfigurationArgsRoutingRule;
 }
 export class aws_s3_bucket_website_configuration extends TerraformResource {
   readonly id?: string;

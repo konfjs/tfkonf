@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExcludeFilter {
+export interface AwsCloudwatchMetricStreamArgsExcludeFilter {
   metric_names?: string[];
   namespace: string;
 }
-export interface IncludeFilter {
+export interface AwsCloudwatchMetricStreamArgsIncludeFilter {
   metric_names?: string[];
   namespace: string;
 }
-export interface IncludeMetric {
+export interface AwsCloudwatchMetricStreamArgsStatisticsConfigurationIncludeMetric {
   metric_name: string;
   namespace: string;
 }
-export interface StatisticsConfiguration {
+export interface AwsCloudwatchMetricStreamArgsStatisticsConfiguration {
   additional_statistics: string[];
-  include_metric: IncludeMetric;
+  include_metric: AwsCloudwatchMetricStreamArgsStatisticsConfigurationIncludeMetric;
 }
-export interface Timeouts {
+export interface AwsCloudwatchMetricStreamArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -28,10 +28,10 @@ export interface AwsCloudwatchMetricStreamArgs {
   tags?: {
     [key: string]: string;
   };
-  exclude_filter: ExcludeFilter;
-  include_filter: IncludeFilter;
-  statistics_configuration: StatisticsConfiguration;
-  timeouts: Timeouts;
+  exclude_filter: AwsCloudwatchMetricStreamArgsExcludeFilter;
+  include_filter: AwsCloudwatchMetricStreamArgsIncludeFilter;
+  statistics_configuration: AwsCloudwatchMetricStreamArgsStatisticsConfiguration;
+  timeouts: AwsCloudwatchMetricStreamArgstimeouts;
 }
 export class aws_cloudwatch_metric_stream extends TerraformResource {
   readonly arn!: string;

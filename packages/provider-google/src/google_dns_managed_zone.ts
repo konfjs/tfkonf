@@ -1,42 +1,42 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudLoggingConfig {
+export interface GoogleDnsManagedZoneArgsCloudLoggingConfig {
   enable_logging: boolean;
 }
-export interface DefaultKeySpecs {
+export interface GoogleDnsManagedZoneArgsDnssecConfigDefaultKeySpecs {
   algorithm?: string;
   key_length?: number;
   key_type?: string;
   kind?: string;
 }
-export interface DnssecConfig {
+export interface GoogleDnsManagedZoneArgsDnssecConfig {
   kind?: string;
   state?: string;
-  default_key_specs: DefaultKeySpecs;
+  default_key_specs: GoogleDnsManagedZoneArgsDnssecConfigDefaultKeySpecs;
 }
-export interface TargetNameServers {
+export interface GoogleDnsManagedZoneArgsForwardingConfigTargetNameServers {
   forwarding_path?: string;
   ipv4_address: string;
 }
-export interface ForwardingConfig {
-  target_name_servers: TargetNameServers;
+export interface GoogleDnsManagedZoneArgsForwardingConfig {
+  target_name_servers: GoogleDnsManagedZoneArgsForwardingConfigTargetNameServers;
 }
-export interface TargetNetwork {
+export interface GoogleDnsManagedZoneArgsPeeringConfigTargetNetwork {
   network_url: string;
 }
-export interface PeeringConfig {
-  target_network: TargetNetwork;
+export interface GoogleDnsManagedZoneArgsPeeringConfig {
+  target_network: GoogleDnsManagedZoneArgsPeeringConfigTargetNetwork;
 }
-export interface GkeClusters {
+export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfigGkeClusters {
   gke_cluster_name: string;
 }
-export interface Networks {
+export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfignetworks {
   network_url: string;
 }
-export interface PrivateVisibilityConfig {
-  gke_clusters: GkeClusters;
-  networks: Networks;
+export interface GoogleDnsManagedZoneArgsPrivateVisibilityConfig {
+  gke_clusters: GoogleDnsManagedZoneArgsPrivateVisibilityConfigGkeClusters;
+  networks: GoogleDnsManagedZoneArgsPrivateVisibilityConfignetworks;
 }
-export interface Timeouts {
+export interface GoogleDnsManagedZoneArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -50,12 +50,12 @@ export interface GoogleDnsManagedZoneArgs {
   };
   name: string;
   visibility?: string;
-  cloud_logging_config: CloudLoggingConfig;
-  dnssec_config: DnssecConfig;
-  forwarding_config: ForwardingConfig;
-  peering_config: PeeringConfig;
-  private_visibility_config: PrivateVisibilityConfig;
-  timeouts: Timeouts;
+  cloud_logging_config: GoogleDnsManagedZoneArgsCloudLoggingConfig;
+  dnssec_config: GoogleDnsManagedZoneArgsDnssecConfig;
+  forwarding_config: GoogleDnsManagedZoneArgsForwardingConfig;
+  peering_config: GoogleDnsManagedZoneArgsPeeringConfig;
+  private_visibility_config: GoogleDnsManagedZoneArgsPrivateVisibilityConfig;
+  timeouts: GoogleDnsManagedZoneArgstimeouts;
 }
 export class google_dns_managed_zone extends TerraformResource {
   readonly creation_time!: string;

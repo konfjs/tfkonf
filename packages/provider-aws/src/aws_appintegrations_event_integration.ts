@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EventFilter {
+export interface AwsAppintegrationsEventIntegrationArgsEventFilter {
   source: string;
 }
 export interface AwsAppintegrationsEventIntegrationArgs {
@@ -9,7 +9,7 @@ export interface AwsAppintegrationsEventIntegrationArgs {
   tags?: {
     [key: string]: string;
   };
-  event_filter: EventFilter;
+  event_filter: AwsAppintegrationsEventIntegrationArgsEventFilter;
 }
 export class aws_appintegrations_event_integration extends TerraformResource {
   readonly arn!: string;

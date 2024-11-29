@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Parameters {
+export interface AwsDaxParameterGroupArgsparameters {
   name: string;
   value: string;
 }
 export interface AwsDaxParameterGroupArgs {
   description?: string;
   name: string;
-  parameters: Parameters;
+  parameters: AwsDaxParameterGroupArgsparameters;
 }
 export class aws_dax_parameter_group extends TerraformResource {
   readonly id?: string;

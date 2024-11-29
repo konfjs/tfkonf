@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogSettings {
+export interface AwsLexBotAliasArgsConversationLogsLogSettings {
   destination: string;
   kms_key_arn?: string;
   log_type: string;
   resource_arn: string;
 }
-export interface ConversationLogs {
+export interface AwsLexBotAliasArgsConversationLogs {
   iam_role_arn: string;
-  log_settings: LogSettings;
+  log_settings: AwsLexBotAliasArgsConversationLogsLogSettings;
 }
-export interface Timeouts {
+export interface AwsLexBotAliasArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface AwsLexBotAliasArgs {
   bot_version: string;
   description?: string;
   name: string;
-  conversation_logs: ConversationLogs;
-  timeouts: Timeouts;
+  conversation_logs: AwsLexBotAliasArgsConversationLogs;
+  timeouts: AwsLexBotAliasArgstimeouts;
 }
 export class aws_lex_bot_alias extends TerraformResource {
   readonly arn!: string;

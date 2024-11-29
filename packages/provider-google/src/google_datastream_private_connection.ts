@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDatastreamPrivateConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcPeeringConfig {
+export interface GoogleDatastreamPrivateConnectionArgsVpcPeeringConfig {
   subnet: string;
   vpc: string;
 }
@@ -16,8 +16,8 @@ export interface GoogleDatastreamPrivateConnectionArgs {
   };
   location: string;
   private_connection_id: string;
-  timeouts: Timeouts;
-  vpc_peering_config: VpcPeeringConfig;
+  timeouts: GoogleDatastreamPrivateConnectionArgstimeouts;
+  vpc_peering_config: GoogleDatastreamPrivateConnectionArgsVpcPeeringConfig;
 }
 export class google_datastream_private_connection extends TerraformResource {
   readonly effective_labels!: {

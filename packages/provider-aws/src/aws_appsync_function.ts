@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Runtime {
+export interface AwsAppsyncFunctionArgsruntime {
   name: string;
   runtime_version: string;
 }
-export interface LambdaConflictHandlerConfig {
+export interface AwsAppsyncFunctionArgsSyncConfigLambdaConflictHandlerConfig {
   lambda_conflict_handler_arn?: string;
 }
-export interface SyncConfig {
+export interface AwsAppsyncFunctionArgsSyncConfig {
   conflict_detection?: string;
   conflict_handler?: string;
-  lambda_conflict_handler_config: LambdaConflictHandlerConfig;
+  lambda_conflict_handler_config: AwsAppsyncFunctionArgsSyncConfigLambdaConflictHandlerConfig;
 }
 export interface AwsAppsyncFunctionArgs {
   api_id: string;
@@ -20,8 +20,8 @@ export interface AwsAppsyncFunctionArgs {
   name: string;
   request_mapping_template?: string;
   response_mapping_template?: string;
-  runtime: Runtime;
-  sync_config: SyncConfig;
+  runtime: AwsAppsyncFunctionArgsruntime;
+  sync_config: AwsAppsyncFunctionArgsSyncConfig;
 }
 export class aws_appsync_function extends TerraformResource {
   readonly arn!: string;

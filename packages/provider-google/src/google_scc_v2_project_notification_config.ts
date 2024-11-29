@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StreamingConfig {
+export interface GoogleSccV2ProjectNotificationConfigArgsStreamingConfig {
   filter: string;
 }
-export interface Timeouts {
+export interface GoogleSccV2ProjectNotificationConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface GoogleSccV2ProjectNotificationConfigArgs {
   description?: string;
   location?: string;
   pubsub_topic?: string;
-  streaming_config: StreamingConfig;
-  timeouts: Timeouts;
+  streaming_config: GoogleSccV2ProjectNotificationConfigArgsStreamingConfig;
+  timeouts: GoogleSccV2ProjectNotificationConfigArgstimeouts;
 }
 export class google_scc_v2_project_notification_config extends TerraformResource {
   readonly id?: string;

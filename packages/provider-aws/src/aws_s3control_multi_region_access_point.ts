@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PublicAccessBlock {
+export interface AwsS3controlMultiRegionAccessPointArgsdetailsPublicAccessBlock {
   block_public_acls?: boolean;
   block_public_policy?: boolean;
   ignore_public_acls?: boolean;
   restrict_public_buckets?: boolean;
 }
-export interface Region {
+export interface AwsS3controlMultiRegionAccessPointArgsdetailsregion {
   bucket: string;
 }
-export interface Details {
+export interface AwsS3controlMultiRegionAccessPointArgsdetails {
   name: string;
-  public_access_block: PublicAccessBlock;
-  region: Region;
+  public_access_block: AwsS3controlMultiRegionAccessPointArgsdetailsPublicAccessBlock;
+  region: AwsS3controlMultiRegionAccessPointArgsdetailsregion;
 }
-export interface Timeouts {
+export interface AwsS3controlMultiRegionAccessPointArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsS3controlMultiRegionAccessPointArgs {
-  details: Details;
-  timeouts: Timeouts;
+  details: AwsS3controlMultiRegionAccessPointArgsdetails;
+  timeouts: AwsS3controlMultiRegionAccessPointArgstimeouts;
 }
 export class aws_s3control_multi_region_access_point extends TerraformResource {
   readonly account_id?: string;

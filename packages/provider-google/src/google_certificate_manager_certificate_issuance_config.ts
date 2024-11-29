@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CertificateAuthorityServiceConfig {
+export interface GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfigCertificateAuthorityServiceConfig {
   ca_pool: string;
 }
-export interface CertificateAuthorityConfig {
-  certificate_authority_service_config: CertificateAuthorityServiceConfig;
+export interface GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfig {
+  certificate_authority_service_config: GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfigCertificateAuthorityServiceConfig;
 }
-export interface Timeouts {
+export interface GoogleCertificateManagerCertificateIssuanceConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface GoogleCertificateManagerCertificateIssuanceConfigArgs {
   location?: string;
   name: string;
   rotation_window_percentage: number;
-  certificate_authority_config: CertificateAuthorityConfig;
-  timeouts: Timeouts;
+  certificate_authority_config: GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfig;
+  timeouts: GoogleCertificateManagerCertificateIssuanceConfigArgstimeouts;
 }
 export class google_certificate_manager_certificate_issuance_config extends TerraformResource {
   readonly create_time!: string;

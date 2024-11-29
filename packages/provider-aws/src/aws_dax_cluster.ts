@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ServerSideEncryption {
+export interface AwsDaxClusterArgsServerSideEncryption {
   enabled?: boolean;
 }
-export interface Timeouts {
+export interface AwsDaxClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface AwsDaxClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  server_side_encryption: ServerSideEncryption;
-  timeouts: Timeouts;
+  server_side_encryption: AwsDaxClusterArgsServerSideEncryption;
+  timeouts: AwsDaxClusterArgstimeouts;
 }
 export class aws_dax_cluster extends TerraformResource {
   readonly arn!: string;

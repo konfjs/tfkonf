@@ -1,57 +1,57 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ContainerConfig {
+export interface AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfigContainerConfig {
   container_arguments?: string[];
   container_entrypoint?: string[];
   container_environment_variables?: {
     [key: string]: string;
   };
 }
-export interface FileSystemConfig {
+export interface AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfigFileSystemConfig {
   default_gid?: number;
   default_uid?: number;
   mount_path?: string;
 }
-export interface CodeEditorAppImageConfig {
-  container_config: ContainerConfig;
-  file_system_config: FileSystemConfig;
+export interface AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfig {
+  container_config: AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfigContainerConfig;
+  file_system_config: AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfigFileSystemConfig;
 }
-export interface ContainerConfig {
+export interface AwsSagemakerAppImageConfigArgsJupyterLabImageConfigContainerConfig {
   container_arguments?: string[];
   container_entrypoint?: string[];
   container_environment_variables?: {
     [key: string]: string;
   };
 }
-export interface FileSystemConfig {
+export interface AwsSagemakerAppImageConfigArgsJupyterLabImageConfigFileSystemConfig {
   default_gid?: number;
   default_uid?: number;
   mount_path?: string;
 }
-export interface JupyterLabImageConfig {
-  container_config: ContainerConfig;
-  file_system_config: FileSystemConfig;
+export interface AwsSagemakerAppImageConfigArgsJupyterLabImageConfig {
+  container_config: AwsSagemakerAppImageConfigArgsJupyterLabImageConfigContainerConfig;
+  file_system_config: AwsSagemakerAppImageConfigArgsJupyterLabImageConfigFileSystemConfig;
 }
-export interface FileSystemConfig {
+export interface AwsSagemakerAppImageConfigArgsKernelGatewayImageConfigFileSystemConfig {
   default_gid?: number;
   default_uid?: number;
   mount_path?: string;
 }
-export interface KernelSpec {
+export interface AwsSagemakerAppImageConfigArgsKernelGatewayImageConfigKernelSpec {
   display_name?: string;
   name: string;
 }
-export interface KernelGatewayImageConfig {
-  file_system_config: FileSystemConfig;
-  kernel_spec: KernelSpec;
+export interface AwsSagemakerAppImageConfigArgsKernelGatewayImageConfig {
+  file_system_config: AwsSagemakerAppImageConfigArgsKernelGatewayImageConfigFileSystemConfig;
+  kernel_spec: AwsSagemakerAppImageConfigArgsKernelGatewayImageConfigKernelSpec;
 }
 export interface AwsSagemakerAppImageConfigArgs {
   app_image_config_name: string;
   tags?: {
     [key: string]: string;
   };
-  code_editor_app_image_config: CodeEditorAppImageConfig;
-  jupyter_lab_image_config: JupyterLabImageConfig;
-  kernel_gateway_image_config: KernelGatewayImageConfig;
+  code_editor_app_image_config: AwsSagemakerAppImageConfigArgsCodeEditorAppImageConfig;
+  jupyter_lab_image_config: AwsSagemakerAppImageConfigArgsJupyterLabImageConfig;
+  kernel_gateway_image_config: AwsSagemakerAppImageConfigArgsKernelGatewayImageConfig;
 }
 export class aws_sagemaker_app_image_config extends TerraformResource {
   readonly arn!: string;

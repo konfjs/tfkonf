@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AndroidSettings {
+export interface GoogleRecaptchaEnterpriseKeyArgsAndroidSettings {
   allow_all_package_names?: boolean;
   allowed_package_names?: string[];
 }
-export interface IosSettings {
+export interface GoogleRecaptchaEnterpriseKeyArgsIosSettings {
   allow_all_bundle_ids?: boolean;
   allowed_bundle_ids?: string[];
 }
-export interface TestingOptions {
+export interface GoogleRecaptchaEnterpriseKeyArgsTestingOptions {
   testing_score?: number;
 }
-export interface Timeouts {
+export interface GoogleRecaptchaEnterpriseKeyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WafSettings {
+export interface GoogleRecaptchaEnterpriseKeyArgsWafSettings {
   waf_feature: string;
   waf_service: string;
 }
-export interface WebSettings {
+export interface GoogleRecaptchaEnterpriseKeyArgsWebSettings {
   allow_all_domains?: boolean;
   allow_amp_traffic?: boolean;
   allowed_domains?: string[];
@@ -30,12 +30,12 @@ export interface GoogleRecaptchaEnterpriseKeyArgs {
   labels?: {
     [key: string]: string;
   };
-  android_settings: AndroidSettings;
-  ios_settings: IosSettings;
-  testing_options: TestingOptions;
-  timeouts: Timeouts;
-  waf_settings: WafSettings;
-  web_settings: WebSettings;
+  android_settings: GoogleRecaptchaEnterpriseKeyArgsAndroidSettings;
+  ios_settings: GoogleRecaptchaEnterpriseKeyArgsIosSettings;
+  testing_options: GoogleRecaptchaEnterpriseKeyArgsTestingOptions;
+  timeouts: GoogleRecaptchaEnterpriseKeyArgstimeouts;
+  waf_settings: GoogleRecaptchaEnterpriseKeyArgsWafSettings;
+  web_settings: GoogleRecaptchaEnterpriseKeyArgsWebSettings;
 }
 export class google_recaptcha_enterprise_key extends TerraformResource {
   readonly create_time!: string;

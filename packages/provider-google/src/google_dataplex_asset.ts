@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CsvOptions {
+export interface GoogleDataplexAssetArgsDiscoverySpecCsvOptions {
   delimiter?: string;
   disable_type_inference?: boolean;
   encoding?: string;
   header_rows?: number;
 }
-export interface JsonOptions {
+export interface GoogleDataplexAssetArgsDiscoverySpecJsonOptions {
   disable_type_inference?: boolean;
   encoding?: string;
 }
-export interface DiscoverySpec {
+export interface GoogleDataplexAssetArgsDiscoverySpec {
   enabled: boolean;
   exclude_patterns?: string[];
   include_patterns?: string[];
   schedule?: string;
-  csv_options: CsvOptions;
-  json_options: JsonOptions;
+  csv_options: GoogleDataplexAssetArgsDiscoverySpecCsvOptions;
+  json_options: GoogleDataplexAssetArgsDiscoverySpecJsonOptions;
 }
-export interface ResourceSpec {
+export interface GoogleDataplexAssetArgsResourceSpec {
   name?: string;
   type: string;
 }
-export interface Timeouts {
+export interface GoogleDataplexAssetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,9 +36,9 @@ export interface GoogleDataplexAssetArgs {
   lake: string;
   location: string;
   name: string;
-  discovery_spec: DiscoverySpec;
-  resource_spec: ResourceSpec;
-  timeouts: Timeouts;
+  discovery_spec: GoogleDataplexAssetArgsDiscoverySpec;
+  resource_spec: GoogleDataplexAssetArgsResourceSpec;
+  timeouts: GoogleDataplexAssetArgstimeouts;
 }
 export class google_dataplex_asset extends TerraformResource {
   readonly create_time!: string;

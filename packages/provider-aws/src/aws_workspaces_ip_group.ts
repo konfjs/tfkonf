@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Rules {
+export interface AwsWorkspacesIpGroupArgsrules {
   description?: string;
   source: string;
 }
@@ -9,7 +9,7 @@ export interface AwsWorkspacesIpGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  rules: Rules;
+  rules: AwsWorkspacesIpGroupArgsrules;
 }
 export class aws_workspaces_ip_group extends TerraformResource {
   readonly id?: string;

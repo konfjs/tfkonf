@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Property {
+export interface GoogleApigeeOrganizationArgspropertiesproperty {
   name?: string;
   value?: string;
 }
-export interface Properties {
-  property: Property;
+export interface GoogleApigeeOrganizationArgsproperties {
+  property: GoogleApigeeOrganizationArgspropertiesproperty;
 }
-export interface Timeouts {
+export interface GoogleApigeeOrganizationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,8 +24,8 @@ export interface GoogleApigeeOrganizationArgs {
   retention?: string;
   runtime_database_encryption_key_name?: string;
   runtime_type?: string;
-  properties: Properties;
-  timeouts: Timeouts;
+  properties: GoogleApigeeOrganizationArgsproperties;
+  timeouts: GoogleApigeeOrganizationArgstimeouts;
 }
 export class google_apigee_organization extends TerraformResource {
   readonly apigee_project_id!: string;

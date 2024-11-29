@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleVmwareengineExternalAddressArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleVmwareengineExternalAddressArgs {
   internal_ip: string;
   name: string;
   parent: string;
-  timeouts: Timeouts;
+  timeouts: GoogleVmwareengineExternalAddressArgstimeouts;
 }
 export class google_vmwareengine_external_address extends TerraformResource {
   readonly create_time!: string;

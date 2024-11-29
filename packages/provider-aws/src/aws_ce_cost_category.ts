@@ -1,295 +1,295 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InheritedValue {
+export interface AwsCeCostCategoryArgsruleInheritedValue {
   dimension_key?: string;
   dimension_name?: string;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleandandCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleandanddimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleandandtags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface And {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleandand {
+  cost_category: AwsCeCostCategoryArgsruleruleandandCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleandanddimension;
+  tags: AwsCeCostCategoryArgsruleruleandandtags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleandCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleanddimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleandnotCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleandnotdimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleandnottags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Not {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleandnot {
+  cost_category: AwsCeCostCategoryArgsruleruleandnotCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleandnotdimension;
+  tags: AwsCeCostCategoryArgsruleruleandnottags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleandorCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleandordimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleandortags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Or {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleandor {
+  cost_category: AwsCeCostCategoryArgsruleruleandorCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleandordimension;
+  tags: AwsCeCostCategoryArgsruleruleandortags;
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleandtags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface And {
-  and: And;
-  cost_category: CostCategory;
-  dimension: Dimension;
-  not: Not;
-  or: Or;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleand {
+  and: AwsCeCostCategoryArgsruleruleandand;
+  cost_category: AwsCeCostCategoryArgsruleruleandCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleanddimension;
+  not: AwsCeCostCategoryArgsruleruleandnot;
+  or: AwsCeCostCategoryArgsruleruleandor;
+  tags: AwsCeCostCategoryArgsruleruleandtags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruledimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsrulerulenotandCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsrulerulenotanddimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsrulerulenotandtags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface And {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsrulerulenotand {
+  cost_category: AwsCeCostCategoryArgsrulerulenotandCostCategory;
+  dimension: AwsCeCostCategoryArgsrulerulenotanddimension;
+  tags: AwsCeCostCategoryArgsrulerulenotandtags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsrulerulenotCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsrulerulenotdimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsrulerulenotnotCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsrulerulenotnotdimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsrulerulenotnottags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Not {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsrulerulenotnot {
+  cost_category: AwsCeCostCategoryArgsrulerulenotnotCostCategory;
+  dimension: AwsCeCostCategoryArgsrulerulenotnotdimension;
+  tags: AwsCeCostCategoryArgsrulerulenotnottags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsrulerulenotorCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsrulerulenotordimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsrulerulenotortags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Or {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsrulerulenotor {
+  cost_category: AwsCeCostCategoryArgsrulerulenotorCostCategory;
+  dimension: AwsCeCostCategoryArgsrulerulenotordimension;
+  tags: AwsCeCostCategoryArgsrulerulenotortags;
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsrulerulenottags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Not {
-  and: And;
-  cost_category: CostCategory;
-  dimension: Dimension;
-  not: Not;
-  or: Or;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsrulerulenot {
+  and: AwsCeCostCategoryArgsrulerulenotand;
+  cost_category: AwsCeCostCategoryArgsrulerulenotCostCategory;
+  dimension: AwsCeCostCategoryArgsrulerulenotdimension;
+  not: AwsCeCostCategoryArgsrulerulenotnot;
+  or: AwsCeCostCategoryArgsrulerulenotor;
+  tags: AwsCeCostCategoryArgsrulerulenottags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleorandCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleoranddimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleorandtags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface And {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleorand {
+  cost_category: AwsCeCostCategoryArgsruleruleorandCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleoranddimension;
+  tags: AwsCeCostCategoryArgsruleruleorandtags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleorCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleordimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleornotCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleornotdimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleornottags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Not {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleornot {
+  cost_category: AwsCeCostCategoryArgsruleruleornotCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleornotdimension;
+  tags: AwsCeCostCategoryArgsruleruleornottags;
 }
-export interface CostCategory {
+export interface AwsCeCostCategoryArgsruleruleororCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Dimension {
+export interface AwsCeCostCategoryArgsruleruleorordimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleorortags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Or {
-  cost_category: CostCategory;
-  dimension: Dimension;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleoror {
+  cost_category: AwsCeCostCategoryArgsruleruleororCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleorordimension;
+  tags: AwsCeCostCategoryArgsruleruleorortags;
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruleortags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Or {
-  and: And;
-  cost_category: CostCategory;
-  dimension: Dimension;
-  not: Not;
-  or: Or;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsruleruleor {
+  and: AwsCeCostCategoryArgsruleruleorand;
+  cost_category: AwsCeCostCategoryArgsruleruleorCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruleordimension;
+  not: AwsCeCostCategoryArgsruleruleornot;
+  or: AwsCeCostCategoryArgsruleruleoror;
+  tags: AwsCeCostCategoryArgsruleruleortags;
 }
-export interface Tags {
+export interface AwsCeCostCategoryArgsruleruletags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface Rule {
-  and: And;
-  cost_category: CostCategory;
-  dimension: Dimension;
-  not: Not;
-  or: Or;
-  tags: Tags;
+export interface AwsCeCostCategoryArgsrulerule {
+  and: AwsCeCostCategoryArgsruleruleand;
+  cost_category: AwsCeCostCategoryArgsruleruleCostCategory;
+  dimension: AwsCeCostCategoryArgsruleruledimension;
+  not: AwsCeCostCategoryArgsrulerulenot;
+  or: AwsCeCostCategoryArgsruleruleor;
+  tags: AwsCeCostCategoryArgsruleruletags;
 }
-export interface Rule {
+export interface AwsCeCostCategoryArgsrule {
   type?: string;
   value?: string;
-  inherited_value: InheritedValue;
-  rule: Rule;
+  inherited_value: AwsCeCostCategoryArgsruleInheritedValue;
+  rule: AwsCeCostCategoryArgsrulerule;
 }
-export interface Parameter {
+export interface AwsCeCostCategoryArgsSplitChargeRuleparameter {
   type?: string;
   values?: string[];
 }
-export interface SplitChargeRule {
+export interface AwsCeCostCategoryArgsSplitChargeRule {
   method: string;
   source: string;
   targets: string[];
-  parameter: Parameter;
+  parameter: AwsCeCostCategoryArgsSplitChargeRuleparameter;
 }
 export interface AwsCeCostCategoryArgs {
   default_value?: string;
@@ -298,8 +298,8 @@ export interface AwsCeCostCategoryArgs {
   tags?: {
     [key: string]: string;
   };
-  rule: Rule;
-  split_charge_rule: SplitChargeRule;
+  rule: AwsCeCostCategoryArgsrule;
+  split_charge_rule: AwsCeCostCategoryArgsSplitChargeRule;
 }
 export class aws_ce_cost_category extends TerraformResource {
   readonly arn!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDatazoneEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UserParameters {
+export interface AwsDatazoneEnvironmentArgsUserParameters {
   name?: string;
   value?: string;
 }
@@ -15,8 +15,8 @@ export interface AwsDatazoneEnvironmentArgs {
   name: string;
   profile_identifier: string;
   project_identifier: string;
-  timeouts: Timeouts;
-  user_parameters: UserParameters;
+  timeouts: AwsDatazoneEnvironmentArgstimeouts;
+  user_parameters: AwsDatazoneEnvironmentArgsUserParameters;
 }
 export class aws_datazone_environment extends TerraformResource {
   readonly account_identifier?: string;

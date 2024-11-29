@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2HostArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsEc2HostArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsEc2HostArgstimeouts;
 }
 export class aws_ec2_host extends TerraformResource {
   readonly arn!: string;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEbsFastSnapshotRestoreArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsEbsFastSnapshotRestoreArgs {
   availability_zone: string;
   snapshot_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsEbsFastSnapshotRestoreArgstimeouts;
 }
 export class aws_ebs_fast_snapshot_restore extends TerraformResource {
   readonly id!: string;

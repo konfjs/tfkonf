@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CertInfo {}
-export interface CertsInfo {
-  cert_info: CertInfo;
+export interface GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfoCertInfo {}
+export interface GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfo {
+  cert_info: GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfoCertInfo;
 }
-export interface Timeouts {
+export interface GoogleApigeeKeystoresAliasesKeyCertFileArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -17,8 +17,8 @@ export interface GoogleApigeeKeystoresAliasesKeyCertFileArgs {
   keystore: string;
   org_id: string;
   password?: string;
-  certs_info: CertsInfo;
-  timeouts: Timeouts;
+  certs_info: GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfo;
+  timeouts: GoogleApigeeKeystoresAliasesKeyCertFileArgstimeouts;
 }
 export class google_apigee_keystores_aliases_key_cert_file extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsConnectInstanceArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -17,7 +17,7 @@ export interface AwsConnectInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsConnectInstanceArgstimeouts;
 }
 export class aws_connect_instance extends TerraformResource {
   readonly arn!: string;

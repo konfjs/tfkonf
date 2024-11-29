@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KinesisConfiguration {
+export interface AwsQldbStreamArgsKinesisConfiguration {
   aggregation_enabled?: boolean;
   stream_arn: string;
 }
-export interface Timeouts {
+export interface AwsQldbStreamArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -16,8 +16,8 @@ export interface AwsQldbStreamArgs {
   tags?: {
     [key: string]: string;
   };
-  kinesis_configuration: KinesisConfiguration;
-  timeouts: Timeouts;
+  kinesis_configuration: AwsQldbStreamArgsKinesisConfiguration;
+  timeouts: AwsQldbStreamArgstimeouts;
 }
 export class aws_qldb_stream extends TerraformResource {
   readonly arn!: string;

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FormsInput {
+export interface AwsDatazoneAssetTypeArgsFormsInput {
   map_block_key: string;
   required?: boolean;
   type_identifier: string;
   type_revision: string;
 }
-export interface Timeouts {
+export interface AwsDatazoneAssetTypeArgstimeouts {
   create?: string;
 }
 export interface AwsDatazoneAssetTypeArgs {
@@ -13,8 +13,8 @@ export interface AwsDatazoneAssetTypeArgs {
   domain_identifier: string;
   name: string;
   owning_project_identifier: string;
-  forms_input: FormsInput;
-  timeouts: Timeouts;
+  forms_input: AwsDatazoneAssetTypeArgsFormsInput;
+  timeouts: AwsDatazoneAssetTypeArgstimeouts;
 }
 export class aws_datazone_asset_type extends TerraformResource {
   readonly created_at!: string;

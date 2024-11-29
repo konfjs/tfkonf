@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DiagnosticsDataCollectionOptions {
+export interface GoogleOracleDatabaseCloudVmClusterArgspropertiesDiagnosticsDataCollectionOptions {
   diagnostics_events_enabled?: boolean;
   health_monitoring_enabled?: boolean;
   incident_logs_enabled?: boolean;
 }
-export interface TimeZone {}
-export interface Properties {
+export interface GoogleOracleDatabaseCloudVmClusterArgspropertiesTimeZone {}
+export interface GoogleOracleDatabaseCloudVmClusterArgsproperties {
   cpu_core_count: number;
   gi_version?: string;
   hostname_prefix?: string;
   license_type: string;
   local_backup_enabled?: boolean;
   ssh_public_keys?: string[];
-  diagnostics_data_collection_options: DiagnosticsDataCollectionOptions;
-  time_zone: TimeZone;
+  diagnostics_data_collection_options: GoogleOracleDatabaseCloudVmClusterArgspropertiesDiagnosticsDataCollectionOptions;
+  time_zone: GoogleOracleDatabaseCloudVmClusterArgspropertiesTimeZone;
 }
-export interface Timeouts {
+export interface GoogleOracleDatabaseCloudVmClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,8 +31,8 @@ export interface GoogleOracleDatabaseCloudVmClusterArgs {
   };
   location: string;
   network: string;
-  properties: Properties;
-  timeouts: Timeouts;
+  properties: GoogleOracleDatabaseCloudVmClusterArgsproperties;
+  timeouts: GoogleOracleDatabaseCloudVmClusterArgstimeouts;
 }
 export class google_oracle_database_cloud_vm_cluster extends TerraformResource {
   readonly create_time!: string;

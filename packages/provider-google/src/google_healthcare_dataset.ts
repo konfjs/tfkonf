@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionSpec {
+export interface GoogleHealthcareDatasetArgsEncryptionSpec {
   kms_key_name?: string;
 }
-export interface Timeouts {
+export interface GoogleHealthcareDatasetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,8 +10,8 @@ export interface Timeouts {
 export interface GoogleHealthcareDatasetArgs {
   location: string;
   name: string;
-  encryption_spec: EncryptionSpec;
-  timeouts: Timeouts;
+  encryption_spec: GoogleHealthcareDatasetArgsEncryptionSpec;
+  timeouts: GoogleHealthcareDatasetArgstimeouts;
 }
 export class google_healthcare_dataset extends TerraformResource {
   readonly id?: string;

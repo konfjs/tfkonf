@@ -1,54 +1,54 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Alarms {
+export interface AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationalarms {
   alarm_name: string;
 }
-export interface AutoRollbackConfiguration {
-  alarms: Alarms;
+export interface AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfiguration {
+  alarms: AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationalarms;
 }
-export interface CanarySize {
+export interface AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize {
   type: string;
   value: number;
 }
-export interface LinearStepSize {
+export interface AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize {
   type: string;
   value: number;
 }
-export interface TrafficRoutingConfiguration {
+export interface AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration {
   type: string;
   wait_interval_in_seconds: number;
-  canary_size: CanarySize;
-  linear_step_size: LinearStepSize;
+  canary_size: AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize;
+  linear_step_size: AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize;
 }
-export interface BlueGreenUpdatePolicy {
+export interface AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicy {
   maximum_execution_timeout_in_seconds?: number;
   termination_wait_in_seconds?: number;
-  traffic_routing_configuration: TrafficRoutingConfiguration;
+  traffic_routing_configuration: AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration;
 }
-export interface MaximumBatchSize {
+export interface AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicyMaximumBatchSize {
   type: string;
   value: number;
 }
-export interface RollbackMaximumBatchSize {
+export interface AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize {
   type: string;
   value: number;
 }
-export interface RollingUpdatePolicy {
+export interface AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicy {
   maximum_execution_timeout_in_seconds?: number;
   wait_interval_in_seconds: number;
-  maximum_batch_size: MaximumBatchSize;
-  rollback_maximum_batch_size: RollbackMaximumBatchSize;
+  maximum_batch_size: AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicyMaximumBatchSize;
+  rollback_maximum_batch_size: AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize;
 }
-export interface DeploymentConfig {
-  auto_rollback_configuration: AutoRollbackConfiguration;
-  blue_green_update_policy: BlueGreenUpdatePolicy;
-  rolling_update_policy: RollingUpdatePolicy;
+export interface AwsSagemakerEndpointArgsDeploymentConfig {
+  auto_rollback_configuration: AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfiguration;
+  blue_green_update_policy: AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicy;
+  rolling_update_policy: AwsSagemakerEndpointArgsDeploymentConfigRollingUpdatePolicy;
 }
 export interface AwsSagemakerEndpointArgs {
   endpoint_config_name: string;
   tags?: {
     [key: string]: string;
   };
-  deployment_config: DeploymentConfig;
+  deployment_config: AwsSagemakerEndpointArgsDeploymentConfig;
 }
 export class aws_sagemaker_endpoint extends TerraformResource {
   readonly arn!: string;

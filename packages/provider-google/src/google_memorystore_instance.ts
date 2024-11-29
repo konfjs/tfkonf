@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DesiredPscAutoConnections {
+export interface GoogleMemorystoreInstanceArgsDesiredPscAutoConnections {
   network: string;
   project_id: string;
 }
-export interface AofConfig {}
-export interface RdbConfig {}
-export interface PersistenceConfig {
-  aof_config: AofConfig;
-  rdb_config: RdbConfig;
+export interface GoogleMemorystoreInstanceArgsPersistenceConfigAofConfig {}
+export interface GoogleMemorystoreInstanceArgsPersistenceConfigRdbConfig {}
+export interface GoogleMemorystoreInstanceArgsPersistenceConfig {
+  aof_config: GoogleMemorystoreInstanceArgsPersistenceConfigAofConfig;
+  rdb_config: GoogleMemorystoreInstanceArgsPersistenceConfigRdbConfig;
 }
-export interface Timeouts {
+export interface GoogleMemorystoreInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface ZoneDistributionConfig {
+export interface GoogleMemorystoreInstanceArgsZoneDistributionConfig {
   zone?: string;
 }
 export interface GoogleMemorystoreInstanceArgs {
@@ -28,10 +28,10 @@ export interface GoogleMemorystoreInstanceArgs {
   };
   location: string;
   shard_count: number;
-  desired_psc_auto_connections: DesiredPscAutoConnections;
-  persistence_config: PersistenceConfig;
-  timeouts: Timeouts;
-  zone_distribution_config: ZoneDistributionConfig;
+  desired_psc_auto_connections: GoogleMemorystoreInstanceArgsDesiredPscAutoConnections;
+  persistence_config: GoogleMemorystoreInstanceArgsPersistenceConfig;
+  timeouts: GoogleMemorystoreInstanceArgstimeouts;
+  zone_distribution_config: GoogleMemorystoreInstanceArgsZoneDistributionConfig;
 }
 export class google_memorystore_instance extends TerraformResource {
   readonly authorization_mode?: string;

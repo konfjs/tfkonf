@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SparkApplicationEnvironmentConfig {
+export interface GoogleDataprocGdcApplicationEnvironmentArgsSparkApplicationEnvironmentConfig {
   default_properties?: {
     [key: string]: string;
   };
   default_version?: string;
 }
-export interface Timeouts {
+export interface GoogleDataprocGdcApplicationEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface GoogleDataprocGdcApplicationEnvironmentArgs {
   location: string;
   namespace?: string;
   serviceinstance: string;
-  spark_application_environment_config: SparkApplicationEnvironmentConfig;
-  timeouts: Timeouts;
+  spark_application_environment_config: GoogleDataprocGdcApplicationEnvironmentArgsSparkApplicationEnvironmentConfig;
+  timeouts: GoogleDataprocGdcApplicationEnvironmentArgstimeouts;
 }
 export class google_dataproc_gdc_application_environment extends TerraformResource {
   readonly create_time!: string;

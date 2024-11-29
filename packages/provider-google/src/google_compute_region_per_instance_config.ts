@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Disk {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStatedisk {
   delete_rule?: string;
   device_name: string;
   mode?: string;
   source: string;
 }
-export interface IpAddress {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIpIpAddress {
   address?: string;
 }
-export interface ExternalIp {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIp {
   auto_delete?: string;
   interface_name: string;
-  ip_address: IpAddress;
+  ip_address: GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIpIpAddress;
 }
-export interface IpAddress {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIpIpAddress {
   address?: string;
 }
-export interface InternalIp {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIp {
   auto_delete?: string;
   interface_name: string;
-  ip_address: IpAddress;
+  ip_address: GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIpIpAddress;
 }
-export interface PreservedState {
+export interface GoogleComputeRegionPerInstanceConfigArgsPreservedState {
   metadata?: {
     [key: string]: string;
   };
-  disk: Disk;
-  external_ip: ExternalIp;
-  internal_ip: InternalIp;
+  disk: GoogleComputeRegionPerInstanceConfigArgsPreservedStatedisk;
+  external_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIp;
+  internal_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIp;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionPerInstanceConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,8 +41,8 @@ export interface GoogleComputeRegionPerInstanceConfigArgs {
   region_instance_group_manager: string;
   remove_instance_on_destroy?: boolean;
   remove_instance_state_on_destroy?: boolean;
-  preserved_state: PreservedState;
-  timeouts: Timeouts;
+  preserved_state: GoogleComputeRegionPerInstanceConfigArgsPreservedState;
+  timeouts: GoogleComputeRegionPerInstanceConfigArgstimeouts;
 }
 export class google_compute_region_per_instance_config extends TerraformResource {
   readonly id?: string;

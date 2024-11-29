@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Layer4Configs {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];
 }
-export interface SrcSecureTags {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatchSrcSecureTags {
   name?: string;
 }
-export interface Match {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatch {
   dest_address_groups?: string[];
   dest_fqdns?: string[];
   dest_ip_ranges?: string[];
@@ -17,13 +17,13 @@ export interface Match {
   src_ip_ranges?: string[];
   src_region_codes?: string[];
   src_threat_intelligences?: string[];
-  layer4_configs: Layer4Configs;
-  src_secure_tags: SrcSecureTags;
+  layer4_configs: GoogleComputeNetworkFirewallPolicyRuleArgsmatchLayer4Configs;
+  src_secure_tags: GoogleComputeNetworkFirewallPolicyRuleArgsmatchSrcSecureTags;
 }
-export interface TargetSecureTags {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsTargetSecureTags {
   name?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,9 +40,9 @@ export interface GoogleComputeNetworkFirewallPolicyRuleArgs {
   security_profile_group?: string;
   target_service_accounts?: string[];
   tls_inspect?: boolean;
-  match: Match;
-  target_secure_tags: TargetSecureTags;
-  timeouts: Timeouts;
+  match: GoogleComputeNetworkFirewallPolicyRuleArgsmatch;
+  target_secure_tags: GoogleComputeNetworkFirewallPolicyRuleArgsTargetSecureTags;
+  timeouts: GoogleComputeNetworkFirewallPolicyRuleArgstimeouts;
 }
 export class google_compute_network_firewall_policy_rule extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionKey {
+export interface AwsCodepipelineArgsArtifactStoreEncryptionKey {
   id: string;
   type: string;
 }
-export interface ArtifactStore {
+export interface AwsCodepipelineArgsArtifactStore {
   location: string;
   region?: string;
   type: string;
-  encryption_key: EncryptionKey;
+  encryption_key: AwsCodepipelineArgsArtifactStoreEncryptionKey;
 }
-export interface Action {
+export interface AwsCodepipelineArgsstageaction {
   category: string;
   configuration?: {
     [key: string]: string;
@@ -24,50 +24,50 @@ export interface Action {
   timeout_in_minutes?: number;
   version: string;
 }
-export interface Stage {
+export interface AwsCodepipelineArgsstage {
   name: string;
-  action: Action;
+  action: AwsCodepipelineArgsstageaction;
 }
-export interface Branches {
+export interface AwsCodepipelineArgstriggerGitConfigurationPullRequestbranches {
   excludes?: string[];
   includes?: string[];
 }
-export interface FilePaths {
+export interface AwsCodepipelineArgstriggerGitConfigurationPullRequestFilePaths {
   excludes?: string[];
   includes?: string[];
 }
-export interface PullRequest {
+export interface AwsCodepipelineArgstriggerGitConfigurationPullRequest {
   events?: string[];
-  branches: Branches;
-  file_paths: FilePaths;
+  branches: AwsCodepipelineArgstriggerGitConfigurationPullRequestbranches;
+  file_paths: AwsCodepipelineArgstriggerGitConfigurationPullRequestFilePaths;
 }
-export interface Branches {
+export interface AwsCodepipelineArgstriggerGitConfigurationpushbranches {
   excludes?: string[];
   includes?: string[];
 }
-export interface FilePaths {
+export interface AwsCodepipelineArgstriggerGitConfigurationpushFilePaths {
   excludes?: string[];
   includes?: string[];
 }
-export interface Tags {
+export interface AwsCodepipelineArgstriggerGitConfigurationpushtags {
   excludes?: string[];
   includes?: string[];
 }
-export interface Push {
-  branches: Branches;
-  file_paths: FilePaths;
-  tags: Tags;
+export interface AwsCodepipelineArgstriggerGitConfigurationpush {
+  branches: AwsCodepipelineArgstriggerGitConfigurationpushbranches;
+  file_paths: AwsCodepipelineArgstriggerGitConfigurationpushFilePaths;
+  tags: AwsCodepipelineArgstriggerGitConfigurationpushtags;
 }
-export interface GitConfiguration {
+export interface AwsCodepipelineArgstriggerGitConfiguration {
   source_action_name: string;
-  pull_request: PullRequest;
-  push: Push;
+  pull_request: AwsCodepipelineArgstriggerGitConfigurationPullRequest;
+  push: AwsCodepipelineArgstriggerGitConfigurationpush;
 }
-export interface Trigger {
+export interface AwsCodepipelineArgstrigger {
   provider_type: string;
-  git_configuration: GitConfiguration;
+  git_configuration: AwsCodepipelineArgstriggerGitConfiguration;
 }
-export interface Variable {
+export interface AwsCodepipelineArgsvariable {
   default_value?: string;
   description?: string;
   name: string;
@@ -80,10 +80,10 @@ export interface AwsCodepipelineArgs {
   tags?: {
     [key: string]: string;
   };
-  artifact_store: ArtifactStore;
-  stage: Stage;
-  trigger: Trigger;
-  variable: Variable;
+  artifact_store: AwsCodepipelineArgsArtifactStore;
+  stage: AwsCodepipelineArgsstage;
+  trigger: AwsCodepipelineArgstrigger;
+  variable: AwsCodepipelineArgsvariable;
 }
 export class aws_codepipeline extends TerraformResource {
   readonly arn!: string;

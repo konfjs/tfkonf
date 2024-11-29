@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2InstanceConnectEndpointArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsEc2InstanceConnectEndpointArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsEc2InstanceConnectEndpointArgstimeouts;
 }
 export class aws_ec2_instance_connect_endpoint extends TerraformResource {
   readonly arn!: string;

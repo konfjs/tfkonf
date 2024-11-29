@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FilterLabels {
+export interface GoogleComputeGlobalForwardingRuleArgsMetadataFiltersFilterLabels {
   name: string;
   value: string;
 }
-export interface MetadataFilters {
+export interface GoogleComputeGlobalForwardingRuleArgsMetadataFilters {
   filter_match_criteria: string;
-  filter_labels: FilterLabels;
+  filter_labels: GoogleComputeGlobalForwardingRuleArgsMetadataFiltersFilterLabels;
 }
-export interface ServiceDirectoryRegistrations {
+export interface GoogleComputeGlobalForwardingRuleArgsServiceDirectoryRegistrations {
   service_directory_region?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeGlobalForwardingRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,9 +27,9 @@ export interface GoogleComputeGlobalForwardingRuleArgs {
   port_range?: string;
   source_ip_ranges?: string[];
   target: string;
-  metadata_filters: MetadataFilters;
-  service_directory_registrations: ServiceDirectoryRegistrations;
-  timeouts: Timeouts;
+  metadata_filters: GoogleComputeGlobalForwardingRuleArgsMetadataFilters;
+  service_directory_registrations: GoogleComputeGlobalForwardingRuleArgsServiceDirectoryRegistrations;
+  timeouts: GoogleComputeGlobalForwardingRuleArgstimeouts;
 }
 export class google_compute_global_forwarding_rule extends TerraformResource {
   readonly base_forwarding_rule!: string;

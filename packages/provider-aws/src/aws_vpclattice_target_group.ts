@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Matcher {
+export interface AwsVpclatticeTargetGroupArgsconfigHealthCheckmatcher {
   value?: string;
 }
-export interface HealthCheck {
+export interface AwsVpclatticeTargetGroupArgsconfigHealthCheck {
   enabled?: boolean;
   health_check_interval_seconds?: number;
   health_check_timeout_seconds?: number;
@@ -10,13 +10,13 @@ export interface HealthCheck {
   path?: string;
   protocol_version?: string;
   unhealthy_threshold_count?: number;
-  matcher: Matcher;
+  matcher: AwsVpclatticeTargetGroupArgsconfigHealthCheckmatcher;
 }
-export interface Config {
+export interface AwsVpclatticeTargetGroupArgsconfig {
   vpc_identifier?: string;
-  health_check: HealthCheck;
+  health_check: AwsVpclatticeTargetGroupArgsconfigHealthCheck;
 }
-export interface Timeouts {
+export interface AwsVpclatticeTargetGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,8 +27,8 @@ export interface AwsVpclatticeTargetGroupArgs {
     [key: string]: string;
   };
   type: string;
-  config: Config;
-  timeouts: Timeouts;
+  config: AwsVpclatticeTargetGroupArgsconfig;
+  timeouts: AwsVpclatticeTargetGroupArgstimeouts;
 }
 export class aws_vpclattice_target_group extends TerraformResource {
   readonly arn!: string;

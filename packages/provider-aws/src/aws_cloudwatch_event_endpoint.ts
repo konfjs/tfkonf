@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EventBus {
+export interface AwsCloudwatchEventEndpointArgsEventBus {
   event_bus_arn: string;
 }
-export interface ReplicationConfig {
+export interface AwsCloudwatchEventEndpointArgsReplicationConfig {
   state?: string;
 }
-export interface Primary {
+export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigprimary {
   health_check?: string;
 }
-export interface Secondary {
+export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigsecondary {
   route?: string;
 }
-export interface FailoverConfig {
-  primary: Primary;
-  secondary: Secondary;
+export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfig {
+  primary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigprimary;
+  secondary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigsecondary;
 }
-export interface RoutingConfig {
-  failover_config: FailoverConfig;
+export interface AwsCloudwatchEventEndpointArgsRoutingConfig {
+  failover_config: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfig;
 }
 export interface AwsCloudwatchEventEndpointArgs {
   description?: string;
   name: string;
   role_arn?: string;
-  event_bus: EventBus;
-  replication_config: ReplicationConfig;
-  routing_config: RoutingConfig;
+  event_bus: AwsCloudwatchEventEndpointArgsEventBus;
+  replication_config: AwsCloudwatchEventEndpointArgsReplicationConfig;
+  routing_config: AwsCloudwatchEventEndpointArgsRoutingConfig;
 }
 export class aws_cloudwatch_event_endpoint extends TerraformResource {
   readonly arn!: string;

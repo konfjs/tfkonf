@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PysparkApplicationConfig {
+export interface GoogleDataprocGdcSparkApplicationArgsPysparkApplicationConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -7,7 +7,7 @@ export interface PysparkApplicationConfig {
   main_python_file_uri: string;
   python_file_uris?: string[];
 }
-export interface SparkApplicationConfig {
+export interface GoogleDataprocGdcSparkApplicationArgsSparkApplicationConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -15,24 +15,24 @@ export interface SparkApplicationConfig {
   main_class?: string;
   main_jar_file_uri?: string;
 }
-export interface SparkRApplicationConfig {
+export interface GoogleDataprocGdcSparkApplicationArgsSparkRApplicationConfig {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
   main_r_file_uri: string;
 }
-export interface QueryList {
+export interface GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfigQueryList {
   queries: string[];
 }
-export interface SparkSqlApplicationConfig {
+export interface GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfig {
   jar_file_uris?: string[];
   query_file_uri?: string;
   script_variables?: {
     [key: string]: string;
   };
-  query_list: QueryList;
+  query_list: GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfigQueryList;
 }
-export interface Timeouts {
+export interface GoogleDataprocGdcSparkApplicationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -55,11 +55,11 @@ export interface GoogleDataprocGdcSparkApplicationArgs {
   serviceinstance: string;
   spark_application_id: string;
   version?: string;
-  pyspark_application_config: PysparkApplicationConfig;
-  spark_application_config: SparkApplicationConfig;
-  spark_r_application_config: SparkRApplicationConfig;
-  spark_sql_application_config: SparkSqlApplicationConfig;
-  timeouts: Timeouts;
+  pyspark_application_config: GoogleDataprocGdcSparkApplicationArgsPysparkApplicationConfig;
+  spark_application_config: GoogleDataprocGdcSparkApplicationArgsSparkApplicationConfig;
+  spark_r_application_config: GoogleDataprocGdcSparkApplicationArgsSparkRApplicationConfig;
+  spark_sql_application_config: GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfig;
+  timeouts: GoogleDataprocGdcSparkApplicationArgstimeouts;
 }
 export class google_dataproc_gdc_spark_application extends TerraformResource {
   readonly create_time!: string;

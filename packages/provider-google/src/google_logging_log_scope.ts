@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleLoggingLogScopeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleLoggingLogScopeArgs {
   description?: string;
   name: string;
   resource_names: string[];
-  timeouts: Timeouts;
+  timeouts: GoogleLoggingLogScopeArgstimeouts;
 }
 export class google_logging_log_scope extends TerraformResource {
   readonly create_time!: string;

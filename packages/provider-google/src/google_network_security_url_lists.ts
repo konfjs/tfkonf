@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkSecurityUrlListsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleNetworkSecurityUrlListsArgs {
   location: string;
   name: string;
   values: string[];
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkSecurityUrlListsArgstimeouts;
 }
 export class google_network_security_url_lists extends TerraformResource {
   readonly create_time!: string;

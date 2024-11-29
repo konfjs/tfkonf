@@ -1,99 +1,99 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OwnershipSettings {
+export interface AwsSagemakerSpaceArgsOwnershipSettings {
   owner_user_profile_name: string;
 }
-export interface IdleSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings {
   idle_timeout_in_minutes?: number;
 }
-export interface AppLifecycleManagement {
-  idle_settings: IdleSettings;
+export interface AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement {
+  idle_settings: AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings;
 }
-export interface DefaultResourceSpec {
+export interface AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec {
   instance_type?: string;
   lifecycle_config_arn?: string;
   sagemaker_image_arn?: string;
   sagemaker_image_version_alias?: string;
   sagemaker_image_version_arn?: string;
 }
-export interface CodeEditorAppSettings {
-  app_lifecycle_management: AppLifecycleManagement;
-  default_resource_spec: DefaultResourceSpec;
+export interface AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettings {
+  app_lifecycle_management: AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement;
+  default_resource_spec: AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec;
 }
-export interface EfsFileSystem {
+export interface AwsSagemakerSpaceArgsSpaceSettingsCustomFileSystemEfsFileSystem {
   file_system_id: string;
 }
-export interface CustomFileSystem {
-  efs_file_system: EfsFileSystem;
+export interface AwsSagemakerSpaceArgsSpaceSettingsCustomFileSystem {
+  efs_file_system: AwsSagemakerSpaceArgsSpaceSettingsCustomFileSystemEfsFileSystem;
 }
-export interface IdleSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings {
   idle_timeout_in_minutes?: number;
 }
-export interface AppLifecycleManagement {
-  idle_settings: IdleSettings;
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement {
+  idle_settings: AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings;
 }
-export interface CodeRepository {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsCodeRepository {
   repository_url: string;
 }
-export interface DefaultResourceSpec {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec {
   instance_type?: string;
   lifecycle_config_arn?: string;
   sagemaker_image_arn?: string;
   sagemaker_image_version_alias?: string;
   sagemaker_image_version_arn?: string;
 }
-export interface JupyterLabAppSettings {
-  app_lifecycle_management: AppLifecycleManagement;
-  code_repository: CodeRepository;
-  default_resource_spec: DefaultResourceSpec;
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettings {
+  app_lifecycle_management: AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement;
+  code_repository: AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsCodeRepository;
+  default_resource_spec: AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec;
 }
-export interface CodeRepository {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettingsCodeRepository {
   repository_url: string;
 }
-export interface DefaultResourceSpec {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec {
   instance_type?: string;
   lifecycle_config_arn?: string;
   sagemaker_image_arn?: string;
   sagemaker_image_version_alias?: string;
   sagemaker_image_version_arn?: string;
 }
-export interface JupyterServerAppSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettings {
   lifecycle_config_arns?: string[];
-  code_repository: CodeRepository;
-  default_resource_spec: DefaultResourceSpec;
+  code_repository: AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettingsCodeRepository;
+  default_resource_spec: AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec;
 }
-export interface CustomImage {
+export interface AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettingsCustomImage {
   app_image_config_name: string;
   image_name: string;
   image_version_number?: number;
 }
-export interface DefaultResourceSpec {
+export interface AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec {
   instance_type?: string;
   lifecycle_config_arn?: string;
   sagemaker_image_arn?: string;
   sagemaker_image_version_alias?: string;
   sagemaker_image_version_arn?: string;
 }
-export interface KernelGatewayAppSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettings {
   lifecycle_config_arns?: string[];
-  custom_image: CustomImage;
-  default_resource_spec: DefaultResourceSpec;
+  custom_image: AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettingsCustomImage;
+  default_resource_spec: AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec;
 }
-export interface EbsStorageSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettingsSpaceStorageSettingsEbsStorageSettings {
   ebs_volume_size_in_gb: number;
 }
-export interface SpaceStorageSettings {
-  ebs_storage_settings: EbsStorageSettings;
+export interface AwsSagemakerSpaceArgsSpaceSettingsSpaceStorageSettings {
+  ebs_storage_settings: AwsSagemakerSpaceArgsSpaceSettingsSpaceStorageSettingsEbsStorageSettings;
 }
-export interface SpaceSettings {
+export interface AwsSagemakerSpaceArgsSpaceSettings {
   app_type?: string;
-  code_editor_app_settings: CodeEditorAppSettings;
-  custom_file_system: CustomFileSystem;
-  jupyter_lab_app_settings: JupyterLabAppSettings;
-  jupyter_server_app_settings: JupyterServerAppSettings;
-  kernel_gateway_app_settings: KernelGatewayAppSettings;
-  space_storage_settings: SpaceStorageSettings;
+  code_editor_app_settings: AwsSagemakerSpaceArgsSpaceSettingsCodeEditorAppSettings;
+  custom_file_system: AwsSagemakerSpaceArgsSpaceSettingsCustomFileSystem;
+  jupyter_lab_app_settings: AwsSagemakerSpaceArgsSpaceSettingsJupyterLabAppSettings;
+  jupyter_server_app_settings: AwsSagemakerSpaceArgsSpaceSettingsJupyterServerAppSettings;
+  kernel_gateway_app_settings: AwsSagemakerSpaceArgsSpaceSettingsKernelGatewayAppSettings;
+  space_storage_settings: AwsSagemakerSpaceArgsSpaceSettingsSpaceStorageSettings;
 }
-export interface SpaceSharingSettings {
+export interface AwsSagemakerSpaceArgsSpaceSharingSettings {
   sharing_type: string;
 }
 export interface AwsSagemakerSpaceArgs {
@@ -103,9 +103,9 @@ export interface AwsSagemakerSpaceArgs {
   tags?: {
     [key: string]: string;
   };
-  ownership_settings: OwnershipSettings;
-  space_settings: SpaceSettings;
-  space_sharing_settings: SpaceSharingSettings;
+  ownership_settings: AwsSagemakerSpaceArgsOwnershipSettings;
+  space_settings: AwsSagemakerSpaceArgsSpaceSettings;
+  space_sharing_settings: AwsSagemakerSpaceArgsSpaceSharingSettings;
 }
 export class aws_sagemaker_space extends TerraformResource {
   readonly arn!: string;

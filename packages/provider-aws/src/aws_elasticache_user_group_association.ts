@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsElasticacheUserGroupAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsElasticacheUserGroupAssociationArgs {
   user_group_id: string;
   user_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsElasticacheUserGroupAssociationArgstimeouts;
 }
 export class aws_elasticache_user_group_association extends TerraformResource {
   readonly id?: string;

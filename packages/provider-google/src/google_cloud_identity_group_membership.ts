@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PreferredMemberKey {
+export interface GoogleCloudIdentityGroupMembershipArgsPreferredMemberKey {
   id: string;
   namespace?: string;
 }
-export interface ExpiryDetail {
+export interface GoogleCloudIdentityGroupMembershipArgsrolesExpiryDetail {
   expire_time: string;
 }
-export interface Roles {
+export interface GoogleCloudIdentityGroupMembershipArgsroles {
   name: string;
-  expiry_detail: ExpiryDetail;
+  expiry_detail: GoogleCloudIdentityGroupMembershipArgsrolesExpiryDetail;
 }
-export interface Timeouts {
+export interface GoogleCloudIdentityGroupMembershipArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleCloudIdentityGroupMembershipArgs {
   group: string;
-  preferred_member_key: PreferredMemberKey;
-  roles: Roles;
-  timeouts: Timeouts;
+  preferred_member_key: GoogleCloudIdentityGroupMembershipArgsPreferredMemberKey;
+  roles: GoogleCloudIdentityGroupMembershipArgsroles;
+  timeouts: GoogleCloudIdentityGroupMembershipArgstimeouts;
 }
 export class google_cloud_identity_group_membership extends TerraformResource {
   readonly create_time!: string;

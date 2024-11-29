@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsVolumeAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsVolumeAttachmentArgs {
   skip_destroy?: boolean;
   stop_instance_before_detaching?: boolean;
   volume_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsVolumeAttachmentArgstimeouts;
 }
 export class aws_volume_attachment extends TerraformResource {
   readonly id?: string;

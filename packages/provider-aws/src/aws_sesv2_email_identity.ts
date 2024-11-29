@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DkimSigningAttributes {
+export interface AwsSesv2EmailIdentityArgsDkimSigningAttributes {
   domain_signing_private_key?: string;
   domain_signing_selector?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsSesv2EmailIdentityArgs {
   tags?: {
     [key: string]: string;
   };
-  dkim_signing_attributes: DkimSigningAttributes;
+  dkim_signing_attributes: AwsSesv2EmailIdentityArgsDkimSigningAttributes;
 }
 export class aws_sesv2_email_identity extends TerraformResource {
   readonly arn!: string;

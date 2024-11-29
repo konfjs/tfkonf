@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogStreams {
+export interface AwsOpsworksJavaAppLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
   buffer_duration?: number;
@@ -12,11 +12,11 @@ export interface LogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
-export interface CloudwatchConfiguration {
+export interface AwsOpsworksJavaAppLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
-  log_streams: LogStreams;
+  log_streams: AwsOpsworksJavaAppLayerArgsCloudwatchConfigurationLogStreams;
 }
-export interface EbsVolume {
+export interface AwsOpsworksJavaAppLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
   mount_point: string;
@@ -25,7 +25,7 @@ export interface EbsVolume {
   size: number;
   type?: string;
 }
-export interface Downscaling {
+export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingdownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface Downscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface Upscaling {
+export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingupscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -43,10 +43,10 @@ export interface Upscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface LoadBasedAutoScaling {
+export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: Downscaling;
-  upscaling: Upscaling;
+  downscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingdownscaling;
+  upscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingupscaling;
 }
 export interface AwsOpsworksJavaAppLayerArgs {
   app_server?: string;
@@ -76,9 +76,9 @@ export interface AwsOpsworksJavaAppLayerArgs {
     [key: string]: string;
   };
   use_ebs_optimized_instances?: boolean;
-  cloudwatch_configuration: CloudwatchConfiguration;
-  ebs_volume: EbsVolume;
-  load_based_auto_scaling: LoadBasedAutoScaling;
+  cloudwatch_configuration: AwsOpsworksJavaAppLayerArgsCloudwatchConfiguration;
+  ebs_volume: AwsOpsworksJavaAppLayerArgsEbsVolume;
+  load_based_auto_scaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScaling;
 }
 export class aws_opsworks_java_app_layer extends TerraformResource {
   readonly arn!: string;

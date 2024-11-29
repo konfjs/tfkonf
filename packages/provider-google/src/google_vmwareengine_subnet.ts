@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleVmwareengineSubnetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleVmwareengineSubnetArgs {
   ip_cidr_range: string;
   name: string;
   parent: string;
-  timeouts: Timeouts;
+  timeouts: GoogleVmwareengineSubnetArgstimeouts;
 }
 export class google_vmwareengine_subnet extends TerraformResource {
   readonly create_time!: string;

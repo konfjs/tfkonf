@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessLogSettings {
+export interface AwsApigatewayv2StageArgsAccessLogSettings {
   destination_arn: string;
   format: string;
 }
-export interface DefaultRouteSettings {
+export interface AwsApigatewayv2StageArgsDefaultRouteSettings {
   data_trace_enabled?: boolean;
   detailed_metrics_enabled?: boolean;
   throttling_burst_limit?: number;
   throttling_rate_limit?: number;
 }
-export interface RouteSettings {
+export interface AwsApigatewayv2StageArgsRouteSettings {
   data_trace_enabled?: boolean;
   detailed_metrics_enabled?: boolean;
   route_key: string;
@@ -28,9 +28,9 @@ export interface AwsApigatewayv2StageArgs {
   tags?: {
     [key: string]: string;
   };
-  access_log_settings: AccessLogSettings;
-  default_route_settings: DefaultRouteSettings;
-  route_settings: RouteSettings;
+  access_log_settings: AwsApigatewayv2StageArgsAccessLogSettings;
+  default_route_settings: AwsApigatewayv2StageArgsDefaultRouteSettings;
+  route_settings: AwsApigatewayv2StageArgsRouteSettings;
 }
 export class aws_apigatewayv2_stage extends TerraformResource {
   readonly arn!: string;

@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Allow {
+export interface GoogleComputeFirewallArgsallow {
   ports?: string[];
   protocol: string;
 }
-export interface Deny {
+export interface GoogleComputeFirewallArgsdeny {
   ports?: string[];
   protocol: string;
 }
-export interface LogConfig {
+export interface GoogleComputeFirewallArgsLogConfig {
   metadata: string;
 }
-export interface Timeouts {
+export interface GoogleComputeFirewallArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,10 +26,10 @@ export interface GoogleComputeFirewallArgs {
   source_tags?: string[];
   target_service_accounts?: string[];
   target_tags?: string[];
-  allow: Allow;
-  deny: Deny;
-  log_config: LogConfig;
-  timeouts: Timeouts;
+  allow: GoogleComputeFirewallArgsallow;
+  deny: GoogleComputeFirewallArgsdeny;
+  log_config: GoogleComputeFirewallArgsLogConfig;
+  timeouts: GoogleComputeFirewallArgstimeouts;
 }
 export class google_compute_firewall extends TerraformResource {
   readonly creation_timestamp!: string;

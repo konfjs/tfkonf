@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDataCatalogEntryGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogEntryGroupArgs {
   description?: string;
   display_name?: string;
   entry_group_id: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDataCatalogEntryGroupArgstimeouts;
 }
 export class google_data_catalog_entry_group extends TerraformResource {
   readonly id?: string;

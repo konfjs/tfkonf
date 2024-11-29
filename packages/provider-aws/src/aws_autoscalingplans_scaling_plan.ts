@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TagFilter {
+export interface AwsAutoscalingplansScalingPlanArgsApplicationSourceTagFilter {
   key: string;
   values?: string[];
 }
-export interface ApplicationSource {
+export interface AwsAutoscalingplansScalingPlanArgsApplicationSource {
   cloudformation_stack_arn?: string;
-  tag_filter: TagFilter;
+  tag_filter: AwsAutoscalingplansScalingPlanArgsApplicationSourceTagFilter;
 }
-export interface CustomizedLoadMetricSpecification {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstructionCustomizedLoadMetricSpecification {
   dimensions?: {
     [key: string]: string;
   };
@@ -16,11 +16,11 @@ export interface CustomizedLoadMetricSpecification {
   statistic: string;
   unit?: string;
 }
-export interface PredefinedLoadMetricSpecification {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstructionPredefinedLoadMetricSpecification {
   predefined_load_metric_type: string;
   resource_label?: string;
 }
-export interface CustomizedScalingMetricSpecification {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification {
   dimensions?: {
     [key: string]: string;
   };
@@ -29,20 +29,20 @@ export interface CustomizedScalingMetricSpecification {
   statistic: string;
   unit?: string;
 }
-export interface PredefinedScalingMetricSpecification {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification {
   predefined_scaling_metric_type: string;
   resource_label?: string;
 }
-export interface TargetTrackingConfiguration {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfiguration {
   disable_scale_in?: boolean;
   estimated_instance_warmup?: number;
   scale_in_cooldown?: number;
   scale_out_cooldown?: number;
   target_value: number;
-  customized_scaling_metric_specification: CustomizedScalingMetricSpecification;
-  predefined_scaling_metric_specification: PredefinedScalingMetricSpecification;
+  customized_scaling_metric_specification: AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification;
+  predefined_scaling_metric_specification: AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification;
 }
-export interface ScalingInstruction {
+export interface AwsAutoscalingplansScalingPlanArgsScalingInstruction {
   disable_dynamic_scaling?: boolean;
   max_capacity: number;
   min_capacity: number;
@@ -53,14 +53,14 @@ export interface ScalingInstruction {
   scaling_policy_update_behavior?: string;
   scheduled_action_buffer_time?: number;
   service_namespace: string;
-  customized_load_metric_specification: CustomizedLoadMetricSpecification;
-  predefined_load_metric_specification: PredefinedLoadMetricSpecification;
-  target_tracking_configuration: TargetTrackingConfiguration;
+  customized_load_metric_specification: AwsAutoscalingplansScalingPlanArgsScalingInstructionCustomizedLoadMetricSpecification;
+  predefined_load_metric_specification: AwsAutoscalingplansScalingPlanArgsScalingInstructionPredefinedLoadMetricSpecification;
+  target_tracking_configuration: AwsAutoscalingplansScalingPlanArgsScalingInstructionTargetTrackingConfiguration;
 }
 export interface AwsAutoscalingplansScalingPlanArgs {
   name: string;
-  application_source: ApplicationSource;
-  scaling_instruction: ScalingInstruction;
+  application_source: AwsAutoscalingplansScalingPlanArgsApplicationSource;
+  scaling_instruction: AwsAutoscalingplansScalingPlanArgsScalingInstruction;
 }
 export class aws_autoscalingplans_scaling_plan extends TerraformResource {
   readonly id?: string;

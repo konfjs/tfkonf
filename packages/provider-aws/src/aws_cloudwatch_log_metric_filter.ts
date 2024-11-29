@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MetricTransformation {
+export interface AwsCloudwatchLogMetricFilterArgsMetricTransformation {
   default_value?: string;
   dimensions?: {
     [key: string]: string;
@@ -13,7 +13,7 @@ export interface AwsCloudwatchLogMetricFilterArgs {
   log_group_name: string;
   name: string;
   pattern: string;
-  metric_transformation: MetricTransformation;
+  metric_transformation: AwsCloudwatchLogMetricFilterArgsMetricTransformation;
 }
 export class aws_cloudwatch_log_metric_filter extends TerraformResource {
   readonly id?: string;

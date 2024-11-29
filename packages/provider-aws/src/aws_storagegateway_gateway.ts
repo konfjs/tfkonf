@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MaintenanceStartTime {
+export interface AwsStoragegatewayGatewayArgsMaintenanceStartTime {
   day_of_month?: string;
   day_of_week?: string;
   hour_of_day: number;
   minute_of_hour?: number;
 }
-export interface SmbActiveDirectorySettings {
+export interface AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings {
   domain_controllers?: string[];
   domain_name: string;
   organizational_unit?: string;
@@ -13,7 +13,7 @@ export interface SmbActiveDirectorySettings {
   timeout_in_seconds?: number;
   username: string;
 }
-export interface Timeouts {
+export interface AwsStoragegatewayGatewayArgstimeouts {
   create?: string;
 }
 export interface AwsStoragegatewayGatewayArgs {
@@ -31,9 +31,9 @@ export interface AwsStoragegatewayGatewayArgs {
     [key: string]: string;
   };
   tape_drive_type?: string;
-  maintenance_start_time: MaintenanceStartTime;
-  smb_active_directory_settings: SmbActiveDirectorySettings;
-  timeouts: Timeouts;
+  maintenance_start_time: AwsStoragegatewayGatewayArgsMaintenanceStartTime;
+  smb_active_directory_settings: AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings;
+  timeouts: AwsStoragegatewayGatewayArgstimeouts;
 }
 export class aws_storagegateway_gateway extends TerraformResource {
   readonly activation_key?: string;

@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchDestination {
+export interface AwsSesEventDestinationArgsCloudwatchDestination {
   default_value: string;
   dimension_name: string;
   value_source: string;
 }
-export interface KinesisDestination {
+export interface AwsSesEventDestinationArgsKinesisDestination {
   role_arn: string;
   stream_arn: string;
 }
-export interface SnsDestination {
+export interface AwsSesEventDestinationArgsSnsDestination {
   topic_arn: string;
 }
 export interface AwsSesEventDestinationArgs {
@@ -16,9 +16,9 @@ export interface AwsSesEventDestinationArgs {
   enabled?: boolean;
   matching_types: string[];
   name: string;
-  cloudwatch_destination: CloudwatchDestination;
-  kinesis_destination: KinesisDestination;
-  sns_destination: SnsDestination;
+  cloudwatch_destination: AwsSesEventDestinationArgsCloudwatchDestination;
+  kinesis_destination: AwsSesEventDestinationArgsKinesisDestination;
+  sns_destination: AwsSesEventDestinationArgsSnsDestination;
 }
 export class aws_ses_event_destination extends TerraformResource {
   readonly arn!: string;

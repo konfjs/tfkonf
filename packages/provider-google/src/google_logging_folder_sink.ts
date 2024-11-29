@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BigqueryOptions {
+export interface GoogleLoggingFolderSinkArgsBigqueryOptions {
   use_partitioned_tables: boolean;
 }
-export interface Exclusions {
+export interface GoogleLoggingFolderSinkArgsexclusions {
   description?: string;
   disabled?: boolean;
   filter: string;
@@ -17,8 +17,8 @@ export interface GoogleLoggingFolderSinkArgs {
   include_children?: boolean;
   intercept_children?: boolean;
   name: string;
-  bigquery_options: BigqueryOptions;
-  exclusions: Exclusions;
+  bigquery_options: GoogleLoggingFolderSinkArgsBigqueryOptions;
+  exclusions: GoogleLoggingFolderSinkArgsexclusions;
 }
 export class google_logging_folder_sink extends TerraformResource {
   readonly id?: string;

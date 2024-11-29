@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressFromsources {
   access_level?: string;
   resource?: string;
 }
-export interface IngressFrom {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressFrom {
   identities?: string[];
   identity_type?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTooperationsMethodSelectors;
 }
-export interface IngressTo {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTo {
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTooperations;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgs {
   perimeter: string;
-  ingress_from: IngressFrom;
-  ingress_to: IngressTo;
-  timeouts: Timeouts;
+  ingress_from: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressFrom;
+  ingress_to: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTo;
+  timeouts: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgstimeouts;
 }
 export class google_access_context_manager_service_perimeter_dry_run_ingress_policy extends TerraformResource {
   readonly id?: string;

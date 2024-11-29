@@ -1,56 +1,56 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfig {
+export interface GoogleDataprocMetastoreServiceArgsEncryptionConfig {
   kms_key: string;
 }
-export interface AuxiliaryVersions {
+export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigAuxiliaryVersions {
   config_overrides?: {
     [key: string]: string;
   };
   key: string;
   version: string;
 }
-export interface Keytab {
+export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigkeytab {
   cloud_secret: string;
 }
-export interface KerberosConfig {
+export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfig {
   krb5_config_gcs_uri: string;
   principal: string;
-  keytab: Keytab;
+  keytab: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfigkeytab;
 }
-export interface HiveMetastoreConfig {
+export interface GoogleDataprocMetastoreServiceArgsHiveMetastoreConfig {
   endpoint_protocol?: string;
   version: string;
-  auxiliary_versions: AuxiliaryVersions;
-  kerberos_config: KerberosConfig;
+  auxiliary_versions: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigAuxiliaryVersions;
+  kerberos_config: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfigKerberosConfig;
 }
-export interface MaintenanceWindow {
+export interface GoogleDataprocMetastoreServiceArgsMaintenanceWindow {
   day_of_week: string;
   hour_of_day: number;
 }
-export interface DataCatalogConfig {
+export interface GoogleDataprocMetastoreServiceArgsMetadataIntegrationDataCatalogConfig {
   enabled: boolean;
 }
-export interface MetadataIntegration {
-  data_catalog_config: DataCatalogConfig;
+export interface GoogleDataprocMetastoreServiceArgsMetadataIntegration {
+  data_catalog_config: GoogleDataprocMetastoreServiceArgsMetadataIntegrationDataCatalogConfig;
 }
-export interface Consumers {
+export interface GoogleDataprocMetastoreServiceArgsNetworkConfigconsumers {
   subnetwork: string;
 }
-export interface NetworkConfig {
-  consumers: Consumers;
+export interface GoogleDataprocMetastoreServiceArgsNetworkConfig {
+  consumers: GoogleDataprocMetastoreServiceArgsNetworkConfigconsumers;
 }
-export interface ScalingConfig {
+export interface GoogleDataprocMetastoreServiceArgsScalingConfig {
   instance_size?: string;
   scaling_factor?: number;
 }
-export interface ScheduledBackup {
+export interface GoogleDataprocMetastoreServiceArgsScheduledBackup {
   backup_location: string;
   cron_schedule?: string;
 }
-export interface TelemetryConfig {
+export interface GoogleDataprocMetastoreServiceArgsTelemetryConfig {
   log_format?: string;
 }
-export interface Timeouts {
+export interface GoogleDataprocMetastoreServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -64,15 +64,15 @@ export interface GoogleDataprocMetastoreServiceArgs {
   location?: string;
   release_channel?: string;
   service_id: string;
-  encryption_config: EncryptionConfig;
-  hive_metastore_config: HiveMetastoreConfig;
-  maintenance_window: MaintenanceWindow;
-  metadata_integration: MetadataIntegration;
-  network_config: NetworkConfig;
-  scaling_config: ScalingConfig;
-  scheduled_backup: ScheduledBackup;
-  telemetry_config: TelemetryConfig;
-  timeouts: Timeouts;
+  encryption_config: GoogleDataprocMetastoreServiceArgsEncryptionConfig;
+  hive_metastore_config: GoogleDataprocMetastoreServiceArgsHiveMetastoreConfig;
+  maintenance_window: GoogleDataprocMetastoreServiceArgsMaintenanceWindow;
+  metadata_integration: GoogleDataprocMetastoreServiceArgsMetadataIntegration;
+  network_config: GoogleDataprocMetastoreServiceArgsNetworkConfig;
+  scaling_config: GoogleDataprocMetastoreServiceArgsScalingConfig;
+  scheduled_backup: GoogleDataprocMetastoreServiceArgsScheduledBackup;
+  telemetry_config: GoogleDataprocMetastoreServiceArgsTelemetryConfig;
+  timeouts: GoogleDataprocMetastoreServiceArgstimeouts;
 }
 export class google_dataproc_metastore_service extends TerraformResource {
   readonly artifact_gcs_uri!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConsumerAcceptLists {
+export interface GoogleComputeServiceAttachmentArgsConsumerAcceptLists {
   connection_limit: number;
   network_url?: string;
   project_id_or_num?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeServiceAttachmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface GoogleComputeServiceAttachmentArgs {
   name: string;
   nat_subnets: string[];
   target_service: string;
-  consumer_accept_lists: ConsumerAcceptLists;
-  timeouts: Timeouts;
+  consumer_accept_lists: GoogleComputeServiceAttachmentArgsConsumerAcceptLists;
+  timeouts: GoogleComputeServiceAttachmentArgstimeouts;
 }
 export class google_compute_service_attachment extends TerraformResource {
   readonly connected_endpoints!: any[];

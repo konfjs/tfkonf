@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AssessmentReportsDestination {
+export interface AwsAuditmanagerAssessmentArgsAssessmentReportsDestination {
   destination: string;
   destination_type: string;
 }
-export interface AwsAccounts {
+export interface AwsAuditmanagerAssessmentArgsscopeAwsAccounts {
   id: string;
 }
-export interface AwsServices {
+export interface AwsAuditmanagerAssessmentArgsscopeAwsServices {
   service_name: string;
 }
-export interface Scope {
-  aws_accounts: AwsAccounts;
-  aws_services: AwsServices;
+export interface AwsAuditmanagerAssessmentArgsscope {
+  aws_accounts: AwsAuditmanagerAssessmentArgsscopeAwsAccounts;
+  aws_services: AwsAuditmanagerAssessmentArgsscopeAwsServices;
 }
 export interface AwsAuditmanagerAssessmentArgs {
   description?: string;
@@ -21,8 +21,8 @@ export interface AwsAuditmanagerAssessmentArgs {
   tags?: {
     [key: string]: string;
   };
-  assessment_reports_destination: AssessmentReportsDestination;
-  scope: Scope;
+  assessment_reports_destination: AwsAuditmanagerAssessmentArgsAssessmentReportsDestination;
+  scope: AwsAuditmanagerAssessmentArgsscope;
 }
 export class aws_auditmanager_assessment extends TerraformResource {
   readonly arn!: string;

@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Filter {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgsfilter {
   dest_range?: string;
   ip_protocol?: string;
   protocol_version: string;
   src_range?: string;
 }
-export interface InterconnectAttachment {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgsInterconnectAttachment {
   region: string;
 }
-export interface Timeouts {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VirtualMachine {
+export interface GoogleNetworkConnectivityPolicyBasedRouteArgsVirtualMachine {
   tags: string[];
 }
 export interface GoogleNetworkConnectivityPolicyBasedRouteArgs {
@@ -26,10 +26,10 @@ export interface GoogleNetworkConnectivityPolicyBasedRouteArgs {
   next_hop_ilb_ip?: string;
   next_hop_other_routes?: string;
   priority?: number;
-  filter: Filter;
-  interconnect_attachment: InterconnectAttachment;
-  timeouts: Timeouts;
-  virtual_machine: VirtualMachine;
+  filter: GoogleNetworkConnectivityPolicyBasedRouteArgsfilter;
+  interconnect_attachment: GoogleNetworkConnectivityPolicyBasedRouteArgsInterconnectAttachment;
+  timeouts: GoogleNetworkConnectivityPolicyBasedRouteArgstimeouts;
+  virtual_machine: GoogleNetworkConnectivityPolicyBasedRouteArgsVirtualMachine;
 }
 export class google_network_connectivity_policy_based_route extends TerraformResource {
   readonly create_time!: string;

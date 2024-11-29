@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressFromsources {
   access_level?: string;
 }
-export interface EgressFrom {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressFrom {
   identities?: string[];
   identity_type?: string;
   source_restriction?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTooperationsMethodSelectors;
 }
-export interface EgressTo {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTo {
   external_resources?: string[];
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTooperations;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterEgressPolicyArgs {
   perimeter: string;
-  egress_from: EgressFrom;
-  egress_to: EgressTo;
-  timeouts: Timeouts;
+  egress_from: GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressFrom;
+  egress_to: GoogleAccessContextManagerServicePerimeterEgressPolicyArgsEgressTo;
+  timeouts: GoogleAccessContextManagerServicePerimeterEgressPolicyArgstimeouts;
 }
 export class google_access_context_manager_service_perimeter_egress_policy extends TerraformResource {
   readonly id?: string;

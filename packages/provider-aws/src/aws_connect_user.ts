@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IdentityInfo {
+export interface AwsConnectUserArgsIdentityInfo {
   email?: string;
   first_name?: string;
   last_name?: string;
 }
-export interface PhoneConfig {
+export interface AwsConnectUserArgsPhoneConfig {
   after_contact_work_time_limit?: number;
   auto_accept?: boolean;
   desk_phone_number?: string;
@@ -20,8 +20,8 @@ export interface AwsConnectUserArgs {
   tags?: {
     [key: string]: string;
   };
-  identity_info: IdentityInfo;
-  phone_config: PhoneConfig;
+  identity_info: AwsConnectUserArgsIdentityInfo;
+  phone_config: AwsConnectUserArgsPhoneConfig;
 }
 export class aws_connect_user extends TerraformResource {
   readonly arn!: string;

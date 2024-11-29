@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataStorage {
+export interface AwsElasticacheServerlessCacheArgsCacheUsageLimitsDataStorage {
   maximum?: number;
   minimum?: number;
   unit: string;
 }
-export interface EcpuPerSecond {
+export interface AwsElasticacheServerlessCacheArgsCacheUsageLimitsEcpuPerSecond {
   maximum?: number;
   minimum?: number;
 }
-export interface CacheUsageLimits {
-  data_storage: DataStorage;
-  ecpu_per_second: EcpuPerSecond;
+export interface AwsElasticacheServerlessCacheArgsCacheUsageLimits {
+  data_storage: AwsElasticacheServerlessCacheArgsCacheUsageLimitsDataStorage;
+  ecpu_per_second: AwsElasticacheServerlessCacheArgsCacheUsageLimitsEcpuPerSecond;
 }
-export interface Timeouts {
+export interface AwsElasticacheServerlessCacheArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,8 +26,8 @@ export interface AwsElasticacheServerlessCacheArgs {
     [key: string]: string;
   };
   user_group_id?: string;
-  cache_usage_limits: CacheUsageLimits;
-  timeouts: Timeouts;
+  cache_usage_limits: AwsElasticacheServerlessCacheArgsCacheUsageLimits;
+  timeouts: AwsElasticacheServerlessCacheArgstimeouts;
 }
 export class aws_elasticache_serverless_cache extends TerraformResource {
   readonly arn!: string;

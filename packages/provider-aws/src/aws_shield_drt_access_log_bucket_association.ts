@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsShieldDrtAccessLogBucketAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsShieldDrtAccessLogBucketAssociationArgs {
   log_bucket: string;
   role_arn_association_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsShieldDrtAccessLogBucketAssociationArgstimeouts;
 }
 export class aws_shield_drt_access_log_bucket_association extends TerraformResource {
   readonly id!: string;

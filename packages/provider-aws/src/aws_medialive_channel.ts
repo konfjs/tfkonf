@@ -1,89 +1,89 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CdiInputSpecification {
+export interface AwsMedialiveChannelArgsCdiInputSpecification {
   resolution: string;
 }
-export interface MediaPackageSettings {
+export interface AwsMedialiveChannelArgsdestinationsMediaPackageSettings {
   channel_id: string;
 }
-export interface MultiplexSettings {
+export interface AwsMedialiveChannelArgsdestinationsMultiplexSettings {
   multiplex_id: string;
   program_name: string;
 }
-export interface Settings {
+export interface AwsMedialiveChannelArgsdestinationssettings {
   password_param?: string;
   stream_name?: string;
   url?: string;
   username?: string;
 }
-export interface Destinations {
+export interface AwsMedialiveChannelArgsdestinations {
   id: string;
-  media_package_settings: MediaPackageSettings;
-  multiplex_settings: MultiplexSettings;
-  settings: Settings;
+  media_package_settings: AwsMedialiveChannelArgsdestinationsMediaPackageSettings;
+  multiplex_settings: AwsMedialiveChannelArgsdestinationsMultiplexSettings;
+  settings: AwsMedialiveChannelArgsdestinationssettings;
 }
-export interface AudioNormalizationSettings {}
-export interface NielsenCbetSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioNormalizationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings {
   cbet_check_digit_string: string;
   cbet_stepaside: string;
   csid: string;
 }
-export interface NielsenNaesIiNwSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings {
   check_digit_string: string;
   sid: number;
 }
-export interface NielsenWatermarksSettings {
-  nielsen_cbet_settings: NielsenCbetSettings;
-  nielsen_naes_ii_nw_settings: NielsenNaesIiNwSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings {
+  nielsen_cbet_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenCbetSettings;
+  nielsen_naes_ii_nw_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettingsNielsenNaesIiNwSettings;
 }
-export interface AudioWatermarkSettings {
-  nielsen_watermarks_settings: NielsenWatermarksSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettings {
+  nielsen_watermarks_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettingsNielsenWatermarksSettings;
 }
-export interface AacSettings {}
-export interface Ac3Settings {}
-export interface Eac3AtmosSettings {}
-export interface Eac3Settings {}
-export interface Mp2Settings {}
-export interface PassThroughSettings {}
-export interface WavSettings {}
-export interface CodecSettings {
-  aac_settings: AacSettings;
-  ac3_settings: Ac3Settings;
-  eac3_atmos_settings: Eac3AtmosSettings;
-  eac3_settings: Eac3Settings;
-  mp2_settings: Mp2Settings;
-  pass_through_settings: PassThroughSettings;
-  wav_settings: WavSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsAacSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsWavSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettings {
+  aac_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsAacSettings;
+  ac3_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsAc3Settings;
+  eac3_atmos_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsEac3AtmosSettings;
+  eac3_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsEac3Settings;
+  mp2_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsMp2Settings;
+  pass_through_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsPassThroughSettings;
+  wav_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettingsWavSettings;
 }
-export interface InputChannelLevels {
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels {
   gain: number;
   input_channel: number;
 }
-export interface ChannelMappings {
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings {
   output_channel: number;
-  input_channel_levels: InputChannelLevels;
+  input_channel_levels: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettingsChannelMappingsInputChannelLevels;
 }
-export interface RemixSettings {
-  channel_mappings: ChannelMappings;
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettings {
+  channel_mappings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettingsChannelMappings;
 }
-export interface AudioDescriptions {
+export interface AwsMedialiveChannelArgsEncoderSettingsAudioDescriptions {
   audio_selector_name: string;
   name: string;
-  audio_normalization_settings: AudioNormalizationSettings;
-  audio_watermark_settings: AudioWatermarkSettings;
-  codec_settings: CodecSettings;
-  remix_settings: RemixSettings;
+  audio_normalization_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioNormalizationSettings;
+  audio_watermark_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsAudioWatermarkSettings;
+  codec_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsCodecSettings;
+  remix_settings: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptionsRemixSettings;
 }
-export interface AvailBlankingImage {
+export interface AwsMedialiveChannelArgsEncoderSettingsAvailBlankingAvailBlankingImage {
   uri: string;
 }
-export interface AvailBlanking {
-  avail_blanking_image: AvailBlankingImage;
+export interface AwsMedialiveChannelArgsEncoderSettingsAvailBlanking {
+  avail_blanking_image: AwsMedialiveChannelArgsEncoderSettingsAvailBlankingAvailBlankingImage;
 }
-export interface AribDestinationSettings {}
-export interface Font {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsfont {
   uri: string;
 }
-export interface BurnInDestinationSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings {
   alignment?: string;
   background_color?: string;
   background_opacity?: number;
@@ -100,12 +100,12 @@ export interface BurnInDestinationSettings {
   teletext_grid_control: string;
   x_position?: number;
   y_position?: number;
-  font: Font;
+  font: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsfont;
 }
-export interface Font {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsfont {
   uri: string;
 }
-export interface DvbSubDestinationSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings {
   alignment?: string;
   background_color?: string;
   background_opacity?: number;
@@ -121,210 +121,210 @@ export interface DvbSubDestinationSettings {
   teletext_grid_control?: string;
   x_position?: number;
   y_position?: number;
-  font: Font;
+  font: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsfont;
 }
-export interface EbuTtDDestinationSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings {
   copyright_holder?: string;
   fill_line_gap?: string;
   font_family?: string;
 }
-export interface EmbeddedDestinationSettings {}
-export interface EmbeddedPlusScte20DestinationSettings {}
-export interface RtmpCaptionInfoDestinationSettings {}
-export interface Scte20PlusEmbeddedDestinationSettings {}
-export interface Scte27DestinationSettings {}
-export interface SmpteTtDestinationSettings {}
-export interface TeletextDestinationSettings {}
-export interface TtmlDestinationSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings {
   style_control: string;
 }
-export interface WebvttDestinationSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings {
   style_control: string;
 }
-export interface DestinationSettings {
-  arib_destination_settings: AribDestinationSettings;
-  burn_in_destination_settings: BurnInDestinationSettings;
-  dvb_sub_destination_settings: DvbSubDestinationSettings;
-  ebu_tt_d_destination_settings: EbuTtDDestinationSettings;
-  embedded_destination_settings: EmbeddedDestinationSettings;
-  embedded_plus_scte20_destination_settings: EmbeddedPlusScte20DestinationSettings;
-  rtmp_caption_info_destination_settings: RtmpCaptionInfoDestinationSettings;
-  scte20_plus_embedded_destination_settings: Scte20PlusEmbeddedDestinationSettings;
-  scte27_destination_settings: Scte27DestinationSettings;
-  smpte_tt_destination_settings: SmpteTtDestinationSettings;
-  teletext_destination_settings: TeletextDestinationSettings;
-  ttml_destination_settings: TtmlDestinationSettings;
-  webvtt_destination_settings: WebvttDestinationSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettings {
+  arib_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsAribDestinationSettings;
+  burn_in_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings;
+  dvb_sub_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings;
+  ebu_tt_d_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings;
+  embedded_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedDestinationSettings;
+  embedded_plus_scte20_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsEmbeddedPlusScte20DestinationSettings;
+  rtmp_caption_info_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsRtmpCaptionInfoDestinationSettings;
+  scte20_plus_embedded_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings;
+  scte27_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings;
+  smpte_tt_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings;
+  teletext_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings;
+  ttml_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings;
+  webvtt_destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings;
 }
-export interface CaptionDescriptions {
+export interface AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptions {
   accessibility?: string;
   caption_selector_name: string;
   language_code?: string;
   language_description?: string;
   name: string;
-  destination_settings: DestinationSettings;
+  destination_settings: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptionsDestinationSettings;
 }
-export interface InputLossImageSlate {
+export interface AwsMedialiveChannelArgsEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate {
   uri: string;
 }
-export interface InputLossBehavior {
+export interface AwsMedialiveChannelArgsEncoderSettingsGlobalConfigurationInputLossBehavior {
   black_frame_msec?: number;
   input_loss_image_color?: string;
   input_loss_image_type?: string;
   repeat_frame_msec?: number;
-  input_loss_image_slate: InputLossImageSlate;
+  input_loss_image_slate: AwsMedialiveChannelArgsEncoderSettingsGlobalConfigurationInputLossBehaviorInputLossImageSlate;
 }
-export interface GlobalConfiguration {
+export interface AwsMedialiveChannelArgsEncoderSettingsGlobalConfiguration {
   initial_audio_gain?: number;
   input_end_action?: string;
   output_locking_mode?: string;
   output_timing_source?: string;
   support_low_framerate_inputs?: string;
-  input_loss_behavior: InputLossBehavior;
+  input_loss_behavior: AwsMedialiveChannelArgsEncoderSettingsGlobalConfigurationInputLossBehavior;
 }
-export interface HtmlMotionGraphicsSettings {}
-export interface MotionGraphicsSettings {
-  html_motion_graphics_settings: HtmlMotionGraphicsSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings {
+  html_motion_graphics_settings: AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings;
 }
-export interface MotionGraphicsConfiguration {
+export interface AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfiguration {
   motion_graphics_insertion?: string;
-  motion_graphics_settings: MotionGraphicsSettings;
+  motion_graphics_settings: AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings;
 }
-export interface NielsenConfiguration {
+export interface AwsMedialiveChannelArgsEncoderSettingsNielsenConfiguration {
   distributor_id?: string;
   nielsen_pcm_to_id3_tagging?: string;
 }
-export interface ArchiveS3Settings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings {
   canned_acl?: string;
 }
-export interface ArchiveCdnSettings {
-  archive_s3_settings: ArchiveS3Settings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings {
+  archive_s3_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettingsArchiveS3Settings;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsdestination {
   destination_ref_id: string;
 }
-export interface ArchiveGroupSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings {
   rollover_interval?: number;
-  archive_cdn_settings: ArchiveCdnSettings;
-  destination: Destination;
+  archive_cdn_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsArchiveCdnSettings;
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettingsdestination;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsdestination {
   destination_ref_id: string;
 }
-export interface FrameCaptureS3Settings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings {
   canned_acl?: string;
 }
-export interface FrameCaptureCdnSettings {
-  frame_capture_s3_settings: FrameCaptureS3Settings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings {
+  frame_capture_s3_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettingsFrameCaptureS3Settings;
 }
-export interface FrameCaptureGroupSettings {
-  destination: Destination;
-  frame_capture_cdn_settings: FrameCaptureCdnSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings {
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsdestination;
+  frame_capture_cdn_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettingsFrameCaptureCdnSettings;
 }
-export interface CaptionLanguageMappings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings {
   caption_channel: number;
   language_code: string;
   language_description: string;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsdestination {
   destination_ref_id: string;
 }
-export interface HlsAkamaiSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings {
   connection_retry_interval?: number;
   filecache_duration?: number;
   num_retries?: number;
   restart_delay?: number;
 }
-export interface HlsBasicPutSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings {
   connection_retry_interval?: number;
   filecache_duration?: number;
   num_retries?: number;
   restart_delay?: number;
 }
-export interface HlsMediaStoreSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings {
   connection_retry_interval?: number;
   filecache_duration?: number;
   num_retries?: number;
   restart_delay?: number;
 }
-export interface HlsS3Settings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings {
   canned_acl?: string;
 }
-export interface HlsWebdavSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings {
   connection_retry_interval?: number;
   filecache_duration?: number;
   num_retries?: number;
   restart_delay?: number;
 }
-export interface HlsCdnSettings {
-  hls_akamai_settings: HlsAkamaiSettings;
-  hls_basic_put_settings: HlsBasicPutSettings;
-  hls_media_store_settings: HlsMediaStoreSettings;
-  hls_s3_settings: HlsS3Settings;
-  hls_webdav_settings: HlsWebdavSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings {
+  hls_akamai_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsAkamaiSettings;
+  hls_basic_put_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsBasicPutSettings;
+  hls_media_store_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsMediaStoreSettings;
+  hls_s3_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsS3Settings;
+  hls_webdav_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettingsHlsWebdavSettings;
 }
-export interface KeyProviderServer {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer {
   uri: string;
 }
-export interface StaticKeySettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings {
   static_key_value: string;
-  key_provider_server: KeyProviderServer;
+  key_provider_server: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettingsKeyProviderServer;
 }
-export interface KeyProviderSettings {
-  static_key_settings: StaticKeySettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings {
+  static_key_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettingsStaticKeySettings;
 }
-export interface HlsGroupSettings {
-  caption_language_mappings: CaptionLanguageMappings;
-  destination: Destination;
-  hls_cdn_settings: HlsCdnSettings;
-  key_provider_settings: KeyProviderSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings {
+  caption_language_mappings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsCaptionLanguageMappings;
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsdestination;
+  hls_cdn_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsHlsCdnSettings;
+  key_provider_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettingsKeyProviderSettings;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsdestination {
   destination_ref_id: string;
 }
-export interface MediaPackageGroupSettings {
-  destination: Destination;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings {
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettingsdestination;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsdestination {
   destination_ref_id: string;
 }
-export interface MsSmoothGroupSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings {
   filecache_duration?: number;
   num_retries?: number;
   restart_delay?: number;
-  destination: Destination;
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettingsdestination;
 }
-export interface MultiplexGroupSettings {}
-export interface RtmpGroupSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings {
   ad_markers?: string[];
   restart_delay?: number;
 }
-export interface UdpGroupSettings {}
-export interface OutputGroupSettings {
-  archive_group_settings: ArchiveGroupSettings;
-  frame_capture_group_settings: FrameCaptureGroupSettings;
-  hls_group_settings: HlsGroupSettings;
-  media_package_group_settings: MediaPackageGroupSettings;
-  ms_smooth_group_settings: MsSmoothGroupSettings;
-  multiplex_group_settings: MultiplexGroupSettings;
-  rtmp_group_settings: RtmpGroupSettings;
-  udp_group_settings: UdpGroupSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettings {
+  archive_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsArchiveGroupSettings;
+  frame_capture_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsFrameCaptureGroupSettings;
+  hls_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsHlsGroupSettings;
+  media_package_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMediaPackageGroupSettings;
+  ms_smooth_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMsSmoothGroupSettings;
+  multiplex_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsMultiplexGroupSettings;
+  rtmp_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsRtmpGroupSettings;
+  udp_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettingsUdpGroupSettings;
 }
-export interface DvbNitSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings {
   network_id: number;
   network_name: string;
   rep_interval?: number;
 }
-export interface DvbSdtSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings {
   output_sdt?: string;
   rep_interval?: number;
   service_name?: string;
   service_provider_name?: string;
 }
-export interface DvbTdtSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings {
   rep_interval?: number;
 }
-export interface M2tsSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings {
   arib?: string;
   arib_captions_pid_control?: string;
   audio_buffer_model?: string;
@@ -356,71 +356,71 @@ export interface M2tsSettings {
   segmentation_time?: number;
   timed_metadata_behavior?: string;
   transport_stream_id?: number;
-  dvb_nit_settings: DvbNitSettings;
-  dvb_sdt_settings: DvbSdtSettings;
-  dvb_tdt_settings: DvbTdtSettings;
+  dvb_nit_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings;
+  dvb_sdt_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings;
+  dvb_tdt_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings;
 }
-export interface RawSettings {}
-export interface ContainerSettings {
-  m2ts_settings: M2tsSettings;
-  raw_settings: RawSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettings {
+  m2ts_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsM2tsSettings;
+  raw_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettingsRawSettings;
 }
-export interface ArchiveOutputSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettings {
   extension?: string;
   name_modifier?: string;
-  container_settings: ContainerSettings;
+  container_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettingsContainerSettings;
 }
-export interface FrameCaptureOutputSettings {}
-export interface AudioOnlyImage {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsFrameCaptureOutputSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage {
   uri: string;
 }
-export interface AudioOnlyHlsSettings {
-  audio_only_image: AudioOnlyImage;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings {
+  audio_only_image: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettingsAudioOnlyImage;
 }
-export interface Fmp4HlsSettings {}
-export interface FrameCaptureHlsSettings {}
-export interface M3u8Settings {}
-export interface StandardHlsSettings {
-  m3u8_settings: M3u8Settings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings {
+  m3u8_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettingsM3u8Settings;
 }
-export interface HlsSettings {
-  audio_only_hls_settings: AudioOnlyHlsSettings;
-  fmp4_hls_settings: Fmp4HlsSettings;
-  frame_capture_hls_settings: FrameCaptureHlsSettings;
-  standard_hls_settings: StandardHlsSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettings {
+  audio_only_hls_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsAudioOnlyHlsSettings;
+  fmp4_hls_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsFmp4HlsSettings;
+  frame_capture_hls_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsFrameCaptureHlsSettings;
+  standard_hls_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettingsStandardHlsSettings;
 }
-export interface HlsOutputSettings {
-  hls_settings: HlsSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettings {
+  hls_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettingsHlsSettings;
 }
-export interface MediaPackageOutputSettings {}
-export interface MsSmoothOutputSettings {}
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMediaPackageOutputSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMsSmoothOutputSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMultiplexOutputSettingsdestination {
   destination_ref_id: string;
 }
-export interface MultiplexOutputSettings {
-  destination: Destination;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMultiplexOutputSettings {
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMultiplexOutputSettingsdestination;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsRtmpOutputSettingsdestination {
   destination_ref_id: string;
 }
-export interface RtmpOutputSettings {
-  destination: Destination;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsRtmpOutputSettings {
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsRtmpOutputSettingsdestination;
 }
-export interface DvbNitSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings {
   network_id: number;
   network_name: string;
   rep_interval?: number;
 }
-export interface DvbSdtSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings {
   output_sdt?: string;
   rep_interval?: number;
   service_name?: string;
   service_provider_name?: string;
 }
-export interface DvbTdtSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings {
   rep_interval?: number;
 }
-export interface M2tsSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings {
   arib?: string;
   arib_captions_pid_control?: string;
   audio_buffer_model?: string;
@@ -452,81 +452,81 @@ export interface M2tsSettings {
   segmentation_time?: number;
   timed_metadata_behavior?: string;
   transport_stream_id?: number;
-  dvb_nit_settings: DvbNitSettings;
-  dvb_sdt_settings: DvbSdtSettings;
-  dvb_tdt_settings: DvbTdtSettings;
+  dvb_nit_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbNitSettings;
+  dvb_sdt_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbSdtSettings;
+  dvb_tdt_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettingsDvbTdtSettings;
 }
-export interface ContainerSettings {
-  m2ts_settings: M2tsSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettings {
+  m2ts_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettingsM2tsSettings;
 }
-export interface Destination {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsdestination {
   destination_ref_id: string;
 }
-export interface FecOutputSettings {}
-export interface UdpOutputSettings {
-  container_settings: ContainerSettings;
-  destination: Destination;
-  fec_output_settings: FecOutputSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsFecOutputSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettings {
+  container_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsContainerSettings;
+  destination: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsdestination;
+  fec_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettingsFecOutputSettings;
 }
-export interface OutputSettings {
-  archive_output_settings: ArchiveOutputSettings;
-  frame_capture_output_settings: FrameCaptureOutputSettings;
-  hls_output_settings: HlsOutputSettings;
-  media_package_output_settings: MediaPackageOutputSettings;
-  ms_smooth_output_settings: MsSmoothOutputSettings;
-  multiplex_output_settings: MultiplexOutputSettings;
-  rtmp_output_settings: RtmpOutputSettings;
-  udp_output_settings: UdpOutputSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettings {
+  archive_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsArchiveOutputSettings;
+  frame_capture_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsFrameCaptureOutputSettings;
+  hls_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsHlsOutputSettings;
+  media_package_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMediaPackageOutputSettings;
+  ms_smooth_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMsSmoothOutputSettings;
+  multiplex_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsMultiplexOutputSettings;
+  rtmp_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsRtmpOutputSettings;
+  udp_output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettingsUdpOutputSettings;
 }
-export interface Outputs {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputs {
   audio_description_names?: string[];
   output_name?: string;
   video_description_name?: string;
-  output_settings: OutputSettings;
+  output_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputsOutputSettings;
 }
-export interface OutputGroups {
+export interface AwsMedialiveChannelArgsEncoderSettingsOutputGroups {
   name?: string;
-  output_group_settings: OutputGroupSettings;
-  outputs: Outputs;
+  output_group_settings: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsOutputGroupSettings;
+  outputs: AwsMedialiveChannelArgsEncoderSettingsOutputGroupsoutputs;
 }
-export interface TimecodeConfig {
+export interface AwsMedialiveChannelArgsEncoderSettingsTimecodeConfig {
   source: string;
 }
-export interface FrameCaptureSettings {}
-export interface TemporalFilterSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings {
   post_filter_sharpening?: string;
   strength?: string;
 }
-export interface FilterSettings {
-  temporal_filter_settings: TemporalFilterSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings {
+  temporal_filter_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettingsTemporalFilterSettings;
 }
-export interface H264Settings {
-  filter_settings: FilterSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264Settings {
+  filter_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264SettingsFilterSettings;
 }
-export interface ColorSpacePassthroughSettings {}
-export interface DolbyVision81Settings {}
-export interface Hdr10Settings {
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings {
   max_cll?: number;
   max_fall?: number;
 }
-export interface Rec601Settings {}
-export interface Rec709Settings {}
-export interface ColorSpaceSettings {
-  color_space_passthrough_settings: ColorSpacePassthroughSettings;
-  dolby_vision81_settings: DolbyVision81Settings;
-  hdr10_settings: Hdr10Settings;
-  rec601_settings: Rec601Settings;
-  rec709_settings: Rec709Settings;
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings {
+  color_space_passthrough_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsColorSpacePassthroughSettings;
+  dolby_vision81_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsDolbyVision81Settings;
+  hdr10_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsHdr10Settings;
+  rec601_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec601Settings;
+  rec709_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettingsRec709Settings;
 }
-export interface TemporalFilterSettings {
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings {
   post_filter_sharpening?: string;
   strength?: string;
 }
-export interface FilterSettings {
-  temporal_filter_settings: TemporalFilterSettings;
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings {
+  temporal_filter_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettingsTemporalFilterSettings;
 }
-export interface TimecodeBurninSettings {}
-export interface H265Settings {
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings {}
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265Settings {
   bitrate: number;
   buf_size?: number;
   framerate_denominator: number;
@@ -542,179 +542,179 @@ export interface H265Settings {
   slices?: number;
   tile_height?: number;
   tile_width?: number;
-  color_space_settings: ColorSpaceSettings;
-  filter_settings: FilterSettings;
-  timecode_burnin_settings: TimecodeBurninSettings;
+  color_space_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsColorSpaceSettings;
+  filter_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsFilterSettings;
+  timecode_burnin_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265SettingsTimecodeBurninSettings;
 }
-export interface CodecSettings {
-  frame_capture_settings: FrameCaptureSettings;
-  h264_settings: H264Settings;
-  h265_settings: H265Settings;
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettings {
+  frame_capture_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsFrameCaptureSettings;
+  h264_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH264Settings;
+  h265_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettingsH265Settings;
 }
-export interface VideoDescriptions {
+export interface AwsMedialiveChannelArgsEncoderSettingsVideoDescriptions {
   name: string;
-  codec_settings: CodecSettings;
+  codec_settings: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptionsCodecSettings;
 }
-export interface EncoderSettings {
-  audio_descriptions: AudioDescriptions;
-  avail_blanking: AvailBlanking;
-  caption_descriptions: CaptionDescriptions;
-  global_configuration: GlobalConfiguration;
-  motion_graphics_configuration: MotionGraphicsConfiguration;
-  nielsen_configuration: NielsenConfiguration;
-  output_groups: OutputGroups;
-  timecode_config: TimecodeConfig;
-  video_descriptions: VideoDescriptions;
+export interface AwsMedialiveChannelArgsEncoderSettings {
+  audio_descriptions: AwsMedialiveChannelArgsEncoderSettingsAudioDescriptions;
+  avail_blanking: AwsMedialiveChannelArgsEncoderSettingsAvailBlanking;
+  caption_descriptions: AwsMedialiveChannelArgsEncoderSettingsCaptionDescriptions;
+  global_configuration: AwsMedialiveChannelArgsEncoderSettingsGlobalConfiguration;
+  motion_graphics_configuration: AwsMedialiveChannelArgsEncoderSettingsMotionGraphicsConfiguration;
+  nielsen_configuration: AwsMedialiveChannelArgsEncoderSettingsNielsenConfiguration;
+  output_groups: AwsMedialiveChannelArgsEncoderSettingsOutputGroups;
+  timecode_config: AwsMedialiveChannelArgsEncoderSettingsTimecodeConfig;
+  video_descriptions: AwsMedialiveChannelArgsEncoderSettingsVideoDescriptions;
 }
-export interface AudioSilenceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings {
   audio_selector_name: string;
   audio_silence_threshold_msec?: number;
 }
-export interface InputLossSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings {
   input_loss_threshold_msec?: number;
 }
-export interface VideoBlackSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings {
   black_detect_threshold?: number;
   video_black_threshold_msec?: number;
 }
-export interface FailoverConditionSettings {
-  audio_silence_settings: AudioSilenceSettings;
-  input_loss_settings: InputLossSettings;
-  video_black_settings: VideoBlackSettings;
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings {
+  audio_silence_settings: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsAudioSilenceSettings;
+  input_loss_settings: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsInputLossSettings;
+  video_black_settings: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettingsVideoBlackSettings;
 }
-export interface FailoverCondition {
-  failover_condition_settings: FailoverConditionSettings;
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition {
+  failover_condition_settings: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverConditionFailoverConditionSettings;
 }
-export interface AutomaticInputFailoverSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettings {
   error_clear_time_msec?: number;
   input_preference?: string;
   secondary_input_id: string;
-  failover_condition: FailoverCondition;
+  failover_condition: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettingsFailoverCondition;
 }
-export interface AudioHlsRenditionSelection {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection {
   group_id: string;
   name: string;
 }
-export interface AudioLanguageSelection {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection {
   language_code: string;
   language_selection_policy?: string;
 }
-export interface AudioPidSelection {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection {
   pid: number;
 }
-export interface DolbyEDecode {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode {
   program_selection: string;
 }
-export interface Tracks {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectiontracks {
   track: number;
 }
-export interface AudioTrackSelection {
-  dolby_e_decode: DolbyEDecode;
-  tracks: Tracks;
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection {
+  dolby_e_decode: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectionDolbyEDecode;
+  tracks: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelectiontracks;
 }
-export interface SelectorSettings {
-  audio_hls_rendition_selection: AudioHlsRenditionSelection;
-  audio_language_selection: AudioLanguageSelection;
-  audio_pid_selection: AudioPidSelection;
-  audio_track_selection: AudioTrackSelection;
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettings {
+  audio_hls_rendition_selection: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioHlsRenditionSelection;
+  audio_language_selection: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioLanguageSelection;
+  audio_pid_selection: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioPidSelection;
+  audio_track_selection: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettingsAudioTrackSelection;
 }
-export interface AudioSelector {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelector {
   name: string;
-  selector_settings: SelectorSettings;
+  selector_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelectorSelectorSettings;
 }
-export interface AncillarySourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings {
   source_ancillary_channel_number?: number;
 }
-export interface AribSourceSettings {}
-export interface DvbSubSourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings {}
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings {
   ocr_language?: string;
   pid?: number;
 }
-export interface EmbeddedSourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings {
   convert_608_to_708?: string;
   scte20_detection?: string;
   source_608_channel_number?: number;
 }
-export interface Scte20SourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings {
   convert_608_to_708?: string;
   source_608_channel_number?: number;
 }
-export interface Scte27SourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings {
   ocr_language?: string;
   pid?: number;
 }
-export interface OutputRectangle {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle {
   height: number;
   left_offset: number;
   top_offset: number;
   width: number;
 }
-export interface TeletextSourceSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings {
   page_number?: string;
-  output_rectangle: OutputRectangle;
+  output_rectangle: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettingsOutputRectangle;
 }
-export interface SelectorSettings {
-  ancillary_source_settings: AncillarySourceSettings;
-  arib_source_settings: AribSourceSettings;
-  dvb_sub_source_settings: DvbSubSourceSettings;
-  embedded_source_settings: EmbeddedSourceSettings;
-  scte20_source_settings: Scte20SourceSettings;
-  scte27_source_settings: Scte27SourceSettings;
-  teletext_source_settings: TeletextSourceSettings;
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettings {
+  ancillary_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAncillarySourceSettings;
+  arib_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsAribSourceSettings;
+  dvb_sub_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsDvbSubSourceSettings;
+  embedded_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsEmbeddedSourceSettings;
+  scte20_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte20SourceSettings;
+  scte27_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsScte27SourceSettings;
+  teletext_source_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettingsTeletextSourceSettings;
 }
-export interface CaptionSelector {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelector {
   language_code?: string;
   name: string;
-  selector_settings: SelectorSettings;
+  selector_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelectorSelectorSettings;
 }
-export interface HlsInputSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings {
   bandwidth?: number;
   buffer_segments?: number;
   retries?: number;
   retry_interval?: number;
   scte35_source?: string;
 }
-export interface NetworkInputSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsNetworkInputSettings {
   server_validation?: string;
-  hls_input_settings: HlsInputSettings;
+  hls_input_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsNetworkInputSettingsHlsInputSettings;
 }
-export interface VideoSelector {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettingsVideoSelector {
   color_space?: string;
   color_space_usage?: string;
 }
-export interface InputSettings {
+export interface AwsMedialiveChannelArgsInputAttachmentsInputSettings {
   deblock_filter?: string;
   denoise_filter?: string;
   filter_strength?: number;
   scte35_pid?: number;
   smpte2038_data_preference?: string;
   source_end_behavior?: string;
-  audio_selector: AudioSelector;
-  caption_selector: CaptionSelector;
-  network_input_settings: NetworkInputSettings;
-  video_selector: VideoSelector;
+  audio_selector: AwsMedialiveChannelArgsInputAttachmentsInputSettingsAudioSelector;
+  caption_selector: AwsMedialiveChannelArgsInputAttachmentsInputSettingsCaptionSelector;
+  network_input_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettingsNetworkInputSettings;
+  video_selector: AwsMedialiveChannelArgsInputAttachmentsInputSettingsVideoSelector;
 }
-export interface InputAttachments {
+export interface AwsMedialiveChannelArgsInputAttachments {
   input_attachment_name: string;
   input_id: string;
-  automatic_input_failover_settings: AutomaticInputFailoverSettings;
-  input_settings: InputSettings;
+  automatic_input_failover_settings: AwsMedialiveChannelArgsInputAttachmentsAutomaticInputFailoverSettings;
+  input_settings: AwsMedialiveChannelArgsInputAttachmentsInputSettings;
 }
-export interface InputSpecification {
+export interface AwsMedialiveChannelArgsInputSpecification {
   codec: string;
   input_resolution: string;
   maximum_bitrate: string;
 }
-export interface Maintenance {
+export interface AwsMedialiveChannelArgsmaintenance {
   maintenance_day: string;
   maintenance_start_time: string;
 }
-export interface Timeouts {
+export interface AwsMedialiveChannelArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Vpc {
+export interface AwsMedialiveChannelArgsvpc {
   public_address_allocation_ids: string[];
   subnet_ids: string[];
 }
@@ -726,14 +726,14 @@ export interface AwsMedialiveChannelArgs {
   tags?: {
     [key: string]: string;
   };
-  cdi_input_specification: CdiInputSpecification;
-  destinations: Destinations;
-  encoder_settings: EncoderSettings;
-  input_attachments: InputAttachments;
-  input_specification: InputSpecification;
-  maintenance: Maintenance;
-  timeouts: Timeouts;
-  vpc: Vpc;
+  cdi_input_specification: AwsMedialiveChannelArgsCdiInputSpecification;
+  destinations: AwsMedialiveChannelArgsdestinations;
+  encoder_settings: AwsMedialiveChannelArgsEncoderSettings;
+  input_attachments: AwsMedialiveChannelArgsInputAttachments;
+  input_specification: AwsMedialiveChannelArgsInputSpecification;
+  maintenance: AwsMedialiveChannelArgsmaintenance;
+  timeouts: AwsMedialiveChannelArgstimeouts;
+  vpc: AwsMedialiveChannelArgsvpc;
 }
 export class aws_medialive_channel extends TerraformResource {
   readonly arn!: string;

@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BruteForceConfig {}
-export interface TreeAhConfig {
+export interface GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfigBruteForceConfig {}
+export interface GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfigTreeAhConfig {
   leaf_node_embedding_count?: number;
   leaf_nodes_to_search_percent?: number;
 }
-export interface AlgorithmConfig {
-  brute_force_config: BruteForceConfig;
-  tree_ah_config: TreeAhConfig;
+export interface GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfig {
+  brute_force_config: GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfigBruteForceConfig;
+  tree_ah_config: GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfigTreeAhConfig;
 }
-export interface Config {
+export interface GoogleVertexAiIndexArgsmetadataconfig {
   approximate_neighbors_count?: number;
   dimensions: number;
   distance_measure_type?: string;
   feature_norm_type?: string;
-  algorithm_config: AlgorithmConfig;
+  algorithm_config: GoogleVertexAiIndexArgsmetadataconfigAlgorithmConfig;
 }
-export interface Metadata {
+export interface GoogleVertexAiIndexArgsmetadata {
   contents_delta_uri: string;
   is_complete_overwrite?: boolean;
-  config: Config;
+  config: GoogleVertexAiIndexArgsmetadataconfig;
 }
-export interface Timeouts {
+export interface GoogleVertexAiIndexArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,8 +33,8 @@ export interface GoogleVertexAiIndexArgs {
     [key: string]: string;
   };
   region?: string;
-  metadata: Metadata;
-  timeouts: Timeouts;
+  metadata: GoogleVertexAiIndexArgsmetadata;
+  timeouts: GoogleVertexAiIndexArgstimeouts;
 }
 export class google_vertex_ai_index extends TerraformResource {
   readonly create_time!: string;

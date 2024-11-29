@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataSourceConfiguration {
+export interface AwsLocationPlaceIndexArgsDataSourceConfiguration {
   intended_use?: string;
 }
 export interface AwsLocationPlaceIndexArgs {
@@ -9,7 +9,7 @@ export interface AwsLocationPlaceIndexArgs {
   tags?: {
     [key: string]: string;
   };
-  data_source_configuration: DataSourceConfiguration;
+  data_source_configuration: AwsLocationPlaceIndexArgsDataSourceConfiguration;
 }
 export class aws_location_place_index extends TerraformResource {
   readonly create_time!: string;

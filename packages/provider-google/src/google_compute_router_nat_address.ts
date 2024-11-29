@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeRouterNatAddressArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleComputeRouterNatAddressArgs {
   nat_ips: string[];
   router: string;
   router_nat: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeRouterNatAddressArgstimeouts;
 }
 export class google_compute_router_nat_address extends TerraformResource {
   readonly id?: string;

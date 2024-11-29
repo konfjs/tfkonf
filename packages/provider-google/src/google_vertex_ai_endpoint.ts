@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionSpec {
+export interface GoogleVertexAiEndpointArgsEncryptionSpec {
   kms_key_name: string;
 }
-export interface BigqueryDestination {
+export interface GoogleVertexAiEndpointArgsPredictRequestResponseLoggingConfigBigqueryDestination {
   output_uri?: string;
 }
-export interface PredictRequestResponseLoggingConfig {
+export interface GoogleVertexAiEndpointArgsPredictRequestResponseLoggingConfig {
   enabled?: boolean;
   sampling_rate?: number;
-  bigquery_destination: BigqueryDestination;
+  bigquery_destination: GoogleVertexAiEndpointArgsPredictRequestResponseLoggingConfigBigqueryDestination;
 }
-export interface PrivateServiceConnectConfig {
+export interface GoogleVertexAiEndpointArgsPrivateServiceConnectConfig {
   enable_private_service_connect: boolean;
   enable_secure_private_service_connect?: boolean;
   project_allowlist?: string[];
 }
-export interface Timeouts {
+export interface GoogleVertexAiEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,10 +31,10 @@ export interface GoogleVertexAiEndpointArgs {
   name: string;
   network?: string;
   region?: string;
-  encryption_spec: EncryptionSpec;
-  predict_request_response_logging_config: PredictRequestResponseLoggingConfig;
-  private_service_connect_config: PrivateServiceConnectConfig;
-  timeouts: Timeouts;
+  encryption_spec: GoogleVertexAiEndpointArgsEncryptionSpec;
+  predict_request_response_logging_config: GoogleVertexAiEndpointArgsPredictRequestResponseLoggingConfig;
+  private_service_connect_config: GoogleVertexAiEndpointArgsPrivateServiceConnectConfig;
+  timeouts: GoogleVertexAiEndpointArgstimeouts;
 }
 export class google_vertex_ai_endpoint extends TerraformResource {
   readonly create_time!: string;

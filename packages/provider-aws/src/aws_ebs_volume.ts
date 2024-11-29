@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEbsVolumeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsEbsVolumeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsEbsVolumeArgstimeouts;
 }
 export class aws_ebs_volume extends TerraformResource {
   readonly arn!: string;

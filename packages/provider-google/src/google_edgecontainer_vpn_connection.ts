@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleEdgecontainerVpnConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcProject {
+export interface GoogleEdgecontainerVpnConnectionArgsVpcProject {
   project_id?: string;
 }
 export interface GoogleEdgecontainerVpnConnectionArgs {
@@ -17,8 +17,8 @@ export interface GoogleEdgecontainerVpnConnectionArgs {
   nat_gateway_ip?: string;
   router?: string;
   vpc?: string;
-  timeouts: Timeouts;
-  vpc_project: VpcProject;
+  timeouts: GoogleEdgecontainerVpnConnectionArgstimeouts;
+  vpc_project: GoogleEdgecontainerVpnConnectionArgsVpcProject;
 }
 export class google_edgecontainer_vpn_connection extends TerraformResource {
   readonly create_time!: string;

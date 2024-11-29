@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AmazonCodeGuruProfiler {
+export interface AwsDevopsguruEventSourcesConfigArgsEventSourcesAmazonCodeGuruProfiler {
   status: string;
 }
-export interface EventSources {
-  amazon_code_guru_profiler: AmazonCodeGuruProfiler;
+export interface AwsDevopsguruEventSourcesConfigArgsEventSources {
+  amazon_code_guru_profiler: AwsDevopsguruEventSourcesConfigArgsEventSourcesAmazonCodeGuruProfiler;
 }
 export interface AwsDevopsguruEventSourcesConfigArgs {
-  event_sources: EventSources;
+  event_sources: AwsDevopsguruEventSourcesConfigArgsEventSources;
 }
 export class aws_devopsguru_event_sources_config extends TerraformResource {
   readonly id!: string;

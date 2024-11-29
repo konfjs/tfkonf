@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Audio {
+export interface AwsElastictranscoderPresetArgsaudio {
   audio_packing_mode?: string;
   channels?: string;
   codec?: string;
   sample_rate?: string;
 }
-export interface AudioCodecOptions {}
-export interface Thumbnails {
+export interface AwsElastictranscoderPresetArgsAudioCodecOptions {}
+export interface AwsElastictranscoderPresetArgsthumbnails {
   aspect_ratio?: string;
   format?: string;
   interval?: string;
@@ -16,7 +16,7 @@ export interface Thumbnails {
   resolution?: string;
   sizing_policy?: string;
 }
-export interface Video {
+export interface AwsElastictranscoderPresetArgsvideo {
   aspect_ratio?: string;
   codec?: string;
   display_aspect_ratio?: string;
@@ -29,7 +29,7 @@ export interface Video {
   resolution?: string;
   sizing_policy?: string;
 }
-export interface VideoWatermarks {
+export interface AwsElastictranscoderPresetArgsVideoWatermarks {
   horizontal_align?: string;
   horizontal_offset?: string;
   id?: string;
@@ -47,11 +47,11 @@ export interface AwsElastictranscoderPresetArgs {
   video_codec_options?: {
     [key: string]: string;
   };
-  audio: Audio;
-  audio_codec_options: AudioCodecOptions;
-  thumbnails: Thumbnails;
-  video: Video;
-  video_watermarks: VideoWatermarks;
+  audio: AwsElastictranscoderPresetArgsaudio;
+  audio_codec_options: AwsElastictranscoderPresetArgsAudioCodecOptions;
+  thumbnails: AwsElastictranscoderPresetArgsthumbnails;
+  video: AwsElastictranscoderPresetArgsvideo;
+  video_watermarks: AwsElastictranscoderPresetArgsVideoWatermarks;
 }
 export class aws_elastictranscoder_preset extends TerraformResource {
   readonly arn!: string;

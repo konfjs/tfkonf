@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleSourcerepoRepositoryIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSourcerepoRepositoryIamMemberArgs {
   member: string;
   repository: string;
   role: string;
-  condition: Condition;
+  condition: GoogleSourcerepoRepositoryIamMemberArgscondition;
 }
 export class google_sourcerepo_repository_iam_member extends TerraformResource {
   readonly etag!: string;

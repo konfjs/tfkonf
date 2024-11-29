@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Address {
+export interface AwsCustomerprofilesProfileArgsaddress {
   address_1?: string;
   address_2?: string;
   address_3?: string;
@@ -11,7 +11,7 @@ export interface Address {
   province?: string;
   state?: string;
 }
-export interface BillingAddress {
+export interface AwsCustomerprofilesProfileArgsBillingAddress {
   address_1?: string;
   address_2?: string;
   address_3?: string;
@@ -23,7 +23,7 @@ export interface BillingAddress {
   province?: string;
   state?: string;
 }
-export interface MailingAddress {
+export interface AwsCustomerprofilesProfileArgsMailingAddress {
   address_1?: string;
   address_2?: string;
   address_3?: string;
@@ -35,7 +35,7 @@ export interface MailingAddress {
   province?: string;
   state?: string;
 }
-export interface ShippingAddress {
+export interface AwsCustomerprofilesProfileArgsShippingAddress {
   address_1?: string;
   address_2?: string;
   address_3?: string;
@@ -68,10 +68,10 @@ export interface AwsCustomerprofilesProfileArgs {
   party_type_string?: string;
   personal_email_address?: string;
   phone_number?: string;
-  address: Address;
-  billing_address: BillingAddress;
-  mailing_address: MailingAddress;
-  shipping_address: ShippingAddress;
+  address: AwsCustomerprofilesProfileArgsaddress;
+  billing_address: AwsCustomerprofilesProfileArgsBillingAddress;
+  mailing_address: AwsCustomerprofilesProfileArgsMailingAddress;
+  shipping_address: AwsCustomerprofilesProfileArgsShippingAddress;
 }
 export class aws_customerprofiles_profile extends TerraformResource {
   readonly id?: string;

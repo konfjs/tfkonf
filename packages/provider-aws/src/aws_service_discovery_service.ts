@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DnsRecords {
+export interface AwsServiceDiscoveryServiceArgsDnsConfigDnsRecords {
   ttl: number;
   type: string;
 }
-export interface DnsConfig {
+export interface AwsServiceDiscoveryServiceArgsDnsConfig {
   namespace_id: string;
   routing_policy?: string;
-  dns_records: DnsRecords;
+  dns_records: AwsServiceDiscoveryServiceArgsDnsConfigDnsRecords;
 }
-export interface HealthCheckConfig {
+export interface AwsServiceDiscoveryServiceArgsHealthCheckConfig {
   failure_threshold?: number;
   resource_path?: string;
   type?: string;
 }
-export interface HealthCheckCustomConfig {
+export interface AwsServiceDiscoveryServiceArgsHealthCheckCustomConfig {
   failure_threshold?: number;
 }
 export interface AwsServiceDiscoveryServiceArgs {
@@ -23,9 +23,9 @@ export interface AwsServiceDiscoveryServiceArgs {
   tags?: {
     [key: string]: string;
   };
-  dns_config: DnsConfig;
-  health_check_config: HealthCheckConfig;
-  health_check_custom_config: HealthCheckCustomConfig;
+  dns_config: AwsServiceDiscoveryServiceArgsDnsConfig;
+  health_check_config: AwsServiceDiscoveryServiceArgsHealthCheckConfig;
+  health_check_custom_config: AwsServiceDiscoveryServiceArgsHealthCheckCustomConfig;
 }
 export class aws_service_discovery_service extends TerraformResource {
   readonly arn!: string;

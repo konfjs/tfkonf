@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkConnectivityHubArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleNetworkConnectivityHubArgs {
   labels?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkConnectivityHubArgstimeouts;
 }
 export class google_network_connectivity_hub extends TerraformResource {
   readonly create_time!: string;

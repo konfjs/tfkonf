@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GooglePubsubSchemaArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GooglePubsubSchemaArgs {
   definition?: string;
   name: string;
   type?: string;
-  timeouts: Timeouts;
+  timeouts: GooglePubsubSchemaArgstimeouts;
 }
 export class google_pubsub_schema extends TerraformResource {
   readonly id?: string;

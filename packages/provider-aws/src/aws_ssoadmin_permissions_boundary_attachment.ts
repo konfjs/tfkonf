@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomerManagedPolicyReference {
+export interface AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundaryCustomerManagedPolicyReference {
   name: string;
   path?: string;
 }
-export interface PermissionsBoundary {
+export interface AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundary {
   managed_policy_arn?: string;
-  customer_managed_policy_reference: CustomerManagedPolicyReference;
+  customer_managed_policy_reference: AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundaryCustomerManagedPolicyReference;
 }
-export interface Timeouts {
+export interface AwsSsoadminPermissionsBoundaryAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsSsoadminPermissionsBoundaryAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
-  permissions_boundary: PermissionsBoundary;
-  timeouts: Timeouts;
+  permissions_boundary: AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundary;
+  timeouts: AwsSsoadminPermissionsBoundaryAttachmentArgstimeouts;
 }
 export class aws_ssoadmin_permissions_boundary_attachment extends TerraformResource {
   readonly id?: string;

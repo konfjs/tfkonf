@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRekognitionProjectArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsRekognitionProjectArgs {
   feature?: string;
   name: string;
-  timeouts: Timeouts;
+  timeouts: AwsRekognitionProjectArgstimeouts;
 }
 export class aws_rekognition_project extends TerraformResource {
   readonly arn!: string;

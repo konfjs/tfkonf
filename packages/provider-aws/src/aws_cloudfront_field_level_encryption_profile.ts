@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldPatterns {
+export interface AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntitiesitemsFieldPatterns {
   items?: string[];
 }
-export interface Items {
+export interface AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntitiesitems {
   provider_id: string;
   public_key_id: string;
-  field_patterns: FieldPatterns;
+  field_patterns: AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntitiesitemsFieldPatterns;
 }
-export interface EncryptionEntities {
-  items: Items;
+export interface AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntities {
+  items: AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntitiesitems;
 }
 export interface AwsCloudfrontFieldLevelEncryptionProfileArgs {
   comment?: string;
   name: string;
-  encryption_entities: EncryptionEntities;
+  encryption_entities: AwsCloudfrontFieldLevelEncryptionProfileArgsEncryptionEntities;
 }
 export class aws_cloudfront_field_level_encryption_profile extends TerraformResource {
   readonly caller_reference!: string;

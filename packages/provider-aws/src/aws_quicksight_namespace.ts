@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsQuicksightNamespaceArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsQuicksightNamespaceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsQuicksightNamespaceArgstimeouts;
 }
 export class aws_quicksight_namespace extends TerraformResource {
   readonly arn!: string;

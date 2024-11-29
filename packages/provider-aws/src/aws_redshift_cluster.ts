@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Logging {
+export interface AwsRedshiftClusterArgslogging {
   enable: boolean;
   log_destination_type?: string;
   log_exports?: string[];
 }
-export interface SnapshotCopy {
+export interface AwsRedshiftClusterArgsSnapshotCopy {
   destination_region: string;
   grant_name?: string;
   retention_period?: number;
 }
-export interface Timeouts {
+export interface AwsRedshiftClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,9 +42,9 @@ export interface AwsRedshiftClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  logging: Logging;
-  snapshot_copy: SnapshotCopy;
-  timeouts: Timeouts;
+  logging: AwsRedshiftClusterArgslogging;
+  snapshot_copy: AwsRedshiftClusterArgsSnapshotCopy;
+  timeouts: AwsRedshiftClusterArgstimeouts;
 }
 export class aws_redshift_cluster extends TerraformResource {
   readonly aqua_configuration_status?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsLbTrustStoreArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsLbTrustStoreArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsLbTrustStoreArgstimeouts;
 }
 export class aws_lb_trust_store extends TerraformResource {
   readonly arn!: string;

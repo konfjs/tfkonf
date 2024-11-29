@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsLocation {
+export interface AwsNetworkmanagerDeviceArgsAwsLocation {
   subnet_arn?: string;
   zone?: string;
 }
-export interface Location {
+export interface AwsNetworkmanagerDeviceArgslocation {
   address?: string;
   latitude?: string;
   longitude?: string;
 }
-export interface Timeouts {
+export interface AwsNetworkmanagerDeviceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,9 +24,9 @@ export interface AwsNetworkmanagerDeviceArgs {
   };
   type?: string;
   vendor?: string;
-  aws_location: AwsLocation;
-  location: Location;
-  timeouts: Timeouts;
+  aws_location: AwsNetworkmanagerDeviceArgsAwsLocation;
+  location: AwsNetworkmanagerDeviceArgslocation;
+  timeouts: AwsNetworkmanagerDeviceArgstimeouts;
 }
 export class aws_networkmanager_device extends TerraformResource {
   readonly arn!: string;

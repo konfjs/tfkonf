@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchLogs {
+export interface AwsIvschatLoggingConfigurationArgsDestinationConfigurationCloudwatchLogs {
   log_group_name: string;
 }
-export interface Firehose {
+export interface AwsIvschatLoggingConfigurationArgsDestinationConfigurationfirehose {
   delivery_stream_name: string;
 }
-export interface S3 {
+export interface AwsIvschatLoggingConfigurationArgsDestinationConfigurations3 {
   bucket_name: string;
 }
-export interface DestinationConfiguration {
-  cloudwatch_logs: CloudwatchLogs;
-  firehose: Firehose;
-  s3: S3;
+export interface AwsIvschatLoggingConfigurationArgsDestinationConfiguration {
+  cloudwatch_logs: AwsIvschatLoggingConfigurationArgsDestinationConfigurationCloudwatchLogs;
+  firehose: AwsIvschatLoggingConfigurationArgsDestinationConfigurationfirehose;
+  s3: AwsIvschatLoggingConfigurationArgsDestinationConfigurations3;
 }
-export interface Timeouts {
+export interface AwsIvschatLoggingConfigurationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,8 +23,8 @@ export interface AwsIvschatLoggingConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  destination_configuration: DestinationConfiguration;
-  timeouts: Timeouts;
+  destination_configuration: AwsIvschatLoggingConfigurationArgsDestinationConfiguration;
+  timeouts: AwsIvschatLoggingConfigurationArgstimeouts;
 }
 export class aws_ivschat_logging_configuration extends TerraformResource {
   readonly arn!: string;

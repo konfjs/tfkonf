@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PrivateServiceConnectConfig {
+export interface GoogleVertexAiIndexEndpointArgsPrivateServiceConnectConfig {
   enable_private_service_connect: boolean;
   project_allowlist?: string[];
 }
-export interface Timeouts {
+export interface GoogleVertexAiIndexEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface GoogleVertexAiIndexEndpointArgs {
   network?: string;
   public_endpoint_enabled?: boolean;
   region?: string;
-  private_service_connect_config: PrivateServiceConnectConfig;
-  timeouts: Timeouts;
+  private_service_connect_config: GoogleVertexAiIndexEndpointArgsPrivateServiceConnectConfig;
+  timeouts: GoogleVertexAiIndexEndpointArgstimeouts;
 }
 export class google_vertex_ai_index_endpoint extends TerraformResource {
   readonly create_time!: string;

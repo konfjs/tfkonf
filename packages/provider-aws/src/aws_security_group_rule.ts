@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsSecurityGroupRuleArgstimeouts {
   create?: string;
 }
 export interface AwsSecurityGroupRuleArgs {
@@ -13,7 +13,7 @@ export interface AwsSecurityGroupRuleArgs {
   self?: boolean;
   to_port: number;
   type: string;
-  timeouts: Timeouts;
+  timeouts: AwsSecurityGroupRuleArgstimeouts;
 }
 export class aws_security_group_rule extends TerraformResource {
   readonly id?: string;

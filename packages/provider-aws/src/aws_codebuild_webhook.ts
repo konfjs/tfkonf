@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Filter {
+export interface AwsCodebuildWebhookArgsFilterGroupfilter {
   exclude_matched_pattern?: boolean;
   pattern: string;
   type: string;
 }
-export interface FilterGroup {
-  filter: Filter;
+export interface AwsCodebuildWebhookArgsFilterGroup {
+  filter: AwsCodebuildWebhookArgsFilterGroupfilter;
 }
-export interface ScopeConfiguration {
+export interface AwsCodebuildWebhookArgsScopeConfiguration {
   domain?: string;
   name: string;
   scope: string;
@@ -16,8 +16,8 @@ export interface AwsCodebuildWebhookArgs {
   branch_filter?: string;
   build_type?: string;
   project_name: string;
-  filter_group: FilterGroup;
-  scope_configuration: ScopeConfiguration;
+  filter_group: AwsCodebuildWebhookArgsFilterGroup;
+  scope_configuration: AwsCodebuildWebhookArgsScopeConfiguration;
 }
 export class aws_codebuild_webhook extends TerraformResource {
   readonly id?: string;

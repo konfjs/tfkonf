@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OidcJwtConfiguration {
+export interface AwsSsoadminTrustedTokenIssuerArgsTrustedTokenIssuerConfigurationOidcJwtConfiguration {
   claim_attribute_path: string;
   identity_store_attribute_path: string;
   issuer_url: string;
   jwks_retrieval_option: string;
 }
-export interface TrustedTokenIssuerConfiguration {
-  oidc_jwt_configuration: OidcJwtConfiguration;
+export interface AwsSsoadminTrustedTokenIssuerArgsTrustedTokenIssuerConfiguration {
+  oidc_jwt_configuration: AwsSsoadminTrustedTokenIssuerArgsTrustedTokenIssuerConfigurationOidcJwtConfiguration;
 }
 export interface AwsSsoadminTrustedTokenIssuerArgs {
   client_token?: string;
@@ -16,7 +16,7 @@ export interface AwsSsoadminTrustedTokenIssuerArgs {
     [key: string]: string;
   };
   trusted_token_issuer_type: string;
-  trusted_token_issuer_configuration: TrustedTokenIssuerConfiguration;
+  trusted_token_issuer_configuration: AwsSsoadminTrustedTokenIssuerArgsTrustedTokenIssuerConfiguration;
 }
 export class aws_ssoadmin_trusted_token_issuer extends TerraformResource {
   readonly arn!: string;

@@ -1,55 +1,55 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CapacityReservationTarget {
+export interface AwsInstanceArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
   capacity_reservation_resource_group_arn?: string;
 }
-export interface CapacityReservationSpecification {
+export interface AwsInstanceArgsCapacityReservationSpecification {
   capacity_reservation_preference?: string;
-  capacity_reservation_target: CapacityReservationTarget;
+  capacity_reservation_target: AwsInstanceArgsCapacityReservationSpecificationCapacityReservationTarget;
 }
-export interface CpuOptions {}
-export interface CreditSpecification {
+export interface AwsInstanceArgsCpuOptions {}
+export interface AwsInstanceArgsCreditSpecification {
   cpu_credits?: string;
 }
-export interface EbsBlockDevice {
+export interface AwsInstanceArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface EnclaveOptions {}
-export interface EphemeralBlockDevice {
+export interface AwsInstanceArgsEnclaveOptions {}
+export interface AwsInstanceArgsEphemeralBlockDevice {
   device_name: string;
   no_device?: boolean;
   virtual_name?: string;
 }
-export interface SpotOptions {}
-export interface InstanceMarketOptions {
-  spot_options: SpotOptions;
+export interface AwsInstanceArgsInstanceMarketOptionsSpotOptions {}
+export interface AwsInstanceArgsInstanceMarketOptions {
+  spot_options: AwsInstanceArgsInstanceMarketOptionsSpotOptions;
 }
-export interface LaunchTemplate {
+export interface AwsInstanceArgsLaunchTemplate {
   version?: string;
 }
-export interface MaintenanceOptions {}
-export interface MetadataOptions {
+export interface AwsInstanceArgsMaintenanceOptions {}
+export interface AwsInstanceArgsMetadataOptions {
   http_endpoint?: string;
   http_protocol_ipv6?: string;
 }
-export interface NetworkInterface {
+export interface AwsInstanceArgsNetworkInterface {
   delete_on_termination?: boolean;
   device_index: number;
   network_card_index?: number;
   network_interface_id: string;
 }
-export interface PrivateDnsNameOptions {}
-export interface RootBlockDevice {
+export interface AwsInstanceArgsPrivateDnsNameOptions {}
+export interface AwsInstanceArgsRootBlockDevice {
   delete_on_termination?: boolean;
   tags?: {
     [key: string]: string;
   };
 }
-export interface Timeouts {
+export interface AwsInstanceArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -66,20 +66,20 @@ export interface AwsInstanceArgs {
   volume_tags?: {
     [key: string]: string;
   };
-  capacity_reservation_specification: CapacityReservationSpecification;
-  cpu_options: CpuOptions;
-  credit_specification: CreditSpecification;
-  ebs_block_device: EbsBlockDevice;
-  enclave_options: EnclaveOptions;
-  ephemeral_block_device: EphemeralBlockDevice;
-  instance_market_options: InstanceMarketOptions;
-  launch_template: LaunchTemplate;
-  maintenance_options: MaintenanceOptions;
-  metadata_options: MetadataOptions;
-  network_interface: NetworkInterface;
-  private_dns_name_options: PrivateDnsNameOptions;
-  root_block_device: RootBlockDevice;
-  timeouts: Timeouts;
+  capacity_reservation_specification: AwsInstanceArgsCapacityReservationSpecification;
+  cpu_options: AwsInstanceArgsCpuOptions;
+  credit_specification: AwsInstanceArgsCreditSpecification;
+  ebs_block_device: AwsInstanceArgsEbsBlockDevice;
+  enclave_options: AwsInstanceArgsEnclaveOptions;
+  ephemeral_block_device: AwsInstanceArgsEphemeralBlockDevice;
+  instance_market_options: AwsInstanceArgsInstanceMarketOptions;
+  launch_template: AwsInstanceArgsLaunchTemplate;
+  maintenance_options: AwsInstanceArgsMaintenanceOptions;
+  metadata_options: AwsInstanceArgsMetadataOptions;
+  network_interface: AwsInstanceArgsNetworkInterface;
+  private_dns_name_options: AwsInstanceArgsPrivateDnsNameOptions;
+  root_block_device: AwsInstanceArgsRootBlockDevice;
+  timeouts: AwsInstanceArgstimeouts;
 }
 export class aws_instance extends TerraformResource {
   readonly ami?: string;

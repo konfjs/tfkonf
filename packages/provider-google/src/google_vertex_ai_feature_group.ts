@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BigQuerySource {
+export interface GoogleVertexAiFeatureGroupArgsBigQueryBigQuerySource {
   input_uri: string;
 }
-export interface BigQuery {
+export interface GoogleVertexAiFeatureGroupArgsBigQuery {
   entity_id_columns?: string[];
-  big_query_source: BigQuerySource;
+  big_query_source: GoogleVertexAiFeatureGroupArgsBigQueryBigQuerySource;
 }
-export interface Timeouts {
+export interface GoogleVertexAiFeatureGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface GoogleVertexAiFeatureGroupArgs {
   };
   name?: string;
   region?: string;
-  big_query: BigQuery;
-  timeouts: Timeouts;
+  big_query: GoogleVertexAiFeatureGroupArgsBigQuery;
+  timeouts: GoogleVertexAiFeatureGroupArgstimeouts;
 }
 export class google_vertex_ai_feature_group extends TerraformResource {
   readonly create_time!: string;

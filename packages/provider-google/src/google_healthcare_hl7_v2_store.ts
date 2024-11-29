@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NotificationConfig {
+export interface GoogleHealthcareHl7V2StoreArgsNotificationConfig {
   pubsub_topic: string;
 }
-export interface NotificationConfigs {
+export interface GoogleHealthcareHl7V2StoreArgsNotificationConfigs {
   filter?: string;
   pubsub_topic: string;
 }
-export interface ParserConfig {
+export interface GoogleHealthcareHl7V2StoreArgsParserConfig {
   allow_null_header?: boolean;
   schema?: string;
   segment_terminator?: string;
   version?: string;
 }
-export interface Timeouts {
+export interface GoogleHealthcareHl7V2StoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,10 +24,10 @@ export interface GoogleHealthcareHl7V2StoreArgs {
   };
   name: string;
   reject_duplicate_message?: boolean;
-  notification_config: NotificationConfig;
-  notification_configs: NotificationConfigs;
-  parser_config: ParserConfig;
-  timeouts: Timeouts;
+  notification_config: GoogleHealthcareHl7V2StoreArgsNotificationConfig;
+  notification_configs: GoogleHealthcareHl7V2StoreArgsNotificationConfigs;
+  parser_config: GoogleHealthcareHl7V2StoreArgsParserConfig;
+  timeouts: GoogleHealthcareHl7V2StoreArgstimeouts;
 }
 export class google_healthcare_hl7_v2_store extends TerraformResource {
   readonly effective_labels!: {

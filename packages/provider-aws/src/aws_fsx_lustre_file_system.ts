@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogConfiguration {
+export interface AwsFsxLustreFileSystemArgsLogConfiguration {
   level?: string;
 }
-export interface MetadataConfiguration {}
-export interface RootSquashConfiguration {
+export interface AwsFsxLustreFileSystemArgsMetadataConfiguration {}
+export interface AwsFsxLustreFileSystemArgsRootSquashConfiguration {
   no_squash_nids?: string[];
   root_squash?: string;
 }
-export interface Timeouts {
+export interface AwsFsxLustreFileSystemArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,10 +31,10 @@ export interface AwsFsxLustreFileSystemArgs {
   tags?: {
     [key: string]: string;
   };
-  log_configuration: LogConfiguration;
-  metadata_configuration: MetadataConfiguration;
-  root_squash_configuration: RootSquashConfiguration;
-  timeouts: Timeouts;
+  log_configuration: AwsFsxLustreFileSystemArgsLogConfiguration;
+  metadata_configuration: AwsFsxLustreFileSystemArgsMetadataConfiguration;
+  root_squash_configuration: AwsFsxLustreFileSystemArgsRootSquashConfiguration;
+  timeouts: AwsFsxLustreFileSystemArgstimeouts;
 }
 export class aws_fsx_lustre_file_system extends TerraformResource {
   readonly arn!: string;

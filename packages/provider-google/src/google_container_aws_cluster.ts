@@ -1,38 +1,38 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdminGroups {
+export interface GoogleContainerAwsClusterArgsauthorizationAdminGroups {
   group: string;
 }
-export interface AdminUsers {
+export interface GoogleContainerAwsClusterArgsauthorizationAdminUsers {
   username: string;
 }
-export interface Authorization {
-  admin_groups: AdminGroups;
-  admin_users: AdminUsers;
+export interface GoogleContainerAwsClusterArgsauthorization {
+  admin_groups: GoogleContainerAwsClusterArgsauthorizationAdminGroups;
+  admin_users: GoogleContainerAwsClusterArgsauthorizationAdminUsers;
 }
-export interface BinaryAuthorization {}
-export interface AwsServicesAuthentication {
+export interface GoogleContainerAwsClusterArgsBinaryAuthorization {}
+export interface GoogleContainerAwsClusterArgsControlPlaneAwsServicesAuthentication {
   role_arn: string;
 }
-export interface ConfigEncryption {
+export interface GoogleContainerAwsClusterArgsControlPlaneConfigEncryption {
   kms_key_arn: string;
 }
-export interface DatabaseEncryption {
+export interface GoogleContainerAwsClusterArgsControlPlaneDatabaseEncryption {
   kms_key_arn: string;
 }
-export interface MainVolume {
+export interface GoogleContainerAwsClusterArgsControlPlaneMainVolume {
   kms_key_arn?: string;
 }
-export interface ProxyConfig {
+export interface GoogleContainerAwsClusterArgsControlPlaneProxyConfig {
   secret_arn: string;
   secret_version: string;
 }
-export interface RootVolume {
+export interface GoogleContainerAwsClusterArgsControlPlaneRootVolume {
   kms_key_arn?: string;
 }
-export interface SshConfig {
+export interface GoogleContainerAwsClusterArgsControlPlaneSshConfig {
   ec2_key_pair: string;
 }
-export interface ControlPlane {
+export interface GoogleContainerAwsClusterArgsControlPlane {
   iam_instance_profile: string;
   security_group_ids?: string[];
   subnet_ids: string[];
@@ -40,22 +40,22 @@ export interface ControlPlane {
     [key: string]: string;
   };
   version: string;
-  aws_services_authentication: AwsServicesAuthentication;
-  config_encryption: ConfigEncryption;
-  database_encryption: DatabaseEncryption;
-  main_volume: MainVolume;
-  proxy_config: ProxyConfig;
-  root_volume: RootVolume;
-  ssh_config: SshConfig;
+  aws_services_authentication: GoogleContainerAwsClusterArgsControlPlaneAwsServicesAuthentication;
+  config_encryption: GoogleContainerAwsClusterArgsControlPlaneConfigEncryption;
+  database_encryption: GoogleContainerAwsClusterArgsControlPlaneDatabaseEncryption;
+  main_volume: GoogleContainerAwsClusterArgsControlPlaneMainVolume;
+  proxy_config: GoogleContainerAwsClusterArgsControlPlaneProxyConfig;
+  root_volume: GoogleContainerAwsClusterArgsControlPlaneRootVolume;
+  ssh_config: GoogleContainerAwsClusterArgsControlPlaneSshConfig;
 }
-export interface Fleet {}
-export interface Networking {
+export interface GoogleContainerAwsClusterArgsfleet {}
+export interface GoogleContainerAwsClusterArgsnetworking {
   per_node_pool_sg_rules_disabled?: boolean;
   pod_address_cidr_blocks: string[];
   service_address_cidr_blocks: string[];
   vpc_id: string;
 }
-export interface Timeouts {
+export interface GoogleContainerAwsClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -68,12 +68,12 @@ export interface GoogleContainerAwsClusterArgs {
   description?: string;
   location: string;
   name: string;
-  authorization: Authorization;
-  binary_authorization: BinaryAuthorization;
-  control_plane: ControlPlane;
-  fleet: Fleet;
-  networking: Networking;
-  timeouts: Timeouts;
+  authorization: GoogleContainerAwsClusterArgsauthorization;
+  binary_authorization: GoogleContainerAwsClusterArgsBinaryAuthorization;
+  control_plane: GoogleContainerAwsClusterArgsControlPlane;
+  fleet: GoogleContainerAwsClusterArgsfleet;
+  networking: GoogleContainerAwsClusterArgsnetworking;
+  timeouts: GoogleContainerAwsClusterArgstimeouts;
 }
 export class google_container_aws_cluster extends TerraformResource {
   readonly create_time!: string;

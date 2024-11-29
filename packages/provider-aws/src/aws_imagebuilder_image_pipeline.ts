@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EcrConfiguration {
+export interface AwsImagebuilderImagePipelineArgsImageScanningConfigurationEcrConfiguration {
   container_tags?: string[];
   repository_name?: string;
 }
-export interface ImageScanningConfiguration {
+export interface AwsImagebuilderImagePipelineArgsImageScanningConfiguration {
   image_scanning_enabled?: boolean;
-  ecr_configuration: EcrConfiguration;
+  ecr_configuration: AwsImagebuilderImagePipelineArgsImageScanningConfigurationEcrConfiguration;
 }
-export interface ImageTestsConfiguration {
+export interface AwsImagebuilderImagePipelineArgsImageTestsConfiguration {
   image_tests_enabled?: boolean;
   timeout_minutes?: number;
 }
-export interface Schedule {
+export interface AwsImagebuilderImagePipelineArgsschedule {
   pipeline_execution_start_condition?: string;
   schedule_expression: string;
 }
-export interface Parameter {
+export interface AwsImagebuilderImagePipelineArgsworkflowparameter {
   name: string;
   value: string;
 }
-export interface Workflow {
+export interface AwsImagebuilderImagePipelineArgsworkflow {
   on_failure?: string;
   parallel_group?: string;
   workflow_arn: string;
-  parameter: Parameter;
+  parameter: AwsImagebuilderImagePipelineArgsworkflowparameter;
 }
 export interface AwsImagebuilderImagePipelineArgs {
   container_recipe_arn?: string;
@@ -38,10 +38,10 @@ export interface AwsImagebuilderImagePipelineArgs {
   tags?: {
     [key: string]: string;
   };
-  image_scanning_configuration: ImageScanningConfiguration;
-  image_tests_configuration: ImageTestsConfiguration;
-  schedule: Schedule;
-  workflow: Workflow;
+  image_scanning_configuration: AwsImagebuilderImagePipelineArgsImageScanningConfiguration;
+  image_tests_configuration: AwsImagebuilderImagePipelineArgsImageTestsConfiguration;
+  schedule: AwsImagebuilderImagePipelineArgsschedule;
+  workflow: AwsImagebuilderImagePipelineArgsworkflow;
 }
 export class aws_imagebuilder_image_pipeline extends TerraformResource {
   readonly arn!: string;

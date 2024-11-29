@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSecretManagerRegionalSecretVersionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleSecretManagerRegionalSecretVersionArgs {
   is_secret_data_base64?: boolean;
   secret: string;
   secret_data: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSecretManagerRegionalSecretVersionArgstimeouts;
 }
 export class google_secret_manager_regional_secret_version extends TerraformResource {
   readonly create_time!: string;

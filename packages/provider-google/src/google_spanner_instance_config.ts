@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Replicas {
+export interface GoogleSpannerInstanceConfigArgsreplicas {
   default_leader_location?: boolean;
   location?: string;
   type?: string;
 }
-export interface Timeouts {
+export interface GoogleSpannerInstanceConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleSpannerInstanceConfigArgs {
   labels?: {
     [key: string]: string;
   };
-  replicas: Replicas;
-  timeouts: Timeouts;
+  replicas: GoogleSpannerInstanceConfigArgsreplicas;
+  timeouts: GoogleSpannerInstanceConfigArgstimeouts;
 }
 export class google_spanner_instance_config extends TerraformResource {
   readonly base_config?: string;

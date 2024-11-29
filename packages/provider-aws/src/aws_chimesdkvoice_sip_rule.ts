@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetApplications {
+export interface AwsChimesdkvoiceSipRuleArgsTargetApplications {
   aws_region: string;
   priority: number;
   sip_media_application_id: string;
@@ -9,7 +9,7 @@ export interface AwsChimesdkvoiceSipRuleArgs {
   name: string;
   trigger_type: string;
   trigger_value: string;
-  target_applications: TargetApplications;
+  target_applications: AwsChimesdkvoiceSipRuleArgsTargetApplications;
 }
 export class aws_chimesdkvoice_sip_rule extends TerraformResource {
   readonly id?: string;

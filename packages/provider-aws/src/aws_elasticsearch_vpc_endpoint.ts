@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsElasticsearchVpcEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcOptions {
+export interface AwsElasticsearchVpcEndpointArgsVpcOptions {
   subnet_ids: string[];
 }
 export interface AwsElasticsearchVpcEndpointArgs {
   domain_arn: string;
-  timeouts: Timeouts;
-  vpc_options: VpcOptions;
+  timeouts: AwsElasticsearchVpcEndpointArgstimeouts;
+  vpc_options: AwsElasticsearchVpcEndpointArgsVpcOptions;
 }
 export class aws_elasticsearch_vpc_endpoint extends TerraformResource {
   readonly endpoint!: string;

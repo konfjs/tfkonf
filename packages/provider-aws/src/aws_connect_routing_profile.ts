@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MediaConcurrencies {
+export interface AwsConnectRoutingProfileArgsMediaConcurrencies {
   channel: string;
   concurrency: number;
 }
-export interface QueueConfigs {
+export interface AwsConnectRoutingProfileArgsQueueConfigs {
   channel: string;
   delay: number;
   priority: number;
@@ -17,8 +17,8 @@ export interface AwsConnectRoutingProfileArgs {
   tags?: {
     [key: string]: string;
   };
-  media_concurrencies: MediaConcurrencies;
-  queue_configs: QueueConfigs;
+  media_concurrencies: AwsConnectRoutingProfileArgsMediaConcurrencies;
+  queue_configs: AwsConnectRoutingProfileArgsQueueConfigs;
 }
 export class aws_connect_routing_profile extends TerraformResource {
   readonly arn!: string;

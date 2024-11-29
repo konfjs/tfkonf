@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdditionalConfiguration {
+export interface AwsGuarddutyDetectorFeatureArgsAdditionalConfiguration {
   name: string;
   status: string;
 }
@@ -7,7 +7,7 @@ export interface AwsGuarddutyDetectorFeatureArgs {
   detector_id: string;
   name: string;
   status: string;
-  additional_configuration: AdditionalConfiguration;
+  additional_configuration: AwsGuarddutyDetectorFeatureArgsAdditionalConfiguration;
 }
 export class aws_guardduty_detector_feature extends TerraformResource {
   readonly id?: string;

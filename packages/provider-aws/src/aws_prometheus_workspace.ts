@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LoggingConfiguration {
+export interface AwsPrometheusWorkspaceArgsLoggingConfiguration {
   log_group_arn: string;
 }
 export interface AwsPrometheusWorkspaceArgs {
@@ -8,7 +8,7 @@ export interface AwsPrometheusWorkspaceArgs {
   tags?: {
     [key: string]: string;
   };
-  logging_configuration: LoggingConfiguration;
+  logging_configuration: AwsPrometheusWorkspaceArgsLoggingConfiguration;
 }
 export class aws_prometheus_workspace extends TerraformResource {
   readonly arn!: string;

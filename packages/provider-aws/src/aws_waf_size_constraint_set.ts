@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldToMatch {
+export interface AwsWafSizeConstraintSetArgsSizeConstraintsFieldToMatch {
   data?: string;
   type: string;
 }
-export interface SizeConstraints {
+export interface AwsWafSizeConstraintSetArgsSizeConstraints {
   comparison_operator: string;
   size: number;
   text_transformation: string;
-  field_to_match: FieldToMatch;
+  field_to_match: AwsWafSizeConstraintSetArgsSizeConstraintsFieldToMatch;
 }
 export interface AwsWafSizeConstraintSetArgs {
   name: string;
-  size_constraints: SizeConstraints;
+  size_constraints: AwsWafSizeConstraintSetArgsSizeConstraints;
 }
 export class aws_waf_size_constraint_set extends TerraformResource {
   readonly arn!: string;

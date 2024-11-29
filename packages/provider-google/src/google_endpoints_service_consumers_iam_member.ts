@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleEndpointsServiceConsumersIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleEndpointsServiceConsumersIamMemberArgs {
   member: string;
   role: string;
   service_name: string;
-  condition: Condition;
+  condition: GoogleEndpointsServiceConsumersIamMemberArgscondition;
 }
 export class google_endpoints_service_consumers_iam_member extends TerraformResource {
   readonly etag!: string;

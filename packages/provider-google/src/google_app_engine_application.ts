@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FeatureSettings {
+export interface GoogleAppEngineApplicationArgsFeatureSettings {
   split_health_checks: boolean;
 }
-export interface Iap {
+export interface GoogleAppEngineApplicationArgsiap {
   enabled?: boolean;
   oauth2_client_id: string;
   oauth2_client_secret: string;
 }
-export interface Timeouts {
+export interface GoogleAppEngineApplicationArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface GoogleAppEngineApplicationArgs {
   location_id: string;
-  feature_settings: FeatureSettings;
-  iap: Iap;
-  timeouts: Timeouts;
+  feature_settings: GoogleAppEngineApplicationArgsFeatureSettings;
+  iap: GoogleAppEngineApplicationArgsiap;
+  timeouts: GoogleAppEngineApplicationArgstimeouts;
 }
 export class google_app_engine_application extends TerraformResource {
   readonly app_id!: string;

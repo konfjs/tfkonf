@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SchedulingConfig {
+export interface GoogleTpuNodeArgsSchedulingConfig {
   preemptible: boolean;
 }
-export interface Timeouts {
+export interface GoogleTpuNodeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleTpuNodeArgs {
   name: string;
   tensorflow_version: string;
   use_service_networking?: boolean;
-  scheduling_config: SchedulingConfig;
-  timeouts: Timeouts;
+  scheduling_config: GoogleTpuNodeArgsSchedulingConfig;
+  timeouts: GoogleTpuNodeArgstimeouts;
 }
 export class google_tpu_node extends TerraformResource {
   readonly cidr_block?: string;

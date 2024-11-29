@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StartTime {
+export interface GoogleRedisClusterArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface WeeklyMaintenanceWindow {
+export interface GoogleRedisClusterArgsMaintenancePolicyWeeklyMaintenanceWindow {
   day: string;
-  start_time: StartTime;
+  start_time: GoogleRedisClusterArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 }
-export interface MaintenancePolicy {
-  weekly_maintenance_window: WeeklyMaintenanceWindow;
+export interface GoogleRedisClusterArgsMaintenancePolicy {
+  weekly_maintenance_window: GoogleRedisClusterArgsMaintenancePolicyWeeklyMaintenanceWindow;
 }
-export interface AofConfig {}
-export interface RdbConfig {}
-export interface PersistenceConfig {
-  aof_config: AofConfig;
-  rdb_config: RdbConfig;
+export interface GoogleRedisClusterArgsPersistenceConfigAofConfig {}
+export interface GoogleRedisClusterArgsPersistenceConfigRdbConfig {}
+export interface GoogleRedisClusterArgsPersistenceConfig {
+  aof_config: GoogleRedisClusterArgsPersistenceConfigAofConfig;
+  rdb_config: GoogleRedisClusterArgsPersistenceConfigRdbConfig;
 }
-export interface PscConfigs {
+export interface GoogleRedisClusterArgsPscConfigs {
   network: string;
 }
-export interface Timeouts {
+export interface GoogleRedisClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface ZoneDistributionConfig {
+export interface GoogleRedisClusterArgsZoneDistributionConfig {
   zone?: string;
 }
 export interface GoogleRedisClusterArgs {
@@ -38,11 +38,11 @@ export interface GoogleRedisClusterArgs {
   replica_count?: number;
   shard_count: number;
   transit_encryption_mode?: string;
-  maintenance_policy: MaintenancePolicy;
-  persistence_config: PersistenceConfig;
-  psc_configs: PscConfigs;
-  timeouts: Timeouts;
-  zone_distribution_config: ZoneDistributionConfig;
+  maintenance_policy: GoogleRedisClusterArgsMaintenancePolicy;
+  persistence_config: GoogleRedisClusterArgsPersistenceConfig;
+  psc_configs: GoogleRedisClusterArgsPscConfigs;
+  timeouts: GoogleRedisClusterArgstimeouts;
+  zone_distribution_config: GoogleRedisClusterArgsZoneDistributionConfig;
 }
 export class google_redis_cluster extends TerraformResource {
   readonly create_time!: string;

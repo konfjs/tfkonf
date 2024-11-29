@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDocumentAiWarehouseLocationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleDocumentAiWarehouseLocationArgs {
   kms_key?: string;
   location: string;
   project_number: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDocumentAiWarehouseLocationArgstimeouts;
 }
 export class google_document_ai_warehouse_location extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Parameter {
+export interface AwsMemorydbParameterGroupArgsparameter {
   name: string;
   value: string;
 }
@@ -9,7 +9,7 @@ export interface AwsMemorydbParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: Parameter;
+  parameter: AwsMemorydbParameterGroupArgsparameter;
 }
 export class aws_memorydb_parameter_group extends TerraformResource {
   readonly arn!: string;

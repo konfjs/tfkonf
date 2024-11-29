@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleIapTunnelDestGroupIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleIapTunnelDestGroupIamBindingArgs {
   dest_group: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleIapTunnelDestGroupIamBindingArgscondition;
 }
 export class google_iap_tunnel_dest_group_iam_binding extends TerraformResource {
   readonly etag!: string;

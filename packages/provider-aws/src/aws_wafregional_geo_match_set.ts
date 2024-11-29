@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GeoMatchConstraint {
+export interface AwsWafregionalGeoMatchSetArgsGeoMatchConstraint {
   type: string;
   value: string;
 }
 export interface AwsWafregionalGeoMatchSetArgs {
   name: string;
-  geo_match_constraint: GeoMatchConstraint;
+  geo_match_constraint: AwsWafregionalGeoMatchSetArgsGeoMatchConstraint;
 }
 export class aws_wafregional_geo_match_set extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SuspendedState {
+export interface AwsAppautoscalingTargetArgsSuspendedState {
   dynamic_scaling_in_suspended?: boolean;
   dynamic_scaling_out_suspended?: boolean;
   scheduled_scaling_suspended?: boolean;
@@ -13,7 +13,7 @@ export interface AwsAppautoscalingTargetArgs {
   tags?: {
     [key: string]: string;
   };
-  suspended_state: SuspendedState;
+  suspended_state: AwsAppautoscalingTargetArgsSuspendedState;
 }
 export class aws_appautoscaling_target extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsSfnActivityArgsEncryptionConfiguration {
   kms_data_key_reuse_period_seconds?: number;
   kms_key_id?: string;
   type?: string;
@@ -9,7 +9,7 @@ export interface AwsSfnActivityArgs {
   tags?: {
     [key: string]: string;
   };
-  encryption_configuration: EncryptionConfiguration;
+  encryption_configuration: AwsSfnActivityArgsEncryptionConfiguration;
 }
 export class aws_sfn_activity extends TerraformResource {
   readonly creation_date!: string;

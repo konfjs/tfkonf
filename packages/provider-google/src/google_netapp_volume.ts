@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BackupConfig {
+export interface GoogleNetappVolumeArgsBackupConfig {
   backup_policies?: string[];
   backup_vault?: string;
   scheduled_backup_enabled?: boolean;
 }
-export interface Rules {
+export interface GoogleNetappVolumeArgsExportPolicyrules {
   access_type?: string;
   allowed_clients?: string;
   has_root_access?: string;
@@ -17,46 +17,46 @@ export interface Rules {
   nfsv3?: boolean;
   nfsv4?: boolean;
 }
-export interface ExportPolicy {
-  rules: Rules;
+export interface GoogleNetappVolumeArgsExportPolicy {
+  rules: GoogleNetappVolumeArgsExportPolicyrules;
 }
-export interface RestoreParameters {
+export interface GoogleNetappVolumeArgsRestoreParameters {
   source_backup?: string;
   source_snapshot?: string;
 }
-export interface DailySchedule {
+export interface GoogleNetappVolumeArgsSnapshotPolicyDailySchedule {
   hour?: number;
   minute?: number;
   snapshots_to_keep: number;
 }
-export interface HourlySchedule {
+export interface GoogleNetappVolumeArgsSnapshotPolicyHourlySchedule {
   minute?: number;
   snapshots_to_keep: number;
 }
-export interface MonthlySchedule {
+export interface GoogleNetappVolumeArgsSnapshotPolicyMonthlySchedule {
   days_of_month?: string;
   hour?: number;
   minute?: number;
   snapshots_to_keep: number;
 }
-export interface WeeklySchedule {
+export interface GoogleNetappVolumeArgsSnapshotPolicyWeeklySchedule {
   day?: string;
   hour?: number;
   minute?: number;
   snapshots_to_keep: number;
 }
-export interface SnapshotPolicy {
+export interface GoogleNetappVolumeArgsSnapshotPolicy {
   enabled?: boolean;
-  daily_schedule: DailySchedule;
-  hourly_schedule: HourlySchedule;
-  monthly_schedule: MonthlySchedule;
-  weekly_schedule: WeeklySchedule;
+  daily_schedule: GoogleNetappVolumeArgsSnapshotPolicyDailySchedule;
+  hourly_schedule: GoogleNetappVolumeArgsSnapshotPolicyHourlySchedule;
+  monthly_schedule: GoogleNetappVolumeArgsSnapshotPolicyMonthlySchedule;
+  weekly_schedule: GoogleNetappVolumeArgsSnapshotPolicyWeeklySchedule;
 }
-export interface TieringPolicy {
+export interface GoogleNetappVolumeArgsTieringPolicy {
   cooling_threshold_days?: number;
   tier_action?: string;
 }
-export interface Timeouts {
+export interface GoogleNetappVolumeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -78,12 +78,12 @@ export interface GoogleNetappVolumeArgs {
   share_name: string;
   snapshot_directory?: boolean;
   storage_pool: string;
-  backup_config: BackupConfig;
-  export_policy: ExportPolicy;
-  restore_parameters: RestoreParameters;
-  snapshot_policy: SnapshotPolicy;
-  tiering_policy: TieringPolicy;
-  timeouts: Timeouts;
+  backup_config: GoogleNetappVolumeArgsBackupConfig;
+  export_policy: GoogleNetappVolumeArgsExportPolicy;
+  restore_parameters: GoogleNetappVolumeArgsRestoreParameters;
+  snapshot_policy: GoogleNetappVolumeArgsSnapshotPolicy;
+  tiering_policy: GoogleNetappVolumeArgsTieringPolicy;
+  timeouts: GoogleNetappVolumeArgstimeouts;
 }
 export class google_netapp_volume extends TerraformResource {
   readonly active_directory!: string;

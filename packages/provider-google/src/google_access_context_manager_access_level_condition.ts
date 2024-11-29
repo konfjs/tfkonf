@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OsConstraints {
+export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicyOsConstraints {
   minimum_version?: string;
   os_type: string;
 }
-export interface DevicePolicy {
+export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy {
   allowed_device_management_levels?: string[];
   allowed_encryption_statuses?: string[];
   require_admin_approval?: boolean;
   require_corp_owned?: boolean;
   require_screen_lock?: boolean;
-  os_constraints: OsConstraints;
+  os_constraints: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicyOsConstraints;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerAccessLevelConditionArgstimeouts {
   create?: string;
   delete?: string;
 }
-export interface VpcSubnetwork {
+export interface GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSourcesVpcSubnetwork {
   network: string;
   vpc_ip_subnetworks?: string[];
 }
-export interface VpcNetworkSources {
-  vpc_subnetwork: VpcSubnetwork;
+export interface GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources {
+  vpc_subnetwork: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSourcesVpcSubnetwork;
 }
 export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   access_level: string;
@@ -29,9 +29,9 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   negate?: boolean;
   regions?: string[];
   required_access_levels?: string[];
-  device_policy: DevicePolicy;
-  timeouts: Timeouts;
-  vpc_network_sources: VpcNetworkSources;
+  device_policy: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy;
+  timeouts: GoogleAccessContextManagerAccessLevelConditionArgstimeouts;
+  vpc_network_sources: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources;
 }
 export class google_access_context_manager_access_level_condition extends TerraformResource {
   readonly id?: string;

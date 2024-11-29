@@ -1,50 +1,50 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DiskConsistencyGroupPolicy {
+export interface GoogleComputeResourcePolicyArgsDiskConsistencyGroupPolicy {
   enabled: boolean;
 }
-export interface GroupPlacementPolicy {
+export interface GoogleComputeResourcePolicyArgsGroupPlacementPolicy {
   availability_domain_count?: number;
   collocation?: string;
   vm_count?: number;
 }
-export interface VmStartSchedule {
+export interface GoogleComputeResourcePolicyArgsInstanceSchedulePolicyVmStartSchedule {
   schedule: string;
 }
-export interface VmStopSchedule {
+export interface GoogleComputeResourcePolicyArgsInstanceSchedulePolicyVmStopSchedule {
   schedule: string;
 }
-export interface InstanceSchedulePolicy {
+export interface GoogleComputeResourcePolicyArgsInstanceSchedulePolicy {
   expiration_time?: string;
   start_time?: string;
   time_zone: string;
-  vm_start_schedule: VmStartSchedule;
-  vm_stop_schedule: VmStopSchedule;
+  vm_start_schedule: GoogleComputeResourcePolicyArgsInstanceSchedulePolicyVmStartSchedule;
+  vm_stop_schedule: GoogleComputeResourcePolicyArgsInstanceSchedulePolicyVmStopSchedule;
 }
-export interface RetentionPolicy {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyRetentionPolicy {
   max_retention_days: number;
   on_source_disk_delete?: string;
 }
-export interface DailySchedule {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleDailySchedule {
   days_in_cycle: number;
   start_time: string;
 }
-export interface HourlySchedule {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleHourlySchedule {
   hours_in_cycle: number;
   start_time: string;
 }
-export interface DayOfWeeks {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklyScheduleDayOfWeeks {
   day: string;
   start_time: string;
 }
-export interface WeeklySchedule {
-  day_of_weeks: DayOfWeeks;
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklySchedule {
+  day_of_weeks: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklyScheduleDayOfWeeks;
 }
-export interface Schedule {
-  daily_schedule: DailySchedule;
-  hourly_schedule: HourlySchedule;
-  weekly_schedule: WeeklySchedule;
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyschedule {
+  daily_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleDailySchedule;
+  hourly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleHourlySchedule;
+  weekly_schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyscheduleWeeklySchedule;
 }
-export interface SnapshotProperties {
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySnapshotProperties {
   chain_name?: string;
   guest_flush?: boolean;
   labels?: {
@@ -52,12 +52,12 @@ export interface SnapshotProperties {
   };
   storage_locations?: string[];
 }
-export interface SnapshotSchedulePolicy {
-  retention_policy: RetentionPolicy;
-  schedule: Schedule;
-  snapshot_properties: SnapshotProperties;
+export interface GoogleComputeResourcePolicyArgsSnapshotSchedulePolicy {
+  retention_policy: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyRetentionPolicy;
+  schedule: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicyschedule;
+  snapshot_properties: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicySnapshotProperties;
 }
-export interface Timeouts {
+export interface GoogleComputeResourcePolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -65,11 +65,11 @@ export interface Timeouts {
 export interface GoogleComputeResourcePolicyArgs {
   description?: string;
   name: string;
-  disk_consistency_group_policy: DiskConsistencyGroupPolicy;
-  group_placement_policy: GroupPlacementPolicy;
-  instance_schedule_policy: InstanceSchedulePolicy;
-  snapshot_schedule_policy: SnapshotSchedulePolicy;
-  timeouts: Timeouts;
+  disk_consistency_group_policy: GoogleComputeResourcePolicyArgsDiskConsistencyGroupPolicy;
+  group_placement_policy: GoogleComputeResourcePolicyArgsGroupPlacementPolicy;
+  instance_schedule_policy: GoogleComputeResourcePolicyArgsInstanceSchedulePolicy;
+  snapshot_schedule_policy: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicy;
+  timeouts: GoogleComputeResourcePolicyArgstimeouts;
 }
 export class google_compute_resource_policy extends TerraformResource {
   readonly id?: string;

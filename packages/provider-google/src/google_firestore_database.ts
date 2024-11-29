@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CmekConfig {
+export interface GoogleFirestoreDatabaseArgsCmekConfig {
   kms_key_name: string;
 }
-export interface Timeouts {
+export interface GoogleFirestoreDatabaseArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface GoogleFirestoreDatabaseArgs {
   name: string;
   point_in_time_recovery_enablement?: string;
   type: string;
-  cmek_config: CmekConfig;
-  timeouts: Timeouts;
+  cmek_config: GoogleFirestoreDatabaseArgsCmekConfig;
+  timeouts: GoogleFirestoreDatabaseArgstimeouts;
 }
 export class google_firestore_database extends TerraformResource {
   readonly app_engine_integration_mode?: string;

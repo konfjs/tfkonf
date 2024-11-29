@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Metric {
+export interface AwsCloudwatchMetricAlarmArgsMetricQuerymetric {
   dimensions?: {
     [key: string]: string;
   };
@@ -9,14 +9,14 @@ export interface Metric {
   stat: string;
   unit?: string;
 }
-export interface MetricQuery {
+export interface AwsCloudwatchMetricAlarmArgsMetricQuery {
   account_id?: string;
   expression?: string;
   id: string;
   label?: string;
   period?: number;
   return_data?: boolean;
-  metric: Metric;
+  metric: AwsCloudwatchMetricAlarmArgsMetricQuerymetric;
 }
 export interface AwsCloudwatchMetricAlarmArgs {
   actions_enabled?: boolean;
@@ -43,7 +43,7 @@ export interface AwsCloudwatchMetricAlarmArgs {
   threshold_metric_id?: string;
   treat_missing_data?: string;
   unit?: string;
-  metric_query: MetricQuery;
+  metric_query: AwsCloudwatchMetricAlarmArgsMetricQuery;
 }
 export class aws_cloudwatch_metric_alarm extends TerraformResource {
   readonly arn!: string;

@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldToMatch {
+export interface AwsWafregionalXssMatchSetArgsXssMatchTupleFieldToMatch {
   data?: string;
   type: string;
 }
-export interface XssMatchTuple {
+export interface AwsWafregionalXssMatchSetArgsXssMatchTuple {
   text_transformation: string;
-  field_to_match: FieldToMatch;
+  field_to_match: AwsWafregionalXssMatchSetArgsXssMatchTupleFieldToMatch;
 }
 export interface AwsWafregionalXssMatchSetArgs {
   name: string;
-  xss_match_tuple: XssMatchTuple;
+  xss_match_tuple: AwsWafregionalXssMatchSetArgsXssMatchTuple;
 }
 export class aws_wafregional_xss_match_set extends TerraformResource {
   readonly id?: string;

@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IdentityProvider {
+export interface AwsWorklinkFleetArgsIdentityProvider {
   saml_metadata: string;
   type: string;
 }
-export interface Network {
+export interface AwsWorklinkFleetArgsnetwork {
   security_group_ids: string[];
   subnet_ids: string[];
   vpc_id: string;
@@ -14,8 +14,8 @@ export interface AwsWorklinkFleetArgs {
   display_name?: string;
   name: string;
   optimize_for_end_user_location?: boolean;
-  identity_provider: IdentityProvider;
-  network: Network;
+  identity_provider: AwsWorklinkFleetArgsIdentityProvider;
+  network: AwsWorklinkFleetArgsnetwork;
 }
 export class aws_worklink_fleet extends TerraformResource {
   readonly arn!: string;

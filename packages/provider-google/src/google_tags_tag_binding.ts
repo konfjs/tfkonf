@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleTagsTagBindingArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleTagsTagBindingArgs {
   parent: string;
   tag_value: string;
-  timeouts: Timeouts;
+  timeouts: GoogleTagsTagBindingArgstimeouts;
 }
 export class google_tags_tag_binding extends TerraformResource {
   readonly id?: string;

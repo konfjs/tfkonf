@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRouteTableArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsRouteTableArgs {
     [key: string]: string;
   };
   vpc_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsRouteTableArgstimeouts;
 }
 export class aws_route_table extends TerraformResource {
   readonly arn!: string;

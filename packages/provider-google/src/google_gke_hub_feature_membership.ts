@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Binauthz {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementbinauthz {
   enabled?: boolean;
 }
-export interface Git {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSyncgit {
   gcp_service_account_email?: string;
   https_proxy?: string;
   policy_dir?: string;
@@ -12,27 +12,27 @@ export interface Git {
   sync_rev?: string;
   sync_wait_secs?: string;
 }
-export interface Oci {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSyncoci {
   gcp_service_account_email?: string;
   policy_dir?: string;
   secret_type?: string;
   sync_repo?: string;
   sync_wait_secs?: string;
 }
-export interface ConfigSync {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSync {
   enabled?: boolean;
   metrics_gcp_service_account_email?: string;
   source_format?: string;
-  git: Git;
-  oci: Oci;
+  git: GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSyncgit;
+  oci: GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSyncoci;
 }
-export interface HierarchyController {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementHierarchyController {
   enable_hierarchical_resource_quota?: boolean;
   enable_pod_tree_labels?: boolean;
   enabled?: boolean;
 }
-export interface Monitoring {}
-export interface PolicyController {
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementPolicyControllermonitoring {}
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagementPolicyController {
   audit_interval_seconds?: string;
   enabled?: boolean;
   exemptable_namespaces?: string[];
@@ -40,56 +40,56 @@ export interface PolicyController {
   mutation_enabled?: boolean;
   referential_rules_enabled?: boolean;
   template_library_installed?: boolean;
-  monitoring: Monitoring;
+  monitoring: GoogleGkeHubFeatureMembershipArgsconfigmanagementPolicyControllermonitoring;
 }
-export interface Configmanagement {
-  binauthz: Binauthz;
-  config_sync: ConfigSync;
-  hierarchy_controller: HierarchyController;
-  policy_controller: PolicyController;
+export interface GoogleGkeHubFeatureMembershipArgsconfigmanagement {
+  binauthz: GoogleGkeHubFeatureMembershipArgsconfigmanagementbinauthz;
+  config_sync: GoogleGkeHubFeatureMembershipArgsconfigmanagementConfigSync;
+  hierarchy_controller: GoogleGkeHubFeatureMembershipArgsconfigmanagementHierarchyController;
+  policy_controller: GoogleGkeHubFeatureMembershipArgsconfigmanagementPolicyController;
 }
-export interface Mesh {
+export interface GoogleGkeHubFeatureMembershipArgsmesh {
   control_plane?: string;
   management?: string;
 }
-export interface Limits {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourceslimits {
   cpu?: string;
   memory?: string;
 }
-export interface Requests {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesrequests {
   cpu?: string;
   memory?: string;
 }
-export interface ContainerResources {
-  limits: Limits;
-  requests: Requests;
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources {
+  limits: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourceslimits;
+  requests: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesrequests;
 }
-export interface PodTolerations {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations {
   effect?: string;
   key?: string;
   operator?: string;
   value?: string;
 }
-export interface DeploymentConfigs {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigs {
   component_name: string;
   pod_affinity?: string;
   replica_count?: number;
-  container_resources: ContainerResources;
-  pod_tolerations: PodTolerations;
+  container_resources: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources;
+  pod_tolerations: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodTolerations;
 }
-export interface Monitoring {}
-export interface Bundles {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigmonitoring {}
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContentbundles {
   bundle_name: string;
   exempted_namespaces?: string[];
 }
-export interface TemplateLibrary {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary {
   installation?: string;
 }
-export interface PolicyContent {
-  bundles: Bundles;
-  template_library: TemplateLibrary;
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContent {
+  bundles: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContentbundles;
+  template_library: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary;
 }
-export interface PolicyControllerHubConfig {
+export interface GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfig {
   audit_interval_seconds?: number;
   constraint_violation_limit?: number;
   exemptable_namespaces?: string[];
@@ -97,14 +97,14 @@ export interface PolicyControllerHubConfig {
   log_denies_enabled?: boolean;
   mutation_enabled?: boolean;
   referential_rules_enabled?: boolean;
-  deployment_configs: DeploymentConfigs;
-  monitoring: Monitoring;
-  policy_content: PolicyContent;
+  deployment_configs: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigDeploymentConfigs;
+  monitoring: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigmonitoring;
+  policy_content: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfigPolicyContent;
 }
-export interface Policycontroller {
-  policy_controller_hub_config: PolicyControllerHubConfig;
+export interface GoogleGkeHubFeatureMembershipArgspolicycontroller {
+  policy_controller_hub_config: GoogleGkeHubFeatureMembershipArgspolicycontrollerPolicyControllerHubConfig;
 }
-export interface Timeouts {
+export interface GoogleGkeHubFeatureMembershipArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -114,10 +114,10 @@ export interface GoogleGkeHubFeatureMembershipArgs {
   location: string;
   membership: string;
   membership_location?: string;
-  configmanagement: Configmanagement;
-  mesh: Mesh;
-  policycontroller: Policycontroller;
-  timeouts: Timeouts;
+  configmanagement: GoogleGkeHubFeatureMembershipArgsconfigmanagement;
+  mesh: GoogleGkeHubFeatureMembershipArgsmesh;
+  policycontroller: GoogleGkeHubFeatureMembershipArgspolicycontroller;
+  timeouts: GoogleGkeHubFeatureMembershipArgstimeouts;
 }
 export class google_gke_hub_feature_membership extends TerraformResource {
   readonly id?: string;

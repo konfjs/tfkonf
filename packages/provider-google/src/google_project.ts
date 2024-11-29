@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleProjectArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -19,7 +19,7 @@ export interface GoogleProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: GoogleProjectArgstimeouts;
 }
 export class google_project extends TerraformResource {
   readonly effective_labels!: {

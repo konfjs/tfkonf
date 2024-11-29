@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsKinesisVideoStreamArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsKinesisVideoStreamArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsKinesisVideoStreamArgstimeouts;
 }
 export class aws_kinesis_video_stream extends TerraformResource {
   readonly arn!: string;

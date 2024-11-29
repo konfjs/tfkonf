@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Az {
+export interface AwsResiliencehubResiliencyPolicyArgspolicyaz {
   rpo: string;
   rto: string;
 }
-export interface Hardware {
+export interface AwsResiliencehubResiliencyPolicyArgspolicyhardware {
   rpo: string;
   rto: string;
 }
-export interface Region {
+export interface AwsResiliencehubResiliencyPolicyArgspolicyregion {
   rpo?: string;
   rto?: string;
 }
-export interface Software {
+export interface AwsResiliencehubResiliencyPolicyArgspolicysoftware {
   rpo: string;
   rto: string;
 }
-export interface Policy {
-  az: Az;
-  hardware: Hardware;
-  region: Region;
-  software: Software;
+export interface AwsResiliencehubResiliencyPolicyArgspolicy {
+  az: AwsResiliencehubResiliencyPolicyArgspolicyaz;
+  hardware: AwsResiliencehubResiliencyPolicyArgspolicyhardware;
+  region: AwsResiliencehubResiliencyPolicyArgspolicyregion;
+  software: AwsResiliencehubResiliencyPolicyArgspolicysoftware;
 }
-export interface Timeouts {
+export interface AwsResiliencehubResiliencyPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,8 +33,8 @@ export interface AwsResiliencehubResiliencyPolicyArgs {
     [key: string]: string;
   };
   tier: string;
-  policy: Policy;
-  timeouts: Timeouts;
+  policy: AwsResiliencehubResiliencyPolicyArgspolicy;
+  timeouts: AwsResiliencehubResiliencyPolicyArgstimeouts;
 }
 export class aws_resiliencehub_resiliency_policy extends TerraformResource {
   readonly arn!: string;

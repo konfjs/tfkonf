@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ComputeCapacity {
+export interface AwsAppstreamFleetArgsComputeCapacity {
   desired_instances?: number;
   desired_sessions?: number;
 }
-export interface DomainJoinInfo {}
-export interface VpcConfig {}
+export interface AwsAppstreamFleetArgsDomainJoinInfo {}
+export interface AwsAppstreamFleetArgsVpcConfig {}
 export interface AwsAppstreamFleetArgs {
   idle_disconnect_timeout_in_seconds?: number;
   instance_type: string;
@@ -13,9 +13,9 @@ export interface AwsAppstreamFleetArgs {
   tags?: {
     [key: string]: string;
   };
-  compute_capacity: ComputeCapacity;
-  domain_join_info: DomainJoinInfo;
-  vpc_config: VpcConfig;
+  compute_capacity: AwsAppstreamFleetArgsComputeCapacity;
+  domain_join_info: AwsAppstreamFleetArgsDomainJoinInfo;
+  vpc_config: AwsAppstreamFleetArgsVpcConfig;
 }
 export class aws_appstream_fleet extends TerraformResource {
   readonly arn!: string;

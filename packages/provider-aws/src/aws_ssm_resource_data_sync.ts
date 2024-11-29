@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Destination {
+export interface AwsSsmResourceDataSyncArgsS3Destination {
   bucket_name: string;
   kms_key_arn?: string;
   prefix?: string;
@@ -8,7 +8,7 @@ export interface S3Destination {
 }
 export interface AwsSsmResourceDataSyncArgs {
   name: string;
-  s3_destination: S3Destination;
+  s3_destination: AwsSsmResourceDataSyncArgsS3Destination;
 }
 export class aws_ssm_resource_data_sync extends TerraformResource {
   readonly id?: string;

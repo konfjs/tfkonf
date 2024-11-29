@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ContentConfig {
+export interface AwsElastictranscoderPipelineArgsContentConfig {
   storage_class?: string;
 }
-export interface ContentConfigPermissions {
+export interface AwsElastictranscoderPipelineArgsContentConfigPermissions {
   access?: string[];
   grantee?: string;
   grantee_type?: string;
 }
-export interface Notifications {
+export interface AwsElastictranscoderPipelineArgsnotifications {
   completed?: string;
   error?: string;
   progressing?: string;
   warning?: string;
 }
-export interface ThumbnailConfig {
+export interface AwsElastictranscoderPipelineArgsThumbnailConfig {
   storage_class?: string;
 }
-export interface ThumbnailConfigPermissions {
+export interface AwsElastictranscoderPipelineArgsThumbnailConfigPermissions {
   access?: string[];
   grantee?: string;
   grantee_type?: string;
@@ -25,11 +25,11 @@ export interface AwsElastictranscoderPipelineArgs {
   aws_kms_key_arn?: string;
   input_bucket: string;
   role: string;
-  content_config: ContentConfig;
-  content_config_permissions: ContentConfigPermissions;
-  notifications: Notifications;
-  thumbnail_config: ThumbnailConfig;
-  thumbnail_config_permissions: ThumbnailConfigPermissions;
+  content_config: AwsElastictranscoderPipelineArgsContentConfig;
+  content_config_permissions: AwsElastictranscoderPipelineArgsContentConfigPermissions;
+  notifications: AwsElastictranscoderPipelineArgsnotifications;
+  thumbnail_config: AwsElastictranscoderPipelineArgsThumbnailConfig;
+  thumbnail_config_permissions: AwsElastictranscoderPipelineArgsThumbnailConfigPermissions;
 }
 export class aws_elastictranscoder_pipeline extends TerraformResource {
   readonly arn!: string;

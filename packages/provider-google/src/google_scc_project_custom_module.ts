@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ValueExpression {
+export interface GoogleSccProjectCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Properties {
+export interface GoogleSccProjectCustomModuleArgsCustomConfigCustomOutputproperties {
   name?: string;
-  value_expression: ValueExpression;
+  value_expression: GoogleSccProjectCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression;
 }
-export interface CustomOutput {
-  properties: Properties;
+export interface GoogleSccProjectCustomModuleArgsCustomConfigCustomOutput {
+  properties: GoogleSccProjectCustomModuleArgsCustomConfigCustomOutputproperties;
 }
-export interface Predicate {
+export interface GoogleSccProjectCustomModuleArgsCustomConfigpredicate {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface ResourceSelector {
+export interface GoogleSccProjectCustomModuleArgsCustomConfigResourceSelector {
   resource_types: string[];
 }
-export interface CustomConfig {
+export interface GoogleSccProjectCustomModuleArgsCustomConfig {
   description?: string;
   recommendation: string;
   severity: string;
-  custom_output: CustomOutput;
-  predicate: Predicate;
-  resource_selector: ResourceSelector;
+  custom_output: GoogleSccProjectCustomModuleArgsCustomConfigCustomOutput;
+  predicate: GoogleSccProjectCustomModuleArgsCustomConfigpredicate;
+  resource_selector: GoogleSccProjectCustomModuleArgsCustomConfigResourceSelector;
 }
-export interface Timeouts {
+export interface GoogleSccProjectCustomModuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,8 +37,8 @@ export interface Timeouts {
 export interface GoogleSccProjectCustomModuleArgs {
   display_name: string;
   enablement_state: string;
-  custom_config: CustomConfig;
-  timeouts: Timeouts;
+  custom_config: GoogleSccProjectCustomModuleArgsCustomConfig;
+  timeouts: GoogleSccProjectCustomModuleArgstimeouts;
 }
 export class google_scc_project_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

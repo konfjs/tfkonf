@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataCellsFilter {
+export interface AwsLakeformationPermissionsArgsDataCellsFilter {
   database_name: string;
   name: string;
   table_catalog_id: string;
   table_name: string;
 }
-export interface DataLocation {
+export interface AwsLakeformationPermissionsArgsDataLocation {
   arn: string;
 }
-export interface Database {
+export interface AwsLakeformationPermissionsArgsdatabase {
   name: string;
 }
-export interface LfTag {
+export interface AwsLakeformationPermissionsArgsLfTag {
   key: string;
   values: string[];
 }
-export interface Expression {
+export interface AwsLakeformationPermissionsArgsLfTagPolicyexpression {
   key: string;
   values: string[];
 }
-export interface LfTagPolicy {
+export interface AwsLakeformationPermissionsArgsLfTagPolicy {
   resource_type: string;
-  expression: Expression;
+  expression: AwsLakeformationPermissionsArgsLfTagPolicyexpression;
 }
-export interface Table {
+export interface AwsLakeformationPermissionsArgstable {
   database_name: string;
   wildcard?: boolean;
 }
-export interface TableWithColumns {
+export interface AwsLakeformationPermissionsArgsTableWithColumns {
   column_names?: string[];
   database_name: string;
   excluded_column_names?: string[];
@@ -39,13 +39,13 @@ export interface AwsLakeformationPermissionsArgs {
   catalog_resource?: boolean;
   permissions: string[];
   principal: string;
-  data_cells_filter: DataCellsFilter;
-  data_location: DataLocation;
-  database: Database;
-  lf_tag: LfTag;
-  lf_tag_policy: LfTagPolicy;
-  table: Table;
-  table_with_columns: TableWithColumns;
+  data_cells_filter: AwsLakeformationPermissionsArgsDataCellsFilter;
+  data_location: AwsLakeformationPermissionsArgsDataLocation;
+  database: AwsLakeformationPermissionsArgsdatabase;
+  lf_tag: AwsLakeformationPermissionsArgsLfTag;
+  lf_tag_policy: AwsLakeformationPermissionsArgsLfTagPolicy;
+  table: AwsLakeformationPermissionsArgstable;
+  table_with_columns: AwsLakeformationPermissionsArgsTableWithColumns;
 }
 export class aws_lakeformation_permissions extends TerraformResource {
   readonly id?: string;

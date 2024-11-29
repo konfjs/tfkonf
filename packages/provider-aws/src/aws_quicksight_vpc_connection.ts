@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsQuicksightVpcConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsQuicksightVpcConnectionArgs {
     [key: string]: string;
   };
   vpc_connection_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsQuicksightVpcConnectionArgstimeouts;
 }
 export class aws_quicksight_vpc_connection extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoBranchCreationConfig {
+export interface AwsAmplifyAppArgsAutoBranchCreationConfig {
   basic_auth_credentials?: string;
   build_spec?: string;
   enable_auto_build?: boolean;
@@ -13,10 +13,10 @@ export interface AutoBranchCreationConfig {
   pull_request_environment_name?: string;
   stage?: string;
 }
-export interface CacheConfig {
+export interface AwsAmplifyAppArgsCacheConfig {
   type: string;
 }
-export interface CustomRule {
+export interface AwsAmplifyAppArgsCustomRule {
   condition?: string;
   source: string;
   status?: string;
@@ -42,9 +42,9 @@ export interface AwsAmplifyAppArgs {
   tags?: {
     [key: string]: string;
   };
-  auto_branch_creation_config: AutoBranchCreationConfig;
-  cache_config: CacheConfig;
-  custom_rule: CustomRule;
+  auto_branch_creation_config: AwsAmplifyAppArgsAutoBranchCreationConfig;
+  cache_config: AwsAmplifyAppArgsCacheConfig;
+  custom_rule: AwsAmplifyAppArgsCustomRule;
 }
 export class aws_amplify_app extends TerraformResource {
   readonly arn!: string;

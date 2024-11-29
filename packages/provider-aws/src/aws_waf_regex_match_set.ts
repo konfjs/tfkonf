@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldToMatch {
+export interface AwsWafRegexMatchSetArgsRegexMatchTupleFieldToMatch {
   data?: string;
   type: string;
 }
-export interface RegexMatchTuple {
+export interface AwsWafRegexMatchSetArgsRegexMatchTuple {
   regex_pattern_set_id: string;
   text_transformation: string;
-  field_to_match: FieldToMatch;
+  field_to_match: AwsWafRegexMatchSetArgsRegexMatchTupleFieldToMatch;
 }
 export interface AwsWafRegexMatchSetArgs {
   name: string;
-  regex_match_tuple: RegexMatchTuple;
+  regex_match_tuple: AwsWafRegexMatchSetArgsRegexMatchTuple;
 }
 export class aws_waf_regex_match_set extends TerraformResource {
   readonly arn!: string;

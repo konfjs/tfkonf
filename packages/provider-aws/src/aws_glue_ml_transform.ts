@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InputRecordTables {
+export interface AwsGlueMlTransformArgsInputRecordTables {
   catalog_id?: string;
   connection_name?: string;
   database_name: string;
   table_name: string;
 }
-export interface FindMatchesParameters {
+export interface AwsGlueMlTransformArgsparametersFindMatchesParameters {
   accuracy_cost_trade_off?: number;
   enforce_provided_labels?: boolean;
   precision_recall_trade_off?: number;
   primary_key_column_name?: string;
 }
-export interface Parameters {
+export interface AwsGlueMlTransformArgsparameters {
   transform_type: string;
-  find_matches_parameters: FindMatchesParameters;
+  find_matches_parameters: AwsGlueMlTransformArgsparametersFindMatchesParameters;
 }
 export interface AwsGlueMlTransformArgs {
   description?: string;
@@ -26,8 +26,8 @@ export interface AwsGlueMlTransformArgs {
   };
   timeout?: number;
   worker_type?: string;
-  input_record_tables: InputRecordTables;
-  parameters: Parameters;
+  input_record_tables: AwsGlueMlTransformArgsInputRecordTables;
+  parameters: AwsGlueMlTransformArgsparameters;
 }
 export class aws_glue_ml_transform extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InlinePolicy {
+export interface AwsIamRoleArgsInlinePolicy {
   name?: string;
   policy?: string;
 }
@@ -13,7 +13,7 @@ export interface AwsIamRoleArgs {
   tags?: {
     [key: string]: string;
   };
-  inline_policy: InlinePolicy;
+  inline_policy: AwsIamRoleArgsInlinePolicy;
 }
 export class aws_iam_role extends TerraformResource {
   readonly arn!: string;

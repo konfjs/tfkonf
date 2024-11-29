@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2ClientVpnAuthorizationRuleArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsEc2ClientVpnAuthorizationRuleArgs {
   client_vpn_endpoint_id: string;
   description?: string;
   target_network_cidr: string;
-  timeouts: Timeouts;
+  timeouts: AwsEc2ClientVpnAuthorizationRuleArgstimeouts;
 }
 export class aws_ec2_client_vpn_authorization_rule extends TerraformResource {
   readonly id?: string;

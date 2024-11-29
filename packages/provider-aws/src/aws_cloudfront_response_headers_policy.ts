@@ -1,86 +1,86 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessControlAllowHeaders {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowHeaders {
   items?: string[];
 }
-export interface AccessControlAllowMethods {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowMethods {
   items?: string[];
 }
-export interface AccessControlAllowOrigins {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowOrigins {
   items?: string[];
 }
-export interface AccessControlExposeHeaders {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlExposeHeaders {
   items?: string[];
 }
-export interface CorsConfig {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfig {
   access_control_allow_credentials: boolean;
   access_control_max_age_sec?: number;
   origin_override: boolean;
-  access_control_allow_headers: AccessControlAllowHeaders;
-  access_control_allow_methods: AccessControlAllowMethods;
-  access_control_allow_origins: AccessControlAllowOrigins;
-  access_control_expose_headers: AccessControlExposeHeaders;
+  access_control_allow_headers: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowHeaders;
+  access_control_allow_methods: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowMethods;
+  access_control_allow_origins: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowOrigins;
+  access_control_expose_headers: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlExposeHeaders;
 }
-export interface Items {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigitems {
   header: string;
   override: boolean;
   value: string;
 }
-export interface CustomHeadersConfig {
-  items: Items;
+export interface AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfig {
+  items: AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigitems;
 }
-export interface Items {
+export interface AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigitems {
   header: string;
 }
-export interface RemoveHeadersConfig {
-  items: Items;
+export interface AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfig {
+  items: AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigitems;
 }
-export interface ContentSecurityPolicy {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigContentSecurityPolicy {
   content_security_policy: string;
   override: boolean;
 }
-export interface ContentTypeOptions {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigContentTypeOptions {
   override: boolean;
 }
-export interface FrameOptions {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigFrameOptions {
   frame_option: string;
   override: boolean;
 }
-export interface ReferrerPolicy {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigReferrerPolicy {
   override: boolean;
   referrer_policy: string;
 }
-export interface StrictTransportSecurity {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigStrictTransportSecurity {
   access_control_max_age_sec: number;
   include_subdomains?: boolean;
   override: boolean;
   preload?: boolean;
 }
-export interface XssProtection {
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigXssProtection {
   mode_block?: boolean;
   override: boolean;
   protection: boolean;
   report_uri?: string;
 }
-export interface SecurityHeadersConfig {
-  content_security_policy: ContentSecurityPolicy;
-  content_type_options: ContentTypeOptions;
-  frame_options: FrameOptions;
-  referrer_policy: ReferrerPolicy;
-  strict_transport_security: StrictTransportSecurity;
-  xss_protection: XssProtection;
+export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfig {
+  content_security_policy: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigContentSecurityPolicy;
+  content_type_options: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigContentTypeOptions;
+  frame_options: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigFrameOptions;
+  referrer_policy: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigReferrerPolicy;
+  strict_transport_security: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigStrictTransportSecurity;
+  xss_protection: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigXssProtection;
 }
-export interface ServerTimingHeadersConfig {
+export interface AwsCloudfrontResponseHeadersPolicyArgsServerTimingHeadersConfig {
   enabled: boolean;
   sampling_rate: number;
 }
 export interface AwsCloudfrontResponseHeadersPolicyArgs {
   comment?: string;
   name: string;
-  cors_config: CorsConfig;
-  custom_headers_config: CustomHeadersConfig;
-  remove_headers_config: RemoveHeadersConfig;
-  security_headers_config: SecurityHeadersConfig;
-  server_timing_headers_config: ServerTimingHeadersConfig;
+  cors_config: AwsCloudfrontResponseHeadersPolicyArgsCorsConfig;
+  custom_headers_config: AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfig;
+  remove_headers_config: AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfig;
+  security_headers_config: AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfig;
+  server_timing_headers_config: AwsCloudfrontResponseHeadersPolicyArgsServerTimingHeadersConfig;
 }
 export class aws_cloudfront_response_headers_policy extends TerraformResource {
   readonly etag?: string;

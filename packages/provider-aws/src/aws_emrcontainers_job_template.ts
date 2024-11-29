@@ -1,56 +1,56 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Configurations {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationconfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
   };
 }
-export interface ApplicationConfiguration {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfiguration {
   classification: string;
   properties?: {
     [key: string]: string;
   };
-  configurations: Configurations;
+  configurations: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfigurationconfigurations;
 }
-export interface CloudWatchMonitoringConfiguration {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfigurationCloudWatchMonitoringConfiguration {
   log_group_name: string;
   log_stream_name_prefix?: string;
 }
-export interface S3MonitoringConfiguration {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfigurationS3MonitoringConfiguration {
   log_uri: string;
 }
-export interface MonitoringConfiguration {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfiguration {
   persistent_app_ui?: string;
-  cloud_watch_monitoring_configuration: CloudWatchMonitoringConfiguration;
-  s3_monitoring_configuration: S3MonitoringConfiguration;
+  cloud_watch_monitoring_configuration: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfigurationCloudWatchMonitoringConfiguration;
+  s3_monitoring_configuration: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfigurationS3MonitoringConfiguration;
 }
-export interface ConfigurationOverrides {
-  application_configuration: ApplicationConfiguration;
-  monitoring_configuration: MonitoringConfiguration;
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverrides {
+  application_configuration: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesApplicationConfiguration;
+  monitoring_configuration: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverridesMonitoringConfiguration;
 }
-export interface SparkSqlJobDriver {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriverSparkSqlJobDriver {
   entry_point?: string;
   spark_sql_parameters?: string;
 }
-export interface SparkSubmitJobDriver {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriverSparkSubmitJobDriver {
   entry_point: string;
   entry_point_arguments?: string[];
   spark_submit_parameters?: string;
 }
-export interface JobDriver {
-  spark_sql_job_driver: SparkSqlJobDriver;
-  spark_submit_job_driver: SparkSubmitJobDriver;
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriver {
+  spark_sql_job_driver: AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriverSparkSqlJobDriver;
+  spark_submit_job_driver: AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriverSparkSubmitJobDriver;
 }
-export interface JobTemplateData {
+export interface AwsEmrcontainersJobTemplateArgsJobTemplateData {
   execution_role_arn: string;
   job_tags?: {
     [key: string]: string;
   };
   release_label: string;
-  configuration_overrides: ConfigurationOverrides;
-  job_driver: JobDriver;
+  configuration_overrides: AwsEmrcontainersJobTemplateArgsJobTemplateDataConfigurationOverrides;
+  job_driver: AwsEmrcontainersJobTemplateArgsJobTemplateDataJobDriver;
 }
-export interface Timeouts {
+export interface AwsEmrcontainersJobTemplateArgstimeouts {
   delete?: string;
 }
 export interface AwsEmrcontainersJobTemplateArgs {
@@ -59,8 +59,8 @@ export interface AwsEmrcontainersJobTemplateArgs {
   tags?: {
     [key: string]: string;
   };
-  job_template_data: JobTemplateData;
-  timeouts: Timeouts;
+  job_template_data: AwsEmrcontainersJobTemplateArgsJobTemplateData;
+  timeouts: AwsEmrcontainersJobTemplateArgstimeouts;
 }
 export class aws_emrcontainers_job_template extends TerraformResource {
   readonly arn!: string;

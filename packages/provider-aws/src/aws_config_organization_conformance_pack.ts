@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InputParameter {
+export interface AwsConfigOrganizationConformancePackArgsInputParameter {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Timeouts {
+export interface AwsConfigOrganizationConformancePackArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface AwsConfigOrganizationConformancePackArgs {
   name: string;
   template_body?: string;
   template_s3_uri?: string;
-  input_parameter: InputParameter;
-  timeouts: Timeouts;
+  input_parameter: AwsConfigOrganizationConformancePackArgsInputParameter;
+  timeouts: AwsConfigOrganizationConformancePackArgstimeouts;
 }
 export class aws_config_organization_conformance_pack extends TerraformResource {
   readonly arn!: string;

@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EngineVersion {
+export interface AwsAthenaWorkgroupArgsconfigurationEngineVersion {
   selected_engine_version?: string;
 }
-export interface AclConfiguration {
+export interface AwsAthenaWorkgroupArgsconfigurationResultConfigurationAclConfiguration {
   s3_acl_option: string;
 }
-export interface EncryptionConfiguration {
+export interface AwsAthenaWorkgroupArgsconfigurationResultConfigurationEncryptionConfiguration {
   encryption_option?: string;
   kms_key_arn?: string;
 }
-export interface ResultConfiguration {
+export interface AwsAthenaWorkgroupArgsconfigurationResultConfiguration {
   expected_bucket_owner?: string;
   output_location?: string;
-  acl_configuration: AclConfiguration;
-  encryption_configuration: EncryptionConfiguration;
+  acl_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfigurationAclConfiguration;
+  encryption_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfigurationEncryptionConfiguration;
 }
-export interface Configuration {
+export interface AwsAthenaWorkgroupArgsconfiguration {
   bytes_scanned_cutoff_per_query?: number;
   enforce_workgroup_configuration?: boolean;
   execution_role?: string;
   publish_cloudwatch_metrics_enabled?: boolean;
   requester_pays_enabled?: boolean;
-  engine_version: EngineVersion;
-  result_configuration: ResultConfiguration;
+  engine_version: AwsAthenaWorkgroupArgsconfigurationEngineVersion;
+  result_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfiguration;
 }
 export interface AwsAthenaWorkgroupArgs {
   description?: string;
@@ -32,7 +32,7 @@ export interface AwsAthenaWorkgroupArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: Configuration;
+  configuration: AwsAthenaWorkgroupArgsconfiguration;
 }
 export class aws_athena_workgroup extends TerraformResource {
   readonly arn!: string;

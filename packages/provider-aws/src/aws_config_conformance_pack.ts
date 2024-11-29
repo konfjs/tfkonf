@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InputParameter {
+export interface AwsConfigConformancePackArgsInputParameter {
   parameter_name: string;
   parameter_value: string;
 }
@@ -9,7 +9,7 @@ export interface AwsConfigConformancePackArgs {
   name: string;
   template_body?: string;
   template_s3_uri?: string;
-  input_parameter: InputParameter;
+  input_parameter: AwsConfigConformancePackArgsInputParameter;
 }
 export class aws_config_conformance_pack extends TerraformResource {
   readonly arn!: string;

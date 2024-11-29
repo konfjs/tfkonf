@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CognitoConfig {
+export interface AwsSagemakerWorkforceArgsCognitoConfig {
   client_id: string;
   user_pool: string;
 }
-export interface OidcConfig {
+export interface AwsSagemakerWorkforceArgsOidcConfig {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -17,20 +17,20 @@ export interface OidcConfig {
   token_endpoint: string;
   user_info_endpoint: string;
 }
-export interface SourceIpConfig {
+export interface AwsSagemakerWorkforceArgsSourceIpConfig {
   cidrs: string[];
 }
-export interface WorkforceVpcConfig {
+export interface AwsSagemakerWorkforceArgsWorkforceVpcConfig {
   security_group_ids?: string[];
   subnets?: string[];
   vpc_id?: string;
 }
 export interface AwsSagemakerWorkforceArgs {
   workforce_name: string;
-  cognito_config: CognitoConfig;
-  oidc_config: OidcConfig;
-  source_ip_config: SourceIpConfig;
-  workforce_vpc_config: WorkforceVpcConfig;
+  cognito_config: AwsSagemakerWorkforceArgsCognitoConfig;
+  oidc_config: AwsSagemakerWorkforceArgsOidcConfig;
+  source_ip_config: AwsSagemakerWorkforceArgsSourceIpConfig;
+  workforce_vpc_config: AwsSagemakerWorkforceArgsWorkforceVpcConfig;
 }
 export class aws_sagemaker_workforce extends TerraformResource {
   readonly arn!: string;

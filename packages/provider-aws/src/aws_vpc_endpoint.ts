@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DnsOptions {
+export interface AwsVpcEndpointArgsDnsOptions {
   private_dns_only_for_inbound_resolver_endpoint?: boolean;
 }
-export interface SubnetConfiguration {
+export interface AwsVpcEndpointArgsSubnetConfiguration {
   ipv4?: string;
   ipv6?: string;
   subnet_id?: string;
 }
-export interface Timeouts {
+export interface AwsVpcEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,9 +20,9 @@ export interface AwsVpcEndpointArgs {
   };
   vpc_endpoint_type?: string;
   vpc_id: string;
-  dns_options: DnsOptions;
-  subnet_configuration: SubnetConfiguration;
-  timeouts: Timeouts;
+  dns_options: AwsVpcEndpointArgsDnsOptions;
+  subnet_configuration: AwsVpcEndpointArgsSubnetConfiguration;
+  timeouts: AwsVpcEndpointArgstimeouts;
 }
 export class aws_vpc_endpoint extends TerraformResource {
   readonly arn!: string;

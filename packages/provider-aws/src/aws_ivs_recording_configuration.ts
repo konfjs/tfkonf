@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3 {
+export interface AwsIvsRecordingConfigurationArgsDestinationConfigurations3 {
   bucket_name: string;
 }
-export interface DestinationConfiguration {
-  s3: S3;
+export interface AwsIvsRecordingConfigurationArgsDestinationConfiguration {
+  s3: AwsIvsRecordingConfigurationArgsDestinationConfigurations3;
 }
-export interface ThumbnailConfiguration {}
-export interface Timeouts {
+export interface AwsIvsRecordingConfigurationArgsThumbnailConfiguration {}
+export interface AwsIvsRecordingConfigurationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -14,9 +14,9 @@ export interface AwsIvsRecordingConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  destination_configuration: DestinationConfiguration;
-  thumbnail_configuration: ThumbnailConfiguration;
-  timeouts: Timeouts;
+  destination_configuration: AwsIvsRecordingConfigurationArgsDestinationConfiguration;
+  thumbnail_configuration: AwsIvsRecordingConfigurationArgsThumbnailConfiguration;
+  timeouts: AwsIvsRecordingConfigurationArgstimeouts;
 }
 export class aws_ivs_recording_configuration extends TerraformResource {
   readonly arn!: string;

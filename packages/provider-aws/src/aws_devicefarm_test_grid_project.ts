@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VpcConfig {
+export interface AwsDevicefarmTestGridProjectArgsVpcConfig {
   security_group_ids: string[];
   subnet_ids: string[];
   vpc_id: string;
@@ -10,7 +10,7 @@ export interface AwsDevicefarmTestGridProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  vpc_config: VpcConfig;
+  vpc_config: AwsDevicefarmTestGridProjectArgsVpcConfig;
 }
 export class aws_devicefarm_test_grid_project extends TerraformResource {
   readonly arn!: string;

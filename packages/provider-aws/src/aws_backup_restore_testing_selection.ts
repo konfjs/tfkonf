@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StringEquals {
+export interface AwsBackupRestoreTestingSelectionArgsProtectedResourceConditionsStringEquals {
   key: string;
   value: string;
 }
-export interface StringNotEquals {
+export interface AwsBackupRestoreTestingSelectionArgsProtectedResourceConditionsStringNotEquals {
   key: string;
   value: string;
 }
-export interface ProtectedResourceConditions {
-  string_equals: StringEquals;
-  string_not_equals: StringNotEquals;
+export interface AwsBackupRestoreTestingSelectionArgsProtectedResourceConditions {
+  string_equals: AwsBackupRestoreTestingSelectionArgsProtectedResourceConditionsStringEquals;
+  string_not_equals: AwsBackupRestoreTestingSelectionArgsProtectedResourceConditionsStringNotEquals;
 }
 export interface AwsBackupRestoreTestingSelectionArgs {
   iam_role_arn: string;
   name: string;
   protected_resource_type: string;
   restore_testing_plan_name: string;
-  protected_resource_conditions: ProtectedResourceConditions;
+  protected_resource_conditions: AwsBackupRestoreTestingSelectionArgsProtectedResourceConditions;
 }
 export class aws_backup_restore_testing_selection extends TerraformResource {
   readonly protected_resource_arns?: string[];

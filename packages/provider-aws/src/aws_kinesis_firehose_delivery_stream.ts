@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -30,14 +30,14 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface VpcConfig {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationVpcConfig {
   role_arn: string;
   security_group_ids: string[];
   subnet_ids: string[];
 }
-export interface ElasticsearchConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfiguration {
   buffering_interval?: number;
   buffering_size?: number;
   cluster_endpoint?: string;
@@ -48,34 +48,34 @@ export interface ElasticsearchConfiguration {
   role_arn: string;
   s3_backup_mode?: string;
   type_name?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
-  vpc_config: VpcConfig;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationS3Configuration;
+  vpc_config: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationVpcConfig;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface HiveJsonSerDe {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializerHiveJsonSerDe {
   timestamp_formats?: string[];
 }
-export interface OpenXJsonSerDe {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializerOpenXJsonSerDe {
   case_insensitive?: boolean;
   column_to_json_key_mappings?: {
     [key: string]: string;
   };
   convert_dots_in_json_keys_to_underscores?: boolean;
 }
-export interface Deserializer {
-  hive_json_ser_de: HiveJsonSerDe;
-  open_x_json_ser_de: OpenXJsonSerDe;
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializer {
+  hive_json_ser_de: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializerHiveJsonSerDe;
+  open_x_json_ser_de: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializerOpenXJsonSerDe;
 }
-export interface InputFormatConfiguration {
-  deserializer: Deserializer;
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration {
+  deserializer: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationdeserializer;
 }
-export interface OrcSerDe {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializerOrcSerDe {
   block_size_bytes?: number;
   bloom_filter_columns?: string[];
   bloom_filter_false_positive_probability?: number;
@@ -87,7 +87,7 @@ export interface OrcSerDe {
   row_index_stride?: number;
   stripe_size_bytes?: number;
 }
-export interface ParquetSerDe {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializerParquetSerDe {
   block_size_bytes?: number;
   compression?: string;
   enable_dictionary_compression?: boolean;
@@ -95,47 +95,47 @@ export interface ParquetSerDe {
   page_size_bytes?: number;
   writer_version?: string;
 }
-export interface Serializer {
-  orc_ser_de: OrcSerDe;
-  parquet_ser_de: ParquetSerDe;
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializer {
+  orc_ser_de: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializerOrcSerDe;
+  parquet_ser_de: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializerParquetSerDe;
 }
-export interface OutputFormatConfiguration {
-  serializer: Serializer;
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration {
+  serializer: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationserializer;
 }
-export interface SchemaConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration {
   database_name: string;
   role_arn: string;
   table_name: string;
   version_id?: string;
 }
-export interface DataFormatConversionConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfiguration {
   enabled?: boolean;
-  input_format_configuration: InputFormatConfiguration;
-  output_format_configuration: OutputFormatConfiguration;
-  schema_configuration: SchemaConfiguration;
+  input_format_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfiguration;
+  output_format_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfiguration;
+  schema_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration;
 }
-export interface DynamicPartitioningConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDynamicPartitioningConfiguration {
   enabled?: boolean;
   retry_duration?: number;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3BackupConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationS3BackupConfiguration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -144,9 +144,9 @@ export interface S3BackupConfiguration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptions;
 }
-export interface ExtendedS3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsExtendedS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -158,43 +158,43 @@ export interface ExtendedS3Configuration {
   prefix?: string;
   role_arn: string;
   s3_backup_mode?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  data_format_conversion_configuration: DataFormatConversionConfiguration;
-  dynamic_partitioning_configuration: DynamicPartitioningConfiguration;
-  processing_configuration: ProcessingConfiguration;
-  s3_backup_configuration: S3BackupConfiguration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationCloudwatchLoggingOptions;
+  data_format_conversion_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDataFormatConversionConfiguration;
+  dynamic_partitioning_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationDynamicPartitioningConfiguration;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationProcessingConfiguration;
+  s3_backup_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3ConfigurationS3BackupConfiguration;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfigurationprocessors;
 }
-export interface CommonAttributes {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationRequestConfigurationCommonAttributes {
   name: string;
   value: string;
 }
-export interface RequestConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationRequestConfiguration {
   content_encoding?: string;
-  common_attributes: CommonAttributes;
+  common_attributes: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationRequestConfigurationCommonAttributes;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -203,13 +203,13 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface SecretsManagerConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationSecretsManagerConfiguration {
   role_arn?: string;
   secret_arn?: string;
 }
-export interface HttpEndpointConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfiguration {
   access_key?: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -218,41 +218,41 @@ export interface HttpEndpointConfiguration {
   role_arn?: string;
   s3_backup_mode?: string;
   url: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  request_configuration: RequestConfiguration;
-  s3_configuration: S3Configuration;
-  secrets_manager_configuration: SecretsManagerConfiguration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationProcessingConfiguration;
+  request_configuration: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationRequestConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationS3Configuration;
+  secrets_manager_configuration: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfigurationSecretsManagerConfiguration;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface DestinationTableConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationDestinationTableConfiguration {
   database_name: string;
   s3_error_output_prefix?: string;
   table_name: string;
   unique_keys?: string[];
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -261,59 +261,59 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface IcebergConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsIcebergConfiguration {
   buffering_interval?: number;
   buffering_size?: number;
   catalog_arn: string;
   retry_duration?: number;
   role_arn: string;
   s3_backup_mode?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  destination_table_configuration: DestinationTableConfiguration;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationCloudwatchLoggingOptions;
+  destination_table_configuration: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationDestinationTableConfiguration;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfigurationS3Configuration;
 }
-export interface KinesisSourceConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsKinesisSourceConfiguration {
   kinesis_stream_arn: string;
   role_arn: string;
 }
-export interface AuthenticationConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsMskSourceConfigurationAuthenticationConfiguration {
   connectivity: string;
   role_arn: string;
 }
-export interface MskSourceConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsMskSourceConfiguration {
   msk_cluster_arn: string;
   topic_name: string;
-  authentication_configuration: AuthenticationConfiguration;
+  authentication_configuration: AwsKinesisFirehoseDeliveryStreamArgsMskSourceConfigurationAuthenticationConfiguration;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface DocumentIdOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationDocumentIdOptions {
   default_document_id_format: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -322,14 +322,14 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface VpcConfig {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationVpcConfig {
   role_arn: string;
   security_group_ids: string[];
   subnet_ids: string[];
 }
-export interface OpensearchConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfiguration {
   buffering_interval?: number;
   buffering_size?: number;
   cluster_endpoint?: string;
@@ -340,35 +340,35 @@ export interface OpensearchConfiguration {
   role_arn: string;
   s3_backup_mode?: string;
   type_name?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  document_id_options: DocumentIdOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
-  vpc_config: VpcConfig;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationCloudwatchLoggingOptions;
+  document_id_options: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationDocumentIdOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationS3Configuration;
+  vpc_config: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfigurationVpcConfig;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -377,14 +377,14 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface VpcConfig {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationVpcConfig {
   role_arn: string;
   security_group_ids: string[];
   subnet_ids: string[];
 }
-export interface OpensearchserverlessConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfiguration {
   buffering_interval?: number;
   buffering_size?: number;
   collection_endpoint: string;
@@ -392,34 +392,34 @@ export interface OpensearchserverlessConfiguration {
   retry_duration?: number;
   role_arn: string;
   s3_backup_mode?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
-  vpc_config: VpcConfig;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationS3Configuration;
+  vpc_config: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfigurationVpcConfig;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3BackupConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3BackupConfiguration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -428,14 +428,14 @@ export interface S3BackupConfiguration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3BackupConfigurationCloudwatchLoggingOptions;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -444,13 +444,13 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface SecretsManagerConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationSecretsManagerConfiguration {
   role_arn?: string;
   secret_arn?: string;
 }
-export interface RedshiftConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfiguration {
   cluster_jdbcurl: string;
   copy_options?: string;
   data_table_columns?: string;
@@ -460,40 +460,40 @@ export interface RedshiftConfiguration {
   role_arn: string;
   s3_backup_mode?: string;
   username?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_backup_configuration: S3BackupConfiguration;
-  s3_configuration: S3Configuration;
-  secrets_manager_configuration: SecretsManagerConfiguration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationProcessingConfiguration;
+  s3_backup_configuration: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3BackupConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationS3Configuration;
+  secrets_manager_configuration: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfigurationSecretsManagerConfiguration;
 }
-export interface ServerSideEncryption {
+export interface AwsKinesisFirehoseDeliveryStreamArgsServerSideEncryption {
   enabled?: boolean;
   key_arn?: string;
   key_type?: string;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -502,20 +502,20 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface SecretsManagerConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSecretsManagerConfiguration {
   role_arn?: string;
   secret_arn?: string;
 }
-export interface SnowflakeRoleConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSnowflakeRoleConfiguration {
   enabled?: boolean;
   snowflake_role?: string;
 }
-export interface SnowflakeVpcConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSnowflakeVpcConfiguration {
   private_link_vpce_id: string;
 }
-export interface SnowflakeConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfiguration {
   account_url: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -531,36 +531,36 @@ export interface SnowflakeConfiguration {
   schema: string;
   table: string;
   user?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
-  secrets_manager_configuration: SecretsManagerConfiguration;
-  snowflake_role_configuration: SnowflakeRoleConfiguration;
-  snowflake_vpc_configuration: SnowflakeVpcConfiguration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationS3Configuration;
+  secrets_manager_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSecretsManagerConfiguration;
+  snowflake_role_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSnowflakeRoleConfiguration;
+  snowflake_vpc_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfigurationSnowflakeVpcConfiguration;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface Parameters {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfigurationprocessorsparameters {
   parameter_name: string;
   parameter_value: string;
 }
-export interface Processors {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfigurationprocessors {
   type: string;
-  parameters: Parameters;
+  parameters: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfigurationprocessorsparameters;
 }
-export interface ProcessingConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfiguration {
   enabled?: boolean;
-  processors: Processors;
+  processors: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfigurationprocessors;
 }
-export interface CloudwatchLoggingOptions {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationS3ConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;
   log_stream_name?: string;
 }
-export interface S3Configuration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationS3Configuration {
   bucket_arn: string;
   buffering_interval?: number;
   buffering_size?: number;
@@ -569,13 +569,13 @@ export interface S3Configuration {
   kms_key_arn?: string;
   prefix?: string;
   role_arn: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationS3ConfigurationCloudwatchLoggingOptions;
 }
-export interface SecretsManagerConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationSecretsManagerConfiguration {
   role_arn?: string;
   secret_arn?: string;
 }
-export interface SplunkConfiguration {
+export interface AwsKinesisFirehoseDeliveryStreamArgsSplunkConfiguration {
   buffering_interval?: number;
   buffering_size?: number;
   hec_acknowledgment_timeout?: number;
@@ -584,12 +584,12 @@ export interface SplunkConfiguration {
   hec_token?: string;
   retry_duration?: number;
   s3_backup_mode?: string;
-  cloudwatch_logging_options: CloudwatchLoggingOptions;
-  processing_configuration: ProcessingConfiguration;
-  s3_configuration: S3Configuration;
-  secrets_manager_configuration: SecretsManagerConfiguration;
+  cloudwatch_logging_options: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationCloudwatchLoggingOptions;
+  processing_configuration: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationProcessingConfiguration;
+  s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationS3Configuration;
+  secrets_manager_configuration: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfigurationSecretsManagerConfiguration;
 }
-export interface Timeouts {
+export interface AwsKinesisFirehoseDeliveryStreamArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -600,19 +600,19 @@ export interface AwsKinesisFirehoseDeliveryStreamArgs {
   tags?: {
     [key: string]: string;
   };
-  elasticsearch_configuration: ElasticsearchConfiguration;
-  extended_s3_configuration: ExtendedS3Configuration;
-  http_endpoint_configuration: HttpEndpointConfiguration;
-  iceberg_configuration: IcebergConfiguration;
-  kinesis_source_configuration: KinesisSourceConfiguration;
-  msk_source_configuration: MskSourceConfiguration;
-  opensearch_configuration: OpensearchConfiguration;
-  opensearchserverless_configuration: OpensearchserverlessConfiguration;
-  redshift_configuration: RedshiftConfiguration;
-  server_side_encryption: ServerSideEncryption;
-  snowflake_configuration: SnowflakeConfiguration;
-  splunk_configuration: SplunkConfiguration;
-  timeouts: Timeouts;
+  elasticsearch_configuration: AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfiguration;
+  extended_s3_configuration: AwsKinesisFirehoseDeliveryStreamArgsExtendedS3Configuration;
+  http_endpoint_configuration: AwsKinesisFirehoseDeliveryStreamArgsHttpEndpointConfiguration;
+  iceberg_configuration: AwsKinesisFirehoseDeliveryStreamArgsIcebergConfiguration;
+  kinesis_source_configuration: AwsKinesisFirehoseDeliveryStreamArgsKinesisSourceConfiguration;
+  msk_source_configuration: AwsKinesisFirehoseDeliveryStreamArgsMskSourceConfiguration;
+  opensearch_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchConfiguration;
+  opensearchserverless_configuration: AwsKinesisFirehoseDeliveryStreamArgsOpensearchserverlessConfiguration;
+  redshift_configuration: AwsKinesisFirehoseDeliveryStreamArgsRedshiftConfiguration;
+  server_side_encryption: AwsKinesisFirehoseDeliveryStreamArgsServerSideEncryption;
+  snowflake_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfiguration;
+  splunk_configuration: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfiguration;
+  timeouts: AwsKinesisFirehoseDeliveryStreamArgstimeouts;
 }
 export class aws_kinesis_firehose_delivery_stream extends TerraformResource {
   readonly arn?: string;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CreateDatabaseDefaultPermissions {}
-export interface CreateTableDefaultPermissions {}
+export interface AwsLakeformationDataLakeSettingsArgsCreateDatabaseDefaultPermissions {}
+export interface AwsLakeformationDataLakeSettingsArgsCreateTableDefaultPermissions {}
 export interface AwsLakeformationDataLakeSettingsArgs {
   allow_external_data_filtering?: boolean;
   allow_full_table_external_data_access?: boolean;
   catalog_id?: string;
-  create_database_default_permissions: CreateDatabaseDefaultPermissions;
-  create_table_default_permissions: CreateTableDefaultPermissions;
+  create_database_default_permissions: AwsLakeformationDataLakeSettingsArgsCreateDatabaseDefaultPermissions;
+  create_table_default_permissions: AwsLakeformationDataLakeSettingsArgsCreateTableDefaultPermissions;
 }
 export class aws_lakeformation_data_lake_settings extends TerraformResource {
   readonly admins?: string[];

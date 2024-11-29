@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DagProcessingLogs {}
-export interface SchedulerLogs {}
-export interface TaskLogs {}
-export interface WebserverLogs {}
-export interface WorkerLogs {}
-export interface LoggingConfiguration {
-  dag_processing_logs: DagProcessingLogs;
-  scheduler_logs: SchedulerLogs;
-  task_logs: TaskLogs;
-  webserver_logs: WebserverLogs;
-  worker_logs: WorkerLogs;
+export interface AwsMwaaEnvironmentArgsLoggingConfigurationDagProcessingLogs {}
+export interface AwsMwaaEnvironmentArgsLoggingConfigurationSchedulerLogs {}
+export interface AwsMwaaEnvironmentArgsLoggingConfigurationTaskLogs {}
+export interface AwsMwaaEnvironmentArgsLoggingConfigurationWebserverLogs {}
+export interface AwsMwaaEnvironmentArgsLoggingConfigurationWorkerLogs {}
+export interface AwsMwaaEnvironmentArgsLoggingConfiguration {
+  dag_processing_logs: AwsMwaaEnvironmentArgsLoggingConfigurationDagProcessingLogs;
+  scheduler_logs: AwsMwaaEnvironmentArgsLoggingConfigurationSchedulerLogs;
+  task_logs: AwsMwaaEnvironmentArgsLoggingConfigurationTaskLogs;
+  webserver_logs: AwsMwaaEnvironmentArgsLoggingConfigurationWebserverLogs;
+  worker_logs: AwsMwaaEnvironmentArgsLoggingConfigurationWorkerLogs;
 }
-export interface NetworkConfiguration {
+export interface AwsMwaaEnvironmentArgsNetworkConfiguration {
   security_group_ids: string[];
   subnet_ids: string[];
 }
-export interface Timeouts {
+export interface AwsMwaaEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -35,9 +35,9 @@ export interface AwsMwaaEnvironmentArgs {
   tags?: {
     [key: string]: string;
   };
-  logging_configuration: LoggingConfiguration;
-  network_configuration: NetworkConfiguration;
-  timeouts: Timeouts;
+  logging_configuration: AwsMwaaEnvironmentArgsLoggingConfiguration;
+  network_configuration: AwsMwaaEnvironmentArgsNetworkConfiguration;
+  timeouts: AwsMwaaEnvironmentArgstimeouts;
 }
 export class aws_mwaa_environment extends TerraformResource {
   readonly airflow_version?: string;

@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DomainNameConfiguration {
+export interface AwsApigatewayv2DomainNameArgsDomainNameConfiguration {
   certificate_arn: string;
   endpoint_type: string;
   security_policy: string;
 }
-export interface MutualTlsAuthentication {
+export interface AwsApigatewayv2DomainNameArgsMutualTlsAuthentication {
   truststore_uri: string;
   truststore_version?: string;
 }
-export interface Timeouts {
+export interface AwsApigatewayv2DomainNameArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -17,9 +17,9 @@ export interface AwsApigatewayv2DomainNameArgs {
   tags?: {
     [key: string]: string;
   };
-  domain_name_configuration: DomainNameConfiguration;
-  mutual_tls_authentication: MutualTlsAuthentication;
-  timeouts: Timeouts;
+  domain_name_configuration: AwsApigatewayv2DomainNameArgsDomainNameConfiguration;
+  mutual_tls_authentication: AwsApigatewayv2DomainNameArgsMutualTlsAuthentication;
+  timeouts: AwsApigatewayv2DomainNameArgstimeouts;
 }
 export class aws_apigatewayv2_domain_name extends TerraformResource {
   readonly api_mapping_selection_expression!: string;

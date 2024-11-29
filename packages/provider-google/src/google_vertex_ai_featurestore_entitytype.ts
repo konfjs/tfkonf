@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CategoricalThresholdConfig {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigCategoricalThresholdConfig {
   value: number;
 }
-export interface ImportFeaturesAnalysis {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigImportFeaturesAnalysis {
   anomaly_detection_baseline?: string;
   state?: string;
 }
-export interface NumericalThresholdConfig {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigNumericalThresholdConfig {
   value: number;
 }
-export interface SnapshotAnalysis {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigSnapshotAnalysis {
   disabled?: boolean;
   monitoring_interval_days?: number;
   staleness_days?: number;
 }
-export interface MonitoringConfig {
-  categorical_threshold_config: CategoricalThresholdConfig;
-  import_features_analysis: ImportFeaturesAnalysis;
-  numerical_threshold_config: NumericalThresholdConfig;
-  snapshot_analysis: SnapshotAnalysis;
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfig {
+  categorical_threshold_config: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigCategoricalThresholdConfig;
+  import_features_analysis: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigImportFeaturesAnalysis;
+  numerical_threshold_config: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigNumericalThresholdConfig;
+  snapshot_analysis: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigSnapshotAnalysis;
 }
-export interface Timeouts {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -32,8 +32,8 @@ export interface GoogleVertexAiFeaturestoreEntitytypeArgs {
     [key: string]: string;
   };
   name?: string;
-  monitoring_config: MonitoringConfig;
-  timeouts: Timeouts;
+  monitoring_config: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfig;
+  timeouts: GoogleVertexAiFeaturestoreEntitytypeArgstimeouts;
 }
 export class google_vertex_ai_featurestore_entitytype extends TerraformResource {
   readonly create_time!: string;

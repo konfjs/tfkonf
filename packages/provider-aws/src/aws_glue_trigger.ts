@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NotificationProperty {
+export interface AwsGlueTriggerArgsactionsNotificationProperty {
   notify_delay_after?: number;
 }
-export interface Actions {
+export interface AwsGlueTriggerArgsactions {
   arguments?: {
     [key: string]: string;
   };
@@ -10,24 +10,24 @@ export interface Actions {
   job_name?: string;
   security_configuration?: string;
   timeout?: number;
-  notification_property: NotificationProperty;
+  notification_property: AwsGlueTriggerArgsactionsNotificationProperty;
 }
-export interface EventBatchingCondition {
+export interface AwsGlueTriggerArgsEventBatchingCondition {
   batch_size: number;
   batch_window?: number;
 }
-export interface Conditions {
+export interface AwsGlueTriggerArgspredicateconditions {
   crawl_state?: string;
   crawler_name?: string;
   job_name?: string;
   logical_operator?: string;
   state?: string;
 }
-export interface Predicate {
+export interface AwsGlueTriggerArgspredicate {
   logical?: string;
-  conditions: Conditions;
+  conditions: AwsGlueTriggerArgspredicateconditions;
 }
-export interface Timeouts {
+export interface AwsGlueTriggerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -43,10 +43,10 @@ export interface AwsGlueTriggerArgs {
   };
   type: string;
   workflow_name?: string;
-  actions: Actions;
-  event_batching_condition: EventBatchingCondition;
-  predicate: Predicate;
-  timeouts: Timeouts;
+  actions: AwsGlueTriggerArgsactions;
+  event_batching_condition: AwsGlueTriggerArgsEventBatchingCondition;
+  predicate: AwsGlueTriggerArgspredicate;
+  timeouts: AwsGlueTriggerArgstimeouts;
 }
 export class aws_glue_trigger extends TerraformResource {
   readonly arn!: string;

@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SslConfig {}
-export interface ClientConnectionConfig {
+export interface GoogleAlloydbInstanceArgsClientConnectionConfigSslConfig {}
+export interface GoogleAlloydbInstanceArgsClientConnectionConfig {
   require_connectors?: boolean;
-  ssl_config: SslConfig;
+  ssl_config: GoogleAlloydbInstanceArgsClientConnectionConfigSslConfig;
 }
-export interface MachineConfig {}
-export interface AuthorizedExternalNetworks {
+export interface GoogleAlloydbInstanceArgsMachineConfig {}
+export interface GoogleAlloydbInstanceArgsNetworkConfigAuthorizedExternalNetworks {
   cidr_range?: string;
 }
-export interface NetworkConfig {
+export interface GoogleAlloydbInstanceArgsNetworkConfig {
   enable_outbound_public_ip?: boolean;
   enable_public_ip?: boolean;
-  authorized_external_networks: AuthorizedExternalNetworks;
+  authorized_external_networks: GoogleAlloydbInstanceArgsNetworkConfigAuthorizedExternalNetworks;
 }
-export interface PscInstanceConfig {
+export interface GoogleAlloydbInstanceArgsPscInstanceConfig {
   allowed_consumer_projects?: string[];
 }
-export interface QueryInsightsConfig {
+export interface GoogleAlloydbInstanceArgsQueryInsightsConfig {
   query_plans_per_minute?: number;
   query_string_length?: number;
   record_application_tags?: boolean;
   record_client_address?: boolean;
 }
-export interface ReadPoolConfig {
+export interface GoogleAlloydbInstanceArgsReadPoolConfig {
   node_count?: number;
 }
-export interface Timeouts {
+export interface GoogleAlloydbInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,13 +42,13 @@ export interface GoogleAlloydbInstanceArgs {
   labels?: {
     [key: string]: string;
   };
-  client_connection_config: ClientConnectionConfig;
-  machine_config: MachineConfig;
-  network_config: NetworkConfig;
-  psc_instance_config: PscInstanceConfig;
-  query_insights_config: QueryInsightsConfig;
-  read_pool_config: ReadPoolConfig;
-  timeouts: Timeouts;
+  client_connection_config: GoogleAlloydbInstanceArgsClientConnectionConfig;
+  machine_config: GoogleAlloydbInstanceArgsMachineConfig;
+  network_config: GoogleAlloydbInstanceArgsNetworkConfig;
+  psc_instance_config: GoogleAlloydbInstanceArgsPscInstanceConfig;
+  query_insights_config: GoogleAlloydbInstanceArgsQueryInsightsConfig;
+  read_pool_config: GoogleAlloydbInstanceArgsReadPoolConfig;
+  timeouts: GoogleAlloydbInstanceArgstimeouts;
 }
 export class google_alloydb_instance extends TerraformResource {
   readonly availability_type?: string;

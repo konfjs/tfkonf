@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AudioExportGcsDestination {
+export interface GoogleDialogflowCxAgentArgsAdvancedSettingsAudioExportGcsDestination {
   uri?: string;
 }
-export interface DtmfSettings {
+export interface GoogleDialogflowCxAgentArgsAdvancedSettingsDtmfSettings {
   enabled?: boolean;
   finish_digit?: string;
   max_digits?: number;
 }
-export interface LoggingSettings {
+export interface GoogleDialogflowCxAgentArgsAdvancedSettingsLoggingSettings {
   enable_consent_based_redaction?: boolean;
   enable_interaction_logging?: boolean;
   enable_stackdriver_logging?: boolean;
 }
-export interface SpeechSettings {
+export interface GoogleDialogflowCxAgentArgsAdvancedSettingsSpeechSettings {
   endpointer_sensitivity?: number;
   models?: {
     [key: string]: string;
@@ -20,29 +20,29 @@ export interface SpeechSettings {
   no_speech_timeout?: string;
   use_timeout_based_endpointing?: boolean;
 }
-export interface AdvancedSettings {
-  audio_export_gcs_destination: AudioExportGcsDestination;
-  dtmf_settings: DtmfSettings;
-  logging_settings: LoggingSettings;
-  speech_settings: SpeechSettings;
+export interface GoogleDialogflowCxAgentArgsAdvancedSettings {
+  audio_export_gcs_destination: GoogleDialogflowCxAgentArgsAdvancedSettingsAudioExportGcsDestination;
+  dtmf_settings: GoogleDialogflowCxAgentArgsAdvancedSettingsDtmfSettings;
+  logging_settings: GoogleDialogflowCxAgentArgsAdvancedSettingsLoggingSettings;
+  speech_settings: GoogleDialogflowCxAgentArgsAdvancedSettingsSpeechSettings;
 }
-export interface GithubSettings {
+export interface GoogleDialogflowCxAgentArgsGitIntegrationSettingsGithubSettings {
   access_token?: string;
   branches?: string[];
   display_name?: string;
   repository_uri?: string;
   tracking_branch?: string;
 }
-export interface GitIntegrationSettings {
-  github_settings: GithubSettings;
+export interface GoogleDialogflowCxAgentArgsGitIntegrationSettings {
+  github_settings: GoogleDialogflowCxAgentArgsGitIntegrationSettingsGithubSettings;
 }
-export interface SpeechToTextSettings {
+export interface GoogleDialogflowCxAgentArgsSpeechToTextSettings {
   enable_speech_adaptation?: boolean;
 }
-export interface TextToSpeechSettings {
+export interface GoogleDialogflowCxAgentArgsTextToSpeechSettings {
   synthesize_speech_configs?: string;
 }
-export interface Timeouts {
+export interface GoogleDialogflowCxAgentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -58,11 +58,11 @@ export interface GoogleDialogflowCxAgentArgs {
   security_settings?: string;
   supported_language_codes?: string[];
   time_zone: string;
-  advanced_settings: AdvancedSettings;
-  git_integration_settings: GitIntegrationSettings;
-  speech_to_text_settings: SpeechToTextSettings;
-  text_to_speech_settings: TextToSpeechSettings;
-  timeouts: Timeouts;
+  advanced_settings: GoogleDialogflowCxAgentArgsAdvancedSettings;
+  git_integration_settings: GoogleDialogflowCxAgentArgsGitIntegrationSettings;
+  speech_to_text_settings: GoogleDialogflowCxAgentArgsSpeechToTextSettings;
+  text_to_speech_settings: GoogleDialogflowCxAgentArgsTextToSpeechSettings;
+  timeouts: GoogleDialogflowCxAgentArgstimeouts;
 }
 export class google_dialogflow_cx_agent extends TerraformResource {
   readonly id?: string;

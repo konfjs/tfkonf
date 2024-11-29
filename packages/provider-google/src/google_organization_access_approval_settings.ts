@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EnrolledServices {
+export interface GoogleOrganizationAccessApprovalSettingsArgsEnrolledServices {
   cloud_product: string;
   enrollment_level?: string;
 }
-export interface Timeouts {
+export interface GoogleOrganizationAccessApprovalSettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,8 +11,8 @@ export interface Timeouts {
 export interface GoogleOrganizationAccessApprovalSettingsArgs {
   active_key_version?: string;
   organization_id: string;
-  enrolled_services: EnrolledServices;
-  timeouts: Timeouts;
+  enrolled_services: GoogleOrganizationAccessApprovalSettingsArgsEnrolledServices;
+  timeouts: GoogleOrganizationAccessApprovalSettingsArgstimeouts;
 }
 export class google_organization_access_approval_settings extends TerraformResource {
   readonly ancestor_has_active_key_version!: boolean;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface UiTemplate {
+export interface AwsSagemakerHumanTaskUiArgsUiTemplate {
   content?: string;
 }
 export interface AwsSagemakerHumanTaskUiArgs {
@@ -7,7 +7,7 @@ export interface AwsSagemakerHumanTaskUiArgs {
   tags?: {
     [key: string]: string;
   };
-  ui_template: UiTemplate;
+  ui_template: AwsSagemakerHumanTaskUiArgsUiTemplate;
 }
 export class aws_sagemaker_human_task_ui extends TerraformResource {
   readonly arn!: string;

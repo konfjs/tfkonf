@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationConfiguration {
+export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgsDestinationConfiguration {
   from_port: number;
   protocols: string[];
   to_port: number;
 }
-export interface EndpointConfiguration {
+export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgsEndpointConfiguration {
   endpoint_id?: string;
 }
-export interface Timeouts {
+export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsGlobalacceleratorCustomRoutingEndpointGroupArgs {
   listener_arn: string;
-  destination_configuration: DestinationConfiguration;
-  endpoint_configuration: EndpointConfiguration;
-  timeouts: Timeouts;
+  destination_configuration: AwsGlobalacceleratorCustomRoutingEndpointGroupArgsDestinationConfiguration;
+  endpoint_configuration: AwsGlobalacceleratorCustomRoutingEndpointGroupArgsEndpointConfiguration;
+  timeouts: AwsGlobalacceleratorCustomRoutingEndpointGroupArgstimeouts;
 }
 export class aws_globalaccelerator_custom_routing_endpoint_group extends TerraformResource {
   readonly arn!: string;

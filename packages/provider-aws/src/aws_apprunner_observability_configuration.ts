@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TraceConfiguration {
+export interface AwsApprunnerObservabilityConfigurationArgsTraceConfiguration {
   vendor?: string;
 }
 export interface AwsApprunnerObservabilityConfigurationArgs {
@@ -7,7 +7,7 @@ export interface AwsApprunnerObservabilityConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  trace_configuration: TraceConfiguration;
+  trace_configuration: AwsApprunnerObservabilityConfigurationArgsTraceConfiguration;
 }
 export class aws_apprunner_observability_configuration extends TerraformResource {
   readonly arn!: string;

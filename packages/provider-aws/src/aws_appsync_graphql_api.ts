@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LambdaAuthorizerConfig {
+export interface AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderLambdaAuthorizerConfig {
   authorizer_result_ttl_in_seconds?: number;
   authorizer_uri: string;
   identity_validation_expression?: string;
 }
-export interface OpenidConnectConfig {
+export interface AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderOpenidConnectConfig {
   auth_ttl?: number;
   client_id?: string;
   iat_ttl?: number;
   issuer: string;
 }
-export interface UserPoolConfig {
+export interface AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderUserPoolConfig {
   app_id_client_regex?: string;
   user_pool_id: string;
 }
-export interface AdditionalAuthenticationProvider {
+export interface AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProvider {
   authentication_type: string;
-  lambda_authorizer_config: LambdaAuthorizerConfig;
-  openid_connect_config: OpenidConnectConfig;
-  user_pool_config: UserPoolConfig;
+  lambda_authorizer_config: AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderLambdaAuthorizerConfig;
+  openid_connect_config: AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderOpenidConnectConfig;
+  user_pool_config: AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProviderUserPoolConfig;
 }
-export interface EnhancedMetricsConfig {
+export interface AwsAppsyncGraphqlApiArgsEnhancedMetricsConfig {
   data_source_level_metrics_behavior: string;
   operation_level_metrics_config: string;
   resolver_level_metrics_behavior: string;
 }
-export interface LambdaAuthorizerConfig {
+export interface AwsAppsyncGraphqlApiArgsLambdaAuthorizerConfig {
   authorizer_result_ttl_in_seconds?: number;
   authorizer_uri: string;
   identity_validation_expression?: string;
 }
-export interface LogConfig {
+export interface AwsAppsyncGraphqlApiArgsLogConfig {
   cloudwatch_logs_role_arn: string;
   exclude_verbose_content?: boolean;
   field_log_level: string;
 }
-export interface OpenidConnectConfig {
+export interface AwsAppsyncGraphqlApiArgsOpenidConnectConfig {
   auth_ttl?: number;
   client_id?: string;
   iat_ttl?: number;
   issuer: string;
 }
-export interface UserPoolConfig {
+export interface AwsAppsyncGraphqlApiArgsUserPoolConfig {
   app_id_client_regex?: string;
   default_action: string;
   user_pool_id: string;
@@ -60,12 +60,12 @@ export interface AwsAppsyncGraphqlApiArgs {
   };
   visibility?: string;
   xray_enabled?: boolean;
-  additional_authentication_provider: AdditionalAuthenticationProvider;
-  enhanced_metrics_config: EnhancedMetricsConfig;
-  lambda_authorizer_config: LambdaAuthorizerConfig;
-  log_config: LogConfig;
-  openid_connect_config: OpenidConnectConfig;
-  user_pool_config: UserPoolConfig;
+  additional_authentication_provider: AwsAppsyncGraphqlApiArgsAdditionalAuthenticationProvider;
+  enhanced_metrics_config: AwsAppsyncGraphqlApiArgsEnhancedMetricsConfig;
+  lambda_authorizer_config: AwsAppsyncGraphqlApiArgsLambdaAuthorizerConfig;
+  log_config: AwsAppsyncGraphqlApiArgsLogConfig;
+  openid_connect_config: AwsAppsyncGraphqlApiArgsOpenidConnectConfig;
+  user_pool_config: AwsAppsyncGraphqlApiArgsUserPoolConfig;
 }
 export class aws_appsync_graphql_api extends TerraformResource {
   readonly arn!: string;

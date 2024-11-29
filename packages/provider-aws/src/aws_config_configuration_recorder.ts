@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExclusionByResourceTypes {
+export interface AwsConfigConfigurationRecorderArgsRecordingGroupExclusionByResourceTypes {
   resource_types?: string[];
 }
-export interface RecordingStrategy {
+export interface AwsConfigConfigurationRecorderArgsRecordingGroupRecordingStrategy {
   use_only?: string;
 }
-export interface RecordingGroup {
+export interface AwsConfigConfigurationRecorderArgsRecordingGroup {
   all_supported?: boolean;
   include_global_resource_types?: boolean;
   resource_types?: string[];
-  exclusion_by_resource_types: ExclusionByResourceTypes;
-  recording_strategy: RecordingStrategy;
+  exclusion_by_resource_types: AwsConfigConfigurationRecorderArgsRecordingGroupExclusionByResourceTypes;
+  recording_strategy: AwsConfigConfigurationRecorderArgsRecordingGroupRecordingStrategy;
 }
-export interface RecordingModeOverride {
+export interface AwsConfigConfigurationRecorderArgsRecordingModeRecordingModeOverride {
   description?: string;
   recording_frequency: string;
   resource_types: string[];
 }
-export interface RecordingMode {
+export interface AwsConfigConfigurationRecorderArgsRecordingMode {
   recording_frequency?: string;
-  recording_mode_override: RecordingModeOverride;
+  recording_mode_override: AwsConfigConfigurationRecorderArgsRecordingModeRecordingModeOverride;
 }
 export interface AwsConfigConfigurationRecorderArgs {
   name?: string;
   role_arn: string;
-  recording_group: RecordingGroup;
-  recording_mode: RecordingMode;
+  recording_group: AwsConfigConfigurationRecorderArgsRecordingGroup;
+  recording_mode: AwsConfigConfigurationRecorderArgsRecordingMode;
 }
 export class aws_config_configuration_recorder extends TerraformResource {
   readonly id?: string;

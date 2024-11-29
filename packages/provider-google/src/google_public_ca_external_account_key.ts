@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GooglePublicCaExternalAccountKeyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GooglePublicCaExternalAccountKeyArgs {
   location?: string;
-  timeouts: Timeouts;
+  timeouts: GooglePublicCaExternalAccountKeyArgstimeouts;
 }
 export class google_public_ca_external_account_key extends TerraformResource {
   readonly b64_mac_key!: string;

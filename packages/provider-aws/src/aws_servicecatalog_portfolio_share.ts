@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsServicecatalogPortfolioShareArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -13,7 +13,7 @@ export interface AwsServicecatalogPortfolioShareArgs {
   share_tag_options?: boolean;
   type: string;
   wait_for_acceptance?: boolean;
-  timeouts: Timeouts;
+  timeouts: AwsServicecatalogPortfolioShareArgstimeouts;
 }
 export class aws_servicecatalog_portfolio_share extends TerraformResource {
   readonly accepted!: boolean;

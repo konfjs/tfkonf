@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Disk {
+export interface GoogleComputePerInstanceConfigArgsPreservedStatedisk {
   delete_rule?: string;
   device_name: string;
   mode?: string;
   source: string;
 }
-export interface IpAddress {
+export interface GoogleComputePerInstanceConfigArgsPreservedStateExternalIpIpAddress {
   address?: string;
 }
-export interface ExternalIp {
+export interface GoogleComputePerInstanceConfigArgsPreservedStateExternalIp {
   auto_delete?: string;
   interface_name: string;
-  ip_address: IpAddress;
+  ip_address: GoogleComputePerInstanceConfigArgsPreservedStateExternalIpIpAddress;
 }
-export interface IpAddress {
+export interface GoogleComputePerInstanceConfigArgsPreservedStateInternalIpIpAddress {
   address?: string;
 }
-export interface InternalIp {
+export interface GoogleComputePerInstanceConfigArgsPreservedStateInternalIp {
   auto_delete?: string;
   interface_name: string;
-  ip_address: IpAddress;
+  ip_address: GoogleComputePerInstanceConfigArgsPreservedStateInternalIpIpAddress;
 }
-export interface PreservedState {
+export interface GoogleComputePerInstanceConfigArgsPreservedState {
   metadata?: {
     [key: string]: string;
   };
-  disk: Disk;
-  external_ip: ExternalIp;
-  internal_ip: InternalIp;
+  disk: GoogleComputePerInstanceConfigArgsPreservedStatedisk;
+  external_ip: GoogleComputePerInstanceConfigArgsPreservedStateExternalIp;
+  internal_ip: GoogleComputePerInstanceConfigArgsPreservedStateInternalIp;
 }
-export interface Timeouts {
+export interface GoogleComputePerInstanceConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,8 +41,8 @@ export interface GoogleComputePerInstanceConfigArgs {
   name: string;
   remove_instance_on_destroy?: boolean;
   remove_instance_state_on_destroy?: boolean;
-  preserved_state: PreservedState;
-  timeouts: Timeouts;
+  preserved_state: GoogleComputePerInstanceConfigArgsPreservedState;
+  timeouts: GoogleComputePerInstanceConfigArgstimeouts;
 }
 export class google_compute_per_instance_config extends TerraformResource {
   readonly id?: string;

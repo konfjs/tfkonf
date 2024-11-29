@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRdsInstanceStateArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsRdsInstanceStateArgs {
   identifier: string;
   state: string;
-  timeouts: Timeouts;
+  timeouts: AwsRdsInstanceStateArgstimeouts;
 }
 export class aws_rds_instance_state extends TerraformResource {
   constructor(config: TerraformConfig, resourceName: string, args: AwsRdsInstanceStateArgs) {

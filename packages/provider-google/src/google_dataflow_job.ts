@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDataflowJobArgstimeouts {
   update?: string;
 }
 export interface GoogleDataflowJobArgs {
@@ -27,7 +27,7 @@ export interface GoogleDataflowJobArgs {
     [key: string]: string;
   };
   zone?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDataflowJobArgstimeouts;
 }
 export class google_dataflow_job extends TerraformResource {
   readonly additional_experiments?: string[];

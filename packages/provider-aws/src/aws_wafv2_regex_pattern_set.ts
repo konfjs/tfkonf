@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RegularExpression {
+export interface AwsWafv2RegexPatternSetArgsRegularExpression {
   regex_string: string;
 }
 export interface AwsWafv2RegexPatternSetArgs {
@@ -9,7 +9,7 @@ export interface AwsWafv2RegexPatternSetArgs {
   tags?: {
     [key: string]: string;
   };
-  regular_expression: RegularExpression;
+  regular_expression: AwsWafv2RegexPatternSetArgsRegularExpression;
 }
 export class aws_wafv2_regex_pattern_set extends TerraformResource {
   readonly arn!: string;

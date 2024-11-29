@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppsyncTarget {
+export interface AwsCloudwatchEventTargetArgsAppsyncTarget {
   graphql_operation?: string;
 }
-export interface BatchTarget {
+export interface AwsCloudwatchEventTargetArgsBatchTarget {
   array_size?: number;
   job_attempts?: number;
   job_definition: string;
   job_name: string;
 }
-export interface DeadLetterConfig {
+export interface AwsCloudwatchEventTargetArgsDeadLetterConfig {
   arn?: string;
 }
-export interface CapacityProviderStrategy {
+export interface AwsCloudwatchEventTargetArgsEcsTargetCapacityProviderStrategy {
   base?: number;
   capacity_provider: string;
   weight?: number;
 }
-export interface NetworkConfiguration {
+export interface AwsCloudwatchEventTargetArgsEcsTargetNetworkConfiguration {
   assign_public_ip?: boolean;
   security_groups?: string[];
   subnets: string[];
 }
-export interface OrderedPlacementStrategy {
+export interface AwsCloudwatchEventTargetArgsEcsTargetOrderedPlacementStrategy {
   field?: string;
   type: string;
 }
-export interface PlacementConstraint {
+export interface AwsCloudwatchEventTargetArgsEcsTargetPlacementConstraint {
   expression?: string;
   type: string;
 }
-export interface EcsTarget {
+export interface AwsCloudwatchEventTargetArgsEcsTarget {
   enable_ecs_managed_tags?: boolean;
   enable_execute_command?: boolean;
   group?: string;
@@ -41,12 +41,12 @@ export interface EcsTarget {
   };
   task_count?: number;
   task_definition_arn: string;
-  capacity_provider_strategy: CapacityProviderStrategy;
-  network_configuration: NetworkConfiguration;
-  ordered_placement_strategy: OrderedPlacementStrategy;
-  placement_constraint: PlacementConstraint;
+  capacity_provider_strategy: AwsCloudwatchEventTargetArgsEcsTargetCapacityProviderStrategy;
+  network_configuration: AwsCloudwatchEventTargetArgsEcsTargetNetworkConfiguration;
+  ordered_placement_strategy: AwsCloudwatchEventTargetArgsEcsTargetOrderedPlacementStrategy;
+  placement_constraint: AwsCloudwatchEventTargetArgsEcsTargetPlacementConstraint;
 }
-export interface HttpTarget {
+export interface AwsCloudwatchEventTargetArgsHttpTarget {
   header_parameters?: {
     [key: string]: string;
   };
@@ -55,16 +55,16 @@ export interface HttpTarget {
     [key: string]: string;
   };
 }
-export interface InputTransformer {
+export interface AwsCloudwatchEventTargetArgsInputTransformer {
   input_paths?: {
     [key: string]: string;
   };
   input_template: string;
 }
-export interface KinesisTarget {
+export interface AwsCloudwatchEventTargetArgsKinesisTarget {
   partition_key_path?: string;
 }
-export interface RedshiftTarget {
+export interface AwsCloudwatchEventTargetArgsRedshiftTarget {
   database: string;
   db_user?: string;
   secrets_manager_arn?: string;
@@ -72,22 +72,22 @@ export interface RedshiftTarget {
   statement_name?: string;
   with_event?: boolean;
 }
-export interface RetryPolicy {
+export interface AwsCloudwatchEventTargetArgsRetryPolicy {
   maximum_event_age_in_seconds?: number;
   maximum_retry_attempts?: number;
 }
-export interface RunCommandTargets {
+export interface AwsCloudwatchEventTargetArgsRunCommandTargets {
   key: string;
   values: string[];
 }
-export interface PipelineParameterList {
+export interface AwsCloudwatchEventTargetArgsSagemakerPipelineTargetPipelineParameterList {
   name: string;
   value: string;
 }
-export interface SagemakerPipelineTarget {
-  pipeline_parameter_list: PipelineParameterList;
+export interface AwsCloudwatchEventTargetArgsSagemakerPipelineTarget {
+  pipeline_parameter_list: AwsCloudwatchEventTargetArgsSagemakerPipelineTargetPipelineParameterList;
 }
-export interface SqsTarget {
+export interface AwsCloudwatchEventTargetArgsSqsTarget {
   message_group_id?: string;
 }
 export interface AwsCloudwatchEventTargetArgs {
@@ -98,18 +98,18 @@ export interface AwsCloudwatchEventTargetArgs {
   input_path?: string;
   role_arn?: string;
   rule: string;
-  appsync_target: AppsyncTarget;
-  batch_target: BatchTarget;
-  dead_letter_config: DeadLetterConfig;
-  ecs_target: EcsTarget;
-  http_target: HttpTarget;
-  input_transformer: InputTransformer;
-  kinesis_target: KinesisTarget;
-  redshift_target: RedshiftTarget;
-  retry_policy: RetryPolicy;
-  run_command_targets: RunCommandTargets;
-  sagemaker_pipeline_target: SagemakerPipelineTarget;
-  sqs_target: SqsTarget;
+  appsync_target: AwsCloudwatchEventTargetArgsAppsyncTarget;
+  batch_target: AwsCloudwatchEventTargetArgsBatchTarget;
+  dead_letter_config: AwsCloudwatchEventTargetArgsDeadLetterConfig;
+  ecs_target: AwsCloudwatchEventTargetArgsEcsTarget;
+  http_target: AwsCloudwatchEventTargetArgsHttpTarget;
+  input_transformer: AwsCloudwatchEventTargetArgsInputTransformer;
+  kinesis_target: AwsCloudwatchEventTargetArgsKinesisTarget;
+  redshift_target: AwsCloudwatchEventTargetArgsRedshiftTarget;
+  retry_policy: AwsCloudwatchEventTargetArgsRetryPolicy;
+  run_command_targets: AwsCloudwatchEventTargetArgsRunCommandTargets;
+  sagemaker_pipeline_target: AwsCloudwatchEventTargetArgsSagemakerPipelineTarget;
+  sqs_target: AwsCloudwatchEventTargetArgsSqsTarget;
 }
 export class aws_cloudwatch_event_target extends TerraformResource {
   readonly id?: string;

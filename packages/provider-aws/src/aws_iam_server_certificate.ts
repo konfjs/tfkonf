@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsIamServerCertificateArgstimeouts {
   delete?: string;
 }
 export interface AwsIamServerCertificateArgs {
@@ -10,7 +10,7 @@ export interface AwsIamServerCertificateArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsIamServerCertificateArgstimeouts;
 }
 export class aws_iam_server_certificate extends TerraformResource {
   readonly arn!: string;

@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Path {
+export interface AwsKendraFaqArgsS3Path {
   bucket: string;
   key: string;
 }
-export interface Timeouts {
+export interface AwsKendraFaqArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -16,8 +16,8 @@ export interface AwsKendraFaqArgs {
   tags?: {
     [key: string]: string;
   };
-  s3_path: S3Path;
-  timeouts: Timeouts;
+  s3_path: AwsKendraFaqArgsS3Path;
+  timeouts: AwsKendraFaqArgstimeouts;
 }
 export class aws_kendra_faq extends TerraformResource {
   readonly arn!: string;

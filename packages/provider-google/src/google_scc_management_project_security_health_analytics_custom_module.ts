@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ValueExpression {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Properties {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputproperties {
   name?: string;
-  value_expression: ValueExpression;
+  value_expression: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression;
 }
-export interface CustomOutput {
-  properties: Properties;
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutput {
+  properties: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputproperties;
 }
-export interface Predicate {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigpredicate {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface ResourceSelector {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigResourceSelector {
   resource_types: string[];
 }
-export interface CustomConfig {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfig {
   description?: string;
   recommendation: string;
   severity: string;
-  custom_output: CustomOutput;
-  predicate: Predicate;
-  resource_selector: ResourceSelector;
+  custom_output: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutput;
+  predicate: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigpredicate;
+  resource_selector: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfigResourceSelector;
 }
-export interface Timeouts {
+export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,8 +38,8 @@ export interface GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleAr
   display_name?: string;
   enablement_state?: string;
   location?: string;
-  custom_config: CustomConfig;
-  timeouts: Timeouts;
+  custom_config: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgsCustomConfig;
+  timeouts: GoogleSccManagementProjectSecurityHealthAnalyticsCustomModuleArgstimeouts;
 }
 export class google_scc_management_project_security_health_analytics_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

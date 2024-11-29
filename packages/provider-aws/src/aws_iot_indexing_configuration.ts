@@ -1,40 +1,40 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomField {
+export interface AwsIotIndexingConfigurationArgsThingGroupIndexingConfigurationCustomField {
   name?: string;
   type?: string;
 }
-export interface ManagedField {
+export interface AwsIotIndexingConfigurationArgsThingGroupIndexingConfigurationManagedField {
   name?: string;
   type?: string;
 }
-export interface ThingGroupIndexingConfiguration {
+export interface AwsIotIndexingConfigurationArgsThingGroupIndexingConfiguration {
   thing_group_indexing_mode: string;
-  custom_field: CustomField;
-  managed_field: ManagedField;
+  custom_field: AwsIotIndexingConfigurationArgsThingGroupIndexingConfigurationCustomField;
+  managed_field: AwsIotIndexingConfigurationArgsThingGroupIndexingConfigurationManagedField;
 }
-export interface CustomField {
+export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationCustomField {
   name?: string;
   type?: string;
 }
-export interface Filter {
+export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationfilter {
   named_shadow_names?: string[];
 }
-export interface ManagedField {
+export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationManagedField {
   name?: string;
   type?: string;
 }
-export interface ThingIndexingConfiguration {
+export interface AwsIotIndexingConfigurationArgsThingIndexingConfiguration {
   device_defender_indexing_mode?: string;
   named_shadow_indexing_mode?: string;
   thing_connectivity_indexing_mode?: string;
   thing_indexing_mode: string;
-  custom_field: CustomField;
-  filter: Filter;
-  managed_field: ManagedField;
+  custom_field: AwsIotIndexingConfigurationArgsThingIndexingConfigurationCustomField;
+  filter: AwsIotIndexingConfigurationArgsThingIndexingConfigurationfilter;
+  managed_field: AwsIotIndexingConfigurationArgsThingIndexingConfigurationManagedField;
 }
 export interface AwsIotIndexingConfigurationArgs {
-  thing_group_indexing_configuration: ThingGroupIndexingConfiguration;
-  thing_indexing_configuration: ThingIndexingConfiguration;
+  thing_group_indexing_configuration: AwsIotIndexingConfigurationArgsThingGroupIndexingConfiguration;
+  thing_indexing_configuration: AwsIotIndexingConfigurationArgsThingIndexingConfiguration;
 }
 export class aws_iot_indexing_configuration extends TerraformResource {
   readonly id?: string;

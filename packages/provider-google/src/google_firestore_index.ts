@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Flat {}
-export interface VectorConfig {
+export interface GoogleFirestoreIndexArgsfieldsVectorConfigflat {}
+export interface GoogleFirestoreIndexArgsfieldsVectorConfig {
   dimension?: number;
-  flat: Flat;
+  flat: GoogleFirestoreIndexArgsfieldsVectorConfigflat;
 }
-export interface Fields {
+export interface GoogleFirestoreIndexArgsfields {
   array_config?: string;
   field_path?: string;
   order?: string;
-  vector_config: VectorConfig;
+  vector_config: GoogleFirestoreIndexArgsfieldsVectorConfig;
 }
-export interface Timeouts {
+export interface GoogleFirestoreIndexArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -19,8 +19,8 @@ export interface GoogleFirestoreIndexArgs {
   collection: string;
   database?: string;
   query_scope?: string;
-  fields: Fields;
-  timeouts: Timeouts;
+  fields: GoogleFirestoreIndexArgsfields;
+  timeouts: GoogleFirestoreIndexArgstimeouts;
 }
 export class google_firestore_index extends TerraformResource {
   readonly id?: string;

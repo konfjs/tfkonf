@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BackendMetastores {
+export interface GoogleDataprocMetastoreFederationArgsBackendMetastores {
   metastore_type: string;
   name: string;
   rank: string;
 }
-export interface Timeouts {
+export interface GoogleDataprocMetastoreFederationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleDataprocMetastoreFederationArgs {
   };
   location?: string;
   version: string;
-  backend_metastores: BackendMetastores;
-  timeouts: Timeouts;
+  backend_metastores: GoogleDataprocMetastoreFederationArgsBackendMetastores;
+  timeouts: GoogleDataprocMetastoreFederationArgstimeouts;
 }
 export class google_dataproc_metastore_federation extends TerraformResource {
   readonly effective_labels!: {

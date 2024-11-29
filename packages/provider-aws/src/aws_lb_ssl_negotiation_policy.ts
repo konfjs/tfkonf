@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Attribute {
+export interface AwsLbSslNegotiationPolicyArgsattribute {
   name: string;
   value: string;
 }
@@ -10,7 +10,7 @@ export interface AwsLbSslNegotiationPolicyArgs {
   triggers?: {
     [key: string]: string;
   };
-  attribute: Attribute;
+  attribute: AwsLbSslNegotiationPolicyArgsattribute;
 }
 export class aws_lb_ssl_negotiation_policy extends TerraformResource {
   readonly id?: string;

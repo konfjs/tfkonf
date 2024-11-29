@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EbsBlockDevice {
+export interface AwsAmiArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
   encrypted?: boolean;
@@ -8,11 +8,11 @@ export interface EbsBlockDevice {
   snapshot_id?: string;
   volume_type?: string;
 }
-export interface EphemeralBlockDevice {
+export interface AwsAmiArgsEphemeralBlockDevice {
   device_name: string;
   virtual_name: string;
 }
-export interface Timeouts {
+export interface AwsAmiArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,9 +34,9 @@ export interface AwsAmiArgs {
   };
   tpm_support?: string;
   virtualization_type?: string;
-  ebs_block_device: EbsBlockDevice;
-  ephemeral_block_device: EphemeralBlockDevice;
-  timeouts: Timeouts;
+  ebs_block_device: AwsAmiArgsEbsBlockDevice;
+  ephemeral_block_device: AwsAmiArgsEphemeralBlockDevice;
+  timeouts: AwsAmiArgstimeouts;
 }
 export class aws_ami extends TerraformResource {
   readonly arn!: string;

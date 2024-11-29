@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ReportDeliveryChannel {
+export interface AwsBackupReportPlanArgsReportDeliveryChannel {
   formats?: string[];
   s3_bucket_name: string;
   s3_key_prefix?: string;
 }
-export interface ReportSetting {
+export interface AwsBackupReportPlanArgsReportSetting {
   accounts?: string[];
   framework_arns?: string[];
   number_of_frameworks?: number;
@@ -18,8 +18,8 @@ export interface AwsBackupReportPlanArgs {
   tags?: {
     [key: string]: string;
   };
-  report_delivery_channel: ReportDeliveryChannel;
-  report_setting: ReportSetting;
+  report_delivery_channel: AwsBackupReportPlanArgsReportDeliveryChannel;
+  report_setting: AwsBackupReportPlanArgsReportSetting;
 }
 export class aws_backup_report_plan extends TerraformResource {
   readonly arn!: string;

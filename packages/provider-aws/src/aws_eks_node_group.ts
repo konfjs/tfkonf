@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LaunchTemplate {
+export interface AwsEksNodeGroupArgsLaunchTemplate {
   version: string;
 }
-export interface RemoteAccess {
+export interface AwsEksNodeGroupArgsRemoteAccess {
   ec2_ssh_key?: string;
   source_security_group_ids?: string[];
 }
-export interface ScalingConfig {
+export interface AwsEksNodeGroupArgsScalingConfig {
   desired_size: number;
   max_size: number;
   min_size: number;
 }
-export interface Taint {
+export interface AwsEksNodeGroupArgstaint {
   effect: string;
   key: string;
   value?: string;
 }
-export interface Timeouts {
+export interface AwsEksNodeGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UpdateConfig {
+export interface AwsEksNodeGroupArgsUpdateConfig {
   max_unavailable?: number;
   max_unavailable_percentage?: number;
 }
@@ -36,12 +36,12 @@ export interface AwsEksNodeGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  launch_template: LaunchTemplate;
-  remote_access: RemoteAccess;
-  scaling_config: ScalingConfig;
-  taint: Taint;
-  timeouts: Timeouts;
-  update_config: UpdateConfig;
+  launch_template: AwsEksNodeGroupArgsLaunchTemplate;
+  remote_access: AwsEksNodeGroupArgsRemoteAccess;
+  scaling_config: AwsEksNodeGroupArgsScalingConfig;
+  taint: AwsEksNodeGroupArgstaint;
+  timeouts: AwsEksNodeGroupArgstimeouts;
+  update_config: AwsEksNodeGroupArgsUpdateConfig;
 }
 export class aws_eks_node_group extends TerraformResource {
   readonly ami_type?: string;

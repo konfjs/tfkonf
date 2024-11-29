@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RequestedRunDuration {
+export interface GoogleComputeResizeRequestArgsRequestedRunDuration {
   nanos?: number;
   seconds: string;
 }
-export interface Timeouts {
+export interface GoogleComputeResizeRequestArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -13,8 +13,8 @@ export interface GoogleComputeResizeRequestArgs {
   name: string;
   resize_by: number;
   zone: string;
-  requested_run_duration: RequestedRunDuration;
-  timeouts: Timeouts;
+  requested_run_duration: GoogleComputeResizeRequestArgsRequestedRunDuration;
+  timeouts: GoogleComputeResizeRequestArgstimeouts;
 }
 export class google_compute_resize_request extends TerraformResource {
   readonly creation_timestamp!: string;

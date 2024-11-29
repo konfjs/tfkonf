@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressFromsources {
   access_level?: string;
 }
-export interface EgressFrom {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressFrom {
   identities?: string[];
   identity_type?: string;
   source_restriction?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTooperationsMethodSelectors;
 }
-export interface EgressTo {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTo {
   external_resources?: string[];
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTooperations;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgs {
   perimeter: string;
-  egress_from: EgressFrom;
-  egress_to: EgressTo;
-  timeouts: Timeouts;
+  egress_from: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressFrom;
+  egress_to: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgsEgressTo;
+  timeouts: GoogleAccessContextManagerServicePerimeterDryRunEgressPolicyArgstimeouts;
 }
 export class google_access_context_manager_service_perimeter_dry_run_egress_policy extends TerraformResource {
   readonly id?: string;

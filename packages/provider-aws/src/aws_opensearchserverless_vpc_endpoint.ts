@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsOpensearchserverlessVpcEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface AwsOpensearchserverlessVpcEndpointArgs {
   name: string;
   subnet_ids: string[];
   vpc_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsOpensearchserverlessVpcEndpointArgstimeouts;
 }
 export class aws_opensearchserverless_vpc_endpoint extends TerraformResource {
   readonly id!: string;

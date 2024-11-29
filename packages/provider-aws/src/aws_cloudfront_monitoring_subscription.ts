@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RealtimeMetricsSubscriptionConfig {
+export interface AwsCloudfrontMonitoringSubscriptionArgsMonitoringSubscriptionRealtimeMetricsSubscriptionConfig {
   realtime_metrics_subscription_status: string;
 }
-export interface MonitoringSubscription {
-  realtime_metrics_subscription_config: RealtimeMetricsSubscriptionConfig;
+export interface AwsCloudfrontMonitoringSubscriptionArgsMonitoringSubscription {
+  realtime_metrics_subscription_config: AwsCloudfrontMonitoringSubscriptionArgsMonitoringSubscriptionRealtimeMetricsSubscriptionConfig;
 }
 export interface AwsCloudfrontMonitoringSubscriptionArgs {
   distribution_id: string;
-  monitoring_subscription: MonitoringSubscription;
+  monitoring_subscription: AwsCloudfrontMonitoringSubscriptionArgsMonitoringSubscription;
 }
 export class aws_cloudfront_monitoring_subscription extends TerraformResource {
   readonly id?: string;

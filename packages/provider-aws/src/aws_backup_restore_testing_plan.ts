@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RecoveryPointSelection {
+export interface AwsBackupRestoreTestingPlanArgsRecoveryPointSelection {
   algorithm: string;
   include_vaults: string[];
   recovery_point_types: string[];
@@ -10,7 +10,7 @@ export interface AwsBackupRestoreTestingPlanArgs {
   tags?: {
     [key: string]: string;
   };
-  recovery_point_selection: RecoveryPointSelection;
+  recovery_point_selection: AwsBackupRestoreTestingPlanArgsRecoveryPointSelection;
 }
 export class aws_backup_restore_testing_plan extends TerraformResource {
   readonly arn!: string;

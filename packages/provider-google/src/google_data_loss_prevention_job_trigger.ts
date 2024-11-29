@@ -1,309 +1,309 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TransformationConfig {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationConfig {
   deidentify_template?: string;
   image_redact_template?: string;
   structured_deidentify_template?: string;
 }
-export interface Table {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationDetailsStorageConfigtable {
   dataset_id: string;
   project_id: string;
   table_id?: string;
 }
-export interface TransformationDetailsStorageConfig {
-  table: Table;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationDetailsStorageConfig {
+  table: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationDetailsStorageConfigtable;
 }
-export interface Deidentify {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentify {
   cloud_storage_output: string;
   file_types_to_transform?: string[];
-  transformation_config: TransformationConfig;
-  transformation_details_storage_config: TransformationDetailsStorageConfig;
+  transformation_config: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationConfig;
+  transformation_details_storage_config: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentifyTransformationDetailsStorageConfig;
 }
-export interface JobNotificationEmails {}
-export interface PubSub {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsJobNotificationEmails {}
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPubSub {
   topic: string;
 }
-export interface PublishFindingsToCloudDataCatalog {}
-export interface PublishSummaryToCscc {}
-export interface PublishToStackdriver {}
-export interface Table {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishFindingsToCloudDataCatalog {}
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishSummaryToCscc {}
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishToStackdriver {}
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindingsOutputConfigtable {
   dataset_id: string;
   project_id: string;
   table_id?: string;
 }
-export interface OutputConfig {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindingsOutputConfig {
   output_schema?: string;
-  table: Table;
+  table: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindingsOutputConfigtable;
 }
-export interface SaveFindings {
-  output_config: OutputConfig;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindings {
+  output_config: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindingsOutputConfig;
 }
-export interface Actions {
-  deidentify: Deidentify;
-  job_notification_emails: JobNotificationEmails;
-  pub_sub: PubSub;
-  publish_findings_to_cloud_data_catalog: PublishFindingsToCloudDataCatalog;
-  publish_summary_to_cscc: PublishSummaryToCscc;
-  publish_to_stackdriver: PublishToStackdriver;
-  save_findings: SaveFindings;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobactions {
+  deidentify: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsdeidentify;
+  job_notification_emails: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsJobNotificationEmails;
+  pub_sub: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPubSub;
+  publish_findings_to_cloud_data_catalog: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishFindingsToCloudDataCatalog;
+  publish_summary_to_cscc: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishSummaryToCscc;
+  publish_to_stackdriver: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsPublishToStackdriver;
+  save_findings: GoogleDataLossPreventionJobTriggerArgsInspectJobactionsSaveFindings;
 }
-export interface CloudStoragePath {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionaryCloudStoragePath {
   path: string;
 }
-export interface WordList {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionaryWordList {
   words: string[];
 }
-export interface Dictionary {
-  cloud_storage_path: CloudStoragePath;
-  word_list: WordList;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionary {
+  cloud_storage_path: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionaryCloudStoragePath;
+  word_list: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionaryWordList;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesInfoTypeSensitivityScore {
   score: string;
 }
-export interface InfoType {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesInfoType {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesInfoTypeSensitivityScore;
 }
-export interface Regex {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesregex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesSensitivityScore {
   score: string;
 }
-export interface StoredType {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesStoredType {
   name: string;
 }
-export interface SurrogateType {}
-export interface CustomInfoTypes {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesSurrogateType {}
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypes {
   exclusion_type?: string;
   likelihood?: string;
-  dictionary: Dictionary;
-  info_type: InfoType;
-  regex: Regex;
-  sensitivity_score: SensitivityScore;
-  stored_type: StoredType;
-  surrogate_type: SurrogateType;
+  dictionary: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesdictionary;
+  info_type: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesInfoType;
+  regex: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesregex;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesSensitivityScore;
+  stored_type: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesStoredType;
+  surrogate_type: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypesSurrogateType;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigInfoTypesSensitivityScore;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore {
   score: string;
 }
-export interface InfoType {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoTypeInfoType {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore;
 }
-export interface MaxFindingsPerInfoType {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoType {
   max_findings?: number;
-  info_type: InfoType;
+  info_type: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoTypeInfoType;
 }
-export interface Limits {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimits {
   max_findings_per_item?: number;
   max_findings_per_request?: number;
-  max_findings_per_info_type: MaxFindingsPerInfoType;
+  max_findings_per_info_type: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimitsMaxFindingsPerInfoType;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetInfoTypesSensitivityScore;
 }
-export interface CloudStoragePath {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionaryCloudStoragePath {
   path: string;
 }
-export interface WordList {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionaryWordList {
   words: string[];
 }
-export interface Dictionary {
-  cloud_storage_path: CloudStoragePath;
-  word_list: WordList;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionary {
+  cloud_storage_path: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionaryCloudStoragePath;
+  word_list: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionaryWordList;
 }
-export interface HotwordRegex {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordHotwordRegex {
   group_indexes?: number[];
   pattern?: string;
 }
-export interface Proximity {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordproximity {
   window_after?: number;
   window_before?: number;
 }
-export interface ExcludeByHotword {
-  hotword_regex: HotwordRegex;
-  proximity: Proximity;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotword {
+  hotword_regex: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordHotwordRegex;
+  proximity: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordproximity;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore;
 }
-export interface ExcludeInfoTypes {
-  info_types: InfoTypes;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypes {
+  info_types: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypes;
 }
-export interface Regex {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleregex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface ExclusionRule {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRule {
   matching_type: string;
-  dictionary: Dictionary;
-  exclude_by_hotword: ExcludeByHotword;
-  exclude_info_types: ExcludeInfoTypes;
-  regex: Regex;
+  dictionary: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuledictionary;
+  exclude_by_hotword: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeByHotword;
+  exclude_info_types: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypes;
+  regex: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRuleregex;
 }
-export interface HotwordRegex {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleHotwordRegex {
   group_indexes?: number[];
   pattern?: string;
 }
-export interface LikelihoodAdjustment {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleLikelihoodAdjustment {
   fixed_likelihood?: string;
   relative_likelihood?: number;
 }
-export interface Proximity {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleproximity {
   window_after?: number;
   window_before?: number;
 }
-export interface HotwordRule {
-  hotword_regex: HotwordRegex;
-  likelihood_adjustment: LikelihoodAdjustment;
-  proximity: Proximity;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRule {
+  hotword_regex: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleHotwordRegex;
+  likelihood_adjustment: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleLikelihoodAdjustment;
+  proximity: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRuleproximity;
 }
-export interface Rules {
-  exclusion_rule: ExclusionRule;
-  hotword_rule: HotwordRule;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrules {
+  exclusion_rule: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesExclusionRule;
+  hotword_rule: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrulesHotwordRule;
 }
-export interface RuleSet {
-  info_types: InfoTypes;
-  rules: Rules;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSet {
+  info_types: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetInfoTypes;
+  rules: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSetrules;
 }
-export interface InspectConfig {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfig {
   exclude_info_types?: boolean;
   include_quote?: boolean;
   min_likelihood?: string;
-  custom_info_types: CustomInfoTypes;
-  info_types: InfoTypes;
-  limits: Limits;
-  rule_set: RuleSet;
+  custom_info_types: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigCustomInfoTypes;
+  info_types: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigInfoTypes;
+  limits: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfiglimits;
+  rule_set: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfigRuleSet;
 }
-export interface ExcludedFields {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsExcludedFields {
   name: string;
 }
-export interface IdentifyingFields {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsIdentifyingFields {
   name: string;
 }
-export interface IncludedFields {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsIncludedFields {
   name: string;
 }
-export interface TableReference {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsTableReference {
   dataset_id: string;
   project_id: string;
   table_id: string;
 }
-export interface BigQueryOptions {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptions {
   rows_limit?: number;
   rows_limit_percent?: number;
   sample_method?: string;
-  excluded_fields: ExcludedFields;
-  identifying_fields: IdentifyingFields;
-  included_fields: IncludedFields;
-  table_reference: TableReference;
+  excluded_fields: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsExcludedFields;
+  identifying_fields: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsIdentifyingFields;
+  included_fields: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsIncludedFields;
+  table_reference: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptionsTableReference;
 }
-export interface RegexFileSet {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
   bucket_name: string;
   exclude_regex?: string[];
   include_regex?: string[];
 }
-export interface FileSet {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptionsFileSet {
   url?: string;
-  regex_file_set: RegexFileSet;
+  regex_file_set: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet;
 }
-export interface CloudStorageOptions {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptions {
   bytes_limit_per_file?: number;
   bytes_limit_per_file_percent?: number;
   file_types?: string[];
   files_limit_percent?: number;
   sample_method?: string;
-  file_set: FileSet;
+  file_set: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptionsFileSet;
 }
-export interface Kind {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptionskind {
   name: string;
 }
-export interface PartitionId {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptionsPartitionId {
   namespace_id?: string;
   project_id: string;
 }
-export interface DatastoreOptions {
-  kind: Kind;
-  partition_id: PartitionId;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptions {
+  kind: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptionskind;
+  partition_id: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptionsPartitionId;
 }
-export interface IdentifyingFields {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields {
   name: string;
 }
-export interface TableOptions {
-  identifying_fields: IdentifyingFields;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptionsTableOptions {
+  identifying_fields: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptionsTableOptionsIdentifyingFields;
 }
-export interface HybridOptions {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptions {
   description?: string;
   labels?: {
     [key: string]: string;
   };
   required_finding_label_keys?: string[];
-  table_options: TableOptions;
+  table_options: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptionsTableOptions;
 }
-export interface TimestampField {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigTimespanConfigTimestampField {
   name: string;
 }
-export interface TimespanConfig {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigTimespanConfig {
   enable_auto_population_of_timespan_config?: boolean;
   end_time?: string;
   start_time?: string;
-  timestamp_field: TimestampField;
+  timestamp_field: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigTimespanConfigTimestampField;
 }
-export interface StorageConfig {
-  big_query_options: BigQueryOptions;
-  cloud_storage_options: CloudStorageOptions;
-  datastore_options: DatastoreOptions;
-  hybrid_options: HybridOptions;
-  timespan_config: TimespanConfig;
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfig {
+  big_query_options: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigBigQueryOptions;
+  cloud_storage_options: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigCloudStorageOptions;
+  datastore_options: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigDatastoreOptions;
+  hybrid_options: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigHybridOptions;
+  timespan_config: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfigTimespanConfig;
 }
-export interface InspectJob {
+export interface GoogleDataLossPreventionJobTriggerArgsInspectJob {
   inspect_template_name?: string;
-  actions: Actions;
-  inspect_config: InspectConfig;
-  storage_config: StorageConfig;
+  actions: GoogleDataLossPreventionJobTriggerArgsInspectJobactions;
+  inspect_config: GoogleDataLossPreventionJobTriggerArgsInspectJobInspectConfig;
+  storage_config: GoogleDataLossPreventionJobTriggerArgsInspectJobStorageConfig;
 }
-export interface Timeouts {
+export interface GoogleDataLossPreventionJobTriggerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Manual {}
-export interface Schedule {
+export interface GoogleDataLossPreventionJobTriggerArgstriggersmanual {}
+export interface GoogleDataLossPreventionJobTriggerArgstriggersschedule {
   recurrence_period_duration?: string;
 }
-export interface Triggers {
-  manual: Manual;
-  schedule: Schedule;
+export interface GoogleDataLossPreventionJobTriggerArgstriggers {
+  manual: GoogleDataLossPreventionJobTriggerArgstriggersmanual;
+  schedule: GoogleDataLossPreventionJobTriggerArgstriggersschedule;
 }
 export interface GoogleDataLossPreventionJobTriggerArgs {
   description?: string;
   display_name?: string;
   parent: string;
   status?: string;
-  inspect_job: InspectJob;
-  timeouts: Timeouts;
-  triggers: Triggers;
+  inspect_job: GoogleDataLossPreventionJobTriggerArgsInspectJob;
+  timeouts: GoogleDataLossPreventionJobTriggerArgstimeouts;
+  triggers: GoogleDataLossPreventionJobTriggerArgstriggers;
 }
 export class google_data_loss_prevention_job_trigger extends TerraformResource {
   readonly create_time!: string;

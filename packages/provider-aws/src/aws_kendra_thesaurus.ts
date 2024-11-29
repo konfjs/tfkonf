@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SourceS3Path {
+export interface AwsKendraThesaurusArgsSourceS3Path {
   bucket: string;
   key: string;
 }
-export interface Timeouts {
+export interface AwsKendraThesaurusArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface AwsKendraThesaurusArgs {
   tags?: {
     [key: string]: string;
   };
-  source_s3_path: SourceS3Path;
-  timeouts: Timeouts;
+  source_s3_path: AwsKendraThesaurusArgsSourceS3Path;
+  timeouts: AwsKendraThesaurusArgstimeouts;
 }
 export class aws_kendra_thesaurus extends TerraformResource {
   readonly arn!: string;

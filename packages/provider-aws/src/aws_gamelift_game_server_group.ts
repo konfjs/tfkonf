@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetTrackingConfiguration {
+export interface AwsGameliftGameServerGroupArgsAutoScalingPolicyTargetTrackingConfiguration {
   target_value: number;
 }
-export interface AutoScalingPolicy {
-  target_tracking_configuration: TargetTrackingConfiguration;
+export interface AwsGameliftGameServerGroupArgsAutoScalingPolicy {
+  target_tracking_configuration: AwsGameliftGameServerGroupArgsAutoScalingPolicyTargetTrackingConfiguration;
 }
-export interface InstanceDefinition {
+export interface AwsGameliftGameServerGroupArgsInstanceDefinition {
   instance_type: string;
   weighted_capacity?: string;
 }
-export interface LaunchTemplate {
+export interface AwsGameliftGameServerGroupArgsLaunchTemplate {
   version?: string;
 }
-export interface Timeouts {
+export interface AwsGameliftGameServerGroupArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -25,10 +25,10 @@ export interface AwsGameliftGameServerGroupArgs {
     [key: string]: string;
   };
   vpc_subnets?: string[];
-  auto_scaling_policy: AutoScalingPolicy;
-  instance_definition: InstanceDefinition;
-  launch_template: LaunchTemplate;
-  timeouts: Timeouts;
+  auto_scaling_policy: AwsGameliftGameServerGroupArgsAutoScalingPolicy;
+  instance_definition: AwsGameliftGameServerGroupArgsInstanceDefinition;
+  launch_template: AwsGameliftGameServerGroupArgsLaunchTemplate;
+  timeouts: AwsGameliftGameServerGroupArgstimeouts;
 }
 export class aws_gamelift_game_server_group extends TerraformResource {
   readonly arn!: string;

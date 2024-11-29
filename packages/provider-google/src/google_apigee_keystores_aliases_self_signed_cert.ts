@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Subject {
+export interface GoogleApigeeKeystoresAliasesSelfSignedCertArgssubject {
   common_name?: string;
   country_code?: string;
   email?: string;
@@ -8,10 +8,10 @@ export interface Subject {
   org_unit?: string;
   state?: string;
 }
-export interface SubjectAlternativeDnsNames {
+export interface GoogleApigeeKeystoresAliasesSelfSignedCertArgsSubjectAlternativeDnsNames {
   subject_alternative_name?: string;
 }
-export interface Timeouts {
+export interface GoogleApigeeKeystoresAliasesSelfSignedCertArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -23,9 +23,9 @@ export interface GoogleApigeeKeystoresAliasesSelfSignedCertArgs {
   keystore: string;
   org_id: string;
   sig_alg: string;
-  subject: Subject;
-  subject_alternative_dns_names: SubjectAlternativeDnsNames;
-  timeouts: Timeouts;
+  subject: GoogleApigeeKeystoresAliasesSelfSignedCertArgssubject;
+  subject_alternative_dns_names: GoogleApigeeKeystoresAliasesSelfSignedCertArgsSubjectAlternativeDnsNames;
+  timeouts: GoogleApigeeKeystoresAliasesSelfSignedCertArgstimeouts;
 }
 export class google_apigee_keystores_aliases_self_signed_cert extends TerraformResource {
   readonly certs_info!: any[];

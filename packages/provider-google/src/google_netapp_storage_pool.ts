@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetappStoragePoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleNetappStoragePoolArgs {
   replica_zone?: string;
   service_level: string;
   zone?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetappStoragePoolArgstimeouts;
 }
 export class google_netapp_storage_pool extends TerraformResource {
   readonly effective_labels!: {

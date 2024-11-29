@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessConfig {
+export interface AwsEksClusterArgsAccessConfig {
   bootstrap_cluster_creator_admin_permissions?: boolean;
 }
-export interface Provider {
+export interface AwsEksClusterArgsEncryptionConfigprovider {
   key_arn: string;
 }
-export interface EncryptionConfig {
+export interface AwsEksClusterArgsEncryptionConfig {
   resources: string[];
-  provider: Provider;
+  provider: AwsEksClusterArgsEncryptionConfigprovider;
 }
-export interface KubernetesNetworkConfig {}
-export interface ControlPlanePlacement {
+export interface AwsEksClusterArgsKubernetesNetworkConfig {}
+export interface AwsEksClusterArgsOutpostConfigControlPlanePlacement {
   group_name: string;
 }
-export interface OutpostConfig {
+export interface AwsEksClusterArgsOutpostConfig {
   control_plane_instance_type: string;
   outpost_arns: string[];
-  control_plane_placement: ControlPlanePlacement;
+  control_plane_placement: AwsEksClusterArgsOutpostConfigControlPlanePlacement;
 }
-export interface Timeouts {
+export interface AwsEksClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UpgradePolicy {}
-export interface VpcConfig {
+export interface AwsEksClusterArgsUpgradePolicy {}
+export interface AwsEksClusterArgsVpcConfig {
   endpoint_private_access?: boolean;
   endpoint_public_access?: boolean;
   security_group_ids?: string[];
   subnet_ids: string[];
 }
-export interface ZonalShiftConfig {
+export interface AwsEksClusterArgsZonalShiftConfig {
   enabled?: boolean;
 }
 export interface AwsEksClusterArgs {
@@ -41,14 +41,14 @@ export interface AwsEksClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  access_config: AccessConfig;
-  encryption_config: EncryptionConfig;
-  kubernetes_network_config: KubernetesNetworkConfig;
-  outpost_config: OutpostConfig;
-  timeouts: Timeouts;
-  upgrade_policy: UpgradePolicy;
-  vpc_config: VpcConfig;
-  zonal_shift_config: ZonalShiftConfig;
+  access_config: AwsEksClusterArgsAccessConfig;
+  encryption_config: AwsEksClusterArgsEncryptionConfig;
+  kubernetes_network_config: AwsEksClusterArgsKubernetesNetworkConfig;
+  outpost_config: AwsEksClusterArgsOutpostConfig;
+  timeouts: AwsEksClusterArgstimeouts;
+  upgrade_policy: AwsEksClusterArgsUpgradePolicy;
+  vpc_config: AwsEksClusterArgsVpcConfig;
+  zonal_shift_config: AwsEksClusterArgsZonalShiftConfig;
 }
 export class aws_eks_cluster extends TerraformResource {
   readonly arn!: string;

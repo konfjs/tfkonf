@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleApigeeEnvReferencesArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleApigeeEnvReferencesArgs {
   name: string;
   refers: string;
   resource_type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleApigeeEnvReferencesArgstimeouts;
 }
 export class google_apigee_env_references extends TerraformResource {
   readonly id?: string;

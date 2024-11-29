@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsNetworkInterfaceSgAttachmentArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -7,7 +7,7 @@ export interface Timeouts {
 export interface AwsNetworkInterfaceSgAttachmentArgs {
   network_interface_id: string;
   security_group_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsNetworkInterfaceSgAttachmentArgstimeouts;
 }
 export class aws_network_interface_sg_attachment extends TerraformResource {
   readonly id?: string;

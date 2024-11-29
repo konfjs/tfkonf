@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleIapWebBackendServiceIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleIapWebBackendServiceIamBindingArgs {
   members: string[];
   role: string;
   web_backend_service: string;
-  condition: Condition;
+  condition: GoogleIapWebBackendServiceIamBindingArgscondition;
 }
 export class google_iap_web_backend_service_iam_binding extends TerraformResource {
   readonly etag!: string;

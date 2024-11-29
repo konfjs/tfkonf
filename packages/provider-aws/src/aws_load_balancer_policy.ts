@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PolicyAttribute {
+export interface AwsLoadBalancerPolicyArgsPolicyAttribute {
   name?: string;
   value?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsLoadBalancerPolicyArgs {
   load_balancer_name: string;
   policy_name: string;
   policy_type_name: string;
-  policy_attribute: PolicyAttribute;
+  policy_attribute: AwsLoadBalancerPolicyArgsPolicyAttribute;
 }
 export class aws_load_balancer_policy extends TerraformResource {
   readonly id?: string;

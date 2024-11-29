@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface JwtConfiguration {
+export interface AwsApigatewayv2AuthorizerArgsJwtConfiguration {
   audience?: string[];
   issuer?: string;
 }
-export interface Timeouts {
+export interface AwsApigatewayv2AuthorizerArgstimeouts {
   delete?: string;
 }
 export interface AwsApigatewayv2AuthorizerArgs {
@@ -15,8 +15,8 @@ export interface AwsApigatewayv2AuthorizerArgs {
   enable_simple_responses?: boolean;
   identity_sources?: string[];
   name: string;
-  jwt_configuration: JwtConfiguration;
-  timeouts: Timeouts;
+  jwt_configuration: AwsApigatewayv2AuthorizerArgsJwtConfiguration;
+  timeouts: AwsApigatewayv2AuthorizerArgstimeouts;
 }
 export class aws_apigatewayv2_authorizer extends TerraformResource {
   readonly authorizer_result_ttl_in_seconds?: number;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeliveryAddress {
+export interface AwsSsmcontactsContactChannelArgsDeliveryAddress {
   simple_address: string;
 }
 export interface AwsSsmcontactsContactChannelArgs {
   contact_id: string;
   name: string;
   type: string;
-  delivery_address: DeliveryAddress;
+  delivery_address: AwsSsmcontactsContactChannelArgsDeliveryAddress;
 }
 export class aws_ssmcontacts_contact_channel extends TerraformResource {
   readonly activation_status!: string;

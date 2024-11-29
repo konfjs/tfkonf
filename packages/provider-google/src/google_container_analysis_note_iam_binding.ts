@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleContainerAnalysisNoteIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleContainerAnalysisNoteIamBindingArgs {
   members: string[];
   note: string;
   role: string;
-  condition: Condition;
+  condition: GoogleContainerAnalysisNoteIamBindingArgscondition;
 }
 export class google_container_analysis_note_iam_binding extends TerraformResource {
   readonly etag!: string;

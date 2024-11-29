@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StreamingConfig {
+export interface GoogleSccFolderNotificationConfigArgsStreamingConfig {
   filter: string;
 }
-export interface Timeouts {
+export interface GoogleSccFolderNotificationConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface GoogleSccFolderNotificationConfigArgs {
   description?: string;
   folder: string;
   pubsub_topic: string;
-  streaming_config: StreamingConfig;
-  timeouts: Timeouts;
+  streaming_config: GoogleSccFolderNotificationConfigArgsStreamingConfig;
+  timeouts: GoogleSccFolderNotificationConfigArgstimeouts;
 }
 export class google_scc_folder_notification_config extends TerraformResource {
   readonly id?: string;

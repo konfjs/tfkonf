@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Configuration {
+export interface AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfigurationS3Configuration {
   bucket_name: string;
   enabled: boolean;
 }
-export interface LogDeliveryConfiguration {
-  s3_configuration: S3Configuration;
+export interface AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfiguration {
+  s3_configuration: AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfigurationS3Configuration;
 }
-export interface Timeouts {
+export interface AwsTimestreaminfluxdbDbInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,8 +25,8 @@ export interface AwsTimestreaminfluxdbDbInstanceArgs {
   username: string;
   vpc_security_group_ids: string[];
   vpc_subnet_ids: string[];
-  log_delivery_configuration: LogDeliveryConfiguration;
-  timeouts: Timeouts;
+  log_delivery_configuration: AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfiguration;
+  timeouts: AwsTimestreaminfluxdbDbInstanceArgstimeouts;
 }
 export class aws_timestreaminfluxdb_db_instance extends TerraformResource {
   readonly arn!: string;

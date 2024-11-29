@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Interface {
+export interface GoogleComputeExternalVpnGatewayArgsinterface {
   id?: number;
   ip_address?: string;
   ipv6_address?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeExternalVpnGatewayArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleComputeExternalVpnGatewayArgs {
   };
   name: string;
   redundancy_type?: string;
-  interface: Interface;
-  timeouts: Timeouts;
+  interface: GoogleComputeExternalVpnGatewayArgsinterface;
+  timeouts: GoogleComputeExternalVpnGatewayArgstimeouts;
 }
 export class google_compute_external_vpn_gateway extends TerraformResource {
   readonly effective_labels!: {

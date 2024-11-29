@@ -1,62 +1,62 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdminSettings {
+export interface GoogleLookerInstanceArgsAdminSettings {
   allowed_email_domains?: string[];
 }
-export interface CustomDomain {
+export interface GoogleLookerInstanceArgsCustomDomain {
   domain?: string;
 }
-export interface EndDate {
+export interface GoogleLookerInstanceArgsDenyMaintenancePeriodEndDate {
   day?: number;
   month?: number;
   year?: number;
 }
-export interface StartDate {
+export interface GoogleLookerInstanceArgsDenyMaintenancePeriodStartDate {
   day?: number;
   month?: number;
   year?: number;
 }
-export interface Time {
+export interface GoogleLookerInstanceArgsDenyMaintenancePeriodtime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface DenyMaintenancePeriod {
-  end_date: EndDate;
-  start_date: StartDate;
-  time: Time;
+export interface GoogleLookerInstanceArgsDenyMaintenancePeriod {
+  end_date: GoogleLookerInstanceArgsDenyMaintenancePeriodEndDate;
+  start_date: GoogleLookerInstanceArgsDenyMaintenancePeriodStartDate;
+  time: GoogleLookerInstanceArgsDenyMaintenancePeriodtime;
 }
-export interface EncryptionConfig {
+export interface GoogleLookerInstanceArgsEncryptionConfig {
   kms_key_name?: string;
 }
-export interface StartTime {
+export interface GoogleLookerInstanceArgsMaintenanceWindowStartTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface MaintenanceWindow {
+export interface GoogleLookerInstanceArgsMaintenanceWindow {
   day_of_week: string;
-  start_time: StartTime;
+  start_time: GoogleLookerInstanceArgsMaintenanceWindowStartTime;
 }
-export interface OauthConfig {
+export interface GoogleLookerInstanceArgsOauthConfig {
   client_id: string;
   client_secret: string;
 }
-export interface ServiceAttachments {
+export interface GoogleLookerInstanceArgsPscConfigServiceAttachments {
   local_fqdn?: string;
   target_service_attachment_uri?: string;
 }
-export interface PscConfig {
+export interface GoogleLookerInstanceArgsPscConfig {
   allowed_vpcs?: string[];
-  service_attachments: ServiceAttachments;
+  service_attachments: GoogleLookerInstanceArgsPscConfigServiceAttachments;
 }
-export interface Timeouts {
+export interface GoogleLookerInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UserMetadata {
+export interface GoogleLookerInstanceArgsUserMetadata {
   additional_developer_user_count?: number;
   additional_standard_user_count?: number;
   additional_viewer_user_count?: number;
@@ -71,15 +71,15 @@ export interface GoogleLookerInstanceArgs {
   psc_enabled?: boolean;
   public_ip_enabled?: boolean;
   reserved_range?: string;
-  admin_settings: AdminSettings;
-  custom_domain: CustomDomain;
-  deny_maintenance_period: DenyMaintenancePeriod;
-  encryption_config: EncryptionConfig;
-  maintenance_window: MaintenanceWindow;
-  oauth_config: OauthConfig;
-  psc_config: PscConfig;
-  timeouts: Timeouts;
-  user_metadata: UserMetadata;
+  admin_settings: GoogleLookerInstanceArgsAdminSettings;
+  custom_domain: GoogleLookerInstanceArgsCustomDomain;
+  deny_maintenance_period: GoogleLookerInstanceArgsDenyMaintenancePeriod;
+  encryption_config: GoogleLookerInstanceArgsEncryptionConfig;
+  maintenance_window: GoogleLookerInstanceArgsMaintenanceWindow;
+  oauth_config: GoogleLookerInstanceArgsOauthConfig;
+  psc_config: GoogleLookerInstanceArgsPscConfig;
+  timeouts: GoogleLookerInstanceArgstimeouts;
+  user_metadata: GoogleLookerInstanceArgsUserMetadata;
 }
 export class google_looker_instance extends TerraformResource {
   readonly create_time!: string;

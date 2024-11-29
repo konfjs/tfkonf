@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BgpOptions {
+export interface AwsNetworkmanagerConnectPeerArgsBgpOptions {
   peer_asn?: number;
 }
-export interface Timeouts {
+export interface AwsNetworkmanagerConnectPeerArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,8 +15,8 @@ export interface AwsNetworkmanagerConnectPeerArgs {
   tags?: {
     [key: string]: string;
   };
-  bgp_options: BgpOptions;
-  timeouts: Timeouts;
+  bgp_options: AwsNetworkmanagerConnectPeerArgsBgpOptions;
+  timeouts: AwsNetworkmanagerConnectPeerArgstimeouts;
 }
 export class aws_networkmanager_connect_peer extends TerraformResource {
   readonly arn!: string;

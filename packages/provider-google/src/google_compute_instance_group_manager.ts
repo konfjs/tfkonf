@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AllInstancesConfig {
+export interface GoogleComputeInstanceGroupManagerArgsAllInstancesConfig {
   labels?: {
     [key: string]: string;
   };
@@ -7,36 +7,36 @@ export interface AllInstancesConfig {
     [key: string]: string;
   };
 }
-export interface AutoHealingPolicies {
+export interface GoogleComputeInstanceGroupManagerArgsAutoHealingPolicies {
   health_check: string;
   initial_delay_sec: number;
 }
-export interface InstanceLifecyclePolicy {
+export interface GoogleComputeInstanceGroupManagerArgsInstanceLifecyclePolicy {
   default_action_on_failure?: string;
   force_update_on_repair?: string;
 }
-export interface NamedPort {
+export interface GoogleComputeInstanceGroupManagerArgsNamedPort {
   name: string;
   port: number;
 }
-export interface StatefulDisk {
+export interface GoogleComputeInstanceGroupManagerArgsStatefulDisk {
   delete_rule?: string;
   device_name: string;
 }
-export interface StatefulExternalIp {
+export interface GoogleComputeInstanceGroupManagerArgsStatefulExternalIp {
   delete_rule?: string;
   interface_name?: string;
 }
-export interface StatefulInternalIp {
+export interface GoogleComputeInstanceGroupManagerArgsStatefulInternalIp {
   delete_rule?: string;
   interface_name?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeInstanceGroupManagerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UpdatePolicy {
+export interface GoogleComputeInstanceGroupManagerArgsUpdatePolicy {
   max_surge_percent?: number;
   max_unavailable_percent?: number;
   minimal_action: string;
@@ -44,14 +44,14 @@ export interface UpdatePolicy {
   replacement_method?: string;
   type: string;
 }
-export interface TargetSize {
+export interface GoogleComputeInstanceGroupManagerArgsversionTargetSize {
   fixed?: number;
   percent?: number;
 }
-export interface Version {
+export interface GoogleComputeInstanceGroupManagerArgsversion {
   instance_template: string;
   name?: string;
-  target_size: TargetSize;
+  target_size: GoogleComputeInstanceGroupManagerArgsversionTargetSize;
 }
 export interface GoogleComputeInstanceGroupManagerArgs {
   base_instance_name: string;
@@ -61,16 +61,16 @@ export interface GoogleComputeInstanceGroupManagerArgs {
   target_pools?: string[];
   wait_for_instances?: boolean;
   wait_for_instances_status?: string;
-  all_instances_config: AllInstancesConfig;
-  auto_healing_policies: AutoHealingPolicies;
-  instance_lifecycle_policy: InstanceLifecyclePolicy;
-  named_port: NamedPort;
-  stateful_disk: StatefulDisk;
-  stateful_external_ip: StatefulExternalIp;
-  stateful_internal_ip: StatefulInternalIp;
-  timeouts: Timeouts;
-  update_policy: UpdatePolicy;
-  version: Version;
+  all_instances_config: GoogleComputeInstanceGroupManagerArgsAllInstancesConfig;
+  auto_healing_policies: GoogleComputeInstanceGroupManagerArgsAutoHealingPolicies;
+  instance_lifecycle_policy: GoogleComputeInstanceGroupManagerArgsInstanceLifecyclePolicy;
+  named_port: GoogleComputeInstanceGroupManagerArgsNamedPort;
+  stateful_disk: GoogleComputeInstanceGroupManagerArgsStatefulDisk;
+  stateful_external_ip: GoogleComputeInstanceGroupManagerArgsStatefulExternalIp;
+  stateful_internal_ip: GoogleComputeInstanceGroupManagerArgsStatefulInternalIp;
+  timeouts: GoogleComputeInstanceGroupManagerArgstimeouts;
+  update_policy: GoogleComputeInstanceGroupManagerArgsUpdatePolicy;
+  version: GoogleComputeInstanceGroupManagerArgsversion;
 }
 export class google_compute_instance_group_manager extends TerraformResource {
   readonly creation_timestamp!: string;

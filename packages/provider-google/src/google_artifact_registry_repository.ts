@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciescondition {
   newer_than?: string;
   older_than?: string;
   package_name_prefixes?: string[];
@@ -7,99 +7,99 @@ export interface Condition {
   tag_state?: string;
   version_name_prefixes?: string[];
 }
-export interface MostRecentVersions {
+export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciesMostRecentVersions {
   keep_count?: number;
   package_name_prefixes?: string[];
 }
-export interface CleanupPolicies {
+export interface GoogleArtifactRegistryRepositoryArgsCleanupPolicies {
   action?: string;
   id: string;
-  condition: Condition;
-  most_recent_versions: MostRecentVersions;
+  condition: GoogleArtifactRegistryRepositoryArgsCleanupPoliciescondition;
+  most_recent_versions: GoogleArtifactRegistryRepositoryArgsCleanupPoliciesMostRecentVersions;
 }
-export interface DockerConfig {
+export interface GoogleArtifactRegistryRepositoryArgsDockerConfig {
   immutable_tags?: boolean;
 }
-export interface MavenConfig {
+export interface GoogleArtifactRegistryRepositoryArgsMavenConfig {
   allow_snapshot_overwrites?: boolean;
   version_policy?: string;
 }
-export interface PublicRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigAptRepositoryPublicRepository {
   repository_base: string;
   repository_path: string;
 }
-export interface AptRepository {
-  public_repository: PublicRepository;
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigAptRepository {
+  public_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigAptRepositoryPublicRepository;
 }
-export interface CommonRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigCommonRepository {
   uri: string;
 }
-export interface CustomRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigDockerRepositoryCustomRepository {
   uri?: string;
 }
-export interface DockerRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigDockerRepository {
   public_repository?: string;
-  custom_repository: CustomRepository;
+  custom_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigDockerRepositoryCustomRepository;
 }
-export interface CustomRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigMavenRepositoryCustomRepository {
   uri?: string;
 }
-export interface MavenRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigMavenRepository {
   public_repository?: string;
-  custom_repository: CustomRepository;
+  custom_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigMavenRepositoryCustomRepository;
 }
-export interface CustomRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigNpmRepositoryCustomRepository {
   uri?: string;
 }
-export interface NpmRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigNpmRepository {
   public_repository?: string;
-  custom_repository: CustomRepository;
+  custom_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigNpmRepositoryCustomRepository;
 }
-export interface CustomRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigPythonRepositoryCustomRepository {
   uri?: string;
 }
-export interface PythonRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigPythonRepository {
   public_repository?: string;
-  custom_repository: CustomRepository;
+  custom_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigPythonRepositoryCustomRepository;
 }
-export interface UsernamePasswordCredentials {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials {
   password_secret_version?: string;
   username?: string;
 }
-export interface UpstreamCredentials {
-  username_password_credentials: UsernamePasswordCredentials;
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigUpstreamCredentials {
+  username_password_credentials: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigUpstreamCredentialsUsernamePasswordCredentials;
 }
-export interface PublicRepository {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigYumRepositoryPublicRepository {
   repository_base: string;
   repository_path: string;
 }
-export interface YumRepository {
-  public_repository: PublicRepository;
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigYumRepository {
+  public_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigYumRepositoryPublicRepository;
 }
-export interface RemoteRepositoryConfig {
+export interface GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfig {
   description?: string;
   disable_upstream_validation?: boolean;
-  apt_repository: AptRepository;
-  common_repository: CommonRepository;
-  docker_repository: DockerRepository;
-  maven_repository: MavenRepository;
-  npm_repository: NpmRepository;
-  python_repository: PythonRepository;
-  upstream_credentials: UpstreamCredentials;
-  yum_repository: YumRepository;
+  apt_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigAptRepository;
+  common_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigCommonRepository;
+  docker_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigDockerRepository;
+  maven_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigMavenRepository;
+  npm_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigNpmRepository;
+  python_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigPythonRepository;
+  upstream_credentials: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigUpstreamCredentials;
+  yum_repository: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfigYumRepository;
 }
-export interface Timeouts {
+export interface GoogleArtifactRegistryRepositoryArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UpstreamPolicies {
+export interface GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfigUpstreamPolicies {
   id?: string;
   priority?: number;
   repository?: string;
 }
-export interface VirtualRepositoryConfig {
-  upstream_policies: UpstreamPolicies;
+export interface GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfig {
+  upstream_policies: GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfigUpstreamPolicies;
 }
 export interface GoogleArtifactRegistryRepositoryArgs {
   cleanup_policy_dry_run?: boolean;
@@ -111,12 +111,12 @@ export interface GoogleArtifactRegistryRepositoryArgs {
   };
   mode?: string;
   repository_id: string;
-  cleanup_policies: CleanupPolicies;
-  docker_config: DockerConfig;
-  maven_config: MavenConfig;
-  remote_repository_config: RemoteRepositoryConfig;
-  timeouts: Timeouts;
-  virtual_repository_config: VirtualRepositoryConfig;
+  cleanup_policies: GoogleArtifactRegistryRepositoryArgsCleanupPolicies;
+  docker_config: GoogleArtifactRegistryRepositoryArgsDockerConfig;
+  maven_config: GoogleArtifactRegistryRepositoryArgsMavenConfig;
+  remote_repository_config: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfig;
+  timeouts: GoogleArtifactRegistryRepositoryArgstimeouts;
+  virtual_repository_config: GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfig;
 }
 export class google_artifact_registry_repository extends TerraformResource {
   readonly create_time!: string;

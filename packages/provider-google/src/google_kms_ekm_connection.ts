@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ServerCertificates {
+export interface GoogleKmsEkmConnectionArgsServiceResolversServerCertificates {
   raw_der: string;
 }
-export interface ServiceResolvers {
+export interface GoogleKmsEkmConnectionArgsServiceResolvers {
   hostname: string;
   service_directory_service: string;
-  server_certificates: ServerCertificates;
+  server_certificates: GoogleKmsEkmConnectionArgsServiceResolversServerCertificates;
 }
-export interface Timeouts {
+export interface GoogleKmsEkmConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleKmsEkmConnectionArgs {
   key_management_mode?: string;
   location: string;
   name: string;
-  service_resolvers: ServiceResolvers;
-  timeouts: Timeouts;
+  service_resolvers: GoogleKmsEkmConnectionArgsServiceResolvers;
+  timeouts: GoogleKmsEkmConnectionArgstimeouts;
 }
 export class google_kms_ekm_connection extends TerraformResource {
   readonly create_time!: string;

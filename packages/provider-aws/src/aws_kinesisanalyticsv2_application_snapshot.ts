@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsKinesisanalyticsv2ApplicationSnapshotArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsKinesisanalyticsv2ApplicationSnapshotArgs {
   application_name: string;
   snapshot_name: string;
-  timeouts: Timeouts;
+  timeouts: AwsKinesisanalyticsv2ApplicationSnapshotArgstimeouts;
 }
 export class aws_kinesisanalyticsv2_application_snapshot extends TerraformResource {
   readonly application_version_id!: number;

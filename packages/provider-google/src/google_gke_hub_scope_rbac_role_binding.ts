@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Role {
+export interface GoogleGkeHubScopeRbacRoleBindingArgsrole {
   predefined_role?: string;
 }
-export interface Timeouts {
+export interface GoogleGkeHubScopeRbacRoleBindingArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface GoogleGkeHubScopeRbacRoleBindingArgs {
   scope_id: string;
   scope_rbac_role_binding_id: string;
   user?: string;
-  role: Role;
-  timeouts: Timeouts;
+  role: GoogleGkeHubScopeRbacRoleBindingArgsrole;
+  timeouts: GoogleGkeHubScopeRbacRoleBindingArgstimeouts;
 }
 export class google_gke_hub_scope_rbac_role_binding extends TerraformResource {
   readonly create_time!: string;

@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RepositoryFilter {
+export interface AwsEcrRegistryScanningConfigurationArgsruleRepositoryFilter {
   filter: string;
   filter_type: string;
 }
-export interface Rule {
+export interface AwsEcrRegistryScanningConfigurationArgsrule {
   scan_frequency: string;
-  repository_filter: RepositoryFilter;
+  repository_filter: AwsEcrRegistryScanningConfigurationArgsruleRepositoryFilter;
 }
 export interface AwsEcrRegistryScanningConfigurationArgs {
   scan_type: string;
-  rule: Rule;
+  rule: AwsEcrRegistryScanningConfigurationArgsrule;
 }
 export class aws_ecr_registry_scanning_configuration extends TerraformResource {
   readonly id?: string;

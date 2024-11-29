@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleMonitoringGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleMonitoringGroupArgs {
   filter: string;
   is_cluster?: boolean;
   parent_name?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleMonitoringGroupArgstimeouts;
 }
 export class google_monitoring_group extends TerraformResource {
   readonly id?: string;

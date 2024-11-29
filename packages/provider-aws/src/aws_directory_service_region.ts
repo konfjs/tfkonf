@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDirectoryServiceRegionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcSettings {
+export interface AwsDirectoryServiceRegionArgsVpcSettings {
   subnet_ids: string[];
   vpc_id: string;
 }
@@ -14,8 +14,8 @@ export interface AwsDirectoryServiceRegionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
-  vpc_settings: VpcSettings;
+  timeouts: AwsDirectoryServiceRegionArgstimeouts;
+  vpc_settings: AwsDirectoryServiceRegionArgsVpcSettings;
 }
 export class aws_directory_service_region extends TerraformResource {
   readonly desired_number_of_domain_controllers?: number;

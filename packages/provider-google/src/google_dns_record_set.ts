@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -8,15 +8,15 @@ export interface InternalLoadBalancers {
   project: string;
   region?: string;
 }
-export interface HealthCheckedTargets {
-  internal_load_balancers: InternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargets {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargetsInternalLoadBalancers;
 }
-export interface Geo {
+export interface GoogleDnsRecordSetArgsRoutingPolicygeo {
   location: string;
   rrdatas?: string[];
-  health_checked_targets: HealthCheckedTargets;
+  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargets;
 }
-export interface InternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -25,15 +25,15 @@ export interface InternalLoadBalancers {
   project: string;
   region?: string;
 }
-export interface HealthCheckedTargets {
-  internal_load_balancers: InternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers;
 }
-export interface BackupGeo {
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeo {
   location: string;
   rrdatas?: string[];
-  health_checked_targets: HealthCheckedTargets;
+  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets;
 }
-export interface InternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimaryInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -42,16 +42,16 @@ export interface InternalLoadBalancers {
   project: string;
   region?: string;
 }
-export interface Primary {
-  internal_load_balancers: InternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimary {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimaryInternalLoadBalancers;
 }
-export interface PrimaryBackup {
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackup {
   enable_geo_fencing_for_backups?: boolean;
   trickle_ratio?: number;
-  backup_geo: BackupGeo;
-  primary: Primary;
+  backup_geo: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeo;
+  primary: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimary;
 }
-export interface InternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -60,19 +60,19 @@ export interface InternalLoadBalancers {
   project: string;
   region?: string;
 }
-export interface HealthCheckedTargets {
-  internal_load_balancers: InternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargets {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargetsInternalLoadBalancers;
 }
-export interface Wrr {
+export interface GoogleDnsRecordSetArgsRoutingPolicywrr {
   rrdatas?: string[];
   weight: number;
-  health_checked_targets: HealthCheckedTargets;
+  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargets;
 }
-export interface RoutingPolicy {
+export interface GoogleDnsRecordSetArgsRoutingPolicy {
   enable_geo_fencing?: boolean;
-  geo: Geo;
-  primary_backup: PrimaryBackup;
-  wrr: Wrr;
+  geo: GoogleDnsRecordSetArgsRoutingPolicygeo;
+  primary_backup: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackup;
+  wrr: GoogleDnsRecordSetArgsRoutingPolicywrr;
 }
 export interface GoogleDnsRecordSetArgs {
   managed_zone: string;
@@ -80,7 +80,7 @@ export interface GoogleDnsRecordSetArgs {
   rrdatas?: string[];
   ttl?: number;
   type: string;
-  routing_policy: RoutingPolicy;
+  routing_policy: GoogleDnsRecordSetArgsRoutingPolicy;
 }
 export class google_dns_record_set extends TerraformResource {
   readonly id?: string;

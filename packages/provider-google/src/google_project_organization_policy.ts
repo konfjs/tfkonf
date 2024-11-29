@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BooleanPolicy {
+export interface GoogleProjectOrganizationPolicyArgsBooleanPolicy {
   enforced: boolean;
 }
-export interface Allow {
+export interface GoogleProjectOrganizationPolicyArgsListPolicyallow {
   all?: boolean;
   values?: string[];
 }
-export interface Deny {
+export interface GoogleProjectOrganizationPolicyArgsListPolicydeny {
   all?: boolean;
   values?: string[];
 }
-export interface ListPolicy {
+export interface GoogleProjectOrganizationPolicyArgsListPolicy {
   inherit_from_parent?: boolean;
-  allow: Allow;
-  deny: Deny;
+  allow: GoogleProjectOrganizationPolicyArgsListPolicyallow;
+  deny: GoogleProjectOrganizationPolicyArgsListPolicydeny;
 }
-export interface RestorePolicy {
+export interface GoogleProjectOrganizationPolicyArgsRestorePolicy {
   default: boolean;
 }
-export interface Timeouts {
+export interface GoogleProjectOrganizationPolicyArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -27,10 +27,10 @@ export interface Timeouts {
 export interface GoogleProjectOrganizationPolicyArgs {
   constraint: string;
   project: string;
-  boolean_policy: BooleanPolicy;
-  list_policy: ListPolicy;
-  restore_policy: RestorePolicy;
-  timeouts: Timeouts;
+  boolean_policy: GoogleProjectOrganizationPolicyArgsBooleanPolicy;
+  list_policy: GoogleProjectOrganizationPolicyArgsListPolicy;
+  restore_policy: GoogleProjectOrganizationPolicyArgsRestorePolicy;
+  timeouts: GoogleProjectOrganizationPolicyArgstimeouts;
 }
 export class google_project_organization_policy extends TerraformResource {
   readonly etag!: string;

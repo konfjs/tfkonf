@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkServicesGatewayArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,7 +21,7 @@ export interface GoogleNetworkServicesGatewayArgs {
   server_tls_policy?: string;
   subnetwork?: string;
   type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkServicesGatewayArgstimeouts;
 }
 export class google_network_services_gateway extends TerraformResource {
   readonly addresses?: string[];

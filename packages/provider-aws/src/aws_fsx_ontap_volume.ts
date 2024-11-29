@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AggregateConfiguration {}
-export interface AutocommitPeriod {
+export interface AwsFsxOntapVolumeArgsAggregateConfiguration {}
+export interface AwsFsxOntapVolumeArgsSnaplockConfigurationAutocommitPeriod {
   value?: number;
 }
-export interface DefaultRetention {
+export interface AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodDefaultRetention {
   value?: number;
 }
-export interface MaximumRetention {
+export interface AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodMaximumRetention {
   value?: number;
 }
-export interface MinimumRetention {
+export interface AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodMinimumRetention {
   value?: number;
 }
-export interface RetentionPeriod {
-  default_retention: DefaultRetention;
-  maximum_retention: MaximumRetention;
-  minimum_retention: MinimumRetention;
+export interface AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriod {
+  default_retention: AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodDefaultRetention;
+  maximum_retention: AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodMaximumRetention;
+  minimum_retention: AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriodMinimumRetention;
 }
-export interface SnaplockConfiguration {
+export interface AwsFsxOntapVolumeArgsSnaplockConfiguration {
   audit_log_volume?: boolean;
   privileged_delete?: string;
   snaplock_type: string;
   volume_append_mode_enabled?: boolean;
-  autocommit_period: AutocommitPeriod;
-  retention_period: RetentionPeriod;
+  autocommit_period: AwsFsxOntapVolumeArgsSnaplockConfigurationAutocommitPeriod;
+  retention_period: AwsFsxOntapVolumeArgsSnaplockConfigurationRetentionPeriod;
 }
-export interface TieringPolicy {}
-export interface Timeouts {
+export interface AwsFsxOntapVolumeArgsTieringPolicy {}
+export interface AwsFsxOntapVolumeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -46,10 +46,10 @@ export interface AwsFsxOntapVolumeArgs {
     [key: string]: string;
   };
   volume_type?: string;
-  aggregate_configuration: AggregateConfiguration;
-  snaplock_configuration: SnaplockConfiguration;
-  tiering_policy: TieringPolicy;
-  timeouts: Timeouts;
+  aggregate_configuration: AwsFsxOntapVolumeArgsAggregateConfiguration;
+  snaplock_configuration: AwsFsxOntapVolumeArgsSnaplockConfiguration;
+  tiering_policy: AwsFsxOntapVolumeArgsTieringPolicy;
+  timeouts: AwsFsxOntapVolumeArgstimeouts;
 }
 export class aws_fsx_ontap_volume extends TerraformResource {
   readonly arn!: string;

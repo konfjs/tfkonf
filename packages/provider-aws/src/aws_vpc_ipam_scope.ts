@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsVpcIpamScopeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsVpcIpamScopeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsVpcIpamScopeArgstimeouts;
 }
 export class aws_vpc_ipam_scope extends TerraformResource {
   readonly arn!: string;

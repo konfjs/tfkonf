@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Items {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesitems {
   content_type: string;
   format: string;
   profile_id?: string;
 }
-export interface ContentTypeProfiles {
-  items: Items;
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfiles {
+  items: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfilesitems;
 }
-export interface ContentTypeProfileConfig {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfig {
   forward_when_content_type_is_unknown: boolean;
-  content_type_profiles: ContentTypeProfiles;
+  content_type_profiles: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfigContentTypeProfiles;
 }
-export interface Items {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesitems {
   profile_id: string;
   query_arg: string;
 }
-export interface QueryArgProfiles {
-  items: Items;
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfiles {
+  items: AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfilesitems;
 }
-export interface QueryArgProfileConfig {
+export interface AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfig {
   forward_when_query_arg_profile_is_unknown: boolean;
-  query_arg_profiles: QueryArgProfiles;
+  query_arg_profiles: AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfigQueryArgProfiles;
 }
 export interface AwsCloudfrontFieldLevelEncryptionConfigArgs {
   comment?: string;
-  content_type_profile_config: ContentTypeProfileConfig;
-  query_arg_profile_config: QueryArgProfileConfig;
+  content_type_profile_config: AwsCloudfrontFieldLevelEncryptionConfigArgsContentTypeProfileConfig;
+  query_arg_profile_config: AwsCloudfrontFieldLevelEncryptionConfigArgsQueryArgProfileConfig;
 }
 export class aws_cloudfront_field_level_encryption_config extends TerraformResource {
   readonly caller_reference!: string;

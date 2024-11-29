@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataPrivacy {
+export interface AwsLexv2modelsBotArgsDataPrivacy {
   child_directed: boolean;
 }
-export interface Members {
+export interface AwsLexv2modelsBotArgsmembers {
   alias_id: string;
   alias_name: string;
   id: string;
   name: string;
   version: string;
 }
-export interface Timeouts {
+export interface AwsLexv2modelsBotArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,9 +25,9 @@ export interface AwsLexv2modelsBotArgs {
   test_bot_alias_tags?: {
     [key: string]: string;
   };
-  data_privacy: DataPrivacy;
-  members: Members;
-  timeouts: Timeouts;
+  data_privacy: AwsLexv2modelsBotArgsDataPrivacy;
+  members: AwsLexv2modelsBotArgsmembers;
+  timeouts: AwsLexv2modelsBotArgstimeouts;
 }
 export class aws_lexv2models_bot extends TerraformResource {
   readonly arn!: string;

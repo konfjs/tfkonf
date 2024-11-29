@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SignatureValidityPeriod {
+export interface AwsSignerSigningProfileArgsSignatureValidityPeriod {
   type: string;
   value: number;
 }
-export interface SigningMaterial {
+export interface AwsSignerSigningProfileArgsSigningMaterial {
   certificate_arn: string;
 }
 export interface AwsSignerSigningProfileArgs {
@@ -11,8 +11,8 @@ export interface AwsSignerSigningProfileArgs {
   tags?: {
     [key: string]: string;
   };
-  signature_validity_period: SignatureValidityPeriod;
-  signing_material: SigningMaterial;
+  signature_validity_period: AwsSignerSigningProfileArgsSignatureValidityPeriod;
+  signing_material: AwsSignerSigningProfileArgsSigningMaterial;
 }
 export class aws_signer_signing_profile extends TerraformResource {
   readonly arn!: string;

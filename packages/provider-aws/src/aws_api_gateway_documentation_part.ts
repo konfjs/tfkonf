@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Location {
+export interface AwsApiGatewayDocumentationPartArgslocation {
   method?: string;
   name?: string;
   path?: string;
@@ -9,7 +9,7 @@ export interface Location {
 export interface AwsApiGatewayDocumentationPartArgs {
   properties: string;
   rest_api_id: string;
-  location: Location;
+  location: AwsApiGatewayDocumentationPartArgslocation;
 }
 export class aws_api_gateway_documentation_part extends TerraformResource {
   readonly documentation_part_id!: string;

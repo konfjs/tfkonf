@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuditLogs {
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourceskubernetesAuditLogs {
   enable: boolean;
 }
-export interface Kubernetes {
-  audit_logs: AuditLogs;
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourceskubernetes {
+  audit_logs: AwsGuarddutyOrganizationConfigurationArgsdatasourceskubernetesAuditLogs;
 }
-export interface EbsVolumes {
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes {
   auto_enable: boolean;
 }
-export interface ScanEc2InstanceWithFindings {
-  ebs_volumes: EbsVolumes;
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindings {
+  ebs_volumes: AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindingsEbsVolumes;
 }
-export interface MalwareProtection {
-  scan_ec2_instance_with_findings: ScanEc2InstanceWithFindings;
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtection {
+  scan_ec2_instance_with_findings: AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtectionScanEc2InstanceWithFindings;
 }
-export interface S3Logs {
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasourcesS3Logs {
   auto_enable: boolean;
 }
-export interface Datasources {
-  kubernetes: Kubernetes;
-  malware_protection: MalwareProtection;
-  s3_logs: S3Logs;
+export interface AwsGuarddutyOrganizationConfigurationArgsdatasources {
+  kubernetes: AwsGuarddutyOrganizationConfigurationArgsdatasourceskubernetes;
+  malware_protection: AwsGuarddutyOrganizationConfigurationArgsdatasourcesMalwareProtection;
+  s3_logs: AwsGuarddutyOrganizationConfigurationArgsdatasourcesS3Logs;
 }
 export interface AwsGuarddutyOrganizationConfigurationArgs {
   detector_id: string;
-  datasources: Datasources;
+  datasources: AwsGuarddutyOrganizationConfigurationArgsdatasources;
 }
 export class aws_guardduty_organization_configuration extends TerraformResource {
   readonly auto_enable?: boolean;

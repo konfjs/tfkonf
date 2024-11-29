@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PackageSource {
+export interface AwsOpensearchPackageArgsPackageSource {
   s3_bucket_name: string;
   s3_key: string;
 }
@@ -7,7 +7,7 @@ export interface AwsOpensearchPackageArgs {
   package_description?: string;
   package_name: string;
   package_type: string;
-  package_source: PackageSource;
+  package_source: AwsOpensearchPackageArgsPackageSource;
 }
 export class aws_opensearch_package extends TerraformResource {
   readonly available_package_version!: string;

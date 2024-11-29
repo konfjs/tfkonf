@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleBigtableTableIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleBigtableTableIamMemberArgs {
   member: string;
   role: string;
   table: string;
-  condition: Condition;
+  condition: GoogleBigtableTableIamMemberArgscondition;
 }
 export class google_bigtable_table_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,42 +1,42 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppEngineRoutingOverride {
+export interface GoogleCloudTasksQueueArgsAppEngineRoutingOverride {
   instance?: string;
   service?: string;
   version?: string;
 }
-export interface Header {
+export interface GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesheader {
   key: string;
   value: string;
 }
-export interface HeaderOverrides {
-  header: Header;
+export interface GoogleCloudTasksQueueArgsHttpTargetHeaderOverrides {
+  header: GoogleCloudTasksQueueArgsHttpTargetHeaderOverridesheader;
 }
-export interface OauthToken {
+export interface GoogleCloudTasksQueueArgsHttpTargetOauthToken {
   service_account_email: string;
 }
-export interface OidcToken {
+export interface GoogleCloudTasksQueueArgsHttpTargetOidcToken {
   service_account_email: string;
 }
-export interface PathOverride {}
-export interface QueryOverride {}
-export interface UriOverride {
+export interface GoogleCloudTasksQueueArgsHttpTargetUriOverridePathOverride {}
+export interface GoogleCloudTasksQueueArgsHttpTargetUriOverrideQueryOverride {}
+export interface GoogleCloudTasksQueueArgsHttpTargetUriOverride {
   host?: string;
   port?: string;
-  path_override: PathOverride;
-  query_override: QueryOverride;
+  path_override: GoogleCloudTasksQueueArgsHttpTargetUriOverridePathOverride;
+  query_override: GoogleCloudTasksQueueArgsHttpTargetUriOverrideQueryOverride;
 }
-export interface HttpTarget {
-  header_overrides: HeaderOverrides;
-  oauth_token: OauthToken;
-  oidc_token: OidcToken;
-  uri_override: UriOverride;
+export interface GoogleCloudTasksQueueArgsHttpTarget {
+  header_overrides: GoogleCloudTasksQueueArgsHttpTargetHeaderOverrides;
+  oauth_token: GoogleCloudTasksQueueArgsHttpTargetOauthToken;
+  oidc_token: GoogleCloudTasksQueueArgsHttpTargetOidcToken;
+  uri_override: GoogleCloudTasksQueueArgsHttpTargetUriOverride;
 }
-export interface RateLimits {}
-export interface RetryConfig {}
-export interface StackdriverLoggingConfig {
+export interface GoogleCloudTasksQueueArgsRateLimits {}
+export interface GoogleCloudTasksQueueArgsRetryConfig {}
+export interface GoogleCloudTasksQueueArgsStackdriverLoggingConfig {
   sampling_ratio: number;
 }
-export interface Timeouts {
+export interface GoogleCloudTasksQueueArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -44,12 +44,12 @@ export interface Timeouts {
 export interface GoogleCloudTasksQueueArgs {
   location: string;
   name?: string;
-  app_engine_routing_override: AppEngineRoutingOverride;
-  http_target: HttpTarget;
-  rate_limits: RateLimits;
-  retry_config: RetryConfig;
-  stackdriver_logging_config: StackdriverLoggingConfig;
-  timeouts: Timeouts;
+  app_engine_routing_override: GoogleCloudTasksQueueArgsAppEngineRoutingOverride;
+  http_target: GoogleCloudTasksQueueArgsHttpTarget;
+  rate_limits: GoogleCloudTasksQueueArgsRateLimits;
+  retry_config: GoogleCloudTasksQueueArgsRetryConfig;
+  stackdriver_logging_config: GoogleCloudTasksQueueArgsStackdriverLoggingConfig;
+  timeouts: GoogleCloudTasksQueueArgstimeouts;
 }
 export class google_cloud_tasks_queue extends TerraformResource {
   readonly id?: string;

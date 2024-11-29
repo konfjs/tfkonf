@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoScalingConfiguration {
+export interface AwsFinspaceKxClusterArgsAutoScalingConfiguration {
   auto_scaling_metric: string;
   max_node_count: number;
   metric_target: number;
@@ -7,50 +7,50 @@ export interface AutoScalingConfiguration {
   scale_in_cooldown_seconds: number;
   scale_out_cooldown_seconds: number;
 }
-export interface CacheStorageConfigurations {
+export interface AwsFinspaceKxClusterArgsCacheStorageConfigurations {
   size: number;
   type: string;
 }
-export interface CapacityConfiguration {
+export interface AwsFinspaceKxClusterArgsCapacityConfiguration {
   node_count: number;
   node_type: string;
 }
-export interface Code {
+export interface AwsFinspaceKxClusterArgscode {
   s3_bucket: string;
   s3_key: string;
   s3_object_version?: string;
 }
-export interface CacheConfigurations {
+export interface AwsFinspaceKxClusterArgsdatabaseCacheConfigurations {
   cache_type: string;
   db_paths?: string[];
 }
-export interface Database {
+export interface AwsFinspaceKxClusterArgsdatabase {
   changeset_id?: string;
   database_name: string;
   dataview_name?: string;
-  cache_configurations: CacheConfigurations;
+  cache_configurations: AwsFinspaceKxClusterArgsdatabaseCacheConfigurations;
 }
-export interface SavedownStorageConfiguration {
+export interface AwsFinspaceKxClusterArgsSavedownStorageConfiguration {
   size?: number;
   type?: string;
   volume_name?: string;
 }
-export interface ScalingGroupConfiguration {
+export interface AwsFinspaceKxClusterArgsScalingGroupConfiguration {
   cpu?: number;
   memory_limit?: number;
   memory_reservation: number;
   node_count: number;
   scaling_group_name: string;
 }
-export interface TickerplantLogConfiguration {
+export interface AwsFinspaceKxClusterArgsTickerplantLogConfiguration {
   tickerplant_log_volumes: string[];
 }
-export interface Timeouts {
+export interface AwsFinspaceKxClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcConfiguration {
+export interface AwsFinspaceKxClusterArgsVpcConfiguration {
   ip_address_type: string;
   security_group_ids: string[];
   subnet_ids: string[];
@@ -72,16 +72,16 @@ export interface AwsFinspaceKxClusterArgs {
     [key: string]: string;
   };
   type: string;
-  auto_scaling_configuration: AutoScalingConfiguration;
-  cache_storage_configurations: CacheStorageConfigurations;
-  capacity_configuration: CapacityConfiguration;
-  code: Code;
-  database: Database;
-  savedown_storage_configuration: SavedownStorageConfiguration;
-  scaling_group_configuration: ScalingGroupConfiguration;
-  tickerplant_log_configuration: TickerplantLogConfiguration;
-  timeouts: Timeouts;
-  vpc_configuration: VpcConfiguration;
+  auto_scaling_configuration: AwsFinspaceKxClusterArgsAutoScalingConfiguration;
+  cache_storage_configurations: AwsFinspaceKxClusterArgsCacheStorageConfigurations;
+  capacity_configuration: AwsFinspaceKxClusterArgsCapacityConfiguration;
+  code: AwsFinspaceKxClusterArgscode;
+  database: AwsFinspaceKxClusterArgsdatabase;
+  savedown_storage_configuration: AwsFinspaceKxClusterArgsSavedownStorageConfiguration;
+  scaling_group_configuration: AwsFinspaceKxClusterArgsScalingGroupConfiguration;
+  tickerplant_log_configuration: AwsFinspaceKxClusterArgsTickerplantLogConfiguration;
+  timeouts: AwsFinspaceKxClusterArgstimeouts;
+  vpc_configuration: AwsFinspaceKxClusterArgsVpcConfiguration;
 }
 export class aws_finspace_kx_cluster extends TerraformResource {
   readonly arn!: string;

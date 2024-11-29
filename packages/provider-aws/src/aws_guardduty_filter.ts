@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Criterion {
+export interface AwsGuarddutyFilterArgsFindingCriteriacriterion {
   equals?: string[];
   field: string;
   greater_than?: string;
@@ -8,8 +8,8 @@ export interface Criterion {
   less_than_or_equal?: string;
   not_equals?: string[];
 }
-export interface FindingCriteria {
-  criterion: Criterion;
+export interface AwsGuarddutyFilterArgsFindingCriteria {
+  criterion: AwsGuarddutyFilterArgsFindingCriteriacriterion;
 }
 export interface AwsGuarddutyFilterArgs {
   action: string;
@@ -20,7 +20,7 @@ export interface AwsGuarddutyFilterArgs {
   tags?: {
     [key: string]: string;
   };
-  finding_criteria: FindingCriteria;
+  finding_criteria: AwsGuarddutyFilterArgsFindingCriteria;
 }
 export class aws_guardduty_filter extends TerraformResource {
   readonly arn!: string;

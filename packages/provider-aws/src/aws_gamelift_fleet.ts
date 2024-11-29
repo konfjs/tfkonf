@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CertificateConfiguration {
+export interface AwsGameliftFleetArgsCertificateConfiguration {
   certificate_type?: string;
 }
-export interface Ec2InboundPermission {
+export interface AwsGameliftFleetArgsEc2InboundPermission {
   from_port: number;
   ip_range: string;
   protocol: string;
   to_port: number;
 }
-export interface ResourceCreationLimitPolicy {
+export interface AwsGameliftFleetArgsResourceCreationLimitPolicy {
   new_game_sessions_per_creator?: number;
   policy_period_in_minutes?: number;
 }
-export interface ServerProcess {
+export interface AwsGameliftFleetArgsRuntimeConfigurationServerProcess {
   concurrent_executions: number;
   launch_path: string;
   parameters?: string;
 }
-export interface RuntimeConfiguration {
+export interface AwsGameliftFleetArgsRuntimeConfiguration {
   game_session_activation_timeout_seconds?: number;
   max_concurrent_game_session_activations?: number;
-  server_process: ServerProcess;
+  server_process: AwsGameliftFleetArgsRuntimeConfigurationServerProcess;
 }
-export interface Timeouts {
+export interface AwsGameliftFleetArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -38,11 +38,11 @@ export interface AwsGameliftFleetArgs {
   tags?: {
     [key: string]: string;
   };
-  certificate_configuration: CertificateConfiguration;
-  ec2_inbound_permission: Ec2InboundPermission;
-  resource_creation_limit_policy: ResourceCreationLimitPolicy;
-  runtime_configuration: RuntimeConfiguration;
-  timeouts: Timeouts;
+  certificate_configuration: AwsGameliftFleetArgsCertificateConfiguration;
+  ec2_inbound_permission: AwsGameliftFleetArgsEc2InboundPermission;
+  resource_creation_limit_policy: AwsGameliftFleetArgsResourceCreationLimitPolicy;
+  runtime_configuration: AwsGameliftFleetArgsRuntimeConfiguration;
+  timeouts: AwsGameliftFleetArgstimeouts;
 }
 export class aws_gamelift_fleet extends TerraformResource {
   readonly arn!: string;

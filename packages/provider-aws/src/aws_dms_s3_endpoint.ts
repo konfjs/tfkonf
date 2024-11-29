@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDmsS3EndpointArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -51,7 +51,7 @@ export interface AwsDmsS3EndpointArgs {
   timestamp_column_name?: string;
   use_csv_no_sup_value?: boolean;
   use_task_start_time_for_full_load_timestamp?: boolean;
-  timeouts: Timeouts;
+  timeouts: AwsDmsS3EndpointArgstimeouts;
 }
 export class aws_dms_s3_endpoint extends TerraformResource {
   readonly certificate_arn?: string;

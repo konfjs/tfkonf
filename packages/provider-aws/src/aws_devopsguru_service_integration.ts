@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KmsServerSideEncryption {}
-export interface LogsAnomalyDetection {}
-export interface OpsCenter {}
+export interface AwsDevopsguruServiceIntegrationArgsKmsServerSideEncryption {}
+export interface AwsDevopsguruServiceIntegrationArgsLogsAnomalyDetection {}
+export interface AwsDevopsguruServiceIntegrationArgsOpsCenter {}
 export interface AwsDevopsguruServiceIntegrationArgs {
-  kms_server_side_encryption: KmsServerSideEncryption;
-  logs_anomaly_detection: LogsAnomalyDetection;
-  ops_center: OpsCenter;
+  kms_server_side_encryption: AwsDevopsguruServiceIntegrationArgsKmsServerSideEncryption;
+  logs_anomaly_detection: AwsDevopsguruServiceIntegrationArgsLogsAnomalyDetection;
+  ops_center: AwsDevopsguruServiceIntegrationArgsOpsCenter;
 }
 export class aws_devopsguru_service_integration extends TerraformResource {
   readonly id!: string;

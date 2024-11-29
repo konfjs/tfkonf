@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AudioExportSettings {
+export interface GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings {
   audio_export_pattern?: string;
   audio_format?: string;
   enable_audio_redaction?: boolean;
   gcs_bucket?: string;
 }
-export interface InsightsExportSettings {
+export interface GoogleDialogflowCxSecuritySettingsArgsInsightsExportSettings {
   enable_insights_export: boolean;
 }
-export interface Timeouts {
+export interface GoogleDialogflowCxSecuritySettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,9 +23,9 @@ export interface GoogleDialogflowCxSecuritySettingsArgs {
   redaction_strategy?: string;
   retention_strategy?: string;
   retention_window_days?: number;
-  audio_export_settings: AudioExportSettings;
-  insights_export_settings: InsightsExportSettings;
-  timeouts: Timeouts;
+  audio_export_settings: GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings;
+  insights_export_settings: GoogleDialogflowCxSecuritySettingsArgsInsightsExportSettings;
+  timeouts: GoogleDialogflowCxSecuritySettingsArgstimeouts;
 }
 export class google_dialogflow_cx_security_settings extends TerraformResource {
   readonly id?: string;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleFirebaserulesReleaseArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleFirebaserulesReleaseArgs {
   name: string;
   ruleset_name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleFirebaserulesReleaseArgstimeouts;
 }
 export class google_firebaserules_release extends TerraformResource {
   readonly create_time!: string;

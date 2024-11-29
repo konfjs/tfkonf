@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeGlobalNetworkEndpointGroupArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleComputeGlobalNetworkEndpointGroupArgs {
   description?: string;
   name: string;
   network_endpoint_type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeGlobalNetworkEndpointGroupArgstimeouts;
 }
 export class google_compute_global_network_endpoint_group extends TerraformResource {
   readonly id?: string;

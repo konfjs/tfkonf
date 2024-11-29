@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Criterion {
+export interface AwsMacie2FindingsFilterArgsFindingCriteriacriterion {
   eq?: string[];
   eq_exact_match?: string[];
   field: string;
@@ -9,8 +9,8 @@ export interface Criterion {
   lte?: string;
   neq?: string[];
 }
-export interface FindingCriteria {
-  criterion: Criterion;
+export interface AwsMacie2FindingsFilterArgsFindingCriteria {
+  criterion: AwsMacie2FindingsFilterArgsFindingCriteriacriterion;
 }
 export interface AwsMacie2FindingsFilterArgs {
   action: string;
@@ -18,7 +18,7 @@ export interface AwsMacie2FindingsFilterArgs {
   tags?: {
     [key: string]: string;
   };
-  finding_criteria: FindingCriteria;
+  finding_criteria: AwsMacie2FindingsFilterArgsFindingCriteria;
 }
 export class aws_macie2_findings_filter extends TerraformResource {
   readonly arn!: string;

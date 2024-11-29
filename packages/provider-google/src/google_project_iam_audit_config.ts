@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuditLogConfig {
+export interface GoogleProjectIamAuditConfigArgsAuditLogConfig {
   exempted_members?: string[];
   log_type: string;
 }
 export interface GoogleProjectIamAuditConfigArgs {
   project: string;
   service: string;
-  audit_log_config: AuditLogConfig;
+  audit_log_config: GoogleProjectIamAuditConfigArgsAuditLogConfig;
 }
 export class google_project_iam_audit_config extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConfigurationProperty {
+export interface AwsCodepipelineCustomActionTypeArgsConfigurationProperty {
   description?: string;
   key: boolean;
   name: string;
@@ -8,15 +8,15 @@ export interface ConfigurationProperty {
   secret: boolean;
   type?: string;
 }
-export interface InputArtifactDetails {
+export interface AwsCodepipelineCustomActionTypeArgsInputArtifactDetails {
   maximum_count: number;
   minimum_count: number;
 }
-export interface OutputArtifactDetails {
+export interface AwsCodepipelineCustomActionTypeArgsOutputArtifactDetails {
   maximum_count: number;
   minimum_count: number;
 }
-export interface Settings {
+export interface AwsCodepipelineCustomActionTypeArgssettings {
   entity_url_template?: string;
   execution_url_template?: string;
   revision_url_template?: string;
@@ -29,10 +29,10 @@ export interface AwsCodepipelineCustomActionTypeArgs {
     [key: string]: string;
   };
   version: string;
-  configuration_property: ConfigurationProperty;
-  input_artifact_details: InputArtifactDetails;
-  output_artifact_details: OutputArtifactDetails;
-  settings: Settings;
+  configuration_property: AwsCodepipelineCustomActionTypeArgsConfigurationProperty;
+  input_artifact_details: AwsCodepipelineCustomActionTypeArgsInputArtifactDetails;
+  output_artifact_details: AwsCodepipelineCustomActionTypeArgsOutputArtifactDetails;
+  settings: AwsCodepipelineCustomActionTypeArgssettings;
 }
 export class aws_codepipeline_custom_action_type extends TerraformResource {
   readonly arn!: string;

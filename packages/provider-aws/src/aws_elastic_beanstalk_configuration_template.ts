@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Setting {
+export interface AwsElasticBeanstalkConfigurationTemplateArgssetting {
   name: string;
   namespace: string;
   resource?: string;
@@ -11,7 +11,7 @@ export interface AwsElasticBeanstalkConfigurationTemplateArgs {
   environment_id?: string;
   name: string;
   solution_stack_name?: string;
-  setting: Setting;
+  setting: AwsElasticBeanstalkConfigurationTemplateArgssetting;
 }
 export class aws_elastic_beanstalk_configuration_template extends TerraformResource {
   readonly id?: string;

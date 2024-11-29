@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NlbResource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceNlbResource {
   arn?: string;
 }
-export interface R53Resource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceR53Resource {
   domain_name?: string;
   record_set_id?: string;
 }
-export interface TargetResource {
-  nlb_resource: NlbResource;
-  r53_resource: R53Resource;
+export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResource {
+  nlb_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceNlbResource;
+  r53_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResourceR53Resource;
 }
-export interface DnsTargetResource {
+export interface AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResource {
   domain_name: string;
   hosted_zone_arn?: string;
   record_set_id?: string;
   record_type?: string;
-  target_resource: TargetResource;
+  target_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResourceTargetResource;
 }
-export interface Resources {
+export interface AwsRoute53recoveryreadinessResourceSetArgsresources {
   readiness_scopes?: string[];
   resource_arn?: string;
-  dns_target_resource: DnsTargetResource;
+  dns_target_resource: AwsRoute53recoveryreadinessResourceSetArgsresourcesDnsTargetResource;
 }
-export interface Timeouts {
+export interface AwsRoute53recoveryreadinessResourceSetArgstimeouts {
   delete?: string;
 }
 export interface AwsRoute53recoveryreadinessResourceSetArgs {
@@ -31,8 +31,8 @@ export interface AwsRoute53recoveryreadinessResourceSetArgs {
   tags?: {
     [key: string]: string;
   };
-  resources: Resources;
-  timeouts: Timeouts;
+  resources: AwsRoute53recoveryreadinessResourceSetArgsresources;
+  timeouts: AwsRoute53recoveryreadinessResourceSetArgstimeouts;
 }
 export class aws_route53recoveryreadiness_resource_set extends TerraformResource {
   readonly arn!: string;

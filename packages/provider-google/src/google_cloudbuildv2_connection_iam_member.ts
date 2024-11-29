@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleCloudbuildv2ConnectionIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudbuildv2ConnectionIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleCloudbuildv2ConnectionIamMemberArgscondition;
 }
 export class google_cloudbuildv2_connection_iam_member extends TerraformResource {
   readonly etag!: string;

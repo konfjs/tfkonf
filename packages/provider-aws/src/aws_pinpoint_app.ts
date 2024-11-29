@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CampaignHook {
+export interface AwsPinpointAppArgsCampaignHook {
   lambda_function_name?: string;
   mode?: string;
   web_url?: string;
 }
-export interface Limits {
+export interface AwsPinpointAppArgslimits {
   daily?: number;
   maximum_duration?: number;
   messages_per_second?: number;
   total?: number;
 }
-export interface QuietTime {
+export interface AwsPinpointAppArgsQuietTime {
   end?: string;
   start?: string;
 }
@@ -18,9 +18,9 @@ export interface AwsPinpointAppArgs {
   tags?: {
     [key: string]: string;
   };
-  campaign_hook: CampaignHook;
-  limits: Limits;
-  quiet_time: QuietTime;
+  campaign_hook: AwsPinpointAppArgsCampaignHook;
+  limits: AwsPinpointAppArgslimits;
+  quiet_time: AwsPinpointAppArgsQuietTime;
 }
 export class aws_pinpoint_app extends TerraformResource {
   readonly application_id!: string;

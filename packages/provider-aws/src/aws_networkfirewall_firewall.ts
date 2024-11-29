@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsNetworkfirewallFirewallArgsEncryptionConfiguration {
   key_id?: string;
   type: string;
 }
-export interface SubnetMapping {
+export interface AwsNetworkfirewallFirewallArgsSubnetMapping {
   subnet_id: string;
 }
-export interface Timeouts {
+export interface AwsNetworkfirewallFirewallArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,9 +22,9 @@ export interface AwsNetworkfirewallFirewallArgs {
     [key: string]: string;
   };
   vpc_id: string;
-  encryption_configuration: EncryptionConfiguration;
-  subnet_mapping: SubnetMapping;
-  timeouts: Timeouts;
+  encryption_configuration: AwsNetworkfirewallFirewallArgsEncryptionConfiguration;
+  subnet_mapping: AwsNetworkfirewallFirewallArgsSubnetMapping;
+  timeouts: AwsNetworkfirewallFirewallArgstimeouts;
 }
 export class aws_networkfirewall_firewall extends TerraformResource {
   readonly arn!: string;

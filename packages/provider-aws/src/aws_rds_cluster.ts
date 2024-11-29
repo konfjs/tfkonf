@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RestoreToPointInTime {
+export interface AwsRdsClusterArgsRestoreToPointInTime {
   restore_to_time?: string;
   restore_type?: string;
   source_cluster_identifier?: string;
   source_cluster_resource_id?: string;
   use_latest_restorable_time?: boolean;
 }
-export interface S3Import {
+export interface AwsRdsClusterArgsS3Import {
   bucket_name: string;
   bucket_prefix?: string;
   ingestion_role: string;
   source_engine: string;
   source_engine_version: string;
 }
-export interface ScalingConfiguration {
+export interface AwsRdsClusterArgsScalingConfiguration {
   auto_pause?: boolean;
   max_capacity?: number;
   min_capacity?: number;
@@ -21,11 +21,11 @@ export interface ScalingConfiguration {
   seconds_until_auto_pause?: number;
   timeout_action?: string;
 }
-export interface Serverlessv2ScalingConfiguration {
+export interface AwsRdsClusterArgsServerlessv2ScalingConfiguration {
   max_capacity: number;
   min_capacity: number;
 }
-export interface Timeouts {
+export interface AwsRdsClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -60,11 +60,11 @@ export interface AwsRdsClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  restore_to_point_in_time: RestoreToPointInTime;
-  s3_import: S3Import;
-  scaling_configuration: ScalingConfiguration;
-  serverlessv2_scaling_configuration: Serverlessv2ScalingConfiguration;
-  timeouts: Timeouts;
+  restore_to_point_in_time: AwsRdsClusterArgsRestoreToPointInTime;
+  s3_import: AwsRdsClusterArgsS3Import;
+  scaling_configuration: AwsRdsClusterArgsScalingConfiguration;
+  serverlessv2_scaling_configuration: AwsRdsClusterArgsServerlessv2ScalingConfiguration;
+  timeouts: AwsRdsClusterArgstimeouts;
 }
 export class aws_rds_cluster extends TerraformResource {
   readonly allocated_storage?: number;

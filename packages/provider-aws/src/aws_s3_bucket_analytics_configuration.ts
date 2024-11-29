@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Filter {
+export interface AwsS3BucketAnalyticsConfigurationArgsfilter {
   prefix?: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface S3BucketDestination {
+export interface AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExportdestinationS3BucketDestination {
   bucket_account_id?: string;
   bucket_arn: string;
   format?: string;
   prefix?: string;
 }
-export interface Destination {
-  s3_bucket_destination: S3BucketDestination;
+export interface AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExportdestination {
+  s3_bucket_destination: AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExportdestinationS3BucketDestination;
 }
-export interface DataExport {
+export interface AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExport {
   output_schema_version?: string;
-  destination: Destination;
+  destination: AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExportdestination;
 }
-export interface StorageClassAnalysis {
-  data_export: DataExport;
+export interface AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysis {
+  data_export: AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysisDataExport;
 }
 export interface AwsS3BucketAnalyticsConfigurationArgs {
   bucket: string;
   name: string;
-  filter: Filter;
-  storage_class_analysis: StorageClassAnalysis;
+  filter: AwsS3BucketAnalyticsConfigurationArgsfilter;
+  storage_class_analysis: AwsS3BucketAnalyticsConfigurationArgsStorageClassAnalysis;
 }
 export class aws_s3_bucket_analytics_configuration extends TerraformResource {
   readonly id?: string;

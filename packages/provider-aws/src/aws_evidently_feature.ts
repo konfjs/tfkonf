@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEvidentlyFeatureArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Value {
+export interface AwsEvidentlyFeatureArgsvariationsvalue {
   bool_value?: string;
   double_value?: string;
   long_value?: string;
   string_value?: string;
 }
-export interface Variations {
+export interface AwsEvidentlyFeatureArgsvariations {
   name: string;
-  value: Value;
+  value: AwsEvidentlyFeatureArgsvariationsvalue;
 }
 export interface AwsEvidentlyFeatureArgs {
   description?: string;
@@ -24,8 +24,8 @@ export interface AwsEvidentlyFeatureArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
-  variations: Variations;
+  timeouts: AwsEvidentlyFeatureArgstimeouts;
+  variations: AwsEvidentlyFeatureArgsvariations;
 }
 export class aws_evidently_feature extends TerraformResource {
   readonly arn!: string;

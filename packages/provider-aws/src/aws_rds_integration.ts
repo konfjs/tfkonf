@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRdsIntegrationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -13,7 +13,7 @@ export interface AwsRdsIntegrationArgs {
     [key: string]: string;
   };
   target_arn: string;
-  timeouts: Timeouts;
+  timeouts: AwsRdsIntegrationArgstimeouts;
 }
 export class aws_rds_integration extends TerraformResource {
   readonly arn!: string;

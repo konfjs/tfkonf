@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MountOptions {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfsMountOptions {
   version?: string;
 }
-export interface Nfs {
-  mount_options: MountOptions;
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfs {
+  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfsMountOptions;
 }
-export interface MountOptions {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmbMountOptions {
   version?: string;
 }
-export interface Smb {
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmb {
   domain?: string;
   password: string;
   user: string;
-  mount_options: MountOptions;
+  mount_options: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmbMountOptions;
 }
-export interface Protocol {
-  nfs: Nfs;
-  smb: Smb;
+export interface AwsDatasyncLocationFsxOntapFileSystemArgsprotocol {
+  nfs: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolnfs;
+  smb: AwsDatasyncLocationFsxOntapFileSystemArgsprotocolsmb;
 }
 export interface AwsDatasyncLocationFsxOntapFileSystemArgs {
   security_group_arns: string[];
@@ -24,7 +24,7 @@ export interface AwsDatasyncLocationFsxOntapFileSystemArgs {
   tags?: {
     [key: string]: string;
   };
-  protocol: Protocol;
+  protocol: AwsDatasyncLocationFsxOntapFileSystemArgsprotocol;
 }
 export class aws_datasync_location_fsx_ontap_file_system extends TerraformResource {
   readonly arn!: string;

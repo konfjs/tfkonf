@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PscConfig {
+export interface GoogleNetworkConnectivityServiceConnectionPolicyArgsPscConfig {
   limit?: string;
   subnetworks: string[];
 }
-export interface Timeouts {
+export interface GoogleNetworkConnectivityServiceConnectionPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface GoogleNetworkConnectivityServiceConnectionPolicyArgs {
   name: string;
   network: string;
   service_class: string;
-  psc_config: PscConfig;
-  timeouts: Timeouts;
+  psc_config: GoogleNetworkConnectivityServiceConnectionPolicyArgsPscConfig;
+  timeouts: GoogleNetworkConnectivityServiceConnectionPolicyArgstimeouts;
 }
 export class google_network_connectivity_service_connection_policy extends TerraformResource {
   readonly create_time!: string;

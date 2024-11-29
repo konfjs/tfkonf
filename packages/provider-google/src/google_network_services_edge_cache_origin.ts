@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsV4Authentication {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsAwsV4Authentication {
   access_key_id: string;
   origin_region: string;
   secret_access_key_version: string;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace?: boolean;
 }
-export interface HeaderAction {
-  request_headers_to_add: RequestHeadersToAdd;
+export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionHeaderAction {
+  request_headers_to_add: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionHeaderActionRequestHeadersToAdd;
 }
-export interface UrlRewrite {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionUrlRewrite {
   host_rewrite?: string;
 }
-export interface OriginOverrideAction {
-  header_action: HeaderAction;
-  url_rewrite: UrlRewrite;
+export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideAction {
+  header_action: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionHeaderAction;
+  url_rewrite: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideActionUrlRewrite;
 }
-export interface OriginRedirect {
+export interface GoogleNetworkServicesEdgeCacheOriginArgsOriginRedirect {
   redirect_conditions?: string[];
 }
-export interface Timeout {
+export interface GoogleNetworkServicesEdgeCacheOriginArgstimeout {
   connect_timeout?: string;
   max_attempts_timeout?: string;
   read_timeout?: string;
   response_timeout?: string;
 }
-export interface Timeouts {
+export interface GoogleNetworkServicesEdgeCacheOriginArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,11 +42,11 @@ export interface GoogleNetworkServicesEdgeCacheOriginArgs {
   max_attempts?: number;
   name: string;
   origin_address: string;
-  aws_v4_authentication: AwsV4Authentication;
-  origin_override_action: OriginOverrideAction;
-  origin_redirect: OriginRedirect;
-  timeout: Timeout;
-  timeouts: Timeouts;
+  aws_v4_authentication: GoogleNetworkServicesEdgeCacheOriginArgsAwsV4Authentication;
+  origin_override_action: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideAction;
+  origin_redirect: GoogleNetworkServicesEdgeCacheOriginArgsOriginRedirect;
+  timeout: GoogleNetworkServicesEdgeCacheOriginArgstimeout;
+  timeouts: GoogleNetworkServicesEdgeCacheOriginArgstimeouts;
 }
 export class google_network_services_edge_cache_origin extends TerraformResource {
   readonly effective_labels!: {

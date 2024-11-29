@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EmailPreferences {
+export interface GoogleBigqueryDataTransferConfigArgsEmailPreferences {
   enable_failure_email: boolean;
 }
-export interface EncryptionConfiguration {
+export interface GoogleBigqueryDataTransferConfigArgsEncryptionConfiguration {
   kms_key_name: string;
 }
-export interface ScheduleOptions {
+export interface GoogleBigqueryDataTransferConfigArgsScheduleOptions {
   disable_auto_scheduling?: boolean;
   end_time?: string;
   start_time?: string;
 }
-export interface SensitiveParams {
+export interface GoogleBigqueryDataTransferConfigArgsSensitiveParams {
   secret_access_key: string;
 }
-export interface Timeouts {
+export interface GoogleBigqueryDataTransferConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -31,11 +31,11 @@ export interface GoogleBigqueryDataTransferConfigArgs {
   };
   schedule?: string;
   service_account_name?: string;
-  email_preferences: EmailPreferences;
-  encryption_configuration: EncryptionConfiguration;
-  schedule_options: ScheduleOptions;
-  sensitive_params: SensitiveParams;
-  timeouts: Timeouts;
+  email_preferences: GoogleBigqueryDataTransferConfigArgsEmailPreferences;
+  encryption_configuration: GoogleBigqueryDataTransferConfigArgsEncryptionConfiguration;
+  schedule_options: GoogleBigqueryDataTransferConfigArgsScheduleOptions;
+  sensitive_params: GoogleBigqueryDataTransferConfigArgsSensitiveParams;
+  timeouts: GoogleBigqueryDataTransferConfigArgstimeouts;
 }
 export class google_bigquery_data_transfer_config extends TerraformResource {
   readonly id?: string;

@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CmekSettings {
+export interface GoogleLoggingProjectBucketConfigArgsCmekSettings {
   kms_key_name: string;
 }
-export interface IndexConfigs {
+export interface GoogleLoggingProjectBucketConfigArgsIndexConfigs {
   field_path: string;
   type: string;
 }
@@ -13,8 +13,8 @@ export interface GoogleLoggingProjectBucketConfigArgs {
   locked?: boolean;
   project: string;
   retention_days?: number;
-  cmek_settings: CmekSettings;
-  index_configs: IndexConfigs;
+  cmek_settings: GoogleLoggingProjectBucketConfigArgsCmekSettings;
+  index_configs: GoogleLoggingProjectBucketConfigArgsIndexConfigs;
 }
 export class google_logging_project_bucket_config extends TerraformResource {
   readonly description?: string;

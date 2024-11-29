@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ServiceDirectoryRegistrations {
+export interface GoogleComputeForwardingRuleArgsServiceDirectoryRegistrations {
   service?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeForwardingRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,8 +25,8 @@ export interface GoogleComputeForwardingRuleArgs {
   service_label?: string;
   source_ip_ranges?: string[];
   target?: string;
-  service_directory_registrations: ServiceDirectoryRegistrations;
-  timeouts: Timeouts;
+  service_directory_registrations: GoogleComputeForwardingRuleArgsServiceDirectoryRegistrations;
+  timeouts: GoogleComputeForwardingRuleArgstimeouts;
 }
 export class google_compute_forwarding_rule extends TerraformResource {
   readonly base_forwarding_rule!: string;

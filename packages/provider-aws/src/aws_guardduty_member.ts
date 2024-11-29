@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsGuarddutyMemberArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsGuarddutyMemberArgs {
   email: string;
   invitation_message?: string;
   invite?: boolean;
-  timeouts: Timeouts;
+  timeouts: AwsGuarddutyMemberArgstimeouts;
 }
 export class aws_guardduty_member extends TerraformResource {
   readonly id?: string;

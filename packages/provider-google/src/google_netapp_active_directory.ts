@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetappActiveDirectoryArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,7 +26,7 @@ export interface GoogleNetappActiveDirectoryArgs {
   security_operators?: string[];
   site?: string;
   username: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetappActiveDirectoryArgstimeouts;
 }
 export class google_netapp_active_directory extends TerraformResource {
   readonly create_time!: string;

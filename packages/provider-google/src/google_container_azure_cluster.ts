@@ -1,54 +1,54 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdminGroups {
+export interface GoogleContainerAzureClusterArgsauthorizationAdminGroups {
   group: string;
 }
-export interface AdminUsers {
+export interface GoogleContainerAzureClusterArgsauthorizationAdminUsers {
   username: string;
 }
-export interface Authorization {
-  admin_groups: AdminGroups;
-  admin_users: AdminUsers;
+export interface GoogleContainerAzureClusterArgsauthorization {
+  admin_groups: GoogleContainerAzureClusterArgsauthorizationAdminGroups;
+  admin_users: GoogleContainerAzureClusterArgsauthorizationAdminUsers;
 }
-export interface AzureServicesAuthentication {
+export interface GoogleContainerAzureClusterArgsAzureServicesAuthentication {
   application_id: string;
   tenant_id: string;
 }
-export interface DatabaseEncryption {
+export interface GoogleContainerAzureClusterArgsControlPlaneDatabaseEncryption {
   key_id: string;
 }
-export interface MainVolume {}
-export interface ProxyConfig {
+export interface GoogleContainerAzureClusterArgsControlPlaneMainVolume {}
+export interface GoogleContainerAzureClusterArgsControlPlaneProxyConfig {
   resource_group_id: string;
   secret_id: string;
 }
-export interface ReplicaPlacements {
+export interface GoogleContainerAzureClusterArgsControlPlaneReplicaPlacements {
   azure_availability_zone: string;
   subnet_id: string;
 }
-export interface RootVolume {}
-export interface SshConfig {
+export interface GoogleContainerAzureClusterArgsControlPlaneRootVolume {}
+export interface GoogleContainerAzureClusterArgsControlPlaneSshConfig {
   authorized_key: string;
 }
-export interface ControlPlane {
+export interface GoogleContainerAzureClusterArgsControlPlane {
   subnet_id: string;
   tags?: {
     [key: string]: string;
   };
   version: string;
-  database_encryption: DatabaseEncryption;
-  main_volume: MainVolume;
-  proxy_config: ProxyConfig;
-  replica_placements: ReplicaPlacements;
-  root_volume: RootVolume;
-  ssh_config: SshConfig;
+  database_encryption: GoogleContainerAzureClusterArgsControlPlaneDatabaseEncryption;
+  main_volume: GoogleContainerAzureClusterArgsControlPlaneMainVolume;
+  proxy_config: GoogleContainerAzureClusterArgsControlPlaneProxyConfig;
+  replica_placements: GoogleContainerAzureClusterArgsControlPlaneReplicaPlacements;
+  root_volume: GoogleContainerAzureClusterArgsControlPlaneRootVolume;
+  ssh_config: GoogleContainerAzureClusterArgsControlPlaneSshConfig;
 }
-export interface Fleet {}
-export interface Networking {
+export interface GoogleContainerAzureClusterArgsfleet {}
+export interface GoogleContainerAzureClusterArgsnetworking {
   pod_address_cidr_blocks: string[];
   service_address_cidr_blocks: string[];
   virtual_network_id: string;
 }
-export interface Timeouts {
+export interface GoogleContainerAzureClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -63,12 +63,12 @@ export interface GoogleContainerAzureClusterArgs {
   location: string;
   name: string;
   resource_group_id: string;
-  authorization: Authorization;
-  azure_services_authentication: AzureServicesAuthentication;
-  control_plane: ControlPlane;
-  fleet: Fleet;
-  networking: Networking;
-  timeouts: Timeouts;
+  authorization: GoogleContainerAzureClusterArgsauthorization;
+  azure_services_authentication: GoogleContainerAzureClusterArgsAzureServicesAuthentication;
+  control_plane: GoogleContainerAzureClusterArgsControlPlane;
+  fleet: GoogleContainerAzureClusterArgsfleet;
+  networking: GoogleContainerAzureClusterArgsnetworking;
+  timeouts: GoogleContainerAzureClusterArgstimeouts;
 }
 export class google_container_azure_cluster extends TerraformResource {
   readonly create_time!: string;

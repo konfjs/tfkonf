@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleKmsCryptoKeyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VersionTemplate {
+export interface GoogleKmsCryptoKeyArgsVersionTemplate {
   algorithm: string;
   protection_level?: string;
 }
@@ -17,8 +17,8 @@ export interface GoogleKmsCryptoKeyArgs {
   purpose?: string;
   rotation_period?: string;
   skip_initial_version_creation?: boolean;
-  timeouts: Timeouts;
-  version_template: VersionTemplate;
+  timeouts: GoogleKmsCryptoKeyArgstimeouts;
+  version_template: GoogleKmsCryptoKeyArgsVersionTemplate;
 }
 export class google_kms_crypto_key extends TerraformResource {
   readonly crypto_key_backend?: string;

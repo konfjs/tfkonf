@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDiscoveryEngineTargetSiteArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface GoogleDiscoveryEngineTargetSiteArgs {
   location: string;
   provided_uri_pattern: string;
   type?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDiscoveryEngineTargetSiteArgstimeouts;
 }
 export class google_discovery_engine_target_site extends TerraformResource {
   readonly failure_reason!: any[];

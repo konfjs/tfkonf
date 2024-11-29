@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Location {
+export interface AwsS3DirectoryBucketArgslocation {
   name: string;
 }
 export interface AwsS3DirectoryBucketArgs {
   bucket: string;
-  location: Location;
+  location: AwsS3DirectoryBucketArgslocation;
 }
 export class aws_s3_directory_bucket extends TerraformResource {
   readonly arn!: string;

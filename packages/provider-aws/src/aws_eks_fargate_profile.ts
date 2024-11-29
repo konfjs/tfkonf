@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Selector {
+export interface AwsEksFargateProfileArgsselector {
   labels?: {
     [key: string]: string;
   };
   namespace: string;
 }
-export interface Timeouts {
+export interface AwsEksFargateProfileArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -17,8 +17,8 @@ export interface AwsEksFargateProfileArgs {
   tags?: {
     [key: string]: string;
   };
-  selector: Selector;
-  timeouts: Timeouts;
+  selector: AwsEksFargateProfileArgsselector;
+  timeouts: AwsEksFargateProfileArgstimeouts;
 }
 export class aws_eks_fargate_profile extends TerraformResource {
   readonly arn!: string;

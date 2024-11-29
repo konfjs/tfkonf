@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MountOptions {
+export interface AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocolnfsMountOptions {
   version?: string;
 }
-export interface Nfs {
-  mount_options: MountOptions;
+export interface AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocolnfs {
+  mount_options: AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocolnfsMountOptions;
 }
-export interface Protocol {
-  nfs: Nfs;
+export interface AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocol {
+  nfs: AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocolnfs;
 }
 export interface AwsDatasyncLocationFsxOpenzfsFileSystemArgs {
   fsx_filesystem_arn: string;
@@ -14,7 +14,7 @@ export interface AwsDatasyncLocationFsxOpenzfsFileSystemArgs {
   tags?: {
     [key: string]: string;
   };
-  protocol: Protocol;
+  protocol: AwsDatasyncLocationFsxOpenzfsFileSystemArgsprotocol;
 }
 export class aws_datasync_location_fsx_openzfs_file_system extends TerraformResource {
   readonly arn!: string;

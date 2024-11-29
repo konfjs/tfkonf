@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExcludeMap {
+export interface AwsFmsPolicyArgsExcludeMap {
   account?: string[];
   orgunit?: string[];
 }
-export interface IncludeMap {
+export interface AwsFmsPolicyArgsIncludeMap {
   account?: string[];
   orgunit?: string[];
 }
-export interface NetworkFirewallPolicy {
+export interface AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOptionNetworkFirewallPolicy {
   firewall_deployment_model?: string;
 }
-export interface ThirdPartyFirewallPolicy {
+export interface AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOptionThirdPartyFirewallPolicy {
   firewall_deployment_model?: string;
 }
-export interface PolicyOption {
-  network_firewall_policy: NetworkFirewallPolicy;
-  third_party_firewall_policy: ThirdPartyFirewallPolicy;
+export interface AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOption {
+  network_firewall_policy: AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOptionNetworkFirewallPolicy;
+  third_party_firewall_policy: AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOptionThirdPartyFirewallPolicy;
 }
-export interface SecurityServicePolicyData {
+export interface AwsFmsPolicyArgsSecurityServicePolicyData {
   managed_service_data?: string;
   type: string;
-  policy_option: PolicyOption;
+  policy_option: AwsFmsPolicyArgsSecurityServicePolicyDataPolicyOption;
 }
 export interface AwsFmsPolicyArgs {
   delete_all_policy_resources?: boolean;
@@ -35,9 +35,9 @@ export interface AwsFmsPolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  exclude_map: ExcludeMap;
-  include_map: IncludeMap;
-  security_service_policy_data: SecurityServicePolicyData;
+  exclude_map: AwsFmsPolicyArgsExcludeMap;
+  include_map: AwsFmsPolicyArgsIncludeMap;
+  security_service_policy_data: AwsFmsPolicyArgsSecurityServicePolicyData;
 }
 export class aws_fms_policy extends TerraformResource {
   readonly arn!: string;

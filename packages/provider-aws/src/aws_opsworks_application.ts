@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppSource {
+export interface AwsOpsworksApplicationArgsAppSource {
   password?: string;
   revision?: string;
   ssh_key?: string;
@@ -7,12 +7,12 @@ export interface AppSource {
   url?: string;
   username?: string;
 }
-export interface Environment {
+export interface AwsOpsworksApplicationArgsenvironment {
   key: string;
   secure?: boolean;
   value: string;
 }
-export interface SslConfiguration {
+export interface AwsOpsworksApplicationArgsSslConfiguration {
   certificate: string;
   chain?: string;
   private_key: string;
@@ -31,9 +31,9 @@ export interface AwsOpsworksApplicationArgs {
   rails_env?: string;
   stack_id: string;
   type: string;
-  app_source: AppSource;
-  environment: Environment;
-  ssl_configuration: SslConfiguration;
+  app_source: AwsOpsworksApplicationArgsAppSource;
+  environment: AwsOpsworksApplicationArgsenvironment;
+  ssl_configuration: AwsOpsworksApplicationArgsSslConfiguration;
 }
 export class aws_opsworks_application extends TerraformResource {
   readonly id?: string;

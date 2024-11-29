@@ -1,72 +1,72 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ScaleInPolicy {}
-export interface ScaleOutPolicy {}
-export interface Autoscaling {
+export interface AwsMskconnectConnectorArgscapacityautoscalingScaleInPolicy {}
+export interface AwsMskconnectConnectorArgscapacityautoscalingScaleOutPolicy {}
+export interface AwsMskconnectConnectorArgscapacityautoscaling {
   max_worker_count: number;
   mcu_count?: number;
   min_worker_count: number;
-  scale_in_policy: ScaleInPolicy;
-  scale_out_policy: ScaleOutPolicy;
+  scale_in_policy: AwsMskconnectConnectorArgscapacityautoscalingScaleInPolicy;
+  scale_out_policy: AwsMskconnectConnectorArgscapacityautoscalingScaleOutPolicy;
 }
-export interface ProvisionedCapacity {
+export interface AwsMskconnectConnectorArgscapacityProvisionedCapacity {
   mcu_count?: number;
   worker_count: number;
 }
-export interface Capacity {
-  autoscaling: Autoscaling;
-  provisioned_capacity: ProvisionedCapacity;
+export interface AwsMskconnectConnectorArgscapacity {
+  autoscaling: AwsMskconnectConnectorArgscapacityautoscaling;
+  provisioned_capacity: AwsMskconnectConnectorArgscapacityProvisionedCapacity;
 }
-export interface Vpc {
+export interface AwsMskconnectConnectorArgsKafkaClusterApacheKafkaClustervpc {
   security_groups: string[];
   subnets: string[];
 }
-export interface ApacheKafkaCluster {
+export interface AwsMskconnectConnectorArgsKafkaClusterApacheKafkaCluster {
   bootstrap_servers: string;
-  vpc: Vpc;
+  vpc: AwsMskconnectConnectorArgsKafkaClusterApacheKafkaClustervpc;
 }
-export interface KafkaCluster {
-  apache_kafka_cluster: ApacheKafkaCluster;
+export interface AwsMskconnectConnectorArgsKafkaCluster {
+  apache_kafka_cluster: AwsMskconnectConnectorArgsKafkaClusterApacheKafkaCluster;
 }
-export interface KafkaClusterClientAuthentication {
+export interface AwsMskconnectConnectorArgsKafkaClusterClientAuthentication {
   authentication_type?: string;
 }
-export interface KafkaClusterEncryptionInTransit {
+export interface AwsMskconnectConnectorArgsKafkaClusterEncryptionInTransit {
   encryption_type?: string;
 }
-export interface CloudwatchLogs {
+export interface AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliveryCloudwatchLogs {
   enabled: boolean;
   log_group?: string;
 }
-export interface Firehose {
+export interface AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliveryfirehose {
   delivery_stream?: string;
   enabled: boolean;
 }
-export interface S3 {
+export interface AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliverys3 {
   bucket?: string;
   enabled: boolean;
   prefix?: string;
 }
-export interface WorkerLogDelivery {
-  cloudwatch_logs: CloudwatchLogs;
-  firehose: Firehose;
-  s3: S3;
+export interface AwsMskconnectConnectorArgsLogDeliveryWorkerLogDelivery {
+  cloudwatch_logs: AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliveryCloudwatchLogs;
+  firehose: AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliveryfirehose;
+  s3: AwsMskconnectConnectorArgsLogDeliveryWorkerLogDeliverys3;
 }
-export interface LogDelivery {
-  worker_log_delivery: WorkerLogDelivery;
+export interface AwsMskconnectConnectorArgsLogDelivery {
+  worker_log_delivery: AwsMskconnectConnectorArgsLogDeliveryWorkerLogDelivery;
 }
-export interface CustomPlugin {
+export interface AwsMskconnectConnectorArgspluginCustomPlugin {
   arn: string;
   revision: number;
 }
-export interface Plugin {
-  custom_plugin: CustomPlugin;
+export interface AwsMskconnectConnectorArgsplugin {
+  custom_plugin: AwsMskconnectConnectorArgspluginCustomPlugin;
 }
-export interface Timeouts {
+export interface AwsMskconnectConnectorArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkerConfiguration {
+export interface AwsMskconnectConnectorArgsWorkerConfiguration {
   arn: string;
   revision: number;
 }
@@ -81,14 +81,14 @@ export interface AwsMskconnectConnectorArgs {
   tags?: {
     [key: string]: string;
   };
-  capacity: Capacity;
-  kafka_cluster: KafkaCluster;
-  kafka_cluster_client_authentication: KafkaClusterClientAuthentication;
-  kafka_cluster_encryption_in_transit: KafkaClusterEncryptionInTransit;
-  log_delivery: LogDelivery;
-  plugin: Plugin;
-  timeouts: Timeouts;
-  worker_configuration: WorkerConfiguration;
+  capacity: AwsMskconnectConnectorArgscapacity;
+  kafka_cluster: AwsMskconnectConnectorArgsKafkaCluster;
+  kafka_cluster_client_authentication: AwsMskconnectConnectorArgsKafkaClusterClientAuthentication;
+  kafka_cluster_encryption_in_transit: AwsMskconnectConnectorArgsKafkaClusterEncryptionInTransit;
+  log_delivery: AwsMskconnectConnectorArgsLogDelivery;
+  plugin: AwsMskconnectConnectorArgsplugin;
+  timeouts: AwsMskconnectConnectorArgstimeouts;
+  worker_configuration: AwsMskconnectConnectorArgsWorkerConfiguration;
 }
 export class aws_mskconnect_connector extends TerraformResource {
   readonly arn!: string;

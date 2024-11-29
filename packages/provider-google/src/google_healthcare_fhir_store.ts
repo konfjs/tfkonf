@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NotificationConfig {
+export interface GoogleHealthcareFhirStoreArgsNotificationConfig {
   pubsub_topic: string;
 }
-export interface NotificationConfigs {
+export interface GoogleHealthcareFhirStoreArgsNotificationConfigs {
   pubsub_topic: string;
   send_full_resource?: boolean;
   send_previous_resource_on_delete?: boolean;
 }
-export interface LastUpdatedPartitionConfig {
+export interface GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig {
   expiration_ms?: string;
   type: string;
 }
-export interface SchemaConfig {
+export interface GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestinationSchemaConfig {
   recursive_structure_depth: number;
   schema_type?: string;
-  last_updated_partition_config: LastUpdatedPartitionConfig;
+  last_updated_partition_config: GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestinationSchemaConfigLastUpdatedPartitionConfig;
 }
-export interface BigqueryDestination {
+export interface GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestination {
   dataset_uri: string;
-  schema_config: SchemaConfig;
+  schema_config: GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestinationSchemaConfig;
 }
-export interface StreamConfigs {
+export interface GoogleHealthcareFhirStoreArgsStreamConfigs {
   resource_types?: string[];
-  bigquery_destination: BigqueryDestination;
+  bigquery_destination: GoogleHealthcareFhirStoreArgsStreamConfigsBigqueryDestination;
 }
-export interface Timeouts {
+export interface GoogleHealthcareFhirStoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,10 +41,10 @@ export interface GoogleHealthcareFhirStoreArgs {
   };
   name: string;
   version: string;
-  notification_config: NotificationConfig;
-  notification_configs: NotificationConfigs;
-  stream_configs: StreamConfigs;
-  timeouts: Timeouts;
+  notification_config: GoogleHealthcareFhirStoreArgsNotificationConfig;
+  notification_configs: GoogleHealthcareFhirStoreArgsNotificationConfigs;
+  stream_configs: GoogleHealthcareFhirStoreArgsStreamConfigs;
+  timeouts: GoogleHealthcareFhirStoreArgstimeouts;
 }
 export class google_healthcare_fhir_store extends TerraformResource {
   readonly complex_data_type_reference_parsing?: string;

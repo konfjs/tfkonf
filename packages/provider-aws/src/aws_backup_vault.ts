@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsBackupVaultArgstimeouts {
   delete?: string;
 }
 export interface AwsBackupVaultArgs {
@@ -8,7 +8,7 @@ export interface AwsBackupVaultArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsBackupVaultArgstimeouts;
 }
 export class aws_backup_vault extends TerraformResource {
   readonly arn!: string;

@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface YarnConfig {
+export interface GoogleDataprocAutoscalingPolicyArgsBasicAlgorithmYarnConfig {
   graceful_decommission_timeout: string;
   scale_down_factor: number;
   scale_down_min_worker_fraction?: number;
   scale_up_factor: number;
   scale_up_min_worker_fraction?: number;
 }
-export interface BasicAlgorithm {
+export interface GoogleDataprocAutoscalingPolicyArgsBasicAlgorithm {
   cooldown_period?: string;
-  yarn_config: YarnConfig;
+  yarn_config: GoogleDataprocAutoscalingPolicyArgsBasicAlgorithmYarnConfig;
 }
-export interface SecondaryWorkerConfig {
+export interface GoogleDataprocAutoscalingPolicyArgsSecondaryWorkerConfig {
   max_instances?: number;
   min_instances?: number;
   weight?: number;
 }
-export interface Timeouts {
+export interface GoogleDataprocAutoscalingPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkerConfig {
+export interface GoogleDataprocAutoscalingPolicyArgsWorkerConfig {
   max_instances: number;
   min_instances?: number;
   weight?: number;
@@ -28,10 +28,10 @@ export interface WorkerConfig {
 export interface GoogleDataprocAutoscalingPolicyArgs {
   location?: string;
   policy_id: string;
-  basic_algorithm: BasicAlgorithm;
-  secondary_worker_config: SecondaryWorkerConfig;
-  timeouts: Timeouts;
-  worker_config: WorkerConfig;
+  basic_algorithm: GoogleDataprocAutoscalingPolicyArgsBasicAlgorithm;
+  secondary_worker_config: GoogleDataprocAutoscalingPolicyArgsSecondaryWorkerConfig;
+  timeouts: GoogleDataprocAutoscalingPolicyArgstimeouts;
+  worker_config: GoogleDataprocAutoscalingPolicyArgsWorkerConfig;
 }
 export class google_dataproc_autoscaling_policy extends TerraformResource {
   readonly id?: string;

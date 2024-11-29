@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ApiConfig {
+export interface GoogleAppEngineFlexibleAppVersionArgsApiConfig {
   auth_fail_action?: string;
   login?: string;
   script: string;
   security_level?: string;
   url?: string;
 }
-export interface CpuUtilization {
+export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingCpuUtilization {
   aggregation_window_length?: string;
   target_utilization: number;
 }
-export interface DiskUtilization {
+export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingDiskUtilization {
   target_read_bytes_per_second?: number;
   target_read_ops_per_second?: number;
   target_write_bytes_per_second?: number;
   target_write_ops_per_second?: number;
 }
-export interface NetworkUtilization {
+export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingNetworkUtilization {
   target_received_bytes_per_second?: number;
   target_received_packets_per_second?: number;
   target_sent_bytes_per_second?: number;
   target_sent_packets_per_second?: number;
 }
-export interface RequestUtilization {
+export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingRequestUtilization {
   target_concurrent_requests?: number;
   target_request_count_per_second?: string;
 }
-export interface AutomaticScaling {
+export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling {
   cool_down_period?: string;
   max_idle_instances?: number;
   max_pending_latency?: string;
@@ -34,50 +34,50 @@ export interface AutomaticScaling {
   min_idle_instances?: number;
   min_pending_latency?: string;
   min_total_instances?: number;
-  cpu_utilization: CpuUtilization;
-  disk_utilization: DiskUtilization;
-  network_utilization: NetworkUtilization;
-  request_utilization: RequestUtilization;
+  cpu_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingCpuUtilization;
+  disk_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingDiskUtilization;
+  network_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingNetworkUtilization;
+  request_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingRequestUtilization;
 }
-export interface CloudBuildOptions {
+export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentCloudBuildOptions {
   app_yaml_path: string;
   cloud_build_timeout?: string;
 }
-export interface Container {
+export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentcontainer {
   image: string;
 }
-export interface Files {
+export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentfiles {
   name: string;
   sha1_sum?: string;
   source_url: string;
 }
-export interface Zip {
+export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentzip {
   files_count?: number;
   source_url: string;
 }
-export interface Deployment {
-  cloud_build_options: CloudBuildOptions;
-  container: Container;
-  files: Files;
-  zip: Zip;
+export interface GoogleAppEngineFlexibleAppVersionArgsdeployment {
+  cloud_build_options: GoogleAppEngineFlexibleAppVersionArgsdeploymentCloudBuildOptions;
+  container: GoogleAppEngineFlexibleAppVersionArgsdeploymentcontainer;
+  files: GoogleAppEngineFlexibleAppVersionArgsdeploymentfiles;
+  zip: GoogleAppEngineFlexibleAppVersionArgsdeploymentzip;
 }
-export interface EndpointsApiService {
+export interface GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService {
   config_id?: string;
   disable_trace_sampling?: boolean;
   name: string;
   rollout_strategy?: string;
 }
-export interface Entrypoint {
+export interface GoogleAppEngineFlexibleAppVersionArgsentrypoint {
   shell: string;
 }
-export interface FlexibleRuntimeSettings {
+export interface GoogleAppEngineFlexibleAppVersionArgsFlexibleRuntimeSettings {
   operating_system?: string;
   runtime_version?: string;
 }
-export interface Script {
+export interface GoogleAppEngineFlexibleAppVersionArgshandlersscript {
   script_path: string;
 }
-export interface StaticFiles {
+export interface GoogleAppEngineFlexibleAppVersionArgshandlersStaticFiles {
   application_readable?: boolean;
   expiration?: string;
   http_headers?: {
@@ -88,16 +88,16 @@ export interface StaticFiles {
   require_matching_file?: boolean;
   upload_path_regex?: string;
 }
-export interface Handlers {
+export interface GoogleAppEngineFlexibleAppVersionArgshandlers {
   auth_fail_action?: string;
   login?: string;
   redirect_http_response_code?: string;
   security_level?: string;
   url_regex?: string;
-  script: Script;
-  static_files: StaticFiles;
+  script: GoogleAppEngineFlexibleAppVersionArgshandlersscript;
+  static_files: GoogleAppEngineFlexibleAppVersionArgshandlersStaticFiles;
 }
-export interface LivenessCheck {
+export interface GoogleAppEngineFlexibleAppVersionArgsLivenessCheck {
   check_interval?: string;
   failure_threshold?: number;
   host?: string;
@@ -106,17 +106,17 @@ export interface LivenessCheck {
   success_threshold?: number;
   timeout?: string;
 }
-export interface ManualScaling {
+export interface GoogleAppEngineFlexibleAppVersionArgsManualScaling {
   instances: number;
 }
-export interface Network {
+export interface GoogleAppEngineFlexibleAppVersionArgsnetwork {
   forwarded_ports?: string[];
   instance_tag?: string;
   name: string;
   session_affinity?: boolean;
   subnetwork?: string;
 }
-export interface ReadinessCheck {
+export interface GoogleAppEngineFlexibleAppVersionArgsReadinessCheck {
   app_start_timeout?: string;
   check_interval?: string;
   failure_threshold?: number;
@@ -125,23 +125,23 @@ export interface ReadinessCheck {
   success_threshold?: number;
   timeout?: string;
 }
-export interface Volumes {
+export interface GoogleAppEngineFlexibleAppVersionArgsresourcesvolumes {
   name: string;
   size_gb: number;
   volume_type: string;
 }
-export interface Resources {
+export interface GoogleAppEngineFlexibleAppVersionArgsresources {
   cpu?: number;
   disk_gb?: number;
   memory_gb?: number;
-  volumes: Volumes;
+  volumes: GoogleAppEngineFlexibleAppVersionArgsresourcesvolumes;
 }
-export interface Timeouts {
+export interface GoogleAppEngineFlexibleAppVersionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcAccessConnector {
+export interface GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector {
   name: string;
 }
 export interface GoogleAppEngineFlexibleAppVersionArgs {
@@ -163,20 +163,20 @@ export interface GoogleAppEngineFlexibleAppVersionArgs {
   service: string;
   serving_status?: string;
   version_id?: string;
-  api_config: ApiConfig;
-  automatic_scaling: AutomaticScaling;
-  deployment: Deployment;
-  endpoints_api_service: EndpointsApiService;
-  entrypoint: Entrypoint;
-  flexible_runtime_settings: FlexibleRuntimeSettings;
-  handlers: Handlers;
-  liveness_check: LivenessCheck;
-  manual_scaling: ManualScaling;
-  network: Network;
-  readiness_check: ReadinessCheck;
-  resources: Resources;
-  timeouts: Timeouts;
-  vpc_access_connector: VpcAccessConnector;
+  api_config: GoogleAppEngineFlexibleAppVersionArgsApiConfig;
+  automatic_scaling: GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling;
+  deployment: GoogleAppEngineFlexibleAppVersionArgsdeployment;
+  endpoints_api_service: GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService;
+  entrypoint: GoogleAppEngineFlexibleAppVersionArgsentrypoint;
+  flexible_runtime_settings: GoogleAppEngineFlexibleAppVersionArgsFlexibleRuntimeSettings;
+  handlers: GoogleAppEngineFlexibleAppVersionArgshandlers;
+  liveness_check: GoogleAppEngineFlexibleAppVersionArgsLivenessCheck;
+  manual_scaling: GoogleAppEngineFlexibleAppVersionArgsManualScaling;
+  network: GoogleAppEngineFlexibleAppVersionArgsnetwork;
+  readiness_check: GoogleAppEngineFlexibleAppVersionArgsReadinessCheck;
+  resources: GoogleAppEngineFlexibleAppVersionArgsresources;
+  timeouts: GoogleAppEngineFlexibleAppVersionArgstimeouts;
+  vpc_access_connector: GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_flexible_app_version extends TerraformResource {
   readonly id?: string;

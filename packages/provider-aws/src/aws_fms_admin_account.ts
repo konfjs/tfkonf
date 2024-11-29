@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsFmsAdminAccountArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsFmsAdminAccountArgs {
-  timeouts: Timeouts;
+  timeouts: AwsFmsAdminAccountArgstimeouts;
 }
 export class aws_fms_admin_account extends TerraformResource {
   readonly account_id?: string;

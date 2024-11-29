@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsServicecatalogProductPortfolioAssociationArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -9,7 +9,7 @@ export interface AwsServicecatalogProductPortfolioAssociationArgs {
   portfolio_id: string;
   product_id: string;
   source_portfolio_id?: string;
-  timeouts: Timeouts;
+  timeouts: AwsServicecatalogProductPortfolioAssociationArgstimeouts;
 }
 export class aws_servicecatalog_product_portfolio_association extends TerraformResource {
   readonly id?: string;

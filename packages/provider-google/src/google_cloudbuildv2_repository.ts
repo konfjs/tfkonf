@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleCloudbuildv2RepositoryArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleCloudbuildv2RepositoryArgs {
   name: string;
   parent_connection: string;
   remote_uri: string;
-  timeouts: Timeouts;
+  timeouts: GoogleCloudbuildv2RepositoryArgstimeouts;
 }
 export class google_cloudbuildv2_repository extends TerraformResource {
   readonly create_time!: string;

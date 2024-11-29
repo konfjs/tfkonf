@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IdpCertificates {
+export interface GoogleIdentityPlatformInboundSamlConfigArgsIdpConfigIdpCertificates {
   x509_certificate?: string;
 }
-export interface IdpConfig {
+export interface GoogleIdentityPlatformInboundSamlConfigArgsIdpConfig {
   idp_entity_id: string;
   sign_request?: boolean;
   sso_url: string;
-  idp_certificates: IdpCertificates;
+  idp_certificates: GoogleIdentityPlatformInboundSamlConfigArgsIdpConfigIdpCertificates;
 }
-export interface SpConfig {
+export interface GoogleIdentityPlatformInboundSamlConfigArgsSpConfig {
   callback_uri?: string;
   sp_entity_id?: string;
 }
-export interface Timeouts {
+export interface GoogleIdentityPlatformInboundSamlConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleIdentityPlatformInboundSamlConfigArgs {
   display_name: string;
   enabled?: boolean;
   name: string;
-  idp_config: IdpConfig;
-  sp_config: SpConfig;
-  timeouts: Timeouts;
+  idp_config: GoogleIdentityPlatformInboundSamlConfigArgsIdpConfig;
+  sp_config: GoogleIdentityPlatformInboundSamlConfigArgsSpConfig;
+  timeouts: GoogleIdentityPlatformInboundSamlConfigArgstimeouts;
 }
 export class google_identity_platform_inbound_saml_config extends TerraformResource {
   readonly id?: string;

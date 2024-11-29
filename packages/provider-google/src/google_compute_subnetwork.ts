@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogConfig {
+export interface GoogleComputeSubnetworkArgsLogConfig {
   aggregation_interval?: string;
   filter_expr?: string;
   flow_sampling?: number;
   metadata?: string;
   metadata_fields?: string[];
 }
-export interface SecondaryIpRange {
+export interface GoogleComputeSubnetworkArgsSecondaryIpRange {
   range_name: string;
   reserved_internal_range?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeSubnetworkArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,9 +23,9 @@ export interface GoogleComputeSubnetworkArgs {
   reserved_internal_range?: string;
   role?: string;
   send_secondary_ip_range_if_empty?: boolean;
-  log_config: LogConfig;
-  secondary_ip_range: SecondaryIpRange;
-  timeouts: Timeouts;
+  log_config: GoogleComputeSubnetworkArgsLogConfig;
+  secondary_ip_range: GoogleComputeSubnetworkArgsSecondaryIpRange;
+  timeouts: GoogleComputeSubnetworkArgstimeouts;
 }
 export class google_compute_subnetwork extends TerraformResource {
   readonly creation_timestamp!: string;

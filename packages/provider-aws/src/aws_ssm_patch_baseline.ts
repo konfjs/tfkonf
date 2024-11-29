@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PatchFilter {
+export interface AwsSsmPatchBaselineArgsApprovalRulePatchFilter {
   key: string;
   values: string[];
 }
-export interface ApprovalRule {
+export interface AwsSsmPatchBaselineArgsApprovalRule {
   approve_after_days?: number;
   approve_until_date?: string;
   compliance_level?: string;
   enable_non_security?: boolean;
-  patch_filter: PatchFilter;
+  patch_filter: AwsSsmPatchBaselineArgsApprovalRulePatchFilter;
 }
-export interface GlobalFilter {
+export interface AwsSsmPatchBaselineArgsGlobalFilter {
   key: string;
   values: string[];
 }
-export interface Source {
+export interface AwsSsmPatchBaselineArgssource {
   configuration: string;
   name: string;
   products: string[];
@@ -30,9 +30,9 @@ export interface AwsSsmPatchBaselineArgs {
   tags?: {
     [key: string]: string;
   };
-  approval_rule: ApprovalRule;
-  global_filter: GlobalFilter;
-  source: Source;
+  approval_rule: AwsSsmPatchBaselineArgsApprovalRule;
+  global_filter: AwsSsmPatchBaselineArgsGlobalFilter;
+  source: AwsSsmPatchBaselineArgssource;
 }
 export class aws_ssm_patch_baseline extends TerraformResource {
   readonly arn!: string;

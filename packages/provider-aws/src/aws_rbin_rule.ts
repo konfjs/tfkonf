@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface UnlockDelay {
+export interface AwsRbinRuleArgsLockConfigurationUnlockDelay {
   unlock_delay_unit: string;
   unlock_delay_value: number;
 }
-export interface LockConfiguration {
-  unlock_delay: UnlockDelay;
+export interface AwsRbinRuleArgsLockConfiguration {
+  unlock_delay: AwsRbinRuleArgsLockConfigurationUnlockDelay;
 }
-export interface ResourceTags {
+export interface AwsRbinRuleArgsResourceTags {
   resource_tag_key: string;
   resource_tag_value?: string;
 }
-export interface RetentionPeriod {
+export interface AwsRbinRuleArgsRetentionPeriod {
   retention_period_unit: string;
   retention_period_value: number;
 }
-export interface Timeouts {
+export interface AwsRbinRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,10 +24,10 @@ export interface AwsRbinRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  lock_configuration: LockConfiguration;
-  resource_tags: ResourceTags;
-  retention_period: RetentionPeriod;
-  timeouts: Timeouts;
+  lock_configuration: AwsRbinRuleArgsLockConfiguration;
+  resource_tags: AwsRbinRuleArgsResourceTags;
+  retention_period: AwsRbinRuleArgsRetentionPeriod;
+  timeouts: AwsRbinRuleArgstimeouts;
 }
 export class aws_rbin_rule extends TerraformResource {
   readonly arn!: string;

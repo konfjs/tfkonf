@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoEnable {
+export interface AwsInspector2OrganizationConfigurationArgsAutoEnable {
   ec2: boolean;
   ecr: boolean;
   lambda?: boolean;
   lambda_code?: boolean;
 }
-export interface Timeouts {
+export interface AwsInspector2OrganizationConfigurationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsInspector2OrganizationConfigurationArgs {
-  auto_enable: AutoEnable;
-  timeouts: Timeouts;
+  auto_enable: AwsInspector2OrganizationConfigurationArgsAutoEnable;
+  timeouts: AwsInspector2OrganizationConfigurationArgstimeouts;
 }
 export class aws_inspector2_organization_configuration extends TerraformResource {
   readonly id?: string;

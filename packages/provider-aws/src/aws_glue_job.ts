@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Command {
+export interface AwsGlueJobArgscommand {
   name?: string;
   script_location: string;
 }
-export interface ExecutionProperty {
+export interface AwsGlueJobArgsExecutionProperty {
   max_concurrent_runs?: number;
 }
-export interface NotificationProperty {
+export interface AwsGlueJobArgsNotificationProperty {
   notify_delay_after?: number;
 }
 export interface AwsGlueJobArgs {
@@ -28,9 +28,9 @@ export interface AwsGlueJobArgs {
   tags?: {
     [key: string]: string;
   };
-  command: Command;
-  execution_property: ExecutionProperty;
-  notification_property: NotificationProperty;
+  command: AwsGlueJobArgscommand;
+  execution_property: AwsGlueJobArgsExecutionProperty;
+  notification_property: AwsGlueJobArgsNotificationProperty;
 }
 export class aws_glue_job extends TerraformResource {
   readonly arn!: string;

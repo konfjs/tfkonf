@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NodeConfigs {
+export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigNodeConfigs {
   labels?: {
     [key: string]: string;
   };
   node_ip?: string;
 }
-export interface Taints {
+export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigtaints {
   effect?: string;
   key?: string;
   value?: string;
 }
-export interface NodePoolConfig {
-  node_configs: NodeConfigs;
-  taints: Taints;
+export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfig {
+  node_configs: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigNodeConfigs;
+  taints: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigtaints;
 }
-export interface Timeouts {
+export interface GoogleGkeonpremBareMetalNodePoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,8 +27,8 @@ export interface GoogleGkeonpremBareMetalNodePoolArgs {
   display_name?: string;
   location: string;
   name: string;
-  node_pool_config: NodePoolConfig;
-  timeouts: Timeouts;
+  node_pool_config: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfig;
+  timeouts: GoogleGkeonpremBareMetalNodePoolArgstimeouts;
 }
 export class google_gkeonprem_bare_metal_node_pool extends TerraformResource {
   readonly create_time!: string;

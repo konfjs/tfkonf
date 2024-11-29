@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessLogs {
+export interface AwsLbArgsAccessLogs {
   bucket: string;
   enabled?: boolean;
   prefix?: string;
 }
-export interface ConnectionLogs {
+export interface AwsLbArgsConnectionLogs {
   bucket: string;
   enabled?: boolean;
   prefix?: string;
 }
-export interface SubnetMapping {
+export interface AwsLbArgsSubnetMapping {
   allocation_id?: string;
   ipv6_address?: string;
   private_ipv4_address?: string;
   subnet_id: string;
 }
-export interface Timeouts {
+export interface AwsLbArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,10 +40,10 @@ export interface AwsLbArgs {
     [key: string]: string;
   };
   xff_header_processing_mode?: string;
-  access_logs: AccessLogs;
-  connection_logs: ConnectionLogs;
-  subnet_mapping: SubnetMapping;
-  timeouts: Timeouts;
+  access_logs: AwsLbArgsAccessLogs;
+  connection_logs: AwsLbArgsConnectionLogs;
+  subnet_mapping: AwsLbArgsSubnetMapping;
+  timeouts: AwsLbArgstimeouts;
 }
 export class aws_lb extends TerraformResource {
   readonly arn!: string;

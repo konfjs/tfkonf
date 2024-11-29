@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SnapshotEncryptionKey {
+export interface GoogleComputeSnapshotArgsSnapshotEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;
   raw_key?: string;
 }
-export interface SourceDiskEncryptionKey {
+export interface GoogleComputeSnapshotArgsSourceDiskEncryptionKey {
   kms_key_service_account?: string;
   raw_key?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeSnapshotArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleComputeSnapshotArgs {
   };
   name: string;
   source_disk: string;
-  snapshot_encryption_key: SnapshotEncryptionKey;
-  source_disk_encryption_key: SourceDiskEncryptionKey;
-  timeouts: Timeouts;
+  snapshot_encryption_key: GoogleComputeSnapshotArgsSnapshotEncryptionKey;
+  source_disk_encryption_key: GoogleComputeSnapshotArgsSourceDiskEncryptionKey;
+  timeouts: GoogleComputeSnapshotArgstimeouts;
 }
 export class google_compute_snapshot extends TerraformResource {
   readonly creation_timestamp!: string;

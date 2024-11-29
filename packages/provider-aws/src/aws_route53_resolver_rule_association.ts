@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRoute53ResolverRuleAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsRoute53ResolverRuleAssociationArgs {
   name?: string;
   resolver_rule_id: string;
   vpc_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsRoute53ResolverRuleAssociationArgstimeouts;
 }
 export class aws_route53_resolver_rule_association extends TerraformResource {
   readonly id?: string;

@@ -1,64 +1,64 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HighAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsHighAction {
   event_action: string;
   notify: boolean;
 }
-export interface LowAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsLowAction {
   event_action: string;
   notify: boolean;
 }
-export interface MediumAction {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsMediumAction {
   event_action: string;
   notify: boolean;
 }
-export interface Actions {
-  high_action: HighAction;
-  low_action: LowAction;
-  medium_action: MediumAction;
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactions {
+  high_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsHighAction;
+  low_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsLowAction;
+  medium_action: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactionsMediumAction;
 }
-export interface BlockEmail {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail {
   html_body: string;
   subject: string;
   text_body: string;
 }
-export interface MfaEmail {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail {
   html_body: string;
   subject: string;
   text_body: string;
 }
-export interface NoActionEmail {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail {
   html_body: string;
   subject: string;
   text_body: string;
 }
-export interface NotifyConfiguration {
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfiguration {
   from?: string;
   reply_to?: string;
   source_arn: string;
-  block_email: BlockEmail;
-  mfa_email: MfaEmail;
-  no_action_email: NoActionEmail;
+  block_email: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationBlockEmail;
+  mfa_email: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationMfaEmail;
+  no_action_email: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfigurationNoActionEmail;
 }
-export interface AccountTakeoverRiskConfiguration {
-  actions: Actions;
-  notify_configuration: NotifyConfiguration;
+export interface AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfiguration {
+  actions: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationactions;
+  notify_configuration: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfigurationNotifyConfiguration;
 }
-export interface Actions {
+export interface AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationactions {
   event_action: string;
 }
-export interface CompromisedCredentialsRiskConfiguration {
-  actions: Actions;
+export interface AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfiguration {
+  actions: AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfigurationactions;
 }
-export interface RiskExceptionConfiguration {
+export interface AwsCognitoRiskConfigurationArgsRiskExceptionConfiguration {
   blocked_ip_range_list?: string[];
   skipped_ip_range_list?: string[];
 }
 export interface AwsCognitoRiskConfigurationArgs {
   client_id?: string;
   user_pool_id: string;
-  account_takeover_risk_configuration: AccountTakeoverRiskConfiguration;
-  compromised_credentials_risk_configuration: CompromisedCredentialsRiskConfiguration;
-  risk_exception_configuration: RiskExceptionConfiguration;
+  account_takeover_risk_configuration: AwsCognitoRiskConfigurationArgsAccountTakeoverRiskConfiguration;
+  compromised_credentials_risk_configuration: AwsCognitoRiskConfigurationArgsCompromisedCredentialsRiskConfiguration;
+  risk_exception_configuration: AwsCognitoRiskConfigurationArgsRiskExceptionConfiguration;
 }
 export class aws_cognito_risk_configuration extends TerraformResource {
   readonly id?: string;

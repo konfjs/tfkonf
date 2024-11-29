@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataprocMetastoreFederationIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataprocMetastoreFederationIamMemberArgs {
   federation_id: string;
   member: string;
   role: string;
-  condition: Condition;
+  condition: GoogleDataprocMetastoreFederationIamMemberArgscondition;
 }
 export class google_dataproc_metastore_federation_iam_member extends TerraformResource {
   readonly etag!: string;

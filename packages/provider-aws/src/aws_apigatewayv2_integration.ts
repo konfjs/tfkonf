@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ResponseParameters {
+export interface AwsApigatewayv2IntegrationArgsResponseParameters {
   mappings: {
     [key: string]: string;
   };
   status_code: string;
 }
-export interface TlsConfig {
+export interface AwsApigatewayv2IntegrationArgsTlsConfig {
   server_name_to_verify?: string;
 }
 export interface AwsApigatewayv2IntegrationArgs {
@@ -28,8 +28,8 @@ export interface AwsApigatewayv2IntegrationArgs {
     [key: string]: string;
   };
   template_selection_expression?: string;
-  response_parameters: ResponseParameters;
-  tls_config: TlsConfig;
+  response_parameters: AwsApigatewayv2IntegrationArgsResponseParameters;
+  tls_config: AwsApigatewayv2IntegrationArgsTlsConfig;
 }
 export class aws_apigatewayv2_integration extends TerraformResource {
   readonly id?: string;

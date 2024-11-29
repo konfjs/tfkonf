@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Destination {
+export interface AwsMacie2ClassificationExportConfigurationArgsS3Destination {
   bucket_name: string;
   key_prefix?: string;
   kms_key_arn: string;
 }
 export interface AwsMacie2ClassificationExportConfigurationArgs {
-  s3_destination: S3Destination;
+  s3_destination: AwsMacie2ClassificationExportConfigurationArgsS3Destination;
 }
 export class aws_macie2_classification_export_configuration extends TerraformResource {
   readonly id?: string;

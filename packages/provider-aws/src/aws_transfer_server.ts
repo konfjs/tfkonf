@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EndpointDetails {
+export interface AwsTransferServerArgsEndpointDetails {
   address_allocation_ids?: string[];
   subnet_ids?: string[];
   vpc_id?: string;
 }
-export interface ProtocolDetails {}
-export interface S3StorageOptions {}
-export interface OnPartialUpload {
+export interface AwsTransferServerArgsProtocolDetails {}
+export interface AwsTransferServerArgsS3StorageOptions {}
+export interface AwsTransferServerArgsWorkflowDetailsOnPartialUpload {
   execution_role: string;
   workflow_id: string;
 }
-export interface OnUpload {
+export interface AwsTransferServerArgsWorkflowDetailsOnUpload {
   execution_role: string;
   workflow_id: string;
 }
-export interface WorkflowDetails {
-  on_partial_upload: OnPartialUpload;
-  on_upload: OnUpload;
+export interface AwsTransferServerArgsWorkflowDetails {
+  on_partial_upload: AwsTransferServerArgsWorkflowDetailsOnPartialUpload;
+  on_upload: AwsTransferServerArgsWorkflowDetailsOnUpload;
 }
 export interface AwsTransferServerArgs {
   certificate?: string;
@@ -37,10 +37,10 @@ export interface AwsTransferServerArgs {
     [key: string]: string;
   };
   url?: string;
-  endpoint_details: EndpointDetails;
-  protocol_details: ProtocolDetails;
-  s3_storage_options: S3StorageOptions;
-  workflow_details: WorkflowDetails;
+  endpoint_details: AwsTransferServerArgsEndpointDetails;
+  protocol_details: AwsTransferServerArgsProtocolDetails;
+  s3_storage_options: AwsTransferServerArgsS3StorageOptions;
+  workflow_details: AwsTransferServerArgsWorkflowDetails;
 }
 export class aws_transfer_server extends TerraformResource {
   readonly arn!: string;

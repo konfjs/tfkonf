@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AmazonManagedKafkaEventSourceConfig {}
-export interface OnFailure {
+export interface AwsLambdaEventSourceMappingArgsAmazonManagedKafkaEventSourceConfig {}
+export interface AwsLambdaEventSourceMappingArgsDestinationConfigOnFailure {
   destination_arn: string;
 }
-export interface DestinationConfig {
-  on_failure: OnFailure;
+export interface AwsLambdaEventSourceMappingArgsDestinationConfig {
+  on_failure: AwsLambdaEventSourceMappingArgsDestinationConfigOnFailure;
 }
-export interface DocumentDbEventSourceConfig {
+export interface AwsLambdaEventSourceMappingArgsDocumentDbEventSourceConfig {
   collection_name?: string;
   database_name: string;
   full_document?: string;
 }
-export interface Filter {
+export interface AwsLambdaEventSourceMappingArgsFilterCriteriafilter {
   pattern?: string;
 }
-export interface FilterCriteria {
-  filter: Filter;
+export interface AwsLambdaEventSourceMappingArgsFilterCriteria {
+  filter: AwsLambdaEventSourceMappingArgsFilterCriteriafilter;
 }
-export interface ScalingConfig {
+export interface AwsLambdaEventSourceMappingArgsScalingConfig {
   maximum_concurrency?: number;
 }
-export interface SelfManagedEventSource {
+export interface AwsLambdaEventSourceMappingArgsSelfManagedEventSource {
   endpoints: {
     [key: string]: string;
   };
 }
-export interface SelfManagedKafkaEventSourceConfig {}
-export interface SourceAccessConfiguration {
+export interface AwsLambdaEventSourceMappingArgsSelfManagedKafkaEventSourceConfig {}
+export interface AwsLambdaEventSourceMappingArgsSourceAccessConfiguration {
   type: string;
   uri: string;
 }
@@ -47,14 +47,14 @@ export interface AwsLambdaEventSourceMappingArgs {
   };
   topics?: string[];
   tumbling_window_in_seconds?: number;
-  amazon_managed_kafka_event_source_config: AmazonManagedKafkaEventSourceConfig;
-  destination_config: DestinationConfig;
-  document_db_event_source_config: DocumentDbEventSourceConfig;
-  filter_criteria: FilterCriteria;
-  scaling_config: ScalingConfig;
-  self_managed_event_source: SelfManagedEventSource;
-  self_managed_kafka_event_source_config: SelfManagedKafkaEventSourceConfig;
-  source_access_configuration: SourceAccessConfiguration;
+  amazon_managed_kafka_event_source_config: AwsLambdaEventSourceMappingArgsAmazonManagedKafkaEventSourceConfig;
+  destination_config: AwsLambdaEventSourceMappingArgsDestinationConfig;
+  document_db_event_source_config: AwsLambdaEventSourceMappingArgsDocumentDbEventSourceConfig;
+  filter_criteria: AwsLambdaEventSourceMappingArgsFilterCriteria;
+  scaling_config: AwsLambdaEventSourceMappingArgsScalingConfig;
+  self_managed_event_source: AwsLambdaEventSourceMappingArgsSelfManagedEventSource;
+  self_managed_kafka_event_source_config: AwsLambdaEventSourceMappingArgsSelfManagedKafkaEventSourceConfig;
+  source_access_configuration: AwsLambdaEventSourceMappingArgsSourceAccessConfiguration;
 }
 export class aws_lambda_event_source_mapping extends TerraformResource {
   readonly arn!: string;

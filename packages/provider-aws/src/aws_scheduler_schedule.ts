@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FlexibleTimeWindow {
+export interface AwsSchedulerScheduleArgsFlexibleTimeWindow {
   maximum_window_in_minutes?: number;
   mode: string;
 }
-export interface DeadLetterConfig {
+export interface AwsSchedulerScheduleArgstargetDeadLetterConfig {
   arn: string;
 }
-export interface CapacityProviderStrategy {
+export interface AwsSchedulerScheduleArgstargetEcsParametersCapacityProviderStrategy {
   base?: number;
   capacity_provider: string;
   weight?: number;
 }
-export interface NetworkConfiguration {
+export interface AwsSchedulerScheduleArgstargetEcsParametersNetworkConfiguration {
   assign_public_ip?: boolean;
   security_groups?: string[];
   subnets: string[];
 }
-export interface PlacementConstraints {
+export interface AwsSchedulerScheduleArgstargetEcsParametersPlacementConstraints {
   expression?: string;
   type: string;
 }
-export interface PlacementStrategy {
+export interface AwsSchedulerScheduleArgstargetEcsParametersPlacementStrategy {
   field?: string;
   type: string;
 }
-export interface EcsParameters {
+export interface AwsSchedulerScheduleArgstargetEcsParameters {
   enable_ecs_managed_tags?: boolean;
   enable_execute_command?: boolean;
   group?: string;
@@ -37,43 +37,43 @@ export interface EcsParameters {
   };
   task_count?: number;
   task_definition_arn: string;
-  capacity_provider_strategy: CapacityProviderStrategy;
-  network_configuration: NetworkConfiguration;
-  placement_constraints: PlacementConstraints;
-  placement_strategy: PlacementStrategy;
+  capacity_provider_strategy: AwsSchedulerScheduleArgstargetEcsParametersCapacityProviderStrategy;
+  network_configuration: AwsSchedulerScheduleArgstargetEcsParametersNetworkConfiguration;
+  placement_constraints: AwsSchedulerScheduleArgstargetEcsParametersPlacementConstraints;
+  placement_strategy: AwsSchedulerScheduleArgstargetEcsParametersPlacementStrategy;
 }
-export interface EventbridgeParameters {
+export interface AwsSchedulerScheduleArgstargetEventbridgeParameters {
   detail_type: string;
   source: string;
 }
-export interface KinesisParameters {
+export interface AwsSchedulerScheduleArgstargetKinesisParameters {
   partition_key: string;
 }
-export interface RetryPolicy {
+export interface AwsSchedulerScheduleArgstargetRetryPolicy {
   maximum_event_age_in_seconds?: number;
   maximum_retry_attempts?: number;
 }
-export interface PipelineParameter {
+export interface AwsSchedulerScheduleArgstargetSagemakerPipelineParametersPipelineParameter {
   name: string;
   value: string;
 }
-export interface SagemakerPipelineParameters {
-  pipeline_parameter: PipelineParameter;
+export interface AwsSchedulerScheduleArgstargetSagemakerPipelineParameters {
+  pipeline_parameter: AwsSchedulerScheduleArgstargetSagemakerPipelineParametersPipelineParameter;
 }
-export interface SqsParameters {
+export interface AwsSchedulerScheduleArgstargetSqsParameters {
   message_group_id?: string;
 }
-export interface Target {
+export interface AwsSchedulerScheduleArgstarget {
   arn: string;
   input?: string;
   role_arn: string;
-  dead_letter_config: DeadLetterConfig;
-  ecs_parameters: EcsParameters;
-  eventbridge_parameters: EventbridgeParameters;
-  kinesis_parameters: KinesisParameters;
-  retry_policy: RetryPolicy;
-  sagemaker_pipeline_parameters: SagemakerPipelineParameters;
-  sqs_parameters: SqsParameters;
+  dead_letter_config: AwsSchedulerScheduleArgstargetDeadLetterConfig;
+  ecs_parameters: AwsSchedulerScheduleArgstargetEcsParameters;
+  eventbridge_parameters: AwsSchedulerScheduleArgstargetEventbridgeParameters;
+  kinesis_parameters: AwsSchedulerScheduleArgstargetKinesisParameters;
+  retry_policy: AwsSchedulerScheduleArgstargetRetryPolicy;
+  sagemaker_pipeline_parameters: AwsSchedulerScheduleArgstargetSagemakerPipelineParameters;
+  sqs_parameters: AwsSchedulerScheduleArgstargetSqsParameters;
 }
 export interface AwsSchedulerScheduleArgs {
   description?: string;
@@ -83,8 +83,8 @@ export interface AwsSchedulerScheduleArgs {
   schedule_expression_timezone?: string;
   start_date?: string;
   state?: string;
-  flexible_time_window: FlexibleTimeWindow;
-  target: Target;
+  flexible_time_window: AwsSchedulerScheduleArgsFlexibleTimeWindow;
+  target: AwsSchedulerScheduleArgstarget;
 }
 export class aws_scheduler_schedule extends TerraformResource {
   readonly arn!: string;

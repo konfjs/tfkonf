@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdvancedApiOpsConfig {
+export interface GoogleApigeeAddonsConfigArgsAddonsConfigAdvancedApiOpsConfig {
   enabled?: boolean;
 }
-export interface ApiSecurityConfig {
+export interface GoogleApigeeAddonsConfigArgsAddonsConfigApiSecurityConfig {
   enabled?: boolean;
 }
-export interface ConnectorsPlatformConfig {
+export interface GoogleApigeeAddonsConfigArgsAddonsConfigConnectorsPlatformConfig {
   enabled?: boolean;
 }
-export interface IntegrationConfig {
+export interface GoogleApigeeAddonsConfigArgsAddonsConfigIntegrationConfig {
   enabled?: boolean;
 }
-export interface MonetizationConfig {
+export interface GoogleApigeeAddonsConfigArgsAddonsConfigMonetizationConfig {
   enabled?: boolean;
 }
-export interface AddonsConfig {
-  advanced_api_ops_config: AdvancedApiOpsConfig;
-  api_security_config: ApiSecurityConfig;
-  connectors_platform_config: ConnectorsPlatformConfig;
-  integration_config: IntegrationConfig;
-  monetization_config: MonetizationConfig;
+export interface GoogleApigeeAddonsConfigArgsAddonsConfig {
+  advanced_api_ops_config: GoogleApigeeAddonsConfigArgsAddonsConfigAdvancedApiOpsConfig;
+  api_security_config: GoogleApigeeAddonsConfigArgsAddonsConfigApiSecurityConfig;
+  connectors_platform_config: GoogleApigeeAddonsConfigArgsAddonsConfigConnectorsPlatformConfig;
+  integration_config: GoogleApigeeAddonsConfigArgsAddonsConfigIntegrationConfig;
+  monetization_config: GoogleApigeeAddonsConfigArgsAddonsConfigMonetizationConfig;
 }
-export interface Timeouts {
+export interface GoogleApigeeAddonsConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleApigeeAddonsConfigArgs {
   org: string;
-  addons_config: AddonsConfig;
-  timeouts: Timeouts;
+  addons_config: GoogleApigeeAddonsConfigArgsAddonsConfig;
+  timeouts: GoogleApigeeAddonsConfigArgstimeouts;
 }
 export class google_apigee_addons_config extends TerraformResource {
   readonly id?: string;

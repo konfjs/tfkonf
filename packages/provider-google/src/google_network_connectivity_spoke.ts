@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LinkedInterconnectAttachments {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedInterconnectAttachments {
   include_import_ranges?: string[];
   site_to_site_data_transfer: boolean;
   uris: string[];
 }
-export interface LinkedProducerVpcNetwork {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedProducerVpcNetwork {
   exclude_export_ranges?: string[];
   include_export_ranges?: string[];
   network: string;
   peering: string;
 }
-export interface Instances {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesinstances {
   ip_address?: string;
   virtual_machine?: string;
 }
-export interface LinkedRouterApplianceInstances {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstances {
   include_import_ranges?: string[];
   site_to_site_data_transfer: boolean;
-  instances: Instances;
+  instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesinstances;
 }
-export interface LinkedVpcNetwork {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedVpcNetwork {
   exclude_export_ranges?: string[];
   include_export_ranges?: string[];
   uri: string;
 }
-export interface LinkedVpnTunnels {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedVpnTunnels {
   include_import_ranges?: string[];
   site_to_site_data_transfer: boolean;
   uris: string[];
 }
-export interface Timeouts {
+export interface GoogleNetworkConnectivitySpokeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,12 +42,12 @@ export interface GoogleNetworkConnectivitySpokeArgs {
   };
   location: string;
   name: string;
-  linked_interconnect_attachments: LinkedInterconnectAttachments;
-  linked_producer_vpc_network: LinkedProducerVpcNetwork;
-  linked_router_appliance_instances: LinkedRouterApplianceInstances;
-  linked_vpc_network: LinkedVpcNetwork;
-  linked_vpn_tunnels: LinkedVpnTunnels;
-  timeouts: Timeouts;
+  linked_interconnect_attachments: GoogleNetworkConnectivitySpokeArgsLinkedInterconnectAttachments;
+  linked_producer_vpc_network: GoogleNetworkConnectivitySpokeArgsLinkedProducerVpcNetwork;
+  linked_router_appliance_instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstances;
+  linked_vpc_network: GoogleNetworkConnectivitySpokeArgsLinkedVpcNetwork;
+  linked_vpn_tunnels: GoogleNetworkConnectivitySpokeArgsLinkedVpnTunnels;
+  timeouts: GoogleNetworkConnectivitySpokeArgstimeouts;
 }
 export class google_network_connectivity_spoke extends TerraformResource {
   readonly create_time!: string;

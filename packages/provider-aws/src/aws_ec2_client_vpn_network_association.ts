@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2ClientVpnNetworkAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsEc2ClientVpnNetworkAssociationArgs {
   client_vpn_endpoint_id: string;
   subnet_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsEc2ClientVpnNetworkAssociationArgstimeouts;
 }
 export class aws_ec2_client_vpn_network_association extends TerraformResource {
   readonly association_id!: string;

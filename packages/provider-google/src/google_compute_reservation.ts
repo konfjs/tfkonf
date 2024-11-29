@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ProjectMap {
+export interface GoogleComputeReservationArgsShareSettingsProjectMap {
   id: string;
   project_id?: string;
 }
-export interface ShareSettings {
-  project_map: ProjectMap;
+export interface GoogleComputeReservationArgsShareSettings {
+  project_map: GoogleComputeReservationArgsShareSettingsProjectMap;
 }
-export interface GuestAccelerators {
+export interface GoogleComputeReservationArgsSpecificReservationInstancePropertiesGuestAccelerators {
   accelerator_count: number;
   accelerator_type: string;
 }
-export interface LocalSsds {
+export interface GoogleComputeReservationArgsSpecificReservationInstancePropertiesLocalSsds {
   disk_size_gb: number;
   interface?: string;
 }
-export interface InstanceProperties {
+export interface GoogleComputeReservationArgsSpecificReservationInstanceProperties {
   machine_type: string;
-  guest_accelerators: GuestAccelerators;
-  local_ssds: LocalSsds;
+  guest_accelerators: GoogleComputeReservationArgsSpecificReservationInstancePropertiesGuestAccelerators;
+  local_ssds: GoogleComputeReservationArgsSpecificReservationInstancePropertiesLocalSsds;
 }
-export interface SpecificReservation {
+export interface GoogleComputeReservationArgsSpecificReservation {
   count: number;
-  instance_properties: InstanceProperties;
+  instance_properties: GoogleComputeReservationArgsSpecificReservationInstanceProperties;
 }
-export interface Timeouts {
+export interface GoogleComputeReservationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,9 +33,9 @@ export interface GoogleComputeReservationArgs {
   name: string;
   specific_reservation_required?: boolean;
   zone: string;
-  share_settings: ShareSettings;
-  specific_reservation: SpecificReservation;
-  timeouts: Timeouts;
+  share_settings: GoogleComputeReservationArgsShareSettings;
+  specific_reservation: GoogleComputeReservationArgsSpecificReservation;
+  timeouts: GoogleComputeReservationArgstimeouts;
 }
 export class google_compute_reservation extends TerraformResource {
   readonly commitment!: string;

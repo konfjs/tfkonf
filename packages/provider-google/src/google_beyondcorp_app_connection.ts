@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ApplicationEndpoint {
+export interface GoogleBeyondcorpAppConnectionArgsApplicationEndpoint {
   host: string;
   port: number;
 }
-export interface Gateway {
+export interface GoogleBeyondcorpAppConnectionArgsgateway {
   app_gateway: string;
   type?: string;
 }
-export interface Timeouts {
+export interface GoogleBeyondcorpAppConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleBeyondcorpAppConnectionArgs {
   name: string;
   region?: string;
   type?: string;
-  application_endpoint: ApplicationEndpoint;
-  gateway: Gateway;
-  timeouts: Timeouts;
+  application_endpoint: GoogleBeyondcorpAppConnectionArgsApplicationEndpoint;
+  gateway: GoogleBeyondcorpAppConnectionArgsgateway;
+  timeouts: GoogleBeyondcorpAppConnectionArgstimeouts;
 }
 export class google_beyondcorp_app_connection extends TerraformResource {
   readonly effective_labels!: {

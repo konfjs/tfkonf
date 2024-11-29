@@ -1,45 +1,45 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FixedResponse {
+export interface AwsVpclatticeListenerRuleArgsactionFixedResponse {
   status_code: number;
 }
-export interface TargetGroups {
+export interface AwsVpclatticeListenerRuleArgsactionforwardTargetGroups {
   target_group_identifier: string;
   weight?: number;
 }
-export interface Forward {
-  target_groups: TargetGroups;
+export interface AwsVpclatticeListenerRuleArgsactionforward {
+  target_groups: AwsVpclatticeListenerRuleArgsactionforwardTargetGroups;
 }
-export interface Action {
-  fixed_response: FixedResponse;
-  forward: Forward;
+export interface AwsVpclatticeListenerRuleArgsaction {
+  fixed_response: AwsVpclatticeListenerRuleArgsactionFixedResponse;
+  forward: AwsVpclatticeListenerRuleArgsactionforward;
 }
-export interface Match {
+export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatchesmatch {
   contains?: string;
   exact?: string;
   prefix?: string;
 }
-export interface HeaderMatches {
+export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatches {
   case_sensitive?: boolean;
   name: string;
-  match: Match;
+  match: AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatchesmatch;
 }
-export interface Match {
+export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatchmatch {
   exact?: string;
   prefix?: string;
 }
-export interface PathMatch {
+export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatch {
   case_sensitive?: boolean;
-  match: Match;
+  match: AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatchmatch;
 }
-export interface HttpMatch {
+export interface AwsVpclatticeListenerRuleArgsmatchHttpMatch {
   method?: string;
-  header_matches: HeaderMatches;
-  path_match: PathMatch;
+  header_matches: AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatches;
+  path_match: AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatch;
 }
-export interface Match {
-  http_match: HttpMatch;
+export interface AwsVpclatticeListenerRuleArgsmatch {
+  http_match: AwsVpclatticeListenerRuleArgsmatchHttpMatch;
 }
-export interface Timeouts {
+export interface AwsVpclatticeListenerRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -52,9 +52,9 @@ export interface AwsVpclatticeListenerRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  action: Action;
-  match: Match;
-  timeouts: Timeouts;
+  action: AwsVpclatticeListenerRuleArgsaction;
+  match: AwsVpclatticeListenerRuleArgsmatch;
+  timeouts: AwsVpclatticeListenerRuleArgstimeouts;
 }
 export class aws_vpclattice_listener_rule extends TerraformResource {
   readonly arn!: string;

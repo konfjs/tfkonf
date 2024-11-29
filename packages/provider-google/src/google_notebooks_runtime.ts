@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessConfig {
+export interface GoogleNotebooksRuntimeArgsAccessConfig {
   access_type?: string;
   runtime_owner?: string;
 }
-export interface Kernels {
+export interface GoogleNotebooksRuntimeArgsSoftwareConfigkernels {
   repository: string;
   tag?: string;
 }
-export interface SoftwareConfig {
+export interface GoogleNotebooksRuntimeArgsSoftwareConfig {
   custom_gpu_driver_path?: string;
   enable_health_monitoring?: boolean;
   idle_shutdown?: boolean;
@@ -16,57 +16,57 @@ export interface SoftwareConfig {
   notebook_upgrade_schedule?: string;
   post_startup_script?: string;
   post_startup_script_behavior?: string;
-  kernels: Kernels;
+  kernels: GoogleNotebooksRuntimeArgsSoftwareConfigkernels;
 }
-export interface Timeouts {
+export interface GoogleNotebooksRuntimeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AcceleratorConfig {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigAcceleratorConfig {
   core_count?: number;
   type?: string;
 }
-export interface ContainerImages {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigContainerImages {
   repository: string;
   tag?: string;
 }
-export interface InitializeParams {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigDataDiskInitializeParams {
   description?: string;
   disk_name?: string;
   disk_size_gb?: number;
   disk_type?: string;
 }
-export interface DataDisk {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigDataDisk {
   interface?: string;
   mode?: string;
   source?: string;
   type?: string;
-  initialize_params: InitializeParams;
+  initialize_params: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigDataDiskInitializeParams;
 }
-export interface EncryptionConfig {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigEncryptionConfig {
   kms_key?: string;
 }
-export interface ShieldedInstanceConfig {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface VirtualMachineConfig {
+export interface GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfig {
   internal_ip_only?: boolean;
   machine_type: string;
   network?: string;
   nic_type?: string;
   reserved_ip_range?: string;
   subnet?: string;
-  accelerator_config: AcceleratorConfig;
-  container_images: ContainerImages;
-  data_disk: DataDisk;
-  encryption_config: EncryptionConfig;
-  shielded_instance_config: ShieldedInstanceConfig;
+  accelerator_config: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigAcceleratorConfig;
+  container_images: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigContainerImages;
+  data_disk: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigDataDisk;
+  encryption_config: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigEncryptionConfig;
+  shielded_instance_config: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfigShieldedInstanceConfig;
 }
-export interface VirtualMachine {
-  virtual_machine_config: VirtualMachineConfig;
+export interface GoogleNotebooksRuntimeArgsVirtualMachine {
+  virtual_machine_config: GoogleNotebooksRuntimeArgsVirtualMachineVirtualMachineConfig;
 }
 export interface GoogleNotebooksRuntimeArgs {
   labels?: {
@@ -74,10 +74,10 @@ export interface GoogleNotebooksRuntimeArgs {
   };
   location: string;
   name: string;
-  access_config: AccessConfig;
-  software_config: SoftwareConfig;
-  timeouts: Timeouts;
-  virtual_machine: VirtualMachine;
+  access_config: GoogleNotebooksRuntimeArgsAccessConfig;
+  software_config: GoogleNotebooksRuntimeArgsSoftwareConfig;
+  timeouts: GoogleNotebooksRuntimeArgstimeouts;
+  virtual_machine: GoogleNotebooksRuntimeArgsVirtualMachine;
 }
 export class google_notebooks_runtime extends TerraformResource {
   readonly effective_labels!: {

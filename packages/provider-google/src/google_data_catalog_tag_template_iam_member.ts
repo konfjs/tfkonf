@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataCatalogTagTemplateIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogTagTemplateIamMemberArgs {
   member: string;
   role: string;
   tag_template: string;
-  condition: Condition;
+  condition: GoogleDataCatalogTagTemplateIamMemberArgscondition;
 }
 export class google_data_catalog_tag_template_iam_member extends TerraformResource {
   readonly etag!: string;

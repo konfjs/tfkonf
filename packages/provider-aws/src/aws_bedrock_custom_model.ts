@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OutputDataConfig {
+export interface AwsBedrockCustomModelArgsOutputDataConfig {
   s3_uri: string;
 }
-export interface Timeouts {
+export interface AwsBedrockCustomModelArgstimeouts {
   create?: string;
   delete?: string;
 }
-export interface TrainingDataConfig {
+export interface AwsBedrockCustomModelArgsTrainingDataConfig {
   s3_uri: string;
 }
-export interface Validator {
+export interface AwsBedrockCustomModelArgsValidationDataConfigvalidator {
   s3_uri: string;
 }
-export interface ValidationDataConfig {
-  validator: Validator;
+export interface AwsBedrockCustomModelArgsValidationDataConfig {
+  validator: AwsBedrockCustomModelArgsValidationDataConfigvalidator;
 }
-export interface VpcConfig {
+export interface AwsBedrockCustomModelArgsVpcConfig {
   security_group_ids: string[];
   subnet_ids: string[];
 }
@@ -31,11 +31,11 @@ export interface AwsBedrockCustomModelArgs {
   tags?: {
     [key: string]: string;
   };
-  output_data_config: OutputDataConfig;
-  timeouts: Timeouts;
-  training_data_config: TrainingDataConfig;
-  validation_data_config: ValidationDataConfig;
-  vpc_config: VpcConfig;
+  output_data_config: AwsBedrockCustomModelArgsOutputDataConfig;
+  timeouts: AwsBedrockCustomModelArgstimeouts;
+  training_data_config: AwsBedrockCustomModelArgsTrainingDataConfig;
+  validation_data_config: AwsBedrockCustomModelArgsValidationDataConfig;
+  vpc_config: AwsBedrockCustomModelArgsVpcConfig;
 }
 export class aws_bedrock_custom_model extends TerraformResource {
   readonly custom_model_arn!: string;

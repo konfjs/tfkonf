@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Alias {
+export interface AwsRoute53RecordArgsalias {
   evaluate_target_health: boolean;
   name: string;
   zone_id: string;
 }
-export interface CidrRoutingPolicy {
+export interface AwsRoute53RecordArgsCidrRoutingPolicy {
   collection_id: string;
   location_name: string;
 }
-export interface FailoverRoutingPolicy {
+export interface AwsRoute53RecordArgsFailoverRoutingPolicy {
   type: string;
 }
-export interface GeolocationRoutingPolicy {
+export interface AwsRoute53RecordArgsGeolocationRoutingPolicy {
   continent?: string;
   country?: string;
   subdivision?: string;
 }
-export interface Coordinates {
+export interface AwsRoute53RecordArgsGeoproximityRoutingPolicycoordinates {
   latitude: string;
   longitude: string;
 }
-export interface GeoproximityRoutingPolicy {
+export interface AwsRoute53RecordArgsGeoproximityRoutingPolicy {
   aws_region?: string;
   bias?: number;
   local_zone_group?: string;
-  coordinates: Coordinates;
+  coordinates: AwsRoute53RecordArgsGeoproximityRoutingPolicycoordinates;
 }
-export interface LatencyRoutingPolicy {
+export interface AwsRoute53RecordArgsLatencyRoutingPolicy {
   region: string;
 }
-export interface WeightedRoutingPolicy {
+export interface AwsRoute53RecordArgsWeightedRoutingPolicy {
   weight: number;
 }
 export interface AwsRoute53RecordArgs {
@@ -41,13 +41,13 @@ export interface AwsRoute53RecordArgs {
   ttl?: number;
   type: string;
   zone_id: string;
-  alias: Alias;
-  cidr_routing_policy: CidrRoutingPolicy;
-  failover_routing_policy: FailoverRoutingPolicy;
-  geolocation_routing_policy: GeolocationRoutingPolicy;
-  geoproximity_routing_policy: GeoproximityRoutingPolicy;
-  latency_routing_policy: LatencyRoutingPolicy;
-  weighted_routing_policy: WeightedRoutingPolicy;
+  alias: AwsRoute53RecordArgsalias;
+  cidr_routing_policy: AwsRoute53RecordArgsCidrRoutingPolicy;
+  failover_routing_policy: AwsRoute53RecordArgsFailoverRoutingPolicy;
+  geolocation_routing_policy: AwsRoute53RecordArgsGeolocationRoutingPolicy;
+  geoproximity_routing_policy: AwsRoute53RecordArgsGeoproximityRoutingPolicy;
+  latency_routing_policy: AwsRoute53RecordArgsLatencyRoutingPolicy;
+  weighted_routing_policy: AwsRoute53RecordArgsWeightedRoutingPolicy;
 }
 export class aws_route53_record extends TerraformResource {
   readonly allow_overwrite?: boolean;

@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomDnsConfiguration {
+export interface AwsFinspaceKxEnvironmentArgsCustomDnsConfiguration {
   custom_dns_server_ip: string;
   custom_dns_server_name: string;
 }
-export interface Timeouts {
+export interface AwsFinspaceKxEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface IcmpTypeCode {
+export interface AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfigurationIcmpTypeCode {
   code: number;
   type: number;
 }
-export interface PortRange {
+export interface AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfigurationPortRange {
   from: number;
   to: number;
 }
-export interface AttachmentNetworkAclConfiguration {
+export interface AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfiguration {
   cidr_block: string;
   protocol: string;
   rule_action: string;
   rule_number: number;
-  icmp_type_code: IcmpTypeCode;
-  port_range: PortRange;
+  icmp_type_code: AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfigurationIcmpTypeCode;
+  port_range: AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfigurationPortRange;
 }
-export interface TransitGatewayConfiguration {
+export interface AwsFinspaceKxEnvironmentArgsTransitGatewayConfiguration {
   routable_cidr_space: string;
   transit_gateway_id: string;
-  attachment_network_acl_configuration: AttachmentNetworkAclConfiguration;
+  attachment_network_acl_configuration: AwsFinspaceKxEnvironmentArgsTransitGatewayConfigurationAttachmentNetworkAclConfiguration;
 }
 export interface AwsFinspaceKxEnvironmentArgs {
   description?: string;
@@ -36,9 +36,9 @@ export interface AwsFinspaceKxEnvironmentArgs {
   tags?: {
     [key: string]: string;
   };
-  custom_dns_configuration: CustomDnsConfiguration;
-  timeouts: Timeouts;
-  transit_gateway_configuration: TransitGatewayConfiguration;
+  custom_dns_configuration: AwsFinspaceKxEnvironmentArgsCustomDnsConfiguration;
+  timeouts: AwsFinspaceKxEnvironmentArgstimeouts;
+  transit_gateway_configuration: AwsFinspaceKxEnvironmentArgsTransitGatewayConfiguration;
 }
 export class aws_finspace_kx_environment extends TerraformResource {
   readonly arn!: string;

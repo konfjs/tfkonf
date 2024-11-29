@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InstanceMetadataServiceConfiguration {}
+export interface AwsSagemakerNotebookInstanceArgsInstanceMetadataServiceConfiguration {}
 export interface AwsSagemakerNotebookInstanceArgs {
   accelerator_types?: string[];
   additional_code_repositories?: string[];
@@ -16,7 +16,7 @@ export interface AwsSagemakerNotebookInstanceArgs {
     [key: string]: string;
   };
   volume_size?: number;
-  instance_metadata_service_configuration: InstanceMetadataServiceConfiguration;
+  instance_metadata_service_configuration: AwsSagemakerNotebookInstanceArgsInstanceMetadataServiceConfiguration;
 }
 export class aws_sagemaker_notebook_instance extends TerraformResource {
   readonly arn!: string;

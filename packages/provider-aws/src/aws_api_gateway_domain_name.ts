@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EndpointConfiguration {
+export interface AwsApiGatewayDomainNameArgsEndpointConfiguration {
   types: string[];
 }
-export interface MutualTlsAuthentication {
+export interface AwsApiGatewayDomainNameArgsMutualTlsAuthentication {
   truststore_uri: string;
   truststore_version?: string;
 }
@@ -18,8 +18,8 @@ export interface AwsApiGatewayDomainNameArgs {
   tags?: {
     [key: string]: string;
   };
-  endpoint_configuration: EndpointConfiguration;
-  mutual_tls_authentication: MutualTlsAuthentication;
+  endpoint_configuration: AwsApiGatewayDomainNameArgsEndpointConfiguration;
+  mutual_tls_authentication: AwsApiGatewayDomainNameArgsMutualTlsAuthentication;
 }
 export class aws_api_gateway_domain_name extends TerraformResource {
   readonly arn!: string;

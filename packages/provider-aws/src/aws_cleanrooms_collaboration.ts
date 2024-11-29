@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataEncryptionMetadata {
+export interface AwsCleanroomsCollaborationArgsDataEncryptionMetadata {
   allow_clear_text: boolean;
   allow_duplicates: boolean;
   allow_joins_on_columns_with_different_names: boolean;
   preserve_nulls: boolean;
 }
-export interface Member {
+export interface AwsCleanroomsCollaborationArgsmember {
   account_id: string;
   display_name: string;
   member_abilities: string[];
 }
-export interface Timeouts {
+export interface AwsCleanroomsCollaborationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,9 +24,9 @@ export interface AwsCleanroomsCollaborationArgs {
   tags?: {
     [key: string]: string;
   };
-  data_encryption_metadata: DataEncryptionMetadata;
-  member: Member;
-  timeouts: Timeouts;
+  data_encryption_metadata: AwsCleanroomsCollaborationArgsDataEncryptionMetadata;
+  member: AwsCleanroomsCollaborationArgsmember;
+  timeouts: AwsCleanroomsCollaborationArgstimeouts;
 }
 export class aws_cleanrooms_collaboration extends TerraformResource {
   readonly arn!: string;

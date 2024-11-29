@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchLogOptions {
+export interface AwsVpnConnectionArgsTunnel1LogOptionsCloudwatchLogOptions {
   log_enabled?: boolean;
   log_group_arn?: string;
   log_output_format?: string;
 }
-export interface Tunnel1LogOptions {
-  cloudwatch_log_options: CloudwatchLogOptions;
+export interface AwsVpnConnectionArgsTunnel1LogOptions {
+  cloudwatch_log_options: AwsVpnConnectionArgsTunnel1LogOptionsCloudwatchLogOptions;
 }
-export interface CloudwatchLogOptions {
+export interface AwsVpnConnectionArgsTunnel2LogOptionsCloudwatchLogOptions {
   log_enabled?: boolean;
   log_group_arn?: string;
   log_output_format?: string;
 }
-export interface Tunnel2LogOptions {
-  cloudwatch_log_options: CloudwatchLogOptions;
+export interface AwsVpnConnectionArgsTunnel2LogOptions {
+  cloudwatch_log_options: AwsVpnConnectionArgsTunnel2LogOptionsCloudwatchLogOptions;
 }
 export interface AwsVpnConnectionArgs {
   customer_gateway_id: string;
@@ -56,8 +56,8 @@ export interface AwsVpnConnectionArgs {
   tunnel2_startup_action?: string;
   type: string;
   vpn_gateway_id?: string;
-  tunnel1_log_options: Tunnel1LogOptions;
-  tunnel2_log_options: Tunnel2LogOptions;
+  tunnel1_log_options: AwsVpnConnectionArgsTunnel1LogOptions;
+  tunnel2_log_options: AwsVpnConnectionArgsTunnel2LogOptions;
 }
 export class aws_vpn_connection extends TerraformResource {
   readonly arn!: string;

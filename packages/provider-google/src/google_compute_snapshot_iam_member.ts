@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleComputeSnapshotIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeSnapshotIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleComputeSnapshotIamMemberArgscondition;
 }
 export class google_compute_snapshot_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticationOptions {
+export interface AwsEc2ClientVpnEndpointArgsAuthenticationOptions {
   active_directory_id?: string;
   root_certificate_chain_arn?: string;
   saml_provider_arn?: string;
   self_service_saml_provider_arn?: string;
   type: string;
 }
-export interface ClientConnectOptions {}
-export interface ClientLoginBannerOptions {}
-export interface ConnectionLogOptions {
+export interface AwsEc2ClientVpnEndpointArgsClientConnectOptions {}
+export interface AwsEc2ClientVpnEndpointArgsClientLoginBannerOptions {}
+export interface AwsEc2ClientVpnEndpointArgsConnectionLogOptions {
   cloudwatch_log_group?: string;
   enabled: boolean;
 }
@@ -25,10 +25,10 @@ export interface AwsEc2ClientVpnEndpointArgs {
   };
   transport_protocol?: string;
   vpn_port?: number;
-  authentication_options: AuthenticationOptions;
-  client_connect_options: ClientConnectOptions;
-  client_login_banner_options: ClientLoginBannerOptions;
-  connection_log_options: ConnectionLogOptions;
+  authentication_options: AwsEc2ClientVpnEndpointArgsAuthenticationOptions;
+  client_connect_options: AwsEc2ClientVpnEndpointArgsClientConnectOptions;
+  client_login_banner_options: AwsEc2ClientVpnEndpointArgsClientLoginBannerOptions;
+  connection_log_options: AwsEc2ClientVpnEndpointArgsConnectionLogOptions;
 }
 export class aws_ec2_client_vpn_endpoint extends TerraformResource {
   readonly arn!: string;

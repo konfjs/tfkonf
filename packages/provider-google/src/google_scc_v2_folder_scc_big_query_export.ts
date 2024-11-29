@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSccV2FolderSccBigQueryExportArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleSccV2FolderSccBigQueryExportArgs {
   filter?: string;
   folder: string;
   location?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSccV2FolderSccBigQueryExportArgstimeouts;
 }
 export class google_scc_v2_folder_scc_big_query_export extends TerraformResource {
   readonly create_time!: string;

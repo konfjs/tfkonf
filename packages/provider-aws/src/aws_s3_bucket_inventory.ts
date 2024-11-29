@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SseKms {
+export interface AwsS3BucketInventoryArgsdestinationbucketencryptionSseKms {
   key_id: string;
 }
-export interface SseS3 {}
-export interface Encryption {
-  sse_kms: SseKms;
-  sse_s3: SseS3;
+export interface AwsS3BucketInventoryArgsdestinationbucketencryptionSseS3 {}
+export interface AwsS3BucketInventoryArgsdestinationbucketencryption {
+  sse_kms: AwsS3BucketInventoryArgsdestinationbucketencryptionSseKms;
+  sse_s3: AwsS3BucketInventoryArgsdestinationbucketencryptionSseS3;
 }
-export interface Bucket {
+export interface AwsS3BucketInventoryArgsdestinationbucket {
   account_id?: string;
   bucket_arn: string;
   format: string;
   prefix?: string;
-  encryption: Encryption;
+  encryption: AwsS3BucketInventoryArgsdestinationbucketencryption;
 }
-export interface Destination {
-  bucket: Bucket;
+export interface AwsS3BucketInventoryArgsdestination {
+  bucket: AwsS3BucketInventoryArgsdestinationbucket;
 }
-export interface Filter {
+export interface AwsS3BucketInventoryArgsfilter {
   prefix?: string;
 }
-export interface Schedule {
+export interface AwsS3BucketInventoryArgsschedule {
   frequency: string;
 }
 export interface AwsS3BucketInventoryArgs {
@@ -29,9 +29,9 @@ export interface AwsS3BucketInventoryArgs {
   included_object_versions: string;
   name: string;
   optional_fields?: string[];
-  destination: Destination;
-  filter: Filter;
-  schedule: Schedule;
+  destination: AwsS3BucketInventoryArgsdestination;
+  filter: AwsS3BucketInventoryArgsfilter;
+  schedule: AwsS3BucketInventoryArgsschedule;
 }
 export class aws_s3_bucket_inventory extends TerraformResource {
   readonly id?: string;

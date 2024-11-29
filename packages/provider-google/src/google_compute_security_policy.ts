@@ -1,110 +1,110 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Layer7DdosDefenseConfig {
+export interface GoogleComputeSecurityPolicyArgsAdaptiveProtectionConfigLayer7DdosDefenseConfig {
   enable?: boolean;
 }
-export interface AdaptiveProtectionConfig {
-  layer_7_ddos_defense_config: Layer7DdosDefenseConfig;
+export interface GoogleComputeSecurityPolicyArgsAdaptiveProtectionConfig {
+  layer_7_ddos_defense_config: GoogleComputeSecurityPolicyArgsAdaptiveProtectionConfigLayer7DdosDefenseConfig;
 }
-export interface JsonCustomConfig {
+export interface GoogleComputeSecurityPolicyArgsAdvancedOptionsConfigJsonCustomConfig {
   content_types: string[];
 }
-export interface AdvancedOptionsConfig {
+export interface GoogleComputeSecurityPolicyArgsAdvancedOptionsConfig {
   user_ip_request_headers?: string[];
-  json_custom_config: JsonCustomConfig;
+  json_custom_config: GoogleComputeSecurityPolicyArgsAdvancedOptionsConfigJsonCustomConfig;
 }
-export interface RecaptchaOptionsConfig {
+export interface GoogleComputeSecurityPolicyArgsRecaptchaOptionsConfig {
   redirect_site_key: string;
 }
-export interface RequestHeadersToAdds {
+export interface GoogleComputeSecurityPolicyArgsruleHeaderActionRequestHeadersToAdds {
   header_name: string;
   header_value?: string;
 }
-export interface HeaderAction {
-  request_headers_to_adds: RequestHeadersToAdds;
+export interface GoogleComputeSecurityPolicyArgsruleHeaderAction {
+  request_headers_to_adds: GoogleComputeSecurityPolicyArgsruleHeaderActionRequestHeadersToAdds;
 }
-export interface Config {
+export interface GoogleComputeSecurityPolicyArgsrulematchconfig {
   src_ip_ranges: string[];
 }
-export interface Expr {
+export interface GoogleComputeSecurityPolicyArgsrulematchexpr {
   expression: string;
 }
-export interface RecaptchaOptions {
+export interface GoogleComputeSecurityPolicyArgsrulematchExprOptionsRecaptchaOptions {
   action_token_site_keys?: string[];
   session_token_site_keys?: string[];
 }
-export interface ExprOptions {
-  recaptcha_options: RecaptchaOptions;
+export interface GoogleComputeSecurityPolicyArgsrulematchExprOptions {
+  recaptcha_options: GoogleComputeSecurityPolicyArgsrulematchExprOptionsRecaptchaOptions;
 }
-export interface Match {
+export interface GoogleComputeSecurityPolicyArgsrulematch {
   versioned_expr?: string;
-  config: Config;
-  expr: Expr;
-  expr_options: ExprOptions;
+  config: GoogleComputeSecurityPolicyArgsrulematchconfig;
+  expr: GoogleComputeSecurityPolicyArgsrulematchexpr;
+  expr_options: GoogleComputeSecurityPolicyArgsrulematchExprOptions;
 }
-export interface RequestCookie {
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestCookie {
   operator: string;
   value?: string;
 }
-export interface RequestHeader {
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestHeader {
   operator: string;
   value?: string;
 }
-export interface RequestQueryParam {
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestQueryParam {
   operator: string;
   value?: string;
 }
-export interface RequestUri {
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestUri {
   operator: string;
   value?: string;
 }
-export interface Exclusion {
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusion {
   target_rule_ids?: string[];
   target_rule_set: string;
-  request_cookie: RequestCookie;
-  request_header: RequestHeader;
-  request_query_param: RequestQueryParam;
-  request_uri: RequestUri;
+  request_cookie: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestCookie;
+  request_header: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestHeader;
+  request_query_param: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestQueryParam;
+  request_uri: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusionRequestUri;
 }
-export interface PreconfiguredWafConfig {
-  exclusion: Exclusion;
+export interface GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfig {
+  exclusion: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfigexclusion;
 }
-export interface BanThreshold {
+export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsBanThreshold {
   count: number;
   interval_sec: number;
 }
-export interface ExceedRedirectOptions {
+export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsExceedRedirectOptions {
   target?: string;
   type: string;
 }
-export interface RateLimitThreshold {
+export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptionsRateLimitThreshold {
   count: number;
   interval_sec: number;
 }
-export interface RateLimitOptions {
+export interface GoogleComputeSecurityPolicyArgsruleRateLimitOptions {
   ban_duration_sec?: number;
   conform_action: string;
   enforce_on_key?: string;
   enforce_on_key_name?: string;
   exceed_action: string;
-  ban_threshold: BanThreshold;
-  exceed_redirect_options: ExceedRedirectOptions;
-  rate_limit_threshold: RateLimitThreshold;
+  ban_threshold: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsBanThreshold;
+  exceed_redirect_options: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsExceedRedirectOptions;
+  rate_limit_threshold: GoogleComputeSecurityPolicyArgsruleRateLimitOptionsRateLimitThreshold;
 }
-export interface RedirectOptions {
+export interface GoogleComputeSecurityPolicyArgsruleRedirectOptions {
   target?: string;
   type: string;
 }
-export interface Rule {
+export interface GoogleComputeSecurityPolicyArgsrule {
   action: string;
   description?: string;
   priority: number;
-  header_action: HeaderAction;
-  match: Match;
-  preconfigured_waf_config: PreconfiguredWafConfig;
-  rate_limit_options: RateLimitOptions;
-  redirect_options: RedirectOptions;
+  header_action: GoogleComputeSecurityPolicyArgsruleHeaderAction;
+  match: GoogleComputeSecurityPolicyArgsrulematch;
+  preconfigured_waf_config: GoogleComputeSecurityPolicyArgsrulePreconfiguredWafConfig;
+  rate_limit_options: GoogleComputeSecurityPolicyArgsruleRateLimitOptions;
+  redirect_options: GoogleComputeSecurityPolicyArgsruleRedirectOptions;
 }
-export interface Timeouts {
+export interface GoogleComputeSecurityPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -112,11 +112,11 @@ export interface Timeouts {
 export interface GoogleComputeSecurityPolicyArgs {
   description?: string;
   name: string;
-  adaptive_protection_config: AdaptiveProtectionConfig;
-  advanced_options_config: AdvancedOptionsConfig;
-  recaptcha_options_config: RecaptchaOptionsConfig;
-  rule: Rule;
-  timeouts: Timeouts;
+  adaptive_protection_config: GoogleComputeSecurityPolicyArgsAdaptiveProtectionConfig;
+  advanced_options_config: GoogleComputeSecurityPolicyArgsAdvancedOptionsConfig;
+  recaptcha_options_config: GoogleComputeSecurityPolicyArgsRecaptchaOptionsConfig;
+  rule: GoogleComputeSecurityPolicyArgsrule;
+  timeouts: GoogleComputeSecurityPolicyArgstimeouts;
 }
 export class google_compute_security_policy extends TerraformResource {
   readonly fingerprint!: string;

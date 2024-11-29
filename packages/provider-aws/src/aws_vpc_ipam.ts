@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OperatingRegions {
+export interface AwsVpcIpamArgsOperatingRegions {
   region_name: string;
 }
-export interface Timeouts {
+export interface AwsVpcIpamArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface AwsVpcIpamArgs {
     [key: string]: string;
   };
   tier?: string;
-  operating_regions: OperatingRegions;
-  timeouts: Timeouts;
+  operating_regions: AwsVpcIpamArgsOperatingRegions;
+  timeouts: AwsVpcIpamArgstimeouts;
 }
 export class aws_vpc_ipam extends TerraformResource {
   readonly arn!: string;

@@ -1,81 +1,81 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AlarmConfiguration {
+export interface AwsCodedeployDeploymentGroupArgsAlarmConfiguration {
   alarms?: string[];
   enabled?: boolean;
   ignore_poll_alarm_failure?: boolean;
 }
-export interface AutoRollbackConfiguration {
+export interface AwsCodedeployDeploymentGroupArgsAutoRollbackConfiguration {
   enabled?: boolean;
   events?: string[];
 }
-export interface DeploymentReadyOption {
+export interface AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigDeploymentReadyOption {
   action_on_timeout?: string;
   wait_time_in_minutes?: number;
 }
-export interface GreenFleetProvisioningOption {
+export interface AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigGreenFleetProvisioningOption {
   action?: string;
 }
-export interface TerminateBlueInstancesOnDeploymentSuccess {
+export interface AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess {
   action?: string;
   termination_wait_time_in_minutes?: number;
 }
-export interface BlueGreenDeploymentConfig {
-  deployment_ready_option: DeploymentReadyOption;
-  green_fleet_provisioning_option: GreenFleetProvisioningOption;
-  terminate_blue_instances_on_deployment_success: TerminateBlueInstancesOnDeploymentSuccess;
+export interface AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfig {
+  deployment_ready_option: AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigDeploymentReadyOption;
+  green_fleet_provisioning_option: AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigGreenFleetProvisioningOption;
+  terminate_blue_instances_on_deployment_success: AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess;
 }
-export interface DeploymentStyle {
+export interface AwsCodedeployDeploymentGroupArgsDeploymentStyle {
   deployment_option?: string;
   deployment_type?: string;
 }
-export interface Ec2TagFilter {
+export interface AwsCodedeployDeploymentGroupArgsEc2TagFilter {
   key?: string;
   type?: string;
   value?: string;
 }
-export interface Ec2TagFilter {
+export interface AwsCodedeployDeploymentGroupArgsEc2TagSetEc2TagFilter {
   key?: string;
   type?: string;
   value?: string;
 }
-export interface Ec2TagSet {
-  ec2_tag_filter: Ec2TagFilter;
+export interface AwsCodedeployDeploymentGroupArgsEc2TagSet {
+  ec2_tag_filter: AwsCodedeployDeploymentGroupArgsEc2TagSetEc2TagFilter;
 }
-export interface EcsService {
+export interface AwsCodedeployDeploymentGroupArgsEcsService {
   cluster_name: string;
   service_name: string;
 }
-export interface ElbInfo {
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoElbInfo {
   name?: string;
 }
-export interface TargetGroupInfo {
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupInfo {
   name?: string;
 }
-export interface ProdTrafficRoute {
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute {
   listener_arns: string[];
 }
-export interface TargetGroup {
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoTargetGroup {
   name: string;
 }
-export interface TestTrafficRoute {
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute {
   listener_arns: string[];
 }
-export interface TargetGroupPairInfo {
-  prod_traffic_route: ProdTrafficRoute;
-  target_group: TargetGroup;
-  test_traffic_route: TestTrafficRoute;
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfo {
+  prod_traffic_route: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute;
+  target_group: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoTargetGroup;
+  test_traffic_route: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute;
 }
-export interface LoadBalancerInfo {
-  elb_info: ElbInfo;
-  target_group_info: TargetGroupInfo;
-  target_group_pair_info: TargetGroupPairInfo;
+export interface AwsCodedeployDeploymentGroupArgsLoadBalancerInfo {
+  elb_info: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoElbInfo;
+  target_group_info: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupInfo;
+  target_group_pair_info: AwsCodedeployDeploymentGroupArgsLoadBalancerInfoTargetGroupPairInfo;
 }
-export interface OnPremisesInstanceTagFilter {
+export interface AwsCodedeployDeploymentGroupArgsOnPremisesInstanceTagFilter {
   key?: string;
   type?: string;
   value?: string;
 }
-export interface TriggerConfiguration {
+export interface AwsCodedeployDeploymentGroupArgsTriggerConfiguration {
   trigger_events: string[];
   trigger_name: string;
   trigger_target_arn: string;
@@ -91,16 +91,16 @@ export interface AwsCodedeployDeploymentGroupArgs {
     [key: string]: string;
   };
   termination_hook_enabled?: boolean;
-  alarm_configuration: AlarmConfiguration;
-  auto_rollback_configuration: AutoRollbackConfiguration;
-  blue_green_deployment_config: BlueGreenDeploymentConfig;
-  deployment_style: DeploymentStyle;
-  ec2_tag_filter: Ec2TagFilter;
-  ec2_tag_set: Ec2TagSet;
-  ecs_service: EcsService;
-  load_balancer_info: LoadBalancerInfo;
-  on_premises_instance_tag_filter: OnPremisesInstanceTagFilter;
-  trigger_configuration: TriggerConfiguration;
+  alarm_configuration: AwsCodedeployDeploymentGroupArgsAlarmConfiguration;
+  auto_rollback_configuration: AwsCodedeployDeploymentGroupArgsAutoRollbackConfiguration;
+  blue_green_deployment_config: AwsCodedeployDeploymentGroupArgsBlueGreenDeploymentConfig;
+  deployment_style: AwsCodedeployDeploymentGroupArgsDeploymentStyle;
+  ec2_tag_filter: AwsCodedeployDeploymentGroupArgsEc2TagFilter;
+  ec2_tag_set: AwsCodedeployDeploymentGroupArgsEc2TagSet;
+  ecs_service: AwsCodedeployDeploymentGroupArgsEcsService;
+  load_balancer_info: AwsCodedeployDeploymentGroupArgsLoadBalancerInfo;
+  on_premises_instance_tag_filter: AwsCodedeployDeploymentGroupArgsOnPremisesInstanceTagFilter;
+  trigger_configuration: AwsCodedeployDeploymentGroupArgsTriggerConfiguration;
 }
 export class aws_codedeploy_deployment_group extends TerraformResource {
   readonly arn!: string;

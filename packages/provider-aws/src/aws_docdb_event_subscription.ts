@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDocdbEventSubscriptionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface AwsDocdbEventSubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsDocdbEventSubscriptionArgstimeouts;
 }
 export class aws_docdb_event_subscription extends TerraformResource {
   readonly arn!: string;

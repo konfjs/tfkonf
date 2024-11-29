@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OutboundCallerConfig {
+export interface AwsConnectQueueArgsOutboundCallerConfig {
   outbound_caller_id_name?: string;
   outbound_caller_id_number_id?: string;
   outbound_flow_id?: string;
@@ -14,7 +14,7 @@ export interface AwsConnectQueueArgs {
   tags?: {
     [key: string]: string;
   };
-  outbound_caller_config: OutboundCallerConfig;
+  outbound_caller_config: AwsConnectQueueArgsOutboundCallerConfig;
 }
 export class aws_connect_queue extends TerraformResource {
   readonly arn!: string;

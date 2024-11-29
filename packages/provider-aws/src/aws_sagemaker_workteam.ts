@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CognitoMemberDefinition {
+export interface AwsSagemakerWorkteamArgsMemberDefinitionCognitoMemberDefinition {
   client_id: string;
   user_group: string;
   user_pool: string;
 }
-export interface OidcMemberDefinition {
+export interface AwsSagemakerWorkteamArgsMemberDefinitionOidcMemberDefinition {
   groups: string[];
 }
-export interface MemberDefinition {
-  cognito_member_definition: CognitoMemberDefinition;
-  oidc_member_definition: OidcMemberDefinition;
+export interface AwsSagemakerWorkteamArgsMemberDefinition {
+  cognito_member_definition: AwsSagemakerWorkteamArgsMemberDefinitionCognitoMemberDefinition;
+  oidc_member_definition: AwsSagemakerWorkteamArgsMemberDefinitionOidcMemberDefinition;
 }
-export interface NotificationConfiguration {
+export interface AwsSagemakerWorkteamArgsNotificationConfiguration {
   notification_topic_arn?: string;
 }
-export interface IamPolicyConstraints {}
-export interface S3Presign {
-  iam_policy_constraints: IamPolicyConstraints;
+export interface AwsSagemakerWorkteamArgsWorkerAccessConfigurationS3PresignIamPolicyConstraints {}
+export interface AwsSagemakerWorkteamArgsWorkerAccessConfigurationS3Presign {
+  iam_policy_constraints: AwsSagemakerWorkteamArgsWorkerAccessConfigurationS3PresignIamPolicyConstraints;
 }
-export interface WorkerAccessConfiguration {
-  s3_presign: S3Presign;
+export interface AwsSagemakerWorkteamArgsWorkerAccessConfiguration {
+  s3_presign: AwsSagemakerWorkteamArgsWorkerAccessConfigurationS3Presign;
 }
 export interface AwsSagemakerWorkteamArgs {
   description: string;
@@ -28,9 +28,9 @@ export interface AwsSagemakerWorkteamArgs {
   };
   workforce_name?: string;
   workteam_name: string;
-  member_definition: MemberDefinition;
-  notification_configuration: NotificationConfiguration;
-  worker_access_configuration: WorkerAccessConfiguration;
+  member_definition: AwsSagemakerWorkteamArgsMemberDefinition;
+  notification_configuration: AwsSagemakerWorkteamArgsNotificationConfiguration;
+  worker_access_configuration: AwsSagemakerWorkteamArgsWorkerAccessConfiguration;
 }
 export class aws_sagemaker_workteam extends TerraformResource {
   readonly arn!: string;

@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GuestOsFeatures {
+export interface GoogleComputeImageArgsGuestOsFeatures {
   type: string;
 }
-export interface ImageEncryptionKey {
+export interface GoogleComputeImageArgsImageEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;
 }
-export interface RawDisk {
+export interface GoogleComputeImageArgsRawDisk {
   container_type?: string;
   sha1?: string;
   source: string;
 }
-export interface Timeouts {
+export interface GoogleComputeImageArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,10 +26,10 @@ export interface GoogleComputeImageArgs {
   source_disk?: string;
   source_image?: string;
   source_snapshot?: string;
-  guest_os_features: GuestOsFeatures;
-  image_encryption_key: ImageEncryptionKey;
-  raw_disk: RawDisk;
-  timeouts: Timeouts;
+  guest_os_features: GoogleComputeImageArgsGuestOsFeatures;
+  image_encryption_key: GoogleComputeImageArgsImageEncryptionKey;
+  raw_disk: GoogleComputeImageArgsRawDisk;
+  timeouts: GoogleComputeImageArgstimeouts;
 }
 export class google_compute_image extends TerraformResource {
   readonly archive_size_bytes!: number;

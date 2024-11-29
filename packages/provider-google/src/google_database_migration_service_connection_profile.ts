@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InitialUser {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsInitialUser {
   password: string;
   user: string;
 }
-export interface MachineConfig {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsPrimaryInstanceSettingsMachineConfig {
   cpu_count: number;
 }
-export interface PrimaryInstanceSettings {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsPrimaryInstanceSettings {
   database_flags?: {
     [key: string]: string;
   };
@@ -14,33 +14,33 @@ export interface PrimaryInstanceSettings {
   labels?: {
     [key: string]: string;
   };
-  machine_config: MachineConfig;
+  machine_config: GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsPrimaryInstanceSettingsMachineConfig;
 }
-export interface Settings {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettings {
   labels?: {
     [key: string]: string;
   };
   vpc_network: string;
-  initial_user: InitialUser;
-  primary_instance_settings: PrimaryInstanceSettings;
+  initial_user: GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsInitialUser;
+  primary_instance_settings: GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettingsPrimaryInstanceSettings;
 }
-export interface Alloydb {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsalloydb {
   cluster_id: string;
-  settings: Settings;
+  settings: GoogleDatabaseMigrationServiceConnectionProfileArgsalloydbsettings;
 }
-export interface AuthorizedNetworks {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettingsIpConfigAuthorizedNetworks {
   expire_time?: string;
   label?: string;
   ttl?: string;
   value: string;
 }
-export interface IpConfig {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettingsIpConfig {
   enable_ipv4?: boolean;
   private_network?: string;
   require_ssl?: boolean;
-  authorized_networks: AuthorizedNetworks;
+  authorized_networks: GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettingsIpConfigAuthorizedNetworks;
 }
-export interface Settings {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettings {
   activation_policy?: string;
   auto_storage_increase?: boolean;
   cmek_key_name?: string;
@@ -60,66 +60,66 @@ export interface Settings {
     [key: string]: string;
   };
   zone?: string;
-  ip_config: IpConfig;
+  ip_config: GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettingsIpConfig;
 }
-export interface Cloudsql {
-  settings: Settings;
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgscloudsql {
+  settings: GoogleDatabaseMigrationServiceConnectionProfileArgscloudsqlsettings;
 }
-export interface Ssl {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsmysqlssl {
   ca_certificate: string;
   client_certificate?: string;
   client_key?: string;
 }
-export interface Mysql {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsmysql {
   cloud_sql_id?: string;
   host?: string;
   password?: string;
   port?: number;
   username?: string;
-  ssl: Ssl;
+  ssl: GoogleDatabaseMigrationServiceConnectionProfileArgsmysqlssl;
 }
-export interface ForwardSshConnectivity {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsoracleForwardSshConnectivity {
   hostname: string;
   password?: string;
   port: number;
   private_key?: string;
   username: string;
 }
-export interface PrivateConnectivity {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsoraclePrivateConnectivity {
   private_connection: string;
 }
-export interface Ssl {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsoraclessl {
   ca_certificate: string;
   client_certificate?: string;
   client_key?: string;
 }
-export interface StaticServiceIpConnectivity {}
-export interface Oracle {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsoracleStaticServiceIpConnectivity {}
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgsoracle {
   database_service: string;
   host: string;
   password: string;
   port: number;
   username: string;
-  forward_ssh_connectivity: ForwardSshConnectivity;
-  private_connectivity: PrivateConnectivity;
-  ssl: Ssl;
-  static_service_ip_connectivity: StaticServiceIpConnectivity;
+  forward_ssh_connectivity: GoogleDatabaseMigrationServiceConnectionProfileArgsoracleForwardSshConnectivity;
+  private_connectivity: GoogleDatabaseMigrationServiceConnectionProfileArgsoraclePrivateConnectivity;
+  ssl: GoogleDatabaseMigrationServiceConnectionProfileArgsoraclessl;
+  static_service_ip_connectivity: GoogleDatabaseMigrationServiceConnectionProfileArgsoracleStaticServiceIpConnectivity;
 }
-export interface Ssl {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgspostgresqlssl {
   ca_certificate: string;
   client_certificate?: string;
   client_key?: string;
 }
-export interface Postgresql {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgspostgresql {
   alloydb_cluster_id?: string;
   cloud_sql_id?: string;
   host?: string;
   password?: string;
   port?: number;
   username?: string;
-  ssl: Ssl;
+  ssl: GoogleDatabaseMigrationServiceConnectionProfileArgspostgresqlssl;
 }
-export interface Timeouts {
+export interface GoogleDatabaseMigrationServiceConnectionProfileArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -131,12 +131,12 @@ export interface GoogleDatabaseMigrationServiceConnectionProfileArgs {
     [key: string]: string;
   };
   location?: string;
-  alloydb: Alloydb;
-  cloudsql: Cloudsql;
-  mysql: Mysql;
-  oracle: Oracle;
-  postgresql: Postgresql;
-  timeouts: Timeouts;
+  alloydb: GoogleDatabaseMigrationServiceConnectionProfileArgsalloydb;
+  cloudsql: GoogleDatabaseMigrationServiceConnectionProfileArgscloudsql;
+  mysql: GoogleDatabaseMigrationServiceConnectionProfileArgsmysql;
+  oracle: GoogleDatabaseMigrationServiceConnectionProfileArgsoracle;
+  postgresql: GoogleDatabaseMigrationServiceConnectionProfileArgspostgresql;
+  timeouts: GoogleDatabaseMigrationServiceConnectionProfileArgstimeouts;
 }
 export class google_database_migration_service_connection_profile extends TerraformResource {
   readonly create_time!: string;

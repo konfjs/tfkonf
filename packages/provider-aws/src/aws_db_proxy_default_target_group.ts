@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConnectionPoolConfig {
+export interface AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig {
   connection_borrow_timeout?: number;
   init_query?: string;
   max_connections_percent?: number;
   max_idle_connections_percent?: number;
   session_pinning_filters?: string[];
 }
-export interface Timeouts {
+export interface AwsDbProxyDefaultTargetGroupArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsDbProxyDefaultTargetGroupArgs {
   db_proxy_name: string;
-  connection_pool_config: ConnectionPoolConfig;
-  timeouts: Timeouts;
+  connection_pool_config: AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig;
+  timeouts: AwsDbProxyDefaultTargetGroupArgstimeouts;
 }
 export class aws_db_proxy_default_target_group extends TerraformResource {
   readonly arn!: string;

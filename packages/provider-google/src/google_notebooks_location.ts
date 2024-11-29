@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNotebooksLocationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleNotebooksLocationArgs {
   name?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNotebooksLocationArgstimeouts;
 }
 export class google_notebooks_location extends TerraformResource {
   readonly id?: string;

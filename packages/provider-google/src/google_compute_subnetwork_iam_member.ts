@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleComputeSubnetworkIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeSubnetworkIamMemberArgs {
   member: string;
   role: string;
   subnetwork: string;
-  condition: Condition;
+  condition: GoogleComputeSubnetworkIamMemberArgscondition;
 }
 export class google_compute_subnetwork_iam_member extends TerraformResource {
   readonly etag!: string;

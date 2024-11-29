@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsOamSinkPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface Timeouts {
 export interface AwsOamSinkPolicyArgs {
   policy: string;
   sink_identifier: string;
-  timeouts: Timeouts;
+  timeouts: AwsOamSinkPolicyArgstimeouts;
 }
 export class aws_oam_sink_policy extends TerraformResource {
   readonly arn!: string;

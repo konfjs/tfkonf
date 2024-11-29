@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdvertisedIpRanges {
+export interface GoogleComputeRouterPeerArgsAdvertisedIpRanges {
   description?: string;
   range: string;
 }
-export interface Bfd {
+export interface GoogleComputeRouterPeerArgsbfd {
   min_receive_interval?: number;
   min_transmit_interval?: number;
   multiplier?: number;
   session_initialization_mode: string;
 }
-export interface CustomLearnedIpRanges {
+export interface GoogleComputeRouterPeerArgsCustomLearnedIpRanges {
   range: string;
 }
-export interface Md5AuthenticationKey {
+export interface GoogleComputeRouterPeerArgsMd5AuthenticationKey {
   key: string;
   name: string;
 }
-export interface Timeouts {
+export interface GoogleComputeRouterPeerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,11 +33,11 @@ export interface GoogleComputeRouterPeerArgs {
   peer_asn: number;
   router: string;
   router_appliance_instance?: string;
-  advertised_ip_ranges: AdvertisedIpRanges;
-  bfd: Bfd;
-  custom_learned_ip_ranges: CustomLearnedIpRanges;
-  md5_authentication_key: Md5AuthenticationKey;
-  timeouts: Timeouts;
+  advertised_ip_ranges: GoogleComputeRouterPeerArgsAdvertisedIpRanges;
+  bfd: GoogleComputeRouterPeerArgsbfd;
+  custom_learned_ip_ranges: GoogleComputeRouterPeerArgsCustomLearnedIpRanges;
+  md5_authentication_key: GoogleComputeRouterPeerArgsMd5AuthenticationKey;
+  timeouts: GoogleComputeRouterPeerArgstimeouts;
 }
 export class google_compute_router_peer extends TerraformResource {
   readonly enable_ipv4?: boolean;

@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsApprunnerServiceArgsEncryptionConfiguration {
   kms_key: string;
 }
-export interface HealthCheckConfiguration {
+export interface AwsApprunnerServiceArgsHealthCheckConfiguration {
   healthy_threshold?: number;
   interval?: number;
   path?: string;
@@ -10,31 +10,31 @@ export interface HealthCheckConfiguration {
   timeout?: number;
   unhealthy_threshold?: number;
 }
-export interface InstanceConfiguration {
+export interface AwsApprunnerServiceArgsInstanceConfiguration {
   cpu?: string;
   instance_role_arn?: string;
   memory?: string;
 }
-export interface EgressConfiguration {
+export interface AwsApprunnerServiceArgsNetworkConfigurationEgressConfiguration {
   vpc_connector_arn?: string;
 }
-export interface IngressConfiguration {
+export interface AwsApprunnerServiceArgsNetworkConfigurationIngressConfiguration {
   is_publicly_accessible?: boolean;
 }
-export interface NetworkConfiguration {
+export interface AwsApprunnerServiceArgsNetworkConfiguration {
   ip_address_type?: string;
-  egress_configuration: EgressConfiguration;
-  ingress_configuration: IngressConfiguration;
+  egress_configuration: AwsApprunnerServiceArgsNetworkConfigurationEgressConfiguration;
+  ingress_configuration: AwsApprunnerServiceArgsNetworkConfigurationIngressConfiguration;
 }
-export interface ObservabilityConfiguration {
+export interface AwsApprunnerServiceArgsObservabilityConfiguration {
   observability_configuration_arn?: string;
   observability_enabled: boolean;
 }
-export interface AuthenticationConfiguration {
+export interface AwsApprunnerServiceArgsSourceConfigurationAuthenticationConfiguration {
   access_role_arn?: string;
   connection_arn?: string;
 }
-export interface CodeConfigurationValues {
+export interface AwsApprunnerServiceArgsSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues {
   build_command?: string;
   port?: string;
   runtime: string;
@@ -46,20 +46,20 @@ export interface CodeConfigurationValues {
   };
   start_command?: string;
 }
-export interface CodeConfiguration {
+export interface AwsApprunnerServiceArgsSourceConfigurationCodeRepositoryCodeConfiguration {
   configuration_source: string;
-  code_configuration_values: CodeConfigurationValues;
+  code_configuration_values: AwsApprunnerServiceArgsSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues;
 }
-export interface SourceCodeVersion {
+export interface AwsApprunnerServiceArgsSourceConfigurationCodeRepositorySourceCodeVersion {
   type: string;
   value: string;
 }
-export interface CodeRepository {
+export interface AwsApprunnerServiceArgsSourceConfigurationCodeRepository {
   repository_url: string;
-  code_configuration: CodeConfiguration;
-  source_code_version: SourceCodeVersion;
+  code_configuration: AwsApprunnerServiceArgsSourceConfigurationCodeRepositoryCodeConfiguration;
+  source_code_version: AwsApprunnerServiceArgsSourceConfigurationCodeRepositorySourceCodeVersion;
 }
-export interface ImageConfiguration {
+export interface AwsApprunnerServiceArgsSourceConfigurationImageRepositoryImageConfiguration {
   port?: string;
   runtime_environment_secrets?: {
     [key: string]: string;
@@ -69,28 +69,28 @@ export interface ImageConfiguration {
   };
   start_command?: string;
 }
-export interface ImageRepository {
+export interface AwsApprunnerServiceArgsSourceConfigurationImageRepository {
   image_identifier: string;
   image_repository_type: string;
-  image_configuration: ImageConfiguration;
+  image_configuration: AwsApprunnerServiceArgsSourceConfigurationImageRepositoryImageConfiguration;
 }
-export interface SourceConfiguration {
+export interface AwsApprunnerServiceArgsSourceConfiguration {
   auto_deployments_enabled?: boolean;
-  authentication_configuration: AuthenticationConfiguration;
-  code_repository: CodeRepository;
-  image_repository: ImageRepository;
+  authentication_configuration: AwsApprunnerServiceArgsSourceConfigurationAuthenticationConfiguration;
+  code_repository: AwsApprunnerServiceArgsSourceConfigurationCodeRepository;
+  image_repository: AwsApprunnerServiceArgsSourceConfigurationImageRepository;
 }
 export interface AwsApprunnerServiceArgs {
   service_name: string;
   tags?: {
     [key: string]: string;
   };
-  encryption_configuration: EncryptionConfiguration;
-  health_check_configuration: HealthCheckConfiguration;
-  instance_configuration: InstanceConfiguration;
-  network_configuration: NetworkConfiguration;
-  observability_configuration: ObservabilityConfiguration;
-  source_configuration: SourceConfiguration;
+  encryption_configuration: AwsApprunnerServiceArgsEncryptionConfiguration;
+  health_check_configuration: AwsApprunnerServiceArgsHealthCheckConfiguration;
+  instance_configuration: AwsApprunnerServiceArgsInstanceConfiguration;
+  network_configuration: AwsApprunnerServiceArgsNetworkConfiguration;
+  observability_configuration: AwsApprunnerServiceArgsObservabilityConfiguration;
+  source_configuration: AwsApprunnerServiceArgsSourceConfiguration;
 }
 export class aws_apprunner_service extends TerraformResource {
   readonly arn!: string;

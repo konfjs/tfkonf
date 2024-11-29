@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HomeDirectoryMappings {
+export interface AwsTransferUserArgsHomeDirectoryMappings {
   entry: string;
   target: string;
 }
-export interface PosixProfile {
+export interface AwsTransferUserArgsPosixProfile {
   gid: number;
   secondary_gids?: number[];
   uid: number;
 }
-export interface Timeouts {
+export interface AwsTransferUserArgstimeouts {
   delete?: string;
 }
 export interface AwsTransferUserArgs {
@@ -21,9 +21,9 @@ export interface AwsTransferUserArgs {
     [key: string]: string;
   };
   user_name: string;
-  home_directory_mappings: HomeDirectoryMappings;
-  posix_profile: PosixProfile;
-  timeouts: Timeouts;
+  home_directory_mappings: AwsTransferUserArgsHomeDirectoryMappings;
+  posix_profile: AwsTransferUserArgsPosixProfile;
+  timeouts: AwsTransferUserArgstimeouts;
 }
 export class aws_transfer_user extends TerraformResource {
   readonly arn!: string;

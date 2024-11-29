@@ -1,55 +1,55 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionKey {
+export interface GoogleGkeBackupBackupPlanArgsBackupConfigEncryptionKey {
   gcp_kms_encryption_key: string;
 }
-export interface NamespacedNames {
+export interface GoogleGkeBackupBackupPlanArgsBackupConfigSelectedApplicationsNamespacedNames {
   name: string;
   namespace: string;
 }
-export interface SelectedApplications {
-  namespaced_names: NamespacedNames;
+export interface GoogleGkeBackupBackupPlanArgsBackupConfigSelectedApplications {
+  namespaced_names: GoogleGkeBackupBackupPlanArgsBackupConfigSelectedApplicationsNamespacedNames;
 }
-export interface SelectedNamespaces {
+export interface GoogleGkeBackupBackupPlanArgsBackupConfigSelectedNamespaces {
   namespaces: string[];
 }
-export interface BackupConfig {
+export interface GoogleGkeBackupBackupPlanArgsBackupConfig {
   all_namespaces?: boolean;
   permissive_mode?: boolean;
-  encryption_key: EncryptionKey;
-  selected_applications: SelectedApplications;
-  selected_namespaces: SelectedNamespaces;
+  encryption_key: GoogleGkeBackupBackupPlanArgsBackupConfigEncryptionKey;
+  selected_applications: GoogleGkeBackupBackupPlanArgsBackupConfigSelectedApplications;
+  selected_namespaces: GoogleGkeBackupBackupPlanArgsBackupConfigSelectedNamespaces;
 }
-export interface DaysOfWeek {
+export interface GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsDaysOfWeek {
   days_of_week?: string[];
 }
-export interface SingleOccurrenceDate {
+export interface GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate {
   day?: number;
   month?: number;
   year?: number;
 }
-export interface StartTime {
+export interface GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsStartTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface ExclusionWindows {
+export interface GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindows {
   daily?: boolean;
   duration: string;
-  days_of_week: DaysOfWeek;
-  single_occurrence_date: SingleOccurrenceDate;
-  start_time: StartTime;
+  days_of_week: GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsDaysOfWeek;
+  single_occurrence_date: GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsSingleOccurrenceDate;
+  start_time: GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindowsStartTime;
 }
-export interface RpoConfig {
+export interface GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfig {
   target_rpo_minutes: number;
-  exclusion_windows: ExclusionWindows;
+  exclusion_windows: GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfigExclusionWindows;
 }
-export interface BackupSchedule {
+export interface GoogleGkeBackupBackupPlanArgsBackupSchedule {
   cron_schedule?: string;
-  rpo_config: RpoConfig;
+  rpo_config: GoogleGkeBackupBackupPlanArgsBackupScheduleRpoConfig;
 }
-export interface RetentionPolicy {}
-export interface Timeouts {
+export interface GoogleGkeBackupBackupPlanArgsRetentionPolicy {}
+export interface GoogleGkeBackupBackupPlanArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -62,10 +62,10 @@ export interface GoogleGkeBackupBackupPlanArgs {
   };
   location: string;
   name: string;
-  backup_config: BackupConfig;
-  backup_schedule: BackupSchedule;
-  retention_policy: RetentionPolicy;
-  timeouts: Timeouts;
+  backup_config: GoogleGkeBackupBackupPlanArgsBackupConfig;
+  backup_schedule: GoogleGkeBackupBackupPlanArgsBackupSchedule;
+  retention_policy: GoogleGkeBackupBackupPlanArgsRetentionPolicy;
+  timeouts: GoogleGkeBackupBackupPlanArgstimeouts;
 }
 export class google_gke_backup_backup_plan extends TerraformResource {
   readonly deactivated?: boolean;

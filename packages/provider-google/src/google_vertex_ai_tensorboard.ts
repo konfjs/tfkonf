@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionSpec {
+export interface GoogleVertexAiTensorboardArgsEncryptionSpec {
   kms_key_name: string;
 }
-export interface Timeouts {
+export interface GoogleVertexAiTensorboardArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface GoogleVertexAiTensorboardArgs {
   labels?: {
     [key: string]: string;
   };
-  encryption_spec: EncryptionSpec;
-  timeouts: Timeouts;
+  encryption_spec: GoogleVertexAiTensorboardArgsEncryptionSpec;
+  timeouts: GoogleVertexAiTensorboardArgstimeouts;
 }
 export class google_vertex_ai_tensorboard extends TerraformResource {
   readonly blob_storage_path_prefix!: string;

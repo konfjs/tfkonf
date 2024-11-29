@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PostCallAnalyticsSettings {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeCallAnalyticsProcessorConfigurationPostCallAnalyticsSettings {
   content_redaction_output?: string;
   data_access_role_arn: string;
   output_encryption_kms_key_id?: string;
   output_location: string;
 }
-export interface AmazonTranscribeCallAnalyticsProcessorConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeCallAnalyticsProcessorConfiguration {
   call_analytics_stream_categories?: string[];
   content_identification_type?: string;
   content_redaction_type?: string;
@@ -18,9 +18,9 @@ export interface AmazonTranscribeCallAnalyticsProcessorConfiguration {
   vocabulary_filter_method?: string;
   vocabulary_filter_name?: string;
   vocabulary_name?: string;
-  post_call_analytics_settings: PostCallAnalyticsSettings;
+  post_call_analytics_settings: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeCallAnalyticsProcessorConfigurationPostCallAnalyticsSettings;
 }
-export interface AmazonTranscribeProcessorConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeProcessorConfiguration {
   content_identification_type?: string;
   content_redaction_type?: string;
   enable_partial_results_stabilization?: boolean;
@@ -34,58 +34,58 @@ export interface AmazonTranscribeProcessorConfiguration {
   vocabulary_filter_name?: string;
   vocabulary_name?: string;
 }
-export interface KinesisDataStreamSinkConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsKinesisDataStreamSinkConfiguration {
   insights_target: string;
 }
-export interface LambdaFunctionSinkConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsLambdaFunctionSinkConfiguration {
   insights_target: string;
 }
-export interface S3RecordingSinkConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsS3RecordingSinkConfiguration {
   destination?: string;
 }
-export interface SnsTopicSinkConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsSnsTopicSinkConfiguration {
   insights_target: string;
 }
-export interface SqsQueueSinkConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsSqsQueueSinkConfiguration {
   insights_target: string;
 }
-export interface VoiceAnalyticsProcessorConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsVoiceAnalyticsProcessorConfiguration {
   speaker_search_status: string;
   voice_tone_analysis_status: string;
 }
-export interface Elements {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselements {
   type: string;
-  amazon_transcribe_call_analytics_processor_configuration: AmazonTranscribeCallAnalyticsProcessorConfiguration;
-  amazon_transcribe_processor_configuration: AmazonTranscribeProcessorConfiguration;
-  kinesis_data_stream_sink_configuration: KinesisDataStreamSinkConfiguration;
-  lambda_function_sink_configuration: LambdaFunctionSinkConfiguration;
-  s3_recording_sink_configuration: S3RecordingSinkConfiguration;
-  sns_topic_sink_configuration: SnsTopicSinkConfiguration;
-  sqs_queue_sink_configuration: SqsQueueSinkConfiguration;
-  voice_analytics_processor_configuration: VoiceAnalyticsProcessorConfiguration;
+  amazon_transcribe_call_analytics_processor_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeCallAnalyticsProcessorConfiguration;
+  amazon_transcribe_processor_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsAmazonTranscribeProcessorConfiguration;
+  kinesis_data_stream_sink_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsKinesisDataStreamSinkConfiguration;
+  lambda_function_sink_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsLambdaFunctionSinkConfiguration;
+  s3_recording_sink_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsS3RecordingSinkConfiguration;
+  sns_topic_sink_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsSnsTopicSinkConfiguration;
+  sqs_queue_sink_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsSqsQueueSinkConfiguration;
+  voice_analytics_processor_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselementsVoiceAnalyticsProcessorConfiguration;
 }
-export interface IssueDetectionConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesIssueDetectionConfiguration {
   rule_name: string;
 }
-export interface KeywordMatchConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesKeywordMatchConfiguration {
   keywords: string[];
   rule_name: string;
 }
-export interface SentimentConfiguration {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesSentimentConfiguration {
   rule_name: string;
   sentiment_type: string;
   time_period: number;
 }
-export interface Rules {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrules {
   type: string;
-  issue_detection_configuration: IssueDetectionConfiguration;
-  keyword_match_configuration: KeywordMatchConfiguration;
-  sentiment_configuration: SentimentConfiguration;
+  issue_detection_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesIssueDetectionConfiguration;
+  keyword_match_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesKeywordMatchConfiguration;
+  sentiment_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrulesSentimentConfiguration;
 }
-export interface RealTimeAlertConfiguration {
-  rules: Rules;
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfiguration {
+  rules: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfigurationrules;
 }
-export interface Timeouts {
+export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -96,9 +96,9 @@ export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgs
   tags?: {
     [key: string]: string;
   };
-  elements: Elements;
-  real_time_alert_configuration: RealTimeAlertConfiguration;
-  timeouts: Timeouts;
+  elements: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgselements;
+  real_time_alert_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfiguration;
+  timeouts: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgstimeouts;
 }
 export class aws_chimesdkmediapipelines_media_insights_pipeline_configuration extends TerraformResource {
   readonly arn!: string;

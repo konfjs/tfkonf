@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsResourceexplorer2IndexArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsResourceexplorer2IndexArgs {
     [key: string]: string;
   };
   type: string;
-  timeouts: Timeouts;
+  timeouts: AwsResourceexplorer2IndexArgstimeouts;
 }
 export class aws_resourceexplorer2_index extends TerraformResource {
   readonly arn!: string;

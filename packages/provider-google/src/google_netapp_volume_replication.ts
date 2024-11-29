@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationVolumeParameters {
+export interface GoogleNetappVolumeReplicationArgsDestinationVolumeParameters {
   description?: string;
   storage_pool: string;
 }
-export interface Timeouts {
+export interface GoogleNetappVolumeReplicationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface GoogleNetappVolumeReplicationArgs {
   replication_schedule: string;
   volume_name: string;
   wait_for_mirror?: boolean;
-  destination_volume_parameters: DestinationVolumeParameters;
-  timeouts: Timeouts;
+  destination_volume_parameters: GoogleNetappVolumeReplicationArgsDestinationVolumeParameters;
+  timeouts: GoogleNetappVolumeReplicationArgstimeouts;
 }
 export class google_netapp_volume_replication extends TerraformResource {
   readonly create_time!: string;

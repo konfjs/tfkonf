@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogConfiguration {
+export interface AwsEcsClusterArgsconfigurationExecuteCommandConfigurationLogConfiguration {
   cloud_watch_encryption_enabled?: boolean;
   cloud_watch_log_group_name?: string;
   s3_bucket_encryption_enabled?: boolean;
   s3_bucket_name?: string;
   s3_key_prefix?: string;
 }
-export interface ExecuteCommandConfiguration {
+export interface AwsEcsClusterArgsconfigurationExecuteCommandConfiguration {
   kms_key_id?: string;
   logging?: string;
-  log_configuration: LogConfiguration;
+  log_configuration: AwsEcsClusterArgsconfigurationExecuteCommandConfigurationLogConfiguration;
 }
-export interface ManagedStorageConfiguration {
+export interface AwsEcsClusterArgsconfigurationManagedStorageConfiguration {
   fargate_ephemeral_storage_kms_key_id?: string;
   kms_key_id?: string;
 }
-export interface Configuration {
-  execute_command_configuration: ExecuteCommandConfiguration;
-  managed_storage_configuration: ManagedStorageConfiguration;
+export interface AwsEcsClusterArgsconfiguration {
+  execute_command_configuration: AwsEcsClusterArgsconfigurationExecuteCommandConfiguration;
+  managed_storage_configuration: AwsEcsClusterArgsconfigurationManagedStorageConfiguration;
 }
-export interface ServiceConnectDefaults {
+export interface AwsEcsClusterArgsServiceConnectDefaults {
   namespace: string;
 }
-export interface Setting {
+export interface AwsEcsClusterArgssetting {
   name: string;
   value: string;
 }
@@ -31,9 +31,9 @@ export interface AwsEcsClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: Configuration;
-  service_connect_defaults: ServiceConnectDefaults;
-  setting: Setting;
+  configuration: AwsEcsClusterArgsconfiguration;
+  service_connect_defaults: AwsEcsClusterArgsServiceConnectDefaults;
+  setting: AwsEcsClusterArgssetting;
 }
 export class aws_ecs_cluster extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsLocationGeofenceCollectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsLocationGeofenceCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsLocationGeofenceCollectionArgstimeouts;
 }
 export class aws_location_geofence_collection extends TerraformResource {
   readonly collection_arn!: string;

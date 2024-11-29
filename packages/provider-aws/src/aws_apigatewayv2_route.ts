@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RequestParameter {
+export interface AwsApigatewayv2RouteArgsRequestParameter {
   request_parameter_key: string;
   required: boolean;
 }
@@ -17,7 +17,7 @@ export interface AwsApigatewayv2RouteArgs {
   route_key: string;
   route_response_selection_expression?: string;
   target?: string;
-  request_parameter: RequestParameter;
+  request_parameter: AwsApigatewayv2RouteArgsRequestParameter;
 }
 export class aws_apigatewayv2_route extends TerraformResource {
   readonly id?: string;

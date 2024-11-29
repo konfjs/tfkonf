@@ -1,49 +1,49 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecrulescondition {
   description?: string;
   expression?: string;
   location?: string;
   title?: string;
 }
-export interface Values {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecrulesvalues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface Rules {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpecrules {
   allow_all?: string;
   deny_all?: string;
   enforce?: string;
-  condition: Condition;
-  values: Values;
+  condition: GoogleOrgPolicyPolicyArgsDryRunSpecrulescondition;
+  values: GoogleOrgPolicyPolicyArgsDryRunSpecrulesvalues;
 }
-export interface DryRunSpec {
+export interface GoogleOrgPolicyPolicyArgsDryRunSpec {
   inherit_from_parent?: boolean;
   reset?: boolean;
-  rules: Rules;
+  rules: GoogleOrgPolicyPolicyArgsDryRunSpecrules;
 }
-export interface Condition {
+export interface GoogleOrgPolicyPolicyArgsspecrulescondition {
   description?: string;
   expression?: string;
   location?: string;
   title?: string;
 }
-export interface Values {
+export interface GoogleOrgPolicyPolicyArgsspecrulesvalues {
   allowed_values?: string[];
   denied_values?: string[];
 }
-export interface Rules {
+export interface GoogleOrgPolicyPolicyArgsspecrules {
   allow_all?: string;
   deny_all?: string;
   enforce?: string;
-  condition: Condition;
-  values: Values;
+  condition: GoogleOrgPolicyPolicyArgsspecrulescondition;
+  values: GoogleOrgPolicyPolicyArgsspecrulesvalues;
 }
-export interface Spec {
+export interface GoogleOrgPolicyPolicyArgsspec {
   inherit_from_parent?: boolean;
   reset?: boolean;
-  rules: Rules;
+  rules: GoogleOrgPolicyPolicyArgsspecrules;
 }
-export interface Timeouts {
+export interface GoogleOrgPolicyPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -51,9 +51,9 @@ export interface Timeouts {
 export interface GoogleOrgPolicyPolicyArgs {
   name: string;
   parent: string;
-  dry_run_spec: DryRunSpec;
-  spec: Spec;
-  timeouts: Timeouts;
+  dry_run_spec: GoogleOrgPolicyPolicyArgsDryRunSpec;
+  spec: GoogleOrgPolicyPolicyArgsspec;
+  timeouts: GoogleOrgPolicyPolicyArgstimeouts;
 }
 export class google_org_policy_policy extends TerraformResource {
   readonly etag!: string;

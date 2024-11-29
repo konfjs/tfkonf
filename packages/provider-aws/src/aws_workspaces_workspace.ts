@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsWorkspacesWorkspaceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkspaceProperties {
+export interface AwsWorkspacesWorkspaceArgsWorkspaceProperties {
   compute_type_name?: string;
   root_volume_size_gib?: number;
   running_mode?: string;
@@ -20,8 +20,8 @@ export interface AwsWorkspacesWorkspaceArgs {
   user_name: string;
   user_volume_encryption_enabled?: boolean;
   volume_encryption_key?: string;
-  timeouts: Timeouts;
-  workspace_properties: WorkspaceProperties;
+  timeouts: AwsWorkspacesWorkspaceArgstimeouts;
+  workspace_properties: AwsWorkspacesWorkspaceArgsWorkspaceProperties;
 }
 export class aws_workspaces_workspace extends TerraformResource {
   readonly computer_name!: string;

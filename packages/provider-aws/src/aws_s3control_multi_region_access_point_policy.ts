@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Details {
+export interface AwsS3controlMultiRegionAccessPointPolicyArgsdetails {
   name: string;
   policy: string;
 }
-export interface Timeouts {
+export interface AwsS3controlMultiRegionAccessPointPolicyArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsS3controlMultiRegionAccessPointPolicyArgs {
-  details: Details;
-  timeouts: Timeouts;
+  details: AwsS3controlMultiRegionAccessPointPolicyArgsdetails;
+  timeouts: AwsS3controlMultiRegionAccessPointPolicyArgstimeouts;
 }
 export class aws_s3control_multi_region_access_point_policy extends TerraformResource {
   readonly account_id?: string;

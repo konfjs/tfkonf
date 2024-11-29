@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NodeConfig {
+export interface GoogleApigeeEnvironmentArgsNodeConfig {
   max_node_count?: string;
   min_node_count?: string;
 }
-export interface Timeouts {
+export interface GoogleApigeeEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleApigeeEnvironmentArgs {
   forward_proxy_uri?: string;
   name: string;
   org_id: string;
-  node_config: NodeConfig;
-  timeouts: Timeouts;
+  node_config: GoogleApigeeEnvironmentArgsNodeConfig;
+  timeouts: GoogleApigeeEnvironmentArgstimeouts;
 }
 export class google_apigee_environment extends TerraformResource {
   readonly api_proxy_type?: string;

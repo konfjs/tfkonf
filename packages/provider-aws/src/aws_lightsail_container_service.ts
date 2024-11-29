@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EcrImagePullerRole {
+export interface AwsLightsailContainerServiceArgsPrivateRegistryAccessEcrImagePullerRole {
   is_active?: boolean;
 }
-export interface PrivateRegistryAccess {
-  ecr_image_puller_role: EcrImagePullerRole;
+export interface AwsLightsailContainerServiceArgsPrivateRegistryAccess {
+  ecr_image_puller_role: AwsLightsailContainerServiceArgsPrivateRegistryAccessEcrImagePullerRole;
 }
-export interface Certificate {
+export interface AwsLightsailContainerServiceArgsPublicDomainNamescertificate {
   certificate_name: string;
   domain_names: string[];
 }
-export interface PublicDomainNames {
-  certificate: Certificate;
+export interface AwsLightsailContainerServiceArgsPublicDomainNames {
+  certificate: AwsLightsailContainerServiceArgsPublicDomainNamescertificate;
 }
-export interface Timeouts {
+export interface AwsLightsailContainerServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,9 +25,9 @@ export interface AwsLightsailContainerServiceArgs {
   tags?: {
     [key: string]: string;
   };
-  private_registry_access: PrivateRegistryAccess;
-  public_domain_names: PublicDomainNames;
-  timeouts: Timeouts;
+  private_registry_access: AwsLightsailContainerServiceArgsPrivateRegistryAccess;
+  public_domain_names: AwsLightsailContainerServiceArgsPublicDomainNames;
+  timeouts: AwsLightsailContainerServiceArgstimeouts;
 }
 export class aws_lightsail_container_service extends TerraformResource {
   readonly arn!: string;

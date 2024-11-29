@@ -1,45 +1,45 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdditionalNotificationTargets {
+export interface GooglePrivilegedAccessManagerEntitlementArgsAdditionalNotificationTargets {
   admin_email_recipients?: string[];
   requester_email_recipients?: string[];
 }
-export interface Approvers {
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsstepsapprovers {
   principals: string[];
 }
-export interface Steps {
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalssteps {
   approvals_needed?: number;
   approver_email_recipients?: string[];
-  approvers: Approvers;
+  approvers: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalsstepsapprovers;
 }
-export interface ManualApprovals {
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovals {
   require_approver_justification?: boolean;
-  steps: Steps;
+  steps: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovalssteps;
 }
-export interface ApprovalWorkflow {
-  manual_approvals: ManualApprovals;
+export interface GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflow {
+  manual_approvals: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflowManualApprovals;
 }
-export interface EligibleUsers {
+export interface GooglePrivilegedAccessManagerEntitlementArgsEligibleUsers {
   principals: string[];
 }
-export interface RoleBindings {
+export interface GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccessGcpIamAccessRoleBindings {
   condition_expression?: string;
   role: string;
 }
-export interface GcpIamAccess {
+export interface GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccessGcpIamAccess {
   resource: string;
   resource_type: string;
-  role_bindings: RoleBindings;
+  role_bindings: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccessGcpIamAccessRoleBindings;
 }
-export interface PrivilegedAccess {
-  gcp_iam_access: GcpIamAccess;
+export interface GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccess {
+  gcp_iam_access: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccessGcpIamAccess;
 }
-export interface NotMandatory {}
-export interface Unstructured {}
-export interface RequesterJustificationConfig {
-  not_mandatory: NotMandatory;
-  unstructured: Unstructured;
+export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigNotMandatory {}
+export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigunstructured {}
+export interface GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfig {
+  not_mandatory: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigNotMandatory;
+  unstructured: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfigunstructured;
 }
-export interface Timeouts {
+export interface GooglePrivilegedAccessManagerEntitlementArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -49,12 +49,12 @@ export interface GooglePrivilegedAccessManagerEntitlementArgs {
   location: string;
   max_request_duration: string;
   parent: string;
-  additional_notification_targets: AdditionalNotificationTargets;
-  approval_workflow: ApprovalWorkflow;
-  eligible_users: EligibleUsers;
-  privileged_access: PrivilegedAccess;
-  requester_justification_config: RequesterJustificationConfig;
-  timeouts: Timeouts;
+  additional_notification_targets: GooglePrivilegedAccessManagerEntitlementArgsAdditionalNotificationTargets;
+  approval_workflow: GooglePrivilegedAccessManagerEntitlementArgsApprovalWorkflow;
+  eligible_users: GooglePrivilegedAccessManagerEntitlementArgsEligibleUsers;
+  privileged_access: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccess;
+  requester_justification_config: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfig;
+  timeouts: GooglePrivilegedAccessManagerEntitlementArgstimeouts;
 }
 export class google_privileged_access_manager_entitlement extends TerraformResource {
   readonly create_time!: string;

@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Principal {
+export interface AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionprincipal {
   data_lake_principal_identifier?: string;
 }
-export interface CreateTableDefaultPermission {
+export interface AwsGlueCatalogDatabaseArgsCreateTableDefaultPermission {
   permissions?: string[];
-  principal: Principal;
+  principal: AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionprincipal;
 }
-export interface FederatedDatabase {
+export interface AwsGlueCatalogDatabaseArgsFederatedDatabase {
   connection_name?: string;
   identifier?: string;
 }
-export interface TargetDatabase {
+export interface AwsGlueCatalogDatabaseArgsTargetDatabase {
   catalog_id: string;
   database_name: string;
   region?: string;
@@ -24,9 +24,9 @@ export interface AwsGlueCatalogDatabaseArgs {
   tags?: {
     [key: string]: string;
   };
-  create_table_default_permission: CreateTableDefaultPermission;
-  federated_database: FederatedDatabase;
-  target_database: TargetDatabase;
+  create_table_default_permission: AwsGlueCatalogDatabaseArgsCreateTableDefaultPermission;
+  federated_database: AwsGlueCatalogDatabaseArgsFederatedDatabase;
+  target_database: AwsGlueCatalogDatabaseArgsTargetDatabase;
 }
 export class aws_glue_catalog_database extends TerraformResource {
   readonly arn!: string;

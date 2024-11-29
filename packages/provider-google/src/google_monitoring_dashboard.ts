@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleMonitoringDashboardArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleMonitoringDashboardArgs {
   dashboard_json: string;
-  timeouts: Timeouts;
+  timeouts: GoogleMonitoringDashboardArgstimeouts;
 }
 export class google_monitoring_dashboard extends TerraformResource {
   readonly id?: string;

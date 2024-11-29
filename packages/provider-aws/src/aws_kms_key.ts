@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsKmsKeyArgstimeouts {
   create?: string;
 }
 export interface AwsKmsKeyArgs {
@@ -14,7 +14,7 @@ export interface AwsKmsKeyArgs {
     [key: string]: string;
   };
   xks_key_id?: string;
-  timeouts: Timeouts;
+  timeouts: AwsKmsKeyArgstimeouts;
 }
 export class aws_kms_key extends TerraformResource {
   readonly arn!: string;

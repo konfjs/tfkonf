@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HistoricalOptions {
+export interface AwsBudgetsBudgetArgsAutoAdjustDataHistoricalOptions {
   budget_adjustment_period: number;
 }
-export interface AutoAdjustData {
+export interface AwsBudgetsBudgetArgsAutoAdjustData {
   auto_adjust_type: string;
-  historical_options: HistoricalOptions;
+  historical_options: AwsBudgetsBudgetArgsAutoAdjustDataHistoricalOptions;
 }
-export interface CostFilter {
+export interface AwsBudgetsBudgetArgsCostFilter {
   name: string;
   values: string[];
 }
-export interface CostTypes {
+export interface AwsBudgetsBudgetArgsCostTypes {
   include_credit?: boolean;
   include_discount?: boolean;
   include_other_subscription?: boolean;
@@ -23,7 +23,7 @@ export interface CostTypes {
   use_amortized?: boolean;
   use_blended?: boolean;
 }
-export interface Notification {
+export interface AwsBudgetsBudgetArgsnotification {
   comparison_operator: string;
   notification_type: string;
   subscriber_email_addresses?: string[];
@@ -31,7 +31,7 @@ export interface Notification {
   threshold: number;
   threshold_type: string;
 }
-export interface PlannedLimit {
+export interface AwsBudgetsBudgetArgsPlannedLimit {
   amount: string;
   start_time: string;
   unit: string;
@@ -43,11 +43,11 @@ export interface AwsBudgetsBudgetArgs {
   };
   time_period_end?: string;
   time_unit: string;
-  auto_adjust_data: AutoAdjustData;
-  cost_filter: CostFilter;
-  cost_types: CostTypes;
-  notification: Notification;
-  planned_limit: PlannedLimit;
+  auto_adjust_data: AwsBudgetsBudgetArgsAutoAdjustData;
+  cost_filter: AwsBudgetsBudgetArgsCostFilter;
+  cost_types: AwsBudgetsBudgetArgsCostTypes;
+  notification: AwsBudgetsBudgetArgsnotification;
+  planned_limit: AwsBudgetsBudgetArgsPlannedLimit;
 }
 export class aws_budgets_budget extends TerraformResource {
   readonly account_id?: string;

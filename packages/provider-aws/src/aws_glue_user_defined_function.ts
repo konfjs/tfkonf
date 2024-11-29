@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ResourceUris {
+export interface AwsGlueUserDefinedFunctionArgsResourceUris {
   resource_type: string;
   uri: string;
 }
@@ -10,7 +10,7 @@ export interface AwsGlueUserDefinedFunctionArgs {
   name: string;
   owner_name: string;
   owner_type: string;
-  resource_uris: ResourceUris;
+  resource_uris: AwsGlueUserDefinedFunctionArgsResourceUris;
 }
 export class aws_glue_user_defined_function extends TerraformResource {
   readonly arn!: string;

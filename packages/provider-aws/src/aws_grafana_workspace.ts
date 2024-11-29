@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NetworkAccessControl {
+export interface AwsGrafanaWorkspaceArgsNetworkAccessControl {
   prefix_list_ids: string[];
   vpce_ids: string[];
 }
-export interface Timeouts {
+export interface AwsGrafanaWorkspaceArgstimeouts {
   create?: string;
   update?: string;
 }
-export interface VpcConfiguration {
+export interface AwsGrafanaWorkspaceArgsVpcConfiguration {
   security_group_ids: string[];
   subnet_ids: string[];
 }
@@ -25,9 +25,9 @@ export interface AwsGrafanaWorkspaceArgs {
   tags?: {
     [key: string]: string;
   };
-  network_access_control: NetworkAccessControl;
-  timeouts: Timeouts;
-  vpc_configuration: VpcConfiguration;
+  network_access_control: AwsGrafanaWorkspaceArgsNetworkAccessControl;
+  timeouts: AwsGrafanaWorkspaceArgstimeouts;
+  vpc_configuration: AwsGrafanaWorkspaceArgsVpcConfiguration;
 }
 export class aws_grafana_workspace extends TerraformResource {
   readonly arn!: string;

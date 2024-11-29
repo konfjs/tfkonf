@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSqlSslCertArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleSqlSslCertArgs {
   common_name: string;
   instance: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSqlSslCertArgstimeouts;
 }
 export class google_sql_ssl_cert extends TerraformResource {
   readonly cert!: string;

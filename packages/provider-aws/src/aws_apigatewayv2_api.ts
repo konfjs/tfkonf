@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CorsConfiguration {
+export interface AwsApigatewayv2ApiArgsCorsConfiguration {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -23,7 +23,7 @@ export interface AwsApigatewayv2ApiArgs {
   };
   target?: string;
   version?: string;
-  cors_configuration: CorsConfiguration;
+  cors_configuration: AwsApigatewayv2ApiArgsCorsConfiguration;
 }
 export class aws_apigatewayv2_api extends TerraformResource {
   readonly api_endpoint!: string;

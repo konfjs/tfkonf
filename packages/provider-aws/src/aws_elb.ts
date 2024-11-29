@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessLogs {
+export interface AwsElbArgsAccessLogs {
   bucket: string;
   bucket_prefix?: string;
   enabled?: boolean;
   interval?: number;
 }
-export interface HealthCheck {
+export interface AwsElbArgsHealthCheck {
   healthy_threshold: number;
   interval: number;
   target: string;
   timeout: number;
   unhealthy_threshold: number;
 }
-export interface Listener {
+export interface AwsElbArgslistener {
   instance_port: number;
   instance_protocol: string;
   lb_port: number;
   lb_protocol: string;
   ssl_certificate_id?: string;
 }
-export interface Timeouts {
+export interface AwsElbArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -32,10 +32,10 @@ export interface AwsElbArgs {
   tags?: {
     [key: string]: string;
   };
-  access_logs: AccessLogs;
-  health_check: HealthCheck;
-  listener: Listener;
-  timeouts: Timeouts;
+  access_logs: AwsElbArgsAccessLogs;
+  health_check: AwsElbArgsHealthCheck;
+  listener: AwsElbArgslistener;
+  timeouts: AwsElbArgstimeouts;
 }
 export class aws_elb extends TerraformResource {
   readonly arn!: string;

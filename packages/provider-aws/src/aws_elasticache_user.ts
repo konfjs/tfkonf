@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticationMode {
+export interface AwsElasticacheUserArgsAuthenticationMode {
   passwords?: string[];
   type: string;
 }
-export interface Timeouts {
+export interface AwsElasticacheUserArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -19,8 +19,8 @@ export interface AwsElasticacheUserArgs {
   };
   user_id: string;
   user_name: string;
-  authentication_mode: AuthenticationMode;
-  timeouts: Timeouts;
+  authentication_mode: AwsElasticacheUserArgsAuthenticationMode;
+  timeouts: AwsElasticacheUserArgstimeouts;
 }
 export class aws_elasticache_user extends TerraformResource {
   readonly arn!: string;

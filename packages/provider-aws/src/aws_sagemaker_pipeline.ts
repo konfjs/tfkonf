@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ParallelismConfiguration {
+export interface AwsSagemakerPipelineArgsParallelismConfiguration {
   max_parallel_execution_steps: number;
 }
-export interface PipelineDefinitionS3Location {
+export interface AwsSagemakerPipelineArgsPipelineDefinitionS3Location {
   bucket: string;
   object_key: string;
   version_id?: string;
@@ -16,8 +16,8 @@ export interface AwsSagemakerPipelineArgs {
   tags?: {
     [key: string]: string;
   };
-  parallelism_configuration: ParallelismConfiguration;
-  pipeline_definition_s3_location: PipelineDefinitionS3Location;
+  parallelism_configuration: AwsSagemakerPipelineArgsParallelismConfiguration;
+  pipeline_definition_s3_location: AwsSagemakerPipelineArgsPipelineDefinitionS3Location;
 }
 export class aws_sagemaker_pipeline extends TerraformResource {
   readonly arn!: string;

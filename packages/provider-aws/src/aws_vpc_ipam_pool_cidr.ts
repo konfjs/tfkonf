@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CidrAuthorizationContext {
+export interface AwsVpcIpamPoolCidrArgsCidrAuthorizationContext {
   message?: string;
   signature?: string;
 }
-export interface Timeouts {
+export interface AwsVpcIpamPoolCidrArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsVpcIpamPoolCidrArgs {
   ipam_pool_id: string;
   netmask_length?: number;
-  cidr_authorization_context: CidrAuthorizationContext;
-  timeouts: Timeouts;
+  cidr_authorization_context: AwsVpcIpamPoolCidrArgsCidrAuthorizationContext;
+  timeouts: AwsVpcIpamPoolCidrArgstimeouts;
 }
 export class aws_vpc_ipam_pool_cidr extends TerraformResource {
   readonly cidr?: string;

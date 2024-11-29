@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TlsConfig {
+export interface AwsApiGatewayIntegrationArgsTlsConfig {
   insecure_skip_verification?: boolean;
 }
 export interface AwsApiGatewayIntegrationArgs {
@@ -21,7 +21,7 @@ export interface AwsApiGatewayIntegrationArgs {
   timeout_milliseconds?: number;
   type: string;
   uri?: string;
-  tls_config: TlsConfig;
+  tls_config: AwsApiGatewayIntegrationArgsTlsConfig;
 }
 export class aws_api_gateway_integration extends TerraformResource {
   readonly cache_namespace?: string;

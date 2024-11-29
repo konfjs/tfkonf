@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExplicitBuckets {
+export interface GoogleLoggingMetricArgsBucketOptionsExplicitBuckets {
   bounds: number[];
 }
-export interface ExponentialBuckets {
+export interface GoogleLoggingMetricArgsBucketOptionsExponentialBuckets {
   growth_factor: number;
   num_finite_buckets: number;
   scale: number;
 }
-export interface LinearBuckets {
+export interface GoogleLoggingMetricArgsBucketOptionsLinearBuckets {
   num_finite_buckets: number;
   offset: number;
   width: number;
 }
-export interface BucketOptions {
-  explicit_buckets: ExplicitBuckets;
-  exponential_buckets: ExponentialBuckets;
-  linear_buckets: LinearBuckets;
+export interface GoogleLoggingMetricArgsBucketOptions {
+  explicit_buckets: GoogleLoggingMetricArgsBucketOptionsExplicitBuckets;
+  exponential_buckets: GoogleLoggingMetricArgsBucketOptionsExponentialBuckets;
+  linear_buckets: GoogleLoggingMetricArgsBucketOptionsLinearBuckets;
 }
-export interface Labels {
+export interface GoogleLoggingMetricArgsMetricDescriptorlabels {
   description?: string;
   key: string;
   value_type?: string;
 }
-export interface MetricDescriptor {
+export interface GoogleLoggingMetricArgsMetricDescriptor {
   display_name?: string;
   metric_kind: string;
   unit?: string;
   value_type: string;
-  labels: Labels;
+  labels: GoogleLoggingMetricArgsMetricDescriptorlabels;
 }
-export interface Timeouts {
+export interface GoogleLoggingMetricArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -44,9 +44,9 @@ export interface GoogleLoggingMetricArgs {
   };
   name: string;
   value_extractor?: string;
-  bucket_options: BucketOptions;
-  metric_descriptor: MetricDescriptor;
-  timeouts: Timeouts;
+  bucket_options: GoogleLoggingMetricArgsBucketOptions;
+  metric_descriptor: GoogleLoggingMetricArgsMetricDescriptor;
+  timeouts: GoogleLoggingMetricArgstimeouts;
 }
 export class google_logging_metric extends TerraformResource {
   readonly id?: string;

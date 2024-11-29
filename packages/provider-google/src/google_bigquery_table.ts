@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BiglakeConfiguration {
+export interface GoogleBigqueryTableArgsBiglakeConfiguration {
   connection_id: string;
   file_format: string;
   storage_uri: string;
   table_format: string;
 }
-export interface EncryptionConfiguration {
+export interface GoogleBigqueryTableArgsEncryptionConfiguration {
   kms_key_name: string;
 }
-export interface AvroOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationAvroOptions {
   use_avro_logical_types: boolean;
 }
-export interface Column {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilycolumn {
   encoding?: string;
   field_name?: string;
   only_read_latest?: boolean;
@@ -19,20 +19,20 @@ export interface Column {
   qualifier_string?: string;
   type?: string;
 }
-export interface ColumnFamily {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamily {
   encoding?: string;
   family_id?: string;
   only_read_latest?: boolean;
   type?: string;
-  column: Column;
+  column: GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilycolumn;
 }
-export interface BigtableOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptions {
   ignore_unspecified_column_families?: boolean;
   output_column_families_as_json?: boolean;
   read_rowkey_as_string?: boolean;
-  column_family: ColumnFamily;
+  column_family: GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamily;
 }
-export interface CsvOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationCsvOptions {
   allow_jagged_rows?: boolean;
   allow_quoted_newlines?: boolean;
   encoding?: string;
@@ -40,23 +40,23 @@ export interface CsvOptions {
   quote: string;
   skip_leading_rows?: number;
 }
-export interface GoogleSheetsOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationGoogleSheetsOptions {
   range?: string;
   skip_leading_rows?: number;
 }
-export interface HivePartitioningOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationHivePartitioningOptions {
   mode?: string;
   require_partition_filter?: boolean;
   source_uri_prefix?: string;
 }
-export interface JsonOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationJsonOptions {
   encoding?: string;
 }
-export interface ParquetOptions {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationParquetOptions {
   enable_list_inference?: boolean;
   enum_as_string?: boolean;
 }
-export interface ExternalDataConfiguration {
+export interface GoogleBigqueryTableArgsExternalDataConfiguration {
   autodetect: boolean;
   compression?: string;
   connection_id?: string;
@@ -69,62 +69,62 @@ export interface ExternalDataConfiguration {
   reference_file_schema_uri?: string;
   source_format?: string;
   source_uris: string[];
-  avro_options: AvroOptions;
-  bigtable_options: BigtableOptions;
-  csv_options: CsvOptions;
-  google_sheets_options: GoogleSheetsOptions;
-  hive_partitioning_options: HivePartitioningOptions;
-  json_options: JsonOptions;
-  parquet_options: ParquetOptions;
+  avro_options: GoogleBigqueryTableArgsExternalDataConfigurationAvroOptions;
+  bigtable_options: GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptions;
+  csv_options: GoogleBigqueryTableArgsExternalDataConfigurationCsvOptions;
+  google_sheets_options: GoogleBigqueryTableArgsExternalDataConfigurationGoogleSheetsOptions;
+  hive_partitioning_options: GoogleBigqueryTableArgsExternalDataConfigurationHivePartitioningOptions;
+  json_options: GoogleBigqueryTableArgsExternalDataConfigurationJsonOptions;
+  parquet_options: GoogleBigqueryTableArgsExternalDataConfigurationParquetOptions;
 }
-export interface MaterializedView {
+export interface GoogleBigqueryTableArgsMaterializedView {
   allow_non_incremental_definition?: boolean;
   enable_refresh?: boolean;
   query: string;
   refresh_interval_ms?: number;
 }
-export interface Range {
+export interface GoogleBigqueryTableArgsRangePartitioningrange {
   end: number;
   interval: number;
   start: number;
 }
-export interface RangePartitioning {
+export interface GoogleBigqueryTableArgsRangePartitioning {
   field: string;
-  range: Range;
+  range: GoogleBigqueryTableArgsRangePartitioningrange;
 }
-export interface ColumnReferences {
+export interface GoogleBigqueryTableArgsTableConstraintsForeignKeysColumnReferences {
   referenced_column: string;
   referencing_column: string;
 }
-export interface ReferencedTable {
+export interface GoogleBigqueryTableArgsTableConstraintsForeignKeysReferencedTable {
   dataset_id: string;
   project_id: string;
   table_id: string;
 }
-export interface ForeignKeys {
+export interface GoogleBigqueryTableArgsTableConstraintsForeignKeys {
   name?: string;
-  column_references: ColumnReferences;
-  referenced_table: ReferencedTable;
+  column_references: GoogleBigqueryTableArgsTableConstraintsForeignKeysColumnReferences;
+  referenced_table: GoogleBigqueryTableArgsTableConstraintsForeignKeysReferencedTable;
 }
-export interface PrimaryKey {
+export interface GoogleBigqueryTableArgsTableConstraintsPrimaryKey {
   columns: string[];
 }
-export interface TableConstraints {
-  foreign_keys: ForeignKeys;
-  primary_key: PrimaryKey;
+export interface GoogleBigqueryTableArgsTableConstraints {
+  foreign_keys: GoogleBigqueryTableArgsTableConstraintsForeignKeys;
+  primary_key: GoogleBigqueryTableArgsTableConstraintsPrimaryKey;
 }
-export interface TableReplicationInfo {
+export interface GoogleBigqueryTableArgsTableReplicationInfo {
   replication_interval_ms?: number;
   source_dataset_id: string;
   source_project_id: string;
   source_table_id: string;
 }
-export interface TimePartitioning {
+export interface GoogleBigqueryTableArgsTimePartitioning {
   field?: string;
   require_partition_filter?: boolean;
   type: string;
 }
-export interface View {
+export interface GoogleBigqueryTableArgsview {
   query: string;
   use_legacy_sql?: boolean;
 }
@@ -143,15 +143,15 @@ export interface GoogleBigqueryTableArgs {
     [key: string]: string;
   };
   table_id: string;
-  biglake_configuration: BiglakeConfiguration;
-  encryption_configuration: EncryptionConfiguration;
-  external_data_configuration: ExternalDataConfiguration;
-  materialized_view: MaterializedView;
-  range_partitioning: RangePartitioning;
-  table_constraints: TableConstraints;
-  table_replication_info: TableReplicationInfo;
-  time_partitioning: TimePartitioning;
-  view: View;
+  biglake_configuration: GoogleBigqueryTableArgsBiglakeConfiguration;
+  encryption_configuration: GoogleBigqueryTableArgsEncryptionConfiguration;
+  external_data_configuration: GoogleBigqueryTableArgsExternalDataConfiguration;
+  materialized_view: GoogleBigqueryTableArgsMaterializedView;
+  range_partitioning: GoogleBigqueryTableArgsRangePartitioning;
+  table_constraints: GoogleBigqueryTableArgsTableConstraints;
+  table_replication_info: GoogleBigqueryTableArgsTableReplicationInfo;
+  time_partitioning: GoogleBigqueryTableArgsTimePartitioning;
+  view: GoogleBigqueryTableArgsview;
 }
 export class google_bigquery_table extends TerraformResource {
   readonly creation_time!: number;

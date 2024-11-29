@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ProvisioningParameter {
+export interface AwsSagemakerProjectArgsServiceCatalogProvisioningDetailsProvisioningParameter {
   key: string;
   value?: string;
 }
-export interface ServiceCatalogProvisioningDetails {
+export interface AwsSagemakerProjectArgsServiceCatalogProvisioningDetails {
   path_id?: string;
   product_id: string;
-  provisioning_parameter: ProvisioningParameter;
+  provisioning_parameter: AwsSagemakerProjectArgsServiceCatalogProvisioningDetailsProvisioningParameter;
 }
 export interface AwsSagemakerProjectArgs {
   project_description?: string;
@@ -14,7 +14,7 @@ export interface AwsSagemakerProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  service_catalog_provisioning_details: ServiceCatalogProvisioningDetails;
+  service_catalog_provisioning_details: AwsSagemakerProjectArgsServiceCatalogProvisioningDetails;
 }
 export class aws_sagemaker_project extends TerraformResource {
   readonly arn!: string;

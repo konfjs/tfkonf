@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CorsPolicy {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionCorsPolicy {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -9,73 +9,73 @@ export interface CorsPolicy {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface Abort {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyabort {
   http_status?: number;
   percentage?: number;
 }
-export interface FixedDelay {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelayFixedDelay {
   nanos?: number;
   seconds?: string;
 }
-export interface Delay {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelay {
   percentage?: number;
-  fixed_delay: FixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelayFixedDelay;
 }
-export interface FaultInjectionPolicy {
-  abort: Abort;
-  delay: Delay;
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicy {
+  abort: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyabort;
+  delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelay;
 }
-export interface RequestMirrorPolicy {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionRequestMirrorPolicy {
   backend_service: string;
 }
-export interface PerTryTimeout {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicyPerTryTimeout {
   nanos?: number;
   seconds?: string;
 }
-export interface RetryPolicy {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicy {
   num_retries?: number;
   retry_conditions?: string[];
-  per_try_timeout: PerTryTimeout;
+  per_try_timeout: GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicyPerTryTimeout;
 }
-export interface Timeout {
+export interface GoogleComputeUrlMapArgsDefaultRouteActiontimeout {
   nanos?: number;
   seconds?: string;
 }
-export interface UrlRewrite {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionUrlRewrite {
   host_rewrite?: string;
   path_prefix_rewrite?: string;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   header_name?: string;
   header_value?: string;
   replace?: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   header_name?: string;
   header_value?: string;
   replace?: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd;
 }
-export interface WeightedBackendServices {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServices {
   backend_service?: string;
   weight?: number;
-  header_action: HeaderAction;
+  header_action: GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
-export interface DefaultRouteAction {
-  cors_policy: CorsPolicy;
-  fault_injection_policy: FaultInjectionPolicy;
-  request_mirror_policy: RequestMirrorPolicy;
-  retry_policy: RetryPolicy;
-  timeout: Timeout;
-  url_rewrite: UrlRewrite;
-  weighted_backend_services: WeightedBackendServices;
+export interface GoogleComputeUrlMapArgsDefaultRouteAction {
+  cors_policy: GoogleComputeUrlMapArgsDefaultRouteActionCorsPolicy;
+  fault_injection_policy: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicy;
+  request_mirror_policy: GoogleComputeUrlMapArgsDefaultRouteActionRequestMirrorPolicy;
+  retry_policy: GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicy;
+  timeout: GoogleComputeUrlMapArgsDefaultRouteActiontimeout;
+  url_rewrite: GoogleComputeUrlMapArgsDefaultRouteActionUrlRewrite;
+  weighted_backend_services: GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServices;
 }
-export interface DefaultUrlRedirect {
+export interface GoogleComputeUrlMapArgsDefaultUrlRedirect {
   host_redirect?: string;
   https_redirect?: boolean;
   path_redirect?: string;
@@ -83,28 +83,28 @@ export interface DefaultUrlRedirect {
   redirect_response_code?: string;
   strip_query: boolean;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsHeaderActionResponseHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsHeaderActionResponseHeadersToAdd;
 }
-export interface HostRule {
+export interface GoogleComputeUrlMapArgsHostRule {
   description?: string;
   hosts: string[];
   path_matcher: string;
 }
-export interface CorsPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionCorsPolicy {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -114,73 +114,73 @@ export interface CorsPolicy {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface Abort {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyabort {
   http_status?: number;
   percentage?: number;
 }
-export interface FixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelayFixedDelay {
   nanos?: number;
   seconds?: string;
 }
-export interface Delay {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelay {
   percentage?: number;
-  fixed_delay: FixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelayFixedDelay;
 }
-export interface FaultInjectionPolicy {
-  abort: Abort;
-  delay: Delay;
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicy {
+  abort: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyabort;
+  delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelay;
 }
-export interface RequestMirrorPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRequestMirrorPolicy {
   backend_service: string;
 }
-export interface PerTryTimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout {
   nanos?: number;
   seconds?: string;
 }
-export interface RetryPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicy {
   num_retries?: number;
   retry_conditions?: string[];
-  per_try_timeout: PerTryTimeout;
+  per_try_timeout: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout;
 }
-export interface Timeout {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActiontimeout {
   nanos?: number;
   seconds?: string;
 }
-export interface UrlRewrite {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionUrlRewrite {
   host_rewrite?: string;
   path_prefix_rewrite?: string;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   header_name?: string;
   header_value?: string;
   replace?: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   header_name?: string;
   header_value?: string;
   replace?: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd;
 }
-export interface WeightedBackendServices {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServices {
   backend_service?: string;
   weight?: number;
-  header_action: HeaderAction;
+  header_action: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction;
 }
-export interface DefaultRouteAction {
-  cors_policy: CorsPolicy;
-  fault_injection_policy: FaultInjectionPolicy;
-  request_mirror_policy: RequestMirrorPolicy;
-  retry_policy: RetryPolicy;
-  timeout: Timeout;
-  url_rewrite: UrlRewrite;
-  weighted_backend_services: WeightedBackendServices;
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteAction {
+  cors_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionCorsPolicy;
+  fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicy;
+  request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRequestMirrorPolicy;
+  retry_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicy;
+  timeout: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActiontimeout;
+  url_rewrite: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionUrlRewrite;
+  weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServices;
 }
-export interface DefaultUrlRedirect {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultUrlRedirect {
   host_redirect?: string;
   https_redirect?: boolean;
   path_redirect?: string;
@@ -188,23 +188,23 @@ export interface DefaultUrlRedirect {
   redirect_response_code?: string;
   strip_query: boolean;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherHeaderActionResponseHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsPathMatcherHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsPathMatcherHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsPathMatcherHeaderActionResponseHeadersToAdd;
 }
-export interface CorsPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionCorsPolicy {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -214,73 +214,73 @@ export interface CorsPolicy {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface Abort {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyabort {
   http_status: number;
   percentage: number;
 }
-export interface FixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelayFixedDelay {
   nanos?: number;
   seconds: string;
 }
-export interface Delay {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelay {
   percentage: number;
-  fixed_delay: FixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelayFixedDelay;
 }
-export interface FaultInjectionPolicy {
-  abort: Abort;
-  delay: Delay;
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicy {
+  abort: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyabort;
+  delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelay;
 }
-export interface RequestMirrorPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRequestMirrorPolicy {
   backend_service: string;
 }
-export interface PerTryTimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout {
   nanos?: number;
   seconds: string;
 }
-export interface RetryPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicy {
   num_retries?: number;
   retry_conditions?: string[];
-  per_try_timeout: PerTryTimeout;
+  per_try_timeout: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 }
-export interface Timeout {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActiontimeout {
   nanos?: number;
   seconds: string;
 }
-export interface UrlRewrite {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionUrlRewrite {
   host_rewrite?: string;
   path_prefix_rewrite?: string;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd;
 }
-export interface WeightedBackendServices {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServices {
   backend_service: string;
   weight: number;
-  header_action: HeaderAction;
+  header_action: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction;
 }
-export interface RouteAction {
-  cors_policy: CorsPolicy;
-  fault_injection_policy: FaultInjectionPolicy;
-  request_mirror_policy: RequestMirrorPolicy;
-  retry_policy: RetryPolicy;
-  timeout: Timeout;
-  url_rewrite: UrlRewrite;
-  weighted_backend_services: WeightedBackendServices;
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteAction {
+  cors_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionCorsPolicy;
+  fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicy;
+  request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRequestMirrorPolicy;
+  retry_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicy;
+  timeout: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActiontimeout;
+  url_rewrite: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionUrlRewrite;
+  weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServices;
 }
-export interface UrlRedirect {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleUrlRedirect {
   host_redirect?: string;
   https_redirect?: boolean;
   path_redirect?: string;
@@ -288,33 +288,33 @@ export interface UrlRedirect {
   redirect_response_code?: string;
   strip_query: boolean;
 }
-export interface PathRule {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRule {
   paths: string[];
   service?: string;
-  route_action: RouteAction;
-  url_redirect: UrlRedirect;
+  route_action: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteAction;
+  url_redirect: GoogleComputeUrlMapArgsPathMatcherPathRuleUrlRedirect;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderActionResponseHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderActionResponseHeadersToAdd;
 }
-export interface RangeMatch {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch {
   range_end: number;
   range_start: number;
 }
-export interface HeaderMatches {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesHeaderMatches {
   exact_match?: string;
   header_name: string;
   invert_match?: boolean;
@@ -322,33 +322,33 @@ export interface HeaderMatches {
   present_match?: boolean;
   regex_match?: string;
   suffix_match?: string;
-  range_match: RangeMatch;
+  range_match: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch;
 }
-export interface FilterLabels {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels {
   name: string;
   value: string;
 }
-export interface MetadataFilters {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesMetadataFilters {
   filter_match_criteria: string;
-  filter_labels: FilterLabels;
+  filter_labels: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels;
 }
-export interface QueryParameterMatches {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesQueryParameterMatches {
   exact_match?: string;
   name: string;
   present_match?: boolean;
   regex_match?: string;
 }
-export interface MatchRules {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRules {
   full_path_match?: string;
   ignore_case?: boolean;
   path_template_match?: string;
   prefix_match?: string;
   regex_match?: string;
-  header_matches: HeaderMatches;
-  metadata_filters: MetadataFilters;
-  query_parameter_matches: QueryParameterMatches;
+  header_matches: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesHeaderMatches;
+  metadata_filters: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesMetadataFilters;
+  query_parameter_matches: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRulesQueryParameterMatches;
 }
-export interface CorsPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionCorsPolicy {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -358,74 +358,74 @@ export interface CorsPolicy {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface Abort {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyabort {
   http_status?: number;
   percentage?: number;
 }
-export interface FixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelayFixedDelay {
   nanos?: number;
   seconds: string;
 }
-export interface Delay {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelay {
   percentage?: number;
-  fixed_delay: FixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelayFixedDelay;
 }
-export interface FaultInjectionPolicy {
-  abort: Abort;
-  delay: Delay;
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
+  abort: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyabort;
+  delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelay;
 }
-export interface RequestMirrorPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
   backend_service: string;
 }
-export interface PerTryTimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout {
   nanos?: number;
   seconds: string;
 }
-export interface RetryPolicy {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicy {
   num_retries: number;
   retry_conditions?: string[];
-  per_try_timeout: PerTryTimeout;
+  per_try_timeout: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout;
 }
-export interface Timeout {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActiontimeout {
   nanos?: number;
   seconds: string;
 }
-export interface UrlRewrite {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionUrlRewrite {
   host_rewrite?: string;
   path_prefix_rewrite?: string;
   path_template_rewrite?: string;
 }
-export interface RequestHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface ResponseHeadersToAdd {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd {
   header_name: string;
   header_value: string;
   replace: boolean;
 }
-export interface HeaderAction {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction {
   request_headers_to_remove?: string[];
   response_headers_to_remove?: string[];
-  request_headers_to_add: RequestHeadersToAdd;
-  response_headers_to_add: ResponseHeadersToAdd;
+  request_headers_to_add: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd;
+  response_headers_to_add: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd;
 }
-export interface WeightedBackendServices {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServices {
   backend_service: string;
   weight: number;
-  header_action: HeaderAction;
+  header_action: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction;
 }
-export interface RouteAction {
-  cors_policy: CorsPolicy;
-  fault_injection_policy: FaultInjectionPolicy;
-  request_mirror_policy: RequestMirrorPolicy;
-  retry_policy: RetryPolicy;
-  timeout: Timeout;
-  url_rewrite: UrlRewrite;
-  weighted_backend_services: WeightedBackendServices;
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteAction {
+  cors_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionCorsPolicy;
+  fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicy;
+  request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRequestMirrorPolicy;
+  retry_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicy;
+  timeout: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActiontimeout;
+  url_rewrite: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionUrlRewrite;
+  weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServices;
 }
-export interface UrlRedirect {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesUrlRedirect {
   host_redirect?: string;
   https_redirect?: boolean;
   path_redirect?: string;
@@ -433,31 +433,31 @@ export interface UrlRedirect {
   redirect_response_code?: string;
   strip_query?: boolean;
 }
-export interface RouteRules {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRules {
   priority: number;
   service?: string;
-  header_action: HeaderAction;
-  match_rules: MatchRules;
-  route_action: RouteAction;
-  url_redirect: UrlRedirect;
+  header_action: GoogleComputeUrlMapArgsPathMatcherRouteRulesHeaderAction;
+  match_rules: GoogleComputeUrlMapArgsPathMatcherRouteRulesMatchRules;
+  route_action: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteAction;
+  url_redirect: GoogleComputeUrlMapArgsPathMatcherRouteRulesUrlRedirect;
 }
-export interface PathMatcher {
+export interface GoogleComputeUrlMapArgsPathMatcher {
   default_service?: string;
   description?: string;
   name: string;
-  default_route_action: DefaultRouteAction;
-  default_url_redirect: DefaultUrlRedirect;
-  header_action: HeaderAction;
-  path_rule: PathRule;
-  route_rules: RouteRules;
+  default_route_action: GoogleComputeUrlMapArgsPathMatcherDefaultRouteAction;
+  default_url_redirect: GoogleComputeUrlMapArgsPathMatcherDefaultUrlRedirect;
+  header_action: GoogleComputeUrlMapArgsPathMatcherHeaderAction;
+  path_rule: GoogleComputeUrlMapArgsPathMatcherPathRule;
+  route_rules: GoogleComputeUrlMapArgsPathMatcherRouteRules;
 }
-export interface Test {
+export interface GoogleComputeUrlMapArgstest {
   description?: string;
   host: string;
   path: string;
   service: string;
 }
-export interface Timeouts {
+export interface GoogleComputeUrlMapArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -466,13 +466,13 @@ export interface GoogleComputeUrlMapArgs {
   default_service?: string;
   description?: string;
   name: string;
-  default_route_action: DefaultRouteAction;
-  default_url_redirect: DefaultUrlRedirect;
-  header_action: HeaderAction;
-  host_rule: HostRule;
-  path_matcher: PathMatcher;
-  test: Test;
-  timeouts: Timeouts;
+  default_route_action: GoogleComputeUrlMapArgsDefaultRouteAction;
+  default_url_redirect: GoogleComputeUrlMapArgsDefaultUrlRedirect;
+  header_action: GoogleComputeUrlMapArgsHeaderAction;
+  host_rule: GoogleComputeUrlMapArgsHostRule;
+  path_matcher: GoogleComputeUrlMapArgsPathMatcher;
+  test: GoogleComputeUrlMapArgstest;
+  timeouts: GoogleComputeUrlMapArgstimeouts;
 }
 export class google_compute_url_map extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsVpclatticeAuthPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface AwsVpclatticeAuthPolicyArgs {
   policy: string;
   resource_identifier: string;
   state?: string;
-  timeouts: Timeouts;
+  timeouts: AwsVpclatticeAuthPolicyArgstimeouts;
 }
 export class aws_vpclattice_auth_policy extends TerraformResource {
   readonly id?: string;

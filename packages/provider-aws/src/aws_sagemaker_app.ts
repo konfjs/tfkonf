@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ResourceSpec {
+export interface AwsSagemakerAppArgsResourceSpec {
   instance_type?: string;
   lifecycle_config_arn?: string;
   sagemaker_image_version_alias?: string;
@@ -14,7 +14,7 @@ export interface AwsSagemakerAppArgs {
     [key: string]: string;
   };
   user_profile_name?: string;
-  resource_spec: ResourceSpec;
+  resource_spec: AwsSagemakerAppArgsResourceSpec;
 }
 export class aws_sagemaker_app extends TerraformResource {
   readonly arn!: string;

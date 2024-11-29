@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Options {
+export interface AwsNetworkmanagerConnectAttachmentArgsoptions {
   protocol?: string;
 }
-export interface Timeouts {
+export interface AwsNetworkmanagerConnectAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -13,8 +13,8 @@ export interface AwsNetworkmanagerConnectAttachmentArgs {
     [key: string]: string;
   };
   transport_attachment_id: string;
-  options: Options;
-  timeouts: Timeouts;
+  options: AwsNetworkmanagerConnectAttachmentArgsoptions;
+  timeouts: AwsNetworkmanagerConnectAttachmentArgstimeouts;
 }
 export class aws_networkmanager_connect_attachment extends TerraformResource {
   readonly arn!: string;

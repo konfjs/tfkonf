@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticateCognito {
+export interface AwsAlbListenerArgsDefaultActionAuthenticateCognito {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -7,7 +7,7 @@ export interface AuthenticateCognito {
   user_pool_client_id: string;
   user_pool_domain: string;
 }
-export interface AuthenticateOidc {
+export interface AwsAlbListenerArgsDefaultActionAuthenticateOidc {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -18,23 +18,23 @@ export interface AuthenticateOidc {
   token_endpoint: string;
   user_info_endpoint: string;
 }
-export interface FixedResponse {
+export interface AwsAlbListenerArgsDefaultActionFixedResponse {
   content_type: string;
   message_body?: string;
 }
-export interface Stickiness {
+export interface AwsAlbListenerArgsDefaultActionforwardstickiness {
   duration: number;
   enabled?: boolean;
 }
-export interface TargetGroup {
+export interface AwsAlbListenerArgsDefaultActionforwardTargetGroup {
   arn: string;
   weight?: number;
 }
-export interface Forward {
-  stickiness: Stickiness;
-  target_group: TargetGroup;
+export interface AwsAlbListenerArgsDefaultActionforward {
+  stickiness: AwsAlbListenerArgsDefaultActionforwardstickiness;
+  target_group: AwsAlbListenerArgsDefaultActionforwardTargetGroup;
 }
-export interface Redirect {
+export interface AwsAlbListenerArgsDefaultActionredirect {
   host?: string;
   path?: string;
   port?: string;
@@ -42,21 +42,21 @@ export interface Redirect {
   query?: string;
   status_code: string;
 }
-export interface DefaultAction {
+export interface AwsAlbListenerArgsDefaultAction {
   target_group_arn?: string;
   type: string;
-  authenticate_cognito: AuthenticateCognito;
-  authenticate_oidc: AuthenticateOidc;
-  fixed_response: FixedResponse;
-  forward: Forward;
-  redirect: Redirect;
+  authenticate_cognito: AwsAlbListenerArgsDefaultActionAuthenticateCognito;
+  authenticate_oidc: AwsAlbListenerArgsDefaultActionAuthenticateOidc;
+  fixed_response: AwsAlbListenerArgsDefaultActionFixedResponse;
+  forward: AwsAlbListenerArgsDefaultActionforward;
+  redirect: AwsAlbListenerArgsDefaultActionredirect;
 }
-export interface MutualAuthentication {
+export interface AwsAlbListenerArgsMutualAuthentication {
   ignore_client_certificate_expiry?: boolean;
   mode: string;
   trust_store_arn?: string;
 }
-export interface Timeouts {
+export interface AwsAlbListenerArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -68,9 +68,9 @@ export interface AwsAlbListenerArgs {
   tags?: {
     [key: string]: string;
   };
-  default_action: DefaultAction;
-  mutual_authentication: MutualAuthentication;
-  timeouts: Timeouts;
+  default_action: AwsAlbListenerArgsDefaultAction;
+  mutual_authentication: AwsAlbListenerArgsMutualAuthentication;
+  timeouts: AwsAlbListenerArgstimeouts;
 }
 export class aws_alb_listener extends TerraformResource {
   readonly arn!: string;

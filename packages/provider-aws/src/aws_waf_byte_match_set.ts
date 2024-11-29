@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldToMatch {
+export interface AwsWafByteMatchSetArgsByteMatchTuplesFieldToMatch {
   data?: string;
   type: string;
 }
-export interface ByteMatchTuples {
+export interface AwsWafByteMatchSetArgsByteMatchTuples {
   positional_constraint: string;
   target_string?: string;
   text_transformation: string;
-  field_to_match: FieldToMatch;
+  field_to_match: AwsWafByteMatchSetArgsByteMatchTuplesFieldToMatch;
 }
 export interface AwsWafByteMatchSetArgs {
   name: string;
-  byte_match_tuples: ByteMatchTuples;
+  byte_match_tuples: AwsWafByteMatchSetArgsByteMatchTuples;
 }
 export class aws_waf_byte_match_set extends TerraformResource {
   readonly id?: string;

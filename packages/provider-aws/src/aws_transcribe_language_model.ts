@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InputDataConfig {
+export interface AwsTranscribeLanguageModelArgsInputDataConfig {
   data_access_role_arn: string;
   s3_uri: string;
 }
-export interface Timeouts {
+export interface AwsTranscribeLanguageModelArgstimeouts {
   create?: string;
 }
 export interface AwsTranscribeLanguageModelArgs {
@@ -13,8 +13,8 @@ export interface AwsTranscribeLanguageModelArgs {
   tags?: {
     [key: string]: string;
   };
-  input_data_config: InputDataConfig;
-  timeouts: Timeouts;
+  input_data_config: AwsTranscribeLanguageModelArgsInputDataConfig;
+  timeouts: AwsTranscribeLanguageModelArgstimeouts;
 }
 export class aws_transcribe_language_model extends TerraformResource {
   readonly arn!: string;

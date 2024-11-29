@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StorageLocation {
+export interface AwsGameliftBuildArgsStorageLocation {
   bucket: string;
   key: string;
   object_version?: string;
@@ -12,7 +12,7 @@ export interface AwsGameliftBuildArgs {
     [key: string]: string;
   };
   version?: string;
-  storage_location: StorageLocation;
+  storage_location: AwsGameliftBuildArgsStorageLocation;
 }
 export class aws_gamelift_build extends TerraformResource {
   readonly arn!: string;

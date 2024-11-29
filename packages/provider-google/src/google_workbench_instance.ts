@@ -1,49 +1,49 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AcceleratorConfigs {
+export interface GoogleWorkbenchInstanceArgsGceSetupAcceleratorConfigs {
   core_count?: string;
   type?: string;
 }
-export interface BootDisk {
+export interface GoogleWorkbenchInstanceArgsGceSetupBootDisk {
   kms_key?: string;
 }
-export interface ContainerImage {
+export interface GoogleWorkbenchInstanceArgsGceSetupContainerImage {
   repository: string;
   tag?: string;
 }
-export interface DataDisks {
+export interface GoogleWorkbenchInstanceArgsGceSetupDataDisks {
   disk_type?: string;
   kms_key?: string;
 }
-export interface AccessConfigs {
+export interface GoogleWorkbenchInstanceArgsGceSetupNetworkInterfacesAccessConfigs {
   external_ip: string;
 }
-export interface NetworkInterfaces {
+export interface GoogleWorkbenchInstanceArgsGceSetupNetworkInterfaces {
   nic_type?: string;
-  access_configs: AccessConfigs;
+  access_configs: GoogleWorkbenchInstanceArgsGceSetupNetworkInterfacesAccessConfigs;
 }
-export interface ServiceAccounts {}
-export interface ShieldedInstanceConfig {
+export interface GoogleWorkbenchInstanceArgsGceSetupServiceAccounts {}
+export interface GoogleWorkbenchInstanceArgsGceSetupShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface VmImage {
+export interface GoogleWorkbenchInstanceArgsGceSetupVmImage {
   family?: string;
   name?: string;
   project?: string;
 }
-export interface GceSetup {
+export interface GoogleWorkbenchInstanceArgsGceSetup {
   enable_ip_forwarding?: boolean;
-  accelerator_configs: AcceleratorConfigs;
-  boot_disk: BootDisk;
-  container_image: ContainerImage;
-  data_disks: DataDisks;
-  network_interfaces: NetworkInterfaces;
-  service_accounts: ServiceAccounts;
-  shielded_instance_config: ShieldedInstanceConfig;
-  vm_image: VmImage;
+  accelerator_configs: GoogleWorkbenchInstanceArgsGceSetupAcceleratorConfigs;
+  boot_disk: GoogleWorkbenchInstanceArgsGceSetupBootDisk;
+  container_image: GoogleWorkbenchInstanceArgsGceSetupContainerImage;
+  data_disks: GoogleWorkbenchInstanceArgsGceSetupDataDisks;
+  network_interfaces: GoogleWorkbenchInstanceArgsGceSetupNetworkInterfaces;
+  service_accounts: GoogleWorkbenchInstanceArgsGceSetupServiceAccounts;
+  shielded_instance_config: GoogleWorkbenchInstanceArgsGceSetupShieldedInstanceConfig;
+  vm_image: GoogleWorkbenchInstanceArgsGceSetupVmImage;
 }
-export interface Timeouts {
+export interface GoogleWorkbenchInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -58,8 +58,8 @@ export interface GoogleWorkbenchInstanceArgs {
   };
   location: string;
   name: string;
-  gce_setup: GceSetup;
-  timeouts: Timeouts;
+  gce_setup: GoogleWorkbenchInstanceArgsGceSetup;
+  timeouts: GoogleWorkbenchInstanceArgstimeouts;
 }
 export class google_workbench_instance extends TerraformResource {
   readonly create_time!: string;

@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessLogSettings {
+export interface AwsApiGatewayStageArgsAccessLogSettings {
   destination_arn: string;
   format: string;
 }
-export interface CanarySettings {
+export interface AwsApiGatewayStageArgsCanarySettings {
   deployment_id: string;
   percent_traffic?: number;
   stage_variable_overrides?: {
@@ -27,8 +27,8 @@ export interface AwsApiGatewayStageArgs {
     [key: string]: string;
   };
   xray_tracing_enabled?: boolean;
-  access_log_settings: AccessLogSettings;
-  canary_settings: CanarySettings;
+  access_log_settings: AwsApiGatewayStageArgsAccessLogSettings;
+  canary_settings: AwsApiGatewayStageArgsCanarySettings;
 }
 export class aws_api_gateway_stage extends TerraformResource {
   readonly arn!: string;

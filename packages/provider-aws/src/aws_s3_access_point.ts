@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PublicAccessBlockConfiguration {
+export interface AwsS3AccessPointArgsPublicAccessBlockConfiguration {
   block_public_acls?: boolean;
   block_public_policy?: boolean;
   ignore_public_acls?: boolean;
   restrict_public_buckets?: boolean;
 }
-export interface VpcConfiguration {
+export interface AwsS3AccessPointArgsVpcConfiguration {
   vpc_id: string;
 }
 export interface AwsS3AccessPointArgs {
   bucket: string;
   name: string;
-  public_access_block_configuration: PublicAccessBlockConfiguration;
-  vpc_configuration: VpcConfiguration;
+  public_access_block_configuration: AwsS3AccessPointArgsPublicAccessBlockConfiguration;
+  vpc_configuration: AwsS3AccessPointArgsVpcConfiguration;
 }
 export class aws_s3_access_point extends TerraformResource {
   readonly account_id?: string;

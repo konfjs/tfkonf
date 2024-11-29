@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PubsubConfigs {
+export interface GoogleSourcerepoRepositoryArgsPubsubConfigs {
   message_format: string;
   topic: string;
 }
-export interface Timeouts {
+export interface GoogleSourcerepoRepositoryArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,8 +11,8 @@ export interface Timeouts {
 export interface GoogleSourcerepoRepositoryArgs {
   create_ignore_already_exists?: boolean;
   name: string;
-  pubsub_configs: PubsubConfigs;
-  timeouts: Timeouts;
+  pubsub_configs: GoogleSourcerepoRepositoryArgsPubsubConfigs;
+  timeouts: GoogleSourcerepoRepositoryArgstimeouts;
 }
 export class google_sourcerepo_repository extends TerraformResource {
   readonly id?: string;

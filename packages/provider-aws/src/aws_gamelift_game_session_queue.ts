@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PlayerLatencyPolicy {
+export interface AwsGameliftGameSessionQueueArgsPlayerLatencyPolicy {
   maximum_individual_player_latency_milliseconds: number;
   policy_duration_seconds?: number;
 }
@@ -12,7 +12,7 @@ export interface AwsGameliftGameSessionQueueArgs {
     [key: string]: string;
   };
   timeout_in_seconds?: number;
-  player_latency_policy: PlayerLatencyPolicy;
+  player_latency_policy: AwsGameliftGameSessionQueueArgsPlayerLatencyPolicy;
 }
 export class aws_gamelift_game_session_queue extends TerraformResource {
   readonly arn!: string;

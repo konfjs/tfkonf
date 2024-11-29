@@ -1,52 +1,52 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataSharingPreference {
+export interface AwsRekognitionStreamProcessorArgsDataSharingPreference {
   opt_in: boolean;
 }
-export interface KinesisVideoStream {
+export interface AwsRekognitionStreamProcessorArgsinputKinesisVideoStream {
   arn: string;
 }
-export interface Input {
-  kinesis_video_stream: KinesisVideoStream;
+export interface AwsRekognitionStreamProcessorArgsinput {
+  kinesis_video_stream: AwsRekognitionStreamProcessorArgsinputKinesisVideoStream;
 }
-export interface NotificationChannel {
+export interface AwsRekognitionStreamProcessorArgsNotificationChannel {
   sns_topic_arn?: string;
 }
-export interface KinesisDataStream {
+export interface AwsRekognitionStreamProcessorArgsoutputKinesisDataStream {
   arn?: string;
 }
-export interface S3Destination {
+export interface AwsRekognitionStreamProcessorArgsoutputS3Destination {
   bucket?: string;
   key_prefix?: string;
 }
-export interface Output {
-  kinesis_data_stream: KinesisDataStream;
-  s3_destination: S3Destination;
+export interface AwsRekognitionStreamProcessorArgsoutput {
+  kinesis_data_stream: AwsRekognitionStreamProcessorArgsoutputKinesisDataStream;
+  s3_destination: AwsRekognitionStreamProcessorArgsoutputS3Destination;
 }
-export interface BoundingBox {
+export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestBoundingBox {
   height?: number;
   left?: number;
   top?: number;
   width?: number;
 }
-export interface Polygon {
+export interface AwsRekognitionStreamProcessorArgsRegionsOfInterestpolygon {
   x?: number;
   y?: number;
 }
-export interface RegionsOfInterest {
-  bounding_box: BoundingBox;
-  polygon: Polygon;
+export interface AwsRekognitionStreamProcessorArgsRegionsOfInterest {
+  bounding_box: AwsRekognitionStreamProcessorArgsRegionsOfInterestBoundingBox;
+  polygon: AwsRekognitionStreamProcessorArgsRegionsOfInterestpolygon;
 }
-export interface ConnectedHome {
+export interface AwsRekognitionStreamProcessorArgssettingsConnectedHome {
   labels?: string[];
 }
-export interface FaceSearch {
+export interface AwsRekognitionStreamProcessorArgssettingsFaceSearch {
   collection_id: string;
 }
-export interface Settings {
-  connected_home: ConnectedHome;
-  face_search: FaceSearch;
+export interface AwsRekognitionStreamProcessorArgssettings {
+  connected_home: AwsRekognitionStreamProcessorArgssettingsConnectedHome;
+  face_search: AwsRekognitionStreamProcessorArgssettingsFaceSearch;
 }
-export interface Timeouts {
+export interface AwsRekognitionStreamProcessorArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -58,13 +58,13 @@ export interface AwsRekognitionStreamProcessorArgs {
   tags?: {
     [key: string]: string;
   };
-  data_sharing_preference: DataSharingPreference;
-  input: Input;
-  notification_channel: NotificationChannel;
-  output: Output;
-  regions_of_interest: RegionsOfInterest;
-  settings: Settings;
-  timeouts: Timeouts;
+  data_sharing_preference: AwsRekognitionStreamProcessorArgsDataSharingPreference;
+  input: AwsRekognitionStreamProcessorArgsinput;
+  notification_channel: AwsRekognitionStreamProcessorArgsNotificationChannel;
+  output: AwsRekognitionStreamProcessorArgsoutput;
+  regions_of_interest: AwsRekognitionStreamProcessorArgsRegionsOfInterest;
+  settings: AwsRekognitionStreamProcessorArgssettings;
+  timeouts: AwsRekognitionStreamProcessorArgstimeouts;
 }
 export class aws_rekognition_stream_processor extends TerraformResource {
   readonly stream_processor_arn!: string;

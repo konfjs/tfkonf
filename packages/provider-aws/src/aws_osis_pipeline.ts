@@ -1,23 +1,23 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BufferOptions {
+export interface AwsOsisPipelineArgsBufferOptions {
   persistent_buffer_enabled: boolean;
 }
-export interface EncryptionAtRestOptions {
+export interface AwsOsisPipelineArgsEncryptionAtRestOptions {
   kms_key_arn: string;
 }
-export interface CloudwatchLogDestination {
+export interface AwsOsisPipelineArgsLogPublishingOptionsCloudwatchLogDestination {
   log_group: string;
 }
-export interface LogPublishingOptions {
+export interface AwsOsisPipelineArgsLogPublishingOptions {
   is_logging_enabled?: boolean;
-  cloudwatch_log_destination: CloudwatchLogDestination;
+  cloudwatch_log_destination: AwsOsisPipelineArgsLogPublishingOptionsCloudwatchLogDestination;
 }
-export interface Timeouts {
+export interface AwsOsisPipelineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcOptions {
+export interface AwsOsisPipelineArgsVpcOptions {
   security_group_ids?: string[];
   subnet_ids: string[];
 }
@@ -29,11 +29,11 @@ export interface AwsOsisPipelineArgs {
   tags?: {
     [key: string]: string;
   };
-  buffer_options: BufferOptions;
-  encryption_at_rest_options: EncryptionAtRestOptions;
-  log_publishing_options: LogPublishingOptions;
-  timeouts: Timeouts;
-  vpc_options: VpcOptions;
+  buffer_options: AwsOsisPipelineArgsBufferOptions;
+  encryption_at_rest_options: AwsOsisPipelineArgsEncryptionAtRestOptions;
+  log_publishing_options: AwsOsisPipelineArgsLogPublishingOptions;
+  timeouts: AwsOsisPipelineArgstimeouts;
+  vpc_options: AwsOsisPipelineArgsVpcOptions;
 }
 export class aws_osis_pipeline extends TerraformResource {
   readonly id!: string;

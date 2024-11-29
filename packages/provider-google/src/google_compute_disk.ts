@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AsyncPrimaryDisk {
+export interface GoogleComputeDiskArgsAsyncPrimaryDisk {
   disk: string;
 }
-export interface DiskEncryptionKey {
+export interface GoogleComputeDiskArgsDiskEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;
   raw_key?: string;
   rsa_encrypted_key?: string;
 }
-export interface GuestOsFeatures {
+export interface GoogleComputeDiskArgsGuestOsFeatures {
   type: string;
 }
-export interface SourceImageEncryptionKey {
+export interface GoogleComputeDiskArgsSourceImageEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;
   raw_key?: string;
 }
-export interface SourceSnapshotEncryptionKey {
+export interface GoogleComputeDiskArgsSourceSnapshotEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;
   raw_key?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeDiskArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,12 +37,12 @@ export interface GoogleComputeDiskArgs {
   source_disk?: string;
   storage_pool?: string;
   type?: string;
-  async_primary_disk: AsyncPrimaryDisk;
-  disk_encryption_key: DiskEncryptionKey;
-  guest_os_features: GuestOsFeatures;
-  source_image_encryption_key: SourceImageEncryptionKey;
-  source_snapshot_encryption_key: SourceSnapshotEncryptionKey;
-  timeouts: Timeouts;
+  async_primary_disk: GoogleComputeDiskArgsAsyncPrimaryDisk;
+  disk_encryption_key: GoogleComputeDiskArgsDiskEncryptionKey;
+  guest_os_features: GoogleComputeDiskArgsGuestOsFeatures;
+  source_image_encryption_key: GoogleComputeDiskArgsSourceImageEncryptionKey;
+  source_snapshot_encryption_key: GoogleComputeDiskArgsSourceSnapshotEncryptionKey;
+  timeouts: GoogleComputeDiskArgstimeouts;
 }
 export class google_compute_disk extends TerraformResource {
   readonly access_mode?: string;

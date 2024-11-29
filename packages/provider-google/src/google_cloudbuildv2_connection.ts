@@ -1,44 +1,44 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfigAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface ReadAuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfigReadAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface BitbucketCloudConfig {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfig {
   webhook_secret_secret_version: string;
   workspace: string;
-  authorizer_credential: AuthorizerCredential;
-  read_authorizer_credential: ReadAuthorizerCredential;
+  authorizer_credential: GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfigAuthorizerCredential;
+  read_authorizer_credential: GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfigReadAuthorizerCredential;
 }
-export interface AuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface ReadAuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigReadAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface ServiceDirectoryConfig {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigServiceDirectoryConfig {
   service: string;
 }
-export interface BitbucketDataCenterConfig {
+export interface GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfig {
   host_uri: string;
   ssl_ca?: string;
   webhook_secret_secret_version: string;
-  authorizer_credential: AuthorizerCredential;
-  read_authorizer_credential: ReadAuthorizerCredential;
-  service_directory_config: ServiceDirectoryConfig;
+  authorizer_credential: GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigAuthorizerCredential;
+  read_authorizer_credential: GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigReadAuthorizerCredential;
+  service_directory_config: GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfigServiceDirectoryConfig;
 }
-export interface AuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsGithubConfigAuthorizerCredential {
   oauth_token_secret_version?: string;
 }
-export interface GithubConfig {
+export interface GoogleCloudbuildv2ConnectionArgsGithubConfig {
   app_installation_id?: number;
-  authorizer_credential: AuthorizerCredential;
+  authorizer_credential: GoogleCloudbuildv2ConnectionArgsGithubConfigAuthorizerCredential;
 }
-export interface ServiceDirectoryConfig {
+export interface GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfigServiceDirectoryConfig {
   service: string;
 }
-export interface GithubEnterpriseConfig {
+export interface GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfig {
   app_id?: number;
   app_installation_id?: number;
   app_slug?: string;
@@ -46,25 +46,25 @@ export interface GithubEnterpriseConfig {
   private_key_secret_version?: string;
   ssl_ca?: string;
   webhook_secret_secret_version?: string;
-  service_directory_config: ServiceDirectoryConfig;
+  service_directory_config: GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfigServiceDirectoryConfig;
 }
-export interface AuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsGitlabConfigAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface ReadAuthorizerCredential {
+export interface GoogleCloudbuildv2ConnectionArgsGitlabConfigReadAuthorizerCredential {
   user_token_secret_version: string;
 }
-export interface ServiceDirectoryConfig {
+export interface GoogleCloudbuildv2ConnectionArgsGitlabConfigServiceDirectoryConfig {
   service: string;
 }
-export interface GitlabConfig {
+export interface GoogleCloudbuildv2ConnectionArgsGitlabConfig {
   ssl_ca?: string;
   webhook_secret_secret_version: string;
-  authorizer_credential: AuthorizerCredential;
-  read_authorizer_credential: ReadAuthorizerCredential;
-  service_directory_config: ServiceDirectoryConfig;
+  authorizer_credential: GoogleCloudbuildv2ConnectionArgsGitlabConfigAuthorizerCredential;
+  read_authorizer_credential: GoogleCloudbuildv2ConnectionArgsGitlabConfigReadAuthorizerCredential;
+  service_directory_config: GoogleCloudbuildv2ConnectionArgsGitlabConfigServiceDirectoryConfig;
 }
-export interface Timeouts {
+export interface GoogleCloudbuildv2ConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -76,12 +76,12 @@ export interface GoogleCloudbuildv2ConnectionArgs {
   disabled?: boolean;
   location: string;
   name: string;
-  bitbucket_cloud_config: BitbucketCloudConfig;
-  bitbucket_data_center_config: BitbucketDataCenterConfig;
-  github_config: GithubConfig;
-  github_enterprise_config: GithubEnterpriseConfig;
-  gitlab_config: GitlabConfig;
-  timeouts: Timeouts;
+  bitbucket_cloud_config: GoogleCloudbuildv2ConnectionArgsBitbucketCloudConfig;
+  bitbucket_data_center_config: GoogleCloudbuildv2ConnectionArgsBitbucketDataCenterConfig;
+  github_config: GoogleCloudbuildv2ConnectionArgsGithubConfig;
+  github_enterprise_config: GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfig;
+  gitlab_config: GoogleCloudbuildv2ConnectionArgsGitlabConfig;
+  timeouts: GoogleCloudbuildv2ConnectionArgstimeouts;
 }
 export class google_cloudbuildv2_connection extends TerraformResource {
   readonly create_time!: string;

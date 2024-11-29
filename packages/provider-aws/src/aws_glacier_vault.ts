@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Notification {
+export interface AwsGlacierVaultArgsnotification {
   events: string[];
   sns_topic: string;
 }
@@ -9,7 +9,7 @@ export interface AwsGlacierVaultArgs {
   tags?: {
     [key: string]: string;
   };
-  notification: Notification;
+  notification: AwsGlacierVaultArgsnotification;
 }
 export class aws_glacier_vault extends TerraformResource {
   readonly arn!: string;

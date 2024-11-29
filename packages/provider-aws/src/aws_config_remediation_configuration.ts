@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SsmControls {
+export interface AwsConfigRemediationConfigurationArgsExecutionControlsSsmControls {
   concurrent_execution_rate_percentage?: number;
   error_percentage?: number;
 }
-export interface ExecutionControls {
-  ssm_controls: SsmControls;
+export interface AwsConfigRemediationConfigurationArgsExecutionControls {
+  ssm_controls: AwsConfigRemediationConfigurationArgsExecutionControlsSsmControls;
 }
-export interface Parameter {
+export interface AwsConfigRemediationConfigurationArgsparameter {
   name: string;
   resource_value?: string;
   static_value?: string;
@@ -20,8 +20,8 @@ export interface AwsConfigRemediationConfigurationArgs {
   target_id: string;
   target_type: string;
   target_version?: string;
-  execution_controls: ExecutionControls;
-  parameter: Parameter;
+  execution_controls: AwsConfigRemediationConfigurationArgsExecutionControls;
+  parameter: AwsConfigRemediationConfigurationArgsparameter;
 }
 export class aws_config_remediation_configuration extends TerraformResource {
   readonly arn!: string;

@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Options {
+export interface AwsAcmCertificateArgsoptions {
   certificate_transparency_logging_preference?: string;
 }
-export interface ValidationOption {
+export interface AwsAcmCertificateArgsValidationOption {
   domain_name: string;
   validation_domain: string;
 }
@@ -15,8 +15,8 @@ export interface AwsAcmCertificateArgs {
   tags?: {
     [key: string]: string;
   };
-  options: Options;
-  validation_option: ValidationOption;
+  options: AwsAcmCertificateArgsoptions;
+  validation_option: AwsAcmCertificateArgsValidationOption;
 }
 export class aws_acm_certificate extends TerraformResource {
   readonly arn!: string;

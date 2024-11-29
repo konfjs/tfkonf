@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDatabaseMigrationServicePrivateConnectionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcPeeringConfig {
+export interface GoogleDatabaseMigrationServicePrivateConnectionArgsVpcPeeringConfig {
   subnet: string;
   vpc_name: string;
 }
@@ -14,8 +14,8 @@ export interface GoogleDatabaseMigrationServicePrivateConnectionArgs {
   };
   location: string;
   private_connection_id: string;
-  timeouts: Timeouts;
-  vpc_peering_config: VpcPeeringConfig;
+  timeouts: GoogleDatabaseMigrationServicePrivateConnectionArgstimeouts;
+  vpc_peering_config: GoogleDatabaseMigrationServicePrivateConnectionArgsVpcPeeringConfig;
 }
 export class google_database_migration_service_private_connection extends TerraformResource {
   readonly display_name?: string;

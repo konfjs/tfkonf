@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CertificateProviderInstance {
+export interface GoogleNetworkSecurityClientTlsPolicyArgsClientCertificateCertificateProviderInstance {
   plugin_instance: string;
 }
-export interface GrpcEndpoint {
+export interface GoogleNetworkSecurityClientTlsPolicyArgsClientCertificateGrpcEndpoint {
   target_uri: string;
 }
-export interface ClientCertificate {
-  certificate_provider_instance: CertificateProviderInstance;
-  grpc_endpoint: GrpcEndpoint;
+export interface GoogleNetworkSecurityClientTlsPolicyArgsClientCertificate {
+  certificate_provider_instance: GoogleNetworkSecurityClientTlsPolicyArgsClientCertificateCertificateProviderInstance;
+  grpc_endpoint: GoogleNetworkSecurityClientTlsPolicyArgsClientCertificateGrpcEndpoint;
 }
-export interface CertificateProviderInstance {
+export interface GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCaCertificateProviderInstance {
   plugin_instance: string;
 }
-export interface GrpcEndpoint {
+export interface GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCaGrpcEndpoint {
   target_uri: string;
 }
-export interface ServerValidationCa {
-  certificate_provider_instance: CertificateProviderInstance;
-  grpc_endpoint: GrpcEndpoint;
+export interface GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCa {
+  certificate_provider_instance: GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCaCertificateProviderInstance;
+  grpc_endpoint: GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCaGrpcEndpoint;
 }
-export interface Timeouts {
+export interface GoogleNetworkSecurityClientTlsPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -32,9 +32,9 @@ export interface GoogleNetworkSecurityClientTlsPolicyArgs {
   location?: string;
   name: string;
   sni?: string;
-  client_certificate: ClientCertificate;
-  server_validation_ca: ServerValidationCa;
-  timeouts: Timeouts;
+  client_certificate: GoogleNetworkSecurityClientTlsPolicyArgsClientCertificate;
+  server_validation_ca: GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCa;
+  timeouts: GoogleNetworkSecurityClientTlsPolicyArgstimeouts;
 }
 export class google_network_security_client_tls_policy extends TerraformResource {
   readonly create_time!: string;

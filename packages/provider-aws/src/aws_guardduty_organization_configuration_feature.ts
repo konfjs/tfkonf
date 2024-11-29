@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdditionalConfiguration {
+export interface AwsGuarddutyOrganizationConfigurationFeatureArgsAdditionalConfiguration {
   auto_enable: string;
   name: string;
 }
@@ -7,7 +7,7 @@ export interface AwsGuarddutyOrganizationConfigurationFeatureArgs {
   auto_enable: string;
   detector_id: string;
   name: string;
-  additional_configuration: AdditionalConfiguration;
+  additional_configuration: AwsGuarddutyOrganizationConfigurationFeatureArgsAdditionalConfiguration;
 }
 export class aws_guardduty_organization_configuration_feature extends TerraformResource {
   readonly id?: string;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEfsMountTargetArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsEfsMountTargetArgs {
   file_system_id: string;
   subnet_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsEfsMountTargetArgstimeouts;
 }
 export class aws_efs_mount_target extends TerraformResource {
   readonly availability_zone_id!: string;

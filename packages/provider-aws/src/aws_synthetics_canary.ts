@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Encryption {
+export interface AwsSyntheticsCanaryArgsArtifactConfigS3Encryption {
   encryption_mode?: string;
   kms_key_arn?: string;
 }
-export interface ArtifactConfig {
-  s3_encryption: S3Encryption;
+export interface AwsSyntheticsCanaryArgsArtifactConfig {
+  s3_encryption: AwsSyntheticsCanaryArgsArtifactConfigS3Encryption;
 }
-export interface RunConfig {
+export interface AwsSyntheticsCanaryArgsRunConfig {
   active_tracing?: boolean;
   environment_variables?: {
     [key: string]: string;
   };
 }
-export interface Schedule {
+export interface AwsSyntheticsCanaryArgsschedule {
   duration_in_seconds?: number;
   expression: string;
 }
-export interface VpcConfig {
+export interface AwsSyntheticsCanaryArgsVpcConfig {
   security_group_ids?: string[];
   subnet_ids?: string[];
 }
@@ -37,10 +37,10 @@ export interface AwsSyntheticsCanaryArgs {
     [key: string]: string;
   };
   zip_file?: string;
-  artifact_config: ArtifactConfig;
-  run_config: RunConfig;
-  schedule: Schedule;
-  vpc_config: VpcConfig;
+  artifact_config: AwsSyntheticsCanaryArgsArtifactConfig;
+  run_config: AwsSyntheticsCanaryArgsRunConfig;
+  schedule: AwsSyntheticsCanaryArgsschedule;
+  vpc_config: AwsSyntheticsCanaryArgsVpcConfig;
 }
 export class aws_synthetics_canary extends TerraformResource {
   readonly arn!: string;

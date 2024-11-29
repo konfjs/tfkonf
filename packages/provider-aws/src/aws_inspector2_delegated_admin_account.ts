@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsInspector2DelegatedAdminAccountArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsInspector2DelegatedAdminAccountArgs {
   account_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsInspector2DelegatedAdminAccountArgstimeouts;
 }
 export class aws_inspector2_delegated_admin_account extends TerraformResource {
   readonly id?: string;

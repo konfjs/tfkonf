@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CpuUtilization {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyCpuUtilization {
   predictive_method?: string;
   target: number;
 }
-export interface LoadBalancingUtilization {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization {
   target: number;
 }
-export interface Metric {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicymetric {
   name: string;
   target?: number;
   type?: string;
 }
-export interface MaxScaledInReplicas {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControlMaxScaledInReplicas {
   fixed?: number;
   percent?: number;
 }
-export interface ScaleInControl {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControl {
   time_window_sec?: number;
-  max_scaled_in_replicas: MaxScaledInReplicas;
+  max_scaled_in_replicas: GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControlMaxScaledInReplicas;
 }
-export interface ScalingSchedules {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules {
   description?: string;
   disabled?: boolean;
   duration_sec: number;
@@ -28,18 +28,18 @@ export interface ScalingSchedules {
   schedule: string;
   time_zone?: string;
 }
-export interface AutoscalingPolicy {
+export interface GoogleComputeAutoscalerArgsAutoscalingPolicy {
   cooldown_period?: number;
   max_replicas: number;
   min_replicas: number;
   mode?: string;
-  cpu_utilization: CpuUtilization;
-  load_balancing_utilization: LoadBalancingUtilization;
-  metric: Metric;
-  scale_in_control: ScaleInControl;
-  scaling_schedules: ScalingSchedules;
+  cpu_utilization: GoogleComputeAutoscalerArgsAutoscalingPolicyCpuUtilization;
+  load_balancing_utilization: GoogleComputeAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization;
+  metric: GoogleComputeAutoscalerArgsAutoscalingPolicymetric;
+  scale_in_control: GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControl;
+  scaling_schedules: GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules;
 }
-export interface Timeouts {
+export interface GoogleComputeAutoscalerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -48,8 +48,8 @@ export interface GoogleComputeAutoscalerArgs {
   description?: string;
   name: string;
   target: string;
-  autoscaling_policy: AutoscalingPolicy;
-  timeouts: Timeouts;
+  autoscaling_policy: GoogleComputeAutoscalerArgsAutoscalingPolicy;
+  timeouts: GoogleComputeAutoscalerArgstimeouts;
 }
 export class google_compute_autoscaler extends TerraformResource {
   readonly creation_timestamp!: string;

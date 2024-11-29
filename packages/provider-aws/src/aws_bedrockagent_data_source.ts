@@ -1,86 +1,86 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Configuration {
+export interface AwsBedrockagentDataSourceArgsDataSourceConfigurationS3Configuration {
   bucket_arn: string;
   bucket_owner_account_id?: string;
   inclusion_prefixes?: string[];
 }
-export interface DataSourceConfiguration {
+export interface AwsBedrockagentDataSourceArgsDataSourceConfiguration {
   type: string;
-  s3_configuration: S3Configuration;
+  s3_configuration: AwsBedrockagentDataSourceArgsDataSourceConfigurationS3Configuration;
 }
-export interface ServerSideEncryptionConfiguration {
+export interface AwsBedrockagentDataSourceArgsServerSideEncryptionConfiguration {
   kms_key_arn?: string;
 }
-export interface Timeouts {
+export interface AwsBedrockagentDataSourceArgstimeouts {
   create?: string;
   delete?: string;
 }
-export interface FixedSizeChunkingConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationFixedSizeChunkingConfiguration {
   max_tokens: number;
   overlap_percentage: number;
 }
-export interface LevelConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationHierarchicalChunkingConfigurationLevelConfiguration {
   max_tokens: number;
 }
-export interface HierarchicalChunkingConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationHierarchicalChunkingConfiguration {
   overlap_tokens: number;
-  level_configuration: LevelConfiguration;
+  level_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationHierarchicalChunkingConfigurationLevelConfiguration;
 }
-export interface SemanticChunkingConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfiguration {
   breakpoint_percentile_threshold: number;
   buffer_size: number;
   max_token: number;
 }
-export interface ChunkingConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfiguration {
   chunking_strategy: string;
-  fixed_size_chunking_configuration: FixedSizeChunkingConfiguration;
-  hierarchical_chunking_configuration: HierarchicalChunkingConfiguration;
-  semantic_chunking_configuration: SemanticChunkingConfiguration;
+  fixed_size_chunking_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationFixedSizeChunkingConfiguration;
+  hierarchical_chunking_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationHierarchicalChunkingConfiguration;
+  semantic_chunking_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfigurationSemanticChunkingConfiguration;
 }
-export interface S3Location {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageS3Location {
   uri: string;
 }
-export interface IntermediateStorage {
-  s3_location: S3Location;
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorage {
+  s3_location: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorageS3Location;
 }
-export interface TransformationLambdaConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformationTransformationFunctionTransformationLambdaConfiguration {
   lambda_arn: string;
 }
-export interface TransformationFunction {
-  transformation_lambda_configuration: TransformationLambdaConfiguration;
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformationTransformationFunction {
+  transformation_lambda_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformationTransformationFunctionTransformationLambdaConfiguration;
 }
-export interface Transformation {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformation {
   step_to_apply: string;
-  transformation_function: TransformationFunction;
+  transformation_function: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformationTransformationFunction;
 }
-export interface CustomTransformationConfiguration {
-  intermediate_storage: IntermediateStorage;
-  transformation: Transformation;
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfiguration {
+  intermediate_storage: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationIntermediateStorage;
+  transformation: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfigurationtransformation;
 }
-export interface ParsingPrompt {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfigurationBedrockFoundationModelConfigurationParsingPrompt {
   parsing_prompt_string: string;
 }
-export interface BedrockFoundationModelConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfigurationBedrockFoundationModelConfiguration {
   model_arn: string;
-  parsing_prompt: ParsingPrompt;
+  parsing_prompt: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfigurationBedrockFoundationModelConfigurationParsingPrompt;
 }
-export interface ParsingConfiguration {
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfiguration {
   parsing_strategy: string;
-  bedrock_foundation_model_configuration: BedrockFoundationModelConfiguration;
+  bedrock_foundation_model_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfigurationBedrockFoundationModelConfiguration;
 }
-export interface VectorIngestionConfiguration {
-  chunking_configuration: ChunkingConfiguration;
-  custom_transformation_configuration: CustomTransformationConfiguration;
-  parsing_configuration: ParsingConfiguration;
+export interface AwsBedrockagentDataSourceArgsVectorIngestionConfiguration {
+  chunking_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationChunkingConfiguration;
+  custom_transformation_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationCustomTransformationConfiguration;
+  parsing_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfigurationParsingConfiguration;
 }
 export interface AwsBedrockagentDataSourceArgs {
   description?: string;
   knowledge_base_id: string;
   name: string;
-  data_source_configuration: DataSourceConfiguration;
-  server_side_encryption_configuration: ServerSideEncryptionConfiguration;
-  timeouts: Timeouts;
-  vector_ingestion_configuration: VectorIngestionConfiguration;
+  data_source_configuration: AwsBedrockagentDataSourceArgsDataSourceConfiguration;
+  server_side_encryption_configuration: AwsBedrockagentDataSourceArgsServerSideEncryptionConfiguration;
+  timeouts: AwsBedrockagentDataSourceArgstimeouts;
+  vector_ingestion_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfiguration;
 }
 export class aws_bedrockagent_data_source extends TerraformResource {
   readonly data_deletion_policy?: string;

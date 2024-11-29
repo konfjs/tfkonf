@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataplexZoneIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleDataplexZoneIamMemberArgs {
   lake: string;
   member: string;
   role: string;
-  condition: Condition;
+  condition: GoogleDataplexZoneIamMemberArgscondition;
 }
 export class google_dataplex_zone_iam_member extends TerraformResource {
   readonly etag!: string;

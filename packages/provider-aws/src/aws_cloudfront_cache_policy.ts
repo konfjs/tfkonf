@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Cookies {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfigcookies {
   items?: string[];
 }
-export interface CookiesConfig {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfig {
   cookie_behavior: string;
-  cookies: Cookies;
+  cookies: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfigcookies;
 }
-export interface Headers {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfigheaders {
   items?: string[];
 }
-export interface HeadersConfig {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfig {
   header_behavior?: string;
-  headers: Headers;
+  headers: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfigheaders;
 }
-export interface QueryStrings {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings {
   items?: string[];
 }
-export interface QueryStringsConfig {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfig {
   query_string_behavior: string;
-  query_strings: QueryStrings;
+  query_strings: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings;
 }
-export interface ParametersInCacheKeyAndForwardedToOrigin {
+export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOrigin {
   enable_accept_encoding_brotli?: boolean;
   enable_accept_encoding_gzip?: boolean;
-  cookies_config: CookiesConfig;
-  headers_config: HeadersConfig;
-  query_strings_config: QueryStringsConfig;
+  cookies_config: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfig;
+  headers_config: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfig;
+  query_strings_config: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfig;
 }
 export interface AwsCloudfrontCachePolicyArgs {
   comment?: string;
@@ -33,7 +33,7 @@ export interface AwsCloudfrontCachePolicyArgs {
   max_ttl?: number;
   min_ttl?: number;
   name: string;
-  parameters_in_cache_key_and_forwarded_to_origin: ParametersInCacheKeyAndForwardedToOrigin;
+  parameters_in_cache_key_and_forwarded_to_origin: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOrigin;
 }
 export class aws_cloudfront_cache_policy extends TerraformResource {
   readonly etag!: string;

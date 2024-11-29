@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleAlloydbUserArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleAlloydbUserArgs {
   password?: string;
   user_id: string;
   user_type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleAlloydbUserArgstimeouts;
 }
 export class google_alloydb_user extends TerraformResource {
   readonly id?: string;

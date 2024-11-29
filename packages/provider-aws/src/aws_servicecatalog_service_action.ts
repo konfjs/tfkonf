@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Definition {
+export interface AwsServicecatalogServiceActionArgsdefinition {
   assume_role?: string;
   name: string;
   parameters?: string;
   type?: string;
   version: string;
 }
-export interface Timeouts {
+export interface AwsServicecatalogServiceActionArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -15,8 +15,8 @@ export interface Timeouts {
 export interface AwsServicecatalogServiceActionArgs {
   accept_language?: string;
   name: string;
-  definition: Definition;
-  timeouts: Timeouts;
+  definition: AwsServicecatalogServiceActionArgsdefinition;
+  timeouts: AwsServicecatalogServiceActionArgstimeouts;
 }
 export class aws_servicecatalog_service_action extends TerraformResource {
   readonly description?: string;

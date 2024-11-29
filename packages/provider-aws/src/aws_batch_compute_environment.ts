@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Ec2Configuration {
+export interface AwsBatchComputeEnvironmentArgsComputeResourcesEc2Configuration {
   image_type?: string;
 }
-export interface LaunchTemplate {
+export interface AwsBatchComputeEnvironmentArgsComputeResourcesLaunchTemplate {
   launch_template_id?: string;
   launch_template_name?: string;
 }
-export interface ComputeResources {
+export interface AwsBatchComputeEnvironmentArgsComputeResources {
   allocation_strategy?: string;
   bid_percentage?: number;
   ec2_key_pair?: string;
@@ -23,14 +23,14 @@ export interface ComputeResources {
     [key: string]: string;
   };
   type: string;
-  ec2_configuration: Ec2Configuration;
-  launch_template: LaunchTemplate;
+  ec2_configuration: AwsBatchComputeEnvironmentArgsComputeResourcesEc2Configuration;
+  launch_template: AwsBatchComputeEnvironmentArgsComputeResourcesLaunchTemplate;
 }
-export interface EksConfiguration {
+export interface AwsBatchComputeEnvironmentArgsEksConfiguration {
   eks_cluster_arn: string;
   kubernetes_namespace: string;
 }
-export interface UpdatePolicy {
+export interface AwsBatchComputeEnvironmentArgsUpdatePolicy {
   job_execution_timeout_minutes: number;
   terminate_jobs_on_update: boolean;
 }
@@ -40,9 +40,9 @@ export interface AwsBatchComputeEnvironmentArgs {
     [key: string]: string;
   };
   type: string;
-  compute_resources: ComputeResources;
-  eks_configuration: EksConfiguration;
-  update_policy: UpdatePolicy;
+  compute_resources: AwsBatchComputeEnvironmentArgsComputeResources;
+  eks_configuration: AwsBatchComputeEnvironmentArgsEksConfiguration;
+  update_policy: AwsBatchComputeEnvironmentArgsUpdatePolicy;
 }
 export class aws_batch_compute_environment extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetTable {
+export interface AwsGlueDataQualityRulesetArgsTargetTable {
   catalog_id?: string;
   database_name: string;
   table_name: string;
@@ -11,7 +11,7 @@ export interface AwsGlueDataQualityRulesetArgs {
   tags?: {
     [key: string]: string;
   };
-  target_table: TargetTable;
+  target_table: AwsGlueDataQualityRulesetArgsTargetTable;
 }
 export class aws_glue_data_quality_ruleset extends TerraformResource {
   readonly arn!: string;

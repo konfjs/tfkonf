@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CapacityConfig {
+export interface GoogleManagedKafkaClusterArgsCapacityConfig {
   memory_bytes: string;
   vcpu_count: string;
 }
-export interface NetworkConfigs {
+export interface GoogleManagedKafkaClusterArgsGcpConfigAccessConfigNetworkConfigs {
   subnet: string;
 }
-export interface AccessConfig {
-  network_configs: NetworkConfigs;
+export interface GoogleManagedKafkaClusterArgsGcpConfigAccessConfig {
+  network_configs: GoogleManagedKafkaClusterArgsGcpConfigAccessConfigNetworkConfigs;
 }
-export interface GcpConfig {
+export interface GoogleManagedKafkaClusterArgsGcpConfig {
   kms_key?: string;
-  access_config: AccessConfig;
+  access_config: GoogleManagedKafkaClusterArgsGcpConfigAccessConfig;
 }
-export interface RebalanceConfig {
+export interface GoogleManagedKafkaClusterArgsRebalanceConfig {
   mode?: string;
 }
-export interface Timeouts {
+export interface GoogleManagedKafkaClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,10 +27,10 @@ export interface GoogleManagedKafkaClusterArgs {
     [key: string]: string;
   };
   location: string;
-  capacity_config: CapacityConfig;
-  gcp_config: GcpConfig;
-  rebalance_config: RebalanceConfig;
-  timeouts: Timeouts;
+  capacity_config: GoogleManagedKafkaClusterArgsCapacityConfig;
+  gcp_config: GoogleManagedKafkaClusterArgsGcpConfig;
+  rebalance_config: GoogleManagedKafkaClusterArgsRebalanceConfig;
+  timeouts: GoogleManagedKafkaClusterArgstimeouts;
 }
 export class google_managed_kafka_cluster extends TerraformResource {
   readonly create_time!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsM2DeploymentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsM2DeploymentArgs {
   environment_id: string;
   force_stop?: boolean;
   start: boolean;
-  timeouts: Timeouts;
+  timeouts: AwsM2DeploymentArgstimeouts;
 }
 export class aws_m2_deployment extends TerraformResource {
   readonly deployment_id!: string;

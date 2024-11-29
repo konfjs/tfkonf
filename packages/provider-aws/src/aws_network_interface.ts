@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Attachment {
+export interface AwsNetworkInterfaceArgsattachment {
   device_index: number;
   instance: string;
 }
@@ -12,7 +12,7 @@ export interface AwsNetworkInterfaceArgs {
   tags?: {
     [key: string]: string;
   };
-  attachment: Attachment;
+  attachment: AwsNetworkInterfaceArgsattachment;
 }
 export class aws_network_interface extends TerraformResource {
   readonly arn!: string;
