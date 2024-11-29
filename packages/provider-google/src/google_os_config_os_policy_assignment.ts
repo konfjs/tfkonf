@@ -9,7 +9,7 @@ export interface GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterInclusionLabe
     [key: string]: string;
   };
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterinventories {
+export interface GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterInventories {
   os_short_name: string;
   os_version?: string;
 }
@@ -17,199 +17,199 @@ export interface GoogleOsConfigOsPolicyAssignmentArgsInstanceFilter {
   all?: boolean;
   exclusion_labels: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterExclusionLabels;
   inclusion_labels: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterInclusionLabels;
-  inventories: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterinventories;
+  inventories: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilterInventories;
 }
 export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsInventoryFilters {
   os_short_name: string;
   os_version?: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefilegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFileGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefileremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFileRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefile {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFile {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefilegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefileremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFileGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFileRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforce {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforce {
   args?: string[];
   interpreter: string;
   output_file_path?: string;
   script?: string;
-  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforcefile;
+  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforceFile;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefilegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFileGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefileremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFileRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefile {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFile {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefilegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefileremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFileGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFileRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidate {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidate {
   args?: string[];
   interpreter: string;
   output_file_path?: string;
   script?: string;
-  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidatefile;
+  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidateFile;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexec {
-  enforce: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecenforce;
-  validate: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexecvalidate;
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExec {
+  enforce: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecEnforce;
+  validate: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExecValidate;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefilegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFileGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefileremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFileRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefile {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFile {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefilegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefileremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFileGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFileRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfile {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFile {
   content?: string;
   path: string;
   state: string;
-  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfilefile;
+  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFileFile;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgapt {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgApt {
   name: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsourcegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSourceGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsourceremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSourceRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsource {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSource {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsourcegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsourceremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSourceGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSourceRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdeb {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDeb {
   pull_deps?: boolean;
-  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdebsource;
+  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDebSource;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkggooget {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgGooget {
   name: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisourcegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisourceremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisource {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSource {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisourcegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisourceremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSourceGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSourceRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsi {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsi {
   properties?: string[];
-  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsisource;
+  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsiSource;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsourcegcs {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs {
   bucket: string;
   generation?: number;
   object: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsourceremote {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote {
   sha256_checksum?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsource {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSource {
   allow_insecure?: boolean;
   local_path?: string;
-  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsourcegcs;
-  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsourceremote;
+  gcs: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSourceGcs;
+  remote: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSourceRemote;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpm {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpm {
   pull_deps?: boolean;
-  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpmsource;
+  source: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpmSource;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgyum {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgYum {
   name: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgzypper {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgZypper {
   name: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkg {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkg {
   desired_state: string;
-  apt: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgapt;
-  deb: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgdeb;
-  googet: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkggooget;
-  msi: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgmsi;
-  rpm: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgrpm;
-  yum: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgyum;
-  zypper: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkgzypper;
+  apt: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgApt;
+  deb: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgDeb;
+  googet: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgGooget;
+  msi: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgMsi;
+  rpm: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgRpm;
+  yum: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgYum;
+  zypper: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkgZypper;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryapt {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryApt {
   archive_type: string;
   components: string[];
   distribution: string;
   gpg_key?: string;
   uri: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositorygoo {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryGoo {
   name: string;
   url: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryyum {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryYum {
   base_url: string;
   display_name?: string;
   gpg_keys?: string[];
   id: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryzypper {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryZypper {
   base_url: string;
   display_name?: string;
   gpg_keys?: string[];
   id: string;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepository {
-  apt: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryapt;
-  goo: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositorygoo;
-  yum: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryyum;
-  zypper: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepositoryzypper;
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepository {
+  apt: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryApt;
+  goo: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryGoo;
+  yum: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryYum;
+  zypper: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepositoryZypper;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresources {
+export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResources {
   id: string;
-  exec: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesexec;
-  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesfile;
-  pkg: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcespkg;
-  repository: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresourcesrepository;
+  exec: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesExec;
+  file: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesFile;
+  pkg: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesPkg;
+  repository: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResourcesRepository;
 }
 export interface GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroups {
   inventory_filters: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsInventoryFilters;
-  resources: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsresources;
+  resources: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroupsResources;
 }
 export interface GoogleOsConfigOsPolicyAssignmentArgsOsPolicies {
   allow_no_resource_group_match?: boolean;
@@ -218,15 +218,15 @@ export interface GoogleOsConfigOsPolicyAssignmentArgsOsPolicies {
   mode: string;
   resource_groups: GoogleOsConfigOsPolicyAssignmentArgsOsPoliciesResourceGroups;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsrolloutDisruptionBudget {
+export interface GoogleOsConfigOsPolicyAssignmentArgsRolloutDisruptionBudget {
   fixed?: number;
   percent?: number;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgsrollout {
+export interface GoogleOsConfigOsPolicyAssignmentArgsRollout {
   min_wait_duration: string;
-  disruption_budget: GoogleOsConfigOsPolicyAssignmentArgsrolloutDisruptionBudget;
+  disruption_budget: GoogleOsConfigOsPolicyAssignmentArgsRolloutDisruptionBudget;
 }
-export interface GoogleOsConfigOsPolicyAssignmentArgstimeouts {
+export interface GoogleOsConfigOsPolicyAssignmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -238,8 +238,8 @@ export interface GoogleOsConfigOsPolicyAssignmentArgs {
   skip_await_rollout?: boolean;
   instance_filter: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilter;
   os_policies: GoogleOsConfigOsPolicyAssignmentArgsOsPolicies;
-  rollout: GoogleOsConfigOsPolicyAssignmentArgsrollout;
-  timeouts: GoogleOsConfigOsPolicyAssignmentArgstimeouts;
+  rollout: GoogleOsConfigOsPolicyAssignmentArgsRollout;
+  timeouts: GoogleOsConfigOsPolicyAssignmentArgsTimeouts;
 }
 export class google_os_config_os_policy_assignment extends TerraformResource {
   readonly baseline!: boolean;

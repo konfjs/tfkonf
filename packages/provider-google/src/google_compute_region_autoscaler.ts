@@ -6,7 +6,7 @@ export interface GoogleComputeRegionAutoscalerArgsAutoscalingPolicyCpuUtilizatio
 export interface GoogleComputeRegionAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization {
   target: number;
 }
-export interface GoogleComputeRegionAutoscalerArgsAutoscalingPolicymetric {
+export interface GoogleComputeRegionAutoscalerArgsAutoscalingPolicyMetric {
   filter?: string;
   name: string;
   single_instance_assignment?: number;
@@ -37,11 +37,11 @@ export interface GoogleComputeRegionAutoscalerArgsAutoscalingPolicy {
   mode?: string;
   cpu_utilization: GoogleComputeRegionAutoscalerArgsAutoscalingPolicyCpuUtilization;
   load_balancing_utilization: GoogleComputeRegionAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization;
-  metric: GoogleComputeRegionAutoscalerArgsAutoscalingPolicymetric;
+  metric: GoogleComputeRegionAutoscalerArgsAutoscalingPolicyMetric;
   scale_in_control: GoogleComputeRegionAutoscalerArgsAutoscalingPolicyScaleInControl;
   scaling_schedules: GoogleComputeRegionAutoscalerArgsAutoscalingPolicyScalingSchedules;
 }
-export interface GoogleComputeRegionAutoscalerArgstimeouts {
+export interface GoogleComputeRegionAutoscalerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -51,7 +51,7 @@ export interface GoogleComputeRegionAutoscalerArgs {
   name: string;
   target: string;
   autoscaling_policy: GoogleComputeRegionAutoscalerArgsAutoscalingPolicy;
-  timeouts: GoogleComputeRegionAutoscalerArgstimeouts;
+  timeouts: GoogleComputeRegionAutoscalerArgsTimeouts;
 }
 export class google_compute_region_autoscaler extends TerraformResource {
   readonly creation_timestamp!: string;

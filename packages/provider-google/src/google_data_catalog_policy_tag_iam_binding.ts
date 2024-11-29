@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataCatalogPolicyTagIamBindingArgscondition {
+export interface GoogleDataCatalogPolicyTagIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogPolicyTagIamBindingArgs {
   members: string[];
   policy_tag: string;
   role: string;
-  condition: GoogleDataCatalogPolicyTagIamBindingArgscondition;
+  condition: GoogleDataCatalogPolicyTagIamBindingArgsCondition;
 }
 export class google_data_catalog_policy_tag_iam_binding extends TerraformResource {
   readonly etag!: string;

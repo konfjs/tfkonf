@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeHubScopeArgstimeouts {
+export interface GoogleGkeHubScopeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleGkeHubScopeArgs {
     [key: string]: string;
   };
   scope_id: string;
-  timeouts: GoogleGkeHubScopeArgstimeouts;
+  timeouts: GoogleGkeHubScopeArgsTimeouts;
 }
 export class google_gke_hub_scope extends TerraformResource {
   readonly create_time!: string;

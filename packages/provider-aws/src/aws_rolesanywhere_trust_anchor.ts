@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsRolesanywhereTrustAnchorArgsNotificationSettings {}
-export interface AwsRolesanywhereTrustAnchorArgssourceSourceData {
+export interface AwsRolesanywhereTrustAnchorArgsSourceSourceData {
   acm_pca_arn?: string;
   x509_certificate_data?: string;
 }
-export interface AwsRolesanywhereTrustAnchorArgssource {
+export interface AwsRolesanywhereTrustAnchorArgsSource {
   source_type: string;
-  source_data: AwsRolesanywhereTrustAnchorArgssourceSourceData;
+  source_data: AwsRolesanywhereTrustAnchorArgsSourceSourceData;
 }
 export interface AwsRolesanywhereTrustAnchorArgs {
   name: string;
@@ -14,7 +14,7 @@ export interface AwsRolesanywhereTrustAnchorArgs {
     [key: string]: string;
   };
   notification_settings: AwsRolesanywhereTrustAnchorArgsNotificationSettings;
-  source: AwsRolesanywhereTrustAnchorArgssource;
+  source: AwsRolesanywhereTrustAnchorArgsSource;
 }
 export class aws_rolesanywhere_trust_anchor extends TerraformResource {
   readonly arn!: string;

@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppfabricAppAuthorizationArgscredentialApiKeyCredential {
+export interface AwsAppfabricAppAuthorizationArgsCredentialApiKeyCredential {
   api_key: string;
 }
-export interface AwsAppfabricAppAuthorizationArgscredentialOauth2Credential {
+export interface AwsAppfabricAppAuthorizationArgsCredentialOauth2Credential {
   client_id: string;
   client_secret: string;
 }
-export interface AwsAppfabricAppAuthorizationArgscredential {
-  api_key_credential: AwsAppfabricAppAuthorizationArgscredentialApiKeyCredential;
-  oauth2_credential: AwsAppfabricAppAuthorizationArgscredentialOauth2Credential;
+export interface AwsAppfabricAppAuthorizationArgsCredential {
+  api_key_credential: AwsAppfabricAppAuthorizationArgsCredentialApiKeyCredential;
+  oauth2_credential: AwsAppfabricAppAuthorizationArgsCredentialOauth2Credential;
 }
-export interface AwsAppfabricAppAuthorizationArgstenant {
+export interface AwsAppfabricAppAuthorizationArgsTenant {
   tenant_display_name: string;
   tenant_identifier: string;
 }
-export interface AwsAppfabricAppAuthorizationArgstimeouts {
+export interface AwsAppfabricAppAuthorizationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,9 +26,9 @@ export interface AwsAppfabricAppAuthorizationArgs {
   tags?: {
     [key: string]: string;
   };
-  credential: AwsAppfabricAppAuthorizationArgscredential;
-  tenant: AwsAppfabricAppAuthorizationArgstenant;
-  timeouts: AwsAppfabricAppAuthorizationArgstimeouts;
+  credential: AwsAppfabricAppAuthorizationArgsCredential;
+  tenant: AwsAppfabricAppAuthorizationArgsTenant;
+  timeouts: AwsAppfabricAppAuthorizationArgsTimeouts;
 }
 export class aws_appfabric_app_authorization extends TerraformResource {
   readonly arn!: string;

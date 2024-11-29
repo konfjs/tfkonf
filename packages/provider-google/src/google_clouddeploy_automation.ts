@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleClouddeployAutomationArgsrulesAdvanceRolloutRule {
+export interface GoogleClouddeployAutomationArgsRulesAdvanceRolloutRule {
   id: string;
   source_phases?: string[];
   wait?: string;
 }
-export interface GoogleClouddeployAutomationArgsrulesPromoteReleaseRule {
+export interface GoogleClouddeployAutomationArgsRulesPromoteReleaseRule {
   destination_phase?: string;
   destination_target_id?: string;
   id: string;
   wait?: string;
 }
-export interface GoogleClouddeployAutomationArgsrules {
-  advance_rollout_rule: GoogleClouddeployAutomationArgsrulesAdvanceRolloutRule;
-  promote_release_rule: GoogleClouddeployAutomationArgsrulesPromoteReleaseRule;
+export interface GoogleClouddeployAutomationArgsRules {
+  advance_rollout_rule: GoogleClouddeployAutomationArgsRulesAdvanceRolloutRule;
+  promote_release_rule: GoogleClouddeployAutomationArgsRulesPromoteReleaseRule;
 }
-export interface GoogleClouddeployAutomationArgsselectortargets {
+export interface GoogleClouddeployAutomationArgsSelectorTargets {
   id?: string;
 }
-export interface GoogleClouddeployAutomationArgsselector {
-  targets: GoogleClouddeployAutomationArgsselectortargets;
+export interface GoogleClouddeployAutomationArgsSelector {
+  targets: GoogleClouddeployAutomationArgsSelectorTargets;
 }
-export interface GoogleClouddeployAutomationArgstimeouts {
+export interface GoogleClouddeployAutomationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,9 +38,9 @@ export interface GoogleClouddeployAutomationArgs {
   name: string;
   service_account: string;
   suspended?: boolean;
-  rules: GoogleClouddeployAutomationArgsrules;
-  selector: GoogleClouddeployAutomationArgsselector;
-  timeouts: GoogleClouddeployAutomationArgstimeouts;
+  rules: GoogleClouddeployAutomationArgsRules;
+  selector: GoogleClouddeployAutomationArgsSelector;
+  timeouts: GoogleClouddeployAutomationArgsTimeouts;
 }
 export class google_clouddeploy_automation extends TerraformResource {
   readonly create_time!: string;

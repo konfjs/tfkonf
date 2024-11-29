@@ -12,7 +12,7 @@ export interface GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlan
   };
   node_ip?: string;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigtaints {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints {
   effect?: string;
   key?: string;
   value?: string;
@@ -23,7 +23,7 @@ export interface GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlan
   };
   operating_system?: string;
   node_configs: GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs;
-  taints: GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigtaints;
+  taints: GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints;
 }
 export interface GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfig {
   node_pool_config: GoogleGkeonpremBareMetalAdminClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfig;
@@ -62,36 +62,36 @@ export interface GoogleGkeonpremBareMetalAdminClusterArgsNodeAccessConfig {
 export interface GoogleGkeonpremBareMetalAdminClusterArgsNodeConfig {
   max_pods_per_node?: number;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsproxy {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsProxy {
   no_proxy?: string[];
   uri: string;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigauthorizationAdminUsers {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigauthorization {
-  admin_users: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigauthorizationAdminUsers;
+export interface GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigAuthorization {
+  admin_users: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigAuthorizationAdminUsers;
 }
 export interface GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfig {
-  authorization: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigauthorization;
+  authorization: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfigAuthorization;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpNodeMountsConfig {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpNodeMountsConfig {
   path: string;
   storage_class: string;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpShareConfigLvpConfig {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpShareConfigLvpConfig {
   path: string;
   storage_class: string;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpShareConfig {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpShareConfig {
   shared_path_pv_count?: number;
-  lvp_config: GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpShareConfigLvpConfig;
+  lvp_config: GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpShareConfigLvpConfig;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgsstorage {
-  lvp_node_mounts_config: GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpNodeMountsConfig;
-  lvp_share_config: GoogleGkeonpremBareMetalAdminClusterArgsstorageLvpShareConfig;
+export interface GoogleGkeonpremBareMetalAdminClusterArgsStorage {
+  lvp_node_mounts_config: GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpNodeMountsConfig;
+  lvp_share_config: GoogleGkeonpremBareMetalAdminClusterArgsStorageLvpShareConfig;
 }
-export interface GoogleGkeonpremBareMetalAdminClusterArgstimeouts {
+export interface GoogleGkeonpremBareMetalAdminClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -111,10 +111,10 @@ export interface GoogleGkeonpremBareMetalAdminClusterArgs {
   network_config: GoogleGkeonpremBareMetalAdminClusterArgsNetworkConfig;
   node_access_config: GoogleGkeonpremBareMetalAdminClusterArgsNodeAccessConfig;
   node_config: GoogleGkeonpremBareMetalAdminClusterArgsNodeConfig;
-  proxy: GoogleGkeonpremBareMetalAdminClusterArgsproxy;
+  proxy: GoogleGkeonpremBareMetalAdminClusterArgsProxy;
   security_config: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfig;
-  storage: GoogleGkeonpremBareMetalAdminClusterArgsstorage;
-  timeouts: GoogleGkeonpremBareMetalAdminClusterArgstimeouts;
+  storage: GoogleGkeonpremBareMetalAdminClusterArgsStorage;
+  timeouts: GoogleGkeonpremBareMetalAdminClusterArgsTimeouts;
 }
 export class google_gkeonprem_bare_metal_admin_cluster extends TerraformResource {
   readonly create_time!: string;

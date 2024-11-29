@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleMonitoringCustomServiceArgstelemetry {
+export interface GoogleMonitoringCustomServiceArgsTelemetry {
   resource_name?: string;
 }
-export interface GoogleMonitoringCustomServiceArgstimeouts {
+export interface GoogleMonitoringCustomServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface GoogleMonitoringCustomServiceArgs {
   user_labels?: {
     [key: string]: string;
   };
-  telemetry: GoogleMonitoringCustomServiceArgstelemetry;
-  timeouts: GoogleMonitoringCustomServiceArgstimeouts;
+  telemetry: GoogleMonitoringCustomServiceArgsTelemetry;
+  timeouts: GoogleMonitoringCustomServiceArgsTimeouts;
 }
 export class google_monitoring_custom_service extends TerraformResource {
   readonly id?: string;

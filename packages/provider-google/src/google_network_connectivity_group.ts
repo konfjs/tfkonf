@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleNetworkConnectivityGroupArgsAutoAccept {
   auto_accept_projects: string[];
 }
-export interface GoogleNetworkConnectivityGroupArgstimeouts {
+export interface GoogleNetworkConnectivityGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleNetworkConnectivityGroupArgs {
   };
   name: string;
   auto_accept: GoogleNetworkConnectivityGroupArgsAutoAccept;
-  timeouts: GoogleNetworkConnectivityGroupArgstimeouts;
+  timeouts: GoogleNetworkConnectivityGroupArgsTimeouts;
 }
 export class google_network_connectivity_group extends TerraformResource {
   readonly create_time!: string;

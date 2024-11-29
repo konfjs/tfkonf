@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsKmsGrantArgsconstraints {
+export interface AwsKmsGrantArgsConstraints {
   encryption_context_equals?: {
     [key: string]: string;
   };
@@ -15,7 +15,7 @@ export interface AwsKmsGrantArgs {
   operations: string[];
   retire_on_delete?: boolean;
   retiring_principal?: string;
-  constraints: AwsKmsGrantArgsconstraints;
+  constraints: AwsKmsGrantArgsConstraints;
 }
 export class aws_kms_grant extends TerraformResource {
   readonly grant_id!: string;

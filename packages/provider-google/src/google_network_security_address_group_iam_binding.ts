@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetworkSecurityAddressGroupIamBindingArgscondition {
+export interface GoogleNetworkSecurityAddressGroupIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleNetworkSecurityAddressGroupIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleNetworkSecurityAddressGroupIamBindingArgscondition;
+  condition: GoogleNetworkSecurityAddressGroupIamBindingArgsCondition;
 }
 export class google_network_security_address_group_iam_binding extends TerraformResource {
   readonly etag!: string;

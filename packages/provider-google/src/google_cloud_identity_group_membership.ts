@@ -3,14 +3,14 @@ export interface GoogleCloudIdentityGroupMembershipArgsPreferredMemberKey {
   id: string;
   namespace?: string;
 }
-export interface GoogleCloudIdentityGroupMembershipArgsrolesExpiryDetail {
+export interface GoogleCloudIdentityGroupMembershipArgsRolesExpiryDetail {
   expire_time: string;
 }
-export interface GoogleCloudIdentityGroupMembershipArgsroles {
+export interface GoogleCloudIdentityGroupMembershipArgsRoles {
   name: string;
-  expiry_detail: GoogleCloudIdentityGroupMembershipArgsrolesExpiryDetail;
+  expiry_detail: GoogleCloudIdentityGroupMembershipArgsRolesExpiryDetail;
 }
-export interface GoogleCloudIdentityGroupMembershipArgstimeouts {
+export interface GoogleCloudIdentityGroupMembershipArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface GoogleCloudIdentityGroupMembershipArgstimeouts {
 export interface GoogleCloudIdentityGroupMembershipArgs {
   group: string;
   preferred_member_key: GoogleCloudIdentityGroupMembershipArgsPreferredMemberKey;
-  roles: GoogleCloudIdentityGroupMembershipArgsroles;
-  timeouts: GoogleCloudIdentityGroupMembershipArgstimeouts;
+  roles: GoogleCloudIdentityGroupMembershipArgsRoles;
+  timeouts: GoogleCloudIdentityGroupMembershipArgsTimeouts;
 }
 export class google_cloud_identity_group_membership extends TerraformResource {
   readonly create_time!: string;

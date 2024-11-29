@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataFusionInstanceArgsaccelerators {
+export interface GoogleDataFusionInstanceArgsAccelerators {
   accelerator_type: string;
   state: string;
 }
@@ -20,7 +20,7 @@ export interface GoogleDataFusionInstanceArgsNetworkConfig {
   network?: string;
   private_service_connect_config: GoogleDataFusionInstanceArgsNetworkConfigPrivateServiceConnectConfig;
 }
-export interface GoogleDataFusionInstanceArgstimeouts {
+export interface GoogleDataFusionInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,11 +38,11 @@ export interface GoogleDataFusionInstanceArgs {
   name: string;
   private_instance?: boolean;
   type: string;
-  accelerators: GoogleDataFusionInstanceArgsaccelerators;
+  accelerators: GoogleDataFusionInstanceArgsAccelerators;
   crypto_key_config: GoogleDataFusionInstanceArgsCryptoKeyConfig;
   event_publish_config: GoogleDataFusionInstanceArgsEventPublishConfig;
   network_config: GoogleDataFusionInstanceArgsNetworkConfig;
-  timeouts: GoogleDataFusionInstanceArgstimeouts;
+  timeouts: GoogleDataFusionInstanceArgsTimeouts;
 }
 export class google_data_fusion_instance extends TerraformResource {
   readonly api_endpoint!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataplexEntryGroupIamBindingArgscondition {
+export interface GoogleDataplexEntryGroupIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataplexEntryGroupIamBindingArgs {
   entry_group_id: string;
   members: string[];
   role: string;
-  condition: GoogleDataplexEntryGroupIamBindingArgscondition;
+  condition: GoogleDataplexEntryGroupIamBindingArgsCondition;
 }
 export class google_dataplex_entry_group_iam_binding extends TerraformResource {
   readonly etag!: string;

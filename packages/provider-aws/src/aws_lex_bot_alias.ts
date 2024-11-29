@@ -9,7 +9,7 @@ export interface AwsLexBotAliasArgsConversationLogs {
   iam_role_arn: string;
   log_settings: AwsLexBotAliasArgsConversationLogsLogSettings;
 }
-export interface AwsLexBotAliasArgstimeouts {
+export interface AwsLexBotAliasArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface AwsLexBotAliasArgs {
   description?: string;
   name: string;
   conversation_logs: AwsLexBotAliasArgsConversationLogs;
-  timeouts: AwsLexBotAliasArgstimeouts;
+  timeouts: AwsLexBotAliasArgsTimeouts;
 }
 export class aws_lex_bot_alias extends TerraformResource {
   readonly arn!: string;

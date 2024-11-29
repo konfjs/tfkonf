@@ -23,7 +23,7 @@ export interface GoogleMemcacheInstanceArgsNodeConfig {
   cpu_count: number;
   memory_size_mb: number;
 }
-export interface GoogleMemcacheInstanceArgstimeouts {
+export interface GoogleMemcacheInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,7 +39,7 @@ export interface GoogleMemcacheInstanceArgs {
   maintenance_policy: GoogleMemcacheInstanceArgsMaintenancePolicy;
   memcache_parameters: GoogleMemcacheInstanceArgsMemcacheParameters;
   node_config: GoogleMemcacheInstanceArgsNodeConfig;
-  timeouts: GoogleMemcacheInstanceArgstimeouts;
+  timeouts: GoogleMemcacheInstanceArgsTimeouts;
 }
 export class google_memcache_instance extends TerraformResource {
   readonly authorized_network?: string;

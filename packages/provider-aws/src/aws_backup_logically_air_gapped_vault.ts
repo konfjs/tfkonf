@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBackupLogicallyAirGappedVaultArgstimeouts {
+export interface AwsBackupLogicallyAirGappedVaultArgsTimeouts {
   create?: string;
 }
 export interface AwsBackupLogicallyAirGappedVaultArgs {
@@ -9,7 +9,7 @@ export interface AwsBackupLogicallyAirGappedVaultArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBackupLogicallyAirGappedVaultArgstimeouts;
+  timeouts: AwsBackupLogicallyAirGappedVaultArgsTimeouts;
 }
 export class aws_backup_logically_air_gapped_vault extends TerraformResource {
   readonly arn!: string;

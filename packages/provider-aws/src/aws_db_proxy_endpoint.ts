@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDbProxyEndpointArgstimeouts {
+export interface AwsDbProxyEndpointArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsDbProxyEndpointArgs {
   };
   target_role?: string;
   vpc_subnet_ids: string[];
-  timeouts: AwsDbProxyEndpointArgstimeouts;
+  timeouts: AwsDbProxyEndpointArgsTimeouts;
 }
 export class aws_db_proxy_endpoint extends TerraformResource {
   readonly arn!: string;

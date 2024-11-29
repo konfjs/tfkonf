@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsFsxFileCacheArgsDataRepositoryAssociationnfs {
+export interface AwsFsxFileCacheArgsDataRepositoryAssociationNfs {
   dns_ips?: string[];
   version: string;
 }
@@ -7,7 +7,7 @@ export interface AwsFsxFileCacheArgsDataRepositoryAssociation {
   data_repository_path: string;
   data_repository_subdirectories?: string[];
   file_cache_path: string;
-  nfs: AwsFsxFileCacheArgsDataRepositoryAssociationnfs;
+  nfs: AwsFsxFileCacheArgsDataRepositoryAssociationNfs;
 }
 export interface AwsFsxFileCacheArgsLustreConfigurationMetadataConfiguration {
   storage_capacity: number;
@@ -18,7 +18,7 @@ export interface AwsFsxFileCacheArgsLustreConfiguration {
   weekly_maintenance_start_time?: string;
   metadata_configuration: AwsFsxFileCacheArgsLustreConfigurationMetadataConfiguration;
 }
-export interface AwsFsxFileCacheArgstimeouts {
+export interface AwsFsxFileCacheArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -35,7 +35,7 @@ export interface AwsFsxFileCacheArgs {
   };
   data_repository_association: AwsFsxFileCacheArgsDataRepositoryAssociation;
   lustre_configuration: AwsFsxFileCacheArgsLustreConfiguration;
-  timeouts: AwsFsxFileCacheArgstimeouts;
+  timeouts: AwsFsxFileCacheArgsTimeouts;
 }
 export class aws_fsx_file_cache extends TerraformResource {
   readonly arn!: string;

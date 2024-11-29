@@ -6,7 +6,7 @@ export interface GoogleIntegrationsClientArgsCloudKmsConfig {
   kms_project_id?: string;
   kms_ring: string;
 }
-export interface GoogleIntegrationsClientArgstimeouts {
+export interface GoogleIntegrationsClientArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,7 +15,7 @@ export interface GoogleIntegrationsClientArgs {
   location: string;
   run_as_service_account?: string;
   cloud_kms_config: GoogleIntegrationsClientArgsCloudKmsConfig;
-  timeouts: GoogleIntegrationsClientArgstimeouts;
+  timeouts: GoogleIntegrationsClientArgsTimeouts;
 }
 export class google_integrations_client extends TerraformResource {
   readonly id?: string;

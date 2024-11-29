@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsImagebuilderImageRecipeArgsBlockDeviceMappingebs {
+export interface AwsImagebuilderImageRecipeArgsBlockDeviceMappingEbs {
   delete_on_termination?: string;
   encrypted?: string;
   iops?: number;
@@ -12,15 +12,15 @@ export interface AwsImagebuilderImageRecipeArgsBlockDeviceMappingebs {
 export interface AwsImagebuilderImageRecipeArgsBlockDeviceMapping {
   device_name?: string;
   virtual_name?: string;
-  ebs: AwsImagebuilderImageRecipeArgsBlockDeviceMappingebs;
+  ebs: AwsImagebuilderImageRecipeArgsBlockDeviceMappingEbs;
 }
-export interface AwsImagebuilderImageRecipeArgscomponentparameter {
+export interface AwsImagebuilderImageRecipeArgsComponentParameter {
   name: string;
   value: string;
 }
-export interface AwsImagebuilderImageRecipeArgscomponent {
+export interface AwsImagebuilderImageRecipeArgsComponent {
   component_arn: string;
-  parameter: AwsImagebuilderImageRecipeArgscomponentparameter;
+  parameter: AwsImagebuilderImageRecipeArgsComponentParameter;
 }
 export interface AwsImagebuilderImageRecipeArgsSystemsManagerAgent {
   uninstall_after_build: boolean;
@@ -35,7 +35,7 @@ export interface AwsImagebuilderImageRecipeArgs {
   version: string;
   working_directory?: string;
   block_device_mapping: AwsImagebuilderImageRecipeArgsBlockDeviceMapping;
-  component: AwsImagebuilderImageRecipeArgscomponent;
+  component: AwsImagebuilderImageRecipeArgsComponent;
   systems_manager_agent: AwsImagebuilderImageRecipeArgsSystemsManagerAgent;
 }
 export class aws_imagebuilder_image_recipe extends TerraformResource {

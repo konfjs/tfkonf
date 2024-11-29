@@ -5,12 +5,12 @@ export interface AwsCleanroomsCollaborationArgsDataEncryptionMetadata {
   allow_joins_on_columns_with_different_names: boolean;
   preserve_nulls: boolean;
 }
-export interface AwsCleanroomsCollaborationArgsmember {
+export interface AwsCleanroomsCollaborationArgsMember {
   account_id: string;
   display_name: string;
   member_abilities: string[];
 }
-export interface AwsCleanroomsCollaborationArgstimeouts {
+export interface AwsCleanroomsCollaborationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,8 +25,8 @@ export interface AwsCleanroomsCollaborationArgs {
     [key: string]: string;
   };
   data_encryption_metadata: AwsCleanroomsCollaborationArgsDataEncryptionMetadata;
-  member: AwsCleanroomsCollaborationArgsmember;
-  timeouts: AwsCleanroomsCollaborationArgstimeouts;
+  member: AwsCleanroomsCollaborationArgsMember;
+  timeouts: AwsCleanroomsCollaborationArgsTimeouts;
 }
 export class aws_cleanrooms_collaboration extends TerraformResource {
   readonly arn!: string;

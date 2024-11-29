@@ -10,7 +10,7 @@ export interface GoogleBigqueryAnalyticsHubListingArgsDataProvider {
   name: string;
   primary_contact?: string;
 }
-export interface GoogleBigqueryAnalyticsHubListingArgspublisher {
+export interface GoogleBigqueryAnalyticsHubListingArgsPublisher {
   name: string;
   primary_contact?: string;
 }
@@ -18,7 +18,7 @@ export interface GoogleBigqueryAnalyticsHubListingArgsRestrictedExportConfig {
   enabled?: boolean;
   restrict_query_result?: boolean;
 }
-export interface GoogleBigqueryAnalyticsHubListingArgstimeouts {
+export interface GoogleBigqueryAnalyticsHubListingArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,9 +36,9 @@ export interface GoogleBigqueryAnalyticsHubListingArgs {
   request_access?: string;
   bigquery_dataset: GoogleBigqueryAnalyticsHubListingArgsBigqueryDataset;
   data_provider: GoogleBigqueryAnalyticsHubListingArgsDataProvider;
-  publisher: GoogleBigqueryAnalyticsHubListingArgspublisher;
+  publisher: GoogleBigqueryAnalyticsHubListingArgsPublisher;
   restricted_export_config: GoogleBigqueryAnalyticsHubListingArgsRestrictedExportConfig;
-  timeouts: GoogleBigqueryAnalyticsHubListingArgstimeouts;
+  timeouts: GoogleBigqueryAnalyticsHubListingArgsTimeouts;
 }
 export class google_bigquery_analytics_hub_listing extends TerraformResource {
   readonly id?: string;

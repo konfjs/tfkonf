@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerTransitGatewayPeeringArgstimeouts {
+export interface AwsNetworkmanagerTransitGatewayPeeringArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsNetworkmanagerTransitGatewayPeeringArgs {
     [key: string]: string;
   };
   transit_gateway_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayPeeringArgstimeouts;
+  timeouts: AwsNetworkmanagerTransitGatewayPeeringArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_peering extends TerraformResource {
   readonly arn!: string;

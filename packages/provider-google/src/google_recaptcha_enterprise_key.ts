@@ -10,7 +10,7 @@ export interface GoogleRecaptchaEnterpriseKeyArgsIosSettings {
 export interface GoogleRecaptchaEnterpriseKeyArgsTestingOptions {
   testing_score?: number;
 }
-export interface GoogleRecaptchaEnterpriseKeyArgstimeouts {
+export interface GoogleRecaptchaEnterpriseKeyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,7 +33,7 @@ export interface GoogleRecaptchaEnterpriseKeyArgs {
   android_settings: GoogleRecaptchaEnterpriseKeyArgsAndroidSettings;
   ios_settings: GoogleRecaptchaEnterpriseKeyArgsIosSettings;
   testing_options: GoogleRecaptchaEnterpriseKeyArgsTestingOptions;
-  timeouts: GoogleRecaptchaEnterpriseKeyArgstimeouts;
+  timeouts: GoogleRecaptchaEnterpriseKeyArgsTimeouts;
   waf_settings: GoogleRecaptchaEnterpriseKeyArgsWafSettings;
   web_settings: GoogleRecaptchaEnterpriseKeyArgsWebSettings;
 }

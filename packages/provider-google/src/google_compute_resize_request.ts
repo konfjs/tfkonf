@@ -3,7 +3,7 @@ export interface GoogleComputeResizeRequestArgsRequestedRunDuration {
   nanos?: number;
   seconds: string;
 }
-export interface GoogleComputeResizeRequestArgstimeouts {
+export interface GoogleComputeResizeRequestArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -14,7 +14,7 @@ export interface GoogleComputeResizeRequestArgs {
   resize_by: number;
   zone: string;
   requested_run_duration: GoogleComputeResizeRequestArgsRequestedRunDuration;
-  timeouts: GoogleComputeResizeRequestArgstimeouts;
+  timeouts: GoogleComputeResizeRequestArgsTimeouts;
 }
 export class google_compute_resize_request extends TerraformResource {
   readonly creation_timestamp!: string;

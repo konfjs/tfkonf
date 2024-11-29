@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsLambdaCodeSigningConfigArgsAllowedPublishers {
   signing_profile_version_arns: string[];
 }
-export interface AwsLambdaCodeSigningConfigArgspolicies {
+export interface AwsLambdaCodeSigningConfigArgsPolicies {
   untrusted_artifact_on_deployment: string;
 }
 export interface AwsLambdaCodeSigningConfigArgs {
@@ -11,7 +11,7 @@ export interface AwsLambdaCodeSigningConfigArgs {
     [key: string]: string;
   };
   allowed_publishers: AwsLambdaCodeSigningConfigArgsAllowedPublishers;
-  policies: AwsLambdaCodeSigningConfigArgspolicies;
+  policies: AwsLambdaCodeSigningConfigArgsPolicies;
 }
 export class aws_lambda_code_signing_config extends TerraformResource {
   readonly arn!: string;

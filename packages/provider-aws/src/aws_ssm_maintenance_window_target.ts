@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsmMaintenanceWindowTargetArgstargets {
+export interface AwsSsmMaintenanceWindowTargetArgsTargets {
   key: string;
   values: string[];
 }
@@ -9,7 +9,7 @@ export interface AwsSsmMaintenanceWindowTargetArgs {
   owner_information?: string;
   resource_type: string;
   window_id: string;
-  targets: AwsSsmMaintenanceWindowTargetArgstargets;
+  targets: AwsSsmMaintenanceWindowTargetArgsTargets;
 }
 export class aws_ssm_maintenance_window_target extends TerraformResource {
   readonly id?: string;

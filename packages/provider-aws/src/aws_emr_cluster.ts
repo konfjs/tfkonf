@@ -7,7 +7,7 @@ export interface AwsEmrClusterArgsBootstrapAction {
   name: string;
   path: string;
 }
-export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsconfigurations {
+export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsConfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
@@ -24,7 +24,7 @@ export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigs {
   bid_price_as_percentage_of_on_demand_price?: number;
   instance_type: string;
   weighted_capacity?: number;
-  configurations: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsconfigurations;
+  configurations: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsConfigurations;
   ebs_config: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsEbsConfig;
 }
 export interface AwsEmrClusterArgsCoreInstanceFleetLaunchSpecificationsOnDemandSpecification {
@@ -75,7 +75,7 @@ export interface AwsEmrClusterArgsKerberosAttributes {
   kdc_admin_password: string;
   realm: string;
 }
-export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsconfigurations {
+export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsConfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
@@ -92,7 +92,7 @@ export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigs {
   bid_price_as_percentage_of_on_demand_price?: number;
   instance_type: string;
   weighted_capacity?: number;
-  configurations: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsconfigurations;
+  configurations: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsConfigurations;
   ebs_config: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsEbsConfig;
 }
 export interface AwsEmrClusterArgsMasterInstanceFleetLaunchSpecificationsOnDemandSpecification {

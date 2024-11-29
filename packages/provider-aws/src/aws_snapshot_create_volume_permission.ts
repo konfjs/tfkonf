@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSnapshotCreateVolumePermissionArgstimeouts {
+export interface AwsSnapshotCreateVolumePermissionArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsSnapshotCreateVolumePermissionArgs {
   account_id: string;
   snapshot_id: string;
-  timeouts: AwsSnapshotCreateVolumePermissionArgstimeouts;
+  timeouts: AwsSnapshotCreateVolumePermissionArgsTimeouts;
 }
 export class aws_snapshot_create_volume_permission extends TerraformResource {
   readonly id?: string;

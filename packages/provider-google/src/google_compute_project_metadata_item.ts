@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeProjectMetadataItemArgstimeouts {
+export interface GoogleComputeProjectMetadataItemArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface GoogleComputeProjectMetadataItemArgstimeouts {
 export interface GoogleComputeProjectMetadataItemArgs {
   key: string;
   value: string;
-  timeouts: GoogleComputeProjectMetadataItemArgstimeouts;
+  timeouts: GoogleComputeProjectMetadataItemArgsTimeouts;
 }
 export class google_compute_project_metadata_item extends TerraformResource {
   readonly id?: string;

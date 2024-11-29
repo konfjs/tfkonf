@@ -9,27 +9,27 @@ export interface GoogleStorageTransferJobArgsNotificationConfig {
   payload_format: string;
   pubsub_topic: string;
 }
-export interface GoogleStorageTransferJobArgsscheduleScheduleEndDate {
+export interface GoogleStorageTransferJobArgsScheduleScheduleEndDate {
   day: number;
   month: number;
   year: number;
 }
-export interface GoogleStorageTransferJobArgsscheduleScheduleStartDate {
+export interface GoogleStorageTransferJobArgsScheduleScheduleStartDate {
   day: number;
   month: number;
   year: number;
 }
-export interface GoogleStorageTransferJobArgsscheduleStartTimeOfDay {
+export interface GoogleStorageTransferJobArgsScheduleStartTimeOfDay {
   hours: number;
   minutes: number;
   nanos: number;
   seconds: number;
 }
-export interface GoogleStorageTransferJobArgsschedule {
+export interface GoogleStorageTransferJobArgsSchedule {
   repeat_interval?: string;
-  schedule_end_date: GoogleStorageTransferJobArgsscheduleScheduleEndDate;
-  schedule_start_date: GoogleStorageTransferJobArgsscheduleScheduleStartDate;
-  start_time_of_day: GoogleStorageTransferJobArgsscheduleStartTimeOfDay;
+  schedule_end_date: GoogleStorageTransferJobArgsScheduleScheduleEndDate;
+  schedule_start_date: GoogleStorageTransferJobArgsScheduleScheduleStartDate;
+  start_time_of_day: GoogleStorageTransferJobArgsScheduleStartTimeOfDay;
 }
 export interface GoogleStorageTransferJobArgsTransferSpecAwsS3DataSourceAwsAccessKey {
   access_key_id: string;
@@ -94,7 +94,7 @@ export interface GoogleStorageTransferJobArgs {
   status?: string;
   event_stream: GoogleStorageTransferJobArgsEventStream;
   notification_config: GoogleStorageTransferJobArgsNotificationConfig;
-  schedule: GoogleStorageTransferJobArgsschedule;
+  schedule: GoogleStorageTransferJobArgsSchedule;
   transfer_spec: GoogleStorageTransferJobArgsTransferSpec;
 }
 export class google_storage_transfer_job extends TerraformResource {

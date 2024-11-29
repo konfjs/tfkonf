@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNeptuneClusterInstanceArgstimeouts {
+export interface AwsNeptuneClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface AwsNeptuneClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNeptuneClusterInstanceArgstimeouts;
+  timeouts: AwsNeptuneClusterInstanceArgsTimeouts;
 }
 export class aws_neptune_cluster_instance extends TerraformResource {
   readonly address!: string;

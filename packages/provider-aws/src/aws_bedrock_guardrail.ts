@@ -27,7 +27,7 @@ export interface AwsBedrockGuardrailArgsSensitiveInformationPolicyConfig {
   pii_entities_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigPiiEntitiesConfig;
   regexes_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigRegexesConfig;
 }
-export interface AwsBedrockGuardrailArgstimeouts {
+export interface AwsBedrockGuardrailArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -61,7 +61,7 @@ export interface AwsBedrockGuardrailArgs {
   content_policy_config: AwsBedrockGuardrailArgsContentPolicyConfig;
   contextual_grounding_policy_config: AwsBedrockGuardrailArgsContextualGroundingPolicyConfig;
   sensitive_information_policy_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfig;
-  timeouts: AwsBedrockGuardrailArgstimeouts;
+  timeouts: AwsBedrockGuardrailArgsTimeouts;
   topic_policy_config: AwsBedrockGuardrailArgsTopicPolicyConfig;
   word_policy_config: AwsBedrockGuardrailArgsWordPolicyConfig;
 }

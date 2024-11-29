@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsLightsailContainerServiceDeploymentVersionArgscontainer {
+export interface AwsLightsailContainerServiceDeploymentVersionArgsContainer {
   command?: string[];
   container_name: string;
   environment?: {
@@ -23,14 +23,14 @@ export interface AwsLightsailContainerServiceDeploymentVersionArgsPublicEndpoint
   container_port: number;
   health_check: AwsLightsailContainerServiceDeploymentVersionArgsPublicEndpointHealthCheck;
 }
-export interface AwsLightsailContainerServiceDeploymentVersionArgstimeouts {
+export interface AwsLightsailContainerServiceDeploymentVersionArgsTimeouts {
   create?: string;
 }
 export interface AwsLightsailContainerServiceDeploymentVersionArgs {
   service_name: string;
-  container: AwsLightsailContainerServiceDeploymentVersionArgscontainer;
+  container: AwsLightsailContainerServiceDeploymentVersionArgsContainer;
   public_endpoint: AwsLightsailContainerServiceDeploymentVersionArgsPublicEndpoint;
-  timeouts: AwsLightsailContainerServiceDeploymentVersionArgstimeouts;
+  timeouts: AwsLightsailContainerServiceDeploymentVersionArgsTimeouts;
 }
 export class aws_lightsail_container_service_deployment_version extends TerraformResource {
   readonly created_at!: string;

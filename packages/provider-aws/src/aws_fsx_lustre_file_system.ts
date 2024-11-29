@@ -7,7 +7,7 @@ export interface AwsFsxLustreFileSystemArgsRootSquashConfiguration {
   no_squash_nids?: string[];
   root_squash?: string;
 }
-export interface AwsFsxLustreFileSystemArgstimeouts {
+export interface AwsFsxLustreFileSystemArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,7 +34,7 @@ export interface AwsFsxLustreFileSystemArgs {
   log_configuration: AwsFsxLustreFileSystemArgsLogConfiguration;
   metadata_configuration: AwsFsxLustreFileSystemArgsMetadataConfiguration;
   root_squash_configuration: AwsFsxLustreFileSystemArgsRootSquashConfiguration;
-  timeouts: AwsFsxLustreFileSystemArgstimeouts;
+  timeouts: AwsFsxLustreFileSystemArgsTimeouts;
 }
 export class aws_fsx_lustre_file_system extends TerraformResource {
   readonly arn!: string;

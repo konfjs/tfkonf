@@ -4,7 +4,7 @@ export interface AwsEfsFileSystemArgsLifecyclePolicy {
   transition_to_ia?: string;
   transition_to_primary_storage_class?: string;
 }
-export interface AwsEfsFileSystemArgsprotection {}
+export interface AwsEfsFileSystemArgsProtection {}
 export interface AwsEfsFileSystemArgs {
   provisioned_throughput_in_mibps?: number;
   tags?: {
@@ -12,7 +12,7 @@ export interface AwsEfsFileSystemArgs {
   };
   throughput_mode?: string;
   lifecycle_policy: AwsEfsFileSystemArgsLifecyclePolicy;
-  protection: AwsEfsFileSystemArgsprotection;
+  protection: AwsEfsFileSystemArgsProtection;
 }
 export class aws_efs_file_system extends TerraformResource {
   readonly arn!: string;

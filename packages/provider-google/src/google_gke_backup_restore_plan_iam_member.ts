@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeBackupRestorePlanIamMemberArgscondition {
+export interface GoogleGkeBackupRestorePlanIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleGkeBackupRestorePlanIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: GoogleGkeBackupRestorePlanIamMemberArgscondition;
+  condition: GoogleGkeBackupRestorePlanIamMemberArgsCondition;
 }
 export class google_gke_backup_restore_plan_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -25,7 +25,7 @@ export interface AwsOpsworksPhpAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksPhpAppLayerArgs {
   auto_assign_elastic_ips?: boolean;

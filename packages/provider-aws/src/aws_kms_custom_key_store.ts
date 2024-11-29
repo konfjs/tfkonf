@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsKmsCustomKeyStoreArgstimeouts {
+export interface AwsKmsCustomKeyStoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsKmsCustomKeyStoreArgs {
   custom_key_store_name: string;
   key_store_password: string;
   trust_anchor_certificate: string;
-  timeouts: AwsKmsCustomKeyStoreArgstimeouts;
+  timeouts: AwsKmsCustomKeyStoreArgsTimeouts;
 }
 export class aws_kms_custom_key_store extends TerraformResource {
   readonly id?: string;

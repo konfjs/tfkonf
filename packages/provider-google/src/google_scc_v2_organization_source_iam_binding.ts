@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSccV2OrganizationSourceIamBindingArgscondition {
+export interface GoogleSccV2OrganizationSourceIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleSccV2OrganizationSourceIamBindingArgs {
   organization: string;
   role: string;
   source: string;
-  condition: GoogleSccV2OrganizationSourceIamBindingArgscondition;
+  condition: GoogleSccV2OrganizationSourceIamBindingArgsCondition;
 }
 export class google_scc_v2_organization_source_iam_binding extends TerraformResource {
   readonly etag!: string;

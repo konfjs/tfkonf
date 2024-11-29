@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRdsCustomDbEngineVersionArgstimeouts {
+export interface AwsRdsCustomDbEngineVersionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface AwsRdsCustomDbEngineVersionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRdsCustomDbEngineVersionArgstimeouts;
+  timeouts: AwsRdsCustomDbEngineVersionArgsTimeouts;
 }
 export class aws_rds_custom_db_engine_version extends TerraformResource {
   readonly arn!: string;

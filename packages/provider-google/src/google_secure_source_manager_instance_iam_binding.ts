@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSecureSourceManagerInstanceIamBindingArgscondition {
+export interface GoogleSecureSourceManagerInstanceIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSecureSourceManagerInstanceIamBindingArgs {
   instance_id: string;
   members: string[];
   role: string;
-  condition: GoogleSecureSourceManagerInstanceIamBindingArgscondition;
+  condition: GoogleSecureSourceManagerInstanceIamBindingArgsCondition;
 }
 export class google_secure_source_manager_instance_iam_binding extends TerraformResource {
   readonly etag!: string;

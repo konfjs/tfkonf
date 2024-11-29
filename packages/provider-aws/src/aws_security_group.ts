@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecurityGroupArgstimeouts {
+export interface AwsSecurityGroupArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsSecurityGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSecurityGroupArgstimeouts;
+  timeouts: AwsSecurityGroupArgsTimeouts;
 }
 export class aws_security_group extends TerraformResource {
   readonly arn!: string;

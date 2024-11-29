@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecuritylakeSubscriberNotificationArgsconfigurationHttpsNotificationConfiguration {
+export interface AwsSecuritylakeSubscriberNotificationArgsConfigurationHttpsNotificationConfiguration {
   authorization_api_key_name?: string;
   authorization_api_key_value?: string;
   endpoint: string;
   http_method?: string;
   target_role_arn: string;
 }
-export interface AwsSecuritylakeSubscriberNotificationArgsconfigurationSqsNotificationConfiguration {}
-export interface AwsSecuritylakeSubscriberNotificationArgsconfiguration {
-  https_notification_configuration: AwsSecuritylakeSubscriberNotificationArgsconfigurationHttpsNotificationConfiguration;
-  sqs_notification_configuration: AwsSecuritylakeSubscriberNotificationArgsconfigurationSqsNotificationConfiguration;
+export interface AwsSecuritylakeSubscriberNotificationArgsConfigurationSqsNotificationConfiguration {}
+export interface AwsSecuritylakeSubscriberNotificationArgsConfiguration {
+  https_notification_configuration: AwsSecuritylakeSubscriberNotificationArgsConfigurationHttpsNotificationConfiguration;
+  sqs_notification_configuration: AwsSecuritylakeSubscriberNotificationArgsConfigurationSqsNotificationConfiguration;
 }
 export interface AwsSecuritylakeSubscriberNotificationArgs {
   subscriber_id: string;
-  configuration: AwsSecuritylakeSubscriberNotificationArgsconfiguration;
+  configuration: AwsSecuritylakeSubscriberNotificationArgsConfiguration;
 }
 export class aws_securitylake_subscriber_notification extends TerraformResource {
   readonly endpoint_id!: string;

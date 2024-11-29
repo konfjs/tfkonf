@@ -39,7 +39,7 @@ export interface GoogleCloudSchedulerJobArgsPubsubTarget {
   topic_name: string;
 }
 export interface GoogleCloudSchedulerJobArgsRetryConfig {}
-export interface GoogleCloudSchedulerJobArgstimeouts {
+export interface GoogleCloudSchedulerJobArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -54,7 +54,7 @@ export interface GoogleCloudSchedulerJobArgs {
   http_target: GoogleCloudSchedulerJobArgsHttpTarget;
   pubsub_target: GoogleCloudSchedulerJobArgsPubsubTarget;
   retry_config: GoogleCloudSchedulerJobArgsRetryConfig;
-  timeouts: GoogleCloudSchedulerJobArgstimeouts;
+  timeouts: GoogleCloudSchedulerJobArgsTimeouts;
 }
 export class google_cloud_scheduler_job extends TerraformResource {
   readonly id?: string;

@@ -1,233 +1,233 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppmeshRouteArgsspecGrpcRouteactionWeightedTarget {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteActionWeightedTarget {
   virtual_node: string;
   weight: number;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRouteaction {
-  weighted_target: AwsAppmeshRouteArgsspecGrpcRouteactionWeightedTarget;
+export interface AwsAppmeshRouteArgsSpecGrpcRouteAction {
+  weighted_target: AwsAppmeshRouteArgsSpecGrpcRouteActionWeightedTarget;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutematchmetadatamatchrange {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadataMatchRange {
   end: number;
   start: number;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutematchmetadatamatch {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadataMatch {
   exact?: string;
   prefix?: string;
   regex?: string;
   suffix?: string;
-  range: AwsAppmeshRouteArgsspecGrpcRoutematchmetadatamatchrange;
+  range: AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadataMatchRange;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutematchmetadata {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadata {
   invert?: boolean;
   name: string;
-  match: AwsAppmeshRouteArgsspecGrpcRoutematchmetadatamatch;
+  match: AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadataMatch;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutematch {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteMatch {
   method_name?: string;
   port?: number;
   prefix?: string;
   service_name?: string;
-  metadata: AwsAppmeshRouteArgsspecGrpcRoutematchmetadata;
+  metadata: AwsAppmeshRouteArgsSpecGrpcRouteMatchMetadata;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRouteRetryPolicyPerRetryTimeout {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteRetryPolicyPerRetryTimeout {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRouteRetryPolicy {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteRetryPolicy {
   grpc_retry_events?: string[];
   http_retry_events?: string[];
   max_retries: number;
   tcp_retry_events?: string[];
-  per_retry_timeout: AwsAppmeshRouteArgsspecGrpcRouteRetryPolicyPerRetryTimeout;
+  per_retry_timeout: AwsAppmeshRouteArgsSpecGrpcRouteRetryPolicyPerRetryTimeout;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutetimeoutidle {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteTimeoutIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutetimeoutPerRequest {
+export interface AwsAppmeshRouteArgsSpecGrpcRouteTimeoutPerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoutetimeout {
-  idle: AwsAppmeshRouteArgsspecGrpcRoutetimeoutidle;
-  per_request: AwsAppmeshRouteArgsspecGrpcRoutetimeoutPerRequest;
+export interface AwsAppmeshRouteArgsSpecGrpcRouteTimeout {
+  idle: AwsAppmeshRouteArgsSpecGrpcRouteTimeoutIdle;
+  per_request: AwsAppmeshRouteArgsSpecGrpcRouteTimeoutPerRequest;
 }
-export interface AwsAppmeshRouteArgsspecGrpcRoute {
-  action: AwsAppmeshRouteArgsspecGrpcRouteaction;
-  match: AwsAppmeshRouteArgsspecGrpcRoutematch;
-  retry_policy: AwsAppmeshRouteArgsspecGrpcRouteRetryPolicy;
-  timeout: AwsAppmeshRouteArgsspecGrpcRoutetimeout;
+export interface AwsAppmeshRouteArgsSpecGrpcRoute {
+  action: AwsAppmeshRouteArgsSpecGrpcRouteAction;
+  match: AwsAppmeshRouteArgsSpecGrpcRouteMatch;
+  retry_policy: AwsAppmeshRouteArgsSpecGrpcRouteRetryPolicy;
+  timeout: AwsAppmeshRouteArgsSpecGrpcRouteTimeout;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RouteactionWeightedTarget {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteActionWeightedTarget {
   virtual_node: string;
   weight: number;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routeaction {
-  weighted_target: AwsAppmeshRouteArgsspecHttp2RouteactionWeightedTarget;
+export interface AwsAppmeshRouteArgsSpecHttp2RouteAction {
+  weighted_target: AwsAppmeshRouteArgsSpecHttp2RouteActionWeightedTarget;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routematchheadermatchrange {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchHeaderMatchRange {
   end: number;
   start: number;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routematchheadermatch {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchHeaderMatch {
   exact?: string;
   prefix?: string;
   regex?: string;
   suffix?: string;
-  range: AwsAppmeshRouteArgsspecHttp2Routematchheadermatchrange;
+  range: AwsAppmeshRouteArgsSpecHttp2RouteMatchHeaderMatchRange;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routematchheader {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchHeader {
   invert?: boolean;
   name: string;
-  match: AwsAppmeshRouteArgsspecHttp2Routematchheadermatch;
+  match: AwsAppmeshRouteArgsSpecHttp2RouteMatchHeaderMatch;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routematchpath {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchPath {
   exact?: string;
   regex?: string;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RoutematchQueryParametermatch {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchQueryParameterMatch {
   exact?: string;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RoutematchQueryParameter {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatchQueryParameter {
   name: string;
-  match: AwsAppmeshRouteArgsspecHttp2RoutematchQueryParametermatch;
+  match: AwsAppmeshRouteArgsSpecHttp2RouteMatchQueryParameterMatch;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routematch {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteMatch {
   method?: string;
   port?: number;
   prefix?: string;
   scheme?: string;
-  header: AwsAppmeshRouteArgsspecHttp2Routematchheader;
-  path: AwsAppmeshRouteArgsspecHttp2Routematchpath;
-  query_parameter: AwsAppmeshRouteArgsspecHttp2RoutematchQueryParameter;
+  header: AwsAppmeshRouteArgsSpecHttp2RouteMatchHeader;
+  path: AwsAppmeshRouteArgsSpecHttp2RouteMatchPath;
+  query_parameter: AwsAppmeshRouteArgsSpecHttp2RouteMatchQueryParameter;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RouteRetryPolicyPerRetryTimeout {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteRetryPolicyPerRetryTimeout {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RouteRetryPolicy {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteRetryPolicy {
   http_retry_events?: string[];
   max_retries: number;
   tcp_retry_events?: string[];
-  per_retry_timeout: AwsAppmeshRouteArgsspecHttp2RouteRetryPolicyPerRetryTimeout;
+  per_retry_timeout: AwsAppmeshRouteArgsSpecHttp2RouteRetryPolicyPerRetryTimeout;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routetimeoutidle {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteTimeoutIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttp2RoutetimeoutPerRequest {
+export interface AwsAppmeshRouteArgsSpecHttp2RouteTimeoutPerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Routetimeout {
-  idle: AwsAppmeshRouteArgsspecHttp2Routetimeoutidle;
-  per_request: AwsAppmeshRouteArgsspecHttp2RoutetimeoutPerRequest;
+export interface AwsAppmeshRouteArgsSpecHttp2RouteTimeout {
+  idle: AwsAppmeshRouteArgsSpecHttp2RouteTimeoutIdle;
+  per_request: AwsAppmeshRouteArgsSpecHttp2RouteTimeoutPerRequest;
 }
-export interface AwsAppmeshRouteArgsspecHttp2Route {
-  action: AwsAppmeshRouteArgsspecHttp2Routeaction;
-  match: AwsAppmeshRouteArgsspecHttp2Routematch;
-  retry_policy: AwsAppmeshRouteArgsspecHttp2RouteRetryPolicy;
-  timeout: AwsAppmeshRouteArgsspecHttp2Routetimeout;
+export interface AwsAppmeshRouteArgsSpecHttp2Route {
+  action: AwsAppmeshRouteArgsSpecHttp2RouteAction;
+  match: AwsAppmeshRouteArgsSpecHttp2RouteMatch;
+  retry_policy: AwsAppmeshRouteArgsSpecHttp2RouteRetryPolicy;
+  timeout: AwsAppmeshRouteArgsSpecHttp2RouteTimeout;
 }
-export interface AwsAppmeshRouteArgsspecHttpRouteactionWeightedTarget {
+export interface AwsAppmeshRouteArgsSpecHttpRouteActionWeightedTarget {
   virtual_node: string;
   weight: number;
 }
-export interface AwsAppmeshRouteArgsspecHttpRouteaction {
-  weighted_target: AwsAppmeshRouteArgsspecHttpRouteactionWeightedTarget;
+export interface AwsAppmeshRouteArgsSpecHttpRouteAction {
+  weighted_target: AwsAppmeshRouteArgsSpecHttpRouteActionWeightedTarget;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchheadermatchrange {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchHeaderMatchRange {
   end: number;
   start: number;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchheadermatch {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchHeaderMatch {
   exact?: string;
   prefix?: string;
   regex?: string;
   suffix?: string;
-  range: AwsAppmeshRouteArgsspecHttpRoutematchheadermatchrange;
+  range: AwsAppmeshRouteArgsSpecHttpRouteMatchHeaderMatchRange;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchheader {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchHeader {
   invert?: boolean;
   name: string;
-  match: AwsAppmeshRouteArgsspecHttpRoutematchheadermatch;
+  match: AwsAppmeshRouteArgsSpecHttpRouteMatchHeaderMatch;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchpath {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchPath {
   exact?: string;
   regex?: string;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchQueryParametermatch {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchQueryParameterMatch {
   exact?: string;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematchQueryParameter {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatchQueryParameter {
   name: string;
-  match: AwsAppmeshRouteArgsspecHttpRoutematchQueryParametermatch;
+  match: AwsAppmeshRouteArgsSpecHttpRouteMatchQueryParameterMatch;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutematch {
+export interface AwsAppmeshRouteArgsSpecHttpRouteMatch {
   method?: string;
   port?: number;
   prefix?: string;
   scheme?: string;
-  header: AwsAppmeshRouteArgsspecHttpRoutematchheader;
-  path: AwsAppmeshRouteArgsspecHttpRoutematchpath;
-  query_parameter: AwsAppmeshRouteArgsspecHttpRoutematchQueryParameter;
+  header: AwsAppmeshRouteArgsSpecHttpRouteMatchHeader;
+  path: AwsAppmeshRouteArgsSpecHttpRouteMatchPath;
+  query_parameter: AwsAppmeshRouteArgsSpecHttpRouteMatchQueryParameter;
 }
-export interface AwsAppmeshRouteArgsspecHttpRouteRetryPolicyPerRetryTimeout {
+export interface AwsAppmeshRouteArgsSpecHttpRouteRetryPolicyPerRetryTimeout {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttpRouteRetryPolicy {
+export interface AwsAppmeshRouteArgsSpecHttpRouteRetryPolicy {
   http_retry_events?: string[];
   max_retries: number;
   tcp_retry_events?: string[];
-  per_retry_timeout: AwsAppmeshRouteArgsspecHttpRouteRetryPolicyPerRetryTimeout;
+  per_retry_timeout: AwsAppmeshRouteArgsSpecHttpRouteRetryPolicyPerRetryTimeout;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutetimeoutidle {
+export interface AwsAppmeshRouteArgsSpecHttpRouteTimeoutIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutetimeoutPerRequest {
+export interface AwsAppmeshRouteArgsSpecHttpRouteTimeoutPerRequest {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoutetimeout {
-  idle: AwsAppmeshRouteArgsspecHttpRoutetimeoutidle;
-  per_request: AwsAppmeshRouteArgsspecHttpRoutetimeoutPerRequest;
+export interface AwsAppmeshRouteArgsSpecHttpRouteTimeout {
+  idle: AwsAppmeshRouteArgsSpecHttpRouteTimeoutIdle;
+  per_request: AwsAppmeshRouteArgsSpecHttpRouteTimeoutPerRequest;
 }
-export interface AwsAppmeshRouteArgsspecHttpRoute {
-  action: AwsAppmeshRouteArgsspecHttpRouteaction;
-  match: AwsAppmeshRouteArgsspecHttpRoutematch;
-  retry_policy: AwsAppmeshRouteArgsspecHttpRouteRetryPolicy;
-  timeout: AwsAppmeshRouteArgsspecHttpRoutetimeout;
+export interface AwsAppmeshRouteArgsSpecHttpRoute {
+  action: AwsAppmeshRouteArgsSpecHttpRouteAction;
+  match: AwsAppmeshRouteArgsSpecHttpRouteMatch;
+  retry_policy: AwsAppmeshRouteArgsSpecHttpRouteRetryPolicy;
+  timeout: AwsAppmeshRouteArgsSpecHttpRouteTimeout;
 }
-export interface AwsAppmeshRouteArgsspecTcpRouteactionWeightedTarget {
+export interface AwsAppmeshRouteArgsSpecTcpRouteActionWeightedTarget {
   virtual_node: string;
   weight: number;
 }
-export interface AwsAppmeshRouteArgsspecTcpRouteaction {
-  weighted_target: AwsAppmeshRouteArgsspecTcpRouteactionWeightedTarget;
+export interface AwsAppmeshRouteArgsSpecTcpRouteAction {
+  weighted_target: AwsAppmeshRouteArgsSpecTcpRouteActionWeightedTarget;
 }
-export interface AwsAppmeshRouteArgsspecTcpRoutematch {
+export interface AwsAppmeshRouteArgsSpecTcpRouteMatch {
   port?: number;
 }
-export interface AwsAppmeshRouteArgsspecTcpRoutetimeoutidle {
+export interface AwsAppmeshRouteArgsSpecTcpRouteTimeoutIdle {
   unit: string;
   value: number;
 }
-export interface AwsAppmeshRouteArgsspecTcpRoutetimeout {
-  idle: AwsAppmeshRouteArgsspecTcpRoutetimeoutidle;
+export interface AwsAppmeshRouteArgsSpecTcpRouteTimeout {
+  idle: AwsAppmeshRouteArgsSpecTcpRouteTimeoutIdle;
 }
-export interface AwsAppmeshRouteArgsspecTcpRoute {
-  action: AwsAppmeshRouteArgsspecTcpRouteaction;
-  match: AwsAppmeshRouteArgsspecTcpRoutematch;
-  timeout: AwsAppmeshRouteArgsspecTcpRoutetimeout;
+export interface AwsAppmeshRouteArgsSpecTcpRoute {
+  action: AwsAppmeshRouteArgsSpecTcpRouteAction;
+  match: AwsAppmeshRouteArgsSpecTcpRouteMatch;
+  timeout: AwsAppmeshRouteArgsSpecTcpRouteTimeout;
 }
-export interface AwsAppmeshRouteArgsspec {
+export interface AwsAppmeshRouteArgsSpec {
   priority?: number;
-  grpc_route: AwsAppmeshRouteArgsspecGrpcRoute;
-  http2_route: AwsAppmeshRouteArgsspecHttp2Route;
-  http_route: AwsAppmeshRouteArgsspecHttpRoute;
-  tcp_route: AwsAppmeshRouteArgsspecTcpRoute;
+  grpc_route: AwsAppmeshRouteArgsSpecGrpcRoute;
+  http2_route: AwsAppmeshRouteArgsSpecHttp2Route;
+  http_route: AwsAppmeshRouteArgsSpecHttpRoute;
+  tcp_route: AwsAppmeshRouteArgsSpecTcpRoute;
 }
 export interface AwsAppmeshRouteArgs {
   mesh_name: string;
@@ -236,7 +236,7 @@ export interface AwsAppmeshRouteArgs {
     [key: string]: string;
   };
   virtual_router_name: string;
-  spec: AwsAppmeshRouteArgsspec;
+  spec: AwsAppmeshRouteArgsSpec;
 }
 export class aws_appmesh_route extends TerraformResource {
   readonly arn!: string;

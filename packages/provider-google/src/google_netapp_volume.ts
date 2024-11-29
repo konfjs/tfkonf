@@ -4,7 +4,7 @@ export interface GoogleNetappVolumeArgsBackupConfig {
   backup_vault?: string;
   scheduled_backup_enabled?: boolean;
 }
-export interface GoogleNetappVolumeArgsExportPolicyrules {
+export interface GoogleNetappVolumeArgsExportPolicyRules {
   access_type?: string;
   allowed_clients?: string;
   has_root_access?: string;
@@ -18,7 +18,7 @@ export interface GoogleNetappVolumeArgsExportPolicyrules {
   nfsv4?: boolean;
 }
 export interface GoogleNetappVolumeArgsExportPolicy {
-  rules: GoogleNetappVolumeArgsExportPolicyrules;
+  rules: GoogleNetappVolumeArgsExportPolicyRules;
 }
 export interface GoogleNetappVolumeArgsRestoreParameters {
   source_backup?: string;
@@ -56,7 +56,7 @@ export interface GoogleNetappVolumeArgsTieringPolicy {
   cooling_threshold_days?: number;
   tier_action?: string;
 }
-export interface GoogleNetappVolumeArgstimeouts {
+export interface GoogleNetappVolumeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -83,7 +83,7 @@ export interface GoogleNetappVolumeArgs {
   restore_parameters: GoogleNetappVolumeArgsRestoreParameters;
   snapshot_policy: GoogleNetappVolumeArgsSnapshotPolicy;
   tiering_policy: GoogleNetappVolumeArgsTieringPolicy;
-  timeouts: GoogleNetappVolumeArgstimeouts;
+  timeouts: GoogleNetappVolumeArgsTimeouts;
 }
 export class google_netapp_volume extends TerraformResource {
   readonly active_directory!: string;

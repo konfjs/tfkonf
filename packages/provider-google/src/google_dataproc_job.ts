@@ -46,7 +46,7 @@ export interface GoogleDataprocJobArgsPigConfig {
   };
   logging_config: GoogleDataprocJobArgsPigConfigLoggingConfig;
 }
-export interface GoogleDataprocJobArgsplacement {
+export interface GoogleDataprocJobArgsPlacement {
   cluster_name: string;
 }
 export interface GoogleDataprocJobArgsPrestoConfigLoggingConfig {
@@ -82,8 +82,8 @@ export interface GoogleDataprocJobArgsPysparkConfig {
   python_file_uris?: string[];
   logging_config: GoogleDataprocJobArgsPysparkConfigLoggingConfig;
 }
-export interface GoogleDataprocJobArgsreference {}
-export interface GoogleDataprocJobArgsscheduling {
+export interface GoogleDataprocJobArgsReference {}
+export interface GoogleDataprocJobArgsScheduling {
   max_failures_per_hour: number;
   max_failures_total: number;
 }
@@ -121,7 +121,7 @@ export interface GoogleDataprocJobArgsSparksqlConfig {
   };
   logging_config: GoogleDataprocJobArgsSparksqlConfigLoggingConfig;
 }
-export interface GoogleDataprocJobArgstimeouts {
+export interface GoogleDataprocJobArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -134,14 +134,14 @@ export interface GoogleDataprocJobArgs {
   hadoop_config: GoogleDataprocJobArgsHadoopConfig;
   hive_config: GoogleDataprocJobArgsHiveConfig;
   pig_config: GoogleDataprocJobArgsPigConfig;
-  placement: GoogleDataprocJobArgsplacement;
+  placement: GoogleDataprocJobArgsPlacement;
   presto_config: GoogleDataprocJobArgsPrestoConfig;
   pyspark_config: GoogleDataprocJobArgsPysparkConfig;
-  reference: GoogleDataprocJobArgsreference;
-  scheduling: GoogleDataprocJobArgsscheduling;
+  reference: GoogleDataprocJobArgsReference;
+  scheduling: GoogleDataprocJobArgsScheduling;
   spark_config: GoogleDataprocJobArgsSparkConfig;
   sparksql_config: GoogleDataprocJobArgsSparksqlConfig;
-  timeouts: GoogleDataprocJobArgstimeouts;
+  timeouts: GoogleDataprocJobArgsTimeouts;
 }
 export class google_dataproc_job extends TerraformResource {
   readonly driver_controls_files_uri!: string;

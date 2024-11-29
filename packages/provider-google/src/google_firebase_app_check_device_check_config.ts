@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFirebaseAppCheckDeviceCheckConfigArgstimeouts {
+export interface GoogleFirebaseAppCheckDeviceCheckConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleFirebaseAppCheckDeviceCheckConfigArgs {
   app_id: string;
   key_id: string;
   private_key: string;
-  timeouts: GoogleFirebaseAppCheckDeviceCheckConfigArgstimeouts;
+  timeouts: GoogleFirebaseAppCheckDeviceCheckConfigArgsTimeouts;
 }
 export class google_firebase_app_check_device_check_config extends TerraformResource {
   readonly id?: string;

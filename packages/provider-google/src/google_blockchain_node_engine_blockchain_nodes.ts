@@ -15,7 +15,7 @@ export interface GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetails {
   geth_details: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsGethDetails;
   validator_config: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsValidatorConfig;
 }
-export interface GoogleBlockchainNodeEngineBlockchainNodesArgstimeouts {
+export interface GoogleBlockchainNodeEngineBlockchainNodesArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -28,7 +28,7 @@ export interface GoogleBlockchainNodeEngineBlockchainNodesArgs {
   };
   location: string;
   ethereum_details: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetails;
-  timeouts: GoogleBlockchainNodeEngineBlockchainNodesArgstimeouts;
+  timeouts: GoogleBlockchainNodeEngineBlockchainNodesArgsTimeouts;
 }
 export class google_blockchain_node_engine_blockchain_nodes extends TerraformResource {
   readonly connection_info!: any[];

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerTransitGatewayRouteTableAttachmentArgstimeouts {
+export interface AwsNetworkmanagerTransitGatewayRouteTableAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsNetworkmanagerTransitGatewayRouteTableAttachmentArgs {
     [key: string]: string;
   };
   transit_gateway_route_table_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayRouteTableAttachmentArgstimeouts;
+  timeouts: AwsNetworkmanagerTransitGatewayRouteTableAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_route_table_attachment extends TerraformResource {
   readonly arn!: string;

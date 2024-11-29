@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleDataplexEntryTypeArgsRequiredAspects {
   type?: string;
 }
-export interface GoogleDataplexEntryTypeArgstimeouts {
+export interface GoogleDataplexEntryTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleDataplexEntryTypeArgs {
   system?: string;
   type_aliases?: string[];
   required_aspects: GoogleDataplexEntryTypeArgsRequiredAspects;
-  timeouts: GoogleDataplexEntryTypeArgstimeouts;
+  timeouts: GoogleDataplexEntryTypeArgsTimeouts;
 }
 export class google_dataplex_entry_type extends TerraformResource {
   readonly create_time!: string;

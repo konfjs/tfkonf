@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleEndpointsServiceArgstimeouts {
+export interface GoogleEndpointsServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleEndpointsServiceArgs {
   openapi_config?: string;
   protoc_output_base64?: string;
   service_name: string;
-  timeouts: GoogleEndpointsServiceArgstimeouts;
+  timeouts: GoogleEndpointsServiceArgsTimeouts;
 }
 export class google_endpoints_service extends TerraformResource {
   readonly apis!: any[];

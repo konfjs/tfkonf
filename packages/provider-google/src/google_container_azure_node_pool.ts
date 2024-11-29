@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleContainerAzureNodePoolArgsautoscaling {
+export interface GoogleContainerAzureNodePoolArgsAutoscaling {
   max_node_count: number;
   min_node_count: number;
 }
-export interface GoogleContainerAzureNodePoolArgsconfigProxyConfig {
+export interface GoogleContainerAzureNodePoolArgsConfigProxyConfig {
   resource_group_id: string;
   secret_id: string;
 }
-export interface GoogleContainerAzureNodePoolArgsconfigRootVolume {}
-export interface GoogleContainerAzureNodePoolArgsconfigSshConfig {
+export interface GoogleContainerAzureNodePoolArgsConfigRootVolume {}
+export interface GoogleContainerAzureNodePoolArgsConfigSshConfig {
   authorized_key: string;
 }
-export interface GoogleContainerAzureNodePoolArgsconfig {
+export interface GoogleContainerAzureNodePoolArgsConfig {
   labels?: {
     [key: string]: string;
   };
   tags?: {
     [key: string]: string;
   };
-  proxy_config: GoogleContainerAzureNodePoolArgsconfigProxyConfig;
-  root_volume: GoogleContainerAzureNodePoolArgsconfigRootVolume;
-  ssh_config: GoogleContainerAzureNodePoolArgsconfigSshConfig;
+  proxy_config: GoogleContainerAzureNodePoolArgsConfigProxyConfig;
+  root_volume: GoogleContainerAzureNodePoolArgsConfigRootVolume;
+  ssh_config: GoogleContainerAzureNodePoolArgsConfigSshConfig;
 }
-export interface GoogleContainerAzureNodePoolArgsmanagement {}
+export interface GoogleContainerAzureNodePoolArgsManagement {}
 export interface GoogleContainerAzureNodePoolArgsMaxPodsConstraint {
   max_pods_per_node: number;
 }
-export interface GoogleContainerAzureNodePoolArgstimeouts {
+export interface GoogleContainerAzureNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,11 +40,11 @@ export interface GoogleContainerAzureNodePoolArgs {
   name: string;
   subnet_id: string;
   version: string;
-  autoscaling: GoogleContainerAzureNodePoolArgsautoscaling;
-  config: GoogleContainerAzureNodePoolArgsconfig;
-  management: GoogleContainerAzureNodePoolArgsmanagement;
+  autoscaling: GoogleContainerAzureNodePoolArgsAutoscaling;
+  config: GoogleContainerAzureNodePoolArgsConfig;
+  management: GoogleContainerAzureNodePoolArgsManagement;
   max_pods_constraint: GoogleContainerAzureNodePoolArgsMaxPodsConstraint;
-  timeouts: GoogleContainerAzureNodePoolArgstimeouts;
+  timeouts: GoogleContainerAzureNodePoolArgsTimeouts;
 }
 export class google_container_azure_node_pool extends TerraformResource {
   readonly azure_availability_zone?: string;

@@ -9,14 +9,14 @@ export interface AwsOpensearchDomainArgsAdvancedSecurityOptions {
   internal_user_database_enabled?: boolean;
   master_user_options: AwsOpensearchDomainArgsAdvancedSecurityOptionsMasterUserOptions;
 }
-export interface AwsOpensearchDomainArgsAutoTuneOptionsMaintenanceScheduleduration {
+export interface AwsOpensearchDomainArgsAutoTuneOptionsMaintenanceScheduleDuration {
   unit: string;
   value: number;
 }
 export interface AwsOpensearchDomainArgsAutoTuneOptionsMaintenanceSchedule {
   cron_expression_for_recurrence: string;
   start_at: string;
-  duration: AwsOpensearchDomainArgsAutoTuneOptionsMaintenanceScheduleduration;
+  duration: AwsOpensearchDomainArgsAutoTuneOptionsMaintenanceScheduleDuration;
 }
 export interface AwsOpensearchDomainArgsAutoTuneOptions {
   desired_state: string;
@@ -79,7 +79,7 @@ export interface AwsOpensearchDomainArgsSnapshotOptions {
   automated_snapshot_start_hour: number;
 }
 export interface AwsOpensearchDomainArgsSoftwareUpdateOptions {}
-export interface AwsOpensearchDomainArgstimeouts {
+export interface AwsOpensearchDomainArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -105,7 +105,7 @@ export interface AwsOpensearchDomainArgs {
   off_peak_window_options: AwsOpensearchDomainArgsOffPeakWindowOptions;
   snapshot_options: AwsOpensearchDomainArgsSnapshotOptions;
   software_update_options: AwsOpensearchDomainArgsSoftwareUpdateOptions;
-  timeouts: AwsOpensearchDomainArgstimeouts;
+  timeouts: AwsOpensearchDomainArgsTimeouts;
   vpc_options: AwsOpensearchDomainArgsVpcOptions;
 }
 export class aws_opensearch_domain extends TerraformResource {

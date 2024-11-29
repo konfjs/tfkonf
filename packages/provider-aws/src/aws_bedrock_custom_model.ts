@@ -2,18 +2,18 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsBedrockCustomModelArgsOutputDataConfig {
   s3_uri: string;
 }
-export interface AwsBedrockCustomModelArgstimeouts {
+export interface AwsBedrockCustomModelArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsBedrockCustomModelArgsTrainingDataConfig {
   s3_uri: string;
 }
-export interface AwsBedrockCustomModelArgsValidationDataConfigvalidator {
+export interface AwsBedrockCustomModelArgsValidationDataConfigValidator {
   s3_uri: string;
 }
 export interface AwsBedrockCustomModelArgsValidationDataConfig {
-  validator: AwsBedrockCustomModelArgsValidationDataConfigvalidator;
+  validator: AwsBedrockCustomModelArgsValidationDataConfigValidator;
 }
 export interface AwsBedrockCustomModelArgsVpcConfig {
   security_group_ids: string[];
@@ -32,7 +32,7 @@ export interface AwsBedrockCustomModelArgs {
     [key: string]: string;
   };
   output_data_config: AwsBedrockCustomModelArgsOutputDataConfig;
-  timeouts: AwsBedrockCustomModelArgstimeouts;
+  timeouts: AwsBedrockCustomModelArgsTimeouts;
   training_data_config: AwsBedrockCustomModelArgsTrainingDataConfig;
   validation_data_config: AwsBedrockCustomModelArgsValidationDataConfig;
   vpc_config: AwsBedrockCustomModelArgsVpcConfig;

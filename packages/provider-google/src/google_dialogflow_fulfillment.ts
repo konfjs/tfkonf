@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowFulfillmentArgsfeatures {
+export interface GoogleDialogflowFulfillmentArgsFeatures {
   type: string;
 }
 export interface GoogleDialogflowFulfillmentArgsGenericWebService {
@@ -10,7 +10,7 @@ export interface GoogleDialogflowFulfillmentArgsGenericWebService {
   uri: string;
   username?: string;
 }
-export interface GoogleDialogflowFulfillmentArgstimeouts {
+export interface GoogleDialogflowFulfillmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,9 +18,9 @@ export interface GoogleDialogflowFulfillmentArgstimeouts {
 export interface GoogleDialogflowFulfillmentArgs {
   display_name: string;
   enabled?: boolean;
-  features: GoogleDialogflowFulfillmentArgsfeatures;
+  features: GoogleDialogflowFulfillmentArgsFeatures;
   generic_web_service: GoogleDialogflowFulfillmentArgsGenericWebService;
-  timeouts: GoogleDialogflowFulfillmentArgstimeouts;
+  timeouts: GoogleDialogflowFulfillmentArgsTimeouts;
 }
 export class google_dialogflow_fulfillment extends TerraformResource {
   readonly id?: string;

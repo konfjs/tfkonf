@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetappBackupVaultArgstimeouts {
+export interface GoogleNetappBackupVaultArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleNetappBackupVaultArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleNetappBackupVaultArgstimeouts;
+  timeouts: GoogleNetappBackupVaultArgsTimeouts;
 }
 export class google_netapp_backup_vault extends TerraformResource {
   readonly create_time!: string;

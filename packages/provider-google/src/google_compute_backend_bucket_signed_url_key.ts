@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeBackendBucketSignedUrlKeyArgstimeouts {
+export interface GoogleComputeBackendBucketSignedUrlKeyArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleComputeBackendBucketSignedUrlKeyArgs {
   backend_bucket: string;
   key_value: string;
   name: string;
-  timeouts: GoogleComputeBackendBucketSignedUrlKeyArgstimeouts;
+  timeouts: GoogleComputeBackendBucketSignedUrlKeyArgsTimeouts;
 }
 export class google_compute_backend_bucket_signed_url_key extends TerraformResource {
   readonly id?: string;

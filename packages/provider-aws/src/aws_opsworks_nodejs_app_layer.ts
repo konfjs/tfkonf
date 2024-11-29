@@ -25,7 +25,7 @@ export interface AwsOpsworksNodejsAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksNodejsAppLayerArgs {
   auto_assign_elastic_ips?: boolean;

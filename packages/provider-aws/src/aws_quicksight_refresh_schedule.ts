@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQuicksightRefreshScheduleArgsscheduleScheduleFrequencyRefreshOnDay {
+export interface AwsQuicksightRefreshScheduleArgsScheduleScheduleFrequencyRefreshOnDay {
   day_of_month?: string;
   day_of_week?: string;
 }
-export interface AwsQuicksightRefreshScheduleArgsscheduleScheduleFrequency {
+export interface AwsQuicksightRefreshScheduleArgsScheduleScheduleFrequency {
   interval: string;
-  refresh_on_day: AwsQuicksightRefreshScheduleArgsscheduleScheduleFrequencyRefreshOnDay;
+  refresh_on_day: AwsQuicksightRefreshScheduleArgsScheduleScheduleFrequencyRefreshOnDay;
 }
-export interface AwsQuicksightRefreshScheduleArgsschedule {
+export interface AwsQuicksightRefreshScheduleArgsSchedule {
   refresh_type: string;
-  schedule_frequency: AwsQuicksightRefreshScheduleArgsscheduleScheduleFrequency;
+  schedule_frequency: AwsQuicksightRefreshScheduleArgsScheduleScheduleFrequency;
 }
 export interface AwsQuicksightRefreshScheduleArgs {
   data_set_id: string;
   schedule_id: string;
-  schedule: AwsQuicksightRefreshScheduleArgsschedule;
+  schedule: AwsQuicksightRefreshScheduleArgsSchedule;
 }
 export class aws_quicksight_refresh_schedule extends TerraformResource {
   readonly arn!: string;

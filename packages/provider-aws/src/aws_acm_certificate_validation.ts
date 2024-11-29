@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAcmCertificateValidationArgstimeouts {
+export interface AwsAcmCertificateValidationArgsTimeouts {
   create?: string;
 }
 export interface AwsAcmCertificateValidationArgs {
   certificate_arn: string;
   validation_record_fqdns?: string[];
-  timeouts: AwsAcmCertificateValidationArgstimeouts;
+  timeouts: AwsAcmCertificateValidationArgsTimeouts;
 }
 export class aws_acm_certificate_validation extends TerraformResource {
   readonly id?: string;

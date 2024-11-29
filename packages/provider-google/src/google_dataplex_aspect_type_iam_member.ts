@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataplexAspectTypeIamMemberArgscondition {
+export interface GoogleDataplexAspectTypeIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataplexAspectTypeIamMemberArgs {
   aspect_type_id: string;
   member: string;
   role: string;
-  condition: GoogleDataplexAspectTypeIamMemberArgscondition;
+  condition: GoogleDataplexAspectTypeIamMemberArgsCondition;
 }
 export class google_dataplex_aspect_type_iam_member extends TerraformResource {
   readonly etag!: string;

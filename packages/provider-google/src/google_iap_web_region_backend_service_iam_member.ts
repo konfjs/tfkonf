@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIapWebRegionBackendServiceIamMemberArgscondition {
+export interface GoogleIapWebRegionBackendServiceIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleIapWebRegionBackendServiceIamMemberArgs {
   member: string;
   role: string;
   web_region_backend_service: string;
-  condition: GoogleIapWebRegionBackendServiceIamMemberArgscondition;
+  condition: GoogleIapWebRegionBackendServiceIamMemberArgsCondition;
 }
 export class google_iap_web_region_backend_service_iam_member extends TerraformResource {
   readonly etag!: string;

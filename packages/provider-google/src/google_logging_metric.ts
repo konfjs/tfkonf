@@ -17,7 +17,7 @@ export interface GoogleLoggingMetricArgsBucketOptions {
   exponential_buckets: GoogleLoggingMetricArgsBucketOptionsExponentialBuckets;
   linear_buckets: GoogleLoggingMetricArgsBucketOptionsLinearBuckets;
 }
-export interface GoogleLoggingMetricArgsMetricDescriptorlabels {
+export interface GoogleLoggingMetricArgsMetricDescriptorLabels {
   description?: string;
   key: string;
   value_type?: string;
@@ -27,9 +27,9 @@ export interface GoogleLoggingMetricArgsMetricDescriptor {
   metric_kind: string;
   unit?: string;
   value_type: string;
-  labels: GoogleLoggingMetricArgsMetricDescriptorlabels;
+  labels: GoogleLoggingMetricArgsMetricDescriptorLabels;
 }
-export interface GoogleLoggingMetricArgstimeouts {
+export interface GoogleLoggingMetricArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -46,7 +46,7 @@ export interface GoogleLoggingMetricArgs {
   value_extractor?: string;
   bucket_options: GoogleLoggingMetricArgsBucketOptions;
   metric_descriptor: GoogleLoggingMetricArgsMetricDescriptor;
-  timeouts: GoogleLoggingMetricArgstimeouts;
+  timeouts: GoogleLoggingMetricArgsTimeouts;
 }
 export class google_logging_metric extends TerraformResource {
   readonly id?: string;

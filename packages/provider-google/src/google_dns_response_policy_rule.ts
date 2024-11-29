@@ -8,7 +8,7 @@ export interface GoogleDnsResponsePolicyRuleArgsLocalDataLocalDatas {
 export interface GoogleDnsResponsePolicyRuleArgsLocalData {
   local_datas: GoogleDnsResponsePolicyRuleArgsLocalDataLocalDatas;
 }
-export interface GoogleDnsResponsePolicyRuleArgstimeouts {
+export interface GoogleDnsResponsePolicyRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,7 +18,7 @@ export interface GoogleDnsResponsePolicyRuleArgs {
   response_policy: string;
   rule_name: string;
   local_data: GoogleDnsResponsePolicyRuleArgsLocalData;
-  timeouts: GoogleDnsResponsePolicyRuleArgstimeouts;
+  timeouts: GoogleDnsResponsePolicyRuleArgsTimeouts;
 }
 export class google_dns_response_policy_rule extends TerraformResource {
   readonly id?: string;

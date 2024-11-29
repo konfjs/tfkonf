@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleOrgPolicyCustomConstraintArgstimeouts {
+export interface GoogleOrgPolicyCustomConstraintArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleOrgPolicyCustomConstraintArgs {
   name: string;
   parent: string;
   resource_types: string[];
-  timeouts: GoogleOrgPolicyCustomConstraintArgstimeouts;
+  timeouts: GoogleOrgPolicyCustomConstraintArgsTimeouts;
 }
 export class google_org_policy_custom_constraint extends TerraformResource {
   readonly id?: string;

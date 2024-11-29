@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppmeshMeshArgsspecEgressFilter {
+export interface AwsAppmeshMeshArgsSpecEgressFilter {
   type?: string;
 }
-export interface AwsAppmeshMeshArgsspecServiceDiscovery {
+export interface AwsAppmeshMeshArgsSpecServiceDiscovery {
   ip_preference?: string;
 }
-export interface AwsAppmeshMeshArgsspec {
-  egress_filter: AwsAppmeshMeshArgsspecEgressFilter;
-  service_discovery: AwsAppmeshMeshArgsspecServiceDiscovery;
+export interface AwsAppmeshMeshArgsSpec {
+  egress_filter: AwsAppmeshMeshArgsSpecEgressFilter;
+  service_discovery: AwsAppmeshMeshArgsSpecServiceDiscovery;
 }
 export interface AwsAppmeshMeshArgs {
   name: string;
   tags?: {
     [key: string]: string;
   };
-  spec: AwsAppmeshMeshArgsspec;
+  spec: AwsAppmeshMeshArgsSpec;
 }
 export class aws_appmesh_mesh extends TerraformResource {
   readonly arn!: string;

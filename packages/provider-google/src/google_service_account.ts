@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleServiceAccountArgstimeouts {
+export interface GoogleServiceAccountArgsTimeouts {
   create?: string;
 }
 export interface GoogleServiceAccountArgs {
@@ -8,7 +8,7 @@ export interface GoogleServiceAccountArgs {
   description?: string;
   disabled?: boolean;
   display_name?: string;
-  timeouts: GoogleServiceAccountArgstimeouts;
+  timeouts: GoogleServiceAccountArgsTimeouts;
 }
 export class google_service_account extends TerraformResource {
   readonly email!: string;

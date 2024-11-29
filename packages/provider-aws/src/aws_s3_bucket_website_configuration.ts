@@ -9,11 +9,11 @@ export interface AwsS3BucketWebsiteConfigurationArgsRedirectAllRequestsTo {
   host_name: string;
   protocol?: string;
 }
-export interface AwsS3BucketWebsiteConfigurationArgsRoutingRulecondition {
+export interface AwsS3BucketWebsiteConfigurationArgsRoutingRuleCondition {
   http_error_code_returned_equals?: string;
   key_prefix_equals?: string;
 }
-export interface AwsS3BucketWebsiteConfigurationArgsRoutingRuleredirect {
+export interface AwsS3BucketWebsiteConfigurationArgsRoutingRuleRedirect {
   host_name?: string;
   http_redirect_code?: string;
   protocol?: string;
@@ -21,8 +21,8 @@ export interface AwsS3BucketWebsiteConfigurationArgsRoutingRuleredirect {
   replace_key_with?: string;
 }
 export interface AwsS3BucketWebsiteConfigurationArgsRoutingRule {
-  condition: AwsS3BucketWebsiteConfigurationArgsRoutingRulecondition;
-  redirect: AwsS3BucketWebsiteConfigurationArgsRoutingRuleredirect;
+  condition: AwsS3BucketWebsiteConfigurationArgsRoutingRuleCondition;
+  redirect: AwsS3BucketWebsiteConfigurationArgsRoutingRuleRedirect;
 }
 export interface AwsS3BucketWebsiteConfigurationArgs {
   bucket: string;

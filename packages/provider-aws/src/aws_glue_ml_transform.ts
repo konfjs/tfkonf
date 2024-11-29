@@ -5,15 +5,15 @@ export interface AwsGlueMlTransformArgsInputRecordTables {
   database_name: string;
   table_name: string;
 }
-export interface AwsGlueMlTransformArgsparametersFindMatchesParameters {
+export interface AwsGlueMlTransformArgsParametersFindMatchesParameters {
   accuracy_cost_trade_off?: number;
   enforce_provided_labels?: boolean;
   precision_recall_trade_off?: number;
   primary_key_column_name?: string;
 }
-export interface AwsGlueMlTransformArgsparameters {
+export interface AwsGlueMlTransformArgsParameters {
   transform_type: string;
-  find_matches_parameters: AwsGlueMlTransformArgsparametersFindMatchesParameters;
+  find_matches_parameters: AwsGlueMlTransformArgsParametersFindMatchesParameters;
 }
 export interface AwsGlueMlTransformArgs {
   description?: string;
@@ -27,7 +27,7 @@ export interface AwsGlueMlTransformArgs {
   timeout?: number;
   worker_type?: string;
   input_record_tables: AwsGlueMlTransformArgsInputRecordTables;
-  parameters: AwsGlueMlTransformArgsparameters;
+  parameters: AwsGlueMlTransformArgsParameters;
 }
 export class aws_glue_ml_transform extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketLoggingArgsTargetGrantgrantee {
+export interface AwsS3BucketLoggingArgsTargetGrantGrantee {
   email_address?: string;
   id?: string;
   type: string;
@@ -7,7 +7,7 @@ export interface AwsS3BucketLoggingArgsTargetGrantgrantee {
 }
 export interface AwsS3BucketLoggingArgsTargetGrant {
   permission: string;
-  grantee: AwsS3BucketLoggingArgsTargetGrantgrantee;
+  grantee: AwsS3BucketLoggingArgsTargetGrantGrantee;
 }
 export interface AwsS3BucketLoggingArgsTargetObjectKeyFormatPartitionedPrefix {
   partition_date_source: string;

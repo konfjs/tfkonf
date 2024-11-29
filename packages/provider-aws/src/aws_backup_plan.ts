@@ -5,19 +5,19 @@ export interface AwsBackupPlanArgsAdvancedBackupSetting {
   };
   resource_type: string;
 }
-export interface AwsBackupPlanArgsruleCopyActionlifecycle {
+export interface AwsBackupPlanArgsRuleCopyActionLifecycle {
   cold_storage_after?: number;
   delete_after?: number;
 }
-export interface AwsBackupPlanArgsruleCopyAction {
+export interface AwsBackupPlanArgsRuleCopyAction {
   destination_vault_arn: string;
-  lifecycle: AwsBackupPlanArgsruleCopyActionlifecycle;
+  lifecycle: AwsBackupPlanArgsRuleCopyActionLifecycle;
 }
-export interface AwsBackupPlanArgsrulelifecycle {
+export interface AwsBackupPlanArgsRuleLifecycle {
   cold_storage_after?: number;
   delete_after?: number;
 }
-export interface AwsBackupPlanArgsrule {
+export interface AwsBackupPlanArgsRule {
   completion_window?: number;
   enable_continuous_backup?: boolean;
   recovery_point_tags?: {
@@ -28,8 +28,8 @@ export interface AwsBackupPlanArgsrule {
   schedule_expression_timezone?: string;
   start_window?: number;
   target_vault_name: string;
-  copy_action: AwsBackupPlanArgsruleCopyAction;
-  lifecycle: AwsBackupPlanArgsrulelifecycle;
+  copy_action: AwsBackupPlanArgsRuleCopyAction;
+  lifecycle: AwsBackupPlanArgsRuleLifecycle;
 }
 export interface AwsBackupPlanArgs {
   name: string;
@@ -37,7 +37,7 @@ export interface AwsBackupPlanArgs {
     [key: string]: string;
   };
   advanced_backup_setting: AwsBackupPlanArgsAdvancedBackupSetting;
-  rule: AwsBackupPlanArgsrule;
+  rule: AwsBackupPlanArgsRule;
 }
 export class aws_backup_plan extends TerraformResource {
   readonly arn!: string;

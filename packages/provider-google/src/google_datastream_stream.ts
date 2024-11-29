@@ -51,20 +51,20 @@ export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsP
 export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjects {
   postgresql_schemas: GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas;
 }
-export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastablescolumns {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemasTablesColumns {
   column?: string;
   data_type?: string;
 }
-export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastables {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemasTables {
   table: string;
-  columns: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastablescolumns;
+  columns: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemasTablesColumns;
 }
-export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemas {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemas {
   schema: string;
-  tables: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastables;
+  tables: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemasTables;
 }
 export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjects {
-  schemas: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemas;
+  schemas: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsSchemas;
 }
 export interface GoogleDatastreamStreamArgsBackfillAll {
   mysql_excluded_objects: GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjects;
@@ -74,7 +74,7 @@ export interface GoogleDatastreamStreamArgsBackfillAll {
 }
 export interface GoogleDatastreamStreamArgsBackfillNone {}
 export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigAppendOnly {}
-export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigmerge {}
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigMerge {}
 export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSingleTargetDataset {
   dataset_id: string;
 }
@@ -89,7 +89,7 @@ export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationC
 export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfig {
   data_freshness?: string;
   append_only: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigAppendOnly;
-  merge: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigmerge;
+  merge: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigMerge;
   single_target_dataset: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSingleTargetDataset;
   source_hierarchy_datasets: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets;
 }
@@ -231,35 +231,35 @@ export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfig {
   include_objects: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjects;
 }
 export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigChangeTables {}
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastablescolumns {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns {
   column?: string;
   data_type?: string;
 }
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastables {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables {
   table: string;
-  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastablescolumns;
+  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTablesColumns;
 }
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemas {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemas {
   schema: string;
-  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastables;
+  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemasTables;
 }
 export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjects {
-  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemas;
+  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsSchemas;
 }
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastablescolumns {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns {
   column?: string;
   data_type?: string;
 }
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastables {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables {
   table: string;
-  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastablescolumns;
+  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTablesColumns;
 }
-export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemas {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemas {
   schema: string;
-  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastables;
+  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemasTables;
 }
 export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjects {
-  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemas;
+  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsSchemas;
 }
 export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigTransactionLogs {}
 export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfig {
@@ -275,7 +275,7 @@ export interface GoogleDatastreamStreamArgsSourceConfig {
   postgresql_source_config: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfig;
   sql_server_source_config: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfig;
 }
-export interface GoogleDatastreamStreamArgstimeouts {
+export interface GoogleDatastreamStreamArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -294,7 +294,7 @@ export interface GoogleDatastreamStreamArgs {
   backfill_none: GoogleDatastreamStreamArgsBackfillNone;
   destination_config: GoogleDatastreamStreamArgsDestinationConfig;
   source_config: GoogleDatastreamStreamArgsSourceConfig;
-  timeouts: GoogleDatastreamStreamArgstimeouts;
+  timeouts: GoogleDatastreamStreamArgsTimeouts;
 }
 export class google_datastream_stream extends TerraformResource {
   readonly effective_labels!: {

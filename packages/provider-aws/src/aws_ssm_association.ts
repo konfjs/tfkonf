@@ -4,7 +4,7 @@ export interface AwsSsmAssociationArgsOutputLocation {
   s3_key_prefix?: string;
   s3_region?: string;
 }
-export interface AwsSsmAssociationArgstargets {
+export interface AwsSsmAssociationArgsTargets {
   key: string;
   values: string[];
 }
@@ -24,7 +24,7 @@ export interface AwsSsmAssociationArgs {
   };
   wait_for_success_timeout_seconds?: number;
   output_location: AwsSsmAssociationArgsOutputLocation;
-  targets: AwsSsmAssociationArgstargets;
+  targets: AwsSsmAssociationArgsTargets;
 }
 export class aws_ssm_association extends TerraformResource {
   readonly arn!: string;

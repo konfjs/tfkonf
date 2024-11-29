@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMacie2InvitationAccepterArgstimeouts {
+export interface AwsMacie2InvitationAccepterArgsTimeouts {
   create?: string;
 }
 export interface AwsMacie2InvitationAccepterArgs {
   administrator_account_id: string;
-  timeouts: AwsMacie2InvitationAccepterArgstimeouts;
+  timeouts: AwsMacie2InvitationAccepterArgsTimeouts;
 }
 export class aws_macie2_invitation_accepter extends TerraformResource {
   readonly id?: string;

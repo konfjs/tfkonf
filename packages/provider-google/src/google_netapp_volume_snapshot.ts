@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetappVolumeSnapshotArgstimeouts {
+export interface GoogleNetappVolumeSnapshotArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleNetappVolumeSnapshotArgs {
   location: string;
   name: string;
   volume_name: string;
-  timeouts: GoogleNetappVolumeSnapshotArgstimeouts;
+  timeouts: GoogleNetappVolumeSnapshotArgsTimeouts;
 }
 export class google_netapp_volume_snapshot extends TerraformResource {
   readonly effective_labels!: {

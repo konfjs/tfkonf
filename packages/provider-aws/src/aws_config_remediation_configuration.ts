@@ -6,7 +6,7 @@ export interface AwsConfigRemediationConfigurationArgsExecutionControlsSsmContro
 export interface AwsConfigRemediationConfigurationArgsExecutionControls {
   ssm_controls: AwsConfigRemediationConfigurationArgsExecutionControlsSsmControls;
 }
-export interface AwsConfigRemediationConfigurationArgsparameter {
+export interface AwsConfigRemediationConfigurationArgsParameter {
   name: string;
   resource_value?: string;
   static_value?: string;
@@ -21,7 +21,7 @@ export interface AwsConfigRemediationConfigurationArgs {
   target_type: string;
   target_version?: string;
   execution_controls: AwsConfigRemediationConfigurationArgsExecutionControls;
-  parameter: AwsConfigRemediationConfigurationArgsparameter;
+  parameter: AwsConfigRemediationConfigurationArgsParameter;
 }
 export class aws_config_remediation_configuration extends TerraformResource {
   readonly arn!: string;

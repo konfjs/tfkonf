@@ -12,14 +12,14 @@ export interface AwsElbArgsHealthCheck {
   timeout: number;
   unhealthy_threshold: number;
 }
-export interface AwsElbArgslistener {
+export interface AwsElbArgsListener {
   instance_port: number;
   instance_protocol: string;
   lb_port: number;
   lb_protocol: string;
   ssl_certificate_id?: string;
 }
-export interface AwsElbArgstimeouts {
+export interface AwsElbArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -34,8 +34,8 @@ export interface AwsElbArgs {
   };
   access_logs: AwsElbArgsAccessLogs;
   health_check: AwsElbArgsHealthCheck;
-  listener: AwsElbArgslistener;
-  timeouts: AwsElbArgstimeouts;
+  listener: AwsElbArgsListener;
+  timeouts: AwsElbArgsTimeouts;
 }
 export class aws_elb extends TerraformResource {
   readonly arn!: string;

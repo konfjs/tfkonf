@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSecureSourceManagerRepositoryIamMemberArgscondition {
+export interface GoogleSecureSourceManagerRepositoryIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSecureSourceManagerRepositoryIamMemberArgs {
   member: string;
   repository_id: string;
   role: string;
-  condition: GoogleSecureSourceManagerRepositoryIamMemberArgscondition;
+  condition: GoogleSecureSourceManagerRepositoryIamMemberArgsCondition;
 }
 export class google_secure_source_manager_repository_iam_member extends TerraformResource {
   readonly etag!: string;

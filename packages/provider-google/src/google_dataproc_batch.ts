@@ -52,7 +52,7 @@ export interface GoogleDataprocBatchArgsSparkSqlBatch {
     [key: string]: string;
   };
 }
-export interface GoogleDataprocBatchArgstimeouts {
+export interface GoogleDataprocBatchArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -69,7 +69,7 @@ export interface GoogleDataprocBatchArgs {
   spark_batch: GoogleDataprocBatchArgsSparkBatch;
   spark_r_batch: GoogleDataprocBatchArgsSparkRBatch;
   spark_sql_batch: GoogleDataprocBatchArgsSparkSqlBatch;
-  timeouts: GoogleDataprocBatchArgstimeouts;
+  timeouts: GoogleDataprocBatchArgsTimeouts;
 }
 export class google_dataproc_batch extends TerraformResource {
   readonly create_time!: string;

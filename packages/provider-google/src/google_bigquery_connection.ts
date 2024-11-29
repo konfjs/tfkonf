@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryConnectionArgsawsAccessRole {
+export interface GoogleBigqueryConnectionArgsAwsAccessRole {
   iam_role_id: string;
 }
-export interface GoogleBigqueryConnectionArgsaws {
-  access_role: GoogleBigqueryConnectionArgsawsAccessRole;
+export interface GoogleBigqueryConnectionArgsAws {
+  access_role: GoogleBigqueryConnectionArgsAwsAccessRole;
 }
-export interface GoogleBigqueryConnectionArgsazure {
+export interface GoogleBigqueryConnectionArgsAzure {
   customer_tenant_id: string;
   federated_application_client_id?: string;
 }
@@ -18,7 +18,7 @@ export interface GoogleBigqueryConnectionArgsCloudSpanner {
   use_parallelism?: boolean;
   use_serverless_analytics?: boolean;
 }
-export interface GoogleBigqueryConnectionArgsCloudSqlcredential {
+export interface GoogleBigqueryConnectionArgsCloudSqlCredential {
   password: string;
   username: string;
 }
@@ -26,19 +26,19 @@ export interface GoogleBigqueryConnectionArgsCloudSql {
   database: string;
   instance_id: string;
   type: string;
-  credential: GoogleBigqueryConnectionArgsCloudSqlcredential;
+  credential: GoogleBigqueryConnectionArgsCloudSqlCredential;
 }
-export interface GoogleBigqueryConnectionArgssparkMetastoreServiceConfig {
+export interface GoogleBigqueryConnectionArgsSparkMetastoreServiceConfig {
   metastore_service?: string;
 }
-export interface GoogleBigqueryConnectionArgssparkSparkHistoryServerConfig {
+export interface GoogleBigqueryConnectionArgsSparkSparkHistoryServerConfig {
   dataproc_cluster?: string;
 }
-export interface GoogleBigqueryConnectionArgsspark {
-  metastore_service_config: GoogleBigqueryConnectionArgssparkMetastoreServiceConfig;
-  spark_history_server_config: GoogleBigqueryConnectionArgssparkSparkHistoryServerConfig;
+export interface GoogleBigqueryConnectionArgsSpark {
+  metastore_service_config: GoogleBigqueryConnectionArgsSparkMetastoreServiceConfig;
+  spark_history_server_config: GoogleBigqueryConnectionArgsSparkSparkHistoryServerConfig;
 }
-export interface GoogleBigqueryConnectionArgstimeouts {
+export interface GoogleBigqueryConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -48,13 +48,13 @@ export interface GoogleBigqueryConnectionArgs {
   friendly_name?: string;
   kms_key_name?: string;
   location?: string;
-  aws: GoogleBigqueryConnectionArgsaws;
-  azure: GoogleBigqueryConnectionArgsazure;
+  aws: GoogleBigqueryConnectionArgsAws;
+  azure: GoogleBigqueryConnectionArgsAzure;
   cloud_resource: GoogleBigqueryConnectionArgsCloudResource;
   cloud_spanner: GoogleBigqueryConnectionArgsCloudSpanner;
   cloud_sql: GoogleBigqueryConnectionArgsCloudSql;
-  spark: GoogleBigqueryConnectionArgsspark;
-  timeouts: GoogleBigqueryConnectionArgstimeouts;
+  spark: GoogleBigqueryConnectionArgsSpark;
+  timeouts: GoogleBigqueryConnectionArgsTimeouts;
 }
 export class google_bigquery_connection extends TerraformResource {
   readonly connection_id?: string;

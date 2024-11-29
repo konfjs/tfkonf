@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleVertexAiFeatureGroupFeatureArgstimeouts {
+export interface GoogleVertexAiFeatureGroupFeatureArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleVertexAiFeatureGroupFeatureArgs {
   };
   name: string;
   region: string;
-  timeouts: GoogleVertexAiFeatureGroupFeatureArgstimeouts;
+  timeouts: GoogleVertexAiFeatureGroupFeatureArgsTimeouts;
 }
 export class google_vertex_ai_feature_group_feature extends TerraformResource {
   readonly create_time!: string;

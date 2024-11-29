@@ -46,14 +46,14 @@ export interface AwsTransferWorkflowArgsOnExceptionStepsDeleteStepDetails {
   name?: string;
   source_file_location?: string;
 }
-export interface AwsTransferWorkflowArgsOnExceptionStepsTagStepDetailstags {
+export interface AwsTransferWorkflowArgsOnExceptionStepsTagStepDetailsTags {
   key: string;
   value: string;
 }
 export interface AwsTransferWorkflowArgsOnExceptionStepsTagStepDetails {
   name?: string;
   source_file_location?: string;
-  tags: AwsTransferWorkflowArgsOnExceptionStepsTagStepDetailstags;
+  tags: AwsTransferWorkflowArgsOnExceptionStepsTagStepDetailsTags;
 }
 export interface AwsTransferWorkflowArgsOnExceptionSteps {
   type: string;
@@ -63,69 +63,69 @@ export interface AwsTransferWorkflowArgsOnExceptionSteps {
   delete_step_details: AwsTransferWorkflowArgsOnExceptionStepsDeleteStepDetails;
   tag_step_details: AwsTransferWorkflowArgsOnExceptionStepsTagStepDetails;
 }
-export interface AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocationEfsFileLocation {
+export interface AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocationEfsFileLocation {
   file_system_id?: string;
   path?: string;
 }
-export interface AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocationS3FileLocation {
+export interface AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocationS3FileLocation {
   bucket?: string;
   key?: string;
 }
-export interface AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocation {
-  efs_file_location: AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocationEfsFileLocation;
-  s3_file_location: AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocationS3FileLocation;
+export interface AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocation {
+  efs_file_location: AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocationEfsFileLocation;
+  s3_file_location: AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocationS3FileLocation;
 }
-export interface AwsTransferWorkflowArgsstepsCopyStepDetails {
+export interface AwsTransferWorkflowArgsStepsCopyStepDetails {
   name?: string;
   overwrite_existing?: string;
   source_file_location?: string;
-  destination_file_location: AwsTransferWorkflowArgsstepsCopyStepDetailsDestinationFileLocation;
+  destination_file_location: AwsTransferWorkflowArgsStepsCopyStepDetailsDestinationFileLocation;
 }
-export interface AwsTransferWorkflowArgsstepsCustomStepDetails {
+export interface AwsTransferWorkflowArgsStepsCustomStepDetails {
   name?: string;
   source_file_location?: string;
   target?: string;
   timeout_seconds?: number;
 }
-export interface AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocationEfsFileLocation {
+export interface AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation {
   file_system_id?: string;
   path?: string;
 }
-export interface AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocationS3FileLocation {
+export interface AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocationS3FileLocation {
   bucket?: string;
   key?: string;
 }
-export interface AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocation {
-  efs_file_location: AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocationEfsFileLocation;
-  s3_file_location: AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocationS3FileLocation;
+export interface AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocation {
+  efs_file_location: AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocationEfsFileLocation;
+  s3_file_location: AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocationS3FileLocation;
 }
-export interface AwsTransferWorkflowArgsstepsDecryptStepDetails {
+export interface AwsTransferWorkflowArgsStepsDecryptStepDetails {
   name?: string;
   overwrite_existing?: string;
   source_file_location?: string;
   type: string;
-  destination_file_location: AwsTransferWorkflowArgsstepsDecryptStepDetailsDestinationFileLocation;
+  destination_file_location: AwsTransferWorkflowArgsStepsDecryptStepDetailsDestinationFileLocation;
 }
-export interface AwsTransferWorkflowArgsstepsDeleteStepDetails {
+export interface AwsTransferWorkflowArgsStepsDeleteStepDetails {
   name?: string;
   source_file_location?: string;
 }
-export interface AwsTransferWorkflowArgsstepsTagStepDetailstags {
+export interface AwsTransferWorkflowArgsStepsTagStepDetailsTags {
   key: string;
   value: string;
 }
-export interface AwsTransferWorkflowArgsstepsTagStepDetails {
+export interface AwsTransferWorkflowArgsStepsTagStepDetails {
   name?: string;
   source_file_location?: string;
-  tags: AwsTransferWorkflowArgsstepsTagStepDetailstags;
+  tags: AwsTransferWorkflowArgsStepsTagStepDetailsTags;
 }
-export interface AwsTransferWorkflowArgssteps {
+export interface AwsTransferWorkflowArgsSteps {
   type: string;
-  copy_step_details: AwsTransferWorkflowArgsstepsCopyStepDetails;
-  custom_step_details: AwsTransferWorkflowArgsstepsCustomStepDetails;
-  decrypt_step_details: AwsTransferWorkflowArgsstepsDecryptStepDetails;
-  delete_step_details: AwsTransferWorkflowArgsstepsDeleteStepDetails;
-  tag_step_details: AwsTransferWorkflowArgsstepsTagStepDetails;
+  copy_step_details: AwsTransferWorkflowArgsStepsCopyStepDetails;
+  custom_step_details: AwsTransferWorkflowArgsStepsCustomStepDetails;
+  decrypt_step_details: AwsTransferWorkflowArgsStepsDecryptStepDetails;
+  delete_step_details: AwsTransferWorkflowArgsStepsDeleteStepDetails;
+  tag_step_details: AwsTransferWorkflowArgsStepsTagStepDetails;
 }
 export interface AwsTransferWorkflowArgs {
   description?: string;
@@ -133,7 +133,7 @@ export interface AwsTransferWorkflowArgs {
     [key: string]: string;
   };
   on_exception_steps: AwsTransferWorkflowArgsOnExceptionSteps;
-  steps: AwsTransferWorkflowArgssteps;
+  steps: AwsTransferWorkflowArgsSteps;
 }
 export class aws_transfer_workflow extends TerraformResource {
   readonly arn!: string;

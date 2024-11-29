@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryConnectionIamMemberArgscondition {
+export interface GoogleBigqueryConnectionIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigqueryConnectionIamMemberArgs {
   connection_id: string;
   member: string;
   role: string;
-  condition: GoogleBigqueryConnectionIamMemberArgscondition;
+  condition: GoogleBigqueryConnectionIamMemberArgsCondition;
 }
 export class google_bigquery_connection_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudfrontKeyValueStoreArgstimeouts {
+export interface AwsCloudfrontKeyValueStoreArgsTimeouts {
   create?: string;
 }
 export interface AwsCloudfrontKeyValueStoreArgs {
   comment?: string;
   name: string;
-  timeouts: AwsCloudfrontKeyValueStoreArgstimeouts;
+  timeouts: AwsCloudfrontKeyValueStoreArgsTimeouts;
 }
 export class aws_cloudfront_key_value_store extends TerraformResource {
   readonly arn!: string;

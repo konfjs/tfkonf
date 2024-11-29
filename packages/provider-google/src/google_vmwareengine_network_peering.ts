@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleVmwareengineNetworkPeeringArgstimeouts {
+export interface GoogleVmwareengineNetworkPeeringArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleVmwareengineNetworkPeeringArgs {
   peer_network: string;
   peer_network_type: string;
   vmware_engine_network: string;
-  timeouts: GoogleVmwareengineNetworkPeeringArgstimeouts;
+  timeouts: GoogleVmwareengineNetworkPeeringArgsTimeouts;
 }
 export class google_vmwareengine_network_peering extends TerraformResource {
   readonly create_time!: string;

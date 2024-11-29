@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketOwnershipControlsArgsrule {
+export interface AwsS3BucketOwnershipControlsArgsRule {
   object_ownership: string;
 }
 export interface AwsS3BucketOwnershipControlsArgs {
   bucket: string;
-  rule: AwsS3BucketOwnershipControlsArgsrule;
+  rule: AwsS3BucketOwnershipControlsArgsRule;
 }
 export class aws_s3_bucket_ownership_controls extends TerraformResource {
   readonly id?: string;

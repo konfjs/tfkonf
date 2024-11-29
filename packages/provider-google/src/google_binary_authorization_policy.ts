@@ -13,7 +13,7 @@ export interface GoogleBinaryAuthorizationPolicyArgsDefaultAdmissionRule {
   evaluation_mode: string;
   require_attestations_by?: string[];
 }
-export interface GoogleBinaryAuthorizationPolicyArgstimeouts {
+export interface GoogleBinaryAuthorizationPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,7 +23,7 @@ export interface GoogleBinaryAuthorizationPolicyArgs {
   admission_whitelist_patterns: GoogleBinaryAuthorizationPolicyArgsAdmissionWhitelistPatterns;
   cluster_admission_rules: GoogleBinaryAuthorizationPolicyArgsClusterAdmissionRules;
   default_admission_rule: GoogleBinaryAuthorizationPolicyArgsDefaultAdmissionRule;
-  timeouts: GoogleBinaryAuthorizationPolicyArgstimeouts;
+  timeouts: GoogleBinaryAuthorizationPolicyArgsTimeouts;
 }
 export class google_binary_authorization_policy extends TerraformResource {
   readonly global_policy_evaluation_mode?: string;

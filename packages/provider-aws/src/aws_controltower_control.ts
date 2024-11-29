@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsControltowerControlArgsparameters {
+export interface AwsControltowerControlArgsParameters {
   key: string;
   value: string;
 }
-export interface AwsControltowerControlArgstimeouts {
+export interface AwsControltowerControlArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,8 +11,8 @@ export interface AwsControltowerControlArgstimeouts {
 export interface AwsControltowerControlArgs {
   control_identifier: string;
   target_identifier: string;
-  parameters: AwsControltowerControlArgsparameters;
-  timeouts: AwsControltowerControlArgstimeouts;
+  parameters: AwsControltowerControlArgsParameters;
+  timeouts: AwsControltowerControlArgsTimeouts;
 }
 export class aws_controltower_control extends TerraformResource {
   readonly arn!: string;

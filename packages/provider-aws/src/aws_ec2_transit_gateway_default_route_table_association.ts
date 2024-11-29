@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEc2TransitGatewayDefaultRouteTableAssociationArgstimeouts {
+export interface AwsEc2TransitGatewayDefaultRouteTableAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface AwsEc2TransitGatewayDefaultRouteTableAssociationArgstimeouts {
 export interface AwsEc2TransitGatewayDefaultRouteTableAssociationArgs {
   transit_gateway_id: string;
   transit_gateway_route_table_id: string;
-  timeouts: AwsEc2TransitGatewayDefaultRouteTableAssociationArgstimeouts;
+  timeouts: AwsEc2TransitGatewayDefaultRouteTableAssociationArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_default_route_table_association extends TerraformResource {
   readonly id!: string;

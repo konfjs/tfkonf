@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMskServerlessClusterArgsClientAuthenticationsasliam {
+export interface AwsMskServerlessClusterArgsClientAuthenticationSaslIam {
   enabled: boolean;
 }
-export interface AwsMskServerlessClusterArgsClientAuthenticationsasl {
-  iam: AwsMskServerlessClusterArgsClientAuthenticationsasliam;
+export interface AwsMskServerlessClusterArgsClientAuthenticationSasl {
+  iam: AwsMskServerlessClusterArgsClientAuthenticationSaslIam;
 }
 export interface AwsMskServerlessClusterArgsClientAuthentication {
-  sasl: AwsMskServerlessClusterArgsClientAuthenticationsasl;
+  sasl: AwsMskServerlessClusterArgsClientAuthenticationSasl;
 }
-export interface AwsMskServerlessClusterArgstimeouts {
+export interface AwsMskServerlessClusterArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -21,7 +21,7 @@ export interface AwsMskServerlessClusterArgs {
     [key: string]: string;
   };
   client_authentication: AwsMskServerlessClusterArgsClientAuthentication;
-  timeouts: AwsMskServerlessClusterArgstimeouts;
+  timeouts: AwsMskServerlessClusterArgsTimeouts;
   vpc_config: AwsMskServerlessClusterArgsVpcConfig;
 }
 export class aws_msk_serverless_cluster extends TerraformResource {

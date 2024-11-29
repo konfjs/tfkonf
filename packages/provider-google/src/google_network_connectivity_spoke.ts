@@ -10,14 +10,14 @@ export interface GoogleNetworkConnectivitySpokeArgsLinkedProducerVpcNetwork {
   network: string;
   peering: string;
 }
-export interface GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesinstances {
+export interface GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesInstances {
   ip_address?: string;
   virtual_machine?: string;
 }
 export interface GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstances {
   include_import_ranges?: string[];
   site_to_site_data_transfer: boolean;
-  instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesinstances;
+  instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstancesInstances;
 }
 export interface GoogleNetworkConnectivitySpokeArgsLinkedVpcNetwork {
   exclude_export_ranges?: string[];
@@ -29,7 +29,7 @@ export interface GoogleNetworkConnectivitySpokeArgsLinkedVpnTunnels {
   site_to_site_data_transfer: boolean;
   uris: string[];
 }
-export interface GoogleNetworkConnectivitySpokeArgstimeouts {
+export interface GoogleNetworkConnectivitySpokeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -47,7 +47,7 @@ export interface GoogleNetworkConnectivitySpokeArgs {
   linked_router_appliance_instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstances;
   linked_vpc_network: GoogleNetworkConnectivitySpokeArgsLinkedVpcNetwork;
   linked_vpn_tunnels: GoogleNetworkConnectivitySpokeArgsLinkedVpnTunnels;
-  timeouts: GoogleNetworkConnectivitySpokeArgstimeouts;
+  timeouts: GoogleNetworkConnectivitySpokeArgsTimeouts;
 }
 export class google_network_connectivity_spoke extends TerraformResource {
   readonly create_time!: string;

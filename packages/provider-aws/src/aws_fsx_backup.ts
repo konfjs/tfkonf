@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsFsxBackupArgstimeouts {
+export interface AwsFsxBackupArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsFsxBackupArgs {
     [key: string]: string;
   };
   volume_id?: string;
-  timeouts: AwsFsxBackupArgstimeouts;
+  timeouts: AwsFsxBackupArgsTimeouts;
 }
 export class aws_fsx_backup extends TerraformResource {
   readonly arn!: string;

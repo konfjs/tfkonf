@@ -3,16 +3,16 @@ export interface AwsCloudwatchEventConnectionArgsAuthParametersApiKey {
   key: string;
   value: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersbasic {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersBasic {
   password: string;
   username: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersbody {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersBody {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersheader {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersHeader {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
@@ -23,45 +23,45 @@ export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpPar
   value?: string;
 }
 export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParameters {
-  body: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersbody;
-  header: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersheader;
+  body: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersBody;
+  header: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersHeader;
   query_string: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersQueryString;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthClientParameters {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauthClientParameters {
   client_id: string;
   client_secret: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersbody {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersBody {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersheader {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersHeader {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersQueryString {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersQueryString {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParameters {
-  body: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersbody;
-  header: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersheader;
-  query_string: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersQueryString;
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParameters {
+  body: AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersBody;
+  header: AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersHeader;
+  query_string: AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParametersQueryString;
 }
-export interface AwsCloudwatchEventConnectionArgsAuthParametersoauth {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersOauth {
   authorization_endpoint: string;
   http_method: string;
-  client_parameters: AwsCloudwatchEventConnectionArgsAuthParametersoauthClientParameters;
-  oauth_http_parameters: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParameters;
+  client_parameters: AwsCloudwatchEventConnectionArgsAuthParametersOauthClientParameters;
+  oauth_http_parameters: AwsCloudwatchEventConnectionArgsAuthParametersOauthOauthHttpParameters;
 }
 export interface AwsCloudwatchEventConnectionArgsAuthParameters {
   api_key: AwsCloudwatchEventConnectionArgsAuthParametersApiKey;
-  basic: AwsCloudwatchEventConnectionArgsAuthParametersbasic;
+  basic: AwsCloudwatchEventConnectionArgsAuthParametersBasic;
   invocation_http_parameters: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParameters;
-  oauth: AwsCloudwatchEventConnectionArgsAuthParametersoauth;
+  oauth: AwsCloudwatchEventConnectionArgsAuthParametersOauth;
 }
 export interface AwsCloudwatchEventConnectionArgs {
   authorization_type: string;

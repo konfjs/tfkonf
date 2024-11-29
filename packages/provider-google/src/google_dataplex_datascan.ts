@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataplexDatascanArgsdata {
+export interface GoogleDataplexDatascanArgsData {
   entity?: string;
   resource?: string;
 }
@@ -28,72 +28,72 @@ export interface GoogleDataplexDatascanArgsDataQualitySpecPostScanActionsBigquer
 export interface GoogleDataplexDatascanArgsDataQualitySpecPostScanActions {
   bigquery_export: GoogleDataplexDatascanArgsDataQualitySpecPostScanActionsBigqueryExport;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesNonNullExpectation {}
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesRangeExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesNonNullExpectation {}
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesRangeExpectation {
   max_value?: string;
   min_value?: string;
   strict_max_enabled?: boolean;
   strict_min_enabled?: boolean;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesRegexExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesRegexExpectation {
   regex: string;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesRowConditionExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesRowConditionExpectation {
   sql_expression: string;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesSetExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesSetExpectation {
   values: string[];
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesSqlAssertion {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesSqlAssertion {
   sql_statement: string;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesStatisticRangeExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesStatisticRangeExpectation {
   max_value?: string;
   min_value?: string;
   statistic: string;
   strict_max_enabled?: boolean;
   strict_min_enabled?: boolean;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesTableConditionExpectation {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesTableConditionExpectation {
   sql_expression: string;
 }
-export interface GoogleDataplexDatascanArgsDataQualitySpecrulesUniquenessExpectation {}
-export interface GoogleDataplexDatascanArgsDataQualitySpecrules {
+export interface GoogleDataplexDatascanArgsDataQualitySpecRulesUniquenessExpectation {}
+export interface GoogleDataplexDatascanArgsDataQualitySpecRules {
   column?: string;
   description?: string;
   dimension: string;
   ignore_null?: boolean;
   name?: string;
   threshold?: number;
-  non_null_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesNonNullExpectation;
-  range_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesRangeExpectation;
-  regex_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesRegexExpectation;
-  row_condition_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesRowConditionExpectation;
-  set_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesSetExpectation;
-  sql_assertion: GoogleDataplexDatascanArgsDataQualitySpecrulesSqlAssertion;
-  statistic_range_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesStatisticRangeExpectation;
-  table_condition_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesTableConditionExpectation;
-  uniqueness_expectation: GoogleDataplexDatascanArgsDataQualitySpecrulesUniquenessExpectation;
+  non_null_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesNonNullExpectation;
+  range_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesRangeExpectation;
+  regex_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesRegexExpectation;
+  row_condition_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesRowConditionExpectation;
+  set_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesSetExpectation;
+  sql_assertion: GoogleDataplexDatascanArgsDataQualitySpecRulesSqlAssertion;
+  statistic_range_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesStatisticRangeExpectation;
+  table_condition_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesTableConditionExpectation;
+  uniqueness_expectation: GoogleDataplexDatascanArgsDataQualitySpecRulesUniquenessExpectation;
 }
 export interface GoogleDataplexDatascanArgsDataQualitySpec {
   row_filter?: string;
   sampling_percent?: number;
   post_scan_actions: GoogleDataplexDatascanArgsDataQualitySpecPostScanActions;
-  rules: GoogleDataplexDatascanArgsDataQualitySpecrules;
+  rules: GoogleDataplexDatascanArgsDataQualitySpecRules;
 }
-export interface GoogleDataplexDatascanArgsExecutionSpectriggerOnDemand {}
-export interface GoogleDataplexDatascanArgsExecutionSpectriggerschedule {
+export interface GoogleDataplexDatascanArgsExecutionSpecTriggerOnDemand {}
+export interface GoogleDataplexDatascanArgsExecutionSpecTriggerSchedule {
   cron: string;
 }
-export interface GoogleDataplexDatascanArgsExecutionSpectrigger {
-  on_demand: GoogleDataplexDatascanArgsExecutionSpectriggerOnDemand;
-  schedule: GoogleDataplexDatascanArgsExecutionSpectriggerschedule;
+export interface GoogleDataplexDatascanArgsExecutionSpecTrigger {
+  on_demand: GoogleDataplexDatascanArgsExecutionSpecTriggerOnDemand;
+  schedule: GoogleDataplexDatascanArgsExecutionSpecTriggerSchedule;
 }
 export interface GoogleDataplexDatascanArgsExecutionSpec {
   field?: string;
-  trigger: GoogleDataplexDatascanArgsExecutionSpectrigger;
+  trigger: GoogleDataplexDatascanArgsExecutionSpecTrigger;
 }
-export interface GoogleDataplexDatascanArgstimeouts {
+export interface GoogleDataplexDatascanArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -106,11 +106,11 @@ export interface GoogleDataplexDatascanArgs {
     [key: string]: string;
   };
   location: string;
-  data: GoogleDataplexDatascanArgsdata;
+  data: GoogleDataplexDatascanArgsData;
   data_profile_spec: GoogleDataplexDatascanArgsDataProfileSpec;
   data_quality_spec: GoogleDataplexDatascanArgsDataQualitySpec;
   execution_spec: GoogleDataplexDatascanArgsExecutionSpec;
-  timeouts: GoogleDataplexDatascanArgstimeouts;
+  timeouts: GoogleDataplexDatascanArgsTimeouts;
 }
 export class google_dataplex_datascan extends TerraformResource {
   readonly create_time!: string;

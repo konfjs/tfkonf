@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsPinpointsmsvoicev2PhoneNumberArgstimeouts {
+export interface AwsPinpointsmsvoicev2PhoneNumberArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsPinpointsmsvoicev2PhoneNumberArgs {
     [key: string]: string;
   };
   two_way_channel_arn?: string;
-  timeouts: AwsPinpointsmsvoicev2PhoneNumberArgstimeouts;
+  timeouts: AwsPinpointsmsvoicev2PhoneNumberArgsTimeouts;
 }
 export class aws_pinpointsmsvoicev2_phone_number extends TerraformResource {
   readonly arn!: string;

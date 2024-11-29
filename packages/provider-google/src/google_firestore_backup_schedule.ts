@@ -1,6 +1,6 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleFirestoreBackupScheduleArgsDailyRecurrence {}
-export interface GoogleFirestoreBackupScheduleArgstimeouts {
+export interface GoogleFirestoreBackupScheduleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleFirestoreBackupScheduleArgs {
   database?: string;
   retention: string;
   daily_recurrence: GoogleFirestoreBackupScheduleArgsDailyRecurrence;
-  timeouts: GoogleFirestoreBackupScheduleArgstimeouts;
+  timeouts: GoogleFirestoreBackupScheduleArgsTimeouts;
   weekly_recurrence: GoogleFirestoreBackupScheduleArgsWeeklyRecurrence;
 }
 export class google_firestore_backup_schedule extends TerraformResource {

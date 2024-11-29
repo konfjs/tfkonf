@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSecurityhubConfigurationPolicyAssociationArgstimeouts {
+export interface AwsSecurityhubConfigurationPolicyAssociationArgsTimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsSecurityhubConfigurationPolicyAssociationArgs {
   policy_id: string;
   target_id: string;
-  timeouts: AwsSecurityhubConfigurationPolicyAssociationArgstimeouts;
+  timeouts: AwsSecurityhubConfigurationPolicyAssociationArgsTimeouts;
 }
 export class aws_securityhub_configuration_policy_association extends TerraformResource {
   readonly id?: string;

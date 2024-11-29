@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsConfigConfigRuleArgsEvaluationMode {}
-export interface AwsConfigConfigRuleArgsscope {
+export interface AwsConfigConfigRuleArgsScope {
   compliance_resource_id?: string;
   compliance_resource_types?: string[];
   tag_key?: string;
   tag_value?: string;
 }
-export interface AwsConfigConfigRuleArgssourceCustomPolicyDetails {
+export interface AwsConfigConfigRuleArgsSourceCustomPolicyDetails {
   enable_debug_log_delivery?: boolean;
   policy_runtime: string;
   policy_text: string;
 }
-export interface AwsConfigConfigRuleArgssourceSourceDetail {
+export interface AwsConfigConfigRuleArgsSourceSourceDetail {
   event_source?: string;
   maximum_execution_frequency?: string;
   message_type?: string;
 }
-export interface AwsConfigConfigRuleArgssource {
+export interface AwsConfigConfigRuleArgsSource {
   owner: string;
   source_identifier?: string;
-  custom_policy_details: AwsConfigConfigRuleArgssourceCustomPolicyDetails;
-  source_detail: AwsConfigConfigRuleArgssourceSourceDetail;
+  custom_policy_details: AwsConfigConfigRuleArgsSourceCustomPolicyDetails;
+  source_detail: AwsConfigConfigRuleArgsSourceSourceDetail;
 }
 export interface AwsConfigConfigRuleArgs {
   description?: string;
@@ -31,8 +31,8 @@ export interface AwsConfigConfigRuleArgs {
     [key: string]: string;
   };
   evaluation_mode: AwsConfigConfigRuleArgsEvaluationMode;
-  scope: AwsConfigConfigRuleArgsscope;
-  source: AwsConfigConfigRuleArgssource;
+  scope: AwsConfigConfigRuleArgsScope;
+  source: AwsConfigConfigRuleArgsSource;
 }
 export class aws_config_config_rule extends TerraformResource {
   readonly arn!: string;

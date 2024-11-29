@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsmincidentsReplicationSetArgsregion {
+export interface AwsSsmincidentsReplicationSetArgsRegion {
   kms_key_arn?: string;
   name: string;
 }
-export interface AwsSsmincidentsReplicationSetArgstimeouts {
+export interface AwsSsmincidentsReplicationSetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface AwsSsmincidentsReplicationSetArgs {
   tags?: {
     [key: string]: string;
   };
-  region: AwsSsmincidentsReplicationSetArgsregion;
-  timeouts: AwsSsmincidentsReplicationSetArgstimeouts;
+  region: AwsSsmincidentsReplicationSetArgsRegion;
+  timeouts: AwsSsmincidentsReplicationSetArgsTimeouts;
 }
 export class aws_ssmincidents_replication_set extends TerraformResource {
   readonly arn!: string;

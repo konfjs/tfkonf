@@ -15,7 +15,7 @@ export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNode
   };
   node_ip?: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigtaints {
+export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints {
   effect?: string;
   key?: string;
   value?: string;
@@ -23,7 +23,7 @@ export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNode
 export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfig {
   operating_system?: string;
   node_configs: GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigNodeConfigs;
-  taints: GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigtaints;
+  taints: GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfigTaints;
 }
 export interface GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfig {
   node_pool_config: GoogleGkeonpremBareMetalClusterArgsControlPlaneControlPlaneNodePoolConfigNodePoolConfig;
@@ -54,7 +54,7 @@ export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadB
   };
   node_ip?: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigtaints {
+export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints {
   effect?: string;
   key?: string;
   value?: string;
@@ -66,7 +66,7 @@ export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadB
   operating_system?: string;
   kubelet_config: GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigKubeletConfig;
   node_configs: GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs;
-  taints: GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigtaints;
+  taints: GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints;
 }
 export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfig {
   node_pool_config: GoogleGkeonpremBareMetalClusterArgsLoadBalancerBgpLbConfigLoadBalancerNodePoolConfigNodePoolConfig;
@@ -92,14 +92,14 @@ export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoa
   };
   node_ip?: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigtaints {
+export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints {
   effect?: string;
   key?: string;
   value?: string;
 }
 export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig {
   node_configs: GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigNodeConfigs;
-  taints: GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigtaints;
+  taints: GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfigTaints;
 }
 export interface GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfig {
   node_pool_config: GoogleGkeonpremBareMetalClusterArgsLoadBalancerMetalLbConfigLoadBalancerNodePoolConfigNodePoolConfig;
@@ -146,36 +146,36 @@ export interface GoogleGkeonpremBareMetalClusterArgsNodeConfig {}
 export interface GoogleGkeonpremBareMetalClusterArgsOsEnvironmentConfig {
   package_repo_excluded: boolean;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsproxy {
+export interface GoogleGkeonpremBareMetalClusterArgsProxy {
   no_proxy?: string[];
   uri: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsSecurityConfigauthorizationAdminUsers {
+export interface GoogleGkeonpremBareMetalClusterArgsSecurityConfigAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsSecurityConfigauthorization {
-  admin_users: GoogleGkeonpremBareMetalClusterArgsSecurityConfigauthorizationAdminUsers;
+export interface GoogleGkeonpremBareMetalClusterArgsSecurityConfigAuthorization {
+  admin_users: GoogleGkeonpremBareMetalClusterArgsSecurityConfigAuthorizationAdminUsers;
 }
 export interface GoogleGkeonpremBareMetalClusterArgsSecurityConfig {
-  authorization: GoogleGkeonpremBareMetalClusterArgsSecurityConfigauthorization;
+  authorization: GoogleGkeonpremBareMetalClusterArgsSecurityConfigAuthorization;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsstorageLvpNodeMountsConfig {
+export interface GoogleGkeonpremBareMetalClusterArgsStorageLvpNodeMountsConfig {
   path: string;
   storage_class: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsstorageLvpShareConfigLvpConfig {
+export interface GoogleGkeonpremBareMetalClusterArgsStorageLvpShareConfigLvpConfig {
   path: string;
   storage_class: string;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsstorageLvpShareConfig {
+export interface GoogleGkeonpremBareMetalClusterArgsStorageLvpShareConfig {
   shared_path_pv_count?: number;
-  lvp_config: GoogleGkeonpremBareMetalClusterArgsstorageLvpShareConfigLvpConfig;
+  lvp_config: GoogleGkeonpremBareMetalClusterArgsStorageLvpShareConfigLvpConfig;
 }
-export interface GoogleGkeonpremBareMetalClusterArgsstorage {
-  lvp_node_mounts_config: GoogleGkeonpremBareMetalClusterArgsstorageLvpNodeMountsConfig;
-  lvp_share_config: GoogleGkeonpremBareMetalClusterArgsstorageLvpShareConfig;
+export interface GoogleGkeonpremBareMetalClusterArgsStorage {
+  lvp_node_mounts_config: GoogleGkeonpremBareMetalClusterArgsStorageLvpNodeMountsConfig;
+  lvp_share_config: GoogleGkeonpremBareMetalClusterArgsStorageLvpShareConfig;
 }
-export interface GoogleGkeonpremBareMetalClusterArgstimeouts {
+export interface GoogleGkeonpremBareMetalClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -201,10 +201,10 @@ export interface GoogleGkeonpremBareMetalClusterArgs {
   node_access_config: GoogleGkeonpremBareMetalClusterArgsNodeAccessConfig;
   node_config: GoogleGkeonpremBareMetalClusterArgsNodeConfig;
   os_environment_config: GoogleGkeonpremBareMetalClusterArgsOsEnvironmentConfig;
-  proxy: GoogleGkeonpremBareMetalClusterArgsproxy;
+  proxy: GoogleGkeonpremBareMetalClusterArgsProxy;
   security_config: GoogleGkeonpremBareMetalClusterArgsSecurityConfig;
-  storage: GoogleGkeonpremBareMetalClusterArgsstorage;
-  timeouts: GoogleGkeonpremBareMetalClusterArgstimeouts;
+  storage: GoogleGkeonpremBareMetalClusterArgsStorage;
+  timeouts: GoogleGkeonpremBareMetalClusterArgsTimeouts;
   upgrade_policy: GoogleGkeonpremBareMetalClusterArgsUpgradePolicy;
 }
 export class google_gkeonprem_bare_metal_cluster extends TerraformResource {

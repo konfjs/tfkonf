@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNeptuneParameterGroupArgsparameter {
+export interface AwsNeptuneParameterGroupArgsParameter {
   apply_method?: string;
   name: string;
   value: string;
@@ -10,7 +10,7 @@ export interface AwsNeptuneParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: AwsNeptuneParameterGroupArgsparameter;
+  parameter: AwsNeptuneParameterGroupArgsParameter;
 }
 export class aws_neptune_parameter_group extends TerraformResource {
   readonly arn!: string;

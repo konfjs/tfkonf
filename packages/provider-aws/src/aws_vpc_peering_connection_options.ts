@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpcPeeringConnectionOptionsArgsaccepter {
+export interface AwsVpcPeeringConnectionOptionsArgsAccepter {
   allow_remote_vpc_dns_resolution?: boolean;
 }
-export interface AwsVpcPeeringConnectionOptionsArgsrequester {
+export interface AwsVpcPeeringConnectionOptionsArgsRequester {
   allow_remote_vpc_dns_resolution?: boolean;
 }
 export interface AwsVpcPeeringConnectionOptionsArgs {
   vpc_peering_connection_id: string;
-  accepter: AwsVpcPeeringConnectionOptionsArgsaccepter;
-  requester: AwsVpcPeeringConnectionOptionsArgsrequester;
+  accepter: AwsVpcPeeringConnectionOptionsArgsAccepter;
+  requester: AwsVpcPeeringConnectionOptionsArgsRequester;
 }
 export class aws_vpc_peering_connection_options extends TerraformResource {
   readonly id?: string;

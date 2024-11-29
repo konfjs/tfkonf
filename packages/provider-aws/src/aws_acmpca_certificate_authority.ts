@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationsubject {
+export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationSubject {
   common_name?: string;
   country?: string;
   distinguished_name_qualifier?: string;
@@ -17,7 +17,7 @@ export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurat
 export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfiguration {
   key_algorithm: string;
   signing_algorithm: string;
-  subject: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationsubject;
+  subject: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationSubject;
 }
 export interface AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationCrlConfiguration {
   custom_cname?: string;
@@ -33,7 +33,7 @@ export interface AwsAcmpcaCertificateAuthorityArgsRevocationConfiguration {
   crl_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationCrlConfiguration;
   ocsp_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationOcspConfiguration;
 }
-export interface AwsAcmpcaCertificateAuthorityArgstimeouts {
+export interface AwsAcmpcaCertificateAuthorityArgsTimeouts {
   create?: string;
 }
 export interface AwsAcmpcaCertificateAuthorityArgs {
@@ -45,7 +45,7 @@ export interface AwsAcmpcaCertificateAuthorityArgs {
   type?: string;
   certificate_authority_configuration: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfiguration;
   revocation_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfiguration;
-  timeouts: AwsAcmpcaCertificateAuthorityArgstimeouts;
+  timeouts: AwsAcmpcaCertificateAuthorityArgsTimeouts;
 }
 export class aws_acmpca_certificate_authority extends TerraformResource {
   readonly arn!: string;

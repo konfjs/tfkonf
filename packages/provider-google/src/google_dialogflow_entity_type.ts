@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDialogflowEntityTypeArgsentities {
+export interface GoogleDialogflowEntityTypeArgsEntities {
   synonyms: string[];
   value: string;
 }
-export interface GoogleDialogflowEntityTypeArgstimeouts {
+export interface GoogleDialogflowEntityTypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface GoogleDialogflowEntityTypeArgs {
   display_name: string;
   enable_fuzzy_extraction?: boolean;
   kind: string;
-  entities: GoogleDialogflowEntityTypeArgsentities;
-  timeouts: GoogleDialogflowEntityTypeArgstimeouts;
+  entities: GoogleDialogflowEntityTypeArgsEntities;
+  timeouts: GoogleDialogflowEntityTypeArgsTimeouts;
 }
 export class google_dialogflow_entity_type extends TerraformResource {
   readonly id?: string;

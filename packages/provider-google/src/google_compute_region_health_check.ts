@@ -51,7 +51,7 @@ export interface GoogleComputeRegionHealthCheckArgsTcpHealthCheck {
   request?: string;
   response?: string;
 }
-export interface GoogleComputeRegionHealthCheckArgstimeouts {
+export interface GoogleComputeRegionHealthCheckArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -70,7 +70,7 @@ export interface GoogleComputeRegionHealthCheckArgs {
   log_config: GoogleComputeRegionHealthCheckArgsLogConfig;
   ssl_health_check: GoogleComputeRegionHealthCheckArgsSslHealthCheck;
   tcp_health_check: GoogleComputeRegionHealthCheckArgsTcpHealthCheck;
-  timeouts: GoogleComputeRegionHealthCheckArgstimeouts;
+  timeouts: GoogleComputeRegionHealthCheckArgsTimeouts;
 }
 export class google_compute_region_health_check extends TerraformResource {
   readonly creation_timestamp!: string;

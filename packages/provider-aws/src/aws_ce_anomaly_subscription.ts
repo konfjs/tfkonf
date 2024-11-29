@@ -1,90 +1,90 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCeAnomalySubscriptionArgssubscriber {
+export interface AwsCeAnomalySubscriptionArgsSubscriber {
   address: string;
   type: string;
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionandCostCategory {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionAndCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionanddimension {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionAndDimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionandtags {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionAndTags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionand {
-  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionandCostCategory;
-  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionanddimension;
-  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionandtags;
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionAnd {
+  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionAndCostCategory;
+  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionAndDimension;
+  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionAndTags;
 }
 export interface AwsCeAnomalySubscriptionArgsThresholdExpressionCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressiondimension {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionDimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionnotCostCategory {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionNotCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionnotdimension {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionNotDimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionnottags {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionNotTags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionnot {
-  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionnotCostCategory;
-  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionnotdimension;
-  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionnottags;
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionNot {
+  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionNotCostCategory;
+  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionNotDimension;
+  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionNotTags;
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionorCostCategory {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionOrCostCategory {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionordimension {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionOrDimension {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionortags {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionOrTags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressionor {
-  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionorCostCategory;
-  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionordimension;
-  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionortags;
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionOr {
+  cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionOrCostCategory;
+  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionOrDimension;
+  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionOrTags;
 }
-export interface AwsCeAnomalySubscriptionArgsThresholdExpressiontags {
+export interface AwsCeAnomalySubscriptionArgsThresholdExpressionTags {
   key?: string;
   match_options?: string[];
   values?: string[];
 }
 export interface AwsCeAnomalySubscriptionArgsThresholdExpression {
-  and: AwsCeAnomalySubscriptionArgsThresholdExpressionand;
+  and: AwsCeAnomalySubscriptionArgsThresholdExpressionAnd;
   cost_category: AwsCeAnomalySubscriptionArgsThresholdExpressionCostCategory;
-  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressiondimension;
-  not: AwsCeAnomalySubscriptionArgsThresholdExpressionnot;
-  or: AwsCeAnomalySubscriptionArgsThresholdExpressionor;
-  tags: AwsCeAnomalySubscriptionArgsThresholdExpressiontags;
+  dimension: AwsCeAnomalySubscriptionArgsThresholdExpressionDimension;
+  not: AwsCeAnomalySubscriptionArgsThresholdExpressionNot;
+  or: AwsCeAnomalySubscriptionArgsThresholdExpressionOr;
+  tags: AwsCeAnomalySubscriptionArgsThresholdExpressionTags;
 }
 export interface AwsCeAnomalySubscriptionArgs {
   frequency: string;
@@ -93,7 +93,7 @@ export interface AwsCeAnomalySubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  subscriber: AwsCeAnomalySubscriptionArgssubscriber;
+  subscriber: AwsCeAnomalySubscriptionArgsSubscriber;
   threshold_expression: AwsCeAnomalySubscriptionArgsThresholdExpression;
 }
 export class aws_ce_anomaly_subscription extends TerraformResource {

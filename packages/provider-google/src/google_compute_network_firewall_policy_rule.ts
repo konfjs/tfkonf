@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatchLayer4Configs {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsMatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];
 }
-export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatchSrcSecureTags {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsMatchSrcSecureTags {
   name?: string;
 }
-export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatch {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsMatch {
   dest_address_groups?: string[];
   dest_fqdns?: string[];
   dest_ip_ranges?: string[];
@@ -17,13 +17,13 @@ export interface GoogleComputeNetworkFirewallPolicyRuleArgsmatch {
   src_ip_ranges?: string[];
   src_region_codes?: string[];
   src_threat_intelligences?: string[];
-  layer4_configs: GoogleComputeNetworkFirewallPolicyRuleArgsmatchLayer4Configs;
-  src_secure_tags: GoogleComputeNetworkFirewallPolicyRuleArgsmatchSrcSecureTags;
+  layer4_configs: GoogleComputeNetworkFirewallPolicyRuleArgsMatchLayer4Configs;
+  src_secure_tags: GoogleComputeNetworkFirewallPolicyRuleArgsMatchSrcSecureTags;
 }
 export interface GoogleComputeNetworkFirewallPolicyRuleArgsTargetSecureTags {
   name?: string;
 }
-export interface GoogleComputeNetworkFirewallPolicyRuleArgstimeouts {
+export interface GoogleComputeNetworkFirewallPolicyRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,9 +40,9 @@ export interface GoogleComputeNetworkFirewallPolicyRuleArgs {
   security_profile_group?: string;
   target_service_accounts?: string[];
   tls_inspect?: boolean;
-  match: GoogleComputeNetworkFirewallPolicyRuleArgsmatch;
+  match: GoogleComputeNetworkFirewallPolicyRuleArgsMatch;
   target_secure_tags: GoogleComputeNetworkFirewallPolicyRuleArgsTargetSecureTags;
-  timeouts: GoogleComputeNetworkFirewallPolicyRuleArgstimeouts;
+  timeouts: GoogleComputeNetworkFirewallPolicyRuleArgsTimeouts;
 }
 export class google_compute_network_firewall_policy_rule extends TerraformResource {
   readonly creation_timestamp!: string;

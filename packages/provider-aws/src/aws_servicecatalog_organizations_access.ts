@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsServicecatalogOrganizationsAccessArgstimeouts {
+export interface AwsServicecatalogOrganizationsAccessArgsTimeouts {
   read?: string;
 }
 export interface AwsServicecatalogOrganizationsAccessArgs {
   enabled: boolean;
-  timeouts: AwsServicecatalogOrganizationsAccessArgstimeouts;
+  timeouts: AwsServicecatalogOrganizationsAccessArgsTimeouts;
 }
 export class aws_servicecatalog_organizations_access extends TerraformResource {
   readonly id?: string;

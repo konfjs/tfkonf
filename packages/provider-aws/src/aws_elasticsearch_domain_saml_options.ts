@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsElasticsearchDomainSamlOptionsArgsSamlOptionsidp {
+export interface AwsElasticsearchDomainSamlOptionsArgsSamlOptionsIdp {
   entity_id: string;
   metadata_content: string;
 }
@@ -10,16 +10,16 @@ export interface AwsElasticsearchDomainSamlOptionsArgsSamlOptions {
   roles_key?: string;
   session_timeout_minutes?: number;
   subject_key?: string;
-  idp: AwsElasticsearchDomainSamlOptionsArgsSamlOptionsidp;
+  idp: AwsElasticsearchDomainSamlOptionsArgsSamlOptionsIdp;
 }
-export interface AwsElasticsearchDomainSamlOptionsArgstimeouts {
+export interface AwsElasticsearchDomainSamlOptionsArgsTimeouts {
   delete?: string;
   update?: string;
 }
 export interface AwsElasticsearchDomainSamlOptionsArgs {
   domain_name: string;
   saml_options: AwsElasticsearchDomainSamlOptionsArgsSamlOptions;
-  timeouts: AwsElasticsearchDomainSamlOptionsArgstimeouts;
+  timeouts: AwsElasticsearchDomainSamlOptionsArgsTimeouts;
 }
 export class aws_elasticsearch_domain_saml_options extends TerraformResource {
   readonly id?: string;

@@ -5,7 +5,7 @@ export interface AwsDirectoryServiceDirectoryArgsConnectSettings {
   subnet_ids: string[];
   vpc_id: string;
 }
-export interface AwsDirectoryServiceDirectoryArgstimeouts {
+export interface AwsDirectoryServiceDirectoryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,7 +24,7 @@ export interface AwsDirectoryServiceDirectoryArgs {
   };
   type?: string;
   connect_settings: AwsDirectoryServiceDirectoryArgsConnectSettings;
-  timeouts: AwsDirectoryServiceDirectoryArgstimeouts;
+  timeouts: AwsDirectoryServiceDirectoryArgsTimeouts;
   vpc_settings: AwsDirectoryServiceDirectoryArgsVpcSettings;
 }
 export class aws_directory_service_directory extends TerraformResource {

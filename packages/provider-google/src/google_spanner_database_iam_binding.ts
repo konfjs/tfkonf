@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSpannerDatabaseIamBindingArgscondition {
+export interface GoogleSpannerDatabaseIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleSpannerDatabaseIamBindingArgs {
   instance: string;
   members: string[];
   role: string;
-  condition: GoogleSpannerDatabaseIamBindingArgscondition;
+  condition: GoogleSpannerDatabaseIamBindingArgsCondition;
 }
 export class google_spanner_database_iam_binding extends TerraformResource {
   readonly etag!: string;

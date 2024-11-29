@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCodecatalystSourceRepositoryArgstimeouts {
+export interface AwsCodecatalystSourceRepositoryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsCodecatalystSourceRepositoryArgs {
   name: string;
   project_name: string;
   space_name: string;
-  timeouts: AwsCodecatalystSourceRepositoryArgstimeouts;
+  timeouts: AwsCodecatalystSourceRepositoryArgsTimeouts;
 }
 export class aws_codecatalyst_source_repository extends TerraformResource {
   readonly id?: string;

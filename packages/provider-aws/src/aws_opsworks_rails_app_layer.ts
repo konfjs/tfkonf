@@ -25,7 +25,7 @@ export interface AwsOpsworksRailsAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksRailsAppLayerArgs {
   app_server?: string;

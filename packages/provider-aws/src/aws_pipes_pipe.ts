@@ -31,12 +31,12 @@ export interface AwsPipesPipeArgsLogConfiguration {
   firehose_log_destination: AwsPipesPipeArgsLogConfigurationFirehoseLogDestination;
   s3_log_destination: AwsPipesPipeArgsLogConfigurationS3LogDestination;
 }
-export interface AwsPipesPipeArgsSourceParametersActivemqBrokerParameterscredentials {
+export interface AwsPipesPipeArgsSourceParametersActivemqBrokerParametersCredentials {
   basic_auth: string;
 }
 export interface AwsPipesPipeArgsSourceParametersActivemqBrokerParameters {
   queue_name: string;
-  credentials: AwsPipesPipeArgsSourceParametersActivemqBrokerParameterscredentials;
+  credentials: AwsPipesPipeArgsSourceParametersActivemqBrokerParametersCredentials;
 }
 export interface AwsPipesPipeArgsSourceParametersDynamodbStreamParametersDeadLetterConfig {
   arn?: string;
@@ -47,11 +47,11 @@ export interface AwsPipesPipeArgsSourceParametersDynamodbStreamParameters {
   starting_position: string;
   dead_letter_config: AwsPipesPipeArgsSourceParametersDynamodbStreamParametersDeadLetterConfig;
 }
-export interface AwsPipesPipeArgsSourceParametersFilterCriteriafilter {
+export interface AwsPipesPipeArgsSourceParametersFilterCriteriaFilter {
   pattern: string;
 }
 export interface AwsPipesPipeArgsSourceParametersFilterCriteria {
-  filter: AwsPipesPipeArgsSourceParametersFilterCriteriafilter;
+  filter: AwsPipesPipeArgsSourceParametersFilterCriteriaFilter;
 }
 export interface AwsPipesPipeArgsSourceParametersKinesisStreamParametersDeadLetterConfig {
   arn?: string;
@@ -63,7 +63,7 @@ export interface AwsPipesPipeArgsSourceParametersKinesisStreamParameters {
   starting_position_timestamp?: string;
   dead_letter_config: AwsPipesPipeArgsSourceParametersKinesisStreamParametersDeadLetterConfig;
 }
-export interface AwsPipesPipeArgsSourceParametersManagedStreamingKafkaParameterscredentials {
+export interface AwsPipesPipeArgsSourceParametersManagedStreamingKafkaParametersCredentials {
   client_certificate_tls_auth?: string;
   sasl_scram_512_auth?: string;
 }
@@ -71,23 +71,23 @@ export interface AwsPipesPipeArgsSourceParametersManagedStreamingKafkaParameters
   consumer_group_id?: string;
   starting_position?: string;
   topic_name: string;
-  credentials: AwsPipesPipeArgsSourceParametersManagedStreamingKafkaParameterscredentials;
+  credentials: AwsPipesPipeArgsSourceParametersManagedStreamingKafkaParametersCredentials;
 }
-export interface AwsPipesPipeArgsSourceParametersRabbitmqBrokerParameterscredentials {
+export interface AwsPipesPipeArgsSourceParametersRabbitmqBrokerParametersCredentials {
   basic_auth: string;
 }
 export interface AwsPipesPipeArgsSourceParametersRabbitmqBrokerParameters {
   queue_name: string;
   virtual_host?: string;
-  credentials: AwsPipesPipeArgsSourceParametersRabbitmqBrokerParameterscredentials;
+  credentials: AwsPipesPipeArgsSourceParametersRabbitmqBrokerParametersCredentials;
 }
-export interface AwsPipesPipeArgsSourceParametersSelfManagedKafkaParameterscredentials {
+export interface AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersCredentials {
   basic_auth?: string;
   client_certificate_tls_auth?: string;
   sasl_scram_256_auth?: string;
   sasl_scram_512_auth?: string;
 }
-export interface AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersvpc {
+export interface AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersVpc {
   security_groups?: string[];
   subnets?: string[];
 }
@@ -97,8 +97,8 @@ export interface AwsPipesPipeArgsSourceParametersSelfManagedKafkaParameters {
   server_root_ca_certificate?: string;
   starting_position?: string;
   topic_name: string;
-  credentials: AwsPipesPipeArgsSourceParametersSelfManagedKafkaParameterscredentials;
-  vpc: AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersvpc;
+  credentials: AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersCredentials;
+  vpc: AwsPipesPipeArgsSourceParametersSelfManagedKafkaParametersVpc;
 }
 export interface AwsPipesPipeArgsSourceParametersSqsQueueParameters {}
 export interface AwsPipesPipeArgsSourceParameters {
@@ -114,7 +114,7 @@ export interface AwsPipesPipeArgsSourceParameters {
 export interface AwsPipesPipeArgsTargetParametersBatchJobParametersArrayProperties {
   size?: number;
 }
-export interface AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverridesenvironment {
+export interface AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverridesEnvironment {
   name?: string;
   value?: string;
 }
@@ -125,7 +125,7 @@ export interface AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOver
 export interface AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverrides {
   command?: string[];
   instance_type?: string;
-  environment: AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverridesenvironment;
+  environment: AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverridesEnvironment;
   resource_requirement: AwsPipesPipeArgsTargetParametersBatchJobParametersContainerOverridesResourceRequirement;
 }
 export interface AwsPipesPipeArgsTargetParametersBatchJobParametersDependsOn {
@@ -163,43 +163,43 @@ export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersNetworkConfigu
 export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersNetworkConfiguration {
   aws_vpc_configuration: AwsPipesPipeArgsTargetParametersEcsTaskParametersNetworkConfigurationAwsVpcConfiguration;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideenvironment {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment {
   name?: string;
   value?: string;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideEnvironmentFile {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile {
   type: string;
   value: string;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideResourceRequirement {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement {
   type: string;
   value: string;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverride {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverride {
   command?: string[];
   cpu?: number;
   memory?: number;
   memory_reservation?: number;
   name?: string;
-  environment: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideenvironment;
-  environment_file: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideEnvironmentFile;
-  resource_requirement: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverrideResourceRequirement;
+  environment: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironment;
+  environment_file: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideEnvironmentFile;
+  resource_requirement: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverrideResourceRequirement;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesEphemeralStorage {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesEphemeralStorage {
   size_in_gib: number;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesInferenceAcceleratorOverride {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride {
   device_name?: string;
   device_type?: string;
 }
-export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersoverrides {
+export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersOverrides {
   cpu?: string;
   execution_role_arn?: string;
   memory?: string;
   task_role_arn?: string;
-  container_override: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesContainerOverride;
-  ephemeral_storage: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesEphemeralStorage;
-  inference_accelerator_override: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverridesInferenceAcceleratorOverride;
+  container_override: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesContainerOverride;
+  ephemeral_storage: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesEphemeralStorage;
+  inference_accelerator_override: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverridesInferenceAcceleratorOverride;
 }
 export interface AwsPipesPipeArgsTargetParametersEcsTaskParametersPlacementConstraint {
   expression?: string;
@@ -224,7 +224,7 @@ export interface AwsPipesPipeArgsTargetParametersEcsTaskParameters {
   task_definition_arn: string;
   capacity_provider_strategy: AwsPipesPipeArgsTargetParametersEcsTaskParametersCapacityProviderStrategy;
   network_configuration: AwsPipesPipeArgsTargetParametersEcsTaskParametersNetworkConfiguration;
-  overrides: AwsPipesPipeArgsTargetParametersEcsTaskParametersoverrides;
+  overrides: AwsPipesPipeArgsTargetParametersEcsTaskParametersOverrides;
   placement_constraint: AwsPipesPipeArgsTargetParametersEcsTaskParametersPlacementConstraint;
   placement_strategy: AwsPipesPipeArgsTargetParametersEcsTaskParametersPlacementStrategy;
 }
@@ -286,7 +286,7 @@ export interface AwsPipesPipeArgsTargetParameters {
   sqs_queue_parameters: AwsPipesPipeArgsTargetParametersSqsQueueParameters;
   step_function_state_machine_parameters: AwsPipesPipeArgsTargetParametersStepFunctionStateMachineParameters;
 }
-export interface AwsPipesPipeArgstimeouts {
+export interface AwsPipesPipeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -305,7 +305,7 @@ export interface AwsPipesPipeArgs {
   log_configuration: AwsPipesPipeArgsLogConfiguration;
   source_parameters: AwsPipesPipeArgsSourceParameters;
   target_parameters: AwsPipesPipeArgsTargetParameters;
-  timeouts: AwsPipesPipeArgstimeouts;
+  timeouts: AwsPipesPipeArgsTimeouts;
 }
 export class aws_pipes_pipe extends TerraformResource {
   readonly arn!: string;

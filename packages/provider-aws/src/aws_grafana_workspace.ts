@@ -3,7 +3,7 @@ export interface AwsGrafanaWorkspaceArgsNetworkAccessControl {
   prefix_list_ids: string[];
   vpce_ids: string[];
 }
-export interface AwsGrafanaWorkspaceArgstimeouts {
+export interface AwsGrafanaWorkspaceArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -26,7 +26,7 @@ export interface AwsGrafanaWorkspaceArgs {
     [key: string]: string;
   };
   network_access_control: AwsGrafanaWorkspaceArgsNetworkAccessControl;
-  timeouts: AwsGrafanaWorkspaceArgstimeouts;
+  timeouts: AwsGrafanaWorkspaceArgsTimeouts;
   vpc_configuration: AwsGrafanaWorkspaceArgsVpcConfiguration;
 }
 export class aws_grafana_workspace extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIntegrationConnectorsManagedZoneArgstimeouts {
+export interface GoogleIntegrationConnectorsManagedZoneArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleIntegrationConnectorsManagedZoneArgs {
   name: string;
   target_project: string;
   target_vpc: string;
-  timeouts: GoogleIntegrationConnectorsManagedZoneArgstimeouts;
+  timeouts: GoogleIntegrationConnectorsManagedZoneArgsTimeouts;
 }
 export class google_integration_connectors_managed_zone extends TerraformResource {
   readonly create_time!: string;

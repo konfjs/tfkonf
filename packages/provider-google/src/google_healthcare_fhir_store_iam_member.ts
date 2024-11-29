@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleHealthcareFhirStoreIamMemberArgscondition {
+export interface GoogleHealthcareFhirStoreIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleHealthcareFhirStoreIamMemberArgs {
   fhir_store_id: string;
   member: string;
   role: string;
-  condition: GoogleHealthcareFhirStoreIamMemberArgscondition;
+  condition: GoogleHealthcareFhirStoreIamMemberArgsCondition;
 }
 export class google_healthcare_fhir_store_iam_member extends TerraformResource {
   readonly etag!: string;

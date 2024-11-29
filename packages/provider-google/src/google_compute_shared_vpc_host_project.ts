@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeSharedVpcHostProjectArgstimeouts {
+export interface GoogleComputeSharedVpcHostProjectArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleComputeSharedVpcHostProjectArgs {
   project: string;
-  timeouts: GoogleComputeSharedVpcHostProjectArgstimeouts;
+  timeouts: GoogleComputeSharedVpcHostProjectArgsTimeouts;
 }
 export class google_compute_shared_vpc_host_project extends TerraformResource {
   readonly id?: string;

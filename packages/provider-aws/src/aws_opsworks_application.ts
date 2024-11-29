@@ -7,7 +7,7 @@ export interface AwsOpsworksApplicationArgsAppSource {
   url?: string;
   username?: string;
 }
-export interface AwsOpsworksApplicationArgsenvironment {
+export interface AwsOpsworksApplicationArgsEnvironment {
   key: string;
   secure?: boolean;
   value: string;
@@ -32,7 +32,7 @@ export interface AwsOpsworksApplicationArgs {
   stack_id: string;
   type: string;
   app_source: AwsOpsworksApplicationArgsAppSource;
-  environment: AwsOpsworksApplicationArgsenvironment;
+  environment: AwsOpsworksApplicationArgsEnvironment;
   ssl_configuration: AwsOpsworksApplicationArgsSslConfiguration;
 }
 export class aws_opsworks_application extends TerraformResource {

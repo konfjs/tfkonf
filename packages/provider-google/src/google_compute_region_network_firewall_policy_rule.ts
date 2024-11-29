@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatchLayer4Configs {
+export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];
 }
-export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatchSrcSecureTags {
+export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchSrcSecureTags {
   name?: string;
 }
-export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatch {
+export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatch {
   dest_address_groups?: string[];
   dest_fqdns?: string[];
   dest_ip_ranges?: string[];
@@ -17,13 +17,13 @@ export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatch {
   src_ip_ranges?: string[];
   src_region_codes?: string[];
   src_threat_intelligences?: string[];
-  layer4_configs: GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatchLayer4Configs;
-  src_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatchSrcSecureTags;
+  layer4_configs: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchLayer4Configs;
+  src_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchSrcSecureTags;
 }
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsTargetSecureTags {
   name?: string;
 }
-export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgstimeouts {
+export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,9 +40,9 @@ export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgs {
   security_profile_group?: string;
   target_service_accounts?: string[];
   tls_inspect?: boolean;
-  match: GoogleComputeRegionNetworkFirewallPolicyRuleArgsmatch;
+  match: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatch;
   target_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTargetSecureTags;
-  timeouts: GoogleComputeRegionNetworkFirewallPolicyRuleArgstimeouts;
+  timeouts: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts;
 }
 export class google_compute_region_network_firewall_policy_rule extends TerraformResource {
   readonly creation_timestamp!: string;

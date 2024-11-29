@@ -3,7 +3,7 @@ export interface AwsGlobalacceleratorCustomRoutingListenerArgsPortRange {
   from_port?: number;
   to_port?: number;
 }
-export interface AwsGlobalacceleratorCustomRoutingListenerArgstimeouts {
+export interface AwsGlobalacceleratorCustomRoutingListenerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsGlobalacceleratorCustomRoutingListenerArgstimeouts {
 export interface AwsGlobalacceleratorCustomRoutingListenerArgs {
   accelerator_arn: string;
   port_range: AwsGlobalacceleratorCustomRoutingListenerArgsPortRange;
-  timeouts: AwsGlobalacceleratorCustomRoutingListenerArgstimeouts;
+  timeouts: AwsGlobalacceleratorCustomRoutingListenerArgsTimeouts;
 }
 export class aws_globalaccelerator_custom_routing_listener extends TerraformResource {
   readonly id?: string;

@@ -12,7 +12,7 @@ export interface GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNote {
   note_reference: string;
   public_keys: GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeys;
 }
-export interface GoogleBinaryAuthorizationAttestorArgstimeouts {
+export interface GoogleBinaryAuthorizationAttestorArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,7 +21,7 @@ export interface GoogleBinaryAuthorizationAttestorArgs {
   description?: string;
   name: string;
   attestation_authority_note: GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNote;
-  timeouts: GoogleBinaryAuthorizationAttestorArgstimeouts;
+  timeouts: GoogleBinaryAuthorizationAttestorArgsTimeouts;
 }
 export class google_binary_authorization_attestor extends TerraformResource {
   readonly id?: string;

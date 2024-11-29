@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleKmsEkmConnectionIamMemberArgscondition {
+export interface GoogleKmsEkmConnectionIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleKmsEkmConnectionIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: GoogleKmsEkmConnectionIamMemberArgscondition;
+  condition: GoogleKmsEkmConnectionIamMemberArgsCondition;
 }
 export class google_kms_ekm_connection_iam_member extends TerraformResource {
   readonly etag!: string;

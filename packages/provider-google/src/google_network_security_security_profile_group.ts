@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleNetworkSecuritySecurityProfileGroupArgstimeouts {
+export interface GoogleNetworkSecuritySecurityProfileGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleNetworkSecuritySecurityProfileGroupArgs {
   name: string;
   parent?: string;
   threat_prevention_profile?: string;
-  timeouts: GoogleNetworkSecuritySecurityProfileGroupArgstimeouts;
+  timeouts: GoogleNetworkSecuritySecurityProfileGroupArgsTimeouts;
 }
 export class google_network_security_security_profile_group extends TerraformResource {
   readonly create_time!: string;

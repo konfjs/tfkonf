@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeDiskResourcePolicyAttachmentArgstimeouts {
+export interface GoogleComputeDiskResourcePolicyAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleComputeDiskResourcePolicyAttachmentArgs {
   disk: string;
   name: string;
-  timeouts: GoogleComputeDiskResourcePolicyAttachmentArgstimeouts;
+  timeouts: GoogleComputeDiskResourcePolicyAttachmentArgsTimeouts;
 }
 export class google_compute_disk_resource_policy_attachment extends TerraformResource {
   readonly id?: string;

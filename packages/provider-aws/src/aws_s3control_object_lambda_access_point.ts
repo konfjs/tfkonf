@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfigurationContentTransformationAwsLambda {
+export interface AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfigurationContentTransformationAwsLambda {
   function_arn: string;
   function_payload?: string;
 }
-export interface AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfigurationContentTransformation {
-  aws_lambda: AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfigurationContentTransformationAwsLambda;
+export interface AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfigurationContentTransformation {
+  aws_lambda: AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfigurationContentTransformationAwsLambda;
 }
-export interface AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfiguration {
+export interface AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfiguration {
   actions: string[];
-  content_transformation: AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfigurationContentTransformation;
+  content_transformation: AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfigurationContentTransformation;
 }
-export interface AwsS3controlObjectLambdaAccessPointArgsconfiguration {
+export interface AwsS3controlObjectLambdaAccessPointArgsConfiguration {
   allowed_features?: string[];
   cloud_watch_metrics_enabled?: boolean;
   supporting_access_point: string;
-  transformation_configuration: AwsS3controlObjectLambdaAccessPointArgsconfigurationTransformationConfiguration;
+  transformation_configuration: AwsS3controlObjectLambdaAccessPointArgsConfigurationTransformationConfiguration;
 }
 export interface AwsS3controlObjectLambdaAccessPointArgs {
   name: string;
-  configuration: AwsS3controlObjectLambdaAccessPointArgsconfiguration;
+  configuration: AwsS3controlObjectLambdaAccessPointArgsConfiguration;
 }
 export class aws_s3control_object_lambda_access_point extends TerraformResource {
   readonly account_id?: string;

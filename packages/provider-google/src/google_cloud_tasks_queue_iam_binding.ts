@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCloudTasksQueueIamBindingArgscondition {
+export interface GoogleCloudTasksQueueIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudTasksQueueIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleCloudTasksQueueIamBindingArgscondition;
+  condition: GoogleCloudTasksQueueIamBindingArgsCondition;
 }
 export class google_cloud_tasks_queue_iam_binding extends TerraformResource {
   readonly etag!: string;

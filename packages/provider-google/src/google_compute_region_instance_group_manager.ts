@@ -31,7 +31,7 @@ export interface GoogleComputeRegionInstanceGroupManagerArgsStatefulInternalIp {
   delete_rule?: string;
   interface_name?: string;
 }
-export interface GoogleComputeRegionInstanceGroupManagerArgstimeouts {
+export interface GoogleComputeRegionInstanceGroupManagerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,14 +45,14 @@ export interface GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy {
   replacement_method?: string;
   type: string;
 }
-export interface GoogleComputeRegionInstanceGroupManagerArgsversionTargetSize {
+export interface GoogleComputeRegionInstanceGroupManagerArgsVersionTargetSize {
   fixed?: number;
   percent?: number;
 }
-export interface GoogleComputeRegionInstanceGroupManagerArgsversion {
+export interface GoogleComputeRegionInstanceGroupManagerArgsVersion {
   instance_template: string;
   name?: string;
-  target_size: GoogleComputeRegionInstanceGroupManagerArgsversionTargetSize;
+  target_size: GoogleComputeRegionInstanceGroupManagerArgsVersionTargetSize;
 }
 export interface GoogleComputeRegionInstanceGroupManagerArgs {
   base_instance_name: string;
@@ -69,9 +69,9 @@ export interface GoogleComputeRegionInstanceGroupManagerArgs {
   stateful_disk: GoogleComputeRegionInstanceGroupManagerArgsStatefulDisk;
   stateful_external_ip: GoogleComputeRegionInstanceGroupManagerArgsStatefulExternalIp;
   stateful_internal_ip: GoogleComputeRegionInstanceGroupManagerArgsStatefulInternalIp;
-  timeouts: GoogleComputeRegionInstanceGroupManagerArgstimeouts;
+  timeouts: GoogleComputeRegionInstanceGroupManagerArgsTimeouts;
   update_policy: GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy;
-  version: GoogleComputeRegionInstanceGroupManagerArgsversion;
+  version: GoogleComputeRegionInstanceGroupManagerArgsVersion;
 }
 export class google_compute_region_instance_group_manager extends TerraformResource {
   readonly creation_timestamp!: string;

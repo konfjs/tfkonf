@@ -3,7 +3,7 @@ export interface GoogleProjectAccessApprovalSettingsArgsEnrolledServices {
   cloud_product: string;
   enrollment_level?: string;
 }
-export interface GoogleProjectAccessApprovalSettingsArgstimeouts {
+export interface GoogleProjectAccessApprovalSettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleProjectAccessApprovalSettingsArgs {
   project?: string;
   project_id: string;
   enrolled_services: GoogleProjectAccessApprovalSettingsArgsEnrolledServices;
-  timeouts: GoogleProjectAccessApprovalSettingsArgstimeouts;
+  timeouts: GoogleProjectAccessApprovalSettingsArgsTimeouts;
 }
 export class google_project_access_approval_settings extends TerraformResource {
   readonly ancestor_has_active_key_version!: boolean;

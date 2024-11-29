@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDatapipelinePipelineDefinitionArgsParameterObjectattribute {
+export interface AwsDatapipelinePipelineDefinitionArgsParameterObjectAttribute {
   key: string;
   string_value: string;
 }
 export interface AwsDatapipelinePipelineDefinitionArgsParameterObject {
   id: string;
-  attribute: AwsDatapipelinePipelineDefinitionArgsParameterObjectattribute;
+  attribute: AwsDatapipelinePipelineDefinitionArgsParameterObjectAttribute;
 }
 export interface AwsDatapipelinePipelineDefinitionArgsParameterValue {
   id: string;
   string_value: string;
 }
-export interface AwsDatapipelinePipelineDefinitionArgsPipelineObjectfield {
+export interface AwsDatapipelinePipelineDefinitionArgsPipelineObjectField {
   key: string;
   ref_value?: string;
   string_value?: string;
@@ -19,7 +19,7 @@ export interface AwsDatapipelinePipelineDefinitionArgsPipelineObjectfield {
 export interface AwsDatapipelinePipelineDefinitionArgsPipelineObject {
   id: string;
   name: string;
-  field: AwsDatapipelinePipelineDefinitionArgsPipelineObjectfield;
+  field: AwsDatapipelinePipelineDefinitionArgsPipelineObjectField;
 }
 export interface AwsDatapipelinePipelineDefinitionArgs {
   pipeline_id: string;

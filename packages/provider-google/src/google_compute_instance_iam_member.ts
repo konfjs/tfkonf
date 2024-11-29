@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeInstanceIamMemberArgscondition {
+export interface GoogleComputeInstanceIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeInstanceIamMemberArgs {
   instance_name: string;
   member: string;
   role: string;
-  condition: GoogleComputeInstanceIamMemberArgscondition;
+  condition: GoogleComputeInstanceIamMemberArgsCondition;
 }
 export class google_compute_instance_iam_member extends TerraformResource {
   readonly etag!: string;

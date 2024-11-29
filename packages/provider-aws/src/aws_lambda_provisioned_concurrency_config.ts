@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsLambdaProvisionedConcurrencyConfigArgstimeouts {
+export interface AwsLambdaProvisionedConcurrencyConfigArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsLambdaProvisionedConcurrencyConfigArgs {
   provisioned_concurrent_executions: number;
   qualifier: string;
   skip_destroy?: boolean;
-  timeouts: AwsLambdaProvisionedConcurrencyConfigArgstimeouts;
+  timeouts: AwsLambdaProvisionedConcurrencyConfigArgsTimeouts;
 }
 export class aws_lambda_provisioned_concurrency_config extends TerraformResource {
   readonly id?: string;

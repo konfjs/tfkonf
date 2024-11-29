@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleMonitoringMetricDescriptorArgslabels {
+export interface GoogleMonitoringMetricDescriptorArgsLabels {
   description?: string;
   key: string;
   value_type?: string;
 }
-export interface GoogleMonitoringMetricDescriptorArgsmetadata {
+export interface GoogleMonitoringMetricDescriptorArgsMetadata {
   ingest_delay?: string;
   sample_period?: string;
 }
-export interface GoogleMonitoringMetricDescriptorArgstimeouts {
+export interface GoogleMonitoringMetricDescriptorArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleMonitoringMetricDescriptorArgs {
   type: string;
   unit?: string;
   value_type: string;
-  labels: GoogleMonitoringMetricDescriptorArgslabels;
-  metadata: GoogleMonitoringMetricDescriptorArgsmetadata;
-  timeouts: GoogleMonitoringMetricDescriptorArgstimeouts;
+  labels: GoogleMonitoringMetricDescriptorArgsLabels;
+  metadata: GoogleMonitoringMetricDescriptorArgsMetadata;
+  timeouts: GoogleMonitoringMetricDescriptorArgsTimeouts;
 }
 export class google_monitoring_metric_descriptor extends TerraformResource {
   readonly id?: string;

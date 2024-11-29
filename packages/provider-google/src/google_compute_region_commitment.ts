@@ -4,12 +4,12 @@ export interface GoogleComputeRegionCommitmentArgsLicenseResource {
   cores_per_license?: string;
   license: string;
 }
-export interface GoogleComputeRegionCommitmentArgsresources {
+export interface GoogleComputeRegionCommitmentArgsResources {
   accelerator_type?: string;
   amount?: string;
   type?: string;
 }
-export interface GoogleComputeRegionCommitmentArgstimeouts {
+export interface GoogleComputeRegionCommitmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -18,8 +18,8 @@ export interface GoogleComputeRegionCommitmentArgs {
   name: string;
   plan: string;
   license_resource: GoogleComputeRegionCommitmentArgsLicenseResource;
-  resources: GoogleComputeRegionCommitmentArgsresources;
-  timeouts: GoogleComputeRegionCommitmentArgstimeouts;
+  resources: GoogleComputeRegionCommitmentArgsResources;
+  timeouts: GoogleComputeRegionCommitmentArgsTimeouts;
 }
 export class google_compute_region_commitment extends TerraformResource {
   readonly auto_renew?: boolean;

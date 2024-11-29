@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleSpannerBackupScheduleArgsFullBackupSpec {}
 export interface GoogleSpannerBackupScheduleArgsIncrementalBackupSpec {}
-export interface GoogleSpannerBackupScheduleArgsspecCronSpec {
+export interface GoogleSpannerBackupScheduleArgsSpecCronSpec {
   text?: string;
 }
-export interface GoogleSpannerBackupScheduleArgsspec {
-  cron_spec: GoogleSpannerBackupScheduleArgsspecCronSpec;
+export interface GoogleSpannerBackupScheduleArgsSpec {
+  cron_spec: GoogleSpannerBackupScheduleArgsSpecCronSpec;
 }
-export interface GoogleSpannerBackupScheduleArgstimeouts {
+export interface GoogleSpannerBackupScheduleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface GoogleSpannerBackupScheduleArgs {
   retention_duration: string;
   full_backup_spec: GoogleSpannerBackupScheduleArgsFullBackupSpec;
   incremental_backup_spec: GoogleSpannerBackupScheduleArgsIncrementalBackupSpec;
-  spec: GoogleSpannerBackupScheduleArgsspec;
-  timeouts: GoogleSpannerBackupScheduleArgstimeouts;
+  spec: GoogleSpannerBackupScheduleArgsSpec;
+  timeouts: GoogleSpannerBackupScheduleArgsTimeouts;
 }
 export class google_spanner_backup_schedule extends TerraformResource {
   readonly id?: string;

@@ -5,15 +5,15 @@ export interface AwsCloudwatchEventEndpointArgsEventBus {
 export interface AwsCloudwatchEventEndpointArgsReplicationConfig {
   state?: string;
 }
-export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigprimary {
+export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigPrimary {
   health_check?: string;
 }
-export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigsecondary {
+export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigSecondary {
   route?: string;
 }
 export interface AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfig {
-  primary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigprimary;
-  secondary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigsecondary;
+  primary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigPrimary;
+  secondary: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfigSecondary;
 }
 export interface AwsCloudwatchEventEndpointArgsRoutingConfig {
   failover_config: AwsCloudwatchEventEndpointArgsRoutingConfigFailoverConfig;

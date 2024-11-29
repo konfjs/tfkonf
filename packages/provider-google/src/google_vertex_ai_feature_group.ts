@@ -6,7 +6,7 @@ export interface GoogleVertexAiFeatureGroupArgsBigQuery {
   entity_id_columns?: string[];
   big_query_source: GoogleVertexAiFeatureGroupArgsBigQueryBigQuerySource;
 }
-export interface GoogleVertexAiFeatureGroupArgstimeouts {
+export interface GoogleVertexAiFeatureGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleVertexAiFeatureGroupArgs {
   name?: string;
   region?: string;
   big_query: GoogleVertexAiFeatureGroupArgsBigQuery;
-  timeouts: GoogleVertexAiFeatureGroupArgstimeouts;
+  timeouts: GoogleVertexAiFeatureGroupArgsTimeouts;
 }
 export class google_vertex_ai_feature_group extends TerraformResource {
   readonly create_time!: string;

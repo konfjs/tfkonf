@@ -42,7 +42,7 @@ export interface GoogleDialogflowCxAgentArgsSpeechToTextSettings {
 export interface GoogleDialogflowCxAgentArgsTextToSpeechSettings {
   synthesize_speech_configs?: string;
 }
-export interface GoogleDialogflowCxAgentArgstimeouts {
+export interface GoogleDialogflowCxAgentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -62,7 +62,7 @@ export interface GoogleDialogflowCxAgentArgs {
   git_integration_settings: GoogleDialogflowCxAgentArgsGitIntegrationSettings;
   speech_to_text_settings: GoogleDialogflowCxAgentArgsSpeechToTextSettings;
   text_to_speech_settings: GoogleDialogflowCxAgentArgsTextToSpeechSettings;
-  timeouts: GoogleDialogflowCxAgentArgstimeouts;
+  timeouts: GoogleDialogflowCxAgentArgsTimeouts;
 }
 export class google_dialogflow_cx_agent extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsElasticacheParameterGroupArgsparameter {
+export interface AwsElasticacheParameterGroupArgsParameter {
   name: string;
   value: string;
 }
@@ -10,7 +10,7 @@ export interface AwsElasticacheParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: AwsElasticacheParameterGroupArgsparameter;
+  parameter: AwsElasticacheParameterGroupArgsParameter;
 }
 export class aws_elasticache_parameter_group extends TerraformResource {
   readonly arn!: string;

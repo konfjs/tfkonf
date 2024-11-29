@@ -15,7 +15,7 @@ export interface AwsAlbArgsSubnetMapping {
   private_ipv4_address?: string;
   subnet_id: string;
 }
-export interface AwsAlbArgstimeouts {
+export interface AwsAlbArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -43,7 +43,7 @@ export interface AwsAlbArgs {
   access_logs: AwsAlbArgsAccessLogs;
   connection_logs: AwsAlbArgsConnectionLogs;
   subnet_mapping: AwsAlbArgsSubnetMapping;
-  timeouts: AwsAlbArgstimeouts;
+  timeouts: AwsAlbArgsTimeouts;
 }
 export class aws_alb extends TerraformResource {
   readonly arn!: string;

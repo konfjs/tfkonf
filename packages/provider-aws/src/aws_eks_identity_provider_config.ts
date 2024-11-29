@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEksIdentityProviderConfigArgsoidc {
+export interface AwsEksIdentityProviderConfigArgsOidc {
   client_id: string;
   groups_claim?: string;
   groups_prefix?: string;
@@ -11,7 +11,7 @@ export interface AwsEksIdentityProviderConfigArgsoidc {
   username_claim?: string;
   username_prefix?: string;
 }
-export interface AwsEksIdentityProviderConfigArgstimeouts {
+export interface AwsEksIdentityProviderConfigArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -20,8 +20,8 @@ export interface AwsEksIdentityProviderConfigArgs {
   tags?: {
     [key: string]: string;
   };
-  oidc: AwsEksIdentityProviderConfigArgsoidc;
-  timeouts: AwsEksIdentityProviderConfigArgstimeouts;
+  oidc: AwsEksIdentityProviderConfigArgsOidc;
+  timeouts: AwsEksIdentityProviderConfigArgsTimeouts;
 }
 export class aws_eks_identity_provider_config extends TerraformResource {
   readonly arn!: string;

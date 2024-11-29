@@ -14,12 +14,12 @@ export interface GoogleOsConfigPatchDeploymentArgsInstanceFilter {
 export interface GoogleOsConfigPatchDeploymentArgsOneTimeSchedule {
   execute_time: string;
 }
-export interface GoogleOsConfigPatchDeploymentArgsPatchConfigapt {
+export interface GoogleOsConfigPatchDeploymentArgsPatchConfigApt {
   excludes?: string[];
   exclusive_packages?: string[];
   type?: string;
 }
-export interface GoogleOsConfigPatchDeploymentArgsPatchConfiggoo {
+export interface GoogleOsConfigPatchDeploymentArgsPatchConfigGoo {
   enabled: boolean;
 }
 export interface GoogleOsConfigPatchDeploymentArgsPatchConfigPostStepLinuxExecStepConfigGcsObject {
@@ -79,13 +79,13 @@ export interface GoogleOsConfigPatchDeploymentArgsPatchConfigWindowsUpdate {
   excludes?: string[];
   exclusive_patches?: string[];
 }
-export interface GoogleOsConfigPatchDeploymentArgsPatchConfigyum {
+export interface GoogleOsConfigPatchDeploymentArgsPatchConfigYum {
   excludes?: string[];
   exclusive_packages?: string[];
   minimal?: boolean;
   security?: boolean;
 }
-export interface GoogleOsConfigPatchDeploymentArgsPatchConfigzypper {
+export interface GoogleOsConfigPatchDeploymentArgsPatchConfigZypper {
   categories?: string[];
   excludes?: string[];
   exclusive_patches?: string[];
@@ -96,22 +96,22 @@ export interface GoogleOsConfigPatchDeploymentArgsPatchConfigzypper {
 export interface GoogleOsConfigPatchDeploymentArgsPatchConfig {
   mig_instances_allowed?: boolean;
   reboot_config?: string;
-  apt: GoogleOsConfigPatchDeploymentArgsPatchConfigapt;
-  goo: GoogleOsConfigPatchDeploymentArgsPatchConfiggoo;
+  apt: GoogleOsConfigPatchDeploymentArgsPatchConfigApt;
+  goo: GoogleOsConfigPatchDeploymentArgsPatchConfigGoo;
   post_step: GoogleOsConfigPatchDeploymentArgsPatchConfigPostStep;
   pre_step: GoogleOsConfigPatchDeploymentArgsPatchConfigPreStep;
   windows_update: GoogleOsConfigPatchDeploymentArgsPatchConfigWindowsUpdate;
-  yum: GoogleOsConfigPatchDeploymentArgsPatchConfigyum;
-  zypper: GoogleOsConfigPatchDeploymentArgsPatchConfigzypper;
+  yum: GoogleOsConfigPatchDeploymentArgsPatchConfigYum;
+  zypper: GoogleOsConfigPatchDeploymentArgsPatchConfigZypper;
 }
-export interface GoogleOsConfigPatchDeploymentArgsRecurringSchedulemonthlyWeekDayOfMonth {
+export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleMonthlyWeekDayOfMonth {
   day_of_week: string;
   day_offset?: number;
   week_ordinal: number;
 }
-export interface GoogleOsConfigPatchDeploymentArgsRecurringSchedulemonthly {
+export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleMonthly {
   month_day?: number;
-  week_day_of_month: GoogleOsConfigPatchDeploymentArgsRecurringSchedulemonthlyWeekDayOfMonth;
+  week_day_of_month: GoogleOsConfigPatchDeploymentArgsRecurringScheduleMonthlyWeekDayOfMonth;
 }
 export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleTimeOfDay {
   hours?: number;
@@ -123,26 +123,26 @@ export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleTimeZone {
   id: string;
   version?: string;
 }
-export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleweekly {
+export interface GoogleOsConfigPatchDeploymentArgsRecurringScheduleWeekly {
   day_of_week: string;
 }
 export interface GoogleOsConfigPatchDeploymentArgsRecurringSchedule {
   end_time?: string;
   start_time?: string;
-  monthly: GoogleOsConfigPatchDeploymentArgsRecurringSchedulemonthly;
+  monthly: GoogleOsConfigPatchDeploymentArgsRecurringScheduleMonthly;
   time_of_day: GoogleOsConfigPatchDeploymentArgsRecurringScheduleTimeOfDay;
   time_zone: GoogleOsConfigPatchDeploymentArgsRecurringScheduleTimeZone;
-  weekly: GoogleOsConfigPatchDeploymentArgsRecurringScheduleweekly;
+  weekly: GoogleOsConfigPatchDeploymentArgsRecurringScheduleWeekly;
 }
-export interface GoogleOsConfigPatchDeploymentArgsrolloutDisruptionBudget {
+export interface GoogleOsConfigPatchDeploymentArgsRolloutDisruptionBudget {
   fixed?: number;
   percentage?: number;
 }
-export interface GoogleOsConfigPatchDeploymentArgsrollout {
+export interface GoogleOsConfigPatchDeploymentArgsRollout {
   mode: string;
-  disruption_budget: GoogleOsConfigPatchDeploymentArgsrolloutDisruptionBudget;
+  disruption_budget: GoogleOsConfigPatchDeploymentArgsRolloutDisruptionBudget;
 }
-export interface GoogleOsConfigPatchDeploymentArgstimeouts {
+export interface GoogleOsConfigPatchDeploymentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -154,8 +154,8 @@ export interface GoogleOsConfigPatchDeploymentArgs {
   one_time_schedule: GoogleOsConfigPatchDeploymentArgsOneTimeSchedule;
   patch_config: GoogleOsConfigPatchDeploymentArgsPatchConfig;
   recurring_schedule: GoogleOsConfigPatchDeploymentArgsRecurringSchedule;
-  rollout: GoogleOsConfigPatchDeploymentArgsrollout;
-  timeouts: GoogleOsConfigPatchDeploymentArgstimeouts;
+  rollout: GoogleOsConfigPatchDeploymentArgsRollout;
+  timeouts: GoogleOsConfigPatchDeploymentArgsTimeouts;
 }
 export class google_os_config_patch_deployment extends TerraformResource {
   readonly create_time!: string;

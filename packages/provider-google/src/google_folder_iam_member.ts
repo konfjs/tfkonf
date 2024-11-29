@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFolderIamMemberArgscondition {
+export interface GoogleFolderIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleFolderIamMemberArgs {
   folder: string;
   member: string;
   role: string;
-  condition: GoogleFolderIamMemberArgscondition;
+  condition: GoogleFolderIamMemberArgsCondition;
 }
 export class google_folder_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIapAppEngineServiceIamMemberArgscondition {
+export interface GoogleIapAppEngineServiceIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleIapAppEngineServiceIamMemberArgs {
   member: string;
   role: string;
   service: string;
-  condition: GoogleIapAppEngineServiceIamMemberArgscondition;
+  condition: GoogleIapAppEngineServiceIamMemberArgsCondition;
 }
 export class google_iap_app_engine_service_iam_member extends TerraformResource {
   readonly etag!: string;

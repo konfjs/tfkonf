@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleContainerAzureClusterArgsauthorizationAdminGroups {
+export interface GoogleContainerAzureClusterArgsAuthorizationAdminGroups {
   group: string;
 }
-export interface GoogleContainerAzureClusterArgsauthorizationAdminUsers {
+export interface GoogleContainerAzureClusterArgsAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleContainerAzureClusterArgsauthorization {
-  admin_groups: GoogleContainerAzureClusterArgsauthorizationAdminGroups;
-  admin_users: GoogleContainerAzureClusterArgsauthorizationAdminUsers;
+export interface GoogleContainerAzureClusterArgsAuthorization {
+  admin_groups: GoogleContainerAzureClusterArgsAuthorizationAdminGroups;
+  admin_users: GoogleContainerAzureClusterArgsAuthorizationAdminUsers;
 }
 export interface GoogleContainerAzureClusterArgsAzureServicesAuthentication {
   application_id: string;
@@ -42,13 +42,13 @@ export interface GoogleContainerAzureClusterArgsControlPlane {
   root_volume: GoogleContainerAzureClusterArgsControlPlaneRootVolume;
   ssh_config: GoogleContainerAzureClusterArgsControlPlaneSshConfig;
 }
-export interface GoogleContainerAzureClusterArgsfleet {}
-export interface GoogleContainerAzureClusterArgsnetworking {
+export interface GoogleContainerAzureClusterArgsFleet {}
+export interface GoogleContainerAzureClusterArgsNetworking {
   pod_address_cidr_blocks: string[];
   service_address_cidr_blocks: string[];
   virtual_network_id: string;
 }
-export interface GoogleContainerAzureClusterArgstimeouts {
+export interface GoogleContainerAzureClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -63,12 +63,12 @@ export interface GoogleContainerAzureClusterArgs {
   location: string;
   name: string;
   resource_group_id: string;
-  authorization: GoogleContainerAzureClusterArgsauthorization;
+  authorization: GoogleContainerAzureClusterArgsAuthorization;
   azure_services_authentication: GoogleContainerAzureClusterArgsAzureServicesAuthentication;
   control_plane: GoogleContainerAzureClusterArgsControlPlane;
-  fleet: GoogleContainerAzureClusterArgsfleet;
-  networking: GoogleContainerAzureClusterArgsnetworking;
-  timeouts: GoogleContainerAzureClusterArgstimeouts;
+  fleet: GoogleContainerAzureClusterArgsFleet;
+  networking: GoogleContainerAzureClusterArgsNetworking;
+  timeouts: GoogleContainerAzureClusterArgsTimeouts;
 }
 export class google_container_azure_cluster extends TerraformResource {
   readonly create_time!: string;

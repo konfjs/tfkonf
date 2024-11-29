@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeNetworkArgstimeouts {
+export interface GoogleComputeNetworkArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleComputeNetworkArgs {
   enable_ula_internal_ipv6?: boolean;
   name: string;
   network_firewall_policy_enforcement_order?: string;
-  timeouts: GoogleComputeNetworkArgstimeouts;
+  timeouts: GoogleComputeNetworkArgsTimeouts;
 }
 export class google_compute_network extends TerraformResource {
   readonly gateway_ipv4!: string;

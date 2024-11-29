@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBcmdataexportsExportArgsexportDataQuery {
+export interface AwsBcmdataexportsExportArgsExportDataQuery {
   query_statement: string;
   table_configurations?: {
     [key: string]: any;
   };
 }
-export interface AwsBcmdataexportsExportArgsexportDestinationConfigurationsS3DestinationS3OutputConfigurations {
+export interface AwsBcmdataexportsExportArgsExportDestinationConfigurationsS3DestinationS3OutputConfigurations {
   compression: string;
   format: string;
   output_type: string;
   overwrite: string;
 }
-export interface AwsBcmdataexportsExportArgsexportDestinationConfigurationsS3Destination {
+export interface AwsBcmdataexportsExportArgsExportDestinationConfigurationsS3Destination {
   s3_bucket: string;
   s3_prefix: string;
   s3_region: string;
-  s3_output_configurations: AwsBcmdataexportsExportArgsexportDestinationConfigurationsS3DestinationS3OutputConfigurations;
+  s3_output_configurations: AwsBcmdataexportsExportArgsExportDestinationConfigurationsS3DestinationS3OutputConfigurations;
 }
-export interface AwsBcmdataexportsExportArgsexportDestinationConfigurations {
-  s3_destination: AwsBcmdataexportsExportArgsexportDestinationConfigurationsS3Destination;
+export interface AwsBcmdataexportsExportArgsExportDestinationConfigurations {
+  s3_destination: AwsBcmdataexportsExportArgsExportDestinationConfigurationsS3Destination;
 }
-export interface AwsBcmdataexportsExportArgsexportRefreshCadence {
+export interface AwsBcmdataexportsExportArgsExportRefreshCadence {
   frequency: string;
 }
-export interface AwsBcmdataexportsExportArgsexport {
+export interface AwsBcmdataexportsExportArgsExport {
   description?: string;
   name: string;
-  data_query: AwsBcmdataexportsExportArgsexportDataQuery;
-  destination_configurations: AwsBcmdataexportsExportArgsexportDestinationConfigurations;
-  refresh_cadence: AwsBcmdataexportsExportArgsexportRefreshCadence;
+  data_query: AwsBcmdataexportsExportArgsExportDataQuery;
+  destination_configurations: AwsBcmdataexportsExportArgsExportDestinationConfigurations;
+  refresh_cadence: AwsBcmdataexportsExportArgsExportRefreshCadence;
 }
-export interface AwsBcmdataexportsExportArgstimeouts {
+export interface AwsBcmdataexportsExportArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -38,8 +38,8 @@ export interface AwsBcmdataexportsExportArgs {
   tags?: {
     [key: string]: string;
   };
-  export: AwsBcmdataexportsExportArgsexport;
-  timeouts: AwsBcmdataexportsExportArgstimeouts;
+  export: AwsBcmdataexportsExportArgsExport;
+  timeouts: AwsBcmdataexportsExportArgsTimeouts;
 }
 export class aws_bcmdataexports_export extends TerraformResource {
   readonly id!: string;

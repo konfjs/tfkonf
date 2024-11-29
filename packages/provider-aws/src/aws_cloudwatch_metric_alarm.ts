@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudwatchMetricAlarmArgsMetricQuerymetric {
+export interface AwsCloudwatchMetricAlarmArgsMetricQueryMetric {
   dimensions?: {
     [key: string]: string;
   };
@@ -16,7 +16,7 @@ export interface AwsCloudwatchMetricAlarmArgsMetricQuery {
   label?: string;
   period?: number;
   return_data?: boolean;
-  metric: AwsCloudwatchMetricAlarmArgsMetricQuerymetric;
+  metric: AwsCloudwatchMetricAlarmArgsMetricQueryMetric;
 }
 export interface AwsCloudwatchMetricAlarmArgs {
   actions_enabled?: boolean;

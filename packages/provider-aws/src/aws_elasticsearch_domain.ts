@@ -9,14 +9,14 @@ export interface AwsElasticsearchDomainArgsAdvancedSecurityOptions {
   internal_user_database_enabled?: boolean;
   master_user_options: AwsElasticsearchDomainArgsAdvancedSecurityOptionsMasterUserOptions;
 }
-export interface AwsElasticsearchDomainArgsAutoTuneOptionsMaintenanceScheduleduration {
+export interface AwsElasticsearchDomainArgsAutoTuneOptionsMaintenanceScheduleDuration {
   unit: string;
   value: number;
 }
 export interface AwsElasticsearchDomainArgsAutoTuneOptionsMaintenanceSchedule {
   cron_expression_for_recurrence: string;
   start_at: string;
-  duration: AwsElasticsearchDomainArgsAutoTuneOptionsMaintenanceScheduleduration;
+  duration: AwsElasticsearchDomainArgsAutoTuneOptionsMaintenanceScheduleDuration;
 }
 export interface AwsElasticsearchDomainArgsAutoTuneOptions {
   desired_state: string;
@@ -69,7 +69,7 @@ export interface AwsElasticsearchDomainArgsNodeToNodeEncryption {
 export interface AwsElasticsearchDomainArgsSnapshotOptions {
   automated_snapshot_start_hour: number;
 }
-export interface AwsElasticsearchDomainArgstimeouts {
+export interface AwsElasticsearchDomainArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -94,7 +94,7 @@ export interface AwsElasticsearchDomainArgs {
   log_publishing_options: AwsElasticsearchDomainArgsLogPublishingOptions;
   node_to_node_encryption: AwsElasticsearchDomainArgsNodeToNodeEncryption;
   snapshot_options: AwsElasticsearchDomainArgsSnapshotOptions;
-  timeouts: AwsElasticsearchDomainArgstimeouts;
+  timeouts: AwsElasticsearchDomainArgsTimeouts;
   vpc_options: AwsElasticsearchDomainArgsVpcOptions;
 }
 export class aws_elasticsearch_domain extends TerraformResource {

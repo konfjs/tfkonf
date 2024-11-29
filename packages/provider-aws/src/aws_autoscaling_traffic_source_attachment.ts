@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAutoscalingTrafficSourceAttachmentArgstimeouts {
+export interface AwsAutoscalingTrafficSourceAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource {
 }
 export interface AwsAutoscalingTrafficSourceAttachmentArgs {
   autoscaling_group_name: string;
-  timeouts: AwsAutoscalingTrafficSourceAttachmentArgstimeouts;
+  timeouts: AwsAutoscalingTrafficSourceAttachmentArgsTimeouts;
   traffic_source: AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource;
 }
 export class aws_autoscaling_traffic_source_attachment extends TerraformResource {

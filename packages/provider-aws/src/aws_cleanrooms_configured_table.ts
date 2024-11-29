@@ -3,7 +3,7 @@ export interface AwsCleanroomsConfiguredTableArgsTableReference {
   database_name: string;
   table_name: string;
 }
-export interface AwsCleanroomsConfiguredTableArgstimeouts {
+export interface AwsCleanroomsConfiguredTableArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface AwsCleanroomsConfiguredTableArgs {
     [key: string]: string;
   };
   table_reference: AwsCleanroomsConfiguredTableArgsTableReference;
-  timeouts: AwsCleanroomsConfiguredTableArgstimeouts;
+  timeouts: AwsCleanroomsConfiguredTableArgsTimeouts;
 }
 export class aws_cleanrooms_configured_table extends TerraformResource {
   readonly arn!: string;

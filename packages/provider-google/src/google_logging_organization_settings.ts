@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleLoggingOrganizationSettingsArgstimeouts {
+export interface GoogleLoggingOrganizationSettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleLoggingOrganizationSettingsArgs {
   organization: string;
-  timeouts: GoogleLoggingOrganizationSettingsArgstimeouts;
+  timeouts: GoogleLoggingOrganizationSettingsArgsTimeouts;
 }
 export class google_logging_organization_settings extends TerraformResource {
   readonly disable_default_sink?: boolean;

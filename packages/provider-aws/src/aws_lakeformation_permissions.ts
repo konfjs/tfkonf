@@ -8,22 +8,22 @@ export interface AwsLakeformationPermissionsArgsDataCellsFilter {
 export interface AwsLakeformationPermissionsArgsDataLocation {
   arn: string;
 }
-export interface AwsLakeformationPermissionsArgsdatabase {
+export interface AwsLakeformationPermissionsArgsDatabase {
   name: string;
 }
 export interface AwsLakeformationPermissionsArgsLfTag {
   key: string;
   values: string[];
 }
-export interface AwsLakeformationPermissionsArgsLfTagPolicyexpression {
+export interface AwsLakeformationPermissionsArgsLfTagPolicyExpression {
   key: string;
   values: string[];
 }
 export interface AwsLakeformationPermissionsArgsLfTagPolicy {
   resource_type: string;
-  expression: AwsLakeformationPermissionsArgsLfTagPolicyexpression;
+  expression: AwsLakeformationPermissionsArgsLfTagPolicyExpression;
 }
-export interface AwsLakeformationPermissionsArgstable {
+export interface AwsLakeformationPermissionsArgsTable {
   database_name: string;
   wildcard?: boolean;
 }
@@ -41,10 +41,10 @@ export interface AwsLakeformationPermissionsArgs {
   principal: string;
   data_cells_filter: AwsLakeformationPermissionsArgsDataCellsFilter;
   data_location: AwsLakeformationPermissionsArgsDataLocation;
-  database: AwsLakeformationPermissionsArgsdatabase;
+  database: AwsLakeformationPermissionsArgsDatabase;
   lf_tag: AwsLakeformationPermissionsArgsLfTag;
   lf_tag_policy: AwsLakeformationPermissionsArgsLfTagPolicy;
-  table: AwsLakeformationPermissionsArgstable;
+  table: AwsLakeformationPermissionsArgsTable;
   table_with_columns: AwsLakeformationPermissionsArgsTableWithColumns;
 }
 export class aws_lakeformation_permissions extends TerraformResource {

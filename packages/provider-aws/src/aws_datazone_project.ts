@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDatazoneProjectArgstimeouts {
+export interface AwsDatazoneProjectArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsDatazoneProjectArgs {
   glossary_terms?: string[];
   name: string;
   skip_deletion_check?: boolean;
-  timeouts: AwsDatazoneProjectArgstimeouts;
+  timeouts: AwsDatazoneProjectArgsTimeouts;
 }
 export class aws_datazone_project extends TerraformResource {
   readonly created_at!: string;

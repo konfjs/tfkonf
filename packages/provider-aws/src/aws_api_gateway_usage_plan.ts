@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsApiGatewayUsagePlanArgsApiStagesthrottle {
+export interface AwsApiGatewayUsagePlanArgsApiStagesThrottle {
   burst_limit?: number;
   path: string;
   rate_limit?: number;
@@ -7,7 +7,7 @@ export interface AwsApiGatewayUsagePlanArgsApiStagesthrottle {
 export interface AwsApiGatewayUsagePlanArgsApiStages {
   api_id: string;
   stage: string;
-  throttle: AwsApiGatewayUsagePlanArgsApiStagesthrottle;
+  throttle: AwsApiGatewayUsagePlanArgsApiStagesThrottle;
 }
 export interface AwsApiGatewayUsagePlanArgsQuotaSettings {
   limit: number;

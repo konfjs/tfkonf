@@ -11,7 +11,7 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy 
   require_screen_lock?: boolean;
   os_constraints: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicyOsConstraints;
 }
-export interface GoogleAccessContextManagerAccessLevelConditionArgstimeouts {
+export interface GoogleAccessContextManagerAccessLevelConditionArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -30,7 +30,7 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   regions?: string[];
   required_access_levels?: string[];
   device_policy: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy;
-  timeouts: GoogleAccessContextManagerAccessLevelConditionArgstimeouts;
+  timeouts: GoogleAccessContextManagerAccessLevelConditionArgsTimeouts;
   vpc_network_sources: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources;
 }
 export class google_access_context_manager_access_level_condition extends TerraformResource {

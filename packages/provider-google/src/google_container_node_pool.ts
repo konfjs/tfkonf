@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleContainerNodePoolArgsautoscaling {
+export interface GoogleContainerNodePoolArgsAutoscaling {
   max_node_count?: number;
   min_node_count?: number;
   total_max_node_count?: number;
   total_min_node_count?: number;
 }
-export interface GoogleContainerNodePoolArgsmanagement {
+export interface GoogleContainerNodePoolArgsManagement {
   auto_repair?: boolean;
   auto_upgrade?: boolean;
 }
@@ -74,7 +74,7 @@ export interface GoogleContainerNodePoolArgsNodeConfigGuestAccelerator {
   gpu_driver_installation_config: GoogleContainerNodePoolArgsNodeConfigGuestAcceleratorGpuDriverInstallationConfig;
   gpu_sharing_config: GoogleContainerNodePoolArgsNodeConfigGuestAcceleratorGpuSharingConfig;
 }
-export interface GoogleContainerNodePoolArgsNodeConfiggvnic {
+export interface GoogleContainerNodePoolArgsNodeConfigGvnic {
   enabled: boolean;
 }
 export interface GoogleContainerNodePoolArgsNodeConfigHostMaintenancePolicy {
@@ -120,7 +120,7 @@ export interface GoogleContainerNodePoolArgsNodeConfigSoleTenantConfigNodeAffini
 export interface GoogleContainerNodePoolArgsNodeConfigSoleTenantConfig {
   node_affinity: GoogleContainerNodePoolArgsNodeConfigSoleTenantConfigNodeAffinity;
 }
-export interface GoogleContainerNodePoolArgsNodeConfigtaint {
+export interface GoogleContainerNodePoolArgsNodeConfigTaint {
   effect: string;
   key: string;
   value: string;
@@ -149,7 +149,7 @@ export interface GoogleContainerNodePoolArgsNodeConfig {
   fast_socket: GoogleContainerNodePoolArgsNodeConfigFastSocket;
   gcfs_config: GoogleContainerNodePoolArgsNodeConfigGcfsConfig;
   guest_accelerator: GoogleContainerNodePoolArgsNodeConfigGuestAccelerator;
-  gvnic: GoogleContainerNodePoolArgsNodeConfiggvnic;
+  gvnic: GoogleContainerNodePoolArgsNodeConfigGvnic;
   host_maintenance_policy: GoogleContainerNodePoolArgsNodeConfigHostMaintenancePolicy;
   kubelet_config: GoogleContainerNodePoolArgsNodeConfigKubeletConfig;
   linux_node_config: GoogleContainerNodePoolArgsNodeConfigLinuxNodeConfig;
@@ -158,7 +158,7 @@ export interface GoogleContainerNodePoolArgsNodeConfig {
   secondary_boot_disks: GoogleContainerNodePoolArgsNodeConfigSecondaryBootDisks;
   shielded_instance_config: GoogleContainerNodePoolArgsNodeConfigShieldedInstanceConfig;
   sole_tenant_config: GoogleContainerNodePoolArgsNodeConfigSoleTenantConfig;
-  taint: GoogleContainerNodePoolArgsNodeConfigtaint;
+  taint: GoogleContainerNodePoolArgsNodeConfigTaint;
   workload_metadata_config: GoogleContainerNodePoolArgsNodeConfigWorkloadMetadataConfig;
 }
 export interface GoogleContainerNodePoolArgsPlacementPolicy {
@@ -169,7 +169,7 @@ export interface GoogleContainerNodePoolArgsPlacementPolicy {
 export interface GoogleContainerNodePoolArgsQueuedProvisioning {
   enabled: boolean;
 }
-export interface GoogleContainerNodePoolArgstimeouts {
+export interface GoogleContainerNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -184,13 +184,13 @@ export interface GoogleContainerNodePoolArgsUpgradeSettings {
 }
 export interface GoogleContainerNodePoolArgs {
   cluster: string;
-  autoscaling: GoogleContainerNodePoolArgsautoscaling;
-  management: GoogleContainerNodePoolArgsmanagement;
+  autoscaling: GoogleContainerNodePoolArgsAutoscaling;
+  management: GoogleContainerNodePoolArgsManagement;
   network_config: GoogleContainerNodePoolArgsNetworkConfig;
   node_config: GoogleContainerNodePoolArgsNodeConfig;
   placement_policy: GoogleContainerNodePoolArgsPlacementPolicy;
   queued_provisioning: GoogleContainerNodePoolArgsQueuedProvisioning;
-  timeouts: GoogleContainerNodePoolArgstimeouts;
+  timeouts: GoogleContainerNodePoolArgsTimeouts;
   upgrade_settings: GoogleContainerNodePoolArgsUpgradeSettings;
 }
 export class google_container_node_pool extends TerraformResource {

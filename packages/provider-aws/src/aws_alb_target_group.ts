@@ -7,7 +7,7 @@ export interface AwsAlbTargetGroupArgsHealthCheck {
   protocol?: string;
   unhealthy_threshold?: number;
 }
-export interface AwsAlbTargetGroupArgsstickiness {
+export interface AwsAlbTargetGroupArgsStickiness {
   cookie_duration?: number;
   cookie_name?: string;
   enabled?: boolean;
@@ -46,7 +46,7 @@ export interface AwsAlbTargetGroupArgs {
   target_type?: string;
   vpc_id?: string;
   health_check: AwsAlbTargetGroupArgsHealthCheck;
-  stickiness: AwsAlbTargetGroupArgsstickiness;
+  stickiness: AwsAlbTargetGroupArgsStickiness;
   target_failover: AwsAlbTargetGroupArgsTargetFailover;
   target_group_health: AwsAlbTargetGroupArgsTargetGroupHealth;
   target_health_state: AwsAlbTargetGroupArgsTargetHealthState;

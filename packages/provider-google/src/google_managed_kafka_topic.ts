@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleManagedKafkaTopicArgstimeouts {
+export interface GoogleManagedKafkaTopicArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleManagedKafkaTopicArgs {
   partition_count?: number;
   replication_factor: number;
   topic_id: string;
-  timeouts: GoogleManagedKafkaTopicArgstimeouts;
+  timeouts: GoogleManagedKafkaTopicArgsTimeouts;
 }
 export class google_managed_kafka_topic extends TerraformResource {
   readonly id?: string;

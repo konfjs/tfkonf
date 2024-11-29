@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRoute53ZoneArgsvpc {
+export interface AwsRoute53ZoneArgsVpc {
   vpc_id: string;
 }
 export interface AwsRoute53ZoneArgs {
@@ -10,7 +10,7 @@ export interface AwsRoute53ZoneArgs {
   tags?: {
     [key: string]: string;
   };
-  vpc: AwsRoute53ZoneArgsvpc;
+  vpc: AwsRoute53ZoneArgsVpc;
 }
 export class aws_route53_zone extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputePerInstanceConfigArgsPreservedStatedisk {
+export interface GoogleComputePerInstanceConfigArgsPreservedStateDisk {
   delete_rule?: string;
   device_name: string;
   mode?: string;
@@ -25,11 +25,11 @@ export interface GoogleComputePerInstanceConfigArgsPreservedState {
   metadata?: {
     [key: string]: string;
   };
-  disk: GoogleComputePerInstanceConfigArgsPreservedStatedisk;
+  disk: GoogleComputePerInstanceConfigArgsPreservedStateDisk;
   external_ip: GoogleComputePerInstanceConfigArgsPreservedStateExternalIp;
   internal_ip: GoogleComputePerInstanceConfigArgsPreservedStateInternalIp;
 }
-export interface GoogleComputePerInstanceConfigArgstimeouts {
+export interface GoogleComputePerInstanceConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,7 +42,7 @@ export interface GoogleComputePerInstanceConfigArgs {
   remove_instance_on_destroy?: boolean;
   remove_instance_state_on_destroy?: boolean;
   preserved_state: GoogleComputePerInstanceConfigArgsPreservedState;
-  timeouts: GoogleComputePerInstanceConfigArgstimeouts;
+  timeouts: GoogleComputePerInstanceConfigArgsTimeouts;
 }
 export class google_compute_per_instance_config extends TerraformResource {
   readonly id?: string;

@@ -3,7 +3,7 @@ export interface AwsKendraFaqArgsS3Path {
   bucket: string;
   key: string;
 }
-export interface AwsKendraFaqArgstimeouts {
+export interface AwsKendraFaqArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -17,7 +17,7 @@ export interface AwsKendraFaqArgs {
     [key: string]: string;
   };
   s3_path: AwsKendraFaqArgsS3Path;
-  timeouts: AwsKendraFaqArgstimeouts;
+  timeouts: AwsKendraFaqArgsTimeouts;
 }
 export class aws_kendra_faq extends TerraformResource {
   readonly arn!: string;

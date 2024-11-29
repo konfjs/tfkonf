@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCloudfunctionsFunctionIamBindingArgscondition {
+export interface GoogleCloudfunctionsFunctionIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudfunctionsFunctionIamBindingArgs {
   cloud_function: string;
   members: string[];
   role: string;
-  condition: GoogleCloudfunctionsFunctionIamBindingArgscondition;
+  condition: GoogleCloudfunctionsFunctionIamBindingArgsCondition;
 }
 export class google_cloudfunctions_function_iam_binding extends TerraformResource {
   readonly etag!: string;

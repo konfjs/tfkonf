@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationruledestination {
+export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationRuleDestination {
   region: string;
   registry_id: string;
 }
-export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationruleRepositoryFilter {
+export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationRuleRepositoryFilter {
   filter: string;
   filter_type: string;
 }
-export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationrule {
-  destination: AwsEcrReplicationConfigurationArgsReplicationConfigurationruledestination;
-  repository_filter: AwsEcrReplicationConfigurationArgsReplicationConfigurationruleRepositoryFilter;
+export interface AwsEcrReplicationConfigurationArgsReplicationConfigurationRule {
+  destination: AwsEcrReplicationConfigurationArgsReplicationConfigurationRuleDestination;
+  repository_filter: AwsEcrReplicationConfigurationArgsReplicationConfigurationRuleRepositoryFilter;
 }
 export interface AwsEcrReplicationConfigurationArgsReplicationConfiguration {
-  rule: AwsEcrReplicationConfigurationArgsReplicationConfigurationrule;
+  rule: AwsEcrReplicationConfigurationArgsReplicationConfigurationRule;
 }
 export interface AwsEcrReplicationConfigurationArgs {
   replication_configuration: AwsEcrReplicationConfigurationArgsReplicationConfiguration;

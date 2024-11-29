@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDxGatewayAssociationArgstimeouts {
+export interface AwsDxGatewayAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface AwsDxGatewayAssociationArgs {
   dx_gateway_id: string;
   proposal_id?: string;
   vpn_gateway_id?: string;
-  timeouts: AwsDxGatewayAssociationArgstimeouts;
+  timeouts: AwsDxGatewayAssociationArgsTimeouts;
 }
 export class aws_dx_gateway_association extends TerraformResource {
   readonly allowed_prefixes?: string[];

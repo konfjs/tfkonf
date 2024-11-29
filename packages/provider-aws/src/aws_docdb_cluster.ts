@@ -5,7 +5,7 @@ export interface AwsDocdbClusterArgsRestoreToPointInTime {
   source_cluster_identifier: string;
   use_latest_restorable_time?: boolean;
 }
-export interface AwsDocdbClusterArgstimeouts {
+export interface AwsDocdbClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,7 +29,7 @@ export interface AwsDocdbClusterArgs {
     [key: string]: string;
   };
   restore_to_point_in_time: AwsDocdbClusterArgsRestoreToPointInTime;
-  timeouts: AwsDocdbClusterArgstimeouts;
+  timeouts: AwsDocdbClusterArgsTimeouts;
 }
 export class aws_docdb_cluster extends TerraformResource {
   readonly arn!: string;

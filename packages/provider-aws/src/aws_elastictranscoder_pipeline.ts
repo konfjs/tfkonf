@@ -7,7 +7,7 @@ export interface AwsElastictranscoderPipelineArgsContentConfigPermissions {
   grantee?: string;
   grantee_type?: string;
 }
-export interface AwsElastictranscoderPipelineArgsnotifications {
+export interface AwsElastictranscoderPipelineArgsNotifications {
   completed?: string;
   error?: string;
   progressing?: string;
@@ -27,7 +27,7 @@ export interface AwsElastictranscoderPipelineArgs {
   role: string;
   content_config: AwsElastictranscoderPipelineArgsContentConfig;
   content_config_permissions: AwsElastictranscoderPipelineArgsContentConfigPermissions;
-  notifications: AwsElastictranscoderPipelineArgsnotifications;
+  notifications: AwsElastictranscoderPipelineArgsNotifications;
   thumbnail_config: AwsElastictranscoderPipelineArgsThumbnailConfig;
   thumbnail_config_permissions: AwsElastictranscoderPipelineArgsThumbnailConfigPermissions;
 }

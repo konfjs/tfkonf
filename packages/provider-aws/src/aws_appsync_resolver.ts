@@ -6,7 +6,7 @@ export interface AwsAppsyncResolverArgsCachingConfig {
 export interface AwsAppsyncResolverArgsPipelineConfig {
   functions?: string[];
 }
-export interface AwsAppsyncResolverArgsruntime {
+export interface AwsAppsyncResolverArgsRuntime {
   name: string;
   runtime_version: string;
 }
@@ -30,7 +30,7 @@ export interface AwsAppsyncResolverArgs {
   type: string;
   caching_config: AwsAppsyncResolverArgsCachingConfig;
   pipeline_config: AwsAppsyncResolverArgsPipelineConfig;
-  runtime: AwsAppsyncResolverArgsruntime;
+  runtime: AwsAppsyncResolverArgsRuntime;
   sync_config: AwsAppsyncResolverArgsSyncConfig;
 }
 export class aws_appsync_resolver extends TerraformResource {

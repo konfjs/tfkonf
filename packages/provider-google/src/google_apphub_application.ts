@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApphubApplicationArgsattributesBusinessOwners {
+export interface GoogleApphubApplicationArgsAttributesBusinessOwners {
   display_name?: string;
   email: string;
 }
-export interface GoogleApphubApplicationArgsattributescriticality {
+export interface GoogleApphubApplicationArgsAttributesCriticality {
   type: string;
 }
-export interface GoogleApphubApplicationArgsattributesDeveloperOwners {
+export interface GoogleApphubApplicationArgsAttributesDeveloperOwners {
   display_name?: string;
   email: string;
 }
-export interface GoogleApphubApplicationArgsattributesenvironment {
+export interface GoogleApphubApplicationArgsAttributesEnvironment {
   type: string;
 }
-export interface GoogleApphubApplicationArgsattributesOperatorOwners {
+export interface GoogleApphubApplicationArgsAttributesOperatorOwners {
   display_name?: string;
   email: string;
 }
-export interface GoogleApphubApplicationArgsattributes {
-  business_owners: GoogleApphubApplicationArgsattributesBusinessOwners;
-  criticality: GoogleApphubApplicationArgsattributescriticality;
-  developer_owners: GoogleApphubApplicationArgsattributesDeveloperOwners;
-  environment: GoogleApphubApplicationArgsattributesenvironment;
-  operator_owners: GoogleApphubApplicationArgsattributesOperatorOwners;
+export interface GoogleApphubApplicationArgsAttributes {
+  business_owners: GoogleApphubApplicationArgsAttributesBusinessOwners;
+  criticality: GoogleApphubApplicationArgsAttributesCriticality;
+  developer_owners: GoogleApphubApplicationArgsAttributesDeveloperOwners;
+  environment: GoogleApphubApplicationArgsAttributesEnvironment;
+  operator_owners: GoogleApphubApplicationArgsAttributesOperatorOwners;
 }
-export interface GoogleApphubApplicationArgsscope {
+export interface GoogleApphubApplicationArgsScope {
   type: string;
 }
-export interface GoogleApphubApplicationArgstimeouts {
+export interface GoogleApphubApplicationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,9 +37,9 @@ export interface GoogleApphubApplicationArgs {
   description?: string;
   display_name?: string;
   location: string;
-  attributes: GoogleApphubApplicationArgsattributes;
-  scope: GoogleApphubApplicationArgsscope;
-  timeouts: GoogleApphubApplicationArgstimeouts;
+  attributes: GoogleApphubApplicationArgsAttributes;
+  scope: GoogleApphubApplicationArgsScope;
+  timeouts: GoogleApphubApplicationArgsTimeouts;
 }
 export class google_apphub_application extends TerraformResource {
   readonly create_time!: string;

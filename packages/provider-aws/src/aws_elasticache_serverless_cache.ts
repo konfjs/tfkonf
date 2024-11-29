@@ -12,7 +12,7 @@ export interface AwsElasticacheServerlessCacheArgsCacheUsageLimits {
   data_storage: AwsElasticacheServerlessCacheArgsCacheUsageLimitsDataStorage;
   ecpu_per_second: AwsElasticacheServerlessCacheArgsCacheUsageLimitsEcpuPerSecond;
 }
-export interface AwsElasticacheServerlessCacheArgstimeouts {
+export interface AwsElasticacheServerlessCacheArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,7 +27,7 @@ export interface AwsElasticacheServerlessCacheArgs {
   };
   user_group_id?: string;
   cache_usage_limits: AwsElasticacheServerlessCacheArgsCacheUsageLimits;
-  timeouts: AwsElasticacheServerlessCacheArgstimeouts;
+  timeouts: AwsElasticacheServerlessCacheArgsTimeouts;
 }
 export class aws_elasticache_serverless_cache extends TerraformResource {
   readonly arn!: string;

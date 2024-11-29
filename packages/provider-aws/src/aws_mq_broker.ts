@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMqBrokerArgsconfiguration {}
+export interface AwsMqBrokerArgsConfiguration {}
 export interface AwsMqBrokerArgsEncryptionOptions {
   use_aws_owned_key?: boolean;
 }
@@ -16,7 +16,7 @@ export interface AwsMqBrokerArgsLdapServerMetadata {
   user_search_matching?: string;
   user_search_subtree?: boolean;
 }
-export interface AwsMqBrokerArgslogs {
+export interface AwsMqBrokerArgsLogs {
   audit?: string;
   general?: boolean;
 }
@@ -25,12 +25,12 @@ export interface AwsMqBrokerArgsMaintenanceWindowStartTime {
   time_of_day: string;
   time_zone: string;
 }
-export interface AwsMqBrokerArgstimeouts {
+export interface AwsMqBrokerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AwsMqBrokerArgsuser {
+export interface AwsMqBrokerArgsUser {
   console_access?: boolean;
   groups?: string[];
   password: string;
@@ -51,13 +51,13 @@ export interface AwsMqBrokerArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: AwsMqBrokerArgsconfiguration;
+  configuration: AwsMqBrokerArgsConfiguration;
   encryption_options: AwsMqBrokerArgsEncryptionOptions;
   ldap_server_metadata: AwsMqBrokerArgsLdapServerMetadata;
-  logs: AwsMqBrokerArgslogs;
+  logs: AwsMqBrokerArgsLogs;
   maintenance_window_start_time: AwsMqBrokerArgsMaintenanceWindowStartTime;
-  timeouts: AwsMqBrokerArgstimeouts;
-  user: AwsMqBrokerArgsuser;
+  timeouts: AwsMqBrokerArgsTimeouts;
+  user: AwsMqBrokerArgsUser;
 }
 export class aws_mq_broker extends TerraformResource {
   readonly arn!: string;

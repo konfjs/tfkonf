@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsKendraExperienceArgsconfigurationContentSourceConfiguration {
+export interface AwsKendraExperienceArgsConfigurationContentSourceConfiguration {
   data_source_ids?: string[];
   direct_put_content?: boolean;
   faq_ids?: string[];
 }
-export interface AwsKendraExperienceArgsconfigurationUserIdentityConfiguration {
+export interface AwsKendraExperienceArgsConfigurationUserIdentityConfiguration {
   identity_attribute_name: string;
 }
-export interface AwsKendraExperienceArgsconfiguration {
-  content_source_configuration: AwsKendraExperienceArgsconfigurationContentSourceConfiguration;
-  user_identity_configuration: AwsKendraExperienceArgsconfigurationUserIdentityConfiguration;
+export interface AwsKendraExperienceArgsConfiguration {
+  content_source_configuration: AwsKendraExperienceArgsConfigurationContentSourceConfiguration;
+  user_identity_configuration: AwsKendraExperienceArgsConfigurationUserIdentityConfiguration;
 }
-export interface AwsKendraExperienceArgstimeouts {
+export interface AwsKendraExperienceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface AwsKendraExperienceArgs {
   index_id: string;
   name: string;
   role_arn: string;
-  configuration: AwsKendraExperienceArgsconfiguration;
-  timeouts: AwsKendraExperienceArgstimeouts;
+  configuration: AwsKendraExperienceArgsConfiguration;
+  timeouts: AwsKendraExperienceArgsTimeouts;
 }
 export class aws_kendra_experience extends TerraformResource {
   readonly arn!: string;

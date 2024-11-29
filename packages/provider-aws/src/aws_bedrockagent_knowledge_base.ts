@@ -57,7 +57,7 @@ export interface AwsBedrockagentKnowledgeBaseArgsStorageConfiguration {
   rds_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRdsConfiguration;
   redis_enterprise_cloud_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRedisEnterpriseCloudConfiguration;
 }
-export interface AwsBedrockagentKnowledgeBaseArgstimeouts {
+export interface AwsBedrockagentKnowledgeBaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -71,7 +71,7 @@ export interface AwsBedrockagentKnowledgeBaseArgs {
   };
   knowledge_base_configuration: AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfiguration;
   storage_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfiguration;
-  timeouts: AwsBedrockagentKnowledgeBaseArgstimeouts;
+  timeouts: AwsBedrockagentKnowledgeBaseArgsTimeouts;
 }
 export class aws_bedrockagent_knowledge_base extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleMigrationCenterGroupArgstimeouts {
+export interface GoogleMigrationCenterGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleMigrationCenterGroupArgs {
     [key: string]: string;
   };
   location: string;
-  timeouts: GoogleMigrationCenterGroupArgstimeouts;
+  timeouts: GoogleMigrationCenterGroupArgsTimeouts;
 }
 export class google_migration_center_group extends TerraformResource {
   readonly create_time!: string;

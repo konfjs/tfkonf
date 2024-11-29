@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeManagedSslCertificateArgsmanaged {
+export interface GoogleComputeManagedSslCertificateArgsManaged {
   domains: string[];
 }
-export interface GoogleComputeManagedSslCertificateArgstimeouts {
+export interface GoogleComputeManagedSslCertificateArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,8 +10,8 @@ export interface GoogleComputeManagedSslCertificateArgs {
   description?: string;
   name?: string;
   type?: string;
-  managed: GoogleComputeManagedSslCertificateArgsmanaged;
-  timeouts: GoogleComputeManagedSslCertificateArgstimeouts;
+  managed: GoogleComputeManagedSslCertificateArgsManaged;
+  timeouts: GoogleComputeManagedSslCertificateArgsTimeouts;
 }
 export class google_compute_managed_ssl_certificate extends TerraformResource {
   readonly certificate_id!: number;

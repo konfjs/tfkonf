@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDbClusterSnapshotArgstimeouts {
+export interface AwsDbClusterSnapshotArgsTimeouts {
   create?: string;
 }
 export interface AwsDbClusterSnapshotArgs {
@@ -9,7 +9,7 @@ export interface AwsDbClusterSnapshotArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDbClusterSnapshotArgstimeouts;
+  timeouts: AwsDbClusterSnapshotArgsTimeouts;
 }
 export class aws_db_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;

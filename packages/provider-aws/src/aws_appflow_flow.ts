@@ -26,60 +26,60 @@ export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorProp
   object: string;
   error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesEventBridgeErrorHandlingConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieshoneycodeErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieshoneycode {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesHoneycode {
   object: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieshoneycodeErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesHoneycodeErrorHandlingConfig;
 }
 export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesLookoutMetrics {}
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesmarketoErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesmarketo {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesMarketo {
   object: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesmarketoErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesMarketoErrorHandlingConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesredshiftErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesredshift {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesRedshift {
   bucket_prefix?: string;
   intermediate_bucket_name: string;
   object: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesredshiftErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesRedshiftErrorHandlingConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfigAggregationConfig {}
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfigPrefixConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfig {}
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfig {
   prefix_format?: string;
   prefix_type?: string;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig {
   file_type?: string;
-  aggregation_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfigAggregationConfig;
-  prefix_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfigPrefixConfig;
+  aggregation_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigAggregationConfig;
+  prefix_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfigPrefixConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3 {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3 {
   bucket_name: string;
-  s3_output_format_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3S3OutputFormatConfig;
+  s3_output_format_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3S3OutputFormatConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessalesforceErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessalesforce {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSalesforce {
   id_field_names?: string[];
   object: string;
   write_operation_type?: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessalesforceErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig;
 }
 export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfig {
   bucket_name?: string;
@@ -97,59 +97,59 @@ export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorProp
   error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSapoDataErrorHandlingConfig;
   success_response_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSapoDataSuccessResponseHandlingConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessnowflakeErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessnowflake {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSnowflake {
   bucket_prefix?: string;
   intermediate_bucket_name: string;
   object: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessnowflakeErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSnowflakeErrorHandlingConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfigAggregationConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfig {
   aggregation_type?: string;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfigPrefixConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig {
   prefix_format?: string;
   prefix_type: string;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig {
   file_type?: string;
-  aggregation_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfigAggregationConfig;
-  prefix_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfigPrefixConfig;
+  aggregation_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigAggregationConfig;
+  prefix_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfigPrefixConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolver {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolver {
   bucket_name: string;
   bucket_prefix?: string;
-  s3_output_format_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolverS3OutputFormatConfig;
+  s3_output_format_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolverS3OutputFormatConfig;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieszendeskErrorHandlingConfig {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfig {
   bucket_name?: string;
   bucket_prefix?: string;
   fail_on_first_destination_error?: boolean;
 }
-export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieszendesk {
+export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesZendesk {
   id_field_names?: string[];
   object: string;
   write_operation_type?: string;
-  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieszendeskErrorHandlingConfig;
+  error_handling_config: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesZendeskErrorHandlingConfig;
 }
 export interface AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorProperties {
   custom_connector: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesCustomConnector;
   customer_profiles: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesCustomerProfiles;
   event_bridge: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesEventBridge;
-  honeycode: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieshoneycode;
+  honeycode: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesHoneycode;
   lookout_metrics: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesLookoutMetrics;
-  marketo: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesmarketo;
-  redshift: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesredshift;
-  s3: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiess3;
-  salesforce: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessalesforce;
+  marketo: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesMarketo;
+  redshift: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesRedshift;
+  s3: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesS3;
+  salesforce: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSalesforce;
   sapo_data: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSapoData;
-  snowflake: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiessnowflake;
-  upsolver: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesupsolver;
-  zendesk: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertieszendesk;
+  snowflake: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesSnowflake;
+  upsolver: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesUpsolver;
+  zendesk: AwsAppflowFlowArgsDestinationFlowConfigDestinationConnectorPropertiesZendesk;
 }
 export interface AwsAppflowFlowArgsDestinationFlowConfig {
   api_version?: string;
@@ -168,7 +168,7 @@ export interface AwsAppflowFlowArgsMetadataCatalogConfig {
 export interface AwsAppflowFlowArgsSourceFlowConfigIncrementalPullConfig {
   datetime_type_field_name?: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesamplitude {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesAmplitude {
   object: string;
 }
 export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesCustomConnector {
@@ -177,10 +177,10 @@ export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesCust
   };
   entity_name: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesdatadog {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesDatadog {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesdynatrace {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesDynatrace {
   object: string;
 }
 export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesGoogleAnalytics {
@@ -189,18 +189,18 @@ export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesGoog
 export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesInforNexus {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesmarketo {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesMarketo {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiess3S3InputFormatConfig {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig {
   s3_input_file_type?: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiess3 {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesS3 {
   bucket_name: string;
   bucket_prefix: string;
-  s3_input_format_config: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiess3S3InputFormatConfig;
+  s3_input_format_config: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesS3S3InputFormatConfig;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiessalesforce {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSalesforce {
   enable_dynamic_field_update?: boolean;
   include_deleted_records?: boolean;
   object: string;
@@ -219,42 +219,42 @@ export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSapo
 export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesServiceNow {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiessingular {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSingular {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesslack {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSlack {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiestrendmicro {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesTrendmicro {
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesveeva {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesVeeva {
   document_type?: string;
   include_all_versions?: boolean;
   include_renditions?: boolean;
   include_source_files?: boolean;
   object: string;
 }
-export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertieszendesk {
+export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesZendesk {
   object: string;
 }
 export interface AwsAppflowFlowArgsSourceFlowConfigSourceConnectorProperties {
-  amplitude: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesamplitude;
+  amplitude: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesAmplitude;
   custom_connector: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesCustomConnector;
-  datadog: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesdatadog;
-  dynatrace: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesdynatrace;
+  datadog: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesDatadog;
+  dynatrace: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesDynatrace;
   google_analytics: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesGoogleAnalytics;
   infor_nexus: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesInforNexus;
-  marketo: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesmarketo;
-  s3: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiess3;
-  salesforce: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiessalesforce;
+  marketo: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesMarketo;
+  s3: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesS3;
+  salesforce: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSalesforce;
   sapo_data: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSapoData;
   service_now: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesServiceNow;
-  singular: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiessingular;
-  slack: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesslack;
-  trendmicro: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiestrendmicro;
-  veeva: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesveeva;
-  zendesk: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertieszendesk;
+  singular: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSingular;
+  slack: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesSlack;
+  trendmicro: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesTrendmicro;
+  veeva: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesVeeva;
+  zendesk: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorPropertiesZendesk;
 }
 export interface AwsAppflowFlowArgsSourceFlowConfig {
   api_version?: string;
@@ -263,7 +263,7 @@ export interface AwsAppflowFlowArgsSourceFlowConfig {
   incremental_pull_config: AwsAppflowFlowArgsSourceFlowConfigIncrementalPullConfig;
   source_connector_properties: AwsAppflowFlowArgsSourceFlowConfigSourceConnectorProperties;
 }
-export interface AwsAppflowFlowArgstaskConnectorOperator {
+export interface AwsAppflowFlowArgsTaskConnectorOperator {
   amplitude?: string;
   custom_connector?: string;
   datadog?: string;
@@ -281,15 +281,15 @@ export interface AwsAppflowFlowArgstaskConnectorOperator {
   veeva?: string;
   zendesk?: string;
 }
-export interface AwsAppflowFlowArgstask {
+export interface AwsAppflowFlowArgsTask {
   destination_field?: string;
   task_properties?: {
     [key: string]: string;
   };
   task_type: string;
-  connector_operator: AwsAppflowFlowArgstaskConnectorOperator;
+  connector_operator: AwsAppflowFlowArgsTaskConnectorOperator;
 }
-export interface AwsAppflowFlowArgsTriggerConfigTriggerPropertiesscheduled {
+export interface AwsAppflowFlowArgsTriggerConfigTriggerPropertiesScheduled {
   data_pull_mode?: string;
   first_execution_from?: string;
   schedule_end_time?: string;
@@ -299,7 +299,7 @@ export interface AwsAppflowFlowArgsTriggerConfigTriggerPropertiesscheduled {
   timezone?: string;
 }
 export interface AwsAppflowFlowArgsTriggerConfigTriggerProperties {
-  scheduled: AwsAppflowFlowArgsTriggerConfigTriggerPropertiesscheduled;
+  scheduled: AwsAppflowFlowArgsTriggerConfigTriggerPropertiesScheduled;
 }
 export interface AwsAppflowFlowArgsTriggerConfig {
   trigger_type: string;
@@ -314,7 +314,7 @@ export interface AwsAppflowFlowArgs {
   destination_flow_config: AwsAppflowFlowArgsDestinationFlowConfig;
   metadata_catalog_config: AwsAppflowFlowArgsMetadataCatalogConfig;
   source_flow_config: AwsAppflowFlowArgsSourceFlowConfig;
-  task: AwsAppflowFlowArgstask;
+  task: AwsAppflowFlowArgsTask;
   trigger_config: AwsAppflowFlowArgsTriggerConfig;
 }
 export class aws_appflow_flow extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeVpnTunnelArgstimeouts {
+export interface GoogleComputeVpnTunnelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleComputeVpnTunnelArgs {
   target_vpn_gateway?: string;
   vpn_gateway?: string;
   vpn_gateway_interface?: number;
-  timeouts: GoogleComputeVpnTunnelArgstimeouts;
+  timeouts: GoogleComputeVpnTunnelArgsTimeouts;
 }
 export class google_compute_vpn_tunnel extends TerraformResource {
   readonly creation_timestamp!: string;

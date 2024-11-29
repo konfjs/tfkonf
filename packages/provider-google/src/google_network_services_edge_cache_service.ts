@@ -2,80 +2,80 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleNetworkServicesEdgeCacheServiceArgsLogConfig {
   sample_rate?: number;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingHostRule {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingHostRule {
   description?: string;
   hosts: string[];
   path_matcher: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd {
   header_name: string;
   header_value: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
   header_name: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
   header_name: string;
   header_value: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove {
   header_name: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderAction {
-  request_header_to_add: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd;
-  request_header_to_remove: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove;
-  response_header_to_add: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd;
-  response_header_to_remove: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove;
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderAction {
+  request_header_to_add: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd;
+  request_header_to_remove: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove;
+  response_header_to_add: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd;
+  response_header_to_remove: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRuleHeaderMatch {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRuleHeaderMatch {
   exact_match?: string;
   header_name: string;
   prefix_match?: string;
   present_match?: boolean;
   suffix_match?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
   exact_match?: string;
   name: string;
   present_match?: boolean;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRule {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRule {
   full_path_match?: string;
   path_template_match?: string;
   prefix_match?: string;
-  header_match: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRuleHeaderMatch;
-  query_parameter_match: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRuleQueryParameterMatch;
+  header_match: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRuleHeaderMatch;
+  query_parameter_match: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures {
   actions: string[];
   copied_parameters?: string[];
   keyset?: string;
   token_query_parameter?: string;
   token_ttl?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
   exclude_query_string?: boolean;
   excluded_query_parameters?: string[];
   included_cookie_names?: string[];
   included_header_names?: string[];
   included_query_parameters?: string[];
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions {
   allowed_signature_algorithms?: string[];
   token_query_parameter?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicy {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicy {
   client_ttl?: string;
   negative_caching?: boolean;
   negative_caching_policy?: {
     [key: string]: string;
   };
   signed_request_maximum_expiration_ttl?: string;
-  add_signatures: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures;
-  cache_key_policy: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy;
-  signed_token_options: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions;
+  add_signatures: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures;
+  cache_key_policy: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy;
+  signed_token_options: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCorsPolicy {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -84,40 +84,40 @@ export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRout
   expose_headers?: string[];
   max_age: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionUrlRewrite {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionUrlRewrite {
   host_rewrite?: string;
   path_prefix_rewrite?: string;
   path_template_rewrite?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteAction {
-  cdn_policy: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCdnPolicy;
-  cors_policy: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionCorsPolicy;
-  url_rewrite: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteActionUrlRewrite;
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteAction {
+  cdn_policy: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCdnPolicy;
+  cors_policy: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionCorsPolicy;
+  url_rewrite: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteActionUrlRewrite;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleUrlRedirect {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleUrlRedirect {
   host_redirect?: string;
   path_redirect?: string;
   prefix_redirect?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRule {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRule {
   description?: string;
   origin?: string;
   priority: string;
-  header_action: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleHeaderAction;
-  match_rule: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleMatchRule;
-  route_action: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleRouteAction;
-  url_redirect: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRuleUrlRedirect;
+  header_action: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleHeaderAction;
+  match_rule: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleMatchRule;
+  route_action: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleRouteAction;
+  url_redirect: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRuleUrlRedirect;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcher {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcher {
   description?: string;
   name: string;
-  route_rule: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcherRouteRule;
+  route_rule: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcherRouteRule;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgsrouting {
-  host_rule: GoogleNetworkServicesEdgeCacheServiceArgsroutingHostRule;
-  path_matcher: GoogleNetworkServicesEdgeCacheServiceArgsroutingPathMatcher;
+export interface GoogleNetworkServicesEdgeCacheServiceArgsRouting {
+  host_rule: GoogleNetworkServicesEdgeCacheServiceArgsRoutingHostRule;
+  path_matcher: GoogleNetworkServicesEdgeCacheServiceArgsRoutingPathMatcher;
 }
-export interface GoogleNetworkServicesEdgeCacheServiceArgstimeouts {
+export interface GoogleNetworkServicesEdgeCacheServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -133,8 +133,8 @@ export interface GoogleNetworkServicesEdgeCacheServiceArgs {
   name: string;
   ssl_policy?: string;
   log_config: GoogleNetworkServicesEdgeCacheServiceArgsLogConfig;
-  routing: GoogleNetworkServicesEdgeCacheServiceArgsrouting;
-  timeouts: GoogleNetworkServicesEdgeCacheServiceArgstimeouts;
+  routing: GoogleNetworkServicesEdgeCacheServiceArgsRouting;
+  timeouts: GoogleNetworkServicesEdgeCacheServiceArgsTimeouts;
 }
 export class google_network_services_edge_cache_service extends TerraformResource {
   readonly disable_quic?: boolean;

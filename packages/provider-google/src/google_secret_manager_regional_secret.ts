@@ -2,16 +2,16 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleSecretManagerRegionalSecretArgsCustomerManagedEncryption {
   kms_key_name: string;
 }
-export interface GoogleSecretManagerRegionalSecretArgsrotation {
+export interface GoogleSecretManagerRegionalSecretArgsRotation {
   next_rotation_time?: string;
   rotation_period?: string;
 }
-export interface GoogleSecretManagerRegionalSecretArgstimeouts {
+export interface GoogleSecretManagerRegionalSecretArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface GoogleSecretManagerRegionalSecretArgstopics {
+export interface GoogleSecretManagerRegionalSecretArgsTopics {
   name: string;
 }
 export interface GoogleSecretManagerRegionalSecretArgs {
@@ -29,9 +29,9 @@ export interface GoogleSecretManagerRegionalSecretArgs {
   };
   version_destroy_ttl?: string;
   customer_managed_encryption: GoogleSecretManagerRegionalSecretArgsCustomerManagedEncryption;
-  rotation: GoogleSecretManagerRegionalSecretArgsrotation;
-  timeouts: GoogleSecretManagerRegionalSecretArgstimeouts;
-  topics: GoogleSecretManagerRegionalSecretArgstopics;
+  rotation: GoogleSecretManagerRegionalSecretArgsRotation;
+  timeouts: GoogleSecretManagerRegionalSecretArgsTimeouts;
+  topics: GoogleSecretManagerRegionalSecretArgsTopics;
 }
 export class google_secret_manager_regional_secret extends TerraformResource {
   readonly create_time!: string;

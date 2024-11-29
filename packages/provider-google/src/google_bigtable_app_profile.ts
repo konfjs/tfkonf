@@ -9,7 +9,7 @@ export interface GoogleBigtableAppProfileArgsSingleClusterRouting {
 export interface GoogleBigtableAppProfileArgsStandardIsolation {
   priority: string;
 }
-export interface GoogleBigtableAppProfileArgstimeouts {
+export interface GoogleBigtableAppProfileArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,7 +24,7 @@ export interface GoogleBigtableAppProfileArgs {
   data_boost_isolation_read_only: GoogleBigtableAppProfileArgsDataBoostIsolationReadOnly;
   single_cluster_routing: GoogleBigtableAppProfileArgsSingleClusterRouting;
   standard_isolation: GoogleBigtableAppProfileArgsStandardIsolation;
-  timeouts: GoogleBigtableAppProfileArgstimeouts;
+  timeouts: GoogleBigtableAppProfileArgsTimeouts;
 }
 export class google_bigtable_app_profile extends TerraformResource {
   readonly id?: string;

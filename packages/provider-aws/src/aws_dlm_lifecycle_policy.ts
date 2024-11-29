@@ -1,75 +1,75 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyEncryptionConfiguration {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopyEncryptionConfiguration {
   cmk_arn?: string;
   encrypted?: boolean;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyRetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopyRetainRule {
   interval: number;
   interval_unit: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopy {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopy {
   target: string;
-  encryption_configuration: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyEncryptionConfiguration;
-  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyRetainRule;
+  encryption_configuration: AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopyEncryptionConfiguration;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopyRetainRule;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsaction {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsAction {
   name: string;
-  cross_region_copy: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopy;
+  cross_region_copy: AwsDlmLifecyclePolicyArgsPolicyDetailsActionCrossRegionCopy;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceparameters {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceParameters {
   description_regex: string;
   event_type: string;
   snapshot_owner: string[];
 }
 export interface AwsDlmLifecyclePolicyArgsPolicyDetailsEventSource {
   type: string;
-  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceparameters;
+  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceParameters;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsparameters {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsParameters {
   exclude_boot_volume?: boolean;
   no_reboot?: boolean;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCreateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCreateRule {
   cron_expression?: string;
   interval?: number;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleDeprecateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule {
   interval: number;
   interval_unit: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleRetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRuleRetainRule {
   interval: number;
   interval_unit: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRule {
   cmk_arn?: string;
   encrypted: boolean;
   target: string;
-  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleDeprecateRule;
-  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleRetainRule;
+  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRuleRetainRule;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleDeprecateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleDeprecateRule {
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleFastRestoreRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleFastRestoreRule {
   availability_zones: string[];
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleRetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleRetainRule {
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleShareRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleShareRule {
   target_accounts: string[];
   unshare_interval?: number;
   unshare_interval_unit?: string;
 }
-export interface AwsDlmLifecyclePolicyArgsPolicyDetailsschedule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsSchedule {
   name: string;
   tags_to_add?: {
     [key: string]: string;
@@ -77,12 +77,12 @@ export interface AwsDlmLifecyclePolicyArgsPolicyDetailsschedule {
   variable_tags?: {
     [key: string]: string;
   };
-  create_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCreateRule;
-  cross_region_copy_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRule;
-  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleDeprecateRule;
-  fast_restore_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleFastRestoreRule;
-  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleRetainRule;
-  share_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleShareRule;
+  create_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCreateRule;
+  cross_region_copy_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleCrossRegionCopyRule;
+  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleDeprecateRule;
+  fast_restore_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleFastRestoreRule;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleRetainRule;
+  share_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsScheduleShareRule;
 }
 export interface AwsDlmLifecyclePolicyArgsPolicyDetails {
   policy_type?: string;
@@ -90,10 +90,10 @@ export interface AwsDlmLifecyclePolicyArgsPolicyDetails {
   target_tags?: {
     [key: string]: string;
   };
-  action: AwsDlmLifecyclePolicyArgsPolicyDetailsaction;
+  action: AwsDlmLifecyclePolicyArgsPolicyDetailsAction;
   event_source: AwsDlmLifecyclePolicyArgsPolicyDetailsEventSource;
-  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsparameters;
-  schedule: AwsDlmLifecyclePolicyArgsPolicyDetailsschedule;
+  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsParameters;
+  schedule: AwsDlmLifecyclePolicyArgsPolicyDetailsSchedule;
 }
 export interface AwsDlmLifecyclePolicyArgs {
   description: string;

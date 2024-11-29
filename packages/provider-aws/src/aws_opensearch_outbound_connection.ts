@@ -15,7 +15,7 @@ export interface AwsOpensearchOutboundConnectionArgsRemoteDomainInfo {
   owner_id: string;
   region: string;
 }
-export interface AwsOpensearchOutboundConnectionArgstimeouts {
+export interface AwsOpensearchOutboundConnectionArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -25,7 +25,7 @@ export interface AwsOpensearchOutboundConnectionArgs {
   connection_properties: AwsOpensearchOutboundConnectionArgsConnectionProperties;
   local_domain_info: AwsOpensearchOutboundConnectionArgsLocalDomainInfo;
   remote_domain_info: AwsOpensearchOutboundConnectionArgsRemoteDomainInfo;
-  timeouts: AwsOpensearchOutboundConnectionArgstimeouts;
+  timeouts: AwsOpensearchOutboundConnectionArgsTimeouts;
 }
 export class aws_opensearch_outbound_connection extends TerraformResource {
   readonly connection_mode?: string;

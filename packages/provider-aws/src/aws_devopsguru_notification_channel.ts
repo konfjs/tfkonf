@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDevopsguruNotificationChannelArgsfilters {
+export interface AwsDevopsguruNotificationChannelArgsFilters {
   message_types?: string[];
   severities?: string[];
 }
-export interface AwsDevopsguruNotificationChannelArgssns {
+export interface AwsDevopsguruNotificationChannelArgsSns {
   topic_arn: string;
 }
 export interface AwsDevopsguruNotificationChannelArgs {
-  filters: AwsDevopsguruNotificationChannelArgsfilters;
-  sns: AwsDevopsguruNotificationChannelArgssns;
+  filters: AwsDevopsguruNotificationChannelArgsFilters;
+  sns: AwsDevopsguruNotificationChannelArgsSns;
 }
 export class aws_devopsguru_notification_channel extends TerraformResource {
   readonly id!: string;

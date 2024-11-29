@@ -33,7 +33,7 @@ export interface GooglePubsubTopicArgsSchemaSettings {
   encoding?: string;
   schema: string;
 }
-export interface GooglePubsubTopicArgstimeouts {
+export interface GooglePubsubTopicArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -48,7 +48,7 @@ export interface GooglePubsubTopicArgs {
   ingestion_data_source_settings: GooglePubsubTopicArgsIngestionDataSourceSettings;
   message_storage_policy: GooglePubsubTopicArgsMessageStoragePolicy;
   schema_settings: GooglePubsubTopicArgsSchemaSettings;
-  timeouts: GooglePubsubTopicArgstimeouts;
+  timeouts: GooglePubsubTopicArgsTimeouts;
 }
 export class google_pubsub_topic extends TerraformResource {
   readonly effective_labels!: {

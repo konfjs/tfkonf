@@ -16,7 +16,7 @@ export interface AwsCodepipelineCustomActionTypeArgsOutputArtifactDetails {
   maximum_count: number;
   minimum_count: number;
 }
-export interface AwsCodepipelineCustomActionTypeArgssettings {
+export interface AwsCodepipelineCustomActionTypeArgsSettings {
   entity_url_template?: string;
   execution_url_template?: string;
   revision_url_template?: string;
@@ -32,7 +32,7 @@ export interface AwsCodepipelineCustomActionTypeArgs {
   configuration_property: AwsCodepipelineCustomActionTypeArgsConfigurationProperty;
   input_artifact_details: AwsCodepipelineCustomActionTypeArgsInputArtifactDetails;
   output_artifact_details: AwsCodepipelineCustomActionTypeArgsOutputArtifactDetails;
-  settings: AwsCodepipelineCustomActionTypeArgssettings;
+  settings: AwsCodepipelineCustomActionTypeArgsSettings;
 }
 export class aws_codepipeline_custom_action_type extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDmsReplicationInstanceArgstimeouts {
+export interface AwsDmsReplicationInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsDmsReplicationInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDmsReplicationInstanceArgstimeouts;
+  timeouts: AwsDmsReplicationInstanceArgsTimeouts;
 }
 export class aws_dms_replication_instance extends TerraformResource {
   readonly allocated_storage?: number;

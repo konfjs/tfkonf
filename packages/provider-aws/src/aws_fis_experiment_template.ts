@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsFisExperimentTemplateArgsactionparameter {
+export interface AwsFisExperimentTemplateArgsActionParameter {
   key: string;
   value: string;
 }
-export interface AwsFisExperimentTemplateArgsactiontarget {
+export interface AwsFisExperimentTemplateArgsActionTarget {
   key: string;
   value: string;
 }
-export interface AwsFisExperimentTemplateArgsaction {
+export interface AwsFisExperimentTemplateArgsAction {
   action_id: string;
   description?: string;
   name: string;
   start_after?: string[];
-  parameter: AwsFisExperimentTemplateArgsactionparameter;
-  target: AwsFisExperimentTemplateArgsactiontarget;
+  parameter: AwsFisExperimentTemplateArgsActionParameter;
+  target: AwsFisExperimentTemplateArgsActionTarget;
 }
 export interface AwsFisExperimentTemplateArgsExperimentOptions {
   account_targeting?: string;
@@ -35,15 +35,15 @@ export interface AwsFisExperimentTemplateArgsStopCondition {
   source: string;
   value?: string;
 }
-export interface AwsFisExperimentTemplateArgstargetfilter {
+export interface AwsFisExperimentTemplateArgsTargetFilter {
   path: string;
   values: string[];
 }
-export interface AwsFisExperimentTemplateArgstargetResourceTag {
+export interface AwsFisExperimentTemplateArgsTargetResourceTag {
   key: string;
   value: string;
 }
-export interface AwsFisExperimentTemplateArgstarget {
+export interface AwsFisExperimentTemplateArgsTarget {
   name: string;
   parameters?: {
     [key: string]: string;
@@ -51,10 +51,10 @@ export interface AwsFisExperimentTemplateArgstarget {
   resource_arns?: string[];
   resource_type: string;
   selection_mode: string;
-  filter: AwsFisExperimentTemplateArgstargetfilter;
-  resource_tag: AwsFisExperimentTemplateArgstargetResourceTag;
+  filter: AwsFisExperimentTemplateArgsTargetFilter;
+  resource_tag: AwsFisExperimentTemplateArgsTargetResourceTag;
 }
-export interface AwsFisExperimentTemplateArgstimeouts {
+export interface AwsFisExperimentTemplateArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -65,12 +65,12 @@ export interface AwsFisExperimentTemplateArgs {
   tags?: {
     [key: string]: string;
   };
-  action: AwsFisExperimentTemplateArgsaction;
+  action: AwsFisExperimentTemplateArgsAction;
   experiment_options: AwsFisExperimentTemplateArgsExperimentOptions;
   log_configuration: AwsFisExperimentTemplateArgsLogConfiguration;
   stop_condition: AwsFisExperimentTemplateArgsStopCondition;
-  target: AwsFisExperimentTemplateArgstarget;
-  timeouts: AwsFisExperimentTemplateArgstimeouts;
+  target: AwsFisExperimentTemplateArgsTarget;
+  timeouts: AwsFisExperimentTemplateArgsTimeouts;
 }
 export class aws_fis_experiment_template extends TerraformResource {
   readonly id?: string;

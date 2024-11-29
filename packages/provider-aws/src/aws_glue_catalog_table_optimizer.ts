@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGlueCatalogTableOptimizerArgsconfiguration {
+export interface AwsGlueCatalogTableOptimizerArgsConfiguration {
   enabled: boolean;
   role_arn: string;
 }
@@ -8,7 +8,7 @@ export interface AwsGlueCatalogTableOptimizerArgs {
   database_name: string;
   table_name: string;
   type: string;
-  configuration: AwsGlueCatalogTableOptimizerArgsconfiguration;
+  configuration: AwsGlueCatalogTableOptimizerArgsConfiguration;
 }
 export class aws_glue_catalog_table_optimizer extends TerraformResource {
   constructor(config: TerraformConfig, resourceName: string, args: AwsGlueCatalogTableOptimizerArgs) {

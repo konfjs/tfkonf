@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppconfigConfigurationProfileArgsvalidator {
+export interface AwsAppconfigConfigurationProfileArgsValidator {
   content?: string;
   type: string;
 }
@@ -14,7 +14,7 @@ export interface AwsAppconfigConfigurationProfileArgs {
     [key: string]: string;
   };
   type?: string;
-  validator: AwsAppconfigConfigurationProfileArgsvalidator;
+  validator: AwsAppconfigConfigurationProfileArgsValidator;
 }
 export class aws_appconfig_configuration_profile extends TerraformResource {
   readonly arn!: string;

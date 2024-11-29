@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsmcontactsRotationArgsrecurrenceDailySettings {
+export interface AwsSsmcontactsRotationArgsRecurrenceDailySettings {
   hour_of_day: number;
   minute_of_hour: number;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceMonthlySettingsHandOffTime {
+export interface AwsSsmcontactsRotationArgsRecurrenceMonthlySettingsHandOffTime {
   hour_of_day: number;
   minute_of_hour: number;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceMonthlySettings {
+export interface AwsSsmcontactsRotationArgsRecurrenceMonthlySettings {
   day_of_month: number;
-  hand_off_time: AwsSsmcontactsRotationArgsrecurrenceMonthlySettingsHandOffTime;
+  hand_off_time: AwsSsmcontactsRotationArgsRecurrenceMonthlySettingsHandOffTime;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimesend {
+export interface AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimesEnd {
   hour_of_day: number;
   minute_of_hour: number;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimesstart {
+export interface AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimesStart {
   hour_of_day: number;
   minute_of_hour: number;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimes {
-  end: AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimesend;
-  start: AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimesstart;
+export interface AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimes {
+  end: AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimesEnd;
+  start: AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimesStart;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceShiftCoverages {
+export interface AwsSsmcontactsRotationArgsRecurrenceShiftCoverages {
   map_block_key: string;
-  coverage_times: AwsSsmcontactsRotationArgsrecurrenceShiftCoveragesCoverageTimes;
+  coverage_times: AwsSsmcontactsRotationArgsRecurrenceShiftCoveragesCoverageTimes;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceWeeklySettingsHandOffTime {
+export interface AwsSsmcontactsRotationArgsRecurrenceWeeklySettingsHandOffTime {
   hour_of_day: number;
   minute_of_hour: number;
 }
-export interface AwsSsmcontactsRotationArgsrecurrenceWeeklySettings {
+export interface AwsSsmcontactsRotationArgsRecurrenceWeeklySettings {
   day_of_week: string;
-  hand_off_time: AwsSsmcontactsRotationArgsrecurrenceWeeklySettingsHandOffTime;
+  hand_off_time: AwsSsmcontactsRotationArgsRecurrenceWeeklySettingsHandOffTime;
 }
-export interface AwsSsmcontactsRotationArgsrecurrence {
+export interface AwsSsmcontactsRotationArgsRecurrence {
   number_of_on_calls: number;
   recurrence_multiplier: number;
-  daily_settings: AwsSsmcontactsRotationArgsrecurrenceDailySettings;
-  monthly_settings: AwsSsmcontactsRotationArgsrecurrenceMonthlySettings;
-  shift_coverages: AwsSsmcontactsRotationArgsrecurrenceShiftCoverages;
-  weekly_settings: AwsSsmcontactsRotationArgsrecurrenceWeeklySettings;
+  daily_settings: AwsSsmcontactsRotationArgsRecurrenceDailySettings;
+  monthly_settings: AwsSsmcontactsRotationArgsRecurrenceMonthlySettings;
+  shift_coverages: AwsSsmcontactsRotationArgsRecurrenceShiftCoverages;
+  weekly_settings: AwsSsmcontactsRotationArgsRecurrenceWeeklySettings;
 }
 export interface AwsSsmcontactsRotationArgs {
   contact_ids: string[];
@@ -51,7 +51,7 @@ export interface AwsSsmcontactsRotationArgs {
     [key: string]: string;
   };
   time_zone_id: string;
-  recurrence: AwsSsmcontactsRotationArgsrecurrence;
+  recurrence: AwsSsmcontactsRotationArgsRecurrence;
 }
 export class aws_ssmcontacts_rotation extends TerraformResource {
   readonly arn!: string;

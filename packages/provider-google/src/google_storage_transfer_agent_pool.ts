@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleStorageTransferAgentPoolArgsBandwidthLimit {
   limit_mbps: string;
 }
-export interface GoogleStorageTransferAgentPoolArgstimeouts {
+export interface GoogleStorageTransferAgentPoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleStorageTransferAgentPoolArgs {
   display_name?: string;
   name: string;
   bandwidth_limit: GoogleStorageTransferAgentPoolArgsBandwidthLimit;
-  timeouts: GoogleStorageTransferAgentPoolArgstimeouts;
+  timeouts: GoogleStorageTransferAgentPoolArgsTimeouts;
 }
 export class google_storage_transfer_agent_pool extends TerraformResource {
   readonly id?: string;

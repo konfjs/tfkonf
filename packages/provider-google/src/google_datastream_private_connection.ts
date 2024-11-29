@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDatastreamPrivateConnectionArgstimeouts {
+export interface GoogleDatastreamPrivateConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface GoogleDatastreamPrivateConnectionArgs {
   };
   location: string;
   private_connection_id: string;
-  timeouts: GoogleDatastreamPrivateConnectionArgstimeouts;
+  timeouts: GoogleDatastreamPrivateConnectionArgsTimeouts;
   vpc_peering_config: GoogleDatastreamPrivateConnectionArgsVpcPeeringConfig;
 }
 export class google_datastream_private_connection extends TerraformResource {

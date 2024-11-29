@@ -3,7 +3,7 @@ export interface GoogleNetappVolumeReplicationArgsDestinationVolumeParameters {
   description?: string;
   storage_pool: string;
 }
-export interface GoogleNetappVolumeReplicationArgstimeouts {
+export interface GoogleNetappVolumeReplicationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface GoogleNetappVolumeReplicationArgs {
   volume_name: string;
   wait_for_mirror?: boolean;
   destination_volume_parameters: GoogleNetappVolumeReplicationArgsDestinationVolumeParameters;
-  timeouts: GoogleNetappVolumeReplicationArgstimeouts;
+  timeouts: GoogleNetappVolumeReplicationArgsTimeouts;
 }
 export class google_netapp_volume_replication extends TerraformResource {
   readonly create_time!: string;

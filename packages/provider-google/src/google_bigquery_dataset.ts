@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryDatasetArgsaccessdatasetdataset {
+export interface GoogleBigqueryDatasetArgsAccessDatasetDataset {
   dataset_id: string;
   project_id: string;
 }
-export interface GoogleBigqueryDatasetArgsaccessdataset {
+export interface GoogleBigqueryDatasetArgsAccessDataset {
   target_types: string[];
-  dataset: GoogleBigqueryDatasetArgsaccessdatasetdataset;
+  dataset: GoogleBigqueryDatasetArgsAccessDatasetDataset;
 }
-export interface GoogleBigqueryDatasetArgsaccessroutine {
+export interface GoogleBigqueryDatasetArgsAccessRoutine {
   dataset_id: string;
   project_id: string;
   routine_id: string;
 }
-export interface GoogleBigqueryDatasetArgsaccessview {
+export interface GoogleBigqueryDatasetArgsAccessView {
   dataset_id: string;
   project_id: string;
   table_id: string;
 }
-export interface GoogleBigqueryDatasetArgsaccess {
+export interface GoogleBigqueryDatasetArgsAccess {
   domain?: string;
   group_by_email?: string;
   iam_member?: string;
   role?: string;
   special_group?: string;
   user_by_email?: string;
-  dataset: GoogleBigqueryDatasetArgsaccessdataset;
-  routine: GoogleBigqueryDatasetArgsaccessroutine;
-  view: GoogleBigqueryDatasetArgsaccessview;
+  dataset: GoogleBigqueryDatasetArgsAccessDataset;
+  routine: GoogleBigqueryDatasetArgsAccessRoutine;
+  view: GoogleBigqueryDatasetArgsAccessView;
 }
 export interface GoogleBigqueryDatasetArgsDefaultEncryptionConfiguration {
   kms_key_name: string;
@@ -35,7 +35,7 @@ export interface GoogleBigqueryDatasetArgsExternalDatasetReference {
   connection: string;
   external_source: string;
 }
-export interface GoogleBigqueryDatasetArgstimeouts {
+export interface GoogleBigqueryDatasetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -54,10 +54,10 @@ export interface GoogleBigqueryDatasetArgs {
   resource_tags?: {
     [key: string]: string;
   };
-  access: GoogleBigqueryDatasetArgsaccess;
+  access: GoogleBigqueryDatasetArgsAccess;
   default_encryption_configuration: GoogleBigqueryDatasetArgsDefaultEncryptionConfiguration;
   external_dataset_reference: GoogleBigqueryDatasetArgsExternalDatasetReference;
-  timeouts: GoogleBigqueryDatasetArgstimeouts;
+  timeouts: GoogleBigqueryDatasetArgsTimeouts;
 }
 export class google_bigquery_dataset extends TerraformResource {
   readonly creation_time!: number;

@@ -8,7 +8,7 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialAuthToken {
   token?: string;
   type?: string;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialjwt {
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialJwt {
   jwt_header?: string;
   jwt_payload?: string;
   secret?: string;
@@ -20,24 +20,24 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2Author
   scope?: string;
   token_endpoint?: string;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentrieskeyLiteralValue {
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKeyLiteralValue {
   string_value?: string;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentrieskey {
-  literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentrieskeyLiteralValue;
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKey {
+  literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKeyLiteralValue;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentriesvalueLiteralValue {
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValueLiteralValue {
   string_value?: string;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentriesvalue {
-  literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentriesvalueLiteralValue;
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValue {
+  literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValueLiteralValue;
 }
-export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentries {
-  key: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentrieskey;
-  value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentriesvalue;
+export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntries {
+  key: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKey;
+  value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValue;
 }
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParams {
-  entries: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsentries;
+  entries: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntries;
 }
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentials {
   client_id?: string;
@@ -62,14 +62,14 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialUsernameAndP
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredential {
   credential_type: string;
   auth_token: GoogleIntegrationsAuthConfigArgsDecryptedCredentialAuthToken;
-  jwt: GoogleIntegrationsAuthConfigArgsDecryptedCredentialjwt;
+  jwt: GoogleIntegrationsAuthConfigArgsDecryptedCredentialJwt;
   oauth2_authorization_code: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2AuthorizationCode;
   oauth2_client_credentials: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentials;
   oidc_token: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOidcToken;
   service_account_credentials: GoogleIntegrationsAuthConfigArgsDecryptedCredentialServiceAccountCredentials;
   username_and_password: GoogleIntegrationsAuthConfigArgsDecryptedCredentialUsernameAndPassword;
 }
-export interface GoogleIntegrationsAuthConfigArgstimeouts {
+export interface GoogleIntegrationsAuthConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -83,7 +83,7 @@ export interface GoogleIntegrationsAuthConfigArgs {
   visibility?: string;
   client_certificate: GoogleIntegrationsAuthConfigArgsClientCertificate;
   decrypted_credential: GoogleIntegrationsAuthConfigArgsDecryptedCredential;
-  timeouts: GoogleIntegrationsAuthConfigArgstimeouts;
+  timeouts: GoogleIntegrationsAuthConfigArgsTimeouts;
 }
 export class google_integrations_auth_config extends TerraformResource {
   readonly certificate_id!: string;

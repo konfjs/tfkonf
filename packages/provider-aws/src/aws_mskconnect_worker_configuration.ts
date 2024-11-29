@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMskconnectWorkerConfigurationArgstimeouts {
+export interface AwsMskconnectWorkerConfigurationArgsTimeouts {
   delete?: string;
 }
 export interface AwsMskconnectWorkerConfigurationArgs {
@@ -9,7 +9,7 @@ export interface AwsMskconnectWorkerConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMskconnectWorkerConfigurationArgstimeouts;
+  timeouts: AwsMskconnectWorkerConfigurationArgsTimeouts;
 }
 export class aws_mskconnect_worker_configuration extends TerraformResource {
   readonly arn!: string;

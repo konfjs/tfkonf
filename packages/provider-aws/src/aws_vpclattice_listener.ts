@@ -2,18 +2,18 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsVpclatticeListenerArgsDefaultActionFixedResponse {
   status_code: number;
 }
-export interface AwsVpclatticeListenerArgsDefaultActionforwardTargetGroups {
+export interface AwsVpclatticeListenerArgsDefaultActionForwardTargetGroups {
   target_group_identifier?: string;
   weight?: number;
 }
-export interface AwsVpclatticeListenerArgsDefaultActionforward {
-  target_groups: AwsVpclatticeListenerArgsDefaultActionforwardTargetGroups;
+export interface AwsVpclatticeListenerArgsDefaultActionForward {
+  target_groups: AwsVpclatticeListenerArgsDefaultActionForwardTargetGroups;
 }
 export interface AwsVpclatticeListenerArgsDefaultAction {
   fixed_response: AwsVpclatticeListenerArgsDefaultActionFixedResponse;
-  forward: AwsVpclatticeListenerArgsDefaultActionforward;
+  forward: AwsVpclatticeListenerArgsDefaultActionForward;
 }
-export interface AwsVpclatticeListenerArgstimeouts {
+export interface AwsVpclatticeListenerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface AwsVpclatticeListenerArgs {
     [key: string]: string;
   };
   default_action: AwsVpclatticeListenerArgsDefaultAction;
-  timeouts: AwsVpclatticeListenerArgstimeouts;
+  timeouts: AwsVpclatticeListenerArgsTimeouts;
 }
 export class aws_vpclattice_listener extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleGkeBackupRestorePlanIamBindingArgscondition {
+export interface GoogleGkeBackupRestorePlanIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleGkeBackupRestorePlanIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: GoogleGkeBackupRestorePlanIamBindingArgscondition;
+  condition: GoogleGkeBackupRestorePlanIamBindingArgsCondition;
 }
 export class google_gke_backup_restore_plan_iam_binding extends TerraformResource {
   readonly etag!: string;

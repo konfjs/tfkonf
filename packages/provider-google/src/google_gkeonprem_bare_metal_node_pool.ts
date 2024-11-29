@@ -5,16 +5,16 @@ export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigNodeConfigs {
   };
   node_ip?: string;
 }
-export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigtaints {
+export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigTaints {
   effect?: string;
   key?: string;
   value?: string;
 }
 export interface GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfig {
   node_configs: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigNodeConfigs;
-  taints: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigtaints;
+  taints: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfigTaints;
 }
-export interface GoogleGkeonpremBareMetalNodePoolArgstimeouts {
+export interface GoogleGkeonpremBareMetalNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -28,7 +28,7 @@ export interface GoogleGkeonpremBareMetalNodePoolArgs {
   location: string;
   name: string;
   node_pool_config: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfig;
-  timeouts: GoogleGkeonpremBareMetalNodePoolArgstimeouts;
+  timeouts: GoogleGkeonpremBareMetalNodePoolArgsTimeouts;
 }
 export class google_gkeonprem_bare_metal_node_pool extends TerraformResource {
   readonly create_time!: string;

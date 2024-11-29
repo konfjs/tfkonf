@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputePublicAdvertisedPrefixArgstimeouts {
+export interface GoogleComputePublicAdvertisedPrefixArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleComputePublicAdvertisedPrefixArgs {
   dns_verification_ip: string;
   ip_cidr_range: string;
   name: string;
-  timeouts: GoogleComputePublicAdvertisedPrefixArgstimeouts;
+  timeouts: GoogleComputePublicAdvertisedPrefixArgsTimeouts;
 }
 export class google_compute_public_advertised_prefix extends TerraformResource {
   readonly id?: string;

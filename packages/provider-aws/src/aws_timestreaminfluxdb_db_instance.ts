@@ -6,7 +6,7 @@ export interface AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfigurationS3Co
 export interface AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfiguration {
   s3_configuration: AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfigurationS3Configuration;
 }
-export interface AwsTimestreaminfluxdbDbInstanceArgstimeouts {
+export interface AwsTimestreaminfluxdbDbInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,7 +26,7 @@ export interface AwsTimestreaminfluxdbDbInstanceArgs {
   vpc_security_group_ids: string[];
   vpc_subnet_ids: string[];
   log_delivery_configuration: AwsTimestreaminfluxdbDbInstanceArgsLogDeliveryConfiguration;
-  timeouts: AwsTimestreaminfluxdbDbInstanceArgstimeouts;
+  timeouts: AwsTimestreaminfluxdbDbInstanceArgsTimeouts;
 }
 export class aws_timestreaminfluxdb_db_instance extends TerraformResource {
   readonly arn!: string;

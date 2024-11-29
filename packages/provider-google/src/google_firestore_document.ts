@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFirestoreDocumentArgstimeouts {
+export interface GoogleFirestoreDocumentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleFirestoreDocumentArgs {
   database?: string;
   document_id: string;
   fields: string;
-  timeouts: GoogleFirestoreDocumentArgstimeouts;
+  timeouts: GoogleFirestoreDocumentArgsTimeouts;
 }
 export class google_firestore_document extends TerraformResource {
   readonly create_time!: string;

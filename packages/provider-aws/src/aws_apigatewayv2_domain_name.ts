@@ -8,7 +8,7 @@ export interface AwsApigatewayv2DomainNameArgsMutualTlsAuthentication {
   truststore_uri: string;
   truststore_version?: string;
 }
-export interface AwsApigatewayv2DomainNameArgstimeouts {
+export interface AwsApigatewayv2DomainNameArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -19,7 +19,7 @@ export interface AwsApigatewayv2DomainNameArgs {
   };
   domain_name_configuration: AwsApigatewayv2DomainNameArgsDomainNameConfiguration;
   mutual_tls_authentication: AwsApigatewayv2DomainNameArgsMutualTlsAuthentication;
-  timeouts: AwsApigatewayv2DomainNameArgstimeouts;
+  timeouts: AwsApigatewayv2DomainNameArgsTimeouts;
 }
 export class aws_apigatewayv2_domain_name extends TerraformResource {
   readonly api_mapping_selection_expression!: string;

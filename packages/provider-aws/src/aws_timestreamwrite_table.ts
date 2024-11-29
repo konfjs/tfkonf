@@ -16,13 +16,13 @@ export interface AwsTimestreamwriteTableArgsRetentionProperties {
   magnetic_store_retention_period_in_days: number;
   memory_store_retention_period_in_hours: number;
 }
-export interface AwsTimestreamwriteTableArgsschemaCompositePartitionKey {
+export interface AwsTimestreamwriteTableArgsSchemaCompositePartitionKey {
   enforcement_in_record?: string;
   name?: string;
   type: string;
 }
-export interface AwsTimestreamwriteTableArgsschema {
-  composite_partition_key: AwsTimestreamwriteTableArgsschemaCompositePartitionKey;
+export interface AwsTimestreamwriteTableArgsSchema {
+  composite_partition_key: AwsTimestreamwriteTableArgsSchemaCompositePartitionKey;
 }
 export interface AwsTimestreamwriteTableArgs {
   database_name: string;
@@ -32,7 +32,7 @@ export interface AwsTimestreamwriteTableArgs {
   };
   magnetic_store_write_properties: AwsTimestreamwriteTableArgsMagneticStoreWriteProperties;
   retention_properties: AwsTimestreamwriteTableArgsRetentionProperties;
-  schema: AwsTimestreamwriteTableArgsschema;
+  schema: AwsTimestreamwriteTableArgsSchema;
 }
 export class aws_timestreamwrite_table extends TerraformResource {
   readonly arn!: string;

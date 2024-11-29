@@ -5,12 +5,12 @@ export interface AwsCloudfrontDistributionArgsCustomErrorResponse {
   response_code?: number;
   response_page_path?: string;
 }
-export interface AwsCloudfrontDistributionArgsDefaultCacheBehaviorForwardedValuescookies {
+export interface AwsCloudfrontDistributionArgsDefaultCacheBehaviorForwardedValuesCookies {
   forward: string;
 }
 export interface AwsCloudfrontDistributionArgsDefaultCacheBehaviorForwardedValues {
   query_string: boolean;
-  cookies: AwsCloudfrontDistributionArgsDefaultCacheBehaviorForwardedValuescookies;
+  cookies: AwsCloudfrontDistributionArgsDefaultCacheBehaviorForwardedValuesCookies;
 }
 export interface AwsCloudfrontDistributionArgsDefaultCacheBehaviorFunctionAssociation {
   event_type: string;
@@ -43,13 +43,13 @@ export interface AwsCloudfrontDistributionArgsLoggingConfig {
   include_cookies?: boolean;
   prefix?: string;
 }
-export interface AwsCloudfrontDistributionArgsOrderedCacheBehaviorForwardedValuescookies {
+export interface AwsCloudfrontDistributionArgsOrderedCacheBehaviorForwardedValuesCookies {
   forward: string;
   whitelisted_names?: string[];
 }
 export interface AwsCloudfrontDistributionArgsOrderedCacheBehaviorForwardedValues {
   query_string: boolean;
-  cookies: AwsCloudfrontDistributionArgsOrderedCacheBehaviorForwardedValuescookies;
+  cookies: AwsCloudfrontDistributionArgsOrderedCacheBehaviorForwardedValuesCookies;
 }
 export interface AwsCloudfrontDistributionArgsOrderedCacheBehaviorFunctionAssociation {
   event_type: string;
@@ -80,11 +80,11 @@ export interface AwsCloudfrontDistributionArgsOrderedCacheBehavior {
   function_association: AwsCloudfrontDistributionArgsOrderedCacheBehaviorFunctionAssociation;
   lambda_function_association: AwsCloudfrontDistributionArgsOrderedCacheBehaviorLambdaFunctionAssociation;
 }
-export interface AwsCloudfrontDistributionArgsoriginCustomHeader {
+export interface AwsCloudfrontDistributionArgsOriginCustomHeader {
   name: string;
   value: string;
 }
-export interface AwsCloudfrontDistributionArgsoriginCustomOriginConfig {
+export interface AwsCloudfrontDistributionArgsOriginCustomOriginConfig {
   http_port: number;
   https_port: number;
   origin_keepalive_timeout?: number;
@@ -92,41 +92,41 @@ export interface AwsCloudfrontDistributionArgsoriginCustomOriginConfig {
   origin_read_timeout?: number;
   origin_ssl_protocols: string[];
 }
-export interface AwsCloudfrontDistributionArgsoriginOriginShield {
+export interface AwsCloudfrontDistributionArgsOriginOriginShield {
   enabled: boolean;
   origin_shield_region?: string;
 }
-export interface AwsCloudfrontDistributionArgsoriginS3OriginConfig {
+export interface AwsCloudfrontDistributionArgsOriginS3OriginConfig {
   origin_access_identity: string;
 }
-export interface AwsCloudfrontDistributionArgsorigin {
+export interface AwsCloudfrontDistributionArgsOrigin {
   connection_attempts?: number;
   connection_timeout?: number;
   domain_name: string;
   origin_access_control_id?: string;
   origin_id: string;
   origin_path?: string;
-  custom_header: AwsCloudfrontDistributionArgsoriginCustomHeader;
-  custom_origin_config: AwsCloudfrontDistributionArgsoriginCustomOriginConfig;
-  origin_shield: AwsCloudfrontDistributionArgsoriginOriginShield;
-  s3_origin_config: AwsCloudfrontDistributionArgsoriginS3OriginConfig;
+  custom_header: AwsCloudfrontDistributionArgsOriginCustomHeader;
+  custom_origin_config: AwsCloudfrontDistributionArgsOriginCustomOriginConfig;
+  origin_shield: AwsCloudfrontDistributionArgsOriginOriginShield;
+  s3_origin_config: AwsCloudfrontDistributionArgsOriginS3OriginConfig;
 }
 export interface AwsCloudfrontDistributionArgsOriginGroupFailoverCriteria {
   status_codes: number[];
 }
-export interface AwsCloudfrontDistributionArgsOriginGroupmember {
+export interface AwsCloudfrontDistributionArgsOriginGroupMember {
   origin_id: string;
 }
 export interface AwsCloudfrontDistributionArgsOriginGroup {
   origin_id: string;
   failover_criteria: AwsCloudfrontDistributionArgsOriginGroupFailoverCriteria;
-  member: AwsCloudfrontDistributionArgsOriginGroupmember;
+  member: AwsCloudfrontDistributionArgsOriginGroupMember;
 }
-export interface AwsCloudfrontDistributionArgsrestrictionsGeoRestriction {
+export interface AwsCloudfrontDistributionArgsRestrictionsGeoRestriction {
   restriction_type: string;
 }
-export interface AwsCloudfrontDistributionArgsrestrictions {
-  geo_restriction: AwsCloudfrontDistributionArgsrestrictionsGeoRestriction;
+export interface AwsCloudfrontDistributionArgsRestrictions {
+  geo_restriction: AwsCloudfrontDistributionArgsRestrictionsGeoRestriction;
 }
 export interface AwsCloudfrontDistributionArgsViewerCertificate {
   acm_certificate_arn?: string;
@@ -154,9 +154,9 @@ export interface AwsCloudfrontDistributionArgs {
   default_cache_behavior: AwsCloudfrontDistributionArgsDefaultCacheBehavior;
   logging_config: AwsCloudfrontDistributionArgsLoggingConfig;
   ordered_cache_behavior: AwsCloudfrontDistributionArgsOrderedCacheBehavior;
-  origin: AwsCloudfrontDistributionArgsorigin;
+  origin: AwsCloudfrontDistributionArgsOrigin;
   origin_group: AwsCloudfrontDistributionArgsOriginGroup;
-  restrictions: AwsCloudfrontDistributionArgsrestrictions;
+  restrictions: AwsCloudfrontDistributionArgsRestrictions;
   viewer_certificate: AwsCloudfrontDistributionArgsViewerCertificate;
 }
 export class aws_cloudfront_distribution extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleHealthcareDicomStoreIamBindingArgscondition {
+export interface GoogleHealthcareDicomStoreIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleHealthcareDicomStoreIamBindingArgs {
   dicom_store_id: string;
   members: string[];
   role: string;
-  condition: GoogleHealthcareDicomStoreIamBindingArgscondition;
+  condition: GoogleHealthcareDicomStoreIamBindingArgsCondition;
 }
 export class google_healthcare_dicom_store_iam_binding extends TerraformResource {
   readonly etag!: string;

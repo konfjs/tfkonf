@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleAccessContextManagerServicePerimeterResourceArgstimeouts {
+export interface GoogleAccessContextManagerServicePerimeterResourceArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterResourceArgs {
   perimeter_name: string;
   resource: string;
-  timeouts: GoogleAccessContextManagerServicePerimeterResourceArgstimeouts;
+  timeouts: GoogleAccessContextManagerServicePerimeterResourceArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter_resource extends TerraformResource {
   readonly id?: string;

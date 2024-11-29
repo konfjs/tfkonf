@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCloudhsmV2ClusterArgstimeouts {
+export interface AwsCloudhsmV2ClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsCloudhsmV2ClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsCloudhsmV2ClusterArgstimeouts;
+  timeouts: AwsCloudhsmV2ClusterArgsTimeouts;
 }
 export class aws_cloudhsm_v2_cluster extends TerraformResource {
   readonly cluster_certificates!: any[];

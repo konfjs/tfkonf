@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleServiceNetworkingVpcServiceControlsArgstimeouts {
+export interface GoogleServiceNetworkingVpcServiceControlsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleServiceNetworkingVpcServiceControlsArgs {
   network: string;
   project?: string;
   service: string;
-  timeouts: GoogleServiceNetworkingVpcServiceControlsArgstimeouts;
+  timeouts: GoogleServiceNetworkingVpcServiceControlsArgsTimeouts;
 }
 export class google_service_networking_vpc_service_controls extends TerraformResource {
   readonly id?: string;

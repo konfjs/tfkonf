@@ -16,7 +16,7 @@ export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationCustom
   name?: string;
   type?: string;
 }
-export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationfilter {
+export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationFilter {
   named_shadow_names?: string[];
 }
 export interface AwsIotIndexingConfigurationArgsThingIndexingConfigurationManagedField {
@@ -29,7 +29,7 @@ export interface AwsIotIndexingConfigurationArgsThingIndexingConfiguration {
   thing_connectivity_indexing_mode?: string;
   thing_indexing_mode: string;
   custom_field: AwsIotIndexingConfigurationArgsThingIndexingConfigurationCustomField;
-  filter: AwsIotIndexingConfigurationArgsThingIndexingConfigurationfilter;
+  filter: AwsIotIndexingConfigurationArgsThingIndexingConfigurationFilter;
   managed_field: AwsIotIndexingConfigurationArgsThingIndexingConfigurationManagedField;
 }
 export interface AwsIotIndexingConfigurationArgs {

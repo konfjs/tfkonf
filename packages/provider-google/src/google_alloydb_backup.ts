@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleAlloydbBackupArgsEncryptionConfig {
   kms_key_name?: string;
 }
-export interface GoogleAlloydbBackupArgstimeouts {
+export interface GoogleAlloydbBackupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,7 +20,7 @@ export interface GoogleAlloydbBackupArgs {
   };
   location: string;
   encryption_config: GoogleAlloydbBackupArgsEncryptionConfig;
-  timeouts: GoogleAlloydbBackupArgstimeouts;
+  timeouts: GoogleAlloydbBackupArgsTimeouts;
 }
 export class google_alloydb_backup extends TerraformResource {
   readonly cluster_uid!: string;

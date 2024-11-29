@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerCustomerGatewayAssociationArgstimeouts {
+export interface AwsNetworkmanagerCustomerGatewayAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsNetworkmanagerCustomerGatewayAssociationArgs {
   device_id: string;
   global_network_id: string;
   link_id?: string;
-  timeouts: AwsNetworkmanagerCustomerGatewayAssociationArgstimeouts;
+  timeouts: AwsNetworkmanagerCustomerGatewayAssociationArgsTimeouts;
 }
 export class aws_networkmanager_customer_gateway_association extends TerraformResource {
   readonly id?: string;

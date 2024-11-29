@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpcEndpointSubnetAssociationArgstimeouts {
+export interface AwsVpcEndpointSubnetAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsVpcEndpointSubnetAssociationArgs {
   subnet_id: string;
   vpc_endpoint_id: string;
-  timeouts: AwsVpcEndpointSubnetAssociationArgstimeouts;
+  timeouts: AwsVpcEndpointSubnetAssociationArgsTimeouts;
 }
 export class aws_vpc_endpoint_subnet_association extends TerraformResource {
   readonly id?: string;

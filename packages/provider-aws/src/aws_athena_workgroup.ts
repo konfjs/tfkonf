@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAthenaWorkgroupArgsconfigurationEngineVersion {
+export interface AwsAthenaWorkgroupArgsConfigurationEngineVersion {
   selected_engine_version?: string;
 }
-export interface AwsAthenaWorkgroupArgsconfigurationResultConfigurationAclConfiguration {
+export interface AwsAthenaWorkgroupArgsConfigurationResultConfigurationAclConfiguration {
   s3_acl_option: string;
 }
-export interface AwsAthenaWorkgroupArgsconfigurationResultConfigurationEncryptionConfiguration {
+export interface AwsAthenaWorkgroupArgsConfigurationResultConfigurationEncryptionConfiguration {
   encryption_option?: string;
   kms_key_arn?: string;
 }
-export interface AwsAthenaWorkgroupArgsconfigurationResultConfiguration {
+export interface AwsAthenaWorkgroupArgsConfigurationResultConfiguration {
   expected_bucket_owner?: string;
   output_location?: string;
-  acl_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfigurationAclConfiguration;
-  encryption_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfigurationEncryptionConfiguration;
+  acl_configuration: AwsAthenaWorkgroupArgsConfigurationResultConfigurationAclConfiguration;
+  encryption_configuration: AwsAthenaWorkgroupArgsConfigurationResultConfigurationEncryptionConfiguration;
 }
-export interface AwsAthenaWorkgroupArgsconfiguration {
+export interface AwsAthenaWorkgroupArgsConfiguration {
   bytes_scanned_cutoff_per_query?: number;
   enforce_workgroup_configuration?: boolean;
   execution_role?: string;
   publish_cloudwatch_metrics_enabled?: boolean;
   requester_pays_enabled?: boolean;
-  engine_version: AwsAthenaWorkgroupArgsconfigurationEngineVersion;
-  result_configuration: AwsAthenaWorkgroupArgsconfigurationResultConfiguration;
+  engine_version: AwsAthenaWorkgroupArgsConfigurationEngineVersion;
+  result_configuration: AwsAthenaWorkgroupArgsConfigurationResultConfiguration;
 }
 export interface AwsAthenaWorkgroupArgs {
   description?: string;
@@ -32,7 +32,7 @@ export interface AwsAthenaWorkgroupArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: AwsAthenaWorkgroupArgsconfiguration;
+  configuration: AwsAthenaWorkgroupArgsConfiguration;
 }
 export class aws_athena_workgroup extends TerraformResource {
   readonly arn!: string;

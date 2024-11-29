@@ -4,14 +4,14 @@ export interface GoogleAppEngineApplicationUrlDispatchRulesArgsDispatchRules {
   path: string;
   service: string;
 }
-export interface GoogleAppEngineApplicationUrlDispatchRulesArgstimeouts {
+export interface GoogleAppEngineApplicationUrlDispatchRulesArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleAppEngineApplicationUrlDispatchRulesArgs {
   dispatch_rules: GoogleAppEngineApplicationUrlDispatchRulesArgsDispatchRules;
-  timeouts: GoogleAppEngineApplicationUrlDispatchRulesArgstimeouts;
+  timeouts: GoogleAppEngineApplicationUrlDispatchRulesArgsTimeouts;
 }
 export class google_app_engine_application_url_dispatch_rules extends TerraformResource {
   readonly id?: string;

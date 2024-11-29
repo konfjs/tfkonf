@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionSslCertificateArgstimeouts {
+export interface GoogleComputeRegionSslCertificateArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleComputeRegionSslCertificateArgs {
   certificate: string;
   description?: string;
   private_key: string;
-  timeouts: GoogleComputeRegionSslCertificateArgstimeouts;
+  timeouts: GoogleComputeRegionSslCertificateArgsTimeouts;
 }
 export class google_compute_region_ssl_certificate extends TerraformResource {
   readonly certificate_id!: number;

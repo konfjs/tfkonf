@@ -28,12 +28,12 @@ export interface AwsLightsailDistributionArgsCacheBehaviorSettings {
 export interface AwsLightsailDistributionArgsDefaultCacheBehavior {
   behavior: string;
 }
-export interface AwsLightsailDistributionArgsorigin {
+export interface AwsLightsailDistributionArgsOrigin {
   name: string;
   protocol_policy?: string;
   region_name: string;
 }
-export interface AwsLightsailDistributionArgstimeouts {
+export interface AwsLightsailDistributionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -50,8 +50,8 @@ export interface AwsLightsailDistributionArgs {
   cache_behavior: AwsLightsailDistributionArgsCacheBehavior;
   cache_behavior_settings: AwsLightsailDistributionArgsCacheBehaviorSettings;
   default_cache_behavior: AwsLightsailDistributionArgsDefaultCacheBehavior;
-  origin: AwsLightsailDistributionArgsorigin;
-  timeouts: AwsLightsailDistributionArgstimeouts;
+  origin: AwsLightsailDistributionArgsOrigin;
+  timeouts: AwsLightsailDistributionArgsTimeouts;
 }
 export class aws_lightsail_distribution extends TerraformResource {
   readonly alternative_domain_names!: string[];

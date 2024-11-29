@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleCertificateManagerTrustConfigArgsAllowlistedCertificates {
   pem_certificate: string;
 }
-export interface GoogleCertificateManagerTrustConfigArgstimeouts {
+export interface GoogleCertificateManagerTrustConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface GoogleCertificateManagerTrustConfigArgs {
   location: string;
   name: string;
   allowlisted_certificates: GoogleCertificateManagerTrustConfigArgsAllowlistedCertificates;
-  timeouts: GoogleCertificateManagerTrustConfigArgstimeouts;
+  timeouts: GoogleCertificateManagerTrustConfigArgsTimeouts;
   trust_stores: GoogleCertificateManagerTrustConfigArgsTrustStores;
 }
 export class google_certificate_manager_trust_config extends TerraformResource {

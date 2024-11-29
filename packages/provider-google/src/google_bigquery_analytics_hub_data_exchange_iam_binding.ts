@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleBigqueryAnalyticsHubDataExchangeIamBindingArgscondition {
+export interface GoogleBigqueryAnalyticsHubDataExchangeIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeIamBindingArgs {
   data_exchange_id: string;
   members: string[];
   role: string;
-  condition: GoogleBigqueryAnalyticsHubDataExchangeIamBindingArgscondition;
+  condition: GoogleBigqueryAnalyticsHubDataExchangeIamBindingArgsCondition;
 }
 export class google_bigquery_analytics_hub_data_exchange_iam_binding extends TerraformResource {
   readonly etag!: string;

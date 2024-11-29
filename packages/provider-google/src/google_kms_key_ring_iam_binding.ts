@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleKmsKeyRingIamBindingArgscondition {
+export interface GoogleKmsKeyRingIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleKmsKeyRingIamBindingArgs {
   key_ring_id: string;
   members: string[];
   role: string;
-  condition: GoogleKmsKeyRingIamBindingArgscondition;
+  condition: GoogleKmsKeyRingIamBindingArgsCondition;
 }
 export class google_kms_key_ring_iam_binding extends TerraformResource {
   readonly etag!: string;

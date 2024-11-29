@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSesDomainIdentityVerificationArgstimeouts {
+export interface AwsSesDomainIdentityVerificationArgsTimeouts {
   create?: string;
 }
 export interface AwsSesDomainIdentityVerificationArgs {
   domain: string;
-  timeouts: AwsSesDomainIdentityVerificationArgstimeouts;
+  timeouts: AwsSesDomainIdentityVerificationArgsTimeouts;
 }
 export class aws_ses_domain_identity_verification extends TerraformResource {
   readonly arn!: string;

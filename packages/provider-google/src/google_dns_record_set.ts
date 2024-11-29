@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargetsInternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -8,13 +8,13 @@ export interface GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargetsInter
   project: string;
   region?: string;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargets {
-  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargetsInternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicyGeoHealthCheckedTargets {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicygeo {
+export interface GoogleDnsRecordSetArgsRoutingPolicyGeo {
   location: string;
   rrdatas?: string[];
-  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicygeoHealthCheckedTargets;
+  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicyGeoHealthCheckedTargets;
 }
 export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
@@ -33,7 +33,7 @@ export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeo {
   rrdatas?: string[];
   health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimaryInternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -42,16 +42,16 @@ export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimaryInternal
   project: string;
   region?: string;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimary {
-  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimaryInternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupPrimary {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers;
 }
 export interface GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackup {
   enable_geo_fencing_for_backups?: boolean;
   trickle_ratio?: number;
   backup_geo: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupBackupGeo;
-  primary: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupprimary;
+  primary: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackupPrimary;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargetsInternalLoadBalancers {
+export interface GoogleDnsRecordSetArgsRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers {
   ip_address: string;
   ip_protocol: string;
   load_balancer_type?: string;
@@ -60,19 +60,19 @@ export interface GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargetsInter
   project: string;
   region?: string;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargets {
-  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargetsInternalLoadBalancers;
+export interface GoogleDnsRecordSetArgsRoutingPolicyWrrHealthCheckedTargets {
+  internal_load_balancers: GoogleDnsRecordSetArgsRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers;
 }
-export interface GoogleDnsRecordSetArgsRoutingPolicywrr {
+export interface GoogleDnsRecordSetArgsRoutingPolicyWrr {
   rrdatas?: string[];
   weight: number;
-  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicywrrHealthCheckedTargets;
+  health_checked_targets: GoogleDnsRecordSetArgsRoutingPolicyWrrHealthCheckedTargets;
 }
 export interface GoogleDnsRecordSetArgsRoutingPolicy {
   enable_geo_fencing?: boolean;
-  geo: GoogleDnsRecordSetArgsRoutingPolicygeo;
+  geo: GoogleDnsRecordSetArgsRoutingPolicyGeo;
   primary_backup: GoogleDnsRecordSetArgsRoutingPolicyPrimaryBackup;
-  wrr: GoogleDnsRecordSetArgsRoutingPolicywrr;
+  wrr: GoogleDnsRecordSetArgsRoutingPolicyWrr;
 }
 export interface GoogleDnsRecordSetArgs {
   managed_zone: string;

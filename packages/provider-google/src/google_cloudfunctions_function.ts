@@ -12,19 +12,19 @@ export interface GoogleCloudfunctionsFunctionArgsSecretEnvironmentVariables {
   secret: string;
   version: string;
 }
-export interface GoogleCloudfunctionsFunctionArgsSecretVolumesversions {
+export interface GoogleCloudfunctionsFunctionArgsSecretVolumesVersions {
   path: string;
   version: string;
 }
 export interface GoogleCloudfunctionsFunctionArgsSecretVolumes {
   mount_path: string;
   secret: string;
-  versions: GoogleCloudfunctionsFunctionArgsSecretVolumesversions;
+  versions: GoogleCloudfunctionsFunctionArgsSecretVolumesVersions;
 }
 export interface GoogleCloudfunctionsFunctionArgsSourceRepository {
   url: string;
 }
-export interface GoogleCloudfunctionsFunctionArgstimeouts {
+export interface GoogleCloudfunctionsFunctionArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -59,7 +59,7 @@ export interface GoogleCloudfunctionsFunctionArgs {
   secret_environment_variables: GoogleCloudfunctionsFunctionArgsSecretEnvironmentVariables;
   secret_volumes: GoogleCloudfunctionsFunctionArgsSecretVolumes;
   source_repository: GoogleCloudfunctionsFunctionArgsSourceRepository;
-  timeouts: GoogleCloudfunctionsFunctionArgstimeouts;
+  timeouts: GoogleCloudfunctionsFunctionArgsTimeouts;
 }
 export class google_cloudfunctions_function extends TerraformResource {
   readonly build_service_account?: string;

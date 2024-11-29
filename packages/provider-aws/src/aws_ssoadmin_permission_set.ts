@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsoadminPermissionSetArgstimeouts {
+export interface AwsSsoadminPermissionSetArgsTimeouts {
   update?: string;
 }
 export interface AwsSsoadminPermissionSetArgs {
@@ -11,7 +11,7 @@ export interface AwsSsoadminPermissionSetArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSsoadminPermissionSetArgstimeouts;
+  timeouts: AwsSsoadminPermissionSetArgsTimeouts;
 }
 export class aws_ssoadmin_permission_set extends TerraformResource {
   readonly arn!: string;

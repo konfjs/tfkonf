@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsCustomerprofilesDomainArgsmatchingAutoMergingConflictResolution {
+export interface AwsCustomerprofilesDomainArgsMatchingAutoMergingConflictResolution {
   conflict_resolving_model: string;
   source_name?: string;
 }
-export interface AwsCustomerprofilesDomainArgsmatchingAutoMergingconsolidation {
+export interface AwsCustomerprofilesDomainArgsMatchingAutoMergingConsolidation {
   matching_attributes_list: any[];
 }
-export interface AwsCustomerprofilesDomainArgsmatchingAutoMerging {
+export interface AwsCustomerprofilesDomainArgsMatchingAutoMerging {
   enabled: boolean;
   min_allowed_confidence_score_for_merging?: number;
-  conflict_resolution: AwsCustomerprofilesDomainArgsmatchingAutoMergingConflictResolution;
-  consolidation: AwsCustomerprofilesDomainArgsmatchingAutoMergingconsolidation;
+  conflict_resolution: AwsCustomerprofilesDomainArgsMatchingAutoMergingConflictResolution;
+  consolidation: AwsCustomerprofilesDomainArgsMatchingAutoMergingConsolidation;
 }
-export interface AwsCustomerprofilesDomainArgsmatchingExportingConfigS3Exporting {
+export interface AwsCustomerprofilesDomainArgsMatchingExportingConfigS3Exporting {
   s3_bucket_name: string;
   s3_key_name?: string;
 }
-export interface AwsCustomerprofilesDomainArgsmatchingExportingConfig {
-  s3_exporting: AwsCustomerprofilesDomainArgsmatchingExportingConfigS3Exporting;
+export interface AwsCustomerprofilesDomainArgsMatchingExportingConfig {
+  s3_exporting: AwsCustomerprofilesDomainArgsMatchingExportingConfigS3Exporting;
 }
-export interface AwsCustomerprofilesDomainArgsmatchingJobSchedule {
+export interface AwsCustomerprofilesDomainArgsMatchingJobSchedule {
   day_of_the_week: string;
   time: string;
 }
-export interface AwsCustomerprofilesDomainArgsmatching {
+export interface AwsCustomerprofilesDomainArgsMatching {
   enabled: boolean;
-  auto_merging: AwsCustomerprofilesDomainArgsmatchingAutoMerging;
-  exporting_config: AwsCustomerprofilesDomainArgsmatchingExportingConfig;
-  job_schedule: AwsCustomerprofilesDomainArgsmatchingJobSchedule;
+  auto_merging: AwsCustomerprofilesDomainArgsMatchingAutoMerging;
+  exporting_config: AwsCustomerprofilesDomainArgsMatchingExportingConfig;
+  job_schedule: AwsCustomerprofilesDomainArgsMatchingJobSchedule;
 }
 export interface AwsCustomerprofilesDomainArgsRuleBasedMatchingAttributeTypesSelector {
   address?: string[];
@@ -66,7 +66,7 @@ export interface AwsCustomerprofilesDomainArgs {
   tags?: {
     [key: string]: string;
   };
-  matching: AwsCustomerprofilesDomainArgsmatching;
+  matching: AwsCustomerprofilesDomainArgsMatching;
   rule_based_matching: AwsCustomerprofilesDomainArgsRuleBasedMatching;
 }
 export class aws_customerprofiles_domain extends TerraformResource {

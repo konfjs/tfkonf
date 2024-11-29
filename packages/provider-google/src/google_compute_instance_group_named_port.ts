@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeInstanceGroupNamedPortArgstimeouts {
+export interface GoogleComputeInstanceGroupNamedPortArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleComputeInstanceGroupNamedPortArgs {
   group: string;
   name: string;
   port: number;
-  timeouts: GoogleComputeInstanceGroupNamedPortArgstimeouts;
+  timeouts: GoogleComputeInstanceGroupNamedPortArgsTimeouts;
 }
 export class google_compute_instance_group_named_port extends TerraformResource {
   readonly id?: string;

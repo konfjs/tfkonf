@@ -51,7 +51,7 @@ export interface GoogleComputeHealthCheckArgsTcpHealthCheck {
   request?: string;
   response?: string;
 }
-export interface GoogleComputeHealthCheckArgstimeouts {
+export interface GoogleComputeHealthCheckArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -71,7 +71,7 @@ export interface GoogleComputeHealthCheckArgs {
   log_config: GoogleComputeHealthCheckArgsLogConfig;
   ssl_health_check: GoogleComputeHealthCheckArgsSslHealthCheck;
   tcp_health_check: GoogleComputeHealthCheckArgsTcpHealthCheck;
-  timeouts: GoogleComputeHealthCheckArgstimeouts;
+  timeouts: GoogleComputeHealthCheckArgsTimeouts;
 }
 export class google_compute_health_check extends TerraformResource {
   readonly creation_timestamp!: string;

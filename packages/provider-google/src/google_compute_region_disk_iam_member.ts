@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionDiskIamMemberArgscondition {
+export interface GoogleComputeRegionDiskIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeRegionDiskIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: GoogleComputeRegionDiskIamMemberArgscondition;
+  condition: GoogleComputeRegionDiskIamMemberArgsCondition;
 }
 export class google_compute_region_disk_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -15,7 +15,7 @@ export interface AwsEcsTaskSetArgsNetworkConfiguration {
   security_groups?: string[];
   subnets: string[];
 }
-export interface AwsEcsTaskSetArgsscale {
+export interface AwsEcsTaskSetArgsScale {
   unit?: string;
   value?: number;
 }
@@ -38,7 +38,7 @@ export interface AwsEcsTaskSetArgs {
   capacity_provider_strategy: AwsEcsTaskSetArgsCapacityProviderStrategy;
   load_balancer: AwsEcsTaskSetArgsLoadBalancer;
   network_configuration: AwsEcsTaskSetArgsNetworkConfiguration;
-  scale: AwsEcsTaskSetArgsscale;
+  scale: AwsEcsTaskSetArgsScale;
   service_registries: AwsEcsTaskSetArgsServiceRegistries;
 }
 export class aws_ecs_task_set extends TerraformResource {

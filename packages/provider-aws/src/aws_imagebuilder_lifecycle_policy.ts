@@ -1,40 +1,40 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailactionIncludeResources {}
-export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailaction {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailActionIncludeResources {}
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailAction {
   type: string;
-  include_resources: AwsImagebuilderLifecyclePolicyArgsPolicyDetailactionIncludeResources;
+  include_resources: AwsImagebuilderLifecyclePolicyArgsPolicyDetailActionIncludeResources;
 }
-export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamisLastLaunched {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesAmisLastLaunched {
   unit: string;
   value: number;
 }
-export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamis {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesAmis {
   is_public?: boolean;
   regions?: string[];
   shared_accounts?: string[];
   tag_map?: {
     [key: string]: string;
   };
-  last_launched: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamisLastLaunched;
+  last_launched: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesAmisLastLaunched;
 }
 export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRules {
   tag_map?: {
     [key: string]: string;
   };
-  amis: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamis;
+  amis: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesAmis;
 }
-export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailfilter {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailFilter {
   retain_at_least?: number;
   type: string;
   unit?: string;
   value: number;
 }
 export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetail {
-  action: AwsImagebuilderLifecyclePolicyArgsPolicyDetailaction;
+  action: AwsImagebuilderLifecyclePolicyArgsPolicyDetailAction;
   exclusion_rules: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRules;
-  filter: AwsImagebuilderLifecyclePolicyArgsPolicyDetailfilter;
+  filter: AwsImagebuilderLifecyclePolicyArgsPolicyDetailFilter;
 }
-export interface AwsImagebuilderLifecyclePolicyArgsResourceSelectionrecipe {
+export interface AwsImagebuilderLifecyclePolicyArgsResourceSelectionRecipe {
   name: string;
   semantic_version: string;
 }
@@ -42,7 +42,7 @@ export interface AwsImagebuilderLifecyclePolicyArgsResourceSelection {
   tag_map?: {
     [key: string]: string;
   };
-  recipe: AwsImagebuilderLifecyclePolicyArgsResourceSelectionrecipe;
+  recipe: AwsImagebuilderLifecyclePolicyArgsResourceSelectionRecipe;
 }
 export interface AwsImagebuilderLifecyclePolicyArgs {
   description?: string;

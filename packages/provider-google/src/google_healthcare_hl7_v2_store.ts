@@ -12,7 +12,7 @@ export interface GoogleHealthcareHl7V2StoreArgsParserConfig {
   segment_terminator?: string;
   version?: string;
 }
-export interface GoogleHealthcareHl7V2StoreArgstimeouts {
+export interface GoogleHealthcareHl7V2StoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,7 +27,7 @@ export interface GoogleHealthcareHl7V2StoreArgs {
   notification_config: GoogleHealthcareHl7V2StoreArgsNotificationConfig;
   notification_configs: GoogleHealthcareHl7V2StoreArgsNotificationConfigs;
   parser_config: GoogleHealthcareHl7V2StoreArgsParserConfig;
-  timeouts: GoogleHealthcareHl7V2StoreArgstimeouts;
+  timeouts: GoogleHealthcareHl7V2StoreArgsTimeouts;
 }
 export class google_healthcare_hl7_v2_store extends TerraformResource {
   readonly effective_labels!: {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRekognitionCollectionArgstimeouts {
+export interface AwsRekognitionCollectionArgsTimeouts {
   create?: string;
 }
 export interface AwsRekognitionCollectionArgs {
@@ -7,7 +7,7 @@ export interface AwsRekognitionCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRekognitionCollectionArgstimeouts;
+  timeouts: AwsRekognitionCollectionArgsTimeouts;
 }
 export class aws_rekognition_collection extends TerraformResource {
   readonly arn!: string;

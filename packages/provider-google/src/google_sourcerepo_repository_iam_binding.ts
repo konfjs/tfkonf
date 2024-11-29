@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSourcerepoRepositoryIamBindingArgscondition {
+export interface GoogleSourcerepoRepositoryIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSourcerepoRepositoryIamBindingArgs {
   members: string[];
   repository: string;
   role: string;
-  condition: GoogleSourcerepoRepositoryIamBindingArgscondition;
+  condition: GoogleSourcerepoRepositoryIamBindingArgsCondition;
 }
 export class google_sourcerepo_repository_iam_binding extends TerraformResource {
   readonly etag!: string;

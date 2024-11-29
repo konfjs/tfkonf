@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpcEndpointPolicyArgstimeouts {
+export interface AwsVpcEndpointPolicyArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsVpcEndpointPolicyArgs {
   vpc_endpoint_id: string;
-  timeouts: AwsVpcEndpointPolicyArgstimeouts;
+  timeouts: AwsVpcEndpointPolicyArgsTimeouts;
 }
 export class aws_vpc_endpoint_policy extends TerraformResource {
   readonly id?: string;

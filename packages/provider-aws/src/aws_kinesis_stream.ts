@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsKinesisStreamArgsStreamModeDetails {
   stream_mode: string;
 }
-export interface AwsKinesisStreamArgstimeouts {
+export interface AwsKinesisStreamArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface AwsKinesisStreamArgs {
     [key: string]: string;
   };
   stream_mode_details: AwsKinesisStreamArgsStreamModeDetails;
-  timeouts: AwsKinesisStreamArgstimeouts;
+  timeouts: AwsKinesisStreamArgsTimeouts;
 }
 export class aws_kinesis_stream extends TerraformResource {
   readonly arn?: string;

@@ -16,17 +16,17 @@ export interface GoogleGkeBackupRestorePlanArgsRestoreConfigClusterResourceResto
 export interface GoogleGkeBackupRestorePlanArgsRestoreConfigExcludedNamespaces {
   namespaces: string[];
 }
-export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesrequiring {
+export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesRequiring {
   resource_group?: string;
   resource_kind?: string;
 }
-export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciessatisfying {
+export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesSatisfying {
   resource_group?: string;
   resource_kind?: string;
 }
 export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependencies {
-  requiring: GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesrequiring;
-  satisfying: GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciessatisfying;
+  requiring: GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesRequiring;
+  satisfying: GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependenciesSatisfying;
 }
 export interface GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrder {
   group_kind_dependencies: GoogleGkeBackupRestorePlanArgsRestoreConfigRestoreOrderGroupKindDependencies;
@@ -79,7 +79,7 @@ export interface GoogleGkeBackupRestorePlanArgsRestoreConfig {
   transformation_rules: GoogleGkeBackupRestorePlanArgsRestoreConfigTransformationRules;
   volume_data_restore_policy_bindings: GoogleGkeBackupRestorePlanArgsRestoreConfigVolumeDataRestorePolicyBindings;
 }
-export interface GoogleGkeBackupRestorePlanArgstimeouts {
+export interface GoogleGkeBackupRestorePlanArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -94,7 +94,7 @@ export interface GoogleGkeBackupRestorePlanArgs {
   location: string;
   name: string;
   restore_config: GoogleGkeBackupRestorePlanArgsRestoreConfig;
-  timeouts: GoogleGkeBackupRestorePlanArgstimeouts;
+  timeouts: GoogleGkeBackupRestorePlanArgsTimeouts;
 }
 export class google_gke_backup_restore_plan extends TerraformResource {
   readonly effective_labels!: {

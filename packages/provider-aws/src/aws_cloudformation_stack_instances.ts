@@ -14,7 +14,7 @@ export interface AwsCloudformationStackInstancesArgsOperationPreferences {
   region_concurrency_type?: string;
   region_order?: string[];
 }
-export interface AwsCloudformationStackInstancesArgstimeouts {
+export interface AwsCloudformationStackInstancesArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -28,7 +28,7 @@ export interface AwsCloudformationStackInstancesArgs {
   stack_set_name: string;
   deployment_targets: AwsCloudformationStackInstancesArgsDeploymentTargets;
   operation_preferences: AwsCloudformationStackInstancesArgsOperationPreferences;
-  timeouts: AwsCloudformationStackInstancesArgstimeouts;
+  timeouts: AwsCloudformationStackInstancesArgsTimeouts;
 }
 export class aws_cloudformation_stack_instances extends TerraformResource {
   readonly accounts?: string[];

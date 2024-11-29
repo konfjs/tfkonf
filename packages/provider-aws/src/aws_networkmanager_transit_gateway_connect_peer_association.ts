@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerTransitGatewayConnectPeerAssociationArgstimeouts {
+export interface AwsNetworkmanagerTransitGatewayConnectPeerAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsNetworkmanagerTransitGatewayConnectPeerAssociationArgs {
   global_network_id: string;
   link_id?: string;
   transit_gateway_connect_peer_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayConnectPeerAssociationArgstimeouts;
+  timeouts: AwsNetworkmanagerTransitGatewayConnectPeerAssociationArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_connect_peer_association extends TerraformResource {
   readonly id?: string;

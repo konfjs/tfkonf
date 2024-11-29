@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsLakeformationResourceLfTagArgsdatabase {
+export interface AwsLakeformationResourceLfTagArgsDatabase {
   catalog_id?: string;
   name: string;
 }
@@ -7,7 +7,7 @@ export interface AwsLakeformationResourceLfTagArgsLfTag {
   key: string;
   value: string;
 }
-export interface AwsLakeformationResourceLfTagArgstable {
+export interface AwsLakeformationResourceLfTagArgsTable {
   catalog_id?: string;
   database_name: string;
   name?: string;
@@ -23,17 +23,17 @@ export interface AwsLakeformationResourceLfTagArgsTableWithColumns {
   name: string;
   column_wildcard: AwsLakeformationResourceLfTagArgsTableWithColumnsColumnWildcard;
 }
-export interface AwsLakeformationResourceLfTagArgstimeouts {
+export interface AwsLakeformationResourceLfTagArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsLakeformationResourceLfTagArgs {
   catalog_id?: string;
-  database: AwsLakeformationResourceLfTagArgsdatabase;
+  database: AwsLakeformationResourceLfTagArgsDatabase;
   lf_tag: AwsLakeformationResourceLfTagArgsLfTag;
-  table: AwsLakeformationResourceLfTagArgstable;
+  table: AwsLakeformationResourceLfTagArgsTable;
   table_with_columns: AwsLakeformationResourceLfTagArgsTableWithColumns;
-  timeouts: AwsLakeformationResourceLfTagArgstimeouts;
+  timeouts: AwsLakeformationResourceLfTagArgsTimeouts;
 }
 export class aws_lakeformation_resource_lf_tag extends TerraformResource {
   readonly id!: string;

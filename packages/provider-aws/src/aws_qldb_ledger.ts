@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQldbLedgerArgstimeouts {
+export interface AwsQldbLedgerArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsQldbLedgerArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsQldbLedgerArgstimeouts;
+  timeouts: AwsQldbLedgerArgsTimeouts;
 }
 export class aws_qldb_ledger extends TerraformResource {
   readonly arn!: string;

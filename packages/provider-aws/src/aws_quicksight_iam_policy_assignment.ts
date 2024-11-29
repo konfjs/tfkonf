@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQuicksightIamPolicyAssignmentArgsidentities {
+export interface AwsQuicksightIamPolicyAssignmentArgsIdentities {
   group?: string[];
   user?: string[];
 }
@@ -7,7 +7,7 @@ export interface AwsQuicksightIamPolicyAssignmentArgs {
   assignment_name: string;
   assignment_status: string;
   policy_arn?: string;
-  identities: AwsQuicksightIamPolicyAssignmentArgsidentities;
+  identities: AwsQuicksightIamPolicyAssignmentArgsIdentities;
 }
 export class aws_quicksight_iam_policy_assignment extends TerraformResource {
   readonly assignment_id!: string;

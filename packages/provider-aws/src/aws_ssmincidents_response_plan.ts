@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsmincidentsResponsePlanArgsactionSsmAutomationparameter {
+export interface AwsSsmincidentsResponsePlanArgsActionSsmAutomationParameter {
   name: string;
   values: string[];
 }
-export interface AwsSsmincidentsResponsePlanArgsactionSsmAutomation {
+export interface AwsSsmincidentsResponsePlanArgsActionSsmAutomation {
   document_name: string;
   document_version?: string;
   dynamic_parameters?: {
@@ -11,10 +11,10 @@ export interface AwsSsmincidentsResponsePlanArgsactionSsmAutomation {
   };
   role_arn: string;
   target_account?: string;
-  parameter: AwsSsmincidentsResponsePlanArgsactionSsmAutomationparameter;
+  parameter: AwsSsmincidentsResponsePlanArgsActionSsmAutomationParameter;
 }
-export interface AwsSsmincidentsResponsePlanArgsaction {
-  ssm_automation: AwsSsmincidentsResponsePlanArgsactionSsmAutomation;
+export interface AwsSsmincidentsResponsePlanArgsAction {
+  ssm_automation: AwsSsmincidentsResponsePlanArgsActionSsmAutomation;
 }
 export interface AwsSsmincidentsResponsePlanArgsIncidentTemplateNotificationTarget {
   sns_topic_arn: string;
@@ -29,13 +29,13 @@ export interface AwsSsmincidentsResponsePlanArgsIncidentTemplate {
   title: string;
   notification_target: AwsSsmincidentsResponsePlanArgsIncidentTemplateNotificationTarget;
 }
-export interface AwsSsmincidentsResponsePlanArgsintegrationpagerduty {
+export interface AwsSsmincidentsResponsePlanArgsIntegrationPagerduty {
   name: string;
   secret_id: string;
   service_id: string;
 }
-export interface AwsSsmincidentsResponsePlanArgsintegration {
-  pagerduty: AwsSsmincidentsResponsePlanArgsintegrationpagerduty;
+export interface AwsSsmincidentsResponsePlanArgsIntegration {
+  pagerduty: AwsSsmincidentsResponsePlanArgsIntegrationPagerduty;
 }
 export interface AwsSsmincidentsResponsePlanArgs {
   chat_channel?: string[];
@@ -45,9 +45,9 @@ export interface AwsSsmincidentsResponsePlanArgs {
   tags?: {
     [key: string]: string;
   };
-  action: AwsSsmincidentsResponsePlanArgsaction;
+  action: AwsSsmincidentsResponsePlanArgsAction;
   incident_template: AwsSsmincidentsResponsePlanArgsIncidentTemplate;
-  integration: AwsSsmincidentsResponsePlanArgsintegration;
+  integration: AwsSsmincidentsResponsePlanArgsIntegration;
 }
 export class aws_ssmincidents_response_plan extends TerraformResource {
   readonly arn!: string;

@@ -21,7 +21,7 @@ export interface GoogleComputeDiskArgsSourceSnapshotEncryptionKey {
   kms_key_service_account?: string;
   raw_key?: string;
 }
-export interface GoogleComputeDiskArgstimeouts {
+export interface GoogleComputeDiskArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -42,7 +42,7 @@ export interface GoogleComputeDiskArgs {
   guest_os_features: GoogleComputeDiskArgsGuestOsFeatures;
   source_image_encryption_key: GoogleComputeDiskArgsSourceImageEncryptionKey;
   source_snapshot_encryption_key: GoogleComputeDiskArgsSourceSnapshotEncryptionKey;
-  timeouts: GoogleComputeDiskArgstimeouts;
+  timeouts: GoogleComputeDiskArgsTimeouts;
 }
 export class google_compute_disk extends TerraformResource {
   readonly access_mode?: string;

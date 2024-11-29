@@ -68,7 +68,7 @@ export interface GoogleContainerClusterArgsAuthenticatorGroupsConfig {
 export interface GoogleContainerClusterArgsBinaryAuthorization {
   enabled?: boolean;
 }
-export interface GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsmanagement {}
+export interface GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsManagement {}
 export interface GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
@@ -91,7 +91,7 @@ export interface GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDef
   image_type?: string;
   min_cpu_platform?: string;
   service_account?: string;
-  management: GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsmanagement;
+  management: GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsManagement;
   shielded_instance_config: GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsShieldedInstanceConfig;
   upgrade_settings: GoogleContainerClusterArgsClusterAutoscalingAutoProvisioningDefaultsUpgradeSettings;
 }
@@ -133,7 +133,7 @@ export interface GoogleContainerClusterArgsDnsConfig {
 export interface GoogleContainerClusterArgsEnableK8sBetaApis {
   enabled_apis: string[];
 }
-export interface GoogleContainerClusterArgsfleet {
+export interface GoogleContainerClusterArgsFleet {
   project?: string;
 }
 export interface GoogleContainerClusterArgsGatewayApiConfig {
@@ -253,7 +253,7 @@ export interface GoogleContainerClusterArgsNodeConfigGuestAccelerator {
   gpu_driver_installation_config: GoogleContainerClusterArgsNodeConfigGuestAcceleratorGpuDriverInstallationConfig;
   gpu_sharing_config: GoogleContainerClusterArgsNodeConfigGuestAcceleratorGpuSharingConfig;
 }
-export interface GoogleContainerClusterArgsNodeConfiggvnic {
+export interface GoogleContainerClusterArgsNodeConfigGvnic {
   enabled: boolean;
 }
 export interface GoogleContainerClusterArgsNodeConfigHostMaintenancePolicy {
@@ -299,7 +299,7 @@ export interface GoogleContainerClusterArgsNodeConfigSoleTenantConfigNodeAffinit
 export interface GoogleContainerClusterArgsNodeConfigSoleTenantConfig {
   node_affinity: GoogleContainerClusterArgsNodeConfigSoleTenantConfigNodeAffinity;
 }
-export interface GoogleContainerClusterArgsNodeConfigtaint {
+export interface GoogleContainerClusterArgsNodeConfigTaint {
   effect: string;
   key: string;
   value: string;
@@ -328,7 +328,7 @@ export interface GoogleContainerClusterArgsNodeConfig {
   fast_socket: GoogleContainerClusterArgsNodeConfigFastSocket;
   gcfs_config: GoogleContainerClusterArgsNodeConfigGcfsConfig;
   guest_accelerator: GoogleContainerClusterArgsNodeConfigGuestAccelerator;
-  gvnic: GoogleContainerClusterArgsNodeConfiggvnic;
+  gvnic: GoogleContainerClusterArgsNodeConfigGvnic;
   host_maintenance_policy: GoogleContainerClusterArgsNodeConfigHostMaintenancePolicy;
   kubelet_config: GoogleContainerClusterArgsNodeConfigKubeletConfig;
   linux_node_config: GoogleContainerClusterArgsNodeConfigLinuxNodeConfig;
@@ -337,16 +337,16 @@ export interface GoogleContainerClusterArgsNodeConfig {
   secondary_boot_disks: GoogleContainerClusterArgsNodeConfigSecondaryBootDisks;
   shielded_instance_config: GoogleContainerClusterArgsNodeConfigShieldedInstanceConfig;
   sole_tenant_config: GoogleContainerClusterArgsNodeConfigSoleTenantConfig;
-  taint: GoogleContainerClusterArgsNodeConfigtaint;
+  taint: GoogleContainerClusterArgsNodeConfigTaint;
   workload_metadata_config: GoogleContainerClusterArgsNodeConfigWorkloadMetadataConfig;
 }
-export interface GoogleContainerClusterArgsNodePoolautoscaling {
+export interface GoogleContainerClusterArgsNodePoolAutoscaling {
   max_node_count?: number;
   min_node_count?: number;
   total_max_node_count?: number;
   total_min_node_count?: number;
 }
-export interface GoogleContainerClusterArgsNodePoolmanagement {
+export interface GoogleContainerClusterArgsNodePoolManagement {
   auto_repair?: boolean;
   auto_upgrade?: boolean;
 }
@@ -415,7 +415,7 @@ export interface GoogleContainerClusterArgsNodePoolNodeConfigGuestAccelerator {
   gpu_driver_installation_config: GoogleContainerClusterArgsNodePoolNodeConfigGuestAcceleratorGpuDriverInstallationConfig;
   gpu_sharing_config: GoogleContainerClusterArgsNodePoolNodeConfigGuestAcceleratorGpuSharingConfig;
 }
-export interface GoogleContainerClusterArgsNodePoolNodeConfiggvnic {
+export interface GoogleContainerClusterArgsNodePoolNodeConfigGvnic {
   enabled: boolean;
 }
 export interface GoogleContainerClusterArgsNodePoolNodeConfigHostMaintenancePolicy {
@@ -461,7 +461,7 @@ export interface GoogleContainerClusterArgsNodePoolNodeConfigSoleTenantConfigNod
 export interface GoogleContainerClusterArgsNodePoolNodeConfigSoleTenantConfig {
   node_affinity: GoogleContainerClusterArgsNodePoolNodeConfigSoleTenantConfigNodeAffinity;
 }
-export interface GoogleContainerClusterArgsNodePoolNodeConfigtaint {
+export interface GoogleContainerClusterArgsNodePoolNodeConfigTaint {
   effect: string;
   key: string;
   value: string;
@@ -490,7 +490,7 @@ export interface GoogleContainerClusterArgsNodePoolNodeConfig {
   fast_socket: GoogleContainerClusterArgsNodePoolNodeConfigFastSocket;
   gcfs_config: GoogleContainerClusterArgsNodePoolNodeConfigGcfsConfig;
   guest_accelerator: GoogleContainerClusterArgsNodePoolNodeConfigGuestAccelerator;
-  gvnic: GoogleContainerClusterArgsNodePoolNodeConfiggvnic;
+  gvnic: GoogleContainerClusterArgsNodePoolNodeConfigGvnic;
   host_maintenance_policy: GoogleContainerClusterArgsNodePoolNodeConfigHostMaintenancePolicy;
   kubelet_config: GoogleContainerClusterArgsNodePoolNodeConfigKubeletConfig;
   linux_node_config: GoogleContainerClusterArgsNodePoolNodeConfigLinuxNodeConfig;
@@ -499,7 +499,7 @@ export interface GoogleContainerClusterArgsNodePoolNodeConfig {
   secondary_boot_disks: GoogleContainerClusterArgsNodePoolNodeConfigSecondaryBootDisks;
   shielded_instance_config: GoogleContainerClusterArgsNodePoolNodeConfigShieldedInstanceConfig;
   sole_tenant_config: GoogleContainerClusterArgsNodePoolNodeConfigSoleTenantConfig;
-  taint: GoogleContainerClusterArgsNodePoolNodeConfigtaint;
+  taint: GoogleContainerClusterArgsNodePoolNodeConfigTaint;
   workload_metadata_config: GoogleContainerClusterArgsNodePoolNodeConfigWorkloadMetadataConfig;
 }
 export interface GoogleContainerClusterArgsNodePoolPlacementPolicy {
@@ -519,8 +519,8 @@ export interface GoogleContainerClusterArgsNodePoolUpgradeSettings {
   blue_green_settings: GoogleContainerClusterArgsNodePoolUpgradeSettingsBlueGreenSettings;
 }
 export interface GoogleContainerClusterArgsNodePool {
-  autoscaling: GoogleContainerClusterArgsNodePoolautoscaling;
-  management: GoogleContainerClusterArgsNodePoolmanagement;
+  autoscaling: GoogleContainerClusterArgsNodePoolAutoscaling;
+  management: GoogleContainerClusterArgsNodePoolManagement;
   network_config: GoogleContainerClusterArgsNodePoolNetworkConfig;
   node_config: GoogleContainerClusterArgsNodePoolNodeConfig;
   placement_policy: GoogleContainerClusterArgsNodePoolPlacementPolicy;
@@ -562,16 +562,16 @@ export interface GoogleContainerClusterArgsNodePoolDefaultsNodeConfigDefaults {
 export interface GoogleContainerClusterArgsNodePoolDefaults {
   node_config_defaults: GoogleContainerClusterArgsNodePoolDefaultsNodeConfigDefaults;
 }
-export interface GoogleContainerClusterArgsNotificationConfigpubsubfilter {
+export interface GoogleContainerClusterArgsNotificationConfigPubsubFilter {
   event_type: string[];
 }
-export interface GoogleContainerClusterArgsNotificationConfigpubsub {
+export interface GoogleContainerClusterArgsNotificationConfigPubsub {
   enabled: boolean;
   topic?: string;
-  filter: GoogleContainerClusterArgsNotificationConfigpubsubfilter;
+  filter: GoogleContainerClusterArgsNotificationConfigPubsubFilter;
 }
 export interface GoogleContainerClusterArgsNotificationConfig {
-  pubsub: GoogleContainerClusterArgsNotificationConfigpubsub;
+  pubsub: GoogleContainerClusterArgsNotificationConfigPubsub;
 }
 export interface GoogleContainerClusterArgsPrivateClusterConfigMasterGlobalAccessConfig {
   enabled: boolean;
@@ -600,7 +600,7 @@ export interface GoogleContainerClusterArgsSecurityPostureConfig {}
 export interface GoogleContainerClusterArgsServiceExternalIpsConfig {
   enabled: boolean;
 }
-export interface GoogleContainerClusterArgstimeouts {
+export interface GoogleContainerClusterArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -653,7 +653,7 @@ export interface GoogleContainerClusterArgs {
   default_snat_status: GoogleContainerClusterArgsDefaultSnatStatus;
   dns_config: GoogleContainerClusterArgsDnsConfig;
   enable_k8s_beta_apis: GoogleContainerClusterArgsEnableK8sBetaApis;
-  fleet: GoogleContainerClusterArgsfleet;
+  fleet: GoogleContainerClusterArgsFleet;
   gateway_api_config: GoogleContainerClusterArgsGatewayApiConfig;
   identity_service_config: GoogleContainerClusterArgsIdentityServiceConfig;
   ip_allocation_policy: GoogleContainerClusterArgsIpAllocationPolicy;
@@ -675,7 +675,7 @@ export interface GoogleContainerClusterArgs {
   secret_manager_config: GoogleContainerClusterArgsSecretManagerConfig;
   security_posture_config: GoogleContainerClusterArgsSecurityPostureConfig;
   service_external_ips_config: GoogleContainerClusterArgsServiceExternalIpsConfig;
-  timeouts: GoogleContainerClusterArgstimeouts;
+  timeouts: GoogleContainerClusterArgsTimeouts;
   user_managed_keys_config: GoogleContainerClusterArgsUserManagedKeysConfig;
   vertical_pod_autoscaling: GoogleContainerClusterArgsVerticalPodAutoscaling;
   workload_identity_config: GoogleContainerClusterArgsWorkloadIdentityConfig;

@@ -2,11 +2,11 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleGkeonpremVmwareClusterArgsAntiAffinityGroups {
   aag_config_disabled: boolean;
 }
-export interface GoogleGkeonpremVmwareClusterArgsauthorizationAdminUsers {
+export interface GoogleGkeonpremVmwareClusterArgsAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleGkeonpremVmwareClusterArgsauthorization {
-  admin_users: GoogleGkeonpremVmwareClusterArgsauthorizationAdminUsers;
+export interface GoogleGkeonpremVmwareClusterArgsAuthorization {
+  admin_users: GoogleGkeonpremVmwareClusterArgsAuthorizationAdminUsers;
 }
 export interface GoogleGkeonpremVmwareClusterArgsAutoRepairConfig {
   enabled: boolean;
@@ -47,13 +47,13 @@ export interface GoogleGkeonpremVmwareClusterArgsLoadBalancer {
   metal_lb_config: GoogleGkeonpremVmwareClusterArgsLoadBalancerMetalLbConfig;
   vip_config: GoogleGkeonpremVmwareClusterArgsLoadBalancerVipConfig;
 }
-export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockips {
+export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIps {
   ip?: string;
 }
 export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock {
   gateway?: string;
   netmask?: string;
-  ips: GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockips;
+  ips: GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlockIps;
 }
 export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2Config {
   control_plane_ip_block: GoogleGkeonpremVmwareClusterArgsNetworkConfigControlPlaneV2ConfigControlPlaneIpBlock;
@@ -66,13 +66,13 @@ export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigHostConfig {
   dns_servers?: string[];
   ntp_servers?: string[];
 }
-export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocksips {
+export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocksIps {
   ip: string;
 }
 export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocks {
   gateway: string;
   netmask: string;
-  ips: GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocksips;
+  ips: GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocksIps;
 }
 export interface GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfig {
   ip_blocks: GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfigIpBlocks;
@@ -85,10 +85,10 @@ export interface GoogleGkeonpremVmwareClusterArgsNetworkConfig {
   host_config: GoogleGkeonpremVmwareClusterArgsNetworkConfigHostConfig;
   static_ip_config: GoogleGkeonpremVmwareClusterArgsNetworkConfigStaticIpConfig;
 }
-export interface GoogleGkeonpremVmwareClusterArgsstorage {
+export interface GoogleGkeonpremVmwareClusterArgsStorage {
   vsphere_csi_disabled: boolean;
 }
-export interface GoogleGkeonpremVmwareClusterArgstimeouts {
+export interface GoogleGkeonpremVmwareClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -96,7 +96,7 @@ export interface GoogleGkeonpremVmwareClusterArgstimeouts {
 export interface GoogleGkeonpremVmwareClusterArgsUpgradePolicy {
   control_plane_only?: boolean;
 }
-export interface GoogleGkeonpremVmwareClusterArgsvcenter {
+export interface GoogleGkeonpremVmwareClusterArgsVcenter {
   ca_cert_data?: string;
   cluster?: string;
   datacenter?: string;
@@ -117,16 +117,16 @@ export interface GoogleGkeonpremVmwareClusterArgs {
   name: string;
   on_prem_version: string;
   anti_affinity_groups: GoogleGkeonpremVmwareClusterArgsAntiAffinityGroups;
-  authorization: GoogleGkeonpremVmwareClusterArgsauthorization;
+  authorization: GoogleGkeonpremVmwareClusterArgsAuthorization;
   auto_repair_config: GoogleGkeonpremVmwareClusterArgsAutoRepairConfig;
   control_plane_node: GoogleGkeonpremVmwareClusterArgsControlPlaneNode;
   dataplane_v2: GoogleGkeonpremVmwareClusterArgsDataplaneV2;
   load_balancer: GoogleGkeonpremVmwareClusterArgsLoadBalancer;
   network_config: GoogleGkeonpremVmwareClusterArgsNetworkConfig;
-  storage: GoogleGkeonpremVmwareClusterArgsstorage;
-  timeouts: GoogleGkeonpremVmwareClusterArgstimeouts;
+  storage: GoogleGkeonpremVmwareClusterArgsStorage;
+  timeouts: GoogleGkeonpremVmwareClusterArgsTimeouts;
   upgrade_policy: GoogleGkeonpremVmwareClusterArgsUpgradePolicy;
-  vcenter: GoogleGkeonpremVmwareClusterArgsvcenter;
+  vcenter: GoogleGkeonpremVmwareClusterArgsVcenter;
 }
 export class google_gkeonprem_vmware_cluster extends TerraformResource {
   readonly create_time!: string;

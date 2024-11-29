@@ -5,7 +5,7 @@ export interface GoogleCertificateManagerCertificateIssuanceConfigArgsCertificat
 export interface GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfig {
   certificate_authority_service_config: GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfigCertificateAuthorityServiceConfig;
 }
-export interface GoogleCertificateManagerCertificateIssuanceConfigArgstimeouts {
+export interface GoogleCertificateManagerCertificateIssuanceConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,7 +21,7 @@ export interface GoogleCertificateManagerCertificateIssuanceConfigArgs {
   name: string;
   rotation_window_percentage: number;
   certificate_authority_config: GoogleCertificateManagerCertificateIssuanceConfigArgsCertificateAuthorityConfig;
-  timeouts: GoogleCertificateManagerCertificateIssuanceConfigArgstimeouts;
+  timeouts: GoogleCertificateManagerCertificateIssuanceConfigArgsTimeouts;
 }
 export class google_certificate_manager_certificate_issuance_config extends TerraformResource {
   readonly create_time!: string;

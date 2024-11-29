@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleAccessContextManagerAccessPolicyArgstimeouts {
+export interface GoogleAccessContextManagerAccessPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleAccessContextManagerAccessPolicyArgs {
   parent: string;
   scopes?: string[];
   title: string;
-  timeouts: GoogleAccessContextManagerAccessPolicyArgstimeouts;
+  timeouts: GoogleAccessContextManagerAccessPolicyArgsTimeouts;
 }
 export class google_access_context_manager_access_policy extends TerraformResource {
   readonly create_time!: string;

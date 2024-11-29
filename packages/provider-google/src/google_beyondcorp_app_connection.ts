@@ -3,11 +3,11 @@ export interface GoogleBeyondcorpAppConnectionArgsApplicationEndpoint {
   host: string;
   port: number;
 }
-export interface GoogleBeyondcorpAppConnectionArgsgateway {
+export interface GoogleBeyondcorpAppConnectionArgsGateway {
   app_gateway: string;
   type?: string;
 }
-export interface GoogleBeyondcorpAppConnectionArgstimeouts {
+export interface GoogleBeyondcorpAppConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface GoogleBeyondcorpAppConnectionArgs {
   region?: string;
   type?: string;
   application_endpoint: GoogleBeyondcorpAppConnectionArgsApplicationEndpoint;
-  gateway: GoogleBeyondcorpAppConnectionArgsgateway;
-  timeouts: GoogleBeyondcorpAppConnectionArgstimeouts;
+  gateway: GoogleBeyondcorpAppConnectionArgsGateway;
+  timeouts: GoogleBeyondcorpAppConnectionArgsTimeouts;
 }
 export class google_beyondcorp_app_connection extends TerraformResource {
   readonly effective_labels!: {

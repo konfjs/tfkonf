@@ -15,7 +15,7 @@ export interface AwsMwaaEnvironmentArgsNetworkConfiguration {
   security_group_ids: string[];
   subnet_ids: string[];
 }
-export interface AwsMwaaEnvironmentArgstimeouts {
+export interface AwsMwaaEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,7 +37,7 @@ export interface AwsMwaaEnvironmentArgs {
   };
   logging_configuration: AwsMwaaEnvironmentArgsLoggingConfiguration;
   network_configuration: AwsMwaaEnvironmentArgsNetworkConfiguration;
-  timeouts: AwsMwaaEnvironmentArgstimeouts;
+  timeouts: AwsMwaaEnvironmentArgsTimeouts;
 }
 export class aws_mwaa_environment extends TerraformResource {
   readonly airflow_version?: string;

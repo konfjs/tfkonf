@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleHealthcareHl7V2StoreIamBindingArgscondition {
+export interface GoogleHealthcareHl7V2StoreIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleHealthcareHl7V2StoreIamBindingArgs {
   hl7_v2_store_id: string;
   members: string[];
   role: string;
-  condition: GoogleHealthcareHl7V2StoreIamBindingArgscondition;
+  condition: GoogleHealthcareHl7V2StoreIamBindingArgsCondition;
 }
 export class google_healthcare_hl7_v2_store_iam_binding extends TerraformResource {
   readonly etag!: string;

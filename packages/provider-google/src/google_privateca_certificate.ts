@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GooglePrivatecaCertificateArgsconfigPublicKey {
+export interface GooglePrivatecaCertificateArgsConfigPublicKey {
   format: string;
   key?: string;
 }
-export interface GooglePrivatecaCertificateArgsconfigSubjectConfigsubject {
+export interface GooglePrivatecaCertificateArgsConfigSubjectConfigSubject {
   common_name: string;
   country_code?: string;
   locality?: string;
@@ -13,34 +13,34 @@ export interface GooglePrivatecaCertificateArgsconfigSubjectConfigsubject {
   province?: string;
   street_address?: string;
 }
-export interface GooglePrivatecaCertificateArgsconfigSubjectConfigSubjectAltName {
+export interface GooglePrivatecaCertificateArgsConfigSubjectConfigSubjectAltName {
   dns_names?: string[];
   email_addresses?: string[];
   ip_addresses?: string[];
   uris?: string[];
 }
-export interface GooglePrivatecaCertificateArgsconfigSubjectConfig {
-  subject: GooglePrivatecaCertificateArgsconfigSubjectConfigsubject;
-  subject_alt_name: GooglePrivatecaCertificateArgsconfigSubjectConfigSubjectAltName;
+export interface GooglePrivatecaCertificateArgsConfigSubjectConfig {
+  subject: GooglePrivatecaCertificateArgsConfigSubjectConfigSubject;
+  subject_alt_name: GooglePrivatecaCertificateArgsConfigSubjectConfigSubjectAltName;
 }
-export interface GooglePrivatecaCertificateArgsconfigSubjectKeyId {
+export interface GooglePrivatecaCertificateArgsConfigSubjectKeyId {
   key_id?: string;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigAdditionalExtensionsObjectId {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensionsObjectId {
   object_id_path: number[];
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigAdditionalExtensions {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensions {
   critical: boolean;
   value: string;
-  object_id: GooglePrivatecaCertificateArgsconfigX509ConfigAdditionalExtensionsObjectId;
+  object_id: GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensionsObjectId;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigCaOptions {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigCaOptions {
   is_ca?: boolean;
   max_issuer_path_length?: number;
   non_ca?: boolean;
   zero_max_issuer_path_length?: boolean;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageBaseKeyUsage {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageBaseKeyUsage {
   cert_sign?: boolean;
   content_commitment?: boolean;
   crl_sign?: boolean;
@@ -51,7 +51,7 @@ export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageBaseKeyUs
   key_agreement?: boolean;
   key_encipherment?: boolean;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageExtendedKeyUsage {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageExtendedKeyUsage {
   client_auth?: boolean;
   code_signing?: boolean;
   email_protection?: boolean;
@@ -59,15 +59,15 @@ export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageExtendedK
   server_auth?: boolean;
   time_stamping?: boolean;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
   object_id_path: number[];
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsage {
-  base_key_usage: GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageBaseKeyUsage;
-  extended_key_usage: GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageExtendedKeyUsage;
-  unknown_extended_key_usages: GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsageUnknownExtendedKeyUsages;
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsage {
+  base_key_usage: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageBaseKeyUsage;
+  extended_key_usage: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageExtendedKeyUsage;
+  unknown_extended_key_usages: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageUnknownExtendedKeyUsages;
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigNameConstraints {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigNameConstraints {
   critical: boolean;
   excluded_dns_names?: string[];
   excluded_email_addresses?: string[];
@@ -78,24 +78,24 @@ export interface GooglePrivatecaCertificateArgsconfigX509ConfigNameConstraints {
   permitted_ip_ranges?: string[];
   permitted_uris?: string[];
 }
-export interface GooglePrivatecaCertificateArgsconfigX509ConfigPolicyIds {
+export interface GooglePrivatecaCertificateArgsConfigX509ConfigPolicyIds {
   object_id_path: number[];
 }
-export interface GooglePrivatecaCertificateArgsconfigX509Config {
+export interface GooglePrivatecaCertificateArgsConfigX509Config {
   aia_ocsp_servers?: string[];
-  additional_extensions: GooglePrivatecaCertificateArgsconfigX509ConfigAdditionalExtensions;
-  ca_options: GooglePrivatecaCertificateArgsconfigX509ConfigCaOptions;
-  key_usage: GooglePrivatecaCertificateArgsconfigX509ConfigKeyUsage;
-  name_constraints: GooglePrivatecaCertificateArgsconfigX509ConfigNameConstraints;
-  policy_ids: GooglePrivatecaCertificateArgsconfigX509ConfigPolicyIds;
+  additional_extensions: GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensions;
+  ca_options: GooglePrivatecaCertificateArgsConfigX509ConfigCaOptions;
+  key_usage: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsage;
+  name_constraints: GooglePrivatecaCertificateArgsConfigX509ConfigNameConstraints;
+  policy_ids: GooglePrivatecaCertificateArgsConfigX509ConfigPolicyIds;
 }
-export interface GooglePrivatecaCertificateArgsconfig {
-  public_key: GooglePrivatecaCertificateArgsconfigPublicKey;
-  subject_config: GooglePrivatecaCertificateArgsconfigSubjectConfig;
-  subject_key_id: GooglePrivatecaCertificateArgsconfigSubjectKeyId;
-  x509_config: GooglePrivatecaCertificateArgsconfigX509Config;
+export interface GooglePrivatecaCertificateArgsConfig {
+  public_key: GooglePrivatecaCertificateArgsConfigPublicKey;
+  subject_config: GooglePrivatecaCertificateArgsConfigSubjectConfig;
+  subject_key_id: GooglePrivatecaCertificateArgsConfigSubjectKeyId;
+  x509_config: GooglePrivatecaCertificateArgsConfigX509Config;
 }
-export interface GooglePrivatecaCertificateArgstimeouts {
+export interface GooglePrivatecaCertificateArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -111,8 +111,8 @@ export interface GooglePrivatecaCertificateArgs {
   name: string;
   pem_csr?: string;
   pool: string;
-  config: GooglePrivatecaCertificateArgsconfig;
-  timeouts: GooglePrivatecaCertificateArgstimeouts;
+  config: GooglePrivatecaCertificateArgsConfig;
+  timeouts: GooglePrivatecaCertificateArgsTimeouts;
 }
 export class google_privateca_certificate extends TerraformResource {
   readonly certificate_description!: any[];

@@ -20,19 +20,19 @@ export interface AwsCloudfrontResponseHeadersPolicyArgsCorsConfig {
   access_control_allow_origins: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlAllowOrigins;
   access_control_expose_headers: AwsCloudfrontResponseHeadersPolicyArgsCorsConfigAccessControlExposeHeaders;
 }
-export interface AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigitems {
+export interface AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigItems {
   header: string;
   override: boolean;
   value: string;
 }
 export interface AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfig {
-  items: AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigitems;
+  items: AwsCloudfrontResponseHeadersPolicyArgsCustomHeadersConfigItems;
 }
-export interface AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigitems {
+export interface AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigItems {
   header: string;
 }
 export interface AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfig {
-  items: AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigitems;
+  items: AwsCloudfrontResponseHeadersPolicyArgsRemoveHeadersConfigItems;
 }
 export interface AwsCloudfrontResponseHeadersPolicyArgsSecurityHeadersConfigContentSecurityPolicy {
   content_security_policy: string;

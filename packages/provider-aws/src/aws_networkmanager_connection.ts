@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerConnectionArgstimeouts {
+export interface AwsNetworkmanagerConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsNetworkmanagerConnectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNetworkmanagerConnectionArgstimeouts;
+  timeouts: AwsNetworkmanagerConnectionArgsTimeouts;
 }
 export class aws_networkmanager_connection extends TerraformResource {
   readonly arn!: string;

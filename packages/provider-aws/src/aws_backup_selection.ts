@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBackupSelectionArgsconditionStringEquals {
+export interface AwsBackupSelectionArgsConditionStringEquals {
   key: string;
   value: string;
 }
-export interface AwsBackupSelectionArgsconditionStringLike {
+export interface AwsBackupSelectionArgsConditionStringLike {
   key: string;
   value: string;
 }
-export interface AwsBackupSelectionArgsconditionStringNotEquals {
+export interface AwsBackupSelectionArgsConditionStringNotEquals {
   key: string;
   value: string;
 }
-export interface AwsBackupSelectionArgsconditionStringNotLike {
+export interface AwsBackupSelectionArgsConditionStringNotLike {
   key: string;
   value: string;
 }
-export interface AwsBackupSelectionArgscondition {
-  string_equals: AwsBackupSelectionArgsconditionStringEquals;
-  string_like: AwsBackupSelectionArgsconditionStringLike;
-  string_not_equals: AwsBackupSelectionArgsconditionStringNotEquals;
-  string_not_like: AwsBackupSelectionArgsconditionStringNotLike;
+export interface AwsBackupSelectionArgsCondition {
+  string_equals: AwsBackupSelectionArgsConditionStringEquals;
+  string_like: AwsBackupSelectionArgsConditionStringLike;
+  string_not_equals: AwsBackupSelectionArgsConditionStringNotEquals;
+  string_not_like: AwsBackupSelectionArgsConditionStringNotLike;
 }
 export interface AwsBackupSelectionArgsSelectionTag {
   key: string;
@@ -31,7 +31,7 @@ export interface AwsBackupSelectionArgs {
   name: string;
   plan_id: string;
   resources?: string[];
-  condition: AwsBackupSelectionArgscondition;
+  condition: AwsBackupSelectionArgsCondition;
   selection_tag: AwsBackupSelectionArgsSelectionTag;
 }
 export class aws_backup_selection extends TerraformResource {

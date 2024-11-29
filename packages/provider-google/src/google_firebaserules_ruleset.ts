@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFirebaserulesRulesetArgssourcefiles {
+export interface GoogleFirebaserulesRulesetArgsSourceFiles {
   content: string;
   fingerprint?: string;
   name: string;
 }
-export interface GoogleFirebaserulesRulesetArgssource {
+export interface GoogleFirebaserulesRulesetArgsSource {
   language?: string;
-  files: GoogleFirebaserulesRulesetArgssourcefiles;
+  files: GoogleFirebaserulesRulesetArgsSourceFiles;
 }
-export interface GoogleFirebaserulesRulesetArgstimeouts {
+export interface GoogleFirebaserulesRulesetArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleFirebaserulesRulesetArgs {
-  source: GoogleFirebaserulesRulesetArgssource;
-  timeouts: GoogleFirebaserulesRulesetArgstimeouts;
+  source: GoogleFirebaserulesRulesetArgsSource;
+  timeouts: GoogleFirebaserulesRulesetArgsTimeouts;
 }
 export class google_firebaserules_ruleset extends TerraformResource {
   readonly create_time!: string;

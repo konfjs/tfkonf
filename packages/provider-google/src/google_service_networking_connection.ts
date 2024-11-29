@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleServiceNetworkingConnectionArgstimeouts {
+export interface GoogleServiceNetworkingConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleServiceNetworkingConnectionArgs {
   reserved_peering_ranges: string[];
   service: string;
   update_on_creation_fail?: boolean;
-  timeouts: GoogleServiceNetworkingConnectionArgstimeouts;
+  timeouts: GoogleServiceNetworkingConnectionArgsTimeouts;
 }
 export class google_service_networking_connection extends TerraformResource {
   readonly id?: string;

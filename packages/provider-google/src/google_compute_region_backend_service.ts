@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeRegionBackendServiceArgsbackend {
+export interface GoogleComputeRegionBackendServiceArgsBackend {
   balancing_mode?: string;
   capacity_scaler?: number;
   description?: string;
@@ -35,14 +35,14 @@ export interface GoogleComputeRegionBackendServiceArgsCircuitBreakers {
   max_requests_per_connection?: number;
   max_retries?: number;
 }
-export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookiettl {
+export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookieTtl {
   nanos?: number;
   seconds: number;
 }
 export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
-  ttl: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookiettl;
+  ttl: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookieTtl;
 }
 export interface GoogleComputeRegionBackendServiceArgsConsistentHash {
   http_header_name?: string;
@@ -52,7 +52,7 @@ export interface GoogleComputeRegionBackendServiceArgsConsistentHash {
 export interface GoogleComputeRegionBackendServiceArgsFailoverPolicy {
   failover_ratio?: number;
 }
-export interface GoogleComputeRegionBackendServiceArgsiap {
+export interface GoogleComputeRegionBackendServiceArgsIap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
@@ -65,7 +65,7 @@ export interface GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjecti
   nanos?: number;
   seconds: number;
 }
-export interface GoogleComputeRegionBackendServiceArgsOutlierDetectioninterval {
+export interface GoogleComputeRegionBackendServiceArgsOutlierDetectionInterval {
   nanos?: number;
   seconds: number;
 }
@@ -80,18 +80,18 @@ export interface GoogleComputeRegionBackendServiceArgsOutlierDetection {
   success_rate_request_volume?: number;
   success_rate_stdev_factor?: number;
   base_ejection_time: GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjectionTime;
-  interval: GoogleComputeRegionBackendServiceArgsOutlierDetectioninterval;
+  interval: GoogleComputeRegionBackendServiceArgsOutlierDetectionInterval;
 }
-export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookiettl {
+export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookieTtl {
   nanos?: number;
   seconds: number;
 }
 export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
-  ttl: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookiettl;
+  ttl: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookieTtl;
 }
-export interface GoogleComputeRegionBackendServiceArgstimeouts {
+export interface GoogleComputeRegionBackendServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -107,16 +107,16 @@ export interface GoogleComputeRegionBackendServiceArgs {
   locality_lb_policy?: string;
   name: string;
   network?: string;
-  backend: GoogleComputeRegionBackendServiceArgsbackend;
+  backend: GoogleComputeRegionBackendServiceArgsBackend;
   cdn_policy: GoogleComputeRegionBackendServiceArgsCdnPolicy;
   circuit_breakers: GoogleComputeRegionBackendServiceArgsCircuitBreakers;
   consistent_hash: GoogleComputeRegionBackendServiceArgsConsistentHash;
   failover_policy: GoogleComputeRegionBackendServiceArgsFailoverPolicy;
-  iap: GoogleComputeRegionBackendServiceArgsiap;
+  iap: GoogleComputeRegionBackendServiceArgsIap;
   log_config: GoogleComputeRegionBackendServiceArgsLogConfig;
   outlier_detection: GoogleComputeRegionBackendServiceArgsOutlierDetection;
   strong_session_affinity_cookie: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie;
-  timeouts: GoogleComputeRegionBackendServiceArgstimeouts;
+  timeouts: GoogleComputeRegionBackendServiceArgsTimeouts;
 }
 export class google_compute_region_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

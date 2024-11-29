@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQuicksightThemeArgsconfigurationDataColorPalette {
+export interface AwsQuicksightThemeArgsConfigurationDataColorPalette {
   colors?: string[];
   empty_fill_color?: string;
   min_max_gradient?: string[];
 }
-export interface AwsQuicksightThemeArgsconfigurationsheettileborder {
+export interface AwsQuicksightThemeArgsConfigurationSheetTileBorder {
   show?: boolean;
 }
-export interface AwsQuicksightThemeArgsconfigurationsheettile {
-  border: AwsQuicksightThemeArgsconfigurationsheettileborder;
+export interface AwsQuicksightThemeArgsConfigurationSheetTile {
+  border: AwsQuicksightThemeArgsConfigurationSheetTileBorder;
 }
-export interface AwsQuicksightThemeArgsconfigurationsheetTileLayoutgutter {
+export interface AwsQuicksightThemeArgsConfigurationSheetTileLayoutGutter {
   show?: boolean;
 }
-export interface AwsQuicksightThemeArgsconfigurationsheetTileLayoutmargin {
+export interface AwsQuicksightThemeArgsConfigurationSheetTileLayoutMargin {
   show?: boolean;
 }
-export interface AwsQuicksightThemeArgsconfigurationsheetTileLayout {
-  gutter: AwsQuicksightThemeArgsconfigurationsheetTileLayoutgutter;
-  margin: AwsQuicksightThemeArgsconfigurationsheetTileLayoutmargin;
+export interface AwsQuicksightThemeArgsConfigurationSheetTileLayout {
+  gutter: AwsQuicksightThemeArgsConfigurationSheetTileLayoutGutter;
+  margin: AwsQuicksightThemeArgsConfigurationSheetTileLayoutMargin;
 }
-export interface AwsQuicksightThemeArgsconfigurationsheet {
-  tile: AwsQuicksightThemeArgsconfigurationsheettile;
-  tile_layout: AwsQuicksightThemeArgsconfigurationsheetTileLayout;
+export interface AwsQuicksightThemeArgsConfigurationSheet {
+  tile: AwsQuicksightThemeArgsConfigurationSheetTile;
+  tile_layout: AwsQuicksightThemeArgsConfigurationSheetTileLayout;
 }
-export interface AwsQuicksightThemeArgsconfigurationtypographyFontFamilies {
+export interface AwsQuicksightThemeArgsConfigurationTypographyFontFamilies {
   font_family?: string;
 }
-export interface AwsQuicksightThemeArgsconfigurationtypography {
-  font_families: AwsQuicksightThemeArgsconfigurationtypographyFontFamilies;
+export interface AwsQuicksightThemeArgsConfigurationTypography {
+  font_families: AwsQuicksightThemeArgsConfigurationTypographyFontFamilies;
 }
-export interface AwsQuicksightThemeArgsconfigurationUiColorPalette {
+export interface AwsQuicksightThemeArgsConfigurationUiColorPalette {
   accent?: string;
   accent_foreground?: string;
   danger?: string;
@@ -48,17 +48,17 @@ export interface AwsQuicksightThemeArgsconfigurationUiColorPalette {
   warning?: string;
   warning_foreground?: string;
 }
-export interface AwsQuicksightThemeArgsconfiguration {
-  data_color_palette: AwsQuicksightThemeArgsconfigurationDataColorPalette;
-  sheet: AwsQuicksightThemeArgsconfigurationsheet;
-  typography: AwsQuicksightThemeArgsconfigurationtypography;
-  ui_color_palette: AwsQuicksightThemeArgsconfigurationUiColorPalette;
+export interface AwsQuicksightThemeArgsConfiguration {
+  data_color_palette: AwsQuicksightThemeArgsConfigurationDataColorPalette;
+  sheet: AwsQuicksightThemeArgsConfigurationSheet;
+  typography: AwsQuicksightThemeArgsConfigurationTypography;
+  ui_color_palette: AwsQuicksightThemeArgsConfigurationUiColorPalette;
 }
-export interface AwsQuicksightThemeArgspermissions {
+export interface AwsQuicksightThemeArgsPermissions {
   actions: string[];
   principal: string;
 }
-export interface AwsQuicksightThemeArgstimeouts {
+export interface AwsQuicksightThemeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -71,9 +71,9 @@ export interface AwsQuicksightThemeArgs {
   };
   theme_id: string;
   version_description?: string;
-  configuration: AwsQuicksightThemeArgsconfiguration;
-  permissions: AwsQuicksightThemeArgspermissions;
-  timeouts: AwsQuicksightThemeArgstimeouts;
+  configuration: AwsQuicksightThemeArgsConfiguration;
+  permissions: AwsQuicksightThemeArgsPermissions;
+  timeouts: AwsQuicksightThemeArgsTimeouts;
 }
 export class aws_quicksight_theme extends TerraformResource {
   readonly arn!: string;

@@ -6,7 +6,7 @@ export interface AwsEcrpublicRepositoryArgsCatalogData {
   operating_systems?: string[];
   usage_text?: string;
 }
-export interface AwsEcrpublicRepositoryArgstimeouts {
+export interface AwsEcrpublicRepositoryArgsTimeouts {
   delete?: string;
 }
 export interface AwsEcrpublicRepositoryArgs {
@@ -16,7 +16,7 @@ export interface AwsEcrpublicRepositoryArgs {
     [key: string]: string;
   };
   catalog_data: AwsEcrpublicRepositoryArgsCatalogData;
-  timeouts: AwsEcrpublicRepositoryArgstimeouts;
+  timeouts: AwsEcrpublicRepositoryArgsTimeouts;
 }
 export class aws_ecrpublic_repository extends TerraformResource {
   readonly arn!: string;

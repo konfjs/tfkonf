@@ -3,111 +3,111 @@ export interface AwsKinesisAnalyticsApplicationArgsCloudwatchLoggingOptions {
   log_stream_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsKinesisFirehose {
+export interface AwsKinesisAnalyticsApplicationArgsInputsKinesisFirehose {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsKinesisStream {
+export interface AwsKinesisAnalyticsApplicationArgsInputsKinesisStream {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsparallelism {}
-export interface AwsKinesisAnalyticsApplicationArgsinputsProcessingConfigurationlambda {
+export interface AwsKinesisAnalyticsApplicationArgsInputsParallelism {}
+export interface AwsKinesisAnalyticsApplicationArgsInputsProcessingConfigurationLambda {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsProcessingConfiguration {
-  lambda: AwsKinesisAnalyticsApplicationArgsinputsProcessingConfigurationlambda;
+export interface AwsKinesisAnalyticsApplicationArgsInputsProcessingConfiguration {
+  lambda: AwsKinesisAnalyticsApplicationArgsInputsProcessingConfigurationLambda;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschemaRecordColumns {
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordColumns {
   mapping?: string;
   name: string;
   sql_type: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParameterscsv {
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParametersCsv {
   record_column_delimiter: string;
   record_row_delimiter: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParametersjson {
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParametersJson {
   record_row_path: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParameters {
-  csv: AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParameterscsv;
-  json: AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParametersjson;
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParameters {
+  csv: AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParametersCsv;
+  json: AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParametersJson;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormat {
-  mapping_parameters: AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormatMappingParameters;
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormat {
+  mapping_parameters: AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormatMappingParameters;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsschema {
+export interface AwsKinesisAnalyticsApplicationArgsInputsSchema {
   record_encoding?: string;
-  record_columns: AwsKinesisAnalyticsApplicationArgsinputsschemaRecordColumns;
-  record_format: AwsKinesisAnalyticsApplicationArgsinputsschemaRecordFormat;
+  record_columns: AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordColumns;
+  record_format: AwsKinesisAnalyticsApplicationArgsInputsSchemaRecordFormat;
 }
-export interface AwsKinesisAnalyticsApplicationArgsinputsStartingPositionConfiguration {}
-export interface AwsKinesisAnalyticsApplicationArgsinputs {
+export interface AwsKinesisAnalyticsApplicationArgsInputsStartingPositionConfiguration {}
+export interface AwsKinesisAnalyticsApplicationArgsInputs {
   name_prefix: string;
-  kinesis_firehose: AwsKinesisAnalyticsApplicationArgsinputsKinesisFirehose;
-  kinesis_stream: AwsKinesisAnalyticsApplicationArgsinputsKinesisStream;
-  parallelism: AwsKinesisAnalyticsApplicationArgsinputsparallelism;
-  processing_configuration: AwsKinesisAnalyticsApplicationArgsinputsProcessingConfiguration;
-  schema: AwsKinesisAnalyticsApplicationArgsinputsschema;
-  starting_position_configuration: AwsKinesisAnalyticsApplicationArgsinputsStartingPositionConfiguration;
+  kinesis_firehose: AwsKinesisAnalyticsApplicationArgsInputsKinesisFirehose;
+  kinesis_stream: AwsKinesisAnalyticsApplicationArgsInputsKinesisStream;
+  parallelism: AwsKinesisAnalyticsApplicationArgsInputsParallelism;
+  processing_configuration: AwsKinesisAnalyticsApplicationArgsInputsProcessingConfiguration;
+  schema: AwsKinesisAnalyticsApplicationArgsInputsSchema;
+  starting_position_configuration: AwsKinesisAnalyticsApplicationArgsInputsStartingPositionConfiguration;
 }
-export interface AwsKinesisAnalyticsApplicationArgsoutputsKinesisFirehose {
+export interface AwsKinesisAnalyticsApplicationArgsOutputsKinesisFirehose {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsoutputsKinesisStream {
+export interface AwsKinesisAnalyticsApplicationArgsOutputsKinesisStream {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsoutputslambda {
+export interface AwsKinesisAnalyticsApplicationArgsOutputsLambda {
   resource_arn: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsoutputsschema {
+export interface AwsKinesisAnalyticsApplicationArgsOutputsSchema {
   record_format_type: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsoutputs {
+export interface AwsKinesisAnalyticsApplicationArgsOutputs {
   name: string;
-  kinesis_firehose: AwsKinesisAnalyticsApplicationArgsoutputsKinesisFirehose;
-  kinesis_stream: AwsKinesisAnalyticsApplicationArgsoutputsKinesisStream;
-  lambda: AwsKinesisAnalyticsApplicationArgsoutputslambda;
-  schema: AwsKinesisAnalyticsApplicationArgsoutputsschema;
+  kinesis_firehose: AwsKinesisAnalyticsApplicationArgsOutputsKinesisFirehose;
+  kinesis_stream: AwsKinesisAnalyticsApplicationArgsOutputsKinesisStream;
+  lambda: AwsKinesisAnalyticsApplicationArgsOutputsLambda;
+  schema: AwsKinesisAnalyticsApplicationArgsOutputsSchema;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcess3 {
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesS3 {
   bucket_arn: string;
   file_key: string;
   role_arn: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordColumns {
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordColumns {
   mapping?: string;
   name: string;
   sql_type: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParameterscsv {
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParametersCsv {
   record_column_delimiter: string;
   record_row_delimiter: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParametersjson {
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParametersJson {
   record_row_path: string;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParameters {
-  csv: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParameterscsv;
-  json: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParametersjson;
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParameters {
+  csv: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParametersCsv;
+  json: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParametersJson;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormat {
-  mapping_parameters: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormatMappingParameters;
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormat {
+  mapping_parameters: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormatMappingParameters;
 }
-export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschema {
+export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchema {
   record_encoding?: string;
-  record_columns: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordColumns;
-  record_format: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschemaRecordFormat;
+  record_columns: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordColumns;
+  record_format: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchemaRecordFormat;
 }
 export interface AwsKinesisAnalyticsApplicationArgsReferenceDataSources {
   table_name: string;
-  s3: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcess3;
-  schema: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesschema;
+  s3: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesS3;
+  schema: AwsKinesisAnalyticsApplicationArgsReferenceDataSourcesSchema;
 }
 export interface AwsKinesisAnalyticsApplicationArgs {
   code?: string;
@@ -118,8 +118,8 @@ export interface AwsKinesisAnalyticsApplicationArgs {
     [key: string]: string;
   };
   cloudwatch_logging_options: AwsKinesisAnalyticsApplicationArgsCloudwatchLoggingOptions;
-  inputs: AwsKinesisAnalyticsApplicationArgsinputs;
-  outputs: AwsKinesisAnalyticsApplicationArgsoutputs;
+  inputs: AwsKinesisAnalyticsApplicationArgsInputs;
+  outputs: AwsKinesisAnalyticsApplicationArgsOutputs;
   reference_data_sources: AwsKinesisAnalyticsApplicationArgsReferenceDataSources;
 }
 export class aws_kinesis_analytics_application extends TerraformResource {

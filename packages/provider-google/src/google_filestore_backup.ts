@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleFilestoreBackupArgstimeouts {
+export interface GoogleFilestoreBackupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleFilestoreBackupArgs {
   name: string;
   source_file_share: string;
   source_instance: string;
-  timeouts: GoogleFilestoreBackupArgstimeouts;
+  timeouts: GoogleFilestoreBackupArgsTimeouts;
 }
 export class google_filestore_backup extends TerraformResource {
   readonly capacity_gb!: string;

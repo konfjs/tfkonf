@@ -23,7 +23,7 @@ export interface AwsBudgetsBudgetArgsCostTypes {
   use_amortized?: boolean;
   use_blended?: boolean;
 }
-export interface AwsBudgetsBudgetArgsnotification {
+export interface AwsBudgetsBudgetArgsNotification {
   comparison_operator: string;
   notification_type: string;
   subscriber_email_addresses?: string[];
@@ -46,7 +46,7 @@ export interface AwsBudgetsBudgetArgs {
   auto_adjust_data: AwsBudgetsBudgetArgsAutoAdjustData;
   cost_filter: AwsBudgetsBudgetArgsCostFilter;
   cost_types: AwsBudgetsBudgetArgsCostTypes;
-  notification: AwsBudgetsBudgetArgsnotification;
+  notification: AwsBudgetsBudgetArgsNotification;
   planned_limit: AwsBudgetsBudgetArgsPlannedLimit;
 }
 export class aws_budgets_budget extends TerraformResource {

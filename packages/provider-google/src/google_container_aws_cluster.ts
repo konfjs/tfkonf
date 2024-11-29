@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleContainerAwsClusterArgsauthorizationAdminGroups {
+export interface GoogleContainerAwsClusterArgsAuthorizationAdminGroups {
   group: string;
 }
-export interface GoogleContainerAwsClusterArgsauthorizationAdminUsers {
+export interface GoogleContainerAwsClusterArgsAuthorizationAdminUsers {
   username: string;
 }
-export interface GoogleContainerAwsClusterArgsauthorization {
-  admin_groups: GoogleContainerAwsClusterArgsauthorizationAdminGroups;
-  admin_users: GoogleContainerAwsClusterArgsauthorizationAdminUsers;
+export interface GoogleContainerAwsClusterArgsAuthorization {
+  admin_groups: GoogleContainerAwsClusterArgsAuthorizationAdminGroups;
+  admin_users: GoogleContainerAwsClusterArgsAuthorizationAdminUsers;
 }
 export interface GoogleContainerAwsClusterArgsBinaryAuthorization {}
 export interface GoogleContainerAwsClusterArgsControlPlaneAwsServicesAuthentication {
@@ -48,14 +48,14 @@ export interface GoogleContainerAwsClusterArgsControlPlane {
   root_volume: GoogleContainerAwsClusterArgsControlPlaneRootVolume;
   ssh_config: GoogleContainerAwsClusterArgsControlPlaneSshConfig;
 }
-export interface GoogleContainerAwsClusterArgsfleet {}
-export interface GoogleContainerAwsClusterArgsnetworking {
+export interface GoogleContainerAwsClusterArgsFleet {}
+export interface GoogleContainerAwsClusterArgsNetworking {
   per_node_pool_sg_rules_disabled?: boolean;
   pod_address_cidr_blocks: string[];
   service_address_cidr_blocks: string[];
   vpc_id: string;
 }
-export interface GoogleContainerAwsClusterArgstimeouts {
+export interface GoogleContainerAwsClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -68,12 +68,12 @@ export interface GoogleContainerAwsClusterArgs {
   description?: string;
   location: string;
   name: string;
-  authorization: GoogleContainerAwsClusterArgsauthorization;
+  authorization: GoogleContainerAwsClusterArgsAuthorization;
   binary_authorization: GoogleContainerAwsClusterArgsBinaryAuthorization;
   control_plane: GoogleContainerAwsClusterArgsControlPlane;
-  fleet: GoogleContainerAwsClusterArgsfleet;
-  networking: GoogleContainerAwsClusterArgsnetworking;
-  timeouts: GoogleContainerAwsClusterArgstimeouts;
+  fleet: GoogleContainerAwsClusterArgsFleet;
+  networking: GoogleContainerAwsClusterArgsNetworking;
+  timeouts: GoogleContainerAwsClusterArgsTimeouts;
 }
 export class google_container_aws_cluster extends TerraformResource {
   readonly create_time!: string;

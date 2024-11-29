@@ -25,7 +25,7 @@ export interface GoogleAlloydbInstanceArgsQueryInsightsConfig {
 export interface GoogleAlloydbInstanceArgsReadPoolConfig {
   node_count?: number;
 }
-export interface GoogleAlloydbInstanceArgstimeouts {
+export interface GoogleAlloydbInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -48,7 +48,7 @@ export interface GoogleAlloydbInstanceArgs {
   psc_instance_config: GoogleAlloydbInstanceArgsPscInstanceConfig;
   query_insights_config: GoogleAlloydbInstanceArgsQueryInsightsConfig;
   read_pool_config: GoogleAlloydbInstanceArgsReadPoolConfig;
-  timeouts: GoogleAlloydbInstanceArgstimeouts;
+  timeouts: GoogleAlloydbInstanceArgsTimeouts;
 }
 export class google_alloydb_instance extends TerraformResource {
   readonly availability_type?: string;

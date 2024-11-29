@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCertificateManagerCertificateArgsmanaged {
+export interface GoogleCertificateManagerCertificateArgsManaged {
   dns_authorizations?: string[];
   domains?: string[];
   issuance_config?: string;
@@ -10,7 +10,7 @@ export interface GoogleCertificateManagerCertificateArgsSelfManaged {
   pem_private_key?: string;
   private_key_pem?: string;
 }
-export interface GoogleCertificateManagerCertificateArgstimeouts {
+export interface GoogleCertificateManagerCertificateArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,9 +23,9 @@ export interface GoogleCertificateManagerCertificateArgs {
   location?: string;
   name: string;
   scope?: string;
-  managed: GoogleCertificateManagerCertificateArgsmanaged;
+  managed: GoogleCertificateManagerCertificateArgsManaged;
   self_managed: GoogleCertificateManagerCertificateArgsSelfManaged;
-  timeouts: GoogleCertificateManagerCertificateArgstimeouts;
+  timeouts: GoogleCertificateManagerCertificateArgsTimeouts;
 }
 export class google_certificate_manager_certificate extends TerraformResource {
   readonly effective_labels!: {

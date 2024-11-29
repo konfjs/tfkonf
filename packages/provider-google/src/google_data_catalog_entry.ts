@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleDataCatalogEntryArgsGcsFilesetSpec {
   file_patterns: string[];
 }
-export interface GoogleDataCatalogEntryArgstimeouts {
+export interface GoogleDataCatalogEntryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleDataCatalogEntryArgs {
   user_specified_system?: string;
   user_specified_type?: string;
   gcs_fileset_spec: GoogleDataCatalogEntryArgsGcsFilesetSpec;
-  timeouts: GoogleDataCatalogEntryArgstimeouts;
+  timeouts: GoogleDataCatalogEntryArgsTimeouts;
 }
 export class google_data_catalog_entry extends TerraformResource {
   readonly bigquery_date_sharded_spec!: any[];

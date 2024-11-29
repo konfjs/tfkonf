@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEmrcontainersVirtualClusterArgsContainerProviderinfoEksInfo {
+export interface AwsEmrcontainersVirtualClusterArgsContainerProviderInfoEksInfo {
   namespace?: string;
 }
-export interface AwsEmrcontainersVirtualClusterArgsContainerProviderinfo {
-  eks_info: AwsEmrcontainersVirtualClusterArgsContainerProviderinfoEksInfo;
+export interface AwsEmrcontainersVirtualClusterArgsContainerProviderInfo {
+  eks_info: AwsEmrcontainersVirtualClusterArgsContainerProviderInfoEksInfo;
 }
 export interface AwsEmrcontainersVirtualClusterArgsContainerProvider {
   id: string;
   type: string;
-  info: AwsEmrcontainersVirtualClusterArgsContainerProviderinfo;
+  info: AwsEmrcontainersVirtualClusterArgsContainerProviderInfo;
 }
-export interface AwsEmrcontainersVirtualClusterArgstimeouts {
+export interface AwsEmrcontainersVirtualClusterArgsTimeouts {
   delete?: string;
 }
 export interface AwsEmrcontainersVirtualClusterArgs {
@@ -19,7 +19,7 @@ export interface AwsEmrcontainersVirtualClusterArgs {
     [key: string]: string;
   };
   container_provider: AwsEmrcontainersVirtualClusterArgsContainerProvider;
-  timeouts: AwsEmrcontainersVirtualClusterArgstimeouts;
+  timeouts: AwsEmrcontainersVirtualClusterArgsTimeouts;
 }
 export class aws_emrcontainers_virtual_cluster extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDocdbClusterInstanceArgstimeouts {
+export interface AwsDocdbClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface AwsDocdbClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDocdbClusterInstanceArgstimeouts;
+  timeouts: AwsDocdbClusterInstanceArgsTimeouts;
 }
 export class aws_docdb_cluster_instance extends TerraformResource {
   readonly arn!: string;

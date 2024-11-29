@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRdsClusterInstanceArgstimeouts {
+export interface AwsRdsClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface AwsRdsClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRdsClusterInstanceArgstimeouts;
+  timeouts: AwsRdsClusterInstanceArgsTimeouts;
 }
 export class aws_rds_cluster_instance extends TerraformResource {
   readonly apply_immediately?: boolean;

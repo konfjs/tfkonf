@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataprocMetastoreFederationIamBindingArgscondition {
+export interface GoogleDataprocMetastoreFederationIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataprocMetastoreFederationIamBindingArgs {
   federation_id: string;
   members: string[];
   role: string;
-  condition: GoogleDataprocMetastoreFederationIamBindingArgscondition;
+  condition: GoogleDataprocMetastoreFederationIamBindingArgsCondition;
 }
 export class google_dataproc_metastore_federation_iam_binding extends TerraformResource {
   readonly etag!: string;

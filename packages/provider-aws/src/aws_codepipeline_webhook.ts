@@ -3,7 +3,7 @@ export interface AwsCodepipelineWebhookArgsAuthenticationConfiguration {
   allowed_ip_range?: string;
   secret_token?: string;
 }
-export interface AwsCodepipelineWebhookArgsfilter {
+export interface AwsCodepipelineWebhookArgsFilter {
   json_path: string;
   match_equals: string;
 }
@@ -16,7 +16,7 @@ export interface AwsCodepipelineWebhookArgs {
   target_action: string;
   target_pipeline: string;
   authentication_configuration: AwsCodepipelineWebhookArgsAuthenticationConfiguration;
-  filter: AwsCodepipelineWebhookArgsfilter;
+  filter: AwsCodepipelineWebhookArgsFilter;
 }
 export class aws_codepipeline_webhook extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GooglePubsubLiteReservationArgstimeouts {
+export interface GooglePubsubLiteReservationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GooglePubsubLiteReservationArgs {
   name: string;
   region?: string;
   throughput_capacity: number;
-  timeouts: GooglePubsubLiteReservationArgstimeouts;
+  timeouts: GooglePubsubLiteReservationArgsTimeouts;
 }
 export class google_pubsub_lite_reservation extends TerraformResource {
   readonly id?: string;

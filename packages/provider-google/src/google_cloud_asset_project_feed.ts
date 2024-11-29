@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCloudAssetProjectFeedArgscondition {
+export interface GoogleCloudAssetProjectFeedArgsCondition {
   description?: string;
   expression: string;
   location?: string;
@@ -11,7 +11,7 @@ export interface GoogleCloudAssetProjectFeedArgsFeedOutputConfigPubsubDestinatio
 export interface GoogleCloudAssetProjectFeedArgsFeedOutputConfig {
   pubsub_destination: GoogleCloudAssetProjectFeedArgsFeedOutputConfigPubsubDestination;
 }
-export interface GoogleCloudAssetProjectFeedArgstimeouts {
+export interface GoogleCloudAssetProjectFeedArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,9 +22,9 @@ export interface GoogleCloudAssetProjectFeedArgs {
   billing_project?: string;
   content_type?: string;
   feed_id: string;
-  condition: GoogleCloudAssetProjectFeedArgscondition;
+  condition: GoogleCloudAssetProjectFeedArgsCondition;
   feed_output_config: GoogleCloudAssetProjectFeedArgsFeedOutputConfig;
-  timeouts: GoogleCloudAssetProjectFeedArgstimeouts;
+  timeouts: GoogleCloudAssetProjectFeedArgsTimeouts;
 }
 export class google_cloud_asset_project_feed extends TerraformResource {
   readonly id?: string;

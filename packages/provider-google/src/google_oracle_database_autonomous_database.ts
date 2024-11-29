@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleOracleDatabaseAutonomousDatabaseArgspropertiesCustomerContacts {
+export interface GoogleOracleDatabaseAutonomousDatabaseArgsPropertiesCustomerContacts {
   email: string;
 }
-export interface GoogleOracleDatabaseAutonomousDatabaseArgsproperties {
+export interface GoogleOracleDatabaseAutonomousDatabaseArgsProperties {
   character_set?: string;
   db_edition?: string;
   db_version?: string;
@@ -11,9 +11,9 @@ export interface GoogleOracleDatabaseAutonomousDatabaseArgsproperties {
   license_type: string;
   mtls_connection_required?: boolean;
   n_character_set?: string;
-  customer_contacts: GoogleOracleDatabaseAutonomousDatabaseArgspropertiesCustomerContacts;
+  customer_contacts: GoogleOracleDatabaseAutonomousDatabaseArgsPropertiesCustomerContacts;
 }
-export interface GoogleOracleDatabaseAutonomousDatabaseArgstimeouts {
+export interface GoogleOracleDatabaseAutonomousDatabaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -28,8 +28,8 @@ export interface GoogleOracleDatabaseAutonomousDatabaseArgs {
   };
   location: string;
   network: string;
-  properties: GoogleOracleDatabaseAutonomousDatabaseArgsproperties;
-  timeouts: GoogleOracleDatabaseAutonomousDatabaseArgstimeouts;
+  properties: GoogleOracleDatabaseAutonomousDatabaseArgsProperties;
+  timeouts: GoogleOracleDatabaseAutonomousDatabaseArgsTimeouts;
 }
 export class google_oracle_database_autonomous_database extends TerraformResource {
   readonly create_time!: string;

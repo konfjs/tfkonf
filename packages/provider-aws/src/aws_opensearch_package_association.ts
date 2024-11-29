@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsOpensearchPackageAssociationArgstimeouts {
+export interface AwsOpensearchPackageAssociationArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsOpensearchPackageAssociationArgs {
   domain_name: string;
   package_id: string;
-  timeouts: AwsOpensearchPackageAssociationArgstimeouts;
+  timeouts: AwsOpensearchPackageAssociationArgsTimeouts;
 }
 export class aws_opensearch_package_association extends TerraformResource {
   readonly id?: string;

@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDatasyncTaskArgsexcludes {
+export interface AwsDatasyncTaskArgsExcludes {
   filter_type?: string;
   value?: string;
 }
-export interface AwsDatasyncTaskArgsincludes {
+export interface AwsDatasyncTaskArgsIncludes {
   filter_type?: string;
   value?: string;
 }
-export interface AwsDatasyncTaskArgsoptions {
+export interface AwsDatasyncTaskArgsOptions {
   atime?: string;
   bytes_per_second?: number;
   gid?: string;
@@ -23,7 +23,7 @@ export interface AwsDatasyncTaskArgsoptions {
   uid?: string;
   verify_mode?: string;
 }
-export interface AwsDatasyncTaskArgsschedule {
+export interface AwsDatasyncTaskArgsSchedule {
   schedule_expression: string;
 }
 export interface AwsDatasyncTaskArgsTaskReportConfigReportOverrides {
@@ -44,7 +44,7 @@ export interface AwsDatasyncTaskArgsTaskReportConfig {
   report_overrides: AwsDatasyncTaskArgsTaskReportConfigReportOverrides;
   s3_destination: AwsDatasyncTaskArgsTaskReportConfigS3Destination;
 }
-export interface AwsDatasyncTaskArgstimeouts {
+export interface AwsDatasyncTaskArgsTimeouts {
   create?: string;
 }
 export interface AwsDatasyncTaskArgs {
@@ -55,12 +55,12 @@ export interface AwsDatasyncTaskArgs {
   tags?: {
     [key: string]: string;
   };
-  excludes: AwsDatasyncTaskArgsexcludes;
-  includes: AwsDatasyncTaskArgsincludes;
-  options: AwsDatasyncTaskArgsoptions;
-  schedule: AwsDatasyncTaskArgsschedule;
+  excludes: AwsDatasyncTaskArgsExcludes;
+  includes: AwsDatasyncTaskArgsIncludes;
+  options: AwsDatasyncTaskArgsOptions;
+  schedule: AwsDatasyncTaskArgsSchedule;
   task_report_config: AwsDatasyncTaskArgsTaskReportConfig;
-  timeouts: AwsDatasyncTaskArgstimeouts;
+  timeouts: AwsDatasyncTaskArgsTimeouts;
 }
 export class aws_datasync_task extends TerraformResource {
   readonly arn!: string;

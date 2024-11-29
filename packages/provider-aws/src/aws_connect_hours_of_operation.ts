@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsConnectHoursOfOperationArgsconfigEndTime {
+export interface AwsConnectHoursOfOperationArgsConfigEndTime {
   hours: number;
   minutes: number;
 }
-export interface AwsConnectHoursOfOperationArgsconfigStartTime {
+export interface AwsConnectHoursOfOperationArgsConfigStartTime {
   hours: number;
   minutes: number;
 }
-export interface AwsConnectHoursOfOperationArgsconfig {
+export interface AwsConnectHoursOfOperationArgsConfig {
   day: string;
-  end_time: AwsConnectHoursOfOperationArgsconfigEndTime;
-  start_time: AwsConnectHoursOfOperationArgsconfigStartTime;
+  end_time: AwsConnectHoursOfOperationArgsConfigEndTime;
+  start_time: AwsConnectHoursOfOperationArgsConfigStartTime;
 }
 export interface AwsConnectHoursOfOperationArgs {
   description?: string;
@@ -20,7 +20,7 @@ export interface AwsConnectHoursOfOperationArgs {
     [key: string]: string;
   };
   time_zone: string;
-  config: AwsConnectHoursOfOperationArgsconfig;
+  config: AwsConnectHoursOfOperationArgsConfig;
 }
 export class aws_connect_hours_of_operation extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleCertificateManagerDnsAuthorizationArgstimeouts {
+export interface GoogleCertificateManagerDnsAuthorizationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleCertificateManagerDnsAuthorizationArgs {
   };
   location?: string;
   name: string;
-  timeouts: GoogleCertificateManagerDnsAuthorizationArgstimeouts;
+  timeouts: GoogleCertificateManagerDnsAuthorizationArgsTimeouts;
 }
 export class google_certificate_manager_dns_authorization extends TerraformResource {
   readonly dns_resource_record!: any[];

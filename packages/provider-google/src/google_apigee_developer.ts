@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleApigeeDeveloperArgsattributes {
+export interface GoogleApigeeDeveloperArgsAttributes {
   name?: string;
   value?: string;
 }
-export interface GoogleApigeeDeveloperArgstimeouts {
+export interface GoogleApigeeDeveloperArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleApigeeDeveloperArgs {
   last_name: string;
   org_id: string;
   user_name: string;
-  attributes: GoogleApigeeDeveloperArgsattributes;
-  timeouts: GoogleApigeeDeveloperArgstimeouts;
+  attributes: GoogleApigeeDeveloperArgsAttributes;
+  timeouts: GoogleApigeeDeveloperArgsTimeouts;
 }
 export class google_apigee_developer extends TerraformResource {
   readonly created_at!: string;

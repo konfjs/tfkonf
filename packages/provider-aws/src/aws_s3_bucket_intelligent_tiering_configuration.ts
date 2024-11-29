@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsS3BucketIntelligentTieringConfigurationArgsfilter {
+export interface AwsS3BucketIntelligentTieringConfigurationArgsFilter {
   prefix?: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface AwsS3BucketIntelligentTieringConfigurationArgstiering {
+export interface AwsS3BucketIntelligentTieringConfigurationArgsTiering {
   access_tier: string;
   days: number;
 }
@@ -13,8 +13,8 @@ export interface AwsS3BucketIntelligentTieringConfigurationArgs {
   bucket: string;
   name: string;
   status?: string;
-  filter: AwsS3BucketIntelligentTieringConfigurationArgsfilter;
-  tiering: AwsS3BucketIntelligentTieringConfigurationArgstiering;
+  filter: AwsS3BucketIntelligentTieringConfigurationArgsFilter;
+  tiering: AwsS3BucketIntelligentTieringConfigurationArgsTiering;
 }
 export class aws_s3_bucket_intelligent_tiering_configuration extends TerraformResource {
   readonly id?: string;

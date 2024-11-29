@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQuicksightAccountSubscriptionArgstimeouts {
+export interface AwsQuicksightAccountSubscriptionArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -20,7 +20,7 @@ export interface AwsQuicksightAccountSubscriptionArgs {
   notification_email: string;
   reader_group?: string[];
   realm?: string;
-  timeouts: AwsQuicksightAccountSubscriptionArgstimeouts;
+  timeouts: AwsQuicksightAccountSubscriptionArgsTimeouts;
 }
 export class aws_quicksight_account_subscription extends TerraformResource {
   readonly account_subscription_status!: string;

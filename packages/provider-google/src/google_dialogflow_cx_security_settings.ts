@@ -8,7 +8,7 @@ export interface GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings {
 export interface GoogleDialogflowCxSecuritySettingsArgsInsightsExportSettings {
   enable_insights_export: boolean;
 }
-export interface GoogleDialogflowCxSecuritySettingsArgstimeouts {
+export interface GoogleDialogflowCxSecuritySettingsArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,7 +25,7 @@ export interface GoogleDialogflowCxSecuritySettingsArgs {
   retention_window_days?: number;
   audio_export_settings: GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings;
   insights_export_settings: GoogleDialogflowCxSecuritySettingsArgsInsightsExportSettings;
-  timeouts: GoogleDialogflowCxSecuritySettingsArgstimeouts;
+  timeouts: GoogleDialogflowCxSecuritySettingsArgsTimeouts;
 }
 export class google_dialogflow_cx_security_settings extends TerraformResource {
   readonly id?: string;

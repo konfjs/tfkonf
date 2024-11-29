@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleComputeNodeTemplateArgsaccelerators {
+export interface GoogleComputeNodeTemplateArgsAccelerators {
   accelerator_count?: number;
   accelerator_type?: string;
 }
-export interface GoogleComputeNodeTemplateArgsdisks {
+export interface GoogleComputeNodeTemplateArgsDisks {
   disk_count?: number;
   disk_size_gb?: number;
   disk_type?: string;
@@ -15,7 +15,7 @@ export interface GoogleComputeNodeTemplateArgsNodeTypeFlexibility {
 export interface GoogleComputeNodeTemplateArgsServerBinding {
   type: string;
 }
-export interface GoogleComputeNodeTemplateArgstimeouts {
+export interface GoogleComputeNodeTemplateArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -27,11 +27,11 @@ export interface GoogleComputeNodeTemplateArgs {
     [key: string]: string;
   };
   node_type?: string;
-  accelerators: GoogleComputeNodeTemplateArgsaccelerators;
-  disks: GoogleComputeNodeTemplateArgsdisks;
+  accelerators: GoogleComputeNodeTemplateArgsAccelerators;
+  disks: GoogleComputeNodeTemplateArgsDisks;
   node_type_flexibility: GoogleComputeNodeTemplateArgsNodeTypeFlexibility;
   server_binding: GoogleComputeNodeTemplateArgsServerBinding;
-  timeouts: GoogleComputeNodeTemplateArgstimeouts;
+  timeouts: GoogleComputeNodeTemplateArgsTimeouts;
 }
 export class google_compute_node_template extends TerraformResource {
   readonly creation_timestamp!: string;

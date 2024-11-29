@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsChimesdkvoiceSipMediaApplicationArgsendpoints {
+export interface AwsChimesdkvoiceSipMediaApplicationArgsEndpoints {
   lambda_arn: string;
 }
 export interface AwsChimesdkvoiceSipMediaApplicationArgs {
@@ -8,7 +8,7 @@ export interface AwsChimesdkvoiceSipMediaApplicationArgs {
   tags?: {
     [key: string]: string;
   };
-  endpoints: AwsChimesdkvoiceSipMediaApplicationArgsendpoints;
+  endpoints: AwsChimesdkvoiceSipMediaApplicationArgsEndpoints;
 }
 export class aws_chimesdkvoice_sip_media_application extends TerraformResource {
   readonly arn!: string;

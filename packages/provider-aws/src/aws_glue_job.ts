@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGlueJobArgscommand {
+export interface AwsGlueJobArgsCommand {
   name?: string;
   script_location: string;
 }
@@ -28,7 +28,7 @@ export interface AwsGlueJobArgs {
   tags?: {
     [key: string]: string;
   };
-  command: AwsGlueJobArgscommand;
+  command: AwsGlueJobArgsCommand;
   execution_property: AwsGlueJobArgsExecutionProperty;
   notification_property: AwsGlueJobArgsNotificationProperty;
 }

@@ -66,7 +66,7 @@ export interface GooglePrivatecaCertificateTemplateArgsPredefinedValues {
   key_usage: GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsage;
   policy_ids: GooglePrivatecaCertificateTemplateArgsPredefinedValuesPolicyIds;
 }
-export interface GooglePrivatecaCertificateTemplateArgstimeouts {
+export interface GooglePrivatecaCertificateTemplateArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -82,7 +82,7 @@ export interface GooglePrivatecaCertificateTemplateArgs {
   identity_constraints: GooglePrivatecaCertificateTemplateArgsIdentityConstraints;
   passthrough_extensions: GooglePrivatecaCertificateTemplateArgsPassthroughExtensions;
   predefined_values: GooglePrivatecaCertificateTemplateArgsPredefinedValues;
-  timeouts: GooglePrivatecaCertificateTemplateArgstimeouts;
+  timeouts: GooglePrivatecaCertificateTemplateArgsTimeouts;
 }
 export class google_privateca_certificate_template extends TerraformResource {
   readonly create_time!: string;

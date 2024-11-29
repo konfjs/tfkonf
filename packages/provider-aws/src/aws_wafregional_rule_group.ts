@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsWafregionalRuleGroupArgsActivatedRuleaction {
+export interface AwsWafregionalRuleGroupArgsActivatedRuleAction {
   type: string;
 }
 export interface AwsWafregionalRuleGroupArgsActivatedRule {
   priority: number;
   rule_id: string;
   type?: string;
-  action: AwsWafregionalRuleGroupArgsActivatedRuleaction;
+  action: AwsWafregionalRuleGroupArgsActivatedRuleAction;
 }
 export interface AwsWafregionalRuleGroupArgs {
   metric_name: string;

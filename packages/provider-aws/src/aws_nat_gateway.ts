@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNatGatewayArgstimeouts {
+export interface AwsNatGatewayArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsNatGatewayArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNatGatewayArgstimeouts;
+  timeouts: AwsNatGatewayArgsTimeouts;
 }
 export class aws_nat_gateway extends TerraformResource {
   readonly association_id!: string;

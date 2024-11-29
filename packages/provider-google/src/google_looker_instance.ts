@@ -15,7 +15,7 @@ export interface GoogleLookerInstanceArgsDenyMaintenancePeriodStartDate {
   month?: number;
   year?: number;
 }
-export interface GoogleLookerInstanceArgsDenyMaintenancePeriodtime {
+export interface GoogleLookerInstanceArgsDenyMaintenancePeriodTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
@@ -24,7 +24,7 @@ export interface GoogleLookerInstanceArgsDenyMaintenancePeriodtime {
 export interface GoogleLookerInstanceArgsDenyMaintenancePeriod {
   end_date: GoogleLookerInstanceArgsDenyMaintenancePeriodEndDate;
   start_date: GoogleLookerInstanceArgsDenyMaintenancePeriodStartDate;
-  time: GoogleLookerInstanceArgsDenyMaintenancePeriodtime;
+  time: GoogleLookerInstanceArgsDenyMaintenancePeriodTime;
 }
 export interface GoogleLookerInstanceArgsEncryptionConfig {
   kms_key_name?: string;
@@ -51,7 +51,7 @@ export interface GoogleLookerInstanceArgsPscConfig {
   allowed_vpcs?: string[];
   service_attachments: GoogleLookerInstanceArgsPscConfigServiceAttachments;
 }
-export interface GoogleLookerInstanceArgstimeouts {
+export interface GoogleLookerInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -78,7 +78,7 @@ export interface GoogleLookerInstanceArgs {
   maintenance_window: GoogleLookerInstanceArgsMaintenanceWindow;
   oauth_config: GoogleLookerInstanceArgsOauthConfig;
   psc_config: GoogleLookerInstanceArgsPscConfig;
-  timeouts: GoogleLookerInstanceArgstimeouts;
+  timeouts: GoogleLookerInstanceArgsTimeouts;
   user_metadata: GoogleLookerInstanceArgsUserMetadata;
 }
 export class google_looker_instance extends TerraformResource {

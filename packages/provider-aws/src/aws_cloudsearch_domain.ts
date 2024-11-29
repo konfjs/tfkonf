@@ -13,7 +13,7 @@ export interface AwsCloudsearchDomainArgsIndexField {
   type: string;
 }
 export interface AwsCloudsearchDomainArgsScalingParameters {}
-export interface AwsCloudsearchDomainArgstimeouts {
+export interface AwsCloudsearchDomainArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,7 +23,7 @@ export interface AwsCloudsearchDomainArgs {
   endpoint_options: AwsCloudsearchDomainArgsEndpointOptions;
   index_field: AwsCloudsearchDomainArgsIndexField;
   scaling_parameters: AwsCloudsearchDomainArgsScalingParameters;
-  timeouts: AwsCloudsearchDomainArgstimeouts;
+  timeouts: AwsCloudsearchDomainArgsTimeouts;
 }
 export class aws_cloudsearch_domain extends TerraformResource {
   readonly arn!: string;

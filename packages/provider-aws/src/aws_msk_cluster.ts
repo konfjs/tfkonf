@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoPublicAccess {}
-export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationsasl {}
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl {}
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication {
-  sasl: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationsasl;
+  sasl: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationSasl;
 }
 export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivity {
   client_authentication: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication;
@@ -30,17 +30,17 @@ export interface AwsMskClusterArgsBrokerNodeGroupInfo {
   connectivity_info: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfo;
   storage_info: AwsMskClusterArgsBrokerNodeGroupInfoStorageInfo;
 }
-export interface AwsMskClusterArgsClientAuthenticationsasl {
+export interface AwsMskClusterArgsClientAuthenticationSasl {
   iam?: boolean;
   scram?: boolean;
 }
-export interface AwsMskClusterArgsClientAuthenticationtls {
+export interface AwsMskClusterArgsClientAuthenticationTls {
   certificate_authority_arns?: string[];
 }
 export interface AwsMskClusterArgsClientAuthentication {
   unauthenticated?: boolean;
-  sasl: AwsMskClusterArgsClientAuthenticationsasl;
-  tls: AwsMskClusterArgsClientAuthenticationtls;
+  sasl: AwsMskClusterArgsClientAuthenticationSasl;
+  tls: AwsMskClusterArgsClientAuthenticationTls;
 }
 export interface AwsMskClusterArgsConfigurationInfo {
   arn: string;
@@ -57,37 +57,37 @@ export interface AwsMskClusterArgsLoggingInfoBrokerLogsCloudwatchLogs {
   enabled: boolean;
   log_group?: string;
 }
-export interface AwsMskClusterArgsLoggingInfoBrokerLogsfirehose {
+export interface AwsMskClusterArgsLoggingInfoBrokerLogsFirehose {
   delivery_stream?: string;
   enabled: boolean;
 }
-export interface AwsMskClusterArgsLoggingInfoBrokerLogss3 {
+export interface AwsMskClusterArgsLoggingInfoBrokerLogsS3 {
   bucket?: string;
   enabled: boolean;
   prefix?: string;
 }
 export interface AwsMskClusterArgsLoggingInfoBrokerLogs {
   cloudwatch_logs: AwsMskClusterArgsLoggingInfoBrokerLogsCloudwatchLogs;
-  firehose: AwsMskClusterArgsLoggingInfoBrokerLogsfirehose;
-  s3: AwsMskClusterArgsLoggingInfoBrokerLogss3;
+  firehose: AwsMskClusterArgsLoggingInfoBrokerLogsFirehose;
+  s3: AwsMskClusterArgsLoggingInfoBrokerLogsS3;
 }
 export interface AwsMskClusterArgsLoggingInfo {
   broker_logs: AwsMskClusterArgsLoggingInfoBrokerLogs;
 }
-export interface AwsMskClusterArgsOpenMonitoringprometheusJmxExporter {
+export interface AwsMskClusterArgsOpenMonitoringPrometheusJmxExporter {
   enabled_in_broker: boolean;
 }
-export interface AwsMskClusterArgsOpenMonitoringprometheusNodeExporter {
+export interface AwsMskClusterArgsOpenMonitoringPrometheusNodeExporter {
   enabled_in_broker: boolean;
 }
-export interface AwsMskClusterArgsOpenMonitoringprometheus {
-  jmx_exporter: AwsMskClusterArgsOpenMonitoringprometheusJmxExporter;
-  node_exporter: AwsMskClusterArgsOpenMonitoringprometheusNodeExporter;
+export interface AwsMskClusterArgsOpenMonitoringPrometheus {
+  jmx_exporter: AwsMskClusterArgsOpenMonitoringPrometheusJmxExporter;
+  node_exporter: AwsMskClusterArgsOpenMonitoringPrometheusNodeExporter;
 }
 export interface AwsMskClusterArgsOpenMonitoring {
-  prometheus: AwsMskClusterArgsOpenMonitoringprometheus;
+  prometheus: AwsMskClusterArgsOpenMonitoringPrometheus;
 }
-export interface AwsMskClusterArgstimeouts {
+export interface AwsMskClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -106,7 +106,7 @@ export interface AwsMskClusterArgs {
   encryption_info: AwsMskClusterArgsEncryptionInfo;
   logging_info: AwsMskClusterArgsLoggingInfo;
   open_monitoring: AwsMskClusterArgsOpenMonitoring;
-  timeouts: AwsMskClusterArgstimeouts;
+  timeouts: AwsMskClusterArgsTimeouts;
 }
 export class aws_msk_cluster extends TerraformResource {
   readonly arn!: string;

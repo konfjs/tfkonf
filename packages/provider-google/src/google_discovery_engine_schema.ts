@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDiscoveryEngineSchemaArgstimeouts {
+export interface GoogleDiscoveryEngineSchemaArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleDiscoveryEngineSchemaArgs {
   json_schema?: string;
   location: string;
   schema_id: string;
-  timeouts: GoogleDiscoveryEngineSchemaArgstimeouts;
+  timeouts: GoogleDiscoveryEngineSchemaArgsTimeouts;
 }
 export class google_discovery_engine_schema extends TerraformResource {
   readonly id?: string;

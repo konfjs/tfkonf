@@ -3,15 +3,15 @@ export interface AwsAuditmanagerAssessmentArgsAssessmentReportsDestination {
   destination: string;
   destination_type: string;
 }
-export interface AwsAuditmanagerAssessmentArgsscopeAwsAccounts {
+export interface AwsAuditmanagerAssessmentArgsScopeAwsAccounts {
   id: string;
 }
-export interface AwsAuditmanagerAssessmentArgsscopeAwsServices {
+export interface AwsAuditmanagerAssessmentArgsScopeAwsServices {
   service_name: string;
 }
-export interface AwsAuditmanagerAssessmentArgsscope {
-  aws_accounts: AwsAuditmanagerAssessmentArgsscopeAwsAccounts;
-  aws_services: AwsAuditmanagerAssessmentArgsscopeAwsServices;
+export interface AwsAuditmanagerAssessmentArgsScope {
+  aws_accounts: AwsAuditmanagerAssessmentArgsScopeAwsAccounts;
+  aws_services: AwsAuditmanagerAssessmentArgsScopeAwsServices;
 }
 export interface AwsAuditmanagerAssessmentArgs {
   description?: string;
@@ -22,7 +22,7 @@ export interface AwsAuditmanagerAssessmentArgs {
     [key: string]: string;
   };
   assessment_reports_destination: AwsAuditmanagerAssessmentArgsAssessmentReportsDestination;
-  scope: AwsAuditmanagerAssessmentArgsscope;
+  scope: AwsAuditmanagerAssessmentArgsScope;
 }
 export class aws_auditmanager_assessment extends TerraformResource {
   readonly arn!: string;

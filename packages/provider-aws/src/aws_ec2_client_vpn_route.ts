@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEc2ClientVpnRouteArgstimeouts {
+export interface AwsEc2ClientVpnRouteArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface AwsEc2ClientVpnRouteArgs {
   description?: string;
   destination_cidr_block: string;
   target_vpc_subnet_id: string;
-  timeouts: AwsEc2ClientVpnRouteArgstimeouts;
+  timeouts: AwsEc2ClientVpnRouteArgsTimeouts;
 }
 export class aws_ec2_client_vpn_route extends TerraformResource {
   readonly id?: string;

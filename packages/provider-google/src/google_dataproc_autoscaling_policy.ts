@@ -15,7 +15,7 @@ export interface GoogleDataprocAutoscalingPolicyArgsSecondaryWorkerConfig {
   min_instances?: number;
   weight?: number;
 }
-export interface GoogleDataprocAutoscalingPolicyArgstimeouts {
+export interface GoogleDataprocAutoscalingPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,7 +30,7 @@ export interface GoogleDataprocAutoscalingPolicyArgs {
   policy_id: string;
   basic_algorithm: GoogleDataprocAutoscalingPolicyArgsBasicAlgorithm;
   secondary_worker_config: GoogleDataprocAutoscalingPolicyArgsSecondaryWorkerConfig;
-  timeouts: GoogleDataprocAutoscalingPolicyArgstimeouts;
+  timeouts: GoogleDataprocAutoscalingPolicyArgsTimeouts;
   worker_config: GoogleDataprocAutoscalingPolicyArgsWorkerConfig;
 }
 export class google_dataproc_autoscaling_policy extends TerraformResource {

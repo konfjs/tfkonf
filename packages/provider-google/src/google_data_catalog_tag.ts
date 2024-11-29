@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataCatalogTagArgsfields {
+export interface GoogleDataCatalogTagArgsFields {
   bool_value?: boolean;
   double_value?: number;
   enum_value?: string;
@@ -7,7 +7,7 @@ export interface GoogleDataCatalogTagArgsfields {
   string_value?: string;
   timestamp_value?: string;
 }
-export interface GoogleDataCatalogTagArgstimeouts {
+export interface GoogleDataCatalogTagArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleDataCatalogTagArgs {
   column?: string;
   parent?: string;
   template: string;
-  fields: GoogleDataCatalogTagArgsfields;
-  timeouts: GoogleDataCatalogTagArgstimeouts;
+  fields: GoogleDataCatalogTagArgsFields;
+  timeouts: GoogleDataCatalogTagArgsTimeouts;
 }
 export class google_data_catalog_tag extends TerraformResource {
   readonly id?: string;

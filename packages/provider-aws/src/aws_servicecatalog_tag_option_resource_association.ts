@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsServicecatalogTagOptionResourceAssociationArgstimeouts {
+export interface AwsServicecatalogTagOptionResourceAssociationArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -7,7 +7,7 @@ export interface AwsServicecatalogTagOptionResourceAssociationArgstimeouts {
 export interface AwsServicecatalogTagOptionResourceAssociationArgs {
   resource_id: string;
   tag_option_id: string;
-  timeouts: AwsServicecatalogTagOptionResourceAssociationArgstimeouts;
+  timeouts: AwsServicecatalogTagOptionResourceAssociationArgsTimeouts;
 }
 export class aws_servicecatalog_tag_option_resource_association extends TerraformResource {
   readonly id?: string;

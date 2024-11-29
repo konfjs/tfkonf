@@ -32,7 +32,7 @@ export interface GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfig 
   };
   query_list: GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfigQueryList;
 }
-export interface GoogleDataprocGdcSparkApplicationArgstimeouts {
+export interface GoogleDataprocGdcSparkApplicationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -59,7 +59,7 @@ export interface GoogleDataprocGdcSparkApplicationArgs {
   spark_application_config: GoogleDataprocGdcSparkApplicationArgsSparkApplicationConfig;
   spark_r_application_config: GoogleDataprocGdcSparkApplicationArgsSparkRApplicationConfig;
   spark_sql_application_config: GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfig;
-  timeouts: GoogleDataprocGdcSparkApplicationArgstimeouts;
+  timeouts: GoogleDataprocGdcSparkApplicationArgsTimeouts;
 }
 export class google_dataproc_gdc_spark_application extends TerraformResource {
   readonly create_time!: string;

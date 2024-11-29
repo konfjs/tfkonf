@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsApprunnerDeploymentArgstimeouts {
+export interface AwsApprunnerDeploymentArgsTimeouts {
   create?: string;
 }
 export interface AwsApprunnerDeploymentArgs {
   service_arn: string;
-  timeouts: AwsApprunnerDeploymentArgstimeouts;
+  timeouts: AwsApprunnerDeploymentArgsTimeouts;
 }
 export class aws_apprunner_deployment extends TerraformResource {
   readonly id!: string;

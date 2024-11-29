@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDirectoryServiceRegionArgstimeouts {
+export interface AwsDirectoryServiceRegionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsDirectoryServiceRegionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDirectoryServiceRegionArgstimeouts;
+  timeouts: AwsDirectoryServiceRegionArgsTimeouts;
   vpc_settings: AwsDirectoryServiceRegionArgsVpcSettings;
 }
 export class aws_directory_service_region extends TerraformResource {

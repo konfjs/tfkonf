@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsBedrockGuardrailVersionArgstimeouts {
+export interface AwsBedrockGuardrailVersionArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsBedrockGuardrailVersionArgs {
   description?: string;
   guardrail_arn: string;
   skip_destroy?: boolean;
-  timeouts: AwsBedrockGuardrailVersionArgstimeouts;
+  timeouts: AwsBedrockGuardrailVersionArgsTimeouts;
 }
 export class aws_bedrock_guardrail_version extends TerraformResource {
   readonly version!: string;

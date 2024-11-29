@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsAppsyncFunctionArgsruntime {
+export interface AwsAppsyncFunctionArgsRuntime {
   name: string;
   runtime_version: string;
 }
@@ -20,7 +20,7 @@ export interface AwsAppsyncFunctionArgs {
   name: string;
   request_mapping_template?: string;
   response_mapping_template?: string;
-  runtime: AwsAppsyncFunctionArgsruntime;
+  runtime: AwsAppsyncFunctionArgsRuntime;
   sync_config: AwsAppsyncFunctionArgsSyncConfig;
 }
 export class aws_appsync_function extends TerraformResource {

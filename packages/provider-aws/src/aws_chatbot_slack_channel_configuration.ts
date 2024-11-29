@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsChatbotSlackChannelConfigurationArgstimeouts {
+export interface AwsChatbotSlackChannelConfigurationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsChatbotSlackChannelConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsChatbotSlackChannelConfigurationArgstimeouts;
+  timeouts: AwsChatbotSlackChannelConfigurationArgsTimeouts;
 }
 export class aws_chatbot_slack_channel_configuration extends TerraformResource {
   readonly chat_configuration_arn!: string;

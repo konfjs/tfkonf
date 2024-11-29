@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleEdgecontainerVpnConnectionArgstimeouts {
+export interface GoogleEdgecontainerVpnConnectionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,7 +17,7 @@ export interface GoogleEdgecontainerVpnConnectionArgs {
   nat_gateway_ip?: string;
   router?: string;
   vpc?: string;
-  timeouts: GoogleEdgecontainerVpnConnectionArgstimeouts;
+  timeouts: GoogleEdgecontainerVpnConnectionArgsTimeouts;
   vpc_project: GoogleEdgecontainerVpnConnectionArgsVpcProject;
 }
 export class google_edgecontainer_vpn_connection extends TerraformResource {

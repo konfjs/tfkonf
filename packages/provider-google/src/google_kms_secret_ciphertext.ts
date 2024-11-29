@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleKmsSecretCiphertextArgstimeouts {
+export interface GoogleKmsSecretCiphertextArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleKmsSecretCiphertextArgs {
   additional_authenticated_data?: string;
   crypto_key: string;
   plaintext: string;
-  timeouts: GoogleKmsSecretCiphertextArgstimeouts;
+  timeouts: GoogleKmsSecretCiphertextArgsTimeouts;
 }
 export class google_kms_secret_ciphertext extends TerraformResource {
   readonly ciphertext!: string;

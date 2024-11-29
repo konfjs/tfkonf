@@ -6,7 +6,7 @@ export interface AwsKeyspacesTableArgsCapacitySpecification {
 export interface AwsKeyspacesTableArgsClientSideTimestamps {
   status: string;
 }
-export interface AwsKeyspacesTableArgscomment {}
+export interface AwsKeyspacesTableArgsComment {}
 export interface AwsKeyspacesTableArgsEncryptionSpecification {
   kms_key_identifier?: string;
 }
@@ -15,7 +15,7 @@ export interface AwsKeyspacesTableArgsSchemaDefinitionClusteringKey {
   name: string;
   order_by: string;
 }
-export interface AwsKeyspacesTableArgsSchemaDefinitioncolumn {
+export interface AwsKeyspacesTableArgsSchemaDefinitionColumn {
   name: string;
   type: string;
 }
@@ -27,16 +27,16 @@ export interface AwsKeyspacesTableArgsSchemaDefinitionStaticColumn {
 }
 export interface AwsKeyspacesTableArgsSchemaDefinition {
   clustering_key: AwsKeyspacesTableArgsSchemaDefinitionClusteringKey;
-  column: AwsKeyspacesTableArgsSchemaDefinitioncolumn;
+  column: AwsKeyspacesTableArgsSchemaDefinitionColumn;
   partition_key: AwsKeyspacesTableArgsSchemaDefinitionPartitionKey;
   static_column: AwsKeyspacesTableArgsSchemaDefinitionStaticColumn;
 }
-export interface AwsKeyspacesTableArgstimeouts {
+export interface AwsKeyspacesTableArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AwsKeyspacesTableArgsttl {
+export interface AwsKeyspacesTableArgsTtl {
   status: string;
 }
 export interface AwsKeyspacesTableArgs {
@@ -48,12 +48,12 @@ export interface AwsKeyspacesTableArgs {
   };
   capacity_specification: AwsKeyspacesTableArgsCapacitySpecification;
   client_side_timestamps: AwsKeyspacesTableArgsClientSideTimestamps;
-  comment: AwsKeyspacesTableArgscomment;
+  comment: AwsKeyspacesTableArgsComment;
   encryption_specification: AwsKeyspacesTableArgsEncryptionSpecification;
   point_in_time_recovery: AwsKeyspacesTableArgsPointInTimeRecovery;
   schema_definition: AwsKeyspacesTableArgsSchemaDefinition;
-  timeouts: AwsKeyspacesTableArgstimeouts;
-  ttl: AwsKeyspacesTableArgsttl;
+  timeouts: AwsKeyspacesTableArgsTimeouts;
+  ttl: AwsKeyspacesTableArgsTtl;
 }
 export class aws_keyspaces_table extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDocdbelasticClusterArgstimeouts {
+export interface AwsDocdbelasticClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface AwsDocdbelasticClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDocdbelasticClusterArgstimeouts;
+  timeouts: AwsDocdbelasticClusterArgsTimeouts;
 }
 export class aws_docdbelastic_cluster extends TerraformResource {
   readonly arn!: string;

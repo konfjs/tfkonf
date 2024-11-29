@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsRdsGlobalClusterArgstimeouts {
+export interface AwsRdsGlobalClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsRdsGlobalClusterArgs {
   deletion_protection?: boolean;
   force_destroy?: boolean;
   global_cluster_identifier: string;
-  timeouts: AwsRdsGlobalClusterArgstimeouts;
+  timeouts: AwsRdsGlobalClusterArgsTimeouts;
 }
 export class aws_rds_global_cluster extends TerraformResource {
   readonly arn!: string;

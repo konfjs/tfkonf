@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGlobalacceleratorAcceleratorArgsattributes {
+export interface AwsGlobalacceleratorAcceleratorArgsAttributes {
   flow_logs_enabled?: boolean;
   flow_logs_s3_bucket?: string;
   flow_logs_s3_prefix?: string;
 }
-export interface AwsGlobalacceleratorAcceleratorArgstimeouts {
+export interface AwsGlobalacceleratorAcceleratorArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -16,8 +16,8 @@ export interface AwsGlobalacceleratorAcceleratorArgs {
   tags?: {
     [key: string]: string;
   };
-  attributes: AwsGlobalacceleratorAcceleratorArgsattributes;
-  timeouts: AwsGlobalacceleratorAcceleratorArgstimeouts;
+  attributes: AwsGlobalacceleratorAcceleratorArgsAttributes;
+  timeouts: AwsGlobalacceleratorAcceleratorArgsTimeouts;
 }
 export class aws_globalaccelerator_accelerator extends TerraformResource {
   readonly dns_name!: string;

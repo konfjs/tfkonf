@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationalarms {
+export interface AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationAlarms {
   alarm_name: string;
 }
 export interface AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfiguration {
-  alarms: AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationalarms;
+  alarms: AwsSagemakerEndpointArgsDeploymentConfigAutoRollbackConfigurationAlarms;
 }
 export interface AwsSagemakerEndpointArgsDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize {
   type: string;

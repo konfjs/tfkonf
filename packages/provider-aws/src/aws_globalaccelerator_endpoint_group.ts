@@ -8,7 +8,7 @@ export interface AwsGlobalacceleratorEndpointGroupArgsPortOverride {
   endpoint_port: number;
   listener_port: number;
 }
-export interface AwsGlobalacceleratorEndpointGroupArgstimeouts {
+export interface AwsGlobalacceleratorEndpointGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,7 +21,7 @@ export interface AwsGlobalacceleratorEndpointGroupArgs {
   traffic_dial_percentage?: number;
   endpoint_configuration: AwsGlobalacceleratorEndpointGroupArgsEndpointConfiguration;
   port_override: AwsGlobalacceleratorEndpointGroupArgsPortOverride;
-  timeouts: AwsGlobalacceleratorEndpointGroupArgstimeouts;
+  timeouts: AwsGlobalacceleratorEndpointGroupArgsTimeouts;
 }
 export class aws_globalaccelerator_endpoint_group extends TerraformResource {
   readonly arn!: string;

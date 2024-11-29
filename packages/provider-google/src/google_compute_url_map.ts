@@ -9,21 +9,21 @@ export interface GoogleComputeUrlMapArgsDefaultRouteActionCorsPolicy {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyabort {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyAbort {
   http_status?: number;
   percentage?: number;
 }
-export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelayFixedDelay {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
   nanos?: number;
   seconds?: string;
 }
-export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelay {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyDelay {
   percentage?: number;
-  fixed_delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelayFixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 export interface GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicy {
-  abort: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyabort;
-  delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicydelay;
+  abort: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyAbort;
+  delay: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicyDelay;
 }
 export interface GoogleComputeUrlMapArgsDefaultRouteActionRequestMirrorPolicy {
   backend_service: string;
@@ -37,7 +37,7 @@ export interface GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicy {
   retry_conditions?: string[];
   per_try_timeout: GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicyPerTryTimeout;
 }
-export interface GoogleComputeUrlMapArgsDefaultRouteActiontimeout {
+export interface GoogleComputeUrlMapArgsDefaultRouteActionTimeout {
   nanos?: number;
   seconds?: string;
 }
@@ -71,7 +71,7 @@ export interface GoogleComputeUrlMapArgsDefaultRouteAction {
   fault_injection_policy: GoogleComputeUrlMapArgsDefaultRouteActionFaultInjectionPolicy;
   request_mirror_policy: GoogleComputeUrlMapArgsDefaultRouteActionRequestMirrorPolicy;
   retry_policy: GoogleComputeUrlMapArgsDefaultRouteActionRetryPolicy;
-  timeout: GoogleComputeUrlMapArgsDefaultRouteActiontimeout;
+  timeout: GoogleComputeUrlMapArgsDefaultRouteActionTimeout;
   url_rewrite: GoogleComputeUrlMapArgsDefaultRouteActionUrlRewrite;
   weighted_backend_services: GoogleComputeUrlMapArgsDefaultRouteActionWeightedBackendServices;
 }
@@ -114,21 +114,21 @@ export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionCorsPolicy 
   expose_headers?: string[];
   max_age?: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyabort {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyAbort {
   http_status?: number;
   percentage?: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelayFixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay {
   nanos?: number;
   seconds?: string;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelay {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyDelay {
   percentage?: number;
-  fixed_delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelayFixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicy {
-  abort: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyabort;
-  delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicydelay;
+  abort: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyAbort;
+  delay: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicyDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRequestMirrorPolicy {
   backend_service: string;
@@ -142,7 +142,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicy
   retry_conditions?: string[];
   per_try_timeout: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActiontimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionTimeout {
   nanos?: number;
   seconds?: string;
 }
@@ -176,7 +176,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherDefaultRouteAction {
   fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionFaultInjectionPolicy;
   request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRequestMirrorPolicy;
   retry_policy: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionRetryPolicy;
-  timeout: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActiontimeout;
+  timeout: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionTimeout;
   url_rewrite: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionUrlRewrite;
   weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherDefaultRouteActionWeightedBackendServices;
 }
@@ -214,21 +214,21 @@ export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionCorsPolicy
   expose_headers?: string[];
   max_age?: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyabort {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
   http_status: number;
   percentage: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelayFixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay {
   nanos?: number;
   seconds: string;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelay {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
   percentage: number;
-  fixed_delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelayFixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicy {
-  abort: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyabort;
-  delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicydelay;
+  abort: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort;
+  delay: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRequestMirrorPolicy {
   backend_service: string;
@@ -242,7 +242,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolic
   retry_conditions?: string[];
   per_try_timeout: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActiontimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionTimeout {
   nanos?: number;
   seconds: string;
 }
@@ -276,7 +276,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherPathRuleRouteAction {
   fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionFaultInjectionPolicy;
   request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRequestMirrorPolicy;
   retry_policy: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionRetryPolicy;
-  timeout: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActiontimeout;
+  timeout: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionTimeout;
   url_rewrite: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionUrlRewrite;
   weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherPathRuleRouteActionWeightedBackendServices;
 }
@@ -358,21 +358,21 @@ export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionCorsPoli
   expose_headers?: string[];
   max_age?: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyabort {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort {
   http_status?: number;
   percentage?: number;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelayFixedDelay {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay {
   nanos?: number;
   seconds: string;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelay {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay {
   percentage?: number;
-  fixed_delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelayFixedDelay;
+  fixed_delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicy {
-  abort: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyabort;
-  delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicydelay;
+  abort: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort;
+  delay: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay;
 }
 export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRequestMirrorPolicy {
   backend_service: string;
@@ -386,7 +386,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPol
   retry_conditions?: string[];
   per_try_timeout: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout;
 }
-export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActiontimeout {
+export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionTimeout {
   nanos?: number;
   seconds: string;
 }
@@ -421,7 +421,7 @@ export interface GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteAction {
   fault_injection_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionFaultInjectionPolicy;
   request_mirror_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRequestMirrorPolicy;
   retry_policy: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionRetryPolicy;
-  timeout: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActiontimeout;
+  timeout: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionTimeout;
   url_rewrite: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionUrlRewrite;
   weighted_backend_services: GoogleComputeUrlMapArgsPathMatcherRouteRulesRouteActionWeightedBackendServices;
 }
@@ -451,13 +451,13 @@ export interface GoogleComputeUrlMapArgsPathMatcher {
   path_rule: GoogleComputeUrlMapArgsPathMatcherPathRule;
   route_rules: GoogleComputeUrlMapArgsPathMatcherRouteRules;
 }
-export interface GoogleComputeUrlMapArgstest {
+export interface GoogleComputeUrlMapArgsTest {
   description?: string;
   host: string;
   path: string;
   service: string;
 }
-export interface GoogleComputeUrlMapArgstimeouts {
+export interface GoogleComputeUrlMapArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -471,8 +471,8 @@ export interface GoogleComputeUrlMapArgs {
   header_action: GoogleComputeUrlMapArgsHeaderAction;
   host_rule: GoogleComputeUrlMapArgsHostRule;
   path_matcher: GoogleComputeUrlMapArgsPathMatcher;
-  test: GoogleComputeUrlMapArgstest;
-  timeouts: GoogleComputeUrlMapArgstimeouts;
+  test: GoogleComputeUrlMapArgsTest;
+  timeouts: GoogleComputeUrlMapArgsTimeouts;
 }
 export class google_compute_url_map extends TerraformResource {
   readonly creation_timestamp!: string;

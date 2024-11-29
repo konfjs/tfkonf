@@ -39,27 +39,27 @@ export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling {
   network_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingNetworkUtilization;
   request_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingRequestUtilization;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentCloudBuildOptions {
+export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentCloudBuildOptions {
   app_yaml_path: string;
   cloud_build_timeout?: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentcontainer {
+export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentContainer {
   image: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentfiles {
+export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentFiles {
   name: string;
   sha1_sum?: string;
   source_url: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsdeploymentzip {
+export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentZip {
   files_count?: number;
   source_url: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsdeployment {
-  cloud_build_options: GoogleAppEngineFlexibleAppVersionArgsdeploymentCloudBuildOptions;
-  container: GoogleAppEngineFlexibleAppVersionArgsdeploymentcontainer;
-  files: GoogleAppEngineFlexibleAppVersionArgsdeploymentfiles;
-  zip: GoogleAppEngineFlexibleAppVersionArgsdeploymentzip;
+export interface GoogleAppEngineFlexibleAppVersionArgsDeployment {
+  cloud_build_options: GoogleAppEngineFlexibleAppVersionArgsDeploymentCloudBuildOptions;
+  container: GoogleAppEngineFlexibleAppVersionArgsDeploymentContainer;
+  files: GoogleAppEngineFlexibleAppVersionArgsDeploymentFiles;
+  zip: GoogleAppEngineFlexibleAppVersionArgsDeploymentZip;
 }
 export interface GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService {
   config_id?: string;
@@ -67,17 +67,17 @@ export interface GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService {
   name: string;
   rollout_strategy?: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsentrypoint {
+export interface GoogleAppEngineFlexibleAppVersionArgsEntrypoint {
   shell: string;
 }
 export interface GoogleAppEngineFlexibleAppVersionArgsFlexibleRuntimeSettings {
   operating_system?: string;
   runtime_version?: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgshandlersscript {
+export interface GoogleAppEngineFlexibleAppVersionArgsHandlersScript {
   script_path: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgshandlersStaticFiles {
+export interface GoogleAppEngineFlexibleAppVersionArgsHandlersStaticFiles {
   application_readable?: boolean;
   expiration?: string;
   http_headers?: {
@@ -88,14 +88,14 @@ export interface GoogleAppEngineFlexibleAppVersionArgshandlersStaticFiles {
   require_matching_file?: boolean;
   upload_path_regex?: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgshandlers {
+export interface GoogleAppEngineFlexibleAppVersionArgsHandlers {
   auth_fail_action?: string;
   login?: string;
   redirect_http_response_code?: string;
   security_level?: string;
   url_regex?: string;
-  script: GoogleAppEngineFlexibleAppVersionArgshandlersscript;
-  static_files: GoogleAppEngineFlexibleAppVersionArgshandlersStaticFiles;
+  script: GoogleAppEngineFlexibleAppVersionArgsHandlersScript;
+  static_files: GoogleAppEngineFlexibleAppVersionArgsHandlersStaticFiles;
 }
 export interface GoogleAppEngineFlexibleAppVersionArgsLivenessCheck {
   check_interval?: string;
@@ -109,7 +109,7 @@ export interface GoogleAppEngineFlexibleAppVersionArgsLivenessCheck {
 export interface GoogleAppEngineFlexibleAppVersionArgsManualScaling {
   instances: number;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsnetwork {
+export interface GoogleAppEngineFlexibleAppVersionArgsNetwork {
   forwarded_ports?: string[];
   instance_tag?: string;
   name: string;
@@ -125,18 +125,18 @@ export interface GoogleAppEngineFlexibleAppVersionArgsReadinessCheck {
   success_threshold?: number;
   timeout?: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsresourcesvolumes {
+export interface GoogleAppEngineFlexibleAppVersionArgsResourcesVolumes {
   name: string;
   size_gb: number;
   volume_type: string;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgsresources {
+export interface GoogleAppEngineFlexibleAppVersionArgsResources {
   cpu?: number;
   disk_gb?: number;
   memory_gb?: number;
-  volumes: GoogleAppEngineFlexibleAppVersionArgsresourcesvolumes;
+  volumes: GoogleAppEngineFlexibleAppVersionArgsResourcesVolumes;
 }
-export interface GoogleAppEngineFlexibleAppVersionArgstimeouts {
+export interface GoogleAppEngineFlexibleAppVersionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -165,17 +165,17 @@ export interface GoogleAppEngineFlexibleAppVersionArgs {
   version_id?: string;
   api_config: GoogleAppEngineFlexibleAppVersionArgsApiConfig;
   automatic_scaling: GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling;
-  deployment: GoogleAppEngineFlexibleAppVersionArgsdeployment;
+  deployment: GoogleAppEngineFlexibleAppVersionArgsDeployment;
   endpoints_api_service: GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService;
-  entrypoint: GoogleAppEngineFlexibleAppVersionArgsentrypoint;
+  entrypoint: GoogleAppEngineFlexibleAppVersionArgsEntrypoint;
   flexible_runtime_settings: GoogleAppEngineFlexibleAppVersionArgsFlexibleRuntimeSettings;
-  handlers: GoogleAppEngineFlexibleAppVersionArgshandlers;
+  handlers: GoogleAppEngineFlexibleAppVersionArgsHandlers;
   liveness_check: GoogleAppEngineFlexibleAppVersionArgsLivenessCheck;
   manual_scaling: GoogleAppEngineFlexibleAppVersionArgsManualScaling;
-  network: GoogleAppEngineFlexibleAppVersionArgsnetwork;
+  network: GoogleAppEngineFlexibleAppVersionArgsNetwork;
   readiness_check: GoogleAppEngineFlexibleAppVersionArgsReadinessCheck;
-  resources: GoogleAppEngineFlexibleAppVersionArgsresources;
-  timeouts: GoogleAppEngineFlexibleAppVersionArgstimeouts;
+  resources: GoogleAppEngineFlexibleAppVersionArgsResources;
+  timeouts: GoogleAppEngineFlexibleAppVersionArgsTimeouts;
   vpc_access_connector: GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_flexible_app_version extends TerraformResource {

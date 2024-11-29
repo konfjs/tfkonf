@@ -8,7 +8,7 @@ export interface AwsTransferUserArgsPosixProfile {
   secondary_gids?: number[];
   uid: number;
 }
-export interface AwsTransferUserArgstimeouts {
+export interface AwsTransferUserArgsTimeouts {
   delete?: string;
 }
 export interface AwsTransferUserArgs {
@@ -23,7 +23,7 @@ export interface AwsTransferUserArgs {
   user_name: string;
   home_directory_mappings: AwsTransferUserArgsHomeDirectoryMappings;
   posix_profile: AwsTransferUserArgsPosixProfile;
-  timeouts: AwsTransferUserArgstimeouts;
+  timeouts: AwsTransferUserArgsTimeouts;
 }
 export class aws_transfer_user extends TerraformResource {
   readonly arn!: string;

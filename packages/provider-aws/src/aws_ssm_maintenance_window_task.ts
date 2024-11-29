@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsSsmMaintenanceWindowTaskArgstargets {
+export interface AwsSsmMaintenanceWindowTaskArgsTargets {
   key: string;
   values: string[];
 }
-export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersparameter {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersParameter {
   name: string;
   values: string[];
 }
 export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParameters {
   document_version?: string;
-  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersparameter;
+  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersAutomationParametersParameter;
 }
 export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersLambdaParameters {
   client_context?: string;
@@ -24,7 +24,7 @@ export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunComma
   notification_events?: string[];
   notification_type?: string;
 }
-export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersparameter {
+export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersParameter {
   name: string;
   values: string[];
 }
@@ -39,7 +39,7 @@ export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunComma
   timeout_seconds?: number;
   cloudwatch_config: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersCloudwatchConfig;
   notification_config: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersNotificationConfig;
-  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersparameter;
+  parameter: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersRunCommandParametersParameter;
 }
 export interface AwsSsmMaintenanceWindowTaskArgsTaskInvocationParametersStepFunctionsParameters {
   input?: string;
@@ -59,7 +59,7 @@ export interface AwsSsmMaintenanceWindowTaskArgs {
   task_arn: string;
   task_type: string;
   window_id: string;
-  targets: AwsSsmMaintenanceWindowTaskArgstargets;
+  targets: AwsSsmMaintenanceWindowTaskArgsTargets;
   task_invocation_parameters: AwsSsmMaintenanceWindowTaskArgsTaskInvocationParameters;
 }
 export class aws_ssm_maintenance_window_task extends TerraformResource {

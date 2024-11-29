@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface AwsCodeartifactRepositoryArgsExternalConnections {
   external_connection_name: string;
 }
-export interface AwsCodeartifactRepositoryArgsupstream {
+export interface AwsCodeartifactRepositoryArgsUpstream {
   repository_name: string;
 }
 export interface AwsCodeartifactRepositoryArgs {
@@ -13,7 +13,7 @@ export interface AwsCodeartifactRepositoryArgs {
     [key: string]: string;
   };
   external_connections: AwsCodeartifactRepositoryArgsExternalConnections;
-  upstream: AwsCodeartifactRepositoryArgsupstream;
+  upstream: AwsCodeartifactRepositoryArgsUpstream;
 }
 export class aws_codeartifact_repository extends TerraformResource {
   readonly administrator_account!: string;

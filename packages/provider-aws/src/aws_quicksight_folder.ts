@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsQuicksightFolderArgspermissions {
+export interface AwsQuicksightFolderArgsPermissions {
   actions: string[];
   principal: string;
 }
-export interface AwsQuicksightFolderArgstimeouts {
+export interface AwsQuicksightFolderArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -17,8 +17,8 @@ export interface AwsQuicksightFolderArgs {
   tags?: {
     [key: string]: string;
   };
-  permissions: AwsQuicksightFolderArgspermissions;
-  timeouts: AwsQuicksightFolderArgstimeouts;
+  permissions: AwsQuicksightFolderArgsPermissions;
+  timeouts: AwsQuicksightFolderArgsTimeouts;
 }
 export class aws_quicksight_folder extends TerraformResource {
   readonly arn!: string;

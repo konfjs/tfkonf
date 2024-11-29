@@ -1,83 +1,83 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsKendraDataSourceArgsconfigurationS3ConfigurationAccessControlListConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationS3ConfigurationAccessControlListConfiguration {
   key_path?: string;
 }
-export interface AwsKendraDataSourceArgsconfigurationS3ConfigurationDocumentsMetadataConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationS3ConfigurationDocumentsMetadataConfiguration {
   s3_prefix?: string;
 }
-export interface AwsKendraDataSourceArgsconfigurationS3Configuration {
+export interface AwsKendraDataSourceArgsConfigurationS3Configuration {
   bucket_name: string;
   exclusion_patterns?: string[];
   inclusion_patterns?: string[];
   inclusion_prefixes?: string[];
-  access_control_list_configuration: AwsKendraDataSourceArgsconfigurationS3ConfigurationAccessControlListConfiguration;
-  documents_metadata_configuration: AwsKendraDataSourceArgsconfigurationS3ConfigurationDocumentsMetadataConfiguration;
+  access_control_list_configuration: AwsKendraDataSourceArgsConfigurationS3ConfigurationAccessControlListConfiguration;
+  documents_metadata_configuration: AwsKendraDataSourceArgsConfigurationS3ConfigurationDocumentsMetadataConfiguration;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication {
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication {
   credentials: string;
   host: string;
   port: number;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationAuthenticationConfiguration {
-  basic_authentication: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication;
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationAuthenticationConfiguration {
+  basic_authentication: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationProxyConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationProxyConfiguration {
   credentials?: string;
   host: string;
   port: number;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurlsSeedUrlConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration {
   seed_urls: string[];
   web_crawler_mode?: string;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurlsSiteMapsConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration {
   site_maps: string[];
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurls {
-  seed_url_configuration: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurlsSeedUrlConfiguration;
-  site_maps_configuration: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurlsSiteMapsConfiguration;
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrls {
+  seed_url_configuration: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrlsSeedUrlConfiguration;
+  site_maps_configuration: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrlsSiteMapsConfiguration;
 }
-export interface AwsKendraDataSourceArgsconfigurationWebCrawlerConfiguration {
+export interface AwsKendraDataSourceArgsConfigurationWebCrawlerConfiguration {
   crawl_depth?: number;
   max_content_size_per_page_in_mega_bytes?: number;
   max_links_per_page?: number;
   max_urls_per_minute_crawl_rate?: number;
   url_exclusion_patterns?: string[];
   url_inclusion_patterns?: string[];
-  authentication_configuration: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationAuthenticationConfiguration;
-  proxy_configuration: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationProxyConfiguration;
-  urls: AwsKendraDataSourceArgsconfigurationWebCrawlerConfigurationurls;
+  authentication_configuration: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationAuthenticationConfiguration;
+  proxy_configuration: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationProxyConfiguration;
+  urls: AwsKendraDataSourceArgsConfigurationWebCrawlerConfigurationUrls;
 }
-export interface AwsKendraDataSourceArgsconfiguration {
-  s3_configuration: AwsKendraDataSourceArgsconfigurationS3Configuration;
-  web_crawler_configuration: AwsKendraDataSourceArgsconfigurationWebCrawlerConfiguration;
+export interface AwsKendraDataSourceArgsConfiguration {
+  s3_configuration: AwsKendraDataSourceArgsConfigurationS3Configuration;
+  web_crawler_configuration: AwsKendraDataSourceArgsConfigurationWebCrawlerConfiguration;
 }
-export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsconditionConditionOnValue {
+export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsConditionConditionOnValue {
   date_value?: string;
   long_value?: number;
   string_list_value?: string[];
   string_value?: string;
 }
-export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationscondition {
+export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsCondition {
   condition_document_attribute_key: string;
   operator: string;
-  condition_on_value: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsconditionConditionOnValue;
+  condition_on_value: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsConditionConditionOnValue;
 }
-export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationstargetTargetDocumentAttributeValue {
+export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue {
   date_value?: string;
   long_value?: number;
   string_list_value?: string[];
   string_value?: string;
 }
-export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationstarget {
+export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget {
   target_document_attribute_key?: string;
   target_document_attribute_value_deletion?: boolean;
-  target_document_attribute_value: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationstargetTargetDocumentAttributeValue;
+  target_document_attribute_value: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsTargetTargetDocumentAttributeValue;
 }
 export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurations {
   document_content_deletion?: boolean;
-  condition: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationscondition;
-  target: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationstarget;
+  condition: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsCondition;
+  target: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationInlineConfigurationsTarget;
 }
 export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationPostExtractionHookConfigurationInvocationConditionConditionOnValue {
   date_value?: string;
@@ -117,7 +117,7 @@ export interface AwsKendraDataSourceArgsCustomDocumentEnrichmentConfiguration {
   post_extraction_hook_configuration: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationPostExtractionHookConfiguration;
   pre_extraction_hook_configuration: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfigurationPreExtractionHookConfiguration;
 }
-export interface AwsKendraDataSourceArgstimeouts {
+export interface AwsKendraDataSourceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -132,9 +132,9 @@ export interface AwsKendraDataSourceArgs {
     [key: string]: string;
   };
   type: string;
-  configuration: AwsKendraDataSourceArgsconfiguration;
+  configuration: AwsKendraDataSourceArgsConfiguration;
   custom_document_enrichment_configuration: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfiguration;
-  timeouts: AwsKendraDataSourceArgstimeouts;
+  timeouts: AwsKendraDataSourceArgsTimeouts;
 }
 export class aws_kendra_data_source extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEmrInstanceFleetArgsInstanceTypeConfigsconfigurations {
+export interface AwsEmrInstanceFleetArgsInstanceTypeConfigsConfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
@@ -16,7 +16,7 @@ export interface AwsEmrInstanceFleetArgsInstanceTypeConfigs {
   bid_price_as_percentage_of_on_demand_price?: number;
   instance_type: string;
   weighted_capacity?: number;
-  configurations: AwsEmrInstanceFleetArgsInstanceTypeConfigsconfigurations;
+  configurations: AwsEmrInstanceFleetArgsInstanceTypeConfigsConfigurations;
   ebs_config: AwsEmrInstanceFleetArgsInstanceTypeConfigsEbsConfig;
 }
 export interface AwsEmrInstanceFleetArgsLaunchSpecificationsOnDemandSpecification {

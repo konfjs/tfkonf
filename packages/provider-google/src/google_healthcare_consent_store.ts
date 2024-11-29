@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleHealthcareConsentStoreArgstimeouts {
+export interface GoogleHealthcareConsentStoreArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleHealthcareConsentStoreArgs {
     [key: string]: string;
   };
   name: string;
-  timeouts: GoogleHealthcareConsentStoreArgstimeouts;
+  timeouts: GoogleHealthcareConsentStoreArgsTimeouts;
 }
 export class google_healthcare_consent_store extends TerraformResource {
   readonly effective_labels!: {

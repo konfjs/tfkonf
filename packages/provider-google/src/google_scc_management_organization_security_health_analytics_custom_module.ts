@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression {
+export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputPropertiesValueExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputproperties {
+export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputProperties {
   name?: string;
-  value_expression: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputpropertiesValueExpression;
+  value_expression: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputPropertiesValueExpression;
 }
 export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutput {
-  properties: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputproperties;
+  properties: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutputProperties;
 }
-export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigpredicate {
+export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigPredicate {
   description?: string;
   expression: string;
   location?: string;
@@ -26,10 +26,10 @@ export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomMod
   recommendation: string;
   severity: string;
   custom_output: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigCustomOutput;
-  predicate: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigpredicate;
+  predicate: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigPredicate;
   resource_selector: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfigResourceSelector;
 }
-export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgstimeouts {
+export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,7 +40,7 @@ export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomMod
   location?: string;
   organization: string;
   custom_config: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgstimeouts;
+  timeouts: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsTimeouts;
 }
 export class google_scc_management_organization_security_health_analytics_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

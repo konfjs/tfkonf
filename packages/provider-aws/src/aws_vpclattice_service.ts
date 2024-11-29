@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpclatticeServiceArgstimeouts {
+export interface AwsVpclatticeServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsVpclatticeServiceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpclatticeServiceArgstimeouts;
+  timeouts: AwsVpclatticeServiceArgsTimeouts;
 }
 export class aws_vpclattice_service extends TerraformResource {
   readonly arn!: string;

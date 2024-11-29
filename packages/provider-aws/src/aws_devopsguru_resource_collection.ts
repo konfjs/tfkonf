@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDevopsguruResourceCollectionArgscloudformation {
+export interface AwsDevopsguruResourceCollectionArgsCloudformation {
   stack_names: string[];
 }
-export interface AwsDevopsguruResourceCollectionArgstags {
+export interface AwsDevopsguruResourceCollectionArgsTags {
   app_boundary_key: string;
   tag_values: string[];
 }
 export interface AwsDevopsguruResourceCollectionArgs {
   type: string;
-  cloudformation: AwsDevopsguruResourceCollectionArgscloudformation;
-  tags: AwsDevopsguruResourceCollectionArgstags;
+  cloudformation: AwsDevopsguruResourceCollectionArgsCloudformation;
+  tags: AwsDevopsguruResourceCollectionArgsTags;
 }
 export class aws_devopsguru_resource_collection extends TerraformResource {
   readonly id!: string;

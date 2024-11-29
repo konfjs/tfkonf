@@ -11,7 +11,7 @@ export interface GoogleBigqueryTableArgsEncryptionConfiguration {
 export interface GoogleBigqueryTableArgsExternalDataConfigurationAvroOptions {
   use_avro_logical_types: boolean;
 }
-export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilycolumn {
+export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilyColumn {
   encoding?: string;
   field_name?: string;
   only_read_latest?: boolean;
@@ -24,7 +24,7 @@ export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptions
   family_id?: string;
   only_read_latest?: boolean;
   type?: string;
-  column: GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilycolumn;
+  column: GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptionsColumnFamilyColumn;
 }
 export interface GoogleBigqueryTableArgsExternalDataConfigurationBigtableOptions {
   ignore_unspecified_column_families?: boolean;
@@ -83,14 +83,14 @@ export interface GoogleBigqueryTableArgsMaterializedView {
   query: string;
   refresh_interval_ms?: number;
 }
-export interface GoogleBigqueryTableArgsRangePartitioningrange {
+export interface GoogleBigqueryTableArgsRangePartitioningRange {
   end: number;
   interval: number;
   start: number;
 }
 export interface GoogleBigqueryTableArgsRangePartitioning {
   field: string;
-  range: GoogleBigqueryTableArgsRangePartitioningrange;
+  range: GoogleBigqueryTableArgsRangePartitioningRange;
 }
 export interface GoogleBigqueryTableArgsTableConstraintsForeignKeysColumnReferences {
   referenced_column: string;
@@ -124,7 +124,7 @@ export interface GoogleBigqueryTableArgsTimePartitioning {
   require_partition_filter?: boolean;
   type: string;
 }
-export interface GoogleBigqueryTableArgsview {
+export interface GoogleBigqueryTableArgsView {
   query: string;
   use_legacy_sql?: boolean;
 }
@@ -151,7 +151,7 @@ export interface GoogleBigqueryTableArgs {
   table_constraints: GoogleBigqueryTableArgsTableConstraints;
   table_replication_info: GoogleBigqueryTableArgsTableReplicationInfo;
   time_partitioning: GoogleBigqueryTableArgsTimePartitioning;
-  view: GoogleBigqueryTableArgsview;
+  view: GoogleBigqueryTableArgsView;
 }
 export class google_bigquery_table extends TerraformResource {
   readonly creation_time!: number;

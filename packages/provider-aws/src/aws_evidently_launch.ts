@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsEvidentlyLaunchArgsgroups {
+export interface AwsEvidentlyLaunchArgsGroups {
   description?: string;
   feature: string;
   name: string;
@@ -15,24 +15,24 @@ export interface AwsEvidentlyLaunchArgsMetricMonitorsMetricDefinition {
 export interface AwsEvidentlyLaunchArgsMetricMonitors {
   metric_definition: AwsEvidentlyLaunchArgsMetricMonitorsMetricDefinition;
 }
-export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigstepsSegmentOverrides {
+export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigStepsSegmentOverrides {
   evaluation_order: number;
   segment: string;
   weights: {
     [key: string]: number;
   };
 }
-export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigsteps {
+export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigSteps {
   group_weights: {
     [key: string]: number;
   };
   start_time: string;
-  segment_overrides: AwsEvidentlyLaunchArgsScheduledSplitsConfigstepsSegmentOverrides;
+  segment_overrides: AwsEvidentlyLaunchArgsScheduledSplitsConfigStepsSegmentOverrides;
 }
 export interface AwsEvidentlyLaunchArgsScheduledSplitsConfig {
-  steps: AwsEvidentlyLaunchArgsScheduledSplitsConfigsteps;
+  steps: AwsEvidentlyLaunchArgsScheduledSplitsConfigSteps;
 }
-export interface AwsEvidentlyLaunchArgstimeouts {
+export interface AwsEvidentlyLaunchArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,10 +45,10 @@ export interface AwsEvidentlyLaunchArgs {
   tags?: {
     [key: string]: string;
   };
-  groups: AwsEvidentlyLaunchArgsgroups;
+  groups: AwsEvidentlyLaunchArgsGroups;
   metric_monitors: AwsEvidentlyLaunchArgsMetricMonitors;
   scheduled_splits_config: AwsEvidentlyLaunchArgsScheduledSplitsConfig;
-  timeouts: AwsEvidentlyLaunchArgstimeouts;
+  timeouts: AwsEvidentlyLaunchArgsTimeouts;
 }
 export class aws_evidently_launch extends TerraformResource {
   readonly arn!: string;

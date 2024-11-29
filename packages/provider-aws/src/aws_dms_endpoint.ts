@@ -119,7 +119,7 @@ export interface AwsDmsEndpointArgsS3Settings {
   use_csv_no_sup_value?: boolean;
   use_task_start_time_for_full_load_timestamp?: boolean;
 }
-export interface AwsDmsEndpointArgstimeouts {
+export interface AwsDmsEndpointArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -147,7 +147,7 @@ export interface AwsDmsEndpointArgs {
   redis_settings: AwsDmsEndpointArgsRedisSettings;
   redshift_settings: AwsDmsEndpointArgsRedshiftSettings;
   s3_settings: AwsDmsEndpointArgsS3Settings;
-  timeouts: AwsDmsEndpointArgstimeouts;
+  timeouts: AwsDmsEndpointArgsTimeouts;
 }
 export class aws_dms_endpoint extends TerraformResource {
   readonly certificate_arn?: string;

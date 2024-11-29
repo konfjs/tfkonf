@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleTagsTagValueArgstimeouts {
+export interface GoogleTagsTagValueArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleTagsTagValueArgs {
   description?: string;
   parent: string;
   short_name: string;
-  timeouts: GoogleTagsTagValueArgstimeouts;
+  timeouts: GoogleTagsTagValueArgsTimeouts;
 }
 export class google_tags_tag_value extends TerraformResource {
   readonly create_time!: string;

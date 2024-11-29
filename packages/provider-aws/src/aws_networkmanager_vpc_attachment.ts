@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsNetworkmanagerVpcAttachmentArgsoptions {
+export interface AwsNetworkmanagerVpcAttachmentArgsOptions {
   appliance_mode_support?: boolean;
   ipv6_support?: boolean;
 }
-export interface AwsNetworkmanagerVpcAttachmentArgstimeouts {
+export interface AwsNetworkmanagerVpcAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface AwsNetworkmanagerVpcAttachmentArgs {
     [key: string]: string;
   };
   vpc_arn: string;
-  options: AwsNetworkmanagerVpcAttachmentArgsoptions;
-  timeouts: AwsNetworkmanagerVpcAttachmentArgstimeouts;
+  options: AwsNetworkmanagerVpcAttachmentArgsOptions;
+  timeouts: AwsNetworkmanagerVpcAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_vpc_attachment extends TerraformResource {
   readonly arn!: string;

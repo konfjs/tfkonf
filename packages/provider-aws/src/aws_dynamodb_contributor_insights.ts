@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsDynamodbContributorInsightsArgstimeouts {
+export interface AwsDynamodbContributorInsightsArgsTimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsDynamodbContributorInsightsArgs {
   index_name?: string;
   table_name: string;
-  timeouts: AwsDynamodbContributorInsightsArgstimeouts;
+  timeouts: AwsDynamodbContributorInsightsArgsTimeouts;
 }
 export class aws_dynamodb_contributor_insights extends TerraformResource {
   readonly id?: string;

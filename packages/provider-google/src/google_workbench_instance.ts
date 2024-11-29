@@ -43,7 +43,7 @@ export interface GoogleWorkbenchInstanceArgsGceSetup {
   shielded_instance_config: GoogleWorkbenchInstanceArgsGceSetupShieldedInstanceConfig;
   vm_image: GoogleWorkbenchInstanceArgsGceSetupVmImage;
 }
-export interface GoogleWorkbenchInstanceArgstimeouts {
+export interface GoogleWorkbenchInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -59,7 +59,7 @@ export interface GoogleWorkbenchInstanceArgs {
   location: string;
   name: string;
   gce_setup: GoogleWorkbenchInstanceArgsGceSetup;
-  timeouts: GoogleWorkbenchInstanceArgstimeouts;
+  timeouts: GoogleWorkbenchInstanceArgsTimeouts;
 }
 export class google_workbench_instance extends TerraformResource {
   readonly create_time!: string;

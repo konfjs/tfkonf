@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsOpensearchVpcEndpointArgstimeouts {
+export interface AwsOpensearchVpcEndpointArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsOpensearchVpcEndpointArgsVpcOptions {
 }
 export interface AwsOpensearchVpcEndpointArgs {
   domain_arn: string;
-  timeouts: AwsOpensearchVpcEndpointArgstimeouts;
+  timeouts: AwsOpensearchVpcEndpointArgsTimeouts;
   vpc_options: AwsOpensearchVpcEndpointArgsVpcOptions;
 }
 export class aws_opensearch_vpc_endpoint extends TerraformResource {

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleSpannerInstanceIamBindingArgscondition {
+export interface GoogleSpannerInstanceIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleSpannerInstanceIamBindingArgs {
   instance: string;
   members: string[];
   role: string;
-  condition: GoogleSpannerInstanceIamBindingArgscondition;
+  condition: GoogleSpannerInstanceIamBindingArgsCondition;
 }
 export class google_spanner_instance_iam_binding extends TerraformResource {
   readonly etag!: string;

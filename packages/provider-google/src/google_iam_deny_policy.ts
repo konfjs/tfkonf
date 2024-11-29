@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleIamDenyPolicyArgsrulesDenyRuleDenialCondition {
+export interface GoogleIamDenyPolicyArgsRulesDenyRuleDenialCondition {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface GoogleIamDenyPolicyArgsrulesDenyRule {
+export interface GoogleIamDenyPolicyArgsRulesDenyRule {
   denied_permissions?: string[];
   denied_principals?: string[];
   exception_permissions?: string[];
   exception_principals?: string[];
-  denial_condition: GoogleIamDenyPolicyArgsrulesDenyRuleDenialCondition;
+  denial_condition: GoogleIamDenyPolicyArgsRulesDenyRuleDenialCondition;
 }
-export interface GoogleIamDenyPolicyArgsrules {
+export interface GoogleIamDenyPolicyArgsRules {
   description?: string;
-  deny_rule: GoogleIamDenyPolicyArgsrulesDenyRule;
+  deny_rule: GoogleIamDenyPolicyArgsRulesDenyRule;
 }
-export interface GoogleIamDenyPolicyArgstimeouts {
+export interface GoogleIamDenyPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,8 +25,8 @@ export interface GoogleIamDenyPolicyArgs {
   display_name?: string;
   name: string;
   parent: string;
-  rules: GoogleIamDenyPolicyArgsrules;
-  timeouts: GoogleIamDenyPolicyArgstimeouts;
+  rules: GoogleIamDenyPolicyArgsRules;
+  timeouts: GoogleIamDenyPolicyArgsTimeouts;
 }
 export class google_iam_deny_policy extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsPinpointEmailTemplateArgsEmailTemplateheader {
+export interface AwsPinpointEmailTemplateArgsEmailTemplateHeader {
   name?: string;
   value?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsPinpointEmailTemplateArgsEmailTemplate {
   recommender_id?: string;
   subject?: string;
   text_part?: string;
-  header: AwsPinpointEmailTemplateArgsEmailTemplateheader;
+  header: AwsPinpointEmailTemplateArgsEmailTemplateHeader;
 }
 export interface AwsPinpointEmailTemplateArgs {
   tags?: {

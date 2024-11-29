@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GoogleDataCatalogTaxonomyIamMemberArgscondition {
+export interface GoogleDataCatalogTaxonomyIamMemberArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogTaxonomyIamMemberArgs {
   member: string;
   role: string;
   taxonomy: string;
-  condition: GoogleDataCatalogTaxonomyIamMemberArgscondition;
+  condition: GoogleDataCatalogTaxonomyIamMemberArgsCondition;
 }
 export class google_data_catalog_taxonomy_iam_member extends TerraformResource {
   readonly etag!: string;

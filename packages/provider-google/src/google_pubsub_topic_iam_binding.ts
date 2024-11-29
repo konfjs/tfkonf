@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GooglePubsubTopicIamBindingArgscondition {
+export interface GooglePubsubTopicIamBindingArgsCondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GooglePubsubTopicIamBindingArgs {
   members: string[];
   role: string;
   topic: string;
-  condition: GooglePubsubTopicIamBindingArgscondition;
+  condition: GooglePubsubTopicIamBindingArgsCondition;
 }
 export class google_pubsub_topic_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionprincipal {
+export interface AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionPrincipal {
   data_lake_principal_identifier?: string;
 }
 export interface AwsGlueCatalogDatabaseArgsCreateTableDefaultPermission {
   permissions?: string[];
-  principal: AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionprincipal;
+  principal: AwsGlueCatalogDatabaseArgsCreateTableDefaultPermissionPrincipal;
 }
 export interface AwsGlueCatalogDatabaseArgsFederatedDatabase {
   connection_name?: string;

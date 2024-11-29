@@ -3,7 +3,7 @@ export interface GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfoCertInfo {}
 export interface GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfo {
   cert_info: GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfoCertInfo;
 }
-export interface GoogleApigeeKeystoresAliasesKeyCertFileArgstimeouts {
+export interface GoogleApigeeKeystoresAliasesKeyCertFileArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -18,7 +18,7 @@ export interface GoogleApigeeKeystoresAliasesKeyCertFileArgs {
   org_id: string;
   password?: string;
   certs_info: GoogleApigeeKeystoresAliasesKeyCertFileArgsCertsInfo;
-  timeouts: GoogleApigeeKeystoresAliasesKeyCertFileArgstimeouts;
+  timeouts: GoogleApigeeKeystoresAliasesKeyCertFileArgsTimeouts;
 }
 export class google_apigee_keystores_aliases_key_cert_file extends TerraformResource {
   readonly id?: string;

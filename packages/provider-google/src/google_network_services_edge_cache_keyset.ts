@@ -4,7 +4,7 @@ export interface GoogleNetworkServicesEdgeCacheKeysetArgsPublicKey {
   managed?: boolean;
   value?: string;
 }
-export interface GoogleNetworkServicesEdgeCacheKeysetArgstimeouts {
+export interface GoogleNetworkServicesEdgeCacheKeysetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleNetworkServicesEdgeCacheKeysetArgs {
   };
   name: string;
   public_key: GoogleNetworkServicesEdgeCacheKeysetArgsPublicKey;
-  timeouts: GoogleNetworkServicesEdgeCacheKeysetArgstimeouts;
+  timeouts: GoogleNetworkServicesEdgeCacheKeysetArgsTimeouts;
   validation_shared_keys: GoogleNetworkServicesEdgeCacheKeysetArgsValidationSharedKeys;
 }
 export class google_network_services_edge_cache_keyset extends TerraformResource {

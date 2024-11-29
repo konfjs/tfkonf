@@ -5,7 +5,7 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentCon
   dcr_exchange_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDcrExchangeConfig;
   default_exchange_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDefaultExchangeConfig;
 }
-export interface GoogleBigqueryAnalyticsHubDataExchangeArgstimeouts {
+export interface GoogleBigqueryAnalyticsHubDataExchangeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,7 +19,7 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeArgs {
   location: string;
   primary_contact?: string;
   sharing_environment_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfig;
-  timeouts: GoogleBigqueryAnalyticsHubDataExchangeArgstimeouts;
+  timeouts: GoogleBigqueryAnalyticsHubDataExchangeArgsTimeouts;
 }
 export class google_bigquery_analytics_hub_data_exchange extends TerraformResource {
   readonly id?: string;

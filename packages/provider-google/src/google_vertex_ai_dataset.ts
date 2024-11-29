@@ -2,7 +2,7 @@ import { TerraformConfig, TerraformResource } from "tfs";
 export interface GoogleVertexAiDatasetArgsEncryptionSpec {
   kms_key_name?: string;
 }
-export interface GoogleVertexAiDatasetArgstimeouts {
+export interface GoogleVertexAiDatasetArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleVertexAiDatasetArgs {
   };
   metadata_schema_uri: string;
   encryption_spec: GoogleVertexAiDatasetArgsEncryptionSpec;
-  timeouts: GoogleVertexAiDatasetArgstimeouts;
+  timeouts: GoogleVertexAiDatasetArgsTimeouts;
 }
 export class google_vertex_ai_dataset extends TerraformResource {
   readonly create_time!: string;

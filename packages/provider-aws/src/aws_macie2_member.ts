@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsMacie2MemberArgstimeouts {
+export interface AwsMacie2MemberArgsTimeouts {
   create?: string;
   update?: string;
 }
@@ -11,7 +11,7 @@ export interface AwsMacie2MemberArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMacie2MemberArgstimeouts;
+  timeouts: AwsMacie2MemberArgsTimeouts;
 }
 export class aws_macie2_member extends TerraformResource {
   readonly administrator_account_id!: string;

@@ -14,7 +14,7 @@ export interface GoogleVertexAiDeploymentResourcePoolArgsDedicatedResources {
   autoscaling_metric_specs: GoogleVertexAiDeploymentResourcePoolArgsDedicatedResourcesAutoscalingMetricSpecs;
   machine_spec: GoogleVertexAiDeploymentResourcePoolArgsDedicatedResourcesMachineSpec;
 }
-export interface GoogleVertexAiDeploymentResourcePoolArgstimeouts {
+export interface GoogleVertexAiDeploymentResourcePoolArgsTimeouts {
   create?: string;
   delete?: string;
 }
@@ -22,7 +22,7 @@ export interface GoogleVertexAiDeploymentResourcePoolArgs {
   name: string;
   region?: string;
   dedicated_resources: GoogleVertexAiDeploymentResourcePoolArgsDedicatedResources;
-  timeouts: GoogleVertexAiDeploymentResourcePoolArgstimeouts;
+  timeouts: GoogleVertexAiDeploymentResourcePoolArgsTimeouts;
 }
 export class google_vertex_ai_deployment_resource_pool extends TerraformResource {
   readonly create_time!: string;

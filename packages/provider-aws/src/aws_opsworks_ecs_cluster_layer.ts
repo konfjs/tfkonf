@@ -25,7 +25,7 @@ export interface AwsOpsworksEcsClusterLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
-export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingdownscaling {
+export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingdownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingupscaling {
+export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -45,8 +45,8 @@ export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingupscaling {
 }
 export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingdownscaling;
-  upscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingupscaling;
+  downscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingDownscaling;
+  upscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingUpscaling;
 }
 export interface AwsOpsworksEcsClusterLayerArgs {
   auto_assign_elastic_ips?: boolean;

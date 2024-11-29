@@ -7,7 +7,7 @@ export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsKine
   delivery_stream?: string;
   enabled: boolean;
 }
-export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogss3 {
+export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsS3 {
   bucket_name?: string;
   enabled: boolean;
   prefix?: string;
@@ -15,7 +15,7 @@ export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogss3 {
 export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogs {
   cloudwatch_logs: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsCloudwatchLogs;
   kinesis_data_firehose: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsKinesisDataFirehose;
-  s3: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogss3;
+  s3: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsS3;
 }
 export interface AwsVerifiedaccessInstanceLoggingConfigurationArgs {
   verifiedaccess_instance_id: string;

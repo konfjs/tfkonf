@@ -1,45 +1,45 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsVpclatticeListenerRuleArgsactionFixedResponse {
+export interface AwsVpclatticeListenerRuleArgsActionFixedResponse {
   status_code: number;
 }
-export interface AwsVpclatticeListenerRuleArgsactionforwardTargetGroups {
+export interface AwsVpclatticeListenerRuleArgsActionForwardTargetGroups {
   target_group_identifier: string;
   weight?: number;
 }
-export interface AwsVpclatticeListenerRuleArgsactionforward {
-  target_groups: AwsVpclatticeListenerRuleArgsactionforwardTargetGroups;
+export interface AwsVpclatticeListenerRuleArgsActionForward {
+  target_groups: AwsVpclatticeListenerRuleArgsActionForwardTargetGroups;
 }
-export interface AwsVpclatticeListenerRuleArgsaction {
-  fixed_response: AwsVpclatticeListenerRuleArgsactionFixedResponse;
-  forward: AwsVpclatticeListenerRuleArgsactionforward;
+export interface AwsVpclatticeListenerRuleArgsAction {
+  fixed_response: AwsVpclatticeListenerRuleArgsActionFixedResponse;
+  forward: AwsVpclatticeListenerRuleArgsActionForward;
 }
-export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatchesmatch {
+export interface AwsVpclatticeListenerRuleArgsMatchHttpMatchHeaderMatchesMatch {
   contains?: string;
   exact?: string;
   prefix?: string;
 }
-export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatches {
+export interface AwsVpclatticeListenerRuleArgsMatchHttpMatchHeaderMatches {
   case_sensitive?: boolean;
   name: string;
-  match: AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatchesmatch;
+  match: AwsVpclatticeListenerRuleArgsMatchHttpMatchHeaderMatchesMatch;
 }
-export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatchmatch {
+export interface AwsVpclatticeListenerRuleArgsMatchHttpMatchPathMatchMatch {
   exact?: string;
   prefix?: string;
 }
-export interface AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatch {
+export interface AwsVpclatticeListenerRuleArgsMatchHttpMatchPathMatch {
   case_sensitive?: boolean;
-  match: AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatchmatch;
+  match: AwsVpclatticeListenerRuleArgsMatchHttpMatchPathMatchMatch;
 }
-export interface AwsVpclatticeListenerRuleArgsmatchHttpMatch {
+export interface AwsVpclatticeListenerRuleArgsMatchHttpMatch {
   method?: string;
-  header_matches: AwsVpclatticeListenerRuleArgsmatchHttpMatchHeaderMatches;
-  path_match: AwsVpclatticeListenerRuleArgsmatchHttpMatchPathMatch;
+  header_matches: AwsVpclatticeListenerRuleArgsMatchHttpMatchHeaderMatches;
+  path_match: AwsVpclatticeListenerRuleArgsMatchHttpMatchPathMatch;
 }
-export interface AwsVpclatticeListenerRuleArgsmatch {
-  http_match: AwsVpclatticeListenerRuleArgsmatchHttpMatch;
+export interface AwsVpclatticeListenerRuleArgsMatch {
+  http_match: AwsVpclatticeListenerRuleArgsMatchHttpMatch;
 }
-export interface AwsVpclatticeListenerRuleArgstimeouts {
+export interface AwsVpclatticeListenerRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -52,9 +52,9 @@ export interface AwsVpclatticeListenerRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  action: AwsVpclatticeListenerRuleArgsaction;
-  match: AwsVpclatticeListenerRuleArgsmatch;
-  timeouts: AwsVpclatticeListenerRuleArgstimeouts;
+  action: AwsVpclatticeListenerRuleArgsAction;
+  match: AwsVpclatticeListenerRuleArgsMatch;
+  timeouts: AwsVpclatticeListenerRuleArgsTimeouts;
 }
 export class aws_vpclattice_listener_rule extends TerraformResource {
   readonly arn!: string;

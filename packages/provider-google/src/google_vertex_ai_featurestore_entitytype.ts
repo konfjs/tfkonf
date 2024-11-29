@@ -20,7 +20,7 @@ export interface GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfig {
   numerical_threshold_config: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigNumericalThresholdConfig;
   snapshot_analysis: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfigSnapshotAnalysis;
 }
-export interface GoogleVertexAiFeaturestoreEntitytypeArgstimeouts {
+export interface GoogleVertexAiFeaturestoreEntitytypeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,7 +33,7 @@ export interface GoogleVertexAiFeaturestoreEntitytypeArgs {
   };
   name?: string;
   monitoring_config: GoogleVertexAiFeaturestoreEntitytypeArgsMonitoringConfig;
-  timeouts: GoogleVertexAiFeaturestoreEntitytypeArgstimeouts;
+  timeouts: GoogleVertexAiFeaturestoreEntitytypeArgsTimeouts;
 }
 export class google_vertex_ai_featurestore_entitytype extends TerraformResource {
   readonly create_time!: string;

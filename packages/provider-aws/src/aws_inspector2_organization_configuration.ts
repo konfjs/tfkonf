@@ -5,14 +5,14 @@ export interface AwsInspector2OrganizationConfigurationArgsAutoEnable {
   lambda?: boolean;
   lambda_code?: boolean;
 }
-export interface AwsInspector2OrganizationConfigurationArgstimeouts {
+export interface AwsInspector2OrganizationConfigurationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsInspector2OrganizationConfigurationArgs {
   auto_enable: AwsInspector2OrganizationConfigurationArgsAutoEnable;
-  timeouts: AwsInspector2OrganizationConfigurationArgstimeouts;
+  timeouts: AwsInspector2OrganizationConfigurationArgsTimeouts;
 }
 export class aws_inspector2_organization_configuration extends TerraformResource {
   readonly id?: string;
