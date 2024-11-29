@@ -1,6 +1,6 @@
 {
   "name": "@konfjs/provider-generator",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "author": {
     "name": "konfjs",
     "url": "https://github.com/konfjs"
@@ -30,9 +30,13 @@
       "types": "./src/index.ts"
     }
   },
+  "bin": {
+    "@konfjs/provider-generator": "./dist/index.js"
+  },
   "scripts": {
+    "add_shebang": "perl -i -pe 's,#!/usr/bin/env tsx,#!/usr/bin/env node,g' dist/index.js",
     "updatePackage": "yq -i '.exports[\".\"] |= {\"import\": \"./dist/index.js\", \"types\": \"./dist/index.d.ts\" }' package.json",
-    "build": "rm -rf dist && tsc",
+    "build": "rm -rf dist provider-aws provider-google && tsc && bun run add_shebang && chmod +x dist/index.js",
     "prepack": "bun run build && bun run updatePackage",
     "pull": "terraform providers schema -json > schema.json",
     "gen": "bun run src/index.ts",
