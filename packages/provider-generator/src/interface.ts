@@ -66,7 +66,8 @@ export function generateInterfaceDeclaration(
     ast: t.Program,
     resourceName: string,
     block: Block,
-    topLevel: boolean,
+    parentName = '',
+    topLevel = false,
 ) {
     /**
      * Each block is a separate interface.
@@ -75,6 +76,13 @@ export function generateInterfaceDeclaration(
      * Each block_types.X.block is a new interface.
      * and so on...
      */
+    let interfaceName = '';
+    if (topLevel) {
+        interfaceName = `${toPascalCase(resourceName)}Args`;
+    } else {
+        interfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceName)}`;
+    }
+
     const properties: t.TSPropertySignature[] = [];
 
     if (block.attributes) {
@@ -92,18 +100,17 @@ export function generateInterfaceDeclaration(
 
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
+            const childInterfaceName = `${interfaceName}${toPascalCase(blockName)}`;
             const i = t.tsPropertySignature(
                 t.identifier(blockName),
-                t.tsTypeAnnotation(t.tsTypeReference(t.identifier(toPascalCase(blockName)))),
+                t.tsTypeAnnotation(
+                    t.tsTypeReference(t.identifier(toPascalCase(childInterfaceName))),
+                ),
             );
             properties.push(i);
-            generateInterfaceDeclaration(ast, blockName, blockType.block, false);
+            generateInterfaceDeclaration(ast, blockName, blockType.block, interfaceName);
         }
     }
-
-    const interfaceName = topLevel
-        ? `${toPascalCase(resourceName)}Args`
-        : toPascalCase(resourceName);
 
     const newInterface = t.exportNamedDeclaration(
         t.tsInterfaceDeclaration(
