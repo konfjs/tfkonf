@@ -10,8 +10,11 @@ import type { ProviderSchema } from './schema.js';
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
     for (const [providerName, schema] of Object.entries(providerSchemas)) {
         console.log(`Generating TypeScript code for provider: ${chalk.green(providerName)}`);
-        fs.rmdirSync(providerName, { recursive: true });
-        fs.mkdirSync(providerName, { recursive: true });
+        const outDir = path.join('@tfs', `provider-${path.basename(providerName)}`);
+        fs.rmdirSync(outDir, { recursive: true });
+        fs.mkdirSync(outDir, { recursive: true });
+
+        const resources: string[] = [];
 
         for (const [resourceName, resourceBlock] of Object.entries(schema.resource_schemas)) {
             console.log(
@@ -40,10 +43,26 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
             generateClassDeclaration(ast, resourceName, resourceBlock.block);
             // @ts-expect-error
             const { code } = generate(ast, {});
+            resources.push(resourceName);
 
-            fs.writeFileSync(path.join(providerName, `${resourceName}.ts`), code, {
+            fs.writeFileSync(path.join(outDir, `${resourceName}.ts`), code, {
                 encoding: 'utf8',
             });
         }
+
+        const ast = t.program([], [], 'module');
+        for (const resource of resources) {
+            ast.body.push(
+                t.exportNamedDeclaration(
+                    null,
+                    [t.exportNamespaceSpecifier(t.identifier(resource))],
+                    t.stringLiteral(`./${resource}.js`),
+                ),
+            );
+        }
+        // @ts-expect-error
+        const { code } = generate(ast, {});
+
+        fs.writeFileSync(path.join(outDir, 'index.ts'), code, { encoding: 'utf8' });
     }
 }
