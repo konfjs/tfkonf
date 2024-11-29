@@ -18,6 +18,19 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
 
+  examples:
+    dependencies:
+      '@konfjs/core':
+        specifier: workspace:*
+        version: link:../packages/core
+      '@konfjs/provider-google':
+        specifier: workspace:*
+        version: link:../packages/provider-google
+    devDependencies:
+      typescript:
+        specifier: 5.7.2
+        version: 5.7.2
+
   packages/core: {}
 
   packages/provider-aws:
