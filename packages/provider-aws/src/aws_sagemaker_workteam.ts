@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSagemakerWorkteamArgsMemberDefinitionCognitoMemberDefinition {
   client_id: string;
   user_group: string;

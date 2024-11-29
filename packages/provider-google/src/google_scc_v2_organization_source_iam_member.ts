@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleSccV2OrganizationSourceIamMemberArgsCondition {
   description?: string;
   expression: string;

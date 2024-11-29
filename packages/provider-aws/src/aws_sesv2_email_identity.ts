@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesv2EmailIdentityArgsDkimSigningAttributes {
   domain_signing_private_key?: string;
   domain_signing_selector?: string;

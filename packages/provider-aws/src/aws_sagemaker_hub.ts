@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSagemakerHubArgsS3StorageConfig {
   s3_output_path?: string;
 }

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleGkeonpremBareMetalAdminClusterArgsClusterOperations {
   enable_application_logs?: boolean;
 }

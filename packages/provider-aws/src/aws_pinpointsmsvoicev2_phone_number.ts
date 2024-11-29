@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsPinpointsmsvoicev2PhoneNumberArgsTimeouts {
   create?: string;
   delete?: string;

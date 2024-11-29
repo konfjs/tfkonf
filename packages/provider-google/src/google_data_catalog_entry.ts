@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataCatalogEntryArgsGcsFilesetSpec {
   file_patterns: string[];
 }

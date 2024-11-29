@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsBackupRestoreTestingPlanArgsRecoveryPointSelection {
   algorithm: string;
   include_vaults: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GooglePubsubLiteTopicArgsPartitionConfigCapacity {
   publish_mib_per_sec: number;
   subscribe_mib_per_sec: number;

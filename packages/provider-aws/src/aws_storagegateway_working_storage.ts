@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsStoragegatewayWorkingStorageArgs {
   disk_id: string;
   gateway_arn: string;

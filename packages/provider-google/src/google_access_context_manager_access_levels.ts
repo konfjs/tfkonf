@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleAccessContextManagerAccessLevelsArgsAccessLevelsBasicConditionsDevicePolicyOsConstraints {
   minimum_version?: string;
   os_type: string;

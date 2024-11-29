@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCloudfrontDistributionArgsCustomErrorResponse {
   error_caching_min_ttl?: number;
   error_code: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig {
   connection_borrow_timeout?: number;
   init_query?: string;

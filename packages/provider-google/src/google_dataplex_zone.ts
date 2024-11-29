@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataplexZoneArgsDiscoverySpecCsvOptions {
   delimiter?: string;
   disable_type_inference?: boolean;

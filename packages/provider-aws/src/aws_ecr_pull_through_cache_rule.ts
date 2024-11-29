@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEcrPullThroughCacheRuleArgs {
   credential_arn?: string;
   ecr_repository_prefix: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDmsReplicationConfigArgsComputeConfig {
   dns_name_servers?: string;
   max_capacity_units?: number;

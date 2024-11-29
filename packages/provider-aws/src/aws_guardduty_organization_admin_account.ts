@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGuarddutyOrganizationAdminAccountArgs {
   admin_account_id: string;
 }

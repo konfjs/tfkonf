@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCloudwatchEventBusPolicyArgs {
   event_bus_name?: string;
   policy: string;

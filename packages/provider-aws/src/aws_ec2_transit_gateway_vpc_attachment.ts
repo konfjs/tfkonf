@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TransitGatewayVpcAttachmentArgs {
   appliance_mode_support?: string;
   dns_support?: string;

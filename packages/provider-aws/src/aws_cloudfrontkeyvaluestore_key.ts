@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCloudfrontkeyvaluestoreKeyArgs {
   key: string;
   key_value_store_arn: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataLossPreventionDeidentifyTemplateArgsDeidentifyConfigImageTransformationsTransformsAllInfoTypes {}
 export interface GoogleDataLossPreventionDeidentifyTemplateArgsDeidentifyConfigImageTransformationsTransformsAllText {}
 export interface GoogleDataLossPreventionDeidentifyTemplateArgsDeidentifyConfigImageTransformationsTransformsRedactionColor {

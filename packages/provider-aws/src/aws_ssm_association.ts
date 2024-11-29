@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSsmAssociationArgsOutputLocation {
   s3_bucket_name: string;
   s3_key_prefix?: string;

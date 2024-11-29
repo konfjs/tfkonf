@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCognitoUserInGroupArgs {
   group_name: string;
   user_pool_id: string;

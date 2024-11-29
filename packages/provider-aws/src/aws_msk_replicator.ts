@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMskReplicatorArgsKafkaClusterAmazonMskCluster {
   msk_cluster_arn: string;
 }

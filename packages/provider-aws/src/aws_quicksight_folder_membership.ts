@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsQuicksightFolderMembershipArgs {
   folder_id: string;
   member_id: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GooglePrivilegedAccessManagerEntitlementArgsAdditionalNotificationTargets {
   admin_email_recipients?: string[];
   requester_email_recipients?: string[];

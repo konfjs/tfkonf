@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDmsReplicationTaskArgs {
   cdc_start_time?: string;
   migration_type: string;

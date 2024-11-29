@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEcsCapacityProviderArgsAutoScalingGroupProviderManagedScaling {}
 export interface AwsEcsCapacityProviderArgsAutoScalingGroupProvider {
   auto_scaling_group_arn: string;

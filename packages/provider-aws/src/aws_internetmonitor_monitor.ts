@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsInternetmonitorMonitorArgsHealthEventsConfig {
   availability_score_threshold?: number;
   performance_score_threshold?: number;

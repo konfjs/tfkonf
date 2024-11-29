@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeNodeGroupArgsAutoscalingPolicy {}
 export interface GoogleComputeNodeGroupArgsMaintenanceWindow {
   start_time: string;

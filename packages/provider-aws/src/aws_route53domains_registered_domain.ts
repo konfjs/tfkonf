@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53domainsRegisteredDomainArgsAdminContact {}
 export interface AwsRoute53domainsRegisteredDomainArgsBillingContact {}
 export interface AwsRoute53domainsRegisteredDomainArgsNameServer {

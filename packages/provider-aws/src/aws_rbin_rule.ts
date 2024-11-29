@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRbinRuleArgsLockConfigurationUnlockDelay {
   unlock_delay_unit: string;
   unlock_delay_value: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsTransferConnectorArgsAs2Config {
   compression: string;
   encryption_algorithm: string;

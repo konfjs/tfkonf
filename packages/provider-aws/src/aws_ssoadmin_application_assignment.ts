@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSsoadminApplicationAssignmentArgs {
   application_arn: string;
   principal_id: string;

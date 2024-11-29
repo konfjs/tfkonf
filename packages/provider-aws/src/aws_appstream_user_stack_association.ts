@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppstreamUserStackAssociationArgs {
   authentication_type: string;
   send_email_notification?: boolean;

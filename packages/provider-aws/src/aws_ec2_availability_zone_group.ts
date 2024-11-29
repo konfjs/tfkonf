@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2AvailabilityZoneGroupArgs {
   group_name: string;
   opt_in_status: string;

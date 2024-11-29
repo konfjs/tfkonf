@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigClientConfig {
   max_concurrent_invocations_per_instance?: number;
 }

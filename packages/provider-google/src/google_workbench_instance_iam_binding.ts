@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleWorkbenchInstanceIamBindingArgsCondition {
   description?: string;
   expression: string;

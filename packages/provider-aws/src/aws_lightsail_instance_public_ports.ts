@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLightsailInstancePublicPortsArgsPortInfo {
   from_port: number;
   protocol: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppconfigEnvironmentArgsMonitor {
   alarm_arn: string;
   alarm_role_arn?: string;

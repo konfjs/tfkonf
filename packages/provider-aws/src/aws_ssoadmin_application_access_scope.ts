@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSsoadminApplicationAccessScopeArgs {
   application_arn: string;
   authorized_targets?: string[];

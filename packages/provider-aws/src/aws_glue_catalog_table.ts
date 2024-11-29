@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlueCatalogTableArgsOpenTableFormatInputIcebergInput {
   metadata_operation: string;
   version?: string;

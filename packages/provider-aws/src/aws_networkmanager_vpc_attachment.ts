@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsNetworkmanagerVpcAttachmentArgsOptions {
   appliance_mode_support?: boolean;
   ipv6_support?: boolean;

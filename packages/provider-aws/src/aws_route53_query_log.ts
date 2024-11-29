@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRoute53QueryLogArgs {
   cloudwatch_log_group_arn: string;
   zone_id: string;

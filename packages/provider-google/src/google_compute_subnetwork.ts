@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeSubnetworkArgsLogConfig {
   aggregation_interval?: string;
   filter_expr?: string;

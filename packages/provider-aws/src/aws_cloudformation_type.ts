@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCloudformationTypeArgsLoggingConfig {
   log_group_name: string;
   log_role_arn: string;

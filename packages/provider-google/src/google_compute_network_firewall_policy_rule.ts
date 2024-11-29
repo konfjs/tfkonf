@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeNetworkFirewallPolicyRuleArgsMatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];

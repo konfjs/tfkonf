@@ -1,5 +1,5 @@
 {
-  "name": "tfs-monorepo",
+  "name": "@konfjs/monorepo",
   "private": true,
   "type": "module",
   "devDependencies": {

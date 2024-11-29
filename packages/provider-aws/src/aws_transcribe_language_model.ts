@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsTranscribeLanguageModelArgsInputDataConfig {
   data_access_role_arn: string;
   s3_uri: string;

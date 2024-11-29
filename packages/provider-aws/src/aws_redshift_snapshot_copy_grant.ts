@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftSnapshotCopyGrantArgs {
   snapshot_copy_grant_name: string;
   tags?: {

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsPinpointEmailChannelArgs {
   application_id: string;
   configuration_set?: string;

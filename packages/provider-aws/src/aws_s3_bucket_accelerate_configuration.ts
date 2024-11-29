@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsS3BucketAccelerateConfigurationArgs {
   bucket: string;
   expected_bucket_owner?: string;

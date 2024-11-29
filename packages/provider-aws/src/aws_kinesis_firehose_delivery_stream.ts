@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsKinesisFirehoseDeliveryStreamArgsElasticsearchConfigurationCloudwatchLoggingOptions {
   enabled?: boolean;
   log_group_name?: string;

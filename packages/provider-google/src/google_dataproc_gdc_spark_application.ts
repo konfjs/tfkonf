@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDataprocGdcSparkApplicationArgsPysparkApplicationConfig {
   archive_uris?: string[];
   args?: string[];

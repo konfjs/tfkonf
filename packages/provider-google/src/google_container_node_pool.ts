@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleContainerNodePoolArgsAutoscaling {
   max_node_count?: number;
   min_node_count?: number;

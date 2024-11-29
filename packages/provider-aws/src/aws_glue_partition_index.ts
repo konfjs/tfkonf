@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGluePartitionIndexArgsPartitionIndex {
   index_name?: string;
   keys?: string[];

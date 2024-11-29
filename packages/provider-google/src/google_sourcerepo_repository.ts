@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleSourcerepoRepositoryArgsPubsubConfigs {
   message_format: string;
   topic: string;

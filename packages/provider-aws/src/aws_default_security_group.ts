@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDefaultSecurityGroupArgs {
   revoke_rules_on_delete?: boolean;
   tags?: {

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleIapWebRegionBackendServiceIamPolicyArgs {
   policy_data: string;
   web_region_backend_service: string;

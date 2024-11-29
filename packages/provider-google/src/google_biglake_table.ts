@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleBiglakeTableArgsHiveOptionsStorageDescriptor {
   input_format?: string;
   location_uri?: string;

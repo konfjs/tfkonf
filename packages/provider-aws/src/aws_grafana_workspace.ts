@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGrafanaWorkspaceArgsNetworkAccessControl {
   prefix_list_ids: string[];
   vpce_ids: string[];

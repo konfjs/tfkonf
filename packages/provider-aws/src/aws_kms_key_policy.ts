@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsKmsKeyPolicyArgs {
   bypass_policy_lockout_safety_check?: boolean;
   key_id: string;

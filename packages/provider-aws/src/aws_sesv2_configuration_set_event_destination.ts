@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesv2ConfigurationSetEventDestinationArgsEventDestinationCloudWatchDestinationDimensionConfiguration {
   default_dimension_value: string;
   dimension_name: string;

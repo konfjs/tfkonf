@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleSpannerDatabaseArgsEncryptionConfig {
   kms_key_name?: string;
   kms_key_names?: string[];

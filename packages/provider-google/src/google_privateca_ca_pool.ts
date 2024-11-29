@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedIssuanceModes {
   allow_config_based_issuance: boolean;
   allow_csr_based_issuance: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesIdentityNotificationTopicArgs {
   identity: string;
   include_original_headers?: boolean;

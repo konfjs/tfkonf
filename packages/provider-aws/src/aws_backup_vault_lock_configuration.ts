@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsBackupVaultLockConfigurationArgs {
   backup_vault_name: string;
   changeable_for_days?: number;

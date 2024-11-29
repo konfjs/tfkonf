@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlueSecurityConfigurationArgsEncryptionConfigurationCloudwatchEncryption {
   cloudwatch_encryption_mode?: string;
   kms_key_arn?: string;

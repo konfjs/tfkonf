@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsApprunnerCustomDomainAssociationArgs {
   domain_name: string;
   enable_www_subdomain?: boolean;

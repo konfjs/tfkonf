@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSagemakerNotebookInstanceLifecycleConfigurationArgs {
   name?: string;
   on_create?: string;

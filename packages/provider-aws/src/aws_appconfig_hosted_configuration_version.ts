@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppconfigHostedConfigurationVersionArgs {
   application_id: string;
   configuration_profile_id: string;

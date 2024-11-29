@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesv2ConfigurationSetArgsDeliveryOptions {
   sending_pool_name?: string;
   tls_policy?: string;

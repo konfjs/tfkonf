@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSecurityhubStandardsControlAssociationArgs {
   association_status: string;
   security_control_id: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleLookerInstanceArgsAdminSettings {
   allowed_email_domains?: string[];
 }

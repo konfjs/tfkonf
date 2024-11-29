@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsApigatewayv2RouteArgsRequestParameter {
   request_parameter_key: string;
   required: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsKmsGrantArgsConstraints {
   encryption_context_equals?: {
     [key: string]: string;

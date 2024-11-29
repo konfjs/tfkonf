@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleBigtableAuthorizedViewArgsSubsetViewFamilySubsets {
   family_name: string;
   qualifier_prefixes?: string[];

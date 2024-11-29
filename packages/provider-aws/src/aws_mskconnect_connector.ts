@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMskconnectConnectorArgsCapacityAutoscalingScaleInPolicy {}
 export interface AwsMskconnectConnectorArgsCapacityAutoscalingScaleOutPolicy {}
 export interface AwsMskconnectConnectorArgsCapacityAutoscaling {

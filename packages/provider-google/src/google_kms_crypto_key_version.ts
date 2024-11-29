@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleKmsCryptoKeyVersionArgsExternalProtectionLevelOptions {
   ekm_connection_key_path?: string;
   external_key_uri?: string;

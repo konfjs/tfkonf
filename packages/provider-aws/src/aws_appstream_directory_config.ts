@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAppstreamDirectoryConfigArgsServiceAccountCredentials {
   account_name: string;
   account_password: string;

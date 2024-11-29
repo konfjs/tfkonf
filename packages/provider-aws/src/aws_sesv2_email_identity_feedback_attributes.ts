@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSesv2EmailIdentityFeedbackAttributesArgs {
   email_forwarding_enabled?: boolean;
   email_identity: string;

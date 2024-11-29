@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleHealthcareDatasetIamMemberArgsCondition {
   description?: string;
   expression: string;

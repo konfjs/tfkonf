@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCloud9EnvironmentEc2Args {
   automatic_stop_time_minutes?: number;
   connection_type?: string;

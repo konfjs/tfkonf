@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsNeptuneSubnetGroupArgs {
   description?: string;
   subnet_ids: string[];

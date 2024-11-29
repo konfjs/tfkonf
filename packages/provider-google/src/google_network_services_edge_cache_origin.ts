@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleNetworkServicesEdgeCacheOriginArgsAwsV4Authentication {
   access_key_id: string;
   origin_region: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsFsxDataRepositoryAssociationArgsS3AutoExportPolicy {}
 export interface AwsFsxDataRepositoryAssociationArgsS3AutoImportPolicy {}
 export interface AwsFsxDataRepositoryAssociationArgsS3 {

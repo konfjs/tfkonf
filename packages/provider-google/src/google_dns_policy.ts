@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDnsPolicyArgsAlternativeNameServerConfigTargetNameServers {
   forwarding_path?: string;
   ipv4_address: string;

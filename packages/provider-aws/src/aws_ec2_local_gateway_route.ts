@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2LocalGatewayRouteArgs {
   destination_cidr_block: string;
   local_gateway_route_table_id: string;

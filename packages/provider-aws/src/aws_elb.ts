@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsElbArgsAccessLogs {
   bucket: string;
   bucket_prefix?: string;

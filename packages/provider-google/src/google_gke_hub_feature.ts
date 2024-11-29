@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigConfigmanagementConfigSyncGit {
   gcp_service_account_email?: string;
   https_proxy?: string;

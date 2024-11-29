@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDatasyncLocationFsxWindowsFileSystemArgs {
   domain?: string;
   fsx_filesystem_arn: string;

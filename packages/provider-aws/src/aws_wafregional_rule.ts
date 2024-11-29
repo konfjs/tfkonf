@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsWafregionalRuleArgsPredicate {
   data_id: string;
   negated: boolean;

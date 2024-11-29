@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleNetworkConnectivitySpokeArgsLinkedInterconnectAttachments {
   include_import_ranges?: string[];
   site_to_site_data_transfer: boolean;

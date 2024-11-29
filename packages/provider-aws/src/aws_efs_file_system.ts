@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEfsFileSystemArgsLifecyclePolicy {
   transition_to_archive?: string;
   transition_to_ia?: string;

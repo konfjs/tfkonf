@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCleanroomsCollaborationArgsDataEncryptionMetadata {
   allow_clear_text: boolean;
   allow_duplicates: boolean;

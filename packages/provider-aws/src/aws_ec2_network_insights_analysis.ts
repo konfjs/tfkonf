@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2NetworkInsightsAnalysisArgs {
   filter_in_arns?: string[];
   network_insights_path_id: string;

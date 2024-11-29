@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleGkeonpremVmwareClusterArgsAntiAffinityGroups {
   aag_config_disabled: boolean;
 }

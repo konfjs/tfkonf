@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsImagebuilderDistributionConfigurationArgsDistributionAmiDistributionConfigurationLaunchPermission {
   organization_arns?: string[];
   organizational_unit_arns?: string[];

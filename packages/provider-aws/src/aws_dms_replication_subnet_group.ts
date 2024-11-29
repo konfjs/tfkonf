@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDmsReplicationSubnetGroupArgs {
   replication_subnet_group_description: string;
   replication_subnet_group_id: string;

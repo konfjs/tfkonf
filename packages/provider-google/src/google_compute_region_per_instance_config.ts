@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateDisk {
   delete_rule?: string;
   device_name: string;

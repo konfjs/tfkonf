@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMqBrokerArgsConfiguration {}
 export interface AwsMqBrokerArgsEncryptionOptions {
   use_aws_owned_key?: boolean;

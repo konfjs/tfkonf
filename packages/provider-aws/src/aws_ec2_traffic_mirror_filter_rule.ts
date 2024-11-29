@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TrafficMirrorFilterRuleArgsDestinationPortRange {
   from_port?: number;
   to_port?: number;

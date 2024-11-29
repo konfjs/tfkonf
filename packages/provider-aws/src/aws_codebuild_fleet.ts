@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCodebuildFleetArgsScalingConfigurationTargetTrackingScalingConfigs {
   metric_type?: string;
   target_value?: number;

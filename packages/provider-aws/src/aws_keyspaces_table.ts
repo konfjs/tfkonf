@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsKeyspacesTableArgsCapacitySpecification {
   read_capacity_units?: number;
   write_capacity_units?: number;

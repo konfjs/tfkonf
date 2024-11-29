@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2ClientClientSecretValue {
   plain_text: string;
 }

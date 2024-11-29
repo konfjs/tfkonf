@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsRedshiftDataShareConsumerAssociationArgs {
   allow_writes?: boolean;
   associate_entire_account?: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TransitGatewayPolicyTableAssociationArgs {
   transit_gateway_attachment_id: string;
   transit_gateway_policy_table_id: string;

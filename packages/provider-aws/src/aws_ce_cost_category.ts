@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCeCostCategoryArgsRuleInheritedValue {
   dimension_key?: string;
   dimension_name?: string;

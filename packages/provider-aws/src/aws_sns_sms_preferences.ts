@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsSnsSmsPreferencesArgs {
   default_sender_id?: string;
   default_sms_type?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleManagedKafkaClusterArgsCapacityConfig {
   memory_bytes: string;
   vcpu_count: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleApigeeEnvironmentArgsNodeConfig {
   max_node_count?: string;
   min_node_count?: string;

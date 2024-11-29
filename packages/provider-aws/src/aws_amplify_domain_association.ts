@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsAmplifyDomainAssociationArgsCertificateSettings {
   custom_certificate_arn?: string;
   type: string;

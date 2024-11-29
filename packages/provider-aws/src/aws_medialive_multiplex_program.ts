@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsMedialiveMultiplexProgramArgsMultiplexProgramSettingsServiceDescriptor {
   provider_name: string;
   service_name: string;

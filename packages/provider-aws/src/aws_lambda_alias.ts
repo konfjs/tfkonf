@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsLambdaAliasArgsRoutingConfig {
   additional_version_weights?: {
     [key: string]: number;

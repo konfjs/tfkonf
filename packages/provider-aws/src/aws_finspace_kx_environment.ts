@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsFinspaceKxEnvironmentArgsCustomDnsConfiguration {
   custom_dns_server_ip: string;
   custom_dns_server_name: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsGlueDataCatalogEncryptionSettingsArgsDataCatalogEncryptionSettingsConnectionPasswordEncryption {
   aws_kms_key_id?: string;
   return_connection_password_encrypted: boolean;

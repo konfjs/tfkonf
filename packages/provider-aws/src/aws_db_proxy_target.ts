@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsDbProxyTargetArgs {
   db_cluster_identifier?: string;
   db_instance_identifier?: string;

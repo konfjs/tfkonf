@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsEc2TransitGatewayMulticastGroupSourceArgs {
   group_ip_address: string;
   network_interface_id: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsVpcEndpointServiceAllowedPrincipalArgs {
   principal_arn: string;
   vpc_endpoint_service_id: string;

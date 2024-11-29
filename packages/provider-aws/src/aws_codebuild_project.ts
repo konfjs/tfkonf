@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsCodebuildProjectArgsArtifacts {
   artifact_identifier?: string;
   bucket_owner_access?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface AwsChimeVoiceConnectorLoggingArgs {
   enable_media_metric_logs?: boolean;
   enable_sip_logs?: boolean;

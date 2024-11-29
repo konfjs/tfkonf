@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleCloudfunctions2FunctionIamBindingArgsCondition {
   description?: string;
   expression: string;

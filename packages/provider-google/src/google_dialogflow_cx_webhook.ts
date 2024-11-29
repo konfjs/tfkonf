@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDialogflowCxWebhookArgsGenericWebService {
   allowed_ca_certs?: string[];
   request_headers?: {

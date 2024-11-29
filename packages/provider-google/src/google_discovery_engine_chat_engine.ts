@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "tfs";
+import { TerraformConfig, TerraformResource } from "@konfjs/core";
 export interface GoogleDiscoveryEngineChatEngineArgsChatEngineConfigAgentCreationConfig {
   business?: string;
   default_language_code: string;
