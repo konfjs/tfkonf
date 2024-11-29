@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleIdentityPlatformTenantOauthIdpConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleIdentityPlatformTenantOauthIdpConfigArgs {
   issuer: string;
   name: string;
   tenant: string;
-  timeouts: Timeouts;
+  timeouts: GoogleIdentityPlatformTenantOauthIdpConfigArgstimeouts;
 }
 export class google_identity_platform_tenant_oauth_idp_config extends TerraformResource {
   readonly id?: string;

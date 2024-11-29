@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchLogs {
+export interface AwsEvidentlyProjectArgsDataDeliveryCloudwatchLogs {
   log_group?: string;
 }
-export interface S3Destination {
+export interface AwsEvidentlyProjectArgsDataDeliveryS3Destination {
   bucket?: string;
   prefix?: string;
 }
-export interface DataDelivery {
-  cloudwatch_logs: CloudwatchLogs;
-  s3_destination: S3Destination;
+export interface AwsEvidentlyProjectArgsDataDelivery {
+  cloudwatch_logs: AwsEvidentlyProjectArgsDataDeliveryCloudwatchLogs;
+  s3_destination: AwsEvidentlyProjectArgsDataDeliveryS3Destination;
 }
-export interface Timeouts {
+export interface AwsEvidentlyProjectArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface AwsEvidentlyProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  data_delivery: DataDelivery;
-  timeouts: Timeouts;
+  data_delivery: AwsEvidentlyProjectArgsDataDelivery;
+  timeouts: AwsEvidentlyProjectArgstimeouts;
 }
 export class aws_evidently_project extends TerraformResource {
   readonly active_experiment_count!: number;

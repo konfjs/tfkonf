@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleStorageHmacKeyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface Timeouts {
 export interface GoogleStorageHmacKeyArgs {
   service_account_email: string;
   state?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleStorageHmacKeyArgstimeouts;
 }
 export class google_storage_hmac_key extends TerraformResource {
   readonly access_id!: string;

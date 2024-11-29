@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BasicService {
+export interface GoogleMonitoringServiceArgsBasicService {
   service_labels?: {
     [key: string]: string;
   };
   service_type?: string;
 }
-export interface Timeouts {
+export interface GoogleMonitoringServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleMonitoringServiceArgs {
   user_labels?: {
     [key: string]: string;
   };
-  basic_service: BasicService;
-  timeouts: Timeouts;
+  basic_service: GoogleMonitoringServiceArgsBasicService;
+  timeouts: GoogleMonitoringServiceArgstimeouts;
 }
 export class google_monitoring_service extends TerraformResource {
   readonly id?: string;

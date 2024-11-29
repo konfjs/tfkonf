@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2CapacityBlockReservationArgstimeouts {
   create?: string;
 }
 export interface AwsEc2CapacityBlockReservationArgs {
@@ -8,7 +8,7 @@ export interface AwsEc2CapacityBlockReservationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsEc2CapacityBlockReservationArgstimeouts;
 }
 export class aws_ec2_capacity_block_reservation extends TerraformResource {
   readonly arn!: string;

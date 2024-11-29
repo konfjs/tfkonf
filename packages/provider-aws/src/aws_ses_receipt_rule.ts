@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AddHeaderAction {
+export interface AwsSesReceiptRuleArgsAddHeaderAction {
   header_name: string;
   header_value: string;
   position: number;
 }
-export interface BounceAction {
+export interface AwsSesReceiptRuleArgsBounceAction {
   message: string;
   position: number;
   sender: string;
@@ -12,13 +12,13 @@ export interface BounceAction {
   status_code?: string;
   topic_arn?: string;
 }
-export interface LambdaAction {
+export interface AwsSesReceiptRuleArgsLambdaAction {
   function_arn: string;
   invocation_type?: string;
   position: number;
   topic_arn?: string;
 }
-export interface S3Action {
+export interface AwsSesReceiptRuleArgsS3Action {
   bucket_name: string;
   iam_role_arn?: string;
   kms_key_arn?: string;
@@ -26,17 +26,17 @@ export interface S3Action {
   position: number;
   topic_arn?: string;
 }
-export interface SnsAction {
+export interface AwsSesReceiptRuleArgsSnsAction {
   encoding?: string;
   position: number;
   topic_arn: string;
 }
-export interface StopAction {
+export interface AwsSesReceiptRuleArgsStopAction {
   position: number;
   scope: string;
   topic_arn?: string;
 }
-export interface WorkmailAction {
+export interface AwsSesReceiptRuleArgsWorkmailAction {
   organization_arn: string;
   position: number;
   topic_arn?: string;
@@ -48,13 +48,13 @@ export interface AwsSesReceiptRuleArgs {
   recipients?: string[];
   rule_set_name: string;
   scan_enabled?: boolean;
-  add_header_action: AddHeaderAction;
-  bounce_action: BounceAction;
-  lambda_action: LambdaAction;
-  s3_action: S3Action;
-  sns_action: SnsAction;
-  stop_action: StopAction;
-  workmail_action: WorkmailAction;
+  add_header_action: AwsSesReceiptRuleArgsAddHeaderAction;
+  bounce_action: AwsSesReceiptRuleArgsBounceAction;
+  lambda_action: AwsSesReceiptRuleArgsLambdaAction;
+  s3_action: AwsSesReceiptRuleArgsS3Action;
+  sns_action: AwsSesReceiptRuleArgsSnsAction;
+  stop_action: AwsSesReceiptRuleArgsStopAction;
+  workmail_action: AwsSesReceiptRuleArgsWorkmailAction;
 }
 export class aws_ses_receipt_rule extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Artifacts {
+export interface AwsCodebuildProjectArgsartifacts {
   artifact_identifier?: string;
   bucket_owner_access?: string;
   encryption_disabled?: boolean;
@@ -11,67 +11,67 @@ export interface Artifacts {
   path?: string;
   type: string;
 }
-export interface Restrictions {
+export interface AwsCodebuildProjectArgsBuildBatchConfigrestrictions {
   compute_types_allowed?: string[];
   maximum_builds_allowed?: number;
 }
-export interface BuildBatchConfig {
+export interface AwsCodebuildProjectArgsBuildBatchConfig {
   combine_artifacts?: boolean;
   service_role: string;
   timeout_in_mins?: number;
-  restrictions: Restrictions;
+  restrictions: AwsCodebuildProjectArgsBuildBatchConfigrestrictions;
 }
-export interface Cache {
+export interface AwsCodebuildProjectArgscache {
   location?: string;
   modes?: string[];
   type?: string;
 }
-export interface EnvironmentVariable {
+export interface AwsCodebuildProjectArgsenvironmentEnvironmentVariable {
   name: string;
   type?: string;
   value: string;
 }
-export interface Fleet {
+export interface AwsCodebuildProjectArgsenvironmentfleet {
   fleet_arn?: string;
 }
-export interface RegistryCredential {
+export interface AwsCodebuildProjectArgsenvironmentRegistryCredential {
   credential: string;
   credential_provider: string;
 }
-export interface Environment {
+export interface AwsCodebuildProjectArgsenvironment {
   certificate?: string;
   compute_type: string;
   image: string;
   image_pull_credentials_type?: string;
   privileged_mode?: boolean;
   type: string;
-  environment_variable: EnvironmentVariable;
-  fleet: Fleet;
-  registry_credential: RegistryCredential;
+  environment_variable: AwsCodebuildProjectArgsenvironmentEnvironmentVariable;
+  fleet: AwsCodebuildProjectArgsenvironmentfleet;
+  registry_credential: AwsCodebuildProjectArgsenvironmentRegistryCredential;
 }
-export interface FileSystemLocations {
+export interface AwsCodebuildProjectArgsFileSystemLocations {
   identifier?: string;
   location?: string;
   mount_options?: string;
   mount_point?: string;
   type?: string;
 }
-export interface CloudwatchLogs {
+export interface AwsCodebuildProjectArgsLogsConfigCloudwatchLogs {
   group_name?: string;
   status?: string;
   stream_name?: string;
 }
-export interface S3Logs {
+export interface AwsCodebuildProjectArgsLogsConfigS3Logs {
   bucket_owner_access?: string;
   encryption_disabled?: boolean;
   location?: string;
   status?: string;
 }
-export interface LogsConfig {
-  cloudwatch_logs: CloudwatchLogs;
-  s3_logs: S3Logs;
+export interface AwsCodebuildProjectArgsLogsConfig {
+  cloudwatch_logs: AwsCodebuildProjectArgsLogsConfigCloudwatchLogs;
+  s3_logs: AwsCodebuildProjectArgsLogsConfigS3Logs;
 }
-export interface SecondaryArtifacts {
+export interface AwsCodebuildProjectArgsSecondaryArtifacts {
   artifact_identifier: string;
   bucket_owner_access?: string;
   encryption_disabled?: boolean;
@@ -83,18 +83,18 @@ export interface SecondaryArtifacts {
   path?: string;
   type: string;
 }
-export interface SecondarySourceVersion {
+export interface AwsCodebuildProjectArgsSecondarySourceVersion {
   source_identifier: string;
   source_version: string;
 }
-export interface BuildStatusConfig {
+export interface AwsCodebuildProjectArgsSecondarySourcesBuildStatusConfig {
   context?: string;
   target_url?: string;
 }
-export interface GitSubmodulesConfig {
+export interface AwsCodebuildProjectArgsSecondarySourcesGitSubmodulesConfig {
   fetch_submodules: boolean;
 }
-export interface SecondarySources {
+export interface AwsCodebuildProjectArgsSecondarySources {
   buildspec?: string;
   git_clone_depth?: number;
   insecure_ssl?: boolean;
@@ -102,27 +102,27 @@ export interface SecondarySources {
   report_build_status?: boolean;
   source_identifier: string;
   type: string;
-  build_status_config: BuildStatusConfig;
-  git_submodules_config: GitSubmodulesConfig;
+  build_status_config: AwsCodebuildProjectArgsSecondarySourcesBuildStatusConfig;
+  git_submodules_config: AwsCodebuildProjectArgsSecondarySourcesGitSubmodulesConfig;
 }
-export interface BuildStatusConfig {
+export interface AwsCodebuildProjectArgssourceBuildStatusConfig {
   context?: string;
   target_url?: string;
 }
-export interface GitSubmodulesConfig {
+export interface AwsCodebuildProjectArgssourceGitSubmodulesConfig {
   fetch_submodules: boolean;
 }
-export interface Source {
+export interface AwsCodebuildProjectArgssource {
   buildspec?: string;
   git_clone_depth?: number;
   insecure_ssl?: boolean;
   location?: string;
   report_build_status?: boolean;
   type: string;
-  build_status_config: BuildStatusConfig;
-  git_submodules_config: GitSubmodulesConfig;
+  build_status_config: AwsCodebuildProjectArgssourceBuildStatusConfig;
+  git_submodules_config: AwsCodebuildProjectArgssourceGitSubmodulesConfig;
 }
-export interface VpcConfig {
+export interface AwsCodebuildProjectArgsVpcConfig {
   security_group_ids: string[];
   subnets: string[];
   vpc_id: string;
@@ -140,17 +140,17 @@ export interface AwsCodebuildProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  artifacts: Artifacts;
-  build_batch_config: BuildBatchConfig;
-  cache: Cache;
-  environment: Environment;
-  file_system_locations: FileSystemLocations;
-  logs_config: LogsConfig;
-  secondary_artifacts: SecondaryArtifacts;
-  secondary_source_version: SecondarySourceVersion;
-  secondary_sources: SecondarySources;
-  source: Source;
-  vpc_config: VpcConfig;
+  artifacts: AwsCodebuildProjectArgsartifacts;
+  build_batch_config: AwsCodebuildProjectArgsBuildBatchConfig;
+  cache: AwsCodebuildProjectArgscache;
+  environment: AwsCodebuildProjectArgsenvironment;
+  file_system_locations: AwsCodebuildProjectArgsFileSystemLocations;
+  logs_config: AwsCodebuildProjectArgsLogsConfig;
+  secondary_artifacts: AwsCodebuildProjectArgsSecondaryArtifacts;
+  secondary_source_version: AwsCodebuildProjectArgsSecondarySourceVersion;
+  secondary_sources: AwsCodebuildProjectArgsSecondarySources;
+  source: AwsCodebuildProjectArgssource;
+  vpc_config: AwsCodebuildProjectArgsVpcConfig;
 }
 export class aws_codebuild_project extends TerraformResource {
   readonly arn!: string;

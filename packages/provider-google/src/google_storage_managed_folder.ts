@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleStorageManagedFolderArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleStorageManagedFolderArgs {
   bucket: string;
   force_destroy?: boolean;
   name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleStorageManagedFolderArgstimeouts;
 }
 export class google_storage_managed_folder extends TerraformResource {
   readonly create_time!: string;

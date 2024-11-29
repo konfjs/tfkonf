@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OutputConfig {
+export interface AwsSagemakerDeviceFleetArgsOutputConfig {
   kms_key_id?: string;
   s3_output_location: string;
 }
@@ -11,7 +11,7 @@ export interface AwsSagemakerDeviceFleetArgs {
   tags?: {
     [key: string]: string;
   };
-  output_config: OutputConfig;
+  output_config: AwsSagemakerDeviceFleetArgsOutputConfig;
 }
 export class aws_sagemaker_device_fleet extends TerraformResource {
   readonly arn!: string;

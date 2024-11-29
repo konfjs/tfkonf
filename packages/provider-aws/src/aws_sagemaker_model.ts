@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RepositoryAuthConfig {
+export interface AwsSagemakerModelArgscontainerImageConfigRepositoryAuthConfig {
   repository_credentials_provider_arn: string;
 }
-export interface ImageConfig {
+export interface AwsSagemakerModelArgscontainerImageConfig {
   repository_access_mode: string;
-  repository_auth_config: RepositoryAuthConfig;
+  repository_auth_config: AwsSagemakerModelArgscontainerImageConfigRepositoryAuthConfig;
 }
-export interface ModelAccessConfig {
+export interface AwsSagemakerModelArgscontainerModelDataSourceS3DataSourceModelAccessConfig {
   accept_eula: boolean;
 }
-export interface S3DataSource {
+export interface AwsSagemakerModelArgscontainerModelDataSourceS3DataSource {
   compression_type: string;
   s3_data_type: string;
   s3_uri: string;
-  model_access_config: ModelAccessConfig;
+  model_access_config: AwsSagemakerModelArgscontainerModelDataSourceS3DataSourceModelAccessConfig;
 }
-export interface ModelDataSource {
-  s3_data_source: S3DataSource;
+export interface AwsSagemakerModelArgscontainerModelDataSource {
+  s3_data_source: AwsSagemakerModelArgscontainerModelDataSourceS3DataSource;
 }
-export interface MultiModelConfig {
+export interface AwsSagemakerModelArgscontainerMultiModelConfig {
   model_cache_setting?: string;
 }
-export interface Container {
+export interface AwsSagemakerModelArgscontainer {
   container_hostname?: string;
   environment?: {
     [key: string]: string;
@@ -31,36 +31,36 @@ export interface Container {
   mode?: string;
   model_data_url?: string;
   model_package_name?: string;
-  image_config: ImageConfig;
-  model_data_source: ModelDataSource;
-  multi_model_config: MultiModelConfig;
+  image_config: AwsSagemakerModelArgscontainerImageConfig;
+  model_data_source: AwsSagemakerModelArgscontainerModelDataSource;
+  multi_model_config: AwsSagemakerModelArgscontainerMultiModelConfig;
 }
-export interface InferenceExecutionConfig {
+export interface AwsSagemakerModelArgsInferenceExecutionConfig {
   mode: string;
 }
-export interface RepositoryAuthConfig {
+export interface AwsSagemakerModelArgsPrimaryContainerImageConfigRepositoryAuthConfig {
   repository_credentials_provider_arn: string;
 }
-export interface ImageConfig {
+export interface AwsSagemakerModelArgsPrimaryContainerImageConfig {
   repository_access_mode: string;
-  repository_auth_config: RepositoryAuthConfig;
+  repository_auth_config: AwsSagemakerModelArgsPrimaryContainerImageConfigRepositoryAuthConfig;
 }
-export interface ModelAccessConfig {
+export interface AwsSagemakerModelArgsPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig {
   accept_eula: boolean;
 }
-export interface S3DataSource {
+export interface AwsSagemakerModelArgsPrimaryContainerModelDataSourceS3DataSource {
   compression_type: string;
   s3_data_type: string;
   s3_uri: string;
-  model_access_config: ModelAccessConfig;
+  model_access_config: AwsSagemakerModelArgsPrimaryContainerModelDataSourceS3DataSourceModelAccessConfig;
 }
-export interface ModelDataSource {
-  s3_data_source: S3DataSource;
+export interface AwsSagemakerModelArgsPrimaryContainerModelDataSource {
+  s3_data_source: AwsSagemakerModelArgsPrimaryContainerModelDataSourceS3DataSource;
 }
-export interface MultiModelConfig {
+export interface AwsSagemakerModelArgsPrimaryContainerMultiModelConfig {
   model_cache_setting?: string;
 }
-export interface PrimaryContainer {
+export interface AwsSagemakerModelArgsPrimaryContainer {
   container_hostname?: string;
   environment?: {
     [key: string]: string;
@@ -70,11 +70,11 @@ export interface PrimaryContainer {
   mode?: string;
   model_data_url?: string;
   model_package_name?: string;
-  image_config: ImageConfig;
-  model_data_source: ModelDataSource;
-  multi_model_config: MultiModelConfig;
+  image_config: AwsSagemakerModelArgsPrimaryContainerImageConfig;
+  model_data_source: AwsSagemakerModelArgsPrimaryContainerModelDataSource;
+  multi_model_config: AwsSagemakerModelArgsPrimaryContainerMultiModelConfig;
 }
-export interface VpcConfig {
+export interface AwsSagemakerModelArgsVpcConfig {
   security_group_ids: string[];
   subnets: string[];
 }
@@ -84,10 +84,10 @@ export interface AwsSagemakerModelArgs {
   tags?: {
     [key: string]: string;
   };
-  container: Container;
-  inference_execution_config: InferenceExecutionConfig;
-  primary_container: PrimaryContainer;
-  vpc_config: VpcConfig;
+  container: AwsSagemakerModelArgscontainer;
+  inference_execution_config: AwsSagemakerModelArgsInferenceExecutionConfig;
+  primary_container: AwsSagemakerModelArgsPrimaryContainer;
+  vpc_config: AwsSagemakerModelArgsVpcConfig;
 }
 export class aws_sagemaker_model extends TerraformResource {
   readonly arn!: string;

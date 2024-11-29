@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomerManagedPolicyReference {
+export interface AwsSsoadminCustomerManagedPolicyAttachmentArgsCustomerManagedPolicyReference {
   name: string;
   path?: string;
 }
-export interface Timeouts {
+export interface AwsSsoadminCustomerManagedPolicyAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsSsoadminCustomerManagedPolicyAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
-  customer_managed_policy_reference: CustomerManagedPolicyReference;
-  timeouts: Timeouts;
+  customer_managed_policy_reference: AwsSsoadminCustomerManagedPolicyAttachmentArgsCustomerManagedPolicyReference;
+  timeouts: AwsSsoadminCustomerManagedPolicyAttachmentArgstimeouts;
 }
 export class aws_ssoadmin_customer_managed_policy_attachment extends TerraformResource {
   readonly id?: string;

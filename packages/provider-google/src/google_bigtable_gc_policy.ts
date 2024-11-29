@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MaxAge {}
-export interface MaxVersion {
+export interface GoogleBigtableGcPolicyArgsMaxAge {}
+export interface GoogleBigtableGcPolicyArgsMaxVersion {
   number: number;
 }
-export interface Timeouts {
+export interface GoogleBigtableGcPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,9 +15,9 @@ export interface GoogleBigtableGcPolicyArgs {
   instance_name: string;
   mode?: string;
   table: string;
-  max_age: MaxAge;
-  max_version: MaxVersion;
-  timeouts: Timeouts;
+  max_age: GoogleBigtableGcPolicyArgsMaxAge;
+  max_version: GoogleBigtableGcPolicyArgsMaxVersion;
+  timeouts: GoogleBigtableGcPolicyArgstimeouts;
 }
 export class google_bigtable_gc_policy extends TerraformResource {
   readonly id?: string;

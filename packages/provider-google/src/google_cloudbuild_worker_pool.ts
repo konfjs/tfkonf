@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NetworkConfig {
+export interface GoogleCloudbuildWorkerPoolArgsNetworkConfig {
   peered_network: string;
   peered_network_ip_range?: string;
 }
-export interface Timeouts {
+export interface GoogleCloudbuildWorkerPoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkerConfig {
+export interface GoogleCloudbuildWorkerPoolArgsWorkerConfig {
   disk_size_gb?: number;
   machine_type?: string;
 }
@@ -19,9 +19,9 @@ export interface GoogleCloudbuildWorkerPoolArgs {
   display_name?: string;
   location: string;
   name: string;
-  network_config: NetworkConfig;
-  timeouts: Timeouts;
-  worker_config: WorkerConfig;
+  network_config: GoogleCloudbuildWorkerPoolArgsNetworkConfig;
+  timeouts: GoogleCloudbuildWorkerPoolArgstimeouts;
+  worker_config: GoogleCloudbuildWorkerPoolArgsWorkerConfig;
 }
 export class google_cloudbuild_worker_pool extends TerraformResource {
   readonly create_time!: string;

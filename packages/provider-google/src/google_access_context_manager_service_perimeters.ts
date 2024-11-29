@@ -1,148 +1,148 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressFromsources {
   access_level?: string;
 }
-export interface EgressFrom {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressFrom {
   identities?: string[];
   identity_type?: string;
   source_restriction?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTooperationsMethodSelectors;
 }
-export interface EgressTo {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTo {
   external_resources?: string[];
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTooperations;
 }
-export interface EgressPolicies {
-  egress_from: EgressFrom;
-  egress_to: EgressTo;
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPolicies {
+  egress_from: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressFrom;
+  egress_to: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPoliciesEgressTo;
 }
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressFromsources {
   access_level?: string;
   resource?: string;
 }
-export interface IngressFrom {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressFrom {
   identities?: string[];
   identity_type?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTooperationsMethodSelectors;
 }
-export interface IngressTo {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTo {
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTooperations;
 }
-export interface IngressPolicies {
-  ingress_from: IngressFrom;
-  ingress_to: IngressTo;
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPolicies {
+  ingress_from: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressFrom;
+  ingress_to: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPoliciesIngressTo;
 }
-export interface VpcAccessibleServices {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecVpcAccessibleServices {
   allowed_services?: string[];
   enable_restriction?: boolean;
 }
-export interface Spec {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspec {
   access_levels?: string[];
   resources?: string[];
   restricted_services?: string[];
-  egress_policies: EgressPolicies;
-  ingress_policies: IngressPolicies;
-  vpc_accessible_services: VpcAccessibleServices;
+  egress_policies: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecEgressPolicies;
+  ingress_policies: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecIngressPolicies;
+  vpc_accessible_services: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspecVpcAccessibleServices;
 }
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressFromsources {
   access_level?: string;
 }
-export interface EgressFrom {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressFrom {
   identities?: string[];
   identity_type?: string;
   source_restriction?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTooperationsMethodSelectors;
 }
-export interface EgressTo {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTo {
   external_resources?: string[];
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTooperations;
 }
-export interface EgressPolicies {
-  egress_from: EgressFrom;
-  egress_to: EgressTo;
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPolicies {
+  egress_from: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressFrom;
+  egress_to: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPoliciesEgressTo;
 }
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressFromsources {
   access_level?: string;
   resource?: string;
 }
-export interface IngressFrom {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressFrom {
   identities?: string[];
   identity_type?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTooperationsMethodSelectors;
 }
-export interface IngressTo {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTo {
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTooperations;
 }
-export interface IngressPolicies {
-  ingress_from: IngressFrom;
-  ingress_to: IngressTo;
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPolicies {
+  ingress_from: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressFrom;
+  ingress_to: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPoliciesIngressTo;
 }
-export interface VpcAccessibleServices {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusVpcAccessibleServices {
   allowed_services?: string[];
   enable_restriction?: boolean;
 }
-export interface Status {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatus {
   access_levels?: string[];
   resources?: string[];
   restricted_services?: string[];
-  egress_policies: EgressPolicies;
-  ingress_policies: IngressPolicies;
-  vpc_accessible_services: VpcAccessibleServices;
+  egress_policies: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusEgressPolicies;
+  ingress_policies: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusIngressPolicies;
+  vpc_accessible_services: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatusVpcAccessibleServices;
 }
-export interface ServicePerimeters {
+export interface GoogleAccessContextManagerServicePerimetersArgsServicePerimeters {
   description?: string;
   name: string;
   perimeter_type?: string;
   title: string;
   use_explicit_dry_run_spec?: boolean;
-  spec: Spec;
-  status: Status;
+  spec: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersspec;
+  status: GoogleAccessContextManagerServicePerimetersArgsServicePerimetersstatus;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerServicePerimetersArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleAccessContextManagerServicePerimetersArgs {
   parent: string;
-  service_perimeters: ServicePerimeters;
-  timeouts: Timeouts;
+  service_perimeters: GoogleAccessContextManagerServicePerimetersArgsServicePerimeters;
+  timeouts: GoogleAccessContextManagerServicePerimetersArgstimeouts;
 }
 export class google_access_context_manager_service_perimeters extends TerraformResource {
   readonly id?: string;

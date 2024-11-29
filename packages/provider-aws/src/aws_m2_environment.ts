@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HighAvailabilityConfig {
+export interface AwsM2EnvironmentArgsHighAvailabilityConfig {
   desired_capacity: number;
 }
-export interface Efs {
+export interface AwsM2EnvironmentArgsStorageConfigurationefs {
   file_system_id: string;
   mount_point: string;
 }
-export interface Fsx {
+export interface AwsM2EnvironmentArgsStorageConfigurationfsx {
   file_system_id: string;
   mount_point: string;
 }
-export interface StorageConfiguration {
-  efs: Efs;
-  fsx: Fsx;
+export interface AwsM2EnvironmentArgsStorageConfiguration {
+  efs: AwsM2EnvironmentArgsStorageConfigurationefs;
+  fsx: AwsM2EnvironmentArgsStorageConfigurationfsx;
 }
-export interface Timeouts {
+export interface AwsM2EnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,9 +30,9 @@ export interface AwsM2EnvironmentArgs {
   tags?: {
     [key: string]: string;
   };
-  high_availability_config: HighAvailabilityConfig;
-  storage_configuration: StorageConfiguration;
-  timeouts: Timeouts;
+  high_availability_config: AwsM2EnvironmentArgsHighAvailabilityConfig;
+  storage_configuration: AwsM2EnvironmentArgsStorageConfiguration;
+  timeouts: AwsM2EnvironmentArgstimeouts;
 }
 export class aws_m2_environment extends TerraformResource {
   readonly arn!: string;

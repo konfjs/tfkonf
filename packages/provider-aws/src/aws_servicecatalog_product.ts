@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ProvisioningArtifactParameters {
+export interface AwsServicecatalogProductArgsProvisioningArtifactParameters {
   description?: string;
   disable_template_validation?: boolean;
   name?: string;
@@ -7,7 +7,7 @@ export interface ProvisioningArtifactParameters {
   template_url?: string;
   type?: string;
 }
-export interface Timeouts {
+export interface AwsServicecatalogProductArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -21,8 +21,8 @@ export interface AwsServicecatalogProductArgs {
     [key: string]: string;
   };
   type: string;
-  provisioning_artifact_parameters: ProvisioningArtifactParameters;
-  timeouts: Timeouts;
+  provisioning_artifact_parameters: AwsServicecatalogProductArgsProvisioningArtifactParameters;
+  timeouts: AwsServicecatalogProductArgstimeouts;
 }
 export class aws_servicecatalog_product extends TerraformResource {
   readonly arn!: string;

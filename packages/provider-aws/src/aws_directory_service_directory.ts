@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConnectSettings {
+export interface AwsDirectoryServiceDirectoryArgsConnectSettings {
   customer_dns_ips: string[];
   customer_username: string;
   subnet_ids: string[];
   vpc_id: string;
 }
-export interface Timeouts {
+export interface AwsDirectoryServiceDirectoryArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcSettings {
+export interface AwsDirectoryServiceDirectoryArgsVpcSettings {
   subnet_ids: string[];
   vpc_id: string;
 }
@@ -23,9 +23,9 @@ export interface AwsDirectoryServiceDirectoryArgs {
     [key: string]: string;
   };
   type?: string;
-  connect_settings: ConnectSettings;
-  timeouts: Timeouts;
-  vpc_settings: VpcSettings;
+  connect_settings: AwsDirectoryServiceDirectoryArgsConnectSettings;
+  timeouts: AwsDirectoryServiceDirectoryArgstimeouts;
+  vpc_settings: AwsDirectoryServiceDirectoryArgsVpcSettings;
 }
 export class aws_directory_service_directory extends TerraformResource {
   readonly access_url!: string;

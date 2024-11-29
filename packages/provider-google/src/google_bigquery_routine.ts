@@ -1,23 +1,23 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Arguments {
+export interface GoogleBigqueryRoutineArgsarguments {
   argument_kind?: string;
   data_type?: string;
   mode?: string;
   name?: string;
 }
-export interface RemoteFunctionOptions {
+export interface GoogleBigqueryRoutineArgsRemoteFunctionOptions {
   connection?: string;
   endpoint?: string;
   max_batching_rows?: string;
 }
-export interface SparkOptions {
+export interface GoogleBigqueryRoutineArgsSparkOptions {
   connection?: string;
   container_image?: string;
   main_class?: string;
   main_file_uri?: string;
   runtime_version?: string;
 }
-export interface Timeouts {
+export interface GoogleBigqueryRoutineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,10 +34,10 @@ export interface GoogleBigqueryRoutineArgs {
   return_type?: string;
   routine_id: string;
   routine_type: string;
-  arguments: Arguments;
-  remote_function_options: RemoteFunctionOptions;
-  spark_options: SparkOptions;
-  timeouts: Timeouts;
+  arguments: GoogleBigqueryRoutineArgsarguments;
+  remote_function_options: GoogleBigqueryRoutineArgsRemoteFunctionOptions;
+  spark_options: GoogleBigqueryRoutineArgsSparkOptions;
+  timeouts: GoogleBigqueryRoutineArgstimeouts;
 }
 export class google_bigquery_routine extends TerraformResource {
   readonly creation_time!: number;

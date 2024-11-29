@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleIapClientArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleIapClientArgs {
   brand: string;
   display_name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleIapClientArgstimeouts;
 }
 export class google_iap_client extends TerraformResource {
   readonly client_id!: string;

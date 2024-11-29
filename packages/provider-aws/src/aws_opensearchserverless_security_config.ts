@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SamlOptions {
+export interface AwsOpensearchserverlessSecurityConfigArgsSamlOptions {
   group_attribute?: string;
   metadata: string;
   user_attribute?: string;
@@ -8,7 +8,7 @@ export interface AwsOpensearchserverlessSecurityConfigArgs {
   description?: string;
   name: string;
   type: string;
-  saml_options: SamlOptions;
+  saml_options: AwsOpensearchserverlessSecurityConfigArgsSamlOptions;
 }
 export class aws_opensearchserverless_security_config extends TerraformResource {
   readonly config_version!: string;

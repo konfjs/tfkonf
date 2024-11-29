@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NfsExportOptions {
+export interface GoogleFilestoreInstanceArgsFileSharesNfsExportOptions {
   access_mode?: string;
   anon_gid?: number;
   anon_uid?: number;
   ip_ranges?: string[];
   squash_mode?: string;
 }
-export interface FileShares {
+export interface GoogleFilestoreInstanceArgsFileShares {
   capacity_gb: number;
   name: string;
   source_backup?: string;
-  nfs_export_options: NfsExportOptions;
+  nfs_export_options: GoogleFilestoreInstanceArgsFileSharesNfsExportOptions;
 }
-export interface Networks {
+export interface GoogleFilestoreInstanceArgsnetworks {
   connect_mode?: string;
   modes: string[];
   network: string;
 }
-export interface FixedIops {
+export interface GoogleFilestoreInstanceArgsPerformanceConfigFixedIops {
   max_iops?: number;
 }
-export interface IopsPerTb {
+export interface GoogleFilestoreInstanceArgsPerformanceConfigIopsPerTb {
   max_iops_per_tb?: number;
 }
-export interface PerformanceConfig {
-  fixed_iops: FixedIops;
-  iops_per_tb: IopsPerTb;
+export interface GoogleFilestoreInstanceArgsPerformanceConfig {
+  fixed_iops: GoogleFilestoreInstanceArgsPerformanceConfigFixedIops;
+  iops_per_tb: GoogleFilestoreInstanceArgsPerformanceConfigIopsPerTb;
 }
-export interface Timeouts {
+export interface GoogleFilestoreInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -43,10 +43,10 @@ export interface GoogleFilestoreInstanceArgs {
   name: string;
   protocol?: string;
   tier: string;
-  file_shares: FileShares;
-  networks: Networks;
-  performance_config: PerformanceConfig;
-  timeouts: Timeouts;
+  file_shares: GoogleFilestoreInstanceArgsFileShares;
+  networks: GoogleFilestoreInstanceArgsnetworks;
+  performance_config: GoogleFilestoreInstanceArgsPerformanceConfig;
+  timeouts: GoogleFilestoreInstanceArgstimeouts;
 }
 export class google_filestore_instance extends TerraformResource {
   readonly create_time!: string;

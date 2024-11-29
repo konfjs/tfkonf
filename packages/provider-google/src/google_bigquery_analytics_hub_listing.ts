@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SelectedResources {
+export interface GoogleBigqueryAnalyticsHubListingArgsBigqueryDatasetSelectedResources {
   table?: string;
 }
-export interface BigqueryDataset {
+export interface GoogleBigqueryAnalyticsHubListingArgsBigqueryDataset {
   dataset: string;
-  selected_resources: SelectedResources;
+  selected_resources: GoogleBigqueryAnalyticsHubListingArgsBigqueryDatasetSelectedResources;
 }
-export interface DataProvider {
+export interface GoogleBigqueryAnalyticsHubListingArgsDataProvider {
   name: string;
   primary_contact?: string;
 }
-export interface Publisher {
+export interface GoogleBigqueryAnalyticsHubListingArgspublisher {
   name: string;
   primary_contact?: string;
 }
-export interface RestrictedExportConfig {
+export interface GoogleBigqueryAnalyticsHubListingArgsRestrictedExportConfig {
   enabled?: boolean;
   restrict_query_result?: boolean;
 }
-export interface Timeouts {
+export interface GoogleBigqueryAnalyticsHubListingArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,11 +34,11 @@ export interface GoogleBigqueryAnalyticsHubListingArgs {
   location: string;
   primary_contact?: string;
   request_access?: string;
-  bigquery_dataset: BigqueryDataset;
-  data_provider: DataProvider;
-  publisher: Publisher;
-  restricted_export_config: RestrictedExportConfig;
-  timeouts: Timeouts;
+  bigquery_dataset: GoogleBigqueryAnalyticsHubListingArgsBigqueryDataset;
+  data_provider: GoogleBigqueryAnalyticsHubListingArgsDataProvider;
+  publisher: GoogleBigqueryAnalyticsHubListingArgspublisher;
+  restricted_export_config: GoogleBigqueryAnalyticsHubListingArgsRestrictedExportConfig;
+  timeouts: GoogleBigqueryAnalyticsHubListingArgstimeouts;
 }
 export class google_bigquery_analytics_hub_listing extends TerraformResource {
   readonly id?: string;

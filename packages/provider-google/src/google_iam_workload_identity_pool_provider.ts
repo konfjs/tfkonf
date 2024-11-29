@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Aws {
+export interface GoogleIamWorkloadIdentityPoolProviderArgsaws {
   account_id: string;
 }
-export interface Oidc {
+export interface GoogleIamWorkloadIdentityPoolProviderArgsoidc {
   allowed_audiences?: string[];
   issuer_uri: string;
   jwks_json?: string;
 }
-export interface Saml {
+export interface GoogleIamWorkloadIdentityPoolProviderArgssaml {
   idp_metadata_xml: string;
 }
-export interface Timeouts {
+export interface GoogleIamWorkloadIdentityPoolProviderArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface IntermediateCas {
+export interface GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStoreIntermediateCas {
   pem_certificate?: string;
 }
-export interface TrustAnchors {
+export interface GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStoreTrustAnchors {
   pem_certificate?: string;
 }
-export interface TrustStore {
-  intermediate_cas: IntermediateCas;
-  trust_anchors: TrustAnchors;
+export interface GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStore {
+  intermediate_cas: GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStoreIntermediateCas;
+  trust_anchors: GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStoreTrustAnchors;
 }
-export interface X509 {
-  trust_store: TrustStore;
+export interface GoogleIamWorkloadIdentityPoolProviderArgsx509 {
+  trust_store: GoogleIamWorkloadIdentityPoolProviderArgsx509TrustStore;
 }
 export interface GoogleIamWorkloadIdentityPoolProviderArgs {
   attribute_condition?: string;
@@ -38,11 +38,11 @@ export interface GoogleIamWorkloadIdentityPoolProviderArgs {
   display_name?: string;
   workload_identity_pool_id: string;
   workload_identity_pool_provider_id: string;
-  aws: Aws;
-  oidc: Oidc;
-  saml: Saml;
-  timeouts: Timeouts;
-  x509: X509;
+  aws: GoogleIamWorkloadIdentityPoolProviderArgsaws;
+  oidc: GoogleIamWorkloadIdentityPoolProviderArgsoidc;
+  saml: GoogleIamWorkloadIdentityPoolProviderArgssaml;
+  timeouts: GoogleIamWorkloadIdentityPoolProviderArgstimeouts;
+  x509: GoogleIamWorkloadIdentityPoolProviderArgsx509;
 }
 export class google_iam_workload_identity_pool_provider extends TerraformResource {
   readonly id?: string;

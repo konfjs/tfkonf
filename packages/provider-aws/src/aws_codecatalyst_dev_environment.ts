@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Ides {
+export interface AwsCodecatalystDevEnvironmentArgsides {
   name?: string;
   runtime?: string;
 }
-export interface PersistentStorage {
+export interface AwsCodecatalystDevEnvironmentArgsPersistentStorage {
   size: number;
 }
-export interface Repositories {
+export interface AwsCodecatalystDevEnvironmentArgsrepositories {
   branch_name?: string;
   repository_name: string;
 }
-export interface Timeouts {
+export interface AwsCodecatalystDevEnvironmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,10 +21,10 @@ export interface AwsCodecatalystDevEnvironmentArgs {
   instance_type: string;
   project_name: string;
   space_name: string;
-  ides: Ides;
-  persistent_storage: PersistentStorage;
-  repositories: Repositories;
-  timeouts: Timeouts;
+  ides: AwsCodecatalystDevEnvironmentArgsides;
+  persistent_storage: AwsCodecatalystDevEnvironmentArgsPersistentStorage;
+  repositories: AwsCodecatalystDevEnvironmentArgsrepositories;
+  timeouts: AwsCodecatalystDevEnvironmentArgstimeouts;
 }
 export class aws_codecatalyst_dev_environment extends TerraformResource {
   readonly id?: string;

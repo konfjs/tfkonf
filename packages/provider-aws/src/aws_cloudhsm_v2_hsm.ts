@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsCloudhsmV2HsmArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsCloudhsmV2HsmArgs {
   cluster_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsCloudhsmV2HsmArgstimeouts;
 }
 export class aws_cloudhsm_v2_hsm extends TerraformResource {
   readonly availability_zone?: string;

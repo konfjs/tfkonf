@@ -1,57 +1,57 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsNetworkfirewallFirewallPolicyArgsEncryptionConfiguration {
   key_id?: string;
   type: string;
 }
-export interface IpSet {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariablesRuleVariablesIpSet {
   definition: string[];
 }
-export interface RuleVariables {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariablesRuleVariables {
   key: string;
-  ip_set: IpSet;
+  ip_set: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariablesRuleVariablesIpSet;
 }
-export interface PolicyVariables {
-  rule_variables: RuleVariables;
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariables {
+  rule_variables: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariablesRuleVariables;
 }
-export interface StatefulEngineOptions {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulEngineOptions {
   rule_order?: string;
   stream_exception_policy?: string;
 }
-export interface Override {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulRuleGroupReferenceoverride {
   action?: string;
 }
-export interface StatefulRuleGroupReference {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulRuleGroupReference {
   priority?: number;
   resource_arn: string;
-  override: Override;
+  override: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulRuleGroupReferenceoverride;
 }
-export interface Dimension {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActiondimension {
   value: string;
 }
-export interface PublishMetricAction {
-  dimension: Dimension;
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction {
+  dimension: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActiondimension;
 }
-export interface ActionDefinition {
-  publish_metric_action: PublishMetricAction;
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinition {
+  publish_metric_action: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction;
 }
-export interface StatelessCustomAction {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomAction {
   action_name: string;
-  action_definition: ActionDefinition;
+  action_definition: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomActionActionDefinition;
 }
-export interface StatelessRuleGroupReference {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessRuleGroupReference {
   priority: number;
   resource_arn: string;
 }
-export interface FirewallPolicy {
+export interface AwsNetworkfirewallFirewallPolicyArgsFirewallPolicy {
   stateful_default_actions?: string[];
   stateless_default_actions: string[];
   stateless_fragment_default_actions: string[];
   tls_inspection_configuration_arn?: string;
-  policy_variables: PolicyVariables;
-  stateful_engine_options: StatefulEngineOptions;
-  stateful_rule_group_reference: StatefulRuleGroupReference;
-  stateless_custom_action: StatelessCustomAction;
-  stateless_rule_group_reference: StatelessRuleGroupReference;
+  policy_variables: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyPolicyVariables;
+  stateful_engine_options: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulEngineOptions;
+  stateful_rule_group_reference: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatefulRuleGroupReference;
+  stateless_custom_action: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessCustomAction;
+  stateless_rule_group_reference: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicyStatelessRuleGroupReference;
 }
 export interface AwsNetworkfirewallFirewallPolicyArgs {
   description?: string;
@@ -59,8 +59,8 @@ export interface AwsNetworkfirewallFirewallPolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  encryption_configuration: EncryptionConfiguration;
-  firewall_policy: FirewallPolicy;
+  encryption_configuration: AwsNetworkfirewallFirewallPolicyArgsEncryptionConfiguration;
+  firewall_policy: AwsNetworkfirewallFirewallPolicyArgsFirewallPolicy;
 }
 export class aws_networkfirewall_firewall_policy extends TerraformResource {
   readonly arn!: string;

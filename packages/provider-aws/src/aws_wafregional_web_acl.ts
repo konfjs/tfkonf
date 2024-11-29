@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DefaultAction {
+export interface AwsWafregionalWebAclArgsDefaultAction {
   type: string;
 }
-export interface FieldToMatch {
+export interface AwsWafregionalWebAclArgsLoggingConfigurationRedactedFieldsFieldToMatch {
   data?: string;
   type: string;
 }
-export interface RedactedFields {
-  field_to_match: FieldToMatch;
+export interface AwsWafregionalWebAclArgsLoggingConfigurationRedactedFields {
+  field_to_match: AwsWafregionalWebAclArgsLoggingConfigurationRedactedFieldsFieldToMatch;
 }
-export interface LoggingConfiguration {
+export interface AwsWafregionalWebAclArgsLoggingConfiguration {
   log_destination: string;
-  redacted_fields: RedactedFields;
+  redacted_fields: AwsWafregionalWebAclArgsLoggingConfigurationRedactedFields;
 }
-export interface Action {
+export interface AwsWafregionalWebAclArgsruleaction {
   type: string;
 }
-export interface OverrideAction {
+export interface AwsWafregionalWebAclArgsruleOverrideAction {
   type: string;
 }
-export interface Rule {
+export interface AwsWafregionalWebAclArgsrule {
   priority: number;
   rule_id: string;
   type?: string;
-  action: Action;
-  override_action: OverrideAction;
+  action: AwsWafregionalWebAclArgsruleaction;
+  override_action: AwsWafregionalWebAclArgsruleOverrideAction;
 }
 export interface AwsWafregionalWebAclArgs {
   metric_name: string;
@@ -32,9 +32,9 @@ export interface AwsWafregionalWebAclArgs {
   tags?: {
     [key: string]: string;
   };
-  default_action: DefaultAction;
-  logging_configuration: LoggingConfiguration;
-  rule: Rule;
+  default_action: AwsWafregionalWebAclArgsDefaultAction;
+  logging_configuration: AwsWafregionalWebAclArgsLoggingConfiguration;
+  rule: AwsWafregionalWebAclArgsrule;
 }
 export class aws_wafregional_web_acl extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Egress {
+export interface AwsDefaultNetworkAclArgsegress {
   action: string;
   cidr_block?: string;
   from_port: number;
@@ -10,7 +10,7 @@ export interface Egress {
   rule_no: number;
   to_port: number;
 }
-export interface Ingress {
+export interface AwsDefaultNetworkAclArgsingress {
   action: string;
   cidr_block?: string;
   from_port: number;
@@ -27,8 +27,8 @@ export interface AwsDefaultNetworkAclArgs {
   tags?: {
     [key: string]: string;
   };
-  egress: Egress;
-  ingress: Ingress;
+  egress: AwsDefaultNetworkAclArgsegress;
+  ingress: AwsDefaultNetworkAclArgsingress;
 }
 export class aws_default_network_acl extends TerraformResource {
   readonly arn!: string;

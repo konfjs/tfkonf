@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Ec2Config {
+export interface AwsDatasyncLocationEfsArgsEc2Config {
   security_group_arns: string[];
   subnet_arn: string;
 }
@@ -12,7 +12,7 @@ export interface AwsDatasyncLocationEfsArgs {
   tags?: {
     [key: string]: string;
   };
-  ec2_config: Ec2Config;
+  ec2_config: AwsDatasyncLocationEfsArgsEc2Config;
 }
 export class aws_datasync_location_efs extends TerraformResource {
   readonly arn!: string;

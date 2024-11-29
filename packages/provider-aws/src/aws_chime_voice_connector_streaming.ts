@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MediaInsightsConfiguration {
+export interface AwsChimeVoiceConnectorStreamingArgsMediaInsightsConfiguration {
   configuration_arn?: string;
   disabled?: boolean;
 }
@@ -8,7 +8,7 @@ export interface AwsChimeVoiceConnectorStreamingArgs {
   disabled?: boolean;
   streaming_notification_targets?: string[];
   voice_connector_id: string;
-  media_insights_configuration: MediaInsightsConfiguration;
+  media_insights_configuration: AwsChimeVoiceConnectorStreamingArgsMediaInsightsConfiguration;
 }
 export class aws_chime_voice_connector_streaming extends TerraformResource {
   readonly id?: string;

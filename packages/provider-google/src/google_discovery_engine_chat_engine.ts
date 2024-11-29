@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AgentCreationConfig {
+export interface GoogleDiscoveryEngineChatEngineArgsChatEngineConfigAgentCreationConfig {
   business?: string;
   default_language_code: string;
   location?: string;
   time_zone: string;
 }
-export interface ChatEngineConfig {
+export interface GoogleDiscoveryEngineChatEngineArgsChatEngineConfig {
   dialogflow_agent_to_link?: string;
-  agent_creation_config: AgentCreationConfig;
+  agent_creation_config: GoogleDiscoveryEngineChatEngineArgsChatEngineConfigAgentCreationConfig;
 }
-export interface CommonConfig {
+export interface GoogleDiscoveryEngineChatEngineArgsCommonConfig {
   company_name?: string;
 }
-export interface Timeouts {
+export interface GoogleDiscoveryEngineChatEngineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,9 +24,9 @@ export interface GoogleDiscoveryEngineChatEngineArgs {
   engine_id: string;
   industry_vertical?: string;
   location: string;
-  chat_engine_config: ChatEngineConfig;
-  common_config: CommonConfig;
-  timeouts: Timeouts;
+  chat_engine_config: GoogleDiscoveryEngineChatEngineArgsChatEngineConfig;
+  common_config: GoogleDiscoveryEngineChatEngineArgsCommonConfig;
+  timeouts: GoogleDiscoveryEngineChatEngineArgstimeouts;
 }
 export class google_discovery_engine_chat_engine extends TerraformResource {
   readonly chat_engine_metadata!: any[];

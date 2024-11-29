@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PreferredTables {
+export interface GoogleBigqueryBiReservationArgsPreferredTables {
   dataset_id?: string;
   project_id?: string;
   table_id?: string;
 }
-export interface Timeouts {
+export interface GoogleBigqueryBiReservationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,8 +12,8 @@ export interface Timeouts {
 export interface GoogleBigqueryBiReservationArgs {
   location: string;
   size?: number;
-  preferred_tables: PreferredTables;
-  timeouts: Timeouts;
+  preferred_tables: GoogleBigqueryBiReservationArgsPreferredTables;
+  timeouts: GoogleBigqueryBiReservationArgstimeouts;
 }
 export class google_bigquery_bi_reservation extends TerraformResource {
   readonly id?: string;

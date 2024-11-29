@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RoutingConfig {
+export interface AwsLambdaAliasArgsRoutingConfig {
   additional_version_weights?: {
     [key: string]: number;
   };
@@ -9,7 +9,7 @@ export interface AwsLambdaAliasArgs {
   function_name: string;
   function_version: string;
   name: string;
-  routing_config: RoutingConfig;
+  routing_config: AwsLambdaAliasArgsRoutingConfig;
 }
 export class aws_lambda_alias extends TerraformResource {
   readonly arn!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OutputLocation {
+export interface AwsSsmAssociationArgsOutputLocation {
   s3_bucket_name: string;
   s3_key_prefix?: string;
   s3_region?: string;
 }
-export interface Targets {
+export interface AwsSsmAssociationArgstargets {
   key: string;
   values: string[];
 }
@@ -23,8 +23,8 @@ export interface AwsSsmAssociationArgs {
     [key: string]: string;
   };
   wait_for_success_timeout_seconds?: number;
-  output_location: OutputLocation;
-  targets: Targets;
+  output_location: AwsSsmAssociationArgsOutputLocation;
+  targets: AwsSsmAssociationArgstargets;
 }
 export class aws_ssm_association extends TerraformResource {
   readonly arn!: string;

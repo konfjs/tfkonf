@@ -1,88 +1,88 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdBreaks {}
-export interface EditList {}
-export interface AudioStream {
+export interface GoogleTranscoderJobTemplateArgsconfigAdBreaks {}
+export interface GoogleTranscoderJobTemplateArgsconfigEditList {}
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreamsAudioStream {
   bitrate_bps: number;
 }
-export interface Hlg {}
-export interface Sdr {}
-export interface H264 {
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264hlg {}
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264sdr {}
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264 {
   bitrate_bps: number;
   frame_rate: number;
-  hlg: Hlg;
-  sdr: Sdr;
+  hlg: GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264hlg;
+  sdr: GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264sdr;
 }
-export interface VideoStream {
-  h264: H264;
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStream {
+  h264: GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStreamh264;
 }
-export interface ElementaryStreams {
-  audio_stream: AudioStream;
-  video_stream: VideoStream;
+export interface GoogleTranscoderJobTemplateArgsconfigElementaryStreams {
+  audio_stream: GoogleTranscoderJobTemplateArgsconfigElementaryStreamsAudioStream;
+  video_stream: GoogleTranscoderJobTemplateArgsconfigElementaryStreamsVideoStream;
 }
-export interface Aes128 {}
-export interface Clearkey {}
-export interface Fairplay {}
-export interface Playready {}
-export interface Widevine {}
-export interface DrmSystems {
-  clearkey: Clearkey;
-  fairplay: Fairplay;
-  playready: Playready;
-  widevine: Widevine;
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsaes128 {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsclearkey {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsfairplay {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsplayready {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemswidevine {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystems {
+  clearkey: GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsclearkey;
+  fairplay: GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsfairplay;
+  playready: GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemsplayready;
+  widevine: GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystemswidevine;
 }
-export interface MpegCenc {
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsMpegCenc {
   scheme: string;
 }
-export interface SampleAes {}
-export interface SecretManagerKeySource {
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsSampleAes {}
+export interface GoogleTranscoderJobTemplateArgsconfigencryptionsSecretManagerKeySource {
   secret_version: string;
 }
-export interface Encryptions {
+export interface GoogleTranscoderJobTemplateArgsconfigencryptions {
   id: string;
-  aes128: Aes128;
-  drm_systems: DrmSystems;
-  mpeg_cenc: MpegCenc;
-  sample_aes: SampleAes;
-  secret_manager_key_source: SecretManagerKeySource;
+  aes128: GoogleTranscoderJobTemplateArgsconfigencryptionsaes128;
+  drm_systems: GoogleTranscoderJobTemplateArgsconfigencryptionsDrmSystems;
+  mpeg_cenc: GoogleTranscoderJobTemplateArgsconfigencryptionsMpegCenc;
+  sample_aes: GoogleTranscoderJobTemplateArgsconfigencryptionsSampleAes;
+  secret_manager_key_source: GoogleTranscoderJobTemplateArgsconfigencryptionsSecretManagerKeySource;
 }
-export interface Inputs {}
-export interface Manifests {}
-export interface SegmentSettings {}
-export interface MuxStreams {
-  segment_settings: SegmentSettings;
+export interface GoogleTranscoderJobTemplateArgsconfiginputs {}
+export interface GoogleTranscoderJobTemplateArgsconfigmanifests {}
+export interface GoogleTranscoderJobTemplateArgsconfigMuxStreamsSegmentSettings {}
+export interface GoogleTranscoderJobTemplateArgsconfigMuxStreams {
+  segment_settings: GoogleTranscoderJobTemplateArgsconfigMuxStreamsSegmentSettings;
 }
-export interface Output {}
-export interface Xy {}
-export interface AnimationFade {
+export interface GoogleTranscoderJobTemplateArgsconfigoutput {}
+export interface GoogleTranscoderJobTemplateArgsconfigoverlaysanimationsAnimationFadexy {}
+export interface GoogleTranscoderJobTemplateArgsconfigoverlaysanimationsAnimationFade {
   fade_type: string;
-  xy: Xy;
+  xy: GoogleTranscoderJobTemplateArgsconfigoverlaysanimationsAnimationFadexy;
 }
-export interface Animations {
-  animation_fade: AnimationFade;
+export interface GoogleTranscoderJobTemplateArgsconfigoverlaysanimations {
+  animation_fade: GoogleTranscoderJobTemplateArgsconfigoverlaysanimationsAnimationFade;
 }
-export interface Image {
+export interface GoogleTranscoderJobTemplateArgsconfigoverlaysimage {
   uri: string;
 }
-export interface Overlays {
-  animations: Animations;
-  image: Image;
+export interface GoogleTranscoderJobTemplateArgsconfigoverlays {
+  animations: GoogleTranscoderJobTemplateArgsconfigoverlaysanimations;
+  image: GoogleTranscoderJobTemplateArgsconfigoverlaysimage;
 }
-export interface PubsubDestination {
+export interface GoogleTranscoderJobTemplateArgsconfigPubsubDestination {
   topic?: string;
 }
-export interface Config {
-  ad_breaks: AdBreaks;
-  edit_list: EditList;
-  elementary_streams: ElementaryStreams;
-  encryptions: Encryptions;
-  inputs: Inputs;
-  manifests: Manifests;
-  mux_streams: MuxStreams;
-  output: Output;
-  overlays: Overlays;
-  pubsub_destination: PubsubDestination;
+export interface GoogleTranscoderJobTemplateArgsconfig {
+  ad_breaks: GoogleTranscoderJobTemplateArgsconfigAdBreaks;
+  edit_list: GoogleTranscoderJobTemplateArgsconfigEditList;
+  elementary_streams: GoogleTranscoderJobTemplateArgsconfigElementaryStreams;
+  encryptions: GoogleTranscoderJobTemplateArgsconfigencryptions;
+  inputs: GoogleTranscoderJobTemplateArgsconfiginputs;
+  manifests: GoogleTranscoderJobTemplateArgsconfigmanifests;
+  mux_streams: GoogleTranscoderJobTemplateArgsconfigMuxStreams;
+  output: GoogleTranscoderJobTemplateArgsconfigoutput;
+  overlays: GoogleTranscoderJobTemplateArgsconfigoverlays;
+  pubsub_destination: GoogleTranscoderJobTemplateArgsconfigPubsubDestination;
 }
-export interface Timeouts {
+export interface GoogleTranscoderJobTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -93,8 +93,8 @@ export interface GoogleTranscoderJobTemplateArgs {
     [key: string]: string;
   };
   location: string;
-  config: Config;
-  timeouts: Timeouts;
+  config: GoogleTranscoderJobTemplateArgsconfig;
+  timeouts: GoogleTranscoderJobTemplateArgstimeouts;
 }
 export class google_transcoder_job_template extends TerraformResource {
   readonly effective_labels!: {

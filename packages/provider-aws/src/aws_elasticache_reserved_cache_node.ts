@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsElasticacheReservedCacheNodeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsElasticacheReservedCacheNodeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsElasticacheReservedCacheNodeArgstimeouts;
 }
 export class aws_elasticache_reserved_cache_node extends TerraformResource {
   readonly arn!: string;

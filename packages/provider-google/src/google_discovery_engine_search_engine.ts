@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CommonConfig {
+export interface GoogleDiscoveryEngineSearchEngineArgsCommonConfig {
   company_name?: string;
 }
-export interface SearchEngineConfig {
+export interface GoogleDiscoveryEngineSearchEngineArgsSearchEngineConfig {
   search_add_ons?: string[];
   search_tier?: string;
 }
-export interface Timeouts {
+export interface GoogleDiscoveryEngineSearchEngineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,9 +18,9 @@ export interface GoogleDiscoveryEngineSearchEngineArgs {
   engine_id: string;
   industry_vertical?: string;
   location: string;
-  common_config: CommonConfig;
-  search_engine_config: SearchEngineConfig;
-  timeouts: Timeouts;
+  common_config: GoogleDiscoveryEngineSearchEngineArgsCommonConfig;
+  search_engine_config: GoogleDiscoveryEngineSearchEngineArgsSearchEngineConfig;
+  timeouts: GoogleDiscoveryEngineSearchEngineArgstimeouts;
 }
 export class google_discovery_engine_search_engine extends TerraformResource {
   readonly create_time!: string;

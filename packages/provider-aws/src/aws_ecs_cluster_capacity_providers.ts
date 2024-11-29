@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DefaultCapacityProviderStrategy {
+export interface AwsEcsClusterCapacityProvidersArgsDefaultCapacityProviderStrategy {
   base?: number;
   capacity_provider: string;
   weight?: number;
@@ -7,7 +7,7 @@ export interface DefaultCapacityProviderStrategy {
 export interface AwsEcsClusterCapacityProvidersArgs {
   capacity_providers?: string[];
   cluster_name: string;
-  default_capacity_provider_strategy: DefaultCapacityProviderStrategy;
+  default_capacity_provider_strategy: AwsEcsClusterCapacityProvidersArgsDefaultCapacityProviderStrategy;
 }
 export class aws_ecs_cluster_capacity_providers extends TerraformResource {
   readonly id?: string;

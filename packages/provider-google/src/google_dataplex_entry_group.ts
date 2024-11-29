@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDataplexEntryGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleDataplexEntryGroupArgs {
     [key: string]: string;
   };
   location?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDataplexEntryGroupArgstimeouts;
 }
 export class google_dataplex_entry_group extends TerraformResource {
   readonly create_time!: string;

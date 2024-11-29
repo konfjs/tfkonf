@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Properties {
+export interface AwsIotBillingGroupArgsproperties {
   description?: string;
 }
 export interface AwsIotBillingGroupArgs {
@@ -7,7 +7,7 @@ export interface AwsIotBillingGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  properties: Properties;
+  properties: AwsIotBillingGroupArgsproperties;
 }
 export class aws_iot_billing_group extends TerraformResource {
   readonly arn!: string;

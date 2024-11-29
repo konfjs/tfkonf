@@ -1,156 +1,156 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudStoragePath {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionaryCloudStoragePath {
   path: string;
 }
-export interface WordList {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionaryWordList {
   words: string[];
 }
-export interface Dictionary {
-  cloud_storage_path: CloudStoragePath;
-  word_list: WordList;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionary {
+  cloud_storage_path: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionaryCloudStoragePath;
+  word_list: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionaryWordList;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesInfoTypeSensitivityScore {
   score: string;
 }
-export interface InfoType {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesInfoType {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesInfoTypeSensitivityScore;
 }
-export interface Regex {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesregex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesSensitivityScore {
   score: string;
 }
-export interface StoredType {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesStoredType {
   name: string;
 }
-export interface SurrogateType {}
-export interface CustomInfoTypes {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesSurrogateType {}
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypes {
   exclusion_type?: string;
   likelihood?: string;
-  dictionary: Dictionary;
-  info_type: InfoType;
-  regex: Regex;
-  sensitivity_score: SensitivityScore;
-  stored_type: StoredType;
-  surrogate_type: SurrogateType;
+  dictionary: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesdictionary;
+  info_type: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesInfoType;
+  regex: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesregex;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesSensitivityScore;
+  stored_type: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesStoredType;
+  surrogate_type: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypesSurrogateType;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfigInfoTypesSensitivityScore;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore {
   score: string;
 }
-export interface InfoType {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoTypeInfoType {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoTypeInfoTypeSensitivityScore;
 }
-export interface MaxFindingsPerInfoType {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoType {
   max_findings: number;
-  info_type: InfoType;
+  info_type: GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoTypeInfoType;
 }
-export interface Limits {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimits {
   max_findings_per_item: number;
   max_findings_per_request: number;
-  max_findings_per_info_type: MaxFindingsPerInfoType;
+  max_findings_per_info_type: GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimitsMaxFindingsPerInfoType;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetInfoTypesSensitivityScore;
 }
-export interface CloudStoragePath {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionaryCloudStoragePath {
   path: string;
 }
-export interface WordList {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionaryWordList {
   words: string[];
 }
-export interface Dictionary {
-  cloud_storage_path: CloudStoragePath;
-  word_list: WordList;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionary {
+  cloud_storage_path: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionaryCloudStoragePath;
+  word_list: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionaryWordList;
 }
-export interface HotwordRegex {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordHotwordRegex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface Proximity {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordproximity {
   window_after?: number;
   window_before?: number;
 }
-export interface ExcludeByHotword {
-  hotword_regex: HotwordRegex;
-  proximity: Proximity;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotword {
+  hotword_regex: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordHotwordRegex;
+  proximity: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotwordproximity;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore {
   score: string;
 }
-export interface InfoTypes {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypes {
   name: string;
   version?: string;
-  sensitivity_score: SensitivityScore;
+  sensitivity_score: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypesSensitivityScore;
 }
-export interface ExcludeInfoTypes {
-  info_types: InfoTypes;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypes {
+  info_types: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypesInfoTypes;
 }
-export interface Regex {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleregex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface ExclusionRule {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRule {
   matching_type: string;
-  dictionary: Dictionary;
-  exclude_by_hotword: ExcludeByHotword;
-  exclude_info_types: ExcludeInfoTypes;
-  regex: Regex;
+  dictionary: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuledictionary;
+  exclude_by_hotword: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeByHotword;
+  exclude_info_types: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleExcludeInfoTypes;
+  regex: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRuleregex;
 }
-export interface HotwordRegex {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleHotwordRegex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface LikelihoodAdjustment {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleLikelihoodAdjustment {
   fixed_likelihood?: string;
   relative_likelihood?: number;
 }
-export interface Proximity {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleproximity {
   window_after?: number;
   window_before?: number;
 }
-export interface HotwordRule {
-  hotword_regex: HotwordRegex;
-  likelihood_adjustment: LikelihoodAdjustment;
-  proximity: Proximity;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRule {
+  hotword_regex: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleHotwordRegex;
+  likelihood_adjustment: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleLikelihoodAdjustment;
+  proximity: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRuleproximity;
 }
-export interface Rules {
-  exclusion_rule: ExclusionRule;
-  hotword_rule: HotwordRule;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrules {
+  exclusion_rule: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesExclusionRule;
+  hotword_rule: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrulesHotwordRule;
 }
-export interface RuleSet {
-  info_types: InfoTypes;
-  rules: Rules;
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSet {
+  info_types: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetInfoTypes;
+  rules: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSetrules;
 }
-export interface InspectConfig {
+export interface GoogleDataLossPreventionInspectTemplateArgsInspectConfig {
   content_options?: string[];
   exclude_info_types?: boolean;
   include_quote?: boolean;
   min_likelihood?: string;
-  custom_info_types: CustomInfoTypes;
-  info_types: InfoTypes;
-  limits: Limits;
-  rule_set: RuleSet;
+  custom_info_types: GoogleDataLossPreventionInspectTemplateArgsInspectConfigCustomInfoTypes;
+  info_types: GoogleDataLossPreventionInspectTemplateArgsInspectConfigInfoTypes;
+  limits: GoogleDataLossPreventionInspectTemplateArgsInspectConfiglimits;
+  rule_set: GoogleDataLossPreventionInspectTemplateArgsInspectConfigRuleSet;
 }
-export interface Timeouts {
+export interface GoogleDataLossPreventionInspectTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -159,8 +159,8 @@ export interface GoogleDataLossPreventionInspectTemplateArgs {
   description?: string;
   display_name?: string;
   parent: string;
-  inspect_config: InspectConfig;
-  timeouts: Timeouts;
+  inspect_config: GoogleDataLossPreventionInspectTemplateArgsInspectConfig;
+  timeouts: GoogleDataLossPreventionInspectTemplateArgstimeouts;
 }
 export class google_data_loss_prevention_inspect_template extends TerraformResource {
   readonly id?: string;

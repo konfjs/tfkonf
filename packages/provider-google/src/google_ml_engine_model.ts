@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DefaultVersion {
+export interface GoogleMlEngineModelArgsDefaultVersion {
   name: string;
 }
-export interface Timeouts {
+export interface GoogleMlEngineModelArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleMlEngineModelArgs {
   online_prediction_console_logging?: boolean;
   online_prediction_logging?: boolean;
   regions?: string[];
-  default_version: DefaultVersion;
-  timeouts: Timeouts;
+  default_version: GoogleMlEngineModelArgsDefaultVersion;
+  timeouts: GoogleMlEngineModelArgstimeouts;
 }
 export class google_ml_engine_model extends TerraformResource {
   readonly effective_labels!: {

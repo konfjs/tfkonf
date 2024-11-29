@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AllowedValues {
+export interface GoogleDataCatalogTagTemplateArgsfieldstypeEnumTypeAllowedValues {
   display_name: string;
 }
-export interface EnumType {
-  allowed_values: AllowedValues;
+export interface GoogleDataCatalogTagTemplateArgsfieldstypeEnumType {
+  allowed_values: GoogleDataCatalogTagTemplateArgsfieldstypeEnumTypeAllowedValues;
 }
-export interface Type {
-  enum_type: EnumType;
+export interface GoogleDataCatalogTagTemplateArgsfieldstype {
+  enum_type: GoogleDataCatalogTagTemplateArgsfieldstypeEnumType;
 }
-export interface Fields {
+export interface GoogleDataCatalogTagTemplateArgsfields {
   field_id: string;
-  type: Type;
+  type: GoogleDataCatalogTagTemplateArgsfieldstype;
 }
-export interface Timeouts {
+export interface GoogleDataCatalogTagTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface GoogleDataCatalogTagTemplateArgs {
   display_name?: string;
   force_delete?: boolean;
   tag_template_id: string;
-  fields: Fields;
-  timeouts: Timeouts;
+  fields: GoogleDataCatalogTagTemplateArgsfields;
+  timeouts: GoogleDataCatalogTagTemplateArgstimeouts;
 }
 export class google_data_catalog_tag_template extends TerraformResource {
   readonly id?: string;

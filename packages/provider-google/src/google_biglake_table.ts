@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StorageDescriptor {
+export interface GoogleBiglakeTableArgsHiveOptionsStorageDescriptor {
   input_format?: string;
   location_uri?: string;
   output_format?: string;
 }
-export interface HiveOptions {
+export interface GoogleBiglakeTableArgsHiveOptions {
   parameters?: {
     [key: string]: string;
   };
   table_type?: string;
-  storage_descriptor: StorageDescriptor;
+  storage_descriptor: GoogleBiglakeTableArgsHiveOptionsStorageDescriptor;
 }
-export interface Timeouts {
+export interface GoogleBiglakeTableArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface GoogleBiglakeTableArgs {
   database?: string;
   name: string;
   type?: string;
-  hive_options: HiveOptions;
-  timeouts: Timeouts;
+  hive_options: GoogleBiglakeTableArgsHiveOptions;
+  timeouts: GoogleBiglakeTableArgstimeouts;
 }
 export class google_biglake_table extends TerraformResource {
   readonly create_time!: string;

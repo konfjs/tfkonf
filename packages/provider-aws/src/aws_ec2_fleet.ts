@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FleetInstanceSet {}
-export interface LaunchTemplateSpecification {
+export interface AwsEc2FleetArgsFleetInstanceSet {}
+export interface AwsEc2FleetArgsLaunchTemplateConfigLaunchTemplateSpecification {
   launch_template_id?: string;
   launch_template_name?: string;
   version: string;
 }
-export interface AcceleratorCount {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsAcceleratorCount {
   max?: number;
   min?: number;
 }
-export interface AcceleratorTotalMemoryMib {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsAcceleratorTotalMemoryMib {
   max?: number;
   min?: number;
 }
-export interface BaselineEbsBandwidthMbps {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsBaselineEbsBandwidthMbps {
   max?: number;
   min?: number;
 }
-export interface MemoryGibPerVcpu {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsMemoryGibPerVcpu {
   max?: number;
   min?: number;
 }
-export interface MemoryMib {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsMemoryMib {
   max?: number;
   min: number;
 }
-export interface NetworkBandwidthGbps {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsNetworkBandwidthGbps {
   max?: number;
   min?: number;
 }
-export interface NetworkInterfaceCount {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsNetworkInterfaceCount {
   max?: number;
   min?: number;
 }
-export interface TotalLocalStorageGb {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsTotalLocalStorageGb {
   max?: number;
   min?: number;
 }
-export interface VcpuCount {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsVcpuCount {
   max?: number;
   min: number;
 }
-export interface InstanceRequirements {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirements {
   accelerator_manufacturers?: string[];
   accelerator_names?: string[];
   accelerator_types?: string[];
@@ -57,61 +57,61 @@ export interface InstanceRequirements {
   on_demand_max_price_percentage_over_lowest_price?: number;
   require_hibernate_support?: boolean;
   spot_max_price_percentage_over_lowest_price?: number;
-  accelerator_count: AcceleratorCount;
-  accelerator_total_memory_mib: AcceleratorTotalMemoryMib;
-  baseline_ebs_bandwidth_mbps: BaselineEbsBandwidthMbps;
-  memory_gib_per_vcpu: MemoryGibPerVcpu;
-  memory_mib: MemoryMib;
-  network_bandwidth_gbps: NetworkBandwidthGbps;
-  network_interface_count: NetworkInterfaceCount;
-  total_local_storage_gb: TotalLocalStorageGb;
-  vcpu_count: VcpuCount;
+  accelerator_count: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsAcceleratorCount;
+  accelerator_total_memory_mib: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsAcceleratorTotalMemoryMib;
+  baseline_ebs_bandwidth_mbps: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsBaselineEbsBandwidthMbps;
+  memory_gib_per_vcpu: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsMemoryGibPerVcpu;
+  memory_mib: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsMemoryMib;
+  network_bandwidth_gbps: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsNetworkBandwidthGbps;
+  network_interface_count: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsNetworkInterfaceCount;
+  total_local_storage_gb: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsTotalLocalStorageGb;
+  vcpu_count: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirementsVcpuCount;
 }
-export interface Override {
+export interface AwsEc2FleetArgsLaunchTemplateConfigoverride {
   availability_zone?: string;
   instance_type?: string;
   max_price?: string;
   priority?: number;
   subnet_id?: string;
   weighted_capacity?: number;
-  instance_requirements: InstanceRequirements;
+  instance_requirements: AwsEc2FleetArgsLaunchTemplateConfigoverrideInstanceRequirements;
 }
-export interface LaunchTemplateConfig {
-  launch_template_specification: LaunchTemplateSpecification;
-  override: Override;
+export interface AwsEc2FleetArgsLaunchTemplateConfig {
+  launch_template_specification: AwsEc2FleetArgsLaunchTemplateConfigLaunchTemplateSpecification;
+  override: AwsEc2FleetArgsLaunchTemplateConfigoverride;
 }
-export interface CapacityReservationOptions {
+export interface AwsEc2FleetArgsOnDemandOptionsCapacityReservationOptions {
   usage_strategy?: string;
 }
-export interface OnDemandOptions {
+export interface AwsEc2FleetArgsOnDemandOptions {
   allocation_strategy?: string;
   max_total_price?: string;
   min_target_capacity?: number;
   single_availability_zone?: boolean;
   single_instance_type?: boolean;
-  capacity_reservation_options: CapacityReservationOptions;
+  capacity_reservation_options: AwsEc2FleetArgsOnDemandOptionsCapacityReservationOptions;
 }
-export interface CapacityRebalance {
+export interface AwsEc2FleetArgsSpotOptionsMaintenanceStrategiesCapacityRebalance {
   replacement_strategy?: string;
   termination_delay?: number;
 }
-export interface MaintenanceStrategies {
-  capacity_rebalance: CapacityRebalance;
+export interface AwsEc2FleetArgsSpotOptionsMaintenanceStrategies {
+  capacity_rebalance: AwsEc2FleetArgsSpotOptionsMaintenanceStrategiesCapacityRebalance;
 }
-export interface SpotOptions {
+export interface AwsEc2FleetArgsSpotOptions {
   allocation_strategy?: string;
   instance_interruption_behavior?: string;
   instance_pools_to_use_count?: number;
-  maintenance_strategies: MaintenanceStrategies;
+  maintenance_strategies: AwsEc2FleetArgsSpotOptionsMaintenanceStrategies;
 }
-export interface TargetCapacitySpecification {
+export interface AwsEc2FleetArgsTargetCapacitySpecification {
   default_target_capacity_type: string;
   on_demand_target_capacity?: number;
   spot_target_capacity?: number;
   target_capacity_unit_type?: string;
   total_target_capacity: number;
 }
-export interface Timeouts {
+export interface AwsEc2FleetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -128,12 +128,12 @@ export interface AwsEc2FleetArgs {
   type?: string;
   valid_from?: string;
   valid_until?: string;
-  fleet_instance_set: FleetInstanceSet;
-  launch_template_config: LaunchTemplateConfig;
-  on_demand_options: OnDemandOptions;
-  spot_options: SpotOptions;
-  target_capacity_specification: TargetCapacitySpecification;
-  timeouts: Timeouts;
+  fleet_instance_set: AwsEc2FleetArgsFleetInstanceSet;
+  launch_template_config: AwsEc2FleetArgsLaunchTemplateConfig;
+  on_demand_options: AwsEc2FleetArgsOnDemandOptions;
+  spot_options: AwsEc2FleetArgsSpotOptions;
+  target_capacity_specification: AwsEc2FleetArgsTargetCapacitySpecification;
+  timeouts: AwsEc2FleetArgstimeouts;
 }
 export class aws_ec2_fleet extends TerraformResource {
   readonly arn!: string;

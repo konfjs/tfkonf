@@ -1,97 +1,97 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ForwardInboundCredentials {
+export interface GoogleIdentityPlatformConfigArgsBlockingFunctionsForwardInboundCredentials {
   access_token?: boolean;
   id_token?: boolean;
   refresh_token?: boolean;
 }
-export interface Triggers {
+export interface GoogleIdentityPlatformConfigArgsBlockingFunctionstriggers {
   event_type: string;
   function_uri: string;
 }
-export interface BlockingFunctions {
-  forward_inbound_credentials: ForwardInboundCredentials;
-  triggers: Triggers;
+export interface GoogleIdentityPlatformConfigArgsBlockingFunctions {
+  forward_inbound_credentials: GoogleIdentityPlatformConfigArgsBlockingFunctionsForwardInboundCredentials;
+  triggers: GoogleIdentityPlatformConfigArgsBlockingFunctionstriggers;
 }
-export interface Permissions {
+export interface GoogleIdentityPlatformConfigArgsclientpermissions {
   disabled_user_deletion?: boolean;
   disabled_user_signup?: boolean;
 }
-export interface Client {
-  permissions: Permissions;
+export interface GoogleIdentityPlatformConfigArgsclient {
+  permissions: GoogleIdentityPlatformConfigArgsclientpermissions;
 }
-export interface TotpProviderConfig {
+export interface GoogleIdentityPlatformConfigArgsmfaProviderConfigsTotpProviderConfig {
   adjacent_intervals?: number;
 }
-export interface ProviderConfigs {
-  totp_provider_config: TotpProviderConfig;
+export interface GoogleIdentityPlatformConfigArgsmfaProviderConfigs {
+  totp_provider_config: GoogleIdentityPlatformConfigArgsmfaProviderConfigsTotpProviderConfig;
 }
-export interface Mfa {
+export interface GoogleIdentityPlatformConfigArgsmfa {
   enabled_providers?: string[];
-  provider_configs: ProviderConfigs;
+  provider_configs: GoogleIdentityPlatformConfigArgsmfaProviderConfigs;
 }
-export interface RequestLogging {
+export interface GoogleIdentityPlatformConfigArgsmonitoringRequestLogging {
   enabled?: boolean;
 }
-export interface Monitoring {
-  request_logging: RequestLogging;
+export interface GoogleIdentityPlatformConfigArgsmonitoring {
+  request_logging: GoogleIdentityPlatformConfigArgsmonitoringRequestLogging;
 }
-export interface MultiTenant {
+export interface GoogleIdentityPlatformConfigArgsMultiTenant {
   allow_tenants?: boolean;
   default_tenant_location?: string;
 }
-export interface SignUpQuotaConfig {
+export interface GoogleIdentityPlatformConfigArgsquotaSignUpQuotaConfig {
   quota?: number;
   quota_duration?: string;
   start_time?: string;
 }
-export interface Quota {
-  sign_up_quota_config: SignUpQuotaConfig;
+export interface GoogleIdentityPlatformConfigArgsquota {
+  sign_up_quota_config: GoogleIdentityPlatformConfigArgsquotaSignUpQuotaConfig;
 }
-export interface Anonymous {
+export interface GoogleIdentityPlatformConfigArgsSignInanonymous {
   enabled: boolean;
 }
-export interface Email {
+export interface GoogleIdentityPlatformConfigArgsSignInemail {
   enabled: boolean;
   password_required?: boolean;
 }
-export interface PhoneNumber {
+export interface GoogleIdentityPlatformConfigArgsSignInPhoneNumber {
   enabled: boolean;
   test_phone_numbers?: {
     [key: string]: string;
   };
 }
-export interface SignIn {
+export interface GoogleIdentityPlatformConfigArgsSignIn {
   allow_duplicate_emails?: boolean;
-  anonymous: Anonymous;
-  email: Email;
-  phone_number: PhoneNumber;
+  anonymous: GoogleIdentityPlatformConfigArgsSignInanonymous;
+  email: GoogleIdentityPlatformConfigArgsSignInemail;
+  phone_number: GoogleIdentityPlatformConfigArgsSignInPhoneNumber;
 }
-export interface AllowByDefault {
+export interface GoogleIdentityPlatformConfigArgsSmsRegionConfigAllowByDefault {
   disallowed_regions?: string[];
 }
-export interface AllowlistOnly {
+export interface GoogleIdentityPlatformConfigArgsSmsRegionConfigAllowlistOnly {
   allowed_regions?: string[];
 }
-export interface SmsRegionConfig {
-  allow_by_default: AllowByDefault;
-  allowlist_only: AllowlistOnly;
+export interface GoogleIdentityPlatformConfigArgsSmsRegionConfig {
+  allow_by_default: GoogleIdentityPlatformConfigArgsSmsRegionConfigAllowByDefault;
+  allowlist_only: GoogleIdentityPlatformConfigArgsSmsRegionConfigAllowlistOnly;
 }
-export interface Timeouts {
+export interface GoogleIdentityPlatformConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleIdentityPlatformConfigArgs {
   autodelete_anonymous_users?: boolean;
-  blocking_functions: BlockingFunctions;
-  client: Client;
-  mfa: Mfa;
-  monitoring: Monitoring;
-  multi_tenant: MultiTenant;
-  quota: Quota;
-  sign_in: SignIn;
-  sms_region_config: SmsRegionConfig;
-  timeouts: Timeouts;
+  blocking_functions: GoogleIdentityPlatformConfigArgsBlockingFunctions;
+  client: GoogleIdentityPlatformConfigArgsclient;
+  mfa: GoogleIdentityPlatformConfigArgsmfa;
+  monitoring: GoogleIdentityPlatformConfigArgsmonitoring;
+  multi_tenant: GoogleIdentityPlatformConfigArgsMultiTenant;
+  quota: GoogleIdentityPlatformConfigArgsquota;
+  sign_in: GoogleIdentityPlatformConfigArgsSignIn;
+  sms_region_config: GoogleIdentityPlatformConfigArgsSmsRegionConfig;
+  timeouts: GoogleIdentityPlatformConfigArgstimeouts;
 }
 export class google_identity_platform_config extends TerraformResource {
   readonly authorized_domains?: string[];

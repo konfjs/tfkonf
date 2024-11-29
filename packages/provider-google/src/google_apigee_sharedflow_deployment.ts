@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleApigeeSharedflowDeploymentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleApigeeSharedflowDeploymentArgs {
   revision: string;
   service_account?: string;
   sharedflow_id: string;
-  timeouts: Timeouts;
+  timeouts: GoogleApigeeSharedflowDeploymentArgstimeouts;
 }
 export class google_apigee_sharedflow_deployment extends TerraformResource {
   readonly id?: string;

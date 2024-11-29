@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Columns {
+export interface AwsGluePartitionArgsStorageDescriptorcolumns {
   comment?: string;
   name: string;
   type?: string;
 }
-export interface SerDeInfo {
+export interface AwsGluePartitionArgsStorageDescriptorSerDeInfo {
   name?: string;
   parameters?: {
     [key: string]: string;
   };
   serialization_library?: string;
 }
-export interface SkewedInfo {
+export interface AwsGluePartitionArgsStorageDescriptorSkewedInfo {
   skewed_column_names?: string[];
   skewed_column_value_location_maps?: {
     [key: string]: string;
   };
   skewed_column_values?: string[];
 }
-export interface SortColumns {
+export interface AwsGluePartitionArgsStorageDescriptorSortColumns {
   column: string;
   sort_order: number;
 }
-export interface StorageDescriptor {
+export interface AwsGluePartitionArgsStorageDescriptor {
   bucket_columns?: string[];
   compressed?: boolean;
   input_format?: string;
@@ -33,10 +33,10 @@ export interface StorageDescriptor {
     [key: string]: string;
   };
   stored_as_sub_directories?: boolean;
-  columns: Columns;
-  ser_de_info: SerDeInfo;
-  skewed_info: SkewedInfo;
-  sort_columns: SortColumns;
+  columns: AwsGluePartitionArgsStorageDescriptorcolumns;
+  ser_de_info: AwsGluePartitionArgsStorageDescriptorSerDeInfo;
+  skewed_info: AwsGluePartitionArgsStorageDescriptorSkewedInfo;
+  sort_columns: AwsGluePartitionArgsStorageDescriptorSortColumns;
 }
 export interface AwsGluePartitionArgs {
   database_name: string;
@@ -45,7 +45,7 @@ export interface AwsGluePartitionArgs {
   };
   partition_values: string[];
   table_name: string;
-  storage_descriptor: StorageDescriptor;
+  storage_descriptor: AwsGluePartitionArgsStorageDescriptor;
 }
 export class aws_glue_partition extends TerraformResource {
   readonly catalog_id?: string;

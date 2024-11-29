@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ReplicationSpecification {
+export interface AwsKeyspacesKeyspaceArgsReplicationSpecification {
   region_list?: string[];
 }
-export interface Timeouts {
+export interface AwsKeyspacesKeyspaceArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -11,8 +11,8 @@ export interface AwsKeyspacesKeyspaceArgs {
   tags?: {
     [key: string]: string;
   };
-  replication_specification: ReplicationSpecification;
-  timeouts: Timeouts;
+  replication_specification: AwsKeyspacesKeyspaceArgsReplicationSpecification;
+  timeouts: AwsKeyspacesKeyspaceArgstimeouts;
 }
 export class aws_keyspaces_keyspace extends TerraformResource {
   readonly arn!: string;

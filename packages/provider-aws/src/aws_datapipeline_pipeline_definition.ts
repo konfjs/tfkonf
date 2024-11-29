@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Attribute {
+export interface AwsDatapipelinePipelineDefinitionArgsParameterObjectattribute {
   key: string;
   string_value: string;
 }
-export interface ParameterObject {
+export interface AwsDatapipelinePipelineDefinitionArgsParameterObject {
   id: string;
-  attribute: Attribute;
+  attribute: AwsDatapipelinePipelineDefinitionArgsParameterObjectattribute;
 }
-export interface ParameterValue {
+export interface AwsDatapipelinePipelineDefinitionArgsParameterValue {
   id: string;
   string_value: string;
 }
-export interface Field {
+export interface AwsDatapipelinePipelineDefinitionArgsPipelineObjectfield {
   key: string;
   ref_value?: string;
   string_value?: string;
 }
-export interface PipelineObject {
+export interface AwsDatapipelinePipelineDefinitionArgsPipelineObject {
   id: string;
   name: string;
-  field: Field;
+  field: AwsDatapipelinePipelineDefinitionArgsPipelineObjectfield;
 }
 export interface AwsDatapipelinePipelineDefinitionArgs {
   pipeline_id: string;
-  parameter_object: ParameterObject;
-  parameter_value: ParameterValue;
-  pipeline_object: PipelineObject;
+  parameter_object: AwsDatapipelinePipelineDefinitionArgsParameterObject;
+  parameter_value: AwsDatapipelinePipelineDefinitionArgsParameterValue;
+  pipeline_object: AwsDatapipelinePipelineDefinitionArgsPipelineObject;
 }
 export class aws_datapipeline_pipeline_definition extends TerraformResource {
   readonly id?: string;

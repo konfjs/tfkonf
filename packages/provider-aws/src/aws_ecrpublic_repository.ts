@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CatalogData {
+export interface AwsEcrpublicRepositoryArgsCatalogData {
   about_text?: string;
   architectures?: string[];
   description?: string;
   operating_systems?: string[];
   usage_text?: string;
 }
-export interface Timeouts {
+export interface AwsEcrpublicRepositoryArgstimeouts {
   delete?: string;
 }
 export interface AwsEcrpublicRepositoryArgs {
@@ -15,8 +15,8 @@ export interface AwsEcrpublicRepositoryArgs {
   tags?: {
     [key: string]: string;
   };
-  catalog_data: CatalogData;
-  timeouts: Timeouts;
+  catalog_data: AwsEcrpublicRepositoryArgsCatalogData;
+  timeouts: AwsEcrpublicRepositoryArgstimeouts;
 }
 export class aws_ecrpublic_repository extends TerraformResource {
   readonly arn!: string;

@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchLogs {
+export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsCloudwatchLogs {
   enabled: boolean;
   log_group?: string;
 }
-export interface KinesisDataFirehose {
+export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsKinesisDataFirehose {
   delivery_stream?: string;
   enabled: boolean;
 }
-export interface S3 {
+export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogss3 {
   bucket_name?: string;
   enabled: boolean;
   prefix?: string;
 }
-export interface AccessLogs {
-  cloudwatch_logs: CloudwatchLogs;
-  kinesis_data_firehose: KinesisDataFirehose;
-  s3: S3;
+export interface AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogs {
+  cloudwatch_logs: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsCloudwatchLogs;
+  kinesis_data_firehose: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogsKinesisDataFirehose;
+  s3: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogss3;
 }
 export interface AwsVerifiedaccessInstanceLoggingConfigurationArgs {
   verifiedaccess_instance_id: string;
-  access_logs: AccessLogs;
+  access_logs: AwsVerifiedaccessInstanceLoggingConfigurationArgsAccessLogs;
 }
 export class aws_verifiedaccess_instance_logging_configuration extends TerraformResource {
   readonly id?: string;

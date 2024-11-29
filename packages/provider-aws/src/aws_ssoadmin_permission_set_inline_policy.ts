@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsSsoadminPermissionSetInlinePolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsSsoadminPermissionSetInlinePolicyArgs {
   inline_policy: string;
   instance_arn: string;
   permission_set_arn: string;
-  timeouts: Timeouts;
+  timeouts: AwsSsoadminPermissionSetInlinePolicyArgstimeouts;
 }
 export class aws_ssoadmin_permission_set_inline_policy extends TerraformResource {
   readonly id?: string;

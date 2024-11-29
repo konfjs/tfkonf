@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AudioExportGcsDestination {
+export interface GoogleDialogflowCxFlowArgsAdvancedSettingsAudioExportGcsDestination {
   uri?: string;
 }
-export interface DtmfSettings {
+export interface GoogleDialogflowCxFlowArgsAdvancedSettingsDtmfSettings {
   enabled?: boolean;
   finish_digit?: string;
   max_digits?: number;
 }
-export interface LoggingSettings {
+export interface GoogleDialogflowCxFlowArgsAdvancedSettingsLoggingSettings {
   enable_consent_based_redaction?: boolean;
   enable_interaction_logging?: boolean;
   enable_stackdriver_logging?: boolean;
 }
-export interface SpeechSettings {
+export interface GoogleDialogflowCxFlowArgsAdvancedSettingsSpeechSettings {
   endpointer_sensitivity?: number;
   models?: {
     [key: string]: string;
@@ -20,122 +20,122 @@ export interface SpeechSettings {
   no_speech_timeout?: string;
   use_timeout_based_endpointing?: boolean;
 }
-export interface AdvancedSettings {
-  audio_export_gcs_destination: AudioExportGcsDestination;
-  dtmf_settings: DtmfSettings;
-  logging_settings: LoggingSettings;
-  speech_settings: SpeechSettings;
+export interface GoogleDialogflowCxFlowArgsAdvancedSettings {
+  audio_export_gcs_destination: GoogleDialogflowCxFlowArgsAdvancedSettingsAudioExportGcsDestination;
+  dtmf_settings: GoogleDialogflowCxFlowArgsAdvancedSettingsDtmfSettings;
+  logging_settings: GoogleDialogflowCxFlowArgsAdvancedSettingsLoggingSettings;
+  speech_settings: GoogleDialogflowCxFlowArgsAdvancedSettingsSpeechSettings;
 }
-export interface ConditionalCases {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentConditionalCases {
   cases?: string;
 }
-export interface ConversationSuccess {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesConversationSuccess {
   metadata?: string;
 }
-export interface LiveAgentHandoff {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesLiveAgentHandoff {
   metadata?: string;
 }
-export interface OutputAudioText {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesOutputAudioText {
   ssml?: string;
   text?: string;
 }
-export interface PlayAudio {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesPlayAudio {
   audio_uri: string;
 }
-export interface TelephonyTransferCall {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesTelephonyTransferCall {
   phone_number: string;
 }
-export interface Text {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagestext {
   text?: string[];
 }
-export interface Messages {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessages {
   channel?: string;
   payload?: string;
-  conversation_success: ConversationSuccess;
-  live_agent_handoff: LiveAgentHandoff;
-  output_audio_text: OutputAudioText;
-  play_audio: PlayAudio;
-  telephony_transfer_call: TelephonyTransferCall;
-  text: Text;
+  conversation_success: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesConversationSuccess;
+  live_agent_handoff: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesLiveAgentHandoff;
+  output_audio_text: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesOutputAudioText;
+  play_audio: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesPlayAudio;
+  telephony_transfer_call: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagesTelephonyTransferCall;
+  text: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessagestext;
 }
-export interface SetParameterActions {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentSetParameterActions {
   parameter?: string;
   value?: string;
 }
-export interface TriggerFulfillment {
+export interface GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillment {
   return_partial_responses?: boolean;
   tag?: string;
   webhook?: string;
-  conditional_cases: ConditionalCases;
-  messages: Messages;
-  set_parameter_actions: SetParameterActions;
+  conditional_cases: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentConditionalCases;
+  messages: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentmessages;
+  set_parameter_actions: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillmentSetParameterActions;
 }
-export interface EventHandlers {
+export interface GoogleDialogflowCxFlowArgsEventHandlers {
   event?: string;
   target_flow?: string;
   target_page?: string;
-  trigger_fulfillment: TriggerFulfillment;
+  trigger_fulfillment: GoogleDialogflowCxFlowArgsEventHandlersTriggerFulfillment;
 }
-export interface NluSettings {
+export interface GoogleDialogflowCxFlowArgsNluSettings {
   classification_threshold?: number;
   model_training_mode?: string;
   model_type?: string;
 }
-export interface Timeouts {
+export interface GoogleDialogflowCxFlowArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface ConditionalCases {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentConditionalCases {
   cases?: string;
 }
-export interface ConversationSuccess {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesConversationSuccess {
   metadata?: string;
 }
-export interface LiveAgentHandoff {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesLiveAgentHandoff {
   metadata?: string;
 }
-export interface OutputAudioText {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesOutputAudioText {
   ssml?: string;
   text?: string;
 }
-export interface PlayAudio {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesPlayAudio {
   audio_uri: string;
 }
-export interface TelephonyTransferCall {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesTelephonyTransferCall {
   phone_number: string;
 }
-export interface Text {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagestext {
   text?: string[];
 }
-export interface Messages {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessages {
   channel?: string;
   payload?: string;
-  conversation_success: ConversationSuccess;
-  live_agent_handoff: LiveAgentHandoff;
-  output_audio_text: OutputAudioText;
-  play_audio: PlayAudio;
-  telephony_transfer_call: TelephonyTransferCall;
-  text: Text;
+  conversation_success: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesConversationSuccess;
+  live_agent_handoff: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesLiveAgentHandoff;
+  output_audio_text: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesOutputAudioText;
+  play_audio: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesPlayAudio;
+  telephony_transfer_call: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagesTelephonyTransferCall;
+  text: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessagestext;
 }
-export interface SetParameterActions {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentSetParameterActions {
   parameter?: string;
   value?: string;
 }
-export interface TriggerFulfillment {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillment {
   return_partial_responses?: boolean;
   tag?: string;
   webhook?: string;
-  conditional_cases: ConditionalCases;
-  messages: Messages;
-  set_parameter_actions: SetParameterActions;
+  conditional_cases: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentConditionalCases;
+  messages: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentmessages;
+  set_parameter_actions: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillmentSetParameterActions;
 }
-export interface TransitionRoutes {
+export interface GoogleDialogflowCxFlowArgsTransitionRoutes {
   condition?: string;
   intent?: string;
   target_flow?: string;
   target_page?: string;
-  trigger_fulfillment: TriggerFulfillment;
+  trigger_fulfillment: GoogleDialogflowCxFlowArgsTransitionRoutesTriggerFulfillment;
 }
 export interface GoogleDialogflowCxFlowArgs {
   description?: string;
@@ -144,11 +144,11 @@ export interface GoogleDialogflowCxFlowArgs {
   language_code?: string;
   parent?: string;
   transition_route_groups?: string[];
-  advanced_settings: AdvancedSettings;
-  event_handlers: EventHandlers;
-  nlu_settings: NluSettings;
-  timeouts: Timeouts;
-  transition_routes: TransitionRoutes;
+  advanced_settings: GoogleDialogflowCxFlowArgsAdvancedSettings;
+  event_handlers: GoogleDialogflowCxFlowArgsEventHandlers;
+  nlu_settings: GoogleDialogflowCxFlowArgsNluSettings;
+  timeouts: GoogleDialogflowCxFlowArgstimeouts;
+  transition_routes: GoogleDialogflowCxFlowArgsTransitionRoutes;
 }
 export class google_dialogflow_cx_flow extends TerraformResource {
   readonly id?: string;

@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsAutoscalingTrafficSourceAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
-export interface TrafficSource {
+export interface AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource {
   identifier: string;
   type: string;
 }
 export interface AwsAutoscalingTrafficSourceAttachmentArgs {
   autoscaling_group_name: string;
-  timeouts: Timeouts;
-  traffic_source: TrafficSource;
+  timeouts: AwsAutoscalingTrafficSourceAttachmentArgstimeouts;
+  traffic_source: AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource;
 }
 export class aws_autoscaling_traffic_source_attachment extends TerraformResource {
   readonly id?: string;

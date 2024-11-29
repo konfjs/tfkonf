@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleComputeInstanceIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleComputeInstanceIamBindingArgs {
   instance_name: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleComputeInstanceIamBindingArgscondition;
 }
 export class google_compute_instance_iam_binding extends TerraformResource {
   readonly etag!: string;

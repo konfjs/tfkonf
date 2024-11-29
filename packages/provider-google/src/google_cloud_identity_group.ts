@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GroupKey {
+export interface GoogleCloudIdentityGroupArgsGroupKey {
   id: string;
   namespace?: string;
 }
-export interface Timeouts {
+export interface GoogleCloudIdentityGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface GoogleCloudIdentityGroupArgs {
     [key: string]: string;
   };
   parent: string;
-  group_key: GroupKey;
-  timeouts: Timeouts;
+  group_key: GoogleCloudIdentityGroupArgsGroupKey;
+  timeouts: GoogleCloudIdentityGroupArgstimeouts;
 }
 export class google_cloud_identity_group extends TerraformResource {
   readonly additional_group_keys!: any[];

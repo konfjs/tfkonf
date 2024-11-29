@@ -1,75 +1,75 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyEncryptionConfiguration {
   cmk_arn?: string;
   encrypted?: boolean;
 }
-export interface RetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyRetainRule {
   interval: number;
   interval_unit: string;
 }
-export interface CrossRegionCopy {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopy {
   target: string;
-  encryption_configuration: EncryptionConfiguration;
-  retain_rule: RetainRule;
+  encryption_configuration: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyEncryptionConfiguration;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopyRetainRule;
 }
-export interface Action {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsaction {
   name: string;
-  cross_region_copy: CrossRegionCopy;
+  cross_region_copy: AwsDlmLifecyclePolicyArgsPolicyDetailsactionCrossRegionCopy;
 }
-export interface Parameters {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceparameters {
   description_regex: string;
   event_type: string;
   snapshot_owner: string[];
 }
-export interface EventSource {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsEventSource {
   type: string;
-  parameters: Parameters;
+  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsEventSourceparameters;
 }
-export interface Parameters {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsparameters {
   exclude_boot_volume?: boolean;
   no_reboot?: boolean;
 }
-export interface CreateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCreateRule {
   cron_expression?: string;
   interval?: number;
 }
-export interface DeprecateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleDeprecateRule {
   interval: number;
   interval_unit: string;
 }
-export interface RetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleRetainRule {
   interval: number;
   interval_unit: string;
 }
-export interface CrossRegionCopyRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRule {
   cmk_arn?: string;
   encrypted: boolean;
   target: string;
-  deprecate_rule: DeprecateRule;
-  retain_rule: RetainRule;
+  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleDeprecateRule;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRuleRetainRule;
 }
-export interface DeprecateRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleDeprecateRule {
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface FastRestoreRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleFastRestoreRule {
   availability_zones: string[];
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface RetainRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleRetainRule {
   count?: number;
   interval?: number;
   interval_unit?: string;
 }
-export interface ShareRule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleShareRule {
   target_accounts: string[];
   unshare_interval?: number;
   unshare_interval_unit?: string;
 }
-export interface Schedule {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetailsschedule {
   name: string;
   tags_to_add?: {
     [key: string]: string;
@@ -77,23 +77,23 @@ export interface Schedule {
   variable_tags?: {
     [key: string]: string;
   };
-  create_rule: CreateRule;
-  cross_region_copy_rule: CrossRegionCopyRule;
-  deprecate_rule: DeprecateRule;
-  fast_restore_rule: FastRestoreRule;
-  retain_rule: RetainRule;
-  share_rule: ShareRule;
+  create_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCreateRule;
+  cross_region_copy_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleCrossRegionCopyRule;
+  deprecate_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleDeprecateRule;
+  fast_restore_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleFastRestoreRule;
+  retain_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleRetainRule;
+  share_rule: AwsDlmLifecyclePolicyArgsPolicyDetailsscheduleShareRule;
 }
-export interface PolicyDetails {
+export interface AwsDlmLifecyclePolicyArgsPolicyDetails {
   policy_type?: string;
   resource_types?: string[];
   target_tags?: {
     [key: string]: string;
   };
-  action: Action;
-  event_source: EventSource;
-  parameters: Parameters;
-  schedule: Schedule;
+  action: AwsDlmLifecyclePolicyArgsPolicyDetailsaction;
+  event_source: AwsDlmLifecyclePolicyArgsPolicyDetailsEventSource;
+  parameters: AwsDlmLifecyclePolicyArgsPolicyDetailsparameters;
+  schedule: AwsDlmLifecyclePolicyArgsPolicyDetailsschedule;
 }
 export interface AwsDlmLifecyclePolicyArgs {
   description: string;
@@ -102,7 +102,7 @@ export interface AwsDlmLifecyclePolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  policy_details: PolicyDetails;
+  policy_details: AwsDlmLifecyclePolicyArgsPolicyDetails;
 }
 export class aws_dlm_lifecycle_policy extends TerraformResource {
   readonly arn!: string;

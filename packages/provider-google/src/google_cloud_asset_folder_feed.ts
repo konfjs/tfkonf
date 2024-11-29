@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleCloudAssetFolderFeedArgscondition {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface PubsubDestination {
+export interface GoogleCloudAssetFolderFeedArgsFeedOutputConfigPubsubDestination {
   topic: string;
 }
-export interface FeedOutputConfig {
-  pubsub_destination: PubsubDestination;
+export interface GoogleCloudAssetFolderFeedArgsFeedOutputConfig {
+  pubsub_destination: GoogleCloudAssetFolderFeedArgsFeedOutputConfigPubsubDestination;
 }
-export interface Timeouts {
+export interface GoogleCloudAssetFolderFeedArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,9 +23,9 @@ export interface GoogleCloudAssetFolderFeedArgs {
   content_type?: string;
   feed_id: string;
   folder: string;
-  condition: Condition;
-  feed_output_config: FeedOutputConfig;
-  timeouts: Timeouts;
+  condition: GoogleCloudAssetFolderFeedArgscondition;
+  feed_output_config: GoogleCloudAssetFolderFeedArgsFeedOutputConfig;
+  timeouts: GoogleCloudAssetFolderFeedArgstimeouts;
 }
 export class google_cloud_asset_folder_feed extends TerraformResource {
   readonly folder_id!: string;

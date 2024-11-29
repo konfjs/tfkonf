@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoExportPolicy {}
-export interface AutoImportPolicy {}
-export interface S3 {
-  auto_export_policy: AutoExportPolicy;
-  auto_import_policy: AutoImportPolicy;
+export interface AwsFsxDataRepositoryAssociationArgss3AutoExportPolicy {}
+export interface AwsFsxDataRepositoryAssociationArgss3AutoImportPolicy {}
+export interface AwsFsxDataRepositoryAssociationArgss3 {
+  auto_export_policy: AwsFsxDataRepositoryAssociationArgss3AutoExportPolicy;
+  auto_import_policy: AwsFsxDataRepositoryAssociationArgss3AutoImportPolicy;
 }
-export interface Timeouts {
+export interface AwsFsxDataRepositoryAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface AwsFsxDataRepositoryAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  s3: S3;
-  timeouts: Timeouts;
+  s3: AwsFsxDataRepositoryAssociationArgss3;
+  timeouts: AwsFsxDataRepositoryAssociationArgstimeouts;
 }
 export class aws_fsx_data_repository_association extends TerraformResource {
   readonly arn!: string;

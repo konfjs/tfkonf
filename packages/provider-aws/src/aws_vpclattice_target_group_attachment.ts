@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Target {
+export interface AwsVpclatticeTargetGroupAttachmentArgstarget {
   id: string;
 }
-export interface Timeouts {
+export interface AwsVpclatticeTargetGroupAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsVpclatticeTargetGroupAttachmentArgs {
   target_group_identifier: string;
-  target: Target;
-  timeouts: Timeouts;
+  target: AwsVpclatticeTargetGroupAttachmentArgstarget;
+  timeouts: AwsVpclatticeTargetGroupAttachmentArgstimeouts;
 }
 export class aws_vpclattice_target_group_attachment extends TerraformResource {
   readonly id?: string;

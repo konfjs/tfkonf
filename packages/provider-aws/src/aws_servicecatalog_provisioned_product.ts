@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ProvisioningParameters {
+export interface AwsServicecatalogProvisionedProductArgsProvisioningParameters {
   key: string;
   use_previous_value?: boolean;
   value?: string;
 }
-export interface StackSetProvisioningPreferences {
+export interface AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences {
   accounts?: string[];
   failure_tolerance_count?: number;
   failure_tolerance_percentage?: number;
@@ -12,7 +12,7 @@ export interface StackSetProvisioningPreferences {
   max_concurrency_percentage?: number;
   regions?: string[];
 }
-export interface Timeouts {
+export interface AwsServicecatalogProvisionedProductArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -30,9 +30,9 @@ export interface AwsServicecatalogProvisionedProductArgs {
   tags?: {
     [key: string]: string;
   };
-  provisioning_parameters: ProvisioningParameters;
-  stack_set_provisioning_preferences: StackSetProvisioningPreferences;
-  timeouts: Timeouts;
+  provisioning_parameters: AwsServicecatalogProvisionedProductArgsProvisioningParameters;
+  stack_set_provisioning_preferences: AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences;
+  timeouts: AwsServicecatalogProvisionedProductArgstimeouts;
 }
 export class aws_servicecatalog_provisioned_product extends TerraformResource {
   readonly arn!: string;

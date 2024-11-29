@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AnthosCluster {
+export interface GoogleClouddeployTargetArgsAnthosCluster {
   membership?: string;
 }
-export interface CustomTarget {
+export interface GoogleClouddeployTargetArgsCustomTarget {
   custom_target_type: string;
 }
-export interface ExecutionConfigs {
+export interface GoogleClouddeployTargetArgsExecutionConfigs {
   usages: string[];
   verbose?: boolean;
   worker_pool?: string;
 }
-export interface Gke {
+export interface GoogleClouddeployTargetArgsgke {
   cluster?: string;
   internal_ip?: boolean;
   proxy_url?: string;
 }
-export interface MultiTarget {
+export interface GoogleClouddeployTargetArgsMultiTarget {
   target_ids: string[];
 }
-export interface Run {
+export interface GoogleClouddeployTargetArgsrun {
   location: string;
 }
-export interface Timeouts {
+export interface GoogleClouddeployTargetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -40,13 +40,13 @@ export interface GoogleClouddeployTargetArgs {
   location: string;
   name: string;
   require_approval?: boolean;
-  anthos_cluster: AnthosCluster;
-  custom_target: CustomTarget;
-  execution_configs: ExecutionConfigs;
-  gke: Gke;
-  multi_target: MultiTarget;
-  run: Run;
-  timeouts: Timeouts;
+  anthos_cluster: GoogleClouddeployTargetArgsAnthosCluster;
+  custom_target: GoogleClouddeployTargetArgsCustomTarget;
+  execution_configs: GoogleClouddeployTargetArgsExecutionConfigs;
+  gke: GoogleClouddeployTargetArgsgke;
+  multi_target: GoogleClouddeployTargetArgsMultiTarget;
+  run: GoogleClouddeployTargetArgsrun;
+  timeouts: GoogleClouddeployTargetArgstimeouts;
 }
 export class google_clouddeploy_target extends TerraformResource {
   readonly create_time!: string;

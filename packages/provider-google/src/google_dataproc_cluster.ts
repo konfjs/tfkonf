@@ -1,53 +1,53 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoscalingConfig {
+export interface GoogleDataprocClusterArgsClusterConfigAutoscalingConfig {
   policy_uri: string;
 }
-export interface Accelerators {
+export interface GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigaccelerators {
   accelerator_count: number;
   accelerator_type: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig {
   boot_disk_type?: string;
   local_ssd_interface?: string;
 }
-export interface NodeGroupConfig {
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+export interface GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig {
+  accelerators: GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigaccelerators;
+  disk_config: GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfigDiskConfig;
 }
-export interface NodeGroup {
+export interface GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroup {
   roles: string[];
-  node_group_config: NodeGroupConfig;
+  node_group_config: GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroupNodeGroupConfig;
 }
-export interface AuxiliaryNodeGroups {
-  node_group: NodeGroup;
+export interface GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroups {
+  node_group: GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroupsNodeGroup;
 }
-export interface Metrics {
+export interface GoogleDataprocClusterArgsClusterConfigDataprocMetricConfigmetrics {
   metric_overrides?: string[];
   metric_source: string;
 }
-export interface DataprocMetricConfig {
-  metrics: Metrics;
+export interface GoogleDataprocClusterArgsClusterConfigDataprocMetricConfig {
+  metrics: GoogleDataprocClusterArgsClusterConfigDataprocMetricConfigmetrics;
 }
-export interface EncryptionConfig {
+export interface GoogleDataprocClusterArgsClusterConfigEncryptionConfig {
   kms_key_name: string;
 }
-export interface EndpointConfig {
+export interface GoogleDataprocClusterArgsClusterConfigEndpointConfig {
   enable_http_port_access: boolean;
 }
-export interface NodeGroupAffinity {
+export interface GoogleDataprocClusterArgsClusterConfigGceClusterConfigNodeGroupAffinity {
   node_group_uri: string;
 }
-export interface ReservationAffinity {
+export interface GoogleDataprocClusterArgsClusterConfigGceClusterConfigReservationAffinity {
   consume_reservation_type?: string;
   key?: string;
   values?: string[];
 }
-export interface ShieldedInstanceConfig {
+export interface GoogleDataprocClusterArgsClusterConfigGceClusterConfigShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface GceClusterConfig {
+export interface GoogleDataprocClusterArgsClusterConfigGceClusterConfig {
   internal_ip_only?: boolean;
   metadata?: {
     [key: string]: string;
@@ -55,47 +55,47 @@ export interface GceClusterConfig {
   service_account?: string;
   subnetwork?: string;
   tags?: string[];
-  node_group_affinity: NodeGroupAffinity;
-  reservation_affinity: ReservationAffinity;
-  shielded_instance_config: ShieldedInstanceConfig;
+  node_group_affinity: GoogleDataprocClusterArgsClusterConfigGceClusterConfigNodeGroupAffinity;
+  reservation_affinity: GoogleDataprocClusterArgsClusterConfigGceClusterConfigReservationAffinity;
+  shielded_instance_config: GoogleDataprocClusterArgsClusterConfigGceClusterConfigShieldedInstanceConfig;
 }
-export interface InitializationAction {
+export interface GoogleDataprocClusterArgsClusterConfigInitializationAction {
   script: string;
   timeout_sec?: number;
 }
-export interface LifecycleConfig {
+export interface GoogleDataprocClusterArgsClusterConfigLifecycleConfig {
   auto_delete_time?: string;
   idle_delete_ttl?: string;
 }
-export interface Accelerators {
+export interface GoogleDataprocClusterArgsClusterConfigMasterConfigaccelerators {
   accelerator_count: number;
   accelerator_type: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocClusterArgsClusterConfigMasterConfigDiskConfig {
   boot_disk_type?: string;
   local_ssd_interface?: string;
 }
-export interface MasterConfig {
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+export interface GoogleDataprocClusterArgsClusterConfigMasterConfig {
+  accelerators: GoogleDataprocClusterArgsClusterConfigMasterConfigaccelerators;
+  disk_config: GoogleDataprocClusterArgsClusterConfigMasterConfigDiskConfig;
 }
-export interface MetastoreConfig {
+export interface GoogleDataprocClusterArgsClusterConfigMetastoreConfig {
   dataproc_metastore_service: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigDiskConfig {
   boot_disk_type?: string;
   local_ssd_interface?: string;
 }
-export interface InstanceSelectionList {}
-export interface InstanceFlexibilityPolicy {
-  instance_selection_list: InstanceSelectionList;
+export interface GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList {}
+export interface GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy {
+  instance_selection_list: GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList;
 }
-export interface PreemptibleWorkerConfig {
+export interface GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfig {
   preemptibility?: string;
-  disk_config: DiskConfig;
-  instance_flexibility_policy: InstanceFlexibilityPolicy;
+  disk_config: GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigDiskConfig;
+  instance_flexibility_policy: GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy;
 }
-export interface KerberosConfig {
+export interface GoogleDataprocClusterArgsClusterConfigSecurityConfigKerberosConfig {
   cross_realm_trust_admin_server?: string;
   cross_realm_trust_kdc?: string;
   cross_realm_trust_realm?: string;
@@ -112,98 +112,98 @@ export interface KerberosConfig {
   truststore_password_uri?: string;
   truststore_uri?: string;
 }
-export interface SecurityConfig {
-  kerberos_config: KerberosConfig;
+export interface GoogleDataprocClusterArgsClusterConfigSecurityConfig {
+  kerberos_config: GoogleDataprocClusterArgsClusterConfigSecurityConfigKerberosConfig;
 }
-export interface SoftwareConfig {
+export interface GoogleDataprocClusterArgsClusterConfigSoftwareConfig {
   optional_components?: string[];
   override_properties?: {
     [key: string]: string;
   };
 }
-export interface Accelerators {
+export interface GoogleDataprocClusterArgsClusterConfigWorkerConfigaccelerators {
   accelerator_count: number;
   accelerator_type: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocClusterArgsClusterConfigWorkerConfigDiskConfig {
   boot_disk_type?: string;
   local_ssd_interface?: string;
 }
-export interface WorkerConfig {
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+export interface GoogleDataprocClusterArgsClusterConfigWorkerConfig {
+  accelerators: GoogleDataprocClusterArgsClusterConfigWorkerConfigaccelerators;
+  disk_config: GoogleDataprocClusterArgsClusterConfigWorkerConfigDiskConfig;
 }
-export interface ClusterConfig {
+export interface GoogleDataprocClusterArgsClusterConfig {
   staging_bucket?: string;
-  autoscaling_config: AutoscalingConfig;
-  auxiliary_node_groups: AuxiliaryNodeGroups;
-  dataproc_metric_config: DataprocMetricConfig;
-  encryption_config: EncryptionConfig;
-  endpoint_config: EndpointConfig;
-  gce_cluster_config: GceClusterConfig;
-  initialization_action: InitializationAction;
-  lifecycle_config: LifecycleConfig;
-  master_config: MasterConfig;
-  metastore_config: MetastoreConfig;
-  preemptible_worker_config: PreemptibleWorkerConfig;
-  security_config: SecurityConfig;
-  software_config: SoftwareConfig;
-  worker_config: WorkerConfig;
+  autoscaling_config: GoogleDataprocClusterArgsClusterConfigAutoscalingConfig;
+  auxiliary_node_groups: GoogleDataprocClusterArgsClusterConfigAuxiliaryNodeGroups;
+  dataproc_metric_config: GoogleDataprocClusterArgsClusterConfigDataprocMetricConfig;
+  encryption_config: GoogleDataprocClusterArgsClusterConfigEncryptionConfig;
+  endpoint_config: GoogleDataprocClusterArgsClusterConfigEndpointConfig;
+  gce_cluster_config: GoogleDataprocClusterArgsClusterConfigGceClusterConfig;
+  initialization_action: GoogleDataprocClusterArgsClusterConfigInitializationAction;
+  lifecycle_config: GoogleDataprocClusterArgsClusterConfigLifecycleConfig;
+  master_config: GoogleDataprocClusterArgsClusterConfigMasterConfig;
+  metastore_config: GoogleDataprocClusterArgsClusterConfigMetastoreConfig;
+  preemptible_worker_config: GoogleDataprocClusterArgsClusterConfigPreemptibleWorkerConfig;
+  security_config: GoogleDataprocClusterArgsClusterConfigSecurityConfig;
+  software_config: GoogleDataprocClusterArgsClusterConfigSoftwareConfig;
+  worker_config: GoogleDataprocClusterArgsClusterConfigWorkerConfig;
 }
-export interface Timeouts {
+export interface GoogleDataprocClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface MetastoreConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig {
   dataproc_metastore_service?: string;
 }
-export interface SparkHistoryServerConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig {
   dataproc_cluster?: string;
 }
-export interface AuxiliaryServicesConfig {
-  metastore_config: MetastoreConfig;
-  spark_history_server_config: SparkHistoryServerConfig;
+export interface GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfig {
+  metastore_config: GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfigMetastoreConfig;
+  spark_history_server_config: GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfigSparkHistoryServerConfig;
 }
-export interface Autoscaling {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigautoscaling {
   max_node_count?: number;
   min_node_count?: number;
 }
-export interface Config {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigconfig {
   local_ssd_count?: number;
   machine_type?: string;
   min_cpu_platform?: string;
   preemptible?: boolean;
   spot?: boolean;
 }
-export interface NodePoolConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig {
   locations: string[];
-  autoscaling: Autoscaling;
-  config: Config;
+  autoscaling: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigautoscaling;
+  config: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfigconfig;
 }
-export interface NodePoolTarget {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget {
   node_pool: string;
   roles: string[];
-  node_pool_config: NodePoolConfig;
+  node_pool_config: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTargetNodePoolConfig;
 }
-export interface GkeClusterConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig {
   gke_cluster_target?: string;
-  node_pool_target: NodePoolTarget;
+  node_pool_target: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfigNodePoolTarget;
 }
-export interface KubernetesSoftwareConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig {
   component_version: {
     [key: string]: string;
   };
 }
-export interface KubernetesClusterConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfig {
   kubernetes_namespace?: string;
-  gke_cluster_config: GkeClusterConfig;
-  kubernetes_software_config: KubernetesSoftwareConfig;
+  gke_cluster_config: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigGkeClusterConfig;
+  kubernetes_software_config: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfigKubernetesSoftwareConfig;
 }
-export interface VirtualClusterConfig {
+export interface GoogleDataprocClusterArgsVirtualClusterConfig {
   staging_bucket?: string;
-  auxiliary_services_config: AuxiliaryServicesConfig;
-  kubernetes_cluster_config: KubernetesClusterConfig;
+  auxiliary_services_config: GoogleDataprocClusterArgsVirtualClusterConfigAuxiliaryServicesConfig;
+  kubernetes_cluster_config: GoogleDataprocClusterArgsVirtualClusterConfigKubernetesClusterConfig;
 }
 export interface GoogleDataprocClusterArgs {
   graceful_decommission_timeout?: string;
@@ -212,9 +212,9 @@ export interface GoogleDataprocClusterArgs {
   };
   name: string;
   region?: string;
-  cluster_config: ClusterConfig;
-  timeouts: Timeouts;
-  virtual_cluster_config: VirtualClusterConfig;
+  cluster_config: GoogleDataprocClusterArgsClusterConfig;
+  timeouts: GoogleDataprocClusterArgstimeouts;
+  virtual_cluster_config: GoogleDataprocClusterArgsVirtualClusterConfig;
 }
 export class google_dataproc_cluster extends TerraformResource {
   readonly effective_labels!: {

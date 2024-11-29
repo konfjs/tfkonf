@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Connector {
+export interface AwsChimeVoiceConnectorGroupArgsconnector {
   priority: number;
   voice_connector_id: string;
 }
 export interface AwsChimeVoiceConnectorGroupArgs {
   name: string;
-  connector: Connector;
+  connector: AwsChimeVoiceConnectorGroupArgsconnector;
 }
 export class aws_chime_voice_connector_group extends TerraformResource {
   readonly id?: string;

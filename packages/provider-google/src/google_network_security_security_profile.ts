@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SeverityOverrides {
+export interface GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileSeverityOverrides {
   action: string;
   severity: string;
 }
-export interface ThreatOverrides {
+export interface GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileThreatOverrides {
   action: string;
   threat_id: string;
 }
-export interface ThreatPreventionProfile {
-  severity_overrides: SeverityOverrides;
-  threat_overrides: ThreatOverrides;
+export interface GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfile {
+  severity_overrides: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileSeverityOverrides;
+  threat_overrides: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfileThreatOverrides;
 }
-export interface Timeouts {
+export interface GoogleNetworkSecuritySecurityProfileArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,8 +25,8 @@ export interface GoogleNetworkSecuritySecurityProfileArgs {
   name: string;
   parent?: string;
   type: string;
-  threat_prevention_profile: ThreatPreventionProfile;
-  timeouts: Timeouts;
+  threat_prevention_profile: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfile;
+  timeouts: GoogleNetworkSecuritySecurityProfileArgstimeouts;
 }
 export class google_network_security_security_profile extends TerraformResource {
   readonly create_time!: string;

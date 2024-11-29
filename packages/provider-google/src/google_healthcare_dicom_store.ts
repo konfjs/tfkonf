@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NotificationConfig {
+export interface GoogleHealthcareDicomStoreArgsNotificationConfig {
   pubsub_topic: string;
   send_for_bulk_import?: boolean;
 }
-export interface Timeouts {
+export interface GoogleHealthcareDicomStoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleHealthcareDicomStoreArgs {
     [key: string]: string;
   };
   name: string;
-  notification_config: NotificationConfig;
-  timeouts: Timeouts;
+  notification_config: GoogleHealthcareDicomStoreArgsNotificationConfig;
+  timeouts: GoogleHealthcareDicomStoreArgstimeouts;
 }
 export class google_healthcare_dicom_store extends TerraformResource {
   readonly effective_labels!: {

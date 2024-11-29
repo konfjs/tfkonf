@@ -1,44 +1,44 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RecoveryMechanism {
+export interface AwsCognitoUserPoolArgsAccountRecoverySettingRecoveryMechanism {
   name: string;
   priority: number;
 }
-export interface AccountRecoverySetting {
-  recovery_mechanism: RecoveryMechanism;
+export interface AwsCognitoUserPoolArgsAccountRecoverySetting {
+  recovery_mechanism: AwsCognitoUserPoolArgsAccountRecoverySettingRecoveryMechanism;
 }
-export interface InviteMessageTemplate {
+export interface AwsCognitoUserPoolArgsAdminCreateUserConfigInviteMessageTemplate {
   email_message?: string;
   email_subject?: string;
   sms_message?: string;
 }
-export interface AdminCreateUserConfig {
+export interface AwsCognitoUserPoolArgsAdminCreateUserConfig {
   allow_admin_create_user_only?: boolean;
-  invite_message_template: InviteMessageTemplate;
+  invite_message_template: AwsCognitoUserPoolArgsAdminCreateUserConfigInviteMessageTemplate;
 }
-export interface DeviceConfiguration {
+export interface AwsCognitoUserPoolArgsDeviceConfiguration {
   challenge_required_on_new_device?: boolean;
   device_only_remembered_on_user_prompt?: boolean;
 }
-export interface EmailConfiguration {
+export interface AwsCognitoUserPoolArgsEmailConfiguration {
   configuration_set?: string;
   email_sending_account?: string;
   from_email_address?: string;
   reply_to_email_address?: string;
   source_arn?: string;
 }
-export interface CustomEmailSender {
+export interface AwsCognitoUserPoolArgsLambdaConfigCustomEmailSender {
   lambda_arn: string;
   lambda_version: string;
 }
-export interface CustomSmsSender {
+export interface AwsCognitoUserPoolArgsLambdaConfigCustomSmsSender {
   lambda_arn: string;
   lambda_version: string;
 }
-export interface PreTokenGenerationConfig {
+export interface AwsCognitoUserPoolArgsLambdaConfigPreTokenGenerationConfig {
   lambda_arn: string;
   lambda_version: string;
 }
-export interface LambdaConfig {
+export interface AwsCognitoUserPoolArgsLambdaConfig {
   create_auth_challenge?: string;
   custom_message?: string;
   define_auth_challenge?: string;
@@ -49,11 +49,11 @@ export interface LambdaConfig {
   pre_sign_up?: string;
   user_migration?: string;
   verify_auth_challenge_response?: string;
-  custom_email_sender: CustomEmailSender;
-  custom_sms_sender: CustomSmsSender;
-  pre_token_generation_config: PreTokenGenerationConfig;
+  custom_email_sender: AwsCognitoUserPoolArgsLambdaConfigCustomEmailSender;
+  custom_sms_sender: AwsCognitoUserPoolArgsLambdaConfigCustomSmsSender;
+  pre_token_generation_config: AwsCognitoUserPoolArgsLambdaConfigPreTokenGenerationConfig;
 }
-export interface PasswordPolicy {
+export interface AwsCognitoUserPoolArgsPasswordPolicy {
   minimum_length?: number;
   password_history_size?: number;
   require_lowercase?: boolean;
@@ -61,40 +61,40 @@ export interface PasswordPolicy {
   require_symbols?: boolean;
   require_uppercase?: boolean;
 }
-export interface NumberAttributeConstraints {
+export interface AwsCognitoUserPoolArgsschemaNumberAttributeConstraints {
   max_value?: string;
   min_value?: string;
 }
-export interface StringAttributeConstraints {
+export interface AwsCognitoUserPoolArgsschemaStringAttributeConstraints {
   max_length?: string;
   min_length?: string;
 }
-export interface Schema {
+export interface AwsCognitoUserPoolArgsschema {
   attribute_data_type: string;
   developer_only_attribute?: boolean;
   mutable?: boolean;
   name: string;
   required?: boolean;
-  number_attribute_constraints: NumberAttributeConstraints;
-  string_attribute_constraints: StringAttributeConstraints;
+  number_attribute_constraints: AwsCognitoUserPoolArgsschemaNumberAttributeConstraints;
+  string_attribute_constraints: AwsCognitoUserPoolArgsschemaStringAttributeConstraints;
 }
-export interface SmsConfiguration {
+export interface AwsCognitoUserPoolArgsSmsConfiguration {
   external_id: string;
   sns_caller_arn: string;
 }
-export interface SoftwareTokenMfaConfiguration {
+export interface AwsCognitoUserPoolArgsSoftwareTokenMfaConfiguration {
   enabled: boolean;
 }
-export interface UserAttributeUpdateSettings {
+export interface AwsCognitoUserPoolArgsUserAttributeUpdateSettings {
   attributes_require_verification_before_update: string[];
 }
-export interface UserPoolAddOns {
+export interface AwsCognitoUserPoolArgsUserPoolAddOns {
   advanced_security_mode: string;
 }
-export interface UsernameConfiguration {
+export interface AwsCognitoUserPoolArgsUsernameConfiguration {
   case_sensitive: boolean;
 }
-export interface VerificationMessageTemplate {
+export interface AwsCognitoUserPoolArgsVerificationMessageTemplate {
   default_email_option?: string;
 }
 export interface AwsCognitoUserPoolArgs {
@@ -108,19 +108,19 @@ export interface AwsCognitoUserPoolArgs {
     [key: string]: string;
   };
   username_attributes?: string[];
-  account_recovery_setting: AccountRecoverySetting;
-  admin_create_user_config: AdminCreateUserConfig;
-  device_configuration: DeviceConfiguration;
-  email_configuration: EmailConfiguration;
-  lambda_config: LambdaConfig;
-  password_policy: PasswordPolicy;
-  schema: Schema;
-  sms_configuration: SmsConfiguration;
-  software_token_mfa_configuration: SoftwareTokenMfaConfiguration;
-  user_attribute_update_settings: UserAttributeUpdateSettings;
-  user_pool_add_ons: UserPoolAddOns;
-  username_configuration: UsernameConfiguration;
-  verification_message_template: VerificationMessageTemplate;
+  account_recovery_setting: AwsCognitoUserPoolArgsAccountRecoverySetting;
+  admin_create_user_config: AwsCognitoUserPoolArgsAdminCreateUserConfig;
+  device_configuration: AwsCognitoUserPoolArgsDeviceConfiguration;
+  email_configuration: AwsCognitoUserPoolArgsEmailConfiguration;
+  lambda_config: AwsCognitoUserPoolArgsLambdaConfig;
+  password_policy: AwsCognitoUserPoolArgsPasswordPolicy;
+  schema: AwsCognitoUserPoolArgsschema;
+  sms_configuration: AwsCognitoUserPoolArgsSmsConfiguration;
+  software_token_mfa_configuration: AwsCognitoUserPoolArgsSoftwareTokenMfaConfiguration;
+  user_attribute_update_settings: AwsCognitoUserPoolArgsUserAttributeUpdateSettings;
+  user_pool_add_ons: AwsCognitoUserPoolArgsUserPoolAddOns;
+  username_configuration: AwsCognitoUserPoolArgsUsernameConfiguration;
+  verification_message_template: AwsCognitoUserPoolArgsVerificationMessageTemplate;
 }
 export class aws_cognito_user_pool extends TerraformResource {
   readonly arn!: string;

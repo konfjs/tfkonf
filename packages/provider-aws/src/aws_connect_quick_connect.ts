@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PhoneConfig {
+export interface AwsConnectQuickConnectArgsQuickConnectConfigPhoneConfig {
   phone_number: string;
 }
-export interface QueueConfig {
+export interface AwsConnectQuickConnectArgsQuickConnectConfigQueueConfig {
   contact_flow_id: string;
   queue_id: string;
 }
-export interface UserConfig {
+export interface AwsConnectQuickConnectArgsQuickConnectConfigUserConfig {
   contact_flow_id: string;
   user_id: string;
 }
-export interface QuickConnectConfig {
+export interface AwsConnectQuickConnectArgsQuickConnectConfig {
   quick_connect_type: string;
-  phone_config: PhoneConfig;
-  queue_config: QueueConfig;
-  user_config: UserConfig;
+  phone_config: AwsConnectQuickConnectArgsQuickConnectConfigPhoneConfig;
+  queue_config: AwsConnectQuickConnectArgsQuickConnectConfigQueueConfig;
+  user_config: AwsConnectQuickConnectArgsQuickConnectConfigUserConfig;
 }
 export interface AwsConnectQuickConnectArgs {
   description?: string;
@@ -23,7 +23,7 @@ export interface AwsConnectQuickConnectArgs {
   tags?: {
     [key: string]: string;
   };
-  quick_connect_config: QuickConnectConfig;
+  quick_connect_config: AwsConnectQuickConnectArgsQuickConnectConfig;
 }
 export class aws_connect_quick_connect extends TerraformResource {
   readonly arn!: string;

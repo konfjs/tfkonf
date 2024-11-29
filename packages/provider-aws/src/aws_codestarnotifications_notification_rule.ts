@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Target {
+export interface AwsCodestarnotificationsNotificationRuleArgstarget {
   address: string;
   type?: string;
 }
@@ -12,7 +12,7 @@ export interface AwsCodestarnotificationsNotificationRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  target: Target;
+  target: AwsCodestarnotificationsNotificationRuleArgstarget;
 }
 export class aws_codestarnotifications_notification_rule extends TerraformResource {
   readonly arn!: string;

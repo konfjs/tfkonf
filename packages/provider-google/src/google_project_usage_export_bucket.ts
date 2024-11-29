@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleProjectUsageExportBucketArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleProjectUsageExportBucketArgs {
   bucket_name: string;
   prefix?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleProjectUsageExportBucketArgstimeouts;
 }
 export class google_project_usage_export_bucket extends TerraformResource {
   readonly id?: string;

@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationIpRanges {
+export interface GoogleVmwareengineExternalAccessRuleArgsDestinationIpRanges {
   external_address?: string;
   ip_address_range?: string;
 }
-export interface SourceIpRanges {
+export interface GoogleVmwareengineExternalAccessRuleArgsSourceIpRanges {
   ip_address?: string;
   ip_address_range?: string;
 }
-export interface Timeouts {
+export interface GoogleVmwareengineExternalAccessRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleVmwareengineExternalAccessRuleArgs {
   parent: string;
   priority: number;
   source_ports: string[];
-  destination_ip_ranges: DestinationIpRanges;
-  source_ip_ranges: SourceIpRanges;
-  timeouts: Timeouts;
+  destination_ip_ranges: GoogleVmwareengineExternalAccessRuleArgsDestinationIpRanges;
+  source_ip_ranges: GoogleVmwareengineExternalAccessRuleArgsSourceIpRanges;
+  timeouts: GoogleVmwareengineExternalAccessRuleArgstimeouts;
 }
 export class google_vmwareengine_external_access_rule extends TerraformResource {
   readonly create_time!: string;

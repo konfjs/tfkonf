@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Backend {
+export interface GoogleComputeRegionBackendServiceArgsbackend {
   balancing_mode?: string;
   capacity_scaler?: number;
   description?: string;
@@ -12,7 +12,7 @@ export interface Backend {
   max_rate_per_instance?: number;
   max_utilization?: number;
 }
-export interface CacheKeyPolicy {
+export interface GoogleComputeRegionBackendServiceArgsCdnPolicyCacheKeyPolicy {
   include_host?: boolean;
   include_named_cookies?: string[];
   include_protocol?: boolean;
@@ -20,56 +20,56 @@ export interface CacheKeyPolicy {
   query_string_blacklist?: string[];
   query_string_whitelist?: string[];
 }
-export interface NegativeCachingPolicy {
+export interface GoogleComputeRegionBackendServiceArgsCdnPolicyNegativeCachingPolicy {
   code?: number;
 }
-export interface CdnPolicy {
+export interface GoogleComputeRegionBackendServiceArgsCdnPolicy {
   signed_url_cache_max_age_sec?: number;
-  cache_key_policy: CacheKeyPolicy;
-  negative_caching_policy: NegativeCachingPolicy;
+  cache_key_policy: GoogleComputeRegionBackendServiceArgsCdnPolicyCacheKeyPolicy;
+  negative_caching_policy: GoogleComputeRegionBackendServiceArgsCdnPolicyNegativeCachingPolicy;
 }
-export interface CircuitBreakers {
+export interface GoogleComputeRegionBackendServiceArgsCircuitBreakers {
   max_connections?: number;
   max_pending_requests?: number;
   max_requests?: number;
   max_requests_per_connection?: number;
   max_retries?: number;
 }
-export interface Ttl {
+export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookiettl {
   nanos?: number;
   seconds: number;
 }
-export interface HttpCookie {
+export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
-  ttl: Ttl;
+  ttl: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookiettl;
 }
-export interface ConsistentHash {
+export interface GoogleComputeRegionBackendServiceArgsConsistentHash {
   http_header_name?: string;
   minimum_ring_size?: number;
-  http_cookie: HttpCookie;
+  http_cookie: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookie;
 }
-export interface FailoverPolicy {
+export interface GoogleComputeRegionBackendServiceArgsFailoverPolicy {
   failover_ratio?: number;
 }
-export interface Iap {
+export interface GoogleComputeRegionBackendServiceArgsiap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
 }
-export interface LogConfig {
+export interface GoogleComputeRegionBackendServiceArgsLogConfig {
   enable?: boolean;
   sample_rate?: number;
 }
-export interface BaseEjectionTime {
+export interface GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjectionTime {
   nanos?: number;
   seconds: number;
 }
-export interface Interval {
+export interface GoogleComputeRegionBackendServiceArgsOutlierDetectioninterval {
   nanos?: number;
   seconds: number;
 }
-export interface OutlierDetection {
+export interface GoogleComputeRegionBackendServiceArgsOutlierDetection {
   consecutive_errors?: number;
   consecutive_gateway_failure?: number;
   enforcing_consecutive_errors?: number;
@@ -79,19 +79,19 @@ export interface OutlierDetection {
   success_rate_minimum_hosts?: number;
   success_rate_request_volume?: number;
   success_rate_stdev_factor?: number;
-  base_ejection_time: BaseEjectionTime;
-  interval: Interval;
+  base_ejection_time: GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjectionTime;
+  interval: GoogleComputeRegionBackendServiceArgsOutlierDetectioninterval;
 }
-export interface Ttl {
+export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookiettl {
   nanos?: number;
   seconds: number;
 }
-export interface StrongSessionAffinityCookie {
+export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
-  ttl: Ttl;
+  ttl: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookiettl;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionBackendServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -107,16 +107,16 @@ export interface GoogleComputeRegionBackendServiceArgs {
   locality_lb_policy?: string;
   name: string;
   network?: string;
-  backend: Backend;
-  cdn_policy: CdnPolicy;
-  circuit_breakers: CircuitBreakers;
-  consistent_hash: ConsistentHash;
-  failover_policy: FailoverPolicy;
-  iap: Iap;
-  log_config: LogConfig;
-  outlier_detection: OutlierDetection;
-  strong_session_affinity_cookie: StrongSessionAffinityCookie;
-  timeouts: Timeouts;
+  backend: GoogleComputeRegionBackendServiceArgsbackend;
+  cdn_policy: GoogleComputeRegionBackendServiceArgsCdnPolicy;
+  circuit_breakers: GoogleComputeRegionBackendServiceArgsCircuitBreakers;
+  consistent_hash: GoogleComputeRegionBackendServiceArgsConsistentHash;
+  failover_policy: GoogleComputeRegionBackendServiceArgsFailoverPolicy;
+  iap: GoogleComputeRegionBackendServiceArgsiap;
+  log_config: GoogleComputeRegionBackendServiceArgsLogConfig;
+  outlier_detection: GoogleComputeRegionBackendServiceArgsOutlierDetection;
+  strong_session_affinity_cookie: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie;
+  timeouts: GoogleComputeRegionBackendServiceArgstimeouts;
 }
 export class google_compute_region_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

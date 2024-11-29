@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkSecurityGatewaySecurityPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleNetworkSecurityGatewaySecurityPolicyArgs {
   location?: string;
   name: string;
   tls_inspection_policy?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkSecurityGatewaySecurityPolicyArgstimeouts;
 }
 export class google_network_security_gateway_security_policy extends TerraformResource {
   readonly create_time!: string;

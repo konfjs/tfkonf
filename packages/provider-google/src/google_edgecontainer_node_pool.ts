@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LocalDiskEncryption {
+export interface GoogleEdgecontainerNodePoolArgsLocalDiskEncryption {
   kms_key?: string;
 }
-export interface NodeConfig {}
-export interface Timeouts {
+export interface GoogleEdgecontainerNodePoolArgsNodeConfig {}
+export interface GoogleEdgecontainerNodePoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,9 +17,9 @@ export interface GoogleEdgecontainerNodePoolArgs {
   name: string;
   node_count: number;
   node_location: string;
-  local_disk_encryption: LocalDiskEncryption;
-  node_config: NodeConfig;
-  timeouts: Timeouts;
+  local_disk_encryption: GoogleEdgecontainerNodePoolArgsLocalDiskEncryption;
+  node_config: GoogleEdgecontainerNodePoolArgsNodeConfig;
+  timeouts: GoogleEdgecontainerNodePoolArgstimeouts;
 }
 export class google_edgecontainer_node_pool extends TerraformResource {
   readonly create_time!: string;

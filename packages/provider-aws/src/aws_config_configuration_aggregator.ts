@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccountAggregationSource {
+export interface AwsConfigConfigurationAggregatorArgsAccountAggregationSource {
   account_ids: string[];
   all_regions?: boolean;
   regions?: string[];
 }
-export interface OrganizationAggregationSource {
+export interface AwsConfigConfigurationAggregatorArgsOrganizationAggregationSource {
   all_regions?: boolean;
   regions?: string[];
   role_arn: string;
@@ -14,8 +14,8 @@ export interface AwsConfigConfigurationAggregatorArgs {
   tags?: {
     [key: string]: string;
   };
-  account_aggregation_source: AccountAggregationSource;
-  organization_aggregation_source: OrganizationAggregationSource;
+  account_aggregation_source: AwsConfigConfigurationAggregatorArgsAccountAggregationSource;
+  organization_aggregation_source: AwsConfigConfigurationAggregatorArgsOrganizationAggregationSource;
 }
 export class aws_config_configuration_aggregator extends TerraformResource {
   readonly arn!: string;

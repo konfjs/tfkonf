@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HealthCheck {
+export interface AwsLbTargetGroupArgsHealthCheck {
   enabled?: boolean;
   healthy_threshold?: number;
   interval?: number;
@@ -7,29 +7,29 @@ export interface HealthCheck {
   protocol?: string;
   unhealthy_threshold?: number;
 }
-export interface Stickiness {
+export interface AwsLbTargetGroupArgsstickiness {
   cookie_duration?: number;
   cookie_name?: string;
   enabled?: boolean;
   type: string;
 }
-export interface TargetFailover {
+export interface AwsLbTargetGroupArgsTargetFailover {
   on_deregistration: string;
   on_unhealthy: string;
 }
-export interface DnsFailover {
+export interface AwsLbTargetGroupArgsTargetGroupHealthDnsFailover {
   minimum_healthy_targets_count?: string;
   minimum_healthy_targets_percentage?: string;
 }
-export interface UnhealthyStateRouting {
+export interface AwsLbTargetGroupArgsTargetGroupHealthUnhealthyStateRouting {
   minimum_healthy_targets_count?: number;
   minimum_healthy_targets_percentage?: string;
 }
-export interface TargetGroupHealth {
-  dns_failover: DnsFailover;
-  unhealthy_state_routing: UnhealthyStateRouting;
+export interface AwsLbTargetGroupArgsTargetGroupHealth {
+  dns_failover: AwsLbTargetGroupArgsTargetGroupHealthDnsFailover;
+  unhealthy_state_routing: AwsLbTargetGroupArgsTargetGroupHealthUnhealthyStateRouting;
 }
-export interface TargetHealthState {
+export interface AwsLbTargetGroupArgsTargetHealthState {
   enable_unhealthy_connection_termination: boolean;
   unhealthy_draining_interval?: number;
 }
@@ -45,11 +45,11 @@ export interface AwsLbTargetGroupArgs {
   };
   target_type?: string;
   vpc_id?: string;
-  health_check: HealthCheck;
-  stickiness: Stickiness;
-  target_failover: TargetFailover;
-  target_group_health: TargetGroupHealth;
-  target_health_state: TargetHealthState;
+  health_check: AwsLbTargetGroupArgsHealthCheck;
+  stickiness: AwsLbTargetGroupArgsstickiness;
+  target_failover: AwsLbTargetGroupArgsTargetFailover;
+  target_group_health: AwsLbTargetGroupArgsTargetGroupHealth;
+  target_health_state: AwsLbTargetGroupArgsTargetHealthState;
 }
 export class aws_lb_target_group extends TerraformResource {
   readonly arn!: string;

@@ -1,49 +1,49 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Parameter {
+export interface AwsFisExperimentTemplateArgsactionparameter {
   key: string;
   value: string;
 }
-export interface Target {
+export interface AwsFisExperimentTemplateArgsactiontarget {
   key: string;
   value: string;
 }
-export interface Action {
+export interface AwsFisExperimentTemplateArgsaction {
   action_id: string;
   description?: string;
   name: string;
   start_after?: string[];
-  parameter: Parameter;
-  target: Target;
+  parameter: AwsFisExperimentTemplateArgsactionparameter;
+  target: AwsFisExperimentTemplateArgsactiontarget;
 }
-export interface ExperimentOptions {
+export interface AwsFisExperimentTemplateArgsExperimentOptions {
   account_targeting?: string;
   empty_target_resolution_mode?: string;
 }
-export interface CloudwatchLogsConfiguration {
+export interface AwsFisExperimentTemplateArgsLogConfigurationCloudwatchLogsConfiguration {
   log_group_arn: string;
 }
-export interface S3Configuration {
+export interface AwsFisExperimentTemplateArgsLogConfigurationS3Configuration {
   bucket_name: string;
   prefix?: string;
 }
-export interface LogConfiguration {
+export interface AwsFisExperimentTemplateArgsLogConfiguration {
   log_schema_version: number;
-  cloudwatch_logs_configuration: CloudwatchLogsConfiguration;
-  s3_configuration: S3Configuration;
+  cloudwatch_logs_configuration: AwsFisExperimentTemplateArgsLogConfigurationCloudwatchLogsConfiguration;
+  s3_configuration: AwsFisExperimentTemplateArgsLogConfigurationS3Configuration;
 }
-export interface StopCondition {
+export interface AwsFisExperimentTemplateArgsStopCondition {
   source: string;
   value?: string;
 }
-export interface Filter {
+export interface AwsFisExperimentTemplateArgstargetfilter {
   path: string;
   values: string[];
 }
-export interface ResourceTag {
+export interface AwsFisExperimentTemplateArgstargetResourceTag {
   key: string;
   value: string;
 }
-export interface Target {
+export interface AwsFisExperimentTemplateArgstarget {
   name: string;
   parameters?: {
     [key: string]: string;
@@ -51,10 +51,10 @@ export interface Target {
   resource_arns?: string[];
   resource_type: string;
   selection_mode: string;
-  filter: Filter;
-  resource_tag: ResourceTag;
+  filter: AwsFisExperimentTemplateArgstargetfilter;
+  resource_tag: AwsFisExperimentTemplateArgstargetResourceTag;
 }
-export interface Timeouts {
+export interface AwsFisExperimentTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -65,12 +65,12 @@ export interface AwsFisExperimentTemplateArgs {
   tags?: {
     [key: string]: string;
   };
-  action: Action;
-  experiment_options: ExperimentOptions;
-  log_configuration: LogConfiguration;
-  stop_condition: StopCondition;
-  target: Target;
-  timeouts: Timeouts;
+  action: AwsFisExperimentTemplateArgsaction;
+  experiment_options: AwsFisExperimentTemplateArgsExperimentOptions;
+  log_configuration: AwsFisExperimentTemplateArgsLogConfiguration;
+  stop_condition: AwsFisExperimentTemplateArgsStopCondition;
+  target: AwsFisExperimentTemplateArgstarget;
+  timeouts: AwsFisExperimentTemplateArgstimeouts;
 }
 export class aws_fis_experiment_template extends TerraformResource {
   readonly id?: string;

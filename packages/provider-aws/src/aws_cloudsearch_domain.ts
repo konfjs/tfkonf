@@ -1,6 +1,6 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EndpointOptions {}
-export interface IndexField {
+export interface AwsCloudsearchDomainArgsEndpointOptions {}
+export interface AwsCloudsearchDomainArgsIndexField {
   analysis_scheme?: string;
   default_value?: string;
   facet?: boolean;
@@ -12,18 +12,18 @@ export interface IndexField {
   source_fields?: string;
   type: string;
 }
-export interface ScalingParameters {}
-export interface Timeouts {
+export interface AwsCloudsearchDomainArgsScalingParameters {}
+export interface AwsCloudsearchDomainArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsCloudsearchDomainArgs {
   name: string;
-  endpoint_options: EndpointOptions;
-  index_field: IndexField;
-  scaling_parameters: ScalingParameters;
-  timeouts: Timeouts;
+  endpoint_options: AwsCloudsearchDomainArgsEndpointOptions;
+  index_field: AwsCloudsearchDomainArgsIndexField;
+  scaling_parameters: AwsCloudsearchDomainArgsScalingParameters;
+  timeouts: AwsCloudsearchDomainArgstimeouts;
 }
 export class aws_cloudsearch_domain extends TerraformResource {
   readonly arn!: string;

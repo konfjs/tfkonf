@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogStreams {
+export interface AwsOpsworksPhpAppLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
   buffer_duration?: number;
@@ -12,11 +12,11 @@ export interface LogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
-export interface CloudwatchConfiguration {
+export interface AwsOpsworksPhpAppLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
-  log_streams: LogStreams;
+  log_streams: AwsOpsworksPhpAppLayerArgsCloudwatchConfigurationLogStreams;
 }
-export interface EbsVolume {
+export interface AwsOpsworksPhpAppLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
   mount_point: string;
@@ -25,7 +25,7 @@ export interface EbsVolume {
   size: number;
   type?: string;
 }
-export interface Downscaling {
+export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingdownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface Downscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface Upscaling {
+export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingupscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -43,10 +43,10 @@ export interface Upscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface LoadBasedAutoScaling {
+export interface AwsOpsworksPhpAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: Downscaling;
-  upscaling: Upscaling;
+  downscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingdownscaling;
+  upscaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScalingupscaling;
 }
 export interface AwsOpsworksPhpAppLayerArgs {
   auto_assign_elastic_ips?: boolean;
@@ -71,9 +71,9 @@ export interface AwsOpsworksPhpAppLayerArgs {
     [key: string]: string;
   };
   use_ebs_optimized_instances?: boolean;
-  cloudwatch_configuration: CloudwatchConfiguration;
-  ebs_volume: EbsVolume;
-  load_based_auto_scaling: LoadBasedAutoScaling;
+  cloudwatch_configuration: AwsOpsworksPhpAppLayerArgsCloudwatchConfiguration;
+  ebs_volume: AwsOpsworksPhpAppLayerArgsEbsVolume;
+  load_based_auto_scaling: AwsOpsworksPhpAppLayerArgsLoadBasedAutoScaling;
 }
 export class aws_opsworks_php_app_layer extends TerraformResource {
   readonly arn!: string;

@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IcebergInput {
+export interface AwsGlueCatalogTableArgsOpenTableFormatInputIcebergInput {
   metadata_operation: string;
   version?: string;
 }
-export interface OpenTableFormatInput {
-  iceberg_input: IcebergInput;
+export interface AwsGlueCatalogTableArgsOpenTableFormatInput {
+  iceberg_input: AwsGlueCatalogTableArgsOpenTableFormatInputIcebergInput;
 }
-export interface PartitionIndex {
+export interface AwsGlueCatalogTableArgsPartitionIndex {
   index_name: string;
   keys: string[];
 }
-export interface PartitionKeys {
+export interface AwsGlueCatalogTableArgsPartitionKeys {
   comment?: string;
   name: string;
   type?: string;
 }
-export interface Columns {
+export interface AwsGlueCatalogTableArgsStorageDescriptorcolumns {
   comment?: string;
   name: string;
   parameters?: {
@@ -23,35 +23,35 @@ export interface Columns {
   };
   type?: string;
 }
-export interface SchemaId {
+export interface AwsGlueCatalogTableArgsStorageDescriptorSchemaReferenceSchemaId {
   registry_name?: string;
   schema_arn?: string;
   schema_name?: string;
 }
-export interface SchemaReference {
+export interface AwsGlueCatalogTableArgsStorageDescriptorSchemaReference {
   schema_version_id?: string;
   schema_version_number: number;
-  schema_id: SchemaId;
+  schema_id: AwsGlueCatalogTableArgsStorageDescriptorSchemaReferenceSchemaId;
 }
-export interface SerDeInfo {
+export interface AwsGlueCatalogTableArgsStorageDescriptorSerDeInfo {
   name?: string;
   parameters?: {
     [key: string]: string;
   };
   serialization_library?: string;
 }
-export interface SkewedInfo {
+export interface AwsGlueCatalogTableArgsStorageDescriptorSkewedInfo {
   skewed_column_names?: string[];
   skewed_column_value_location_maps?: {
     [key: string]: string;
   };
   skewed_column_values?: string[];
 }
-export interface SortColumns {
+export interface AwsGlueCatalogTableArgsStorageDescriptorSortColumns {
   column: string;
   sort_order: number;
 }
-export interface StorageDescriptor {
+export interface AwsGlueCatalogTableArgsStorageDescriptor {
   additional_locations?: string[];
   bucket_columns?: string[];
   compressed?: boolean;
@@ -63,13 +63,13 @@ export interface StorageDescriptor {
     [key: string]: string;
   };
   stored_as_sub_directories?: boolean;
-  columns: Columns;
-  schema_reference: SchemaReference;
-  ser_de_info: SerDeInfo;
-  skewed_info: SkewedInfo;
-  sort_columns: SortColumns;
+  columns: AwsGlueCatalogTableArgsStorageDescriptorcolumns;
+  schema_reference: AwsGlueCatalogTableArgsStorageDescriptorSchemaReference;
+  ser_de_info: AwsGlueCatalogTableArgsStorageDescriptorSerDeInfo;
+  skewed_info: AwsGlueCatalogTableArgsStorageDescriptorSkewedInfo;
+  sort_columns: AwsGlueCatalogTableArgsStorageDescriptorSortColumns;
 }
-export interface TargetTable {
+export interface AwsGlueCatalogTableArgsTargetTable {
   catalog_id: string;
   database_name: string;
   name: string;
@@ -87,11 +87,11 @@ export interface AwsGlueCatalogTableArgs {
   table_type?: string;
   view_expanded_text?: string;
   view_original_text?: string;
-  open_table_format_input: OpenTableFormatInput;
-  partition_index: PartitionIndex;
-  partition_keys: PartitionKeys;
-  storage_descriptor: StorageDescriptor;
-  target_table: TargetTable;
+  open_table_format_input: AwsGlueCatalogTableArgsOpenTableFormatInput;
+  partition_index: AwsGlueCatalogTableArgsPartitionIndex;
+  partition_keys: AwsGlueCatalogTableArgsPartitionKeys;
+  storage_descriptor: AwsGlueCatalogTableArgsStorageDescriptor;
+  target_table: AwsGlueCatalogTableArgsTargetTable;
 }
 export class aws_glue_catalog_table extends TerraformResource {
   readonly arn!: string;

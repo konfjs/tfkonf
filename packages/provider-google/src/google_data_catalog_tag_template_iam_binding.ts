@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataCatalogTagTemplateIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataCatalogTagTemplateIamBindingArgs {
   members: string[];
   role: string;
   tag_template: string;
-  condition: Condition;
+  condition: GoogleDataCatalogTagTemplateIamBindingArgscondition;
 }
 export class google_data_catalog_tag_template_iam_binding extends TerraformResource {
   readonly etag!: string;

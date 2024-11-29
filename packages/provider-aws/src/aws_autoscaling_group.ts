@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InitialLifecycleHook {
+export interface AwsAutoscalingGroupArgsInitialLifecycleHook {
   heartbeat_timeout?: number;
   lifecycle_transition: string;
   name: string;
@@ -7,14 +7,14 @@ export interface InitialLifecycleHook {
   notification_target_arn?: string;
   role_arn?: string;
 }
-export interface InstanceMaintenancePolicy {
+export interface AwsAutoscalingGroupArgsInstanceMaintenancePolicy {
   max_healthy_percentage: number;
   min_healthy_percentage: number;
 }
-export interface AlarmSpecification {
+export interface AwsAutoscalingGroupArgsInstanceRefreshpreferencesAlarmSpecification {
   alarms?: string[];
 }
-export interface Preferences {
+export interface AwsAutoscalingGroupArgsInstanceRefreshpreferences {
   auto_rollback?: boolean;
   checkpoint_delay?: string;
   checkpoint_percentages?: number[];
@@ -24,55 +24,55 @@ export interface Preferences {
   scale_in_protected_instances?: string;
   skip_matching?: boolean;
   standby_instances?: string;
-  alarm_specification: AlarmSpecification;
+  alarm_specification: AwsAutoscalingGroupArgsInstanceRefreshpreferencesAlarmSpecification;
 }
-export interface InstanceRefresh {
+export interface AwsAutoscalingGroupArgsInstanceRefresh {
   strategy: string;
   triggers?: string[];
-  preferences: Preferences;
+  preferences: AwsAutoscalingGroupArgsInstanceRefreshpreferences;
 }
-export interface LaunchTemplate {}
-export interface InstancesDistribution {
+export interface AwsAutoscalingGroupArgsLaunchTemplate {}
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyInstancesDistribution {
   spot_max_price?: string;
 }
-export interface LaunchTemplateSpecification {}
-export interface AcceleratorCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification {}
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorCount {
   max?: number;
   min?: number;
 }
-export interface AcceleratorTotalMemoryMib {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorTotalMemoryMib {
   max?: number;
   min?: number;
 }
-export interface BaselineEbsBandwidthMbps {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsBaselineEbsBandwidthMbps {
   max?: number;
   min?: number;
 }
-export interface MemoryGibPerVcpu {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryGibPerVcpu {
   max?: number;
   min?: number;
 }
-export interface MemoryMib {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryMib {
   max?: number;
   min?: number;
 }
-export interface NetworkBandwidthGbps {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkBandwidthGbps {
   max?: number;
   min?: number;
 }
-export interface NetworkInterfaceCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkInterfaceCount {
   max?: number;
   min?: number;
 }
-export interface TotalLocalStorageGb {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsTotalLocalStorageGb {
   max?: number;
   min?: number;
 }
-export interface VcpuCount {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsVcpuCount {
   max?: number;
   min?: number;
 }
-export interface InstanceRequirements {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirements {
   accelerator_manufacturers?: string[];
   accelerator_names?: string[];
   accelerator_types?: string[];
@@ -88,52 +88,52 @@ export interface InstanceRequirements {
   on_demand_max_price_percentage_over_lowest_price?: number;
   require_hibernate_support?: boolean;
   spot_max_price_percentage_over_lowest_price?: number;
-  accelerator_count: AcceleratorCount;
-  accelerator_total_memory_mib: AcceleratorTotalMemoryMib;
-  baseline_ebs_bandwidth_mbps: BaselineEbsBandwidthMbps;
-  memory_gib_per_vcpu: MemoryGibPerVcpu;
-  memory_mib: MemoryMib;
-  network_bandwidth_gbps: NetworkBandwidthGbps;
-  network_interface_count: NetworkInterfaceCount;
-  total_local_storage_gb: TotalLocalStorageGb;
-  vcpu_count: VcpuCount;
+  accelerator_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorCount;
+  accelerator_total_memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsAcceleratorTotalMemoryMib;
+  baseline_ebs_bandwidth_mbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsBaselineEbsBandwidthMbps;
+  memory_gib_per_vcpu: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryGibPerVcpu;
+  memory_mib: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsMemoryMib;
+  network_bandwidth_gbps: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkBandwidthGbps;
+  network_interface_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsNetworkInterfaceCount;
+  total_local_storage_gb: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsTotalLocalStorageGb;
+  vcpu_count: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirementsVcpuCount;
 }
-export interface LaunchTemplateSpecification {}
-export interface Override {
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideLaunchTemplateSpecification {}
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverride {
   instance_type?: string;
   weighted_capacity?: string;
-  instance_requirements: InstanceRequirements;
-  launch_template_specification: LaunchTemplateSpecification;
+  instance_requirements: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideInstanceRequirements;
+  launch_template_specification: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverrideLaunchTemplateSpecification;
 }
-export interface LaunchTemplate {
-  launch_template_specification: LaunchTemplateSpecification;
-  override: Override;
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplate {
+  launch_template_specification: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification;
+  override: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplateoverride;
 }
-export interface MixedInstancesPolicy {
-  instances_distribution: InstancesDistribution;
-  launch_template: LaunchTemplate;
+export interface AwsAutoscalingGroupArgsMixedInstancesPolicy {
+  instances_distribution: AwsAutoscalingGroupArgsMixedInstancesPolicyInstancesDistribution;
+  launch_template: AwsAutoscalingGroupArgsMixedInstancesPolicyLaunchTemplate;
 }
-export interface Tag {
+export interface AwsAutoscalingGroupArgstag {
   key: string;
   propagate_at_launch: boolean;
   value: string;
 }
-export interface Timeouts {
+export interface AwsAutoscalingGroupArgstimeouts {
   delete?: string;
   update?: string;
 }
-export interface TrafficSource {
+export interface AwsAutoscalingGroupArgsTrafficSource {
   identifier: string;
   type?: string;
 }
-export interface InstanceReusePolicy {
+export interface AwsAutoscalingGroupArgsWarmPoolInstanceReusePolicy {
   reuse_on_scale_in?: boolean;
 }
-export interface WarmPool {
+export interface AwsAutoscalingGroupArgsWarmPool {
   max_group_prepared_capacity?: number;
   min_size?: number;
   pool_state?: string;
-  instance_reuse_policy: InstanceReusePolicy;
+  instance_reuse_policy: AwsAutoscalingGroupArgsWarmPoolInstanceReusePolicy;
 }
 export interface AwsAutoscalingGroupArgs {
   capacity_rebalance?: boolean;
@@ -157,15 +157,15 @@ export interface AwsAutoscalingGroupArgs {
   termination_policies?: string[];
   wait_for_capacity_timeout?: string;
   wait_for_elb_capacity?: number;
-  initial_lifecycle_hook: InitialLifecycleHook;
-  instance_maintenance_policy: InstanceMaintenancePolicy;
-  instance_refresh: InstanceRefresh;
-  launch_template: LaunchTemplate;
-  mixed_instances_policy: MixedInstancesPolicy;
-  tag: Tag;
-  timeouts: Timeouts;
-  traffic_source: TrafficSource;
-  warm_pool: WarmPool;
+  initial_lifecycle_hook: AwsAutoscalingGroupArgsInitialLifecycleHook;
+  instance_maintenance_policy: AwsAutoscalingGroupArgsInstanceMaintenancePolicy;
+  instance_refresh: AwsAutoscalingGroupArgsInstanceRefresh;
+  launch_template: AwsAutoscalingGroupArgsLaunchTemplate;
+  mixed_instances_policy: AwsAutoscalingGroupArgsMixedInstancesPolicy;
+  tag: AwsAutoscalingGroupArgstag;
+  timeouts: AwsAutoscalingGroupArgstimeouts;
+  traffic_source: AwsAutoscalingGroupArgsTrafficSource;
+  warm_pool: AwsAutoscalingGroupArgsWarmPool;
 }
 export class aws_autoscaling_group extends TerraformResource {
   readonly arn!: string;

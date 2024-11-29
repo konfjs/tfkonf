@@ -1,54 +1,54 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FiltersConfig {
+export interface AwsBedrockGuardrailArgsContentPolicyConfigFiltersConfig {
   input_strength: string;
   output_strength: string;
   type: string;
 }
-export interface ContentPolicyConfig {
-  filters_config: FiltersConfig;
+export interface AwsBedrockGuardrailArgsContentPolicyConfig {
+  filters_config: AwsBedrockGuardrailArgsContentPolicyConfigFiltersConfig;
 }
-export interface FiltersConfig {
+export interface AwsBedrockGuardrailArgsContextualGroundingPolicyConfigFiltersConfig {
   threshold: number;
   type: string;
 }
-export interface ContextualGroundingPolicyConfig {
-  filters_config: FiltersConfig;
+export interface AwsBedrockGuardrailArgsContextualGroundingPolicyConfig {
+  filters_config: AwsBedrockGuardrailArgsContextualGroundingPolicyConfigFiltersConfig;
 }
-export interface PiiEntitiesConfig {
+export interface AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigPiiEntitiesConfig {
   action: string;
   type: string;
 }
-export interface RegexesConfig {
+export interface AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigRegexesConfig {
   action: string;
   name: string;
   pattern: string;
 }
-export interface SensitiveInformationPolicyConfig {
-  pii_entities_config: PiiEntitiesConfig;
-  regexes_config: RegexesConfig;
+export interface AwsBedrockGuardrailArgsSensitiveInformationPolicyConfig {
+  pii_entities_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigPiiEntitiesConfig;
+  regexes_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfigRegexesConfig;
 }
-export interface Timeouts {
+export interface AwsBedrockGuardrailArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TopicsConfig {
+export interface AwsBedrockGuardrailArgsTopicPolicyConfigTopicsConfig {
   definition: string;
   name: string;
   type: string;
 }
-export interface TopicPolicyConfig {
-  topics_config: TopicsConfig;
+export interface AwsBedrockGuardrailArgsTopicPolicyConfig {
+  topics_config: AwsBedrockGuardrailArgsTopicPolicyConfigTopicsConfig;
 }
-export interface ManagedWordListsConfig {
+export interface AwsBedrockGuardrailArgsWordPolicyConfigManagedWordListsConfig {
   type: string;
 }
-export interface WordsConfig {
+export interface AwsBedrockGuardrailArgsWordPolicyConfigWordsConfig {
   text: string;
 }
-export interface WordPolicyConfig {
-  managed_word_lists_config: ManagedWordListsConfig;
-  words_config: WordsConfig;
+export interface AwsBedrockGuardrailArgsWordPolicyConfig {
+  managed_word_lists_config: AwsBedrockGuardrailArgsWordPolicyConfigManagedWordListsConfig;
+  words_config: AwsBedrockGuardrailArgsWordPolicyConfigWordsConfig;
 }
 export interface AwsBedrockGuardrailArgs {
   blocked_input_messaging: string;
@@ -58,12 +58,12 @@ export interface AwsBedrockGuardrailArgs {
   tags?: {
     [key: string]: string;
   };
-  content_policy_config: ContentPolicyConfig;
-  contextual_grounding_policy_config: ContextualGroundingPolicyConfig;
-  sensitive_information_policy_config: SensitiveInformationPolicyConfig;
-  timeouts: Timeouts;
-  topic_policy_config: TopicPolicyConfig;
-  word_policy_config: WordPolicyConfig;
+  content_policy_config: AwsBedrockGuardrailArgsContentPolicyConfig;
+  contextual_grounding_policy_config: AwsBedrockGuardrailArgsContextualGroundingPolicyConfig;
+  sensitive_information_policy_config: AwsBedrockGuardrailArgsSensitiveInformationPolicyConfig;
+  timeouts: AwsBedrockGuardrailArgstimeouts;
+  topic_policy_config: AwsBedrockGuardrailArgsTopicPolicyConfig;
+  word_policy_config: AwsBedrockGuardrailArgsWordPolicyConfig;
 }
 export class aws_bedrock_guardrail extends TerraformResource {
   readonly created_at!: string;

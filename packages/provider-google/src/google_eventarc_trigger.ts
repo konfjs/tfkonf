@@ -1,43 +1,43 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudRunService {
+export interface GoogleEventarcTriggerArgsdestinationCloudRunService {
   path?: string;
   service: string;
 }
-export interface Gke {
+export interface GoogleEventarcTriggerArgsdestinationgke {
   cluster: string;
   location: string;
   namespace: string;
   path?: string;
   service: string;
 }
-export interface HttpEndpoint {
+export interface GoogleEventarcTriggerArgsdestinationHttpEndpoint {
   uri: string;
 }
-export interface NetworkConfig {
+export interface GoogleEventarcTriggerArgsdestinationNetworkConfig {
   network_attachment: string;
 }
-export interface Destination {
+export interface GoogleEventarcTriggerArgsdestination {
   workflow?: string;
-  cloud_run_service: CloudRunService;
-  gke: Gke;
-  http_endpoint: HttpEndpoint;
-  network_config: NetworkConfig;
+  cloud_run_service: GoogleEventarcTriggerArgsdestinationCloudRunService;
+  gke: GoogleEventarcTriggerArgsdestinationgke;
+  http_endpoint: GoogleEventarcTriggerArgsdestinationHttpEndpoint;
+  network_config: GoogleEventarcTriggerArgsdestinationNetworkConfig;
 }
-export interface MatchingCriteria {
+export interface GoogleEventarcTriggerArgsMatchingCriteria {
   attribute: string;
   operator?: string;
   value: string;
 }
-export interface Timeouts {
+export interface GoogleEventarcTriggerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Pubsub {
+export interface GoogleEventarcTriggerArgstransportpubsub {
   topic?: string;
 }
-export interface Transport {
-  pubsub: Pubsub;
+export interface GoogleEventarcTriggerArgstransport {
+  pubsub: GoogleEventarcTriggerArgstransportpubsub;
 }
 export interface GoogleEventarcTriggerArgs {
   channel?: string;
@@ -47,10 +47,10 @@ export interface GoogleEventarcTriggerArgs {
   location: string;
   name: string;
   service_account?: string;
-  destination: Destination;
-  matching_criteria: MatchingCriteria;
-  timeouts: Timeouts;
-  transport: Transport;
+  destination: GoogleEventarcTriggerArgsdestination;
+  matching_criteria: GoogleEventarcTriggerArgsMatchingCriteria;
+  timeouts: GoogleEventarcTriggerArgstimeouts;
+  transport: GoogleEventarcTriggerArgstransport;
 }
 export class google_eventarc_trigger extends TerraformResource {
   readonly conditions!: {

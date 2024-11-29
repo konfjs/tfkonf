@@ -1,97 +1,97 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Alarms {
+export interface AwsEcsServiceArgsalarms {
   alarm_names: string[];
   enable: boolean;
   rollback: boolean;
 }
-export interface CapacityProviderStrategy {
+export interface AwsEcsServiceArgsCapacityProviderStrategy {
   base?: number;
   capacity_provider: string;
   weight?: number;
 }
-export interface DeploymentCircuitBreaker {
+export interface AwsEcsServiceArgsDeploymentCircuitBreaker {
   enable: boolean;
   rollback: boolean;
 }
-export interface DeploymentController {
+export interface AwsEcsServiceArgsDeploymentController {
   type?: string;
 }
-export interface LoadBalancer {
+export interface AwsEcsServiceArgsLoadBalancer {
   container_name: string;
   container_port: number;
   elb_name?: string;
   target_group_arn?: string;
 }
-export interface NetworkConfiguration {
+export interface AwsEcsServiceArgsNetworkConfiguration {
   assign_public_ip?: boolean;
   security_groups?: string[];
   subnets: string[];
 }
-export interface OrderedPlacementStrategy {
+export interface AwsEcsServiceArgsOrderedPlacementStrategy {
   field?: string;
   type: string;
 }
-export interface PlacementConstraints {
+export interface AwsEcsServiceArgsPlacementConstraints {
   expression?: string;
   type: string;
 }
-export interface SecretOption {
+export interface AwsEcsServiceArgsServiceConnectConfigurationLogConfigurationSecretOption {
   name: string;
   value_from: string;
 }
-export interface LogConfiguration {
+export interface AwsEcsServiceArgsServiceConnectConfigurationLogConfiguration {
   log_driver: string;
-  secret_option: SecretOption;
+  secret_option: AwsEcsServiceArgsServiceConnectConfigurationLogConfigurationSecretOption;
 }
-export interface ClientAlias {
+export interface AwsEcsServiceArgsServiceConnectConfigurationserviceClientAlias {
   dns_name?: string;
   port: number;
 }
-export interface Timeout {
+export interface AwsEcsServiceArgsServiceConnectConfigurationservicetimeout {
   idle_timeout_seconds?: number;
   per_request_timeout_seconds?: number;
 }
-export interface IssuerCertAuthority {
+export interface AwsEcsServiceArgsServiceConnectConfigurationservicetlsIssuerCertAuthority {
   aws_pca_authority_arn: string;
 }
-export interface Tls {
+export interface AwsEcsServiceArgsServiceConnectConfigurationservicetls {
   kms_key?: string;
   role_arn?: string;
-  issuer_cert_authority: IssuerCertAuthority;
+  issuer_cert_authority: AwsEcsServiceArgsServiceConnectConfigurationservicetlsIssuerCertAuthority;
 }
-export interface Service {
+export interface AwsEcsServiceArgsServiceConnectConfigurationservice {
   discovery_name?: string;
   ingress_port_override?: number;
   port_name: string;
-  client_alias: ClientAlias;
-  timeout: Timeout;
-  tls: Tls;
+  client_alias: AwsEcsServiceArgsServiceConnectConfigurationserviceClientAlias;
+  timeout: AwsEcsServiceArgsServiceConnectConfigurationservicetimeout;
+  tls: AwsEcsServiceArgsServiceConnectConfigurationservicetls;
 }
-export interface ServiceConnectConfiguration {
+export interface AwsEcsServiceArgsServiceConnectConfiguration {
   enabled: boolean;
   namespace?: string;
-  log_configuration: LogConfiguration;
-  service: Service;
+  log_configuration: AwsEcsServiceArgsServiceConnectConfigurationLogConfiguration;
+  service: AwsEcsServiceArgsServiceConnectConfigurationservice;
 }
-export interface ServiceRegistries {
+export interface AwsEcsServiceArgsServiceRegistries {
   container_name?: string;
   container_port?: number;
   port?: number;
   registry_arn: string;
 }
-export interface Timeouts {
+export interface AwsEcsServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TagSpecifications {
+export interface AwsEcsServiceArgsVolumeConfigurationManagedEbsVolumeTagSpecifications {
   propagate_tags?: string;
   resource_type: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface ManagedEbsVolume {
+export interface AwsEcsServiceArgsVolumeConfigurationManagedEbsVolume {
   encrypted?: boolean;
   file_system_type?: string;
   iops?: number;
@@ -101,13 +101,13 @@ export interface ManagedEbsVolume {
   snapshot_id?: string;
   throughput?: number;
   volume_type?: string;
-  tag_specifications: TagSpecifications;
+  tag_specifications: AwsEcsServiceArgsVolumeConfigurationManagedEbsVolumeTagSpecifications;
 }
-export interface VolumeConfiguration {
+export interface AwsEcsServiceArgsVolumeConfiguration {
   name: string;
-  managed_ebs_volume: ManagedEbsVolume;
+  managed_ebs_volume: AwsEcsServiceArgsVolumeConfigurationManagedEbsVolume;
 }
-export interface VpcLatticeConfigurations {
+export interface AwsEcsServiceArgsVpcLatticeConfigurations {
   port_name: string;
   role_arn: string;
   target_group_arn: string;
@@ -130,19 +130,19 @@ export interface AwsEcsServiceArgs {
   };
   task_definition?: string;
   wait_for_steady_state?: boolean;
-  alarms: Alarms;
-  capacity_provider_strategy: CapacityProviderStrategy;
-  deployment_circuit_breaker: DeploymentCircuitBreaker;
-  deployment_controller: DeploymentController;
-  load_balancer: LoadBalancer;
-  network_configuration: NetworkConfiguration;
-  ordered_placement_strategy: OrderedPlacementStrategy;
-  placement_constraints: PlacementConstraints;
-  service_connect_configuration: ServiceConnectConfiguration;
-  service_registries: ServiceRegistries;
-  timeouts: Timeouts;
-  volume_configuration: VolumeConfiguration;
-  vpc_lattice_configurations: VpcLatticeConfigurations;
+  alarms: AwsEcsServiceArgsalarms;
+  capacity_provider_strategy: AwsEcsServiceArgsCapacityProviderStrategy;
+  deployment_circuit_breaker: AwsEcsServiceArgsDeploymentCircuitBreaker;
+  deployment_controller: AwsEcsServiceArgsDeploymentController;
+  load_balancer: AwsEcsServiceArgsLoadBalancer;
+  network_configuration: AwsEcsServiceArgsNetworkConfiguration;
+  ordered_placement_strategy: AwsEcsServiceArgsOrderedPlacementStrategy;
+  placement_constraints: AwsEcsServiceArgsPlacementConstraints;
+  service_connect_configuration: AwsEcsServiceArgsServiceConnectConfiguration;
+  service_registries: AwsEcsServiceArgsServiceRegistries;
+  timeouts: AwsEcsServiceArgstimeouts;
+  volume_configuration: AwsEcsServiceArgsVolumeConfiguration;
+  vpc_lattice_configurations: AwsEcsServiceArgsVpcLatticeConfigurations;
 }
 export class aws_ecs_service extends TerraformResource {
   readonly cluster?: string;

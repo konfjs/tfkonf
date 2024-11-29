@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Destination {
+export interface AwsEfsReplicationConfigurationArgsdestination {
   availability_zone_name?: string;
   kms_key_id?: string;
 }
-export interface Timeouts {
+export interface AwsEfsReplicationConfigurationArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsEfsReplicationConfigurationArgs {
   source_file_system_id: string;
-  destination: Destination;
-  timeouts: Timeouts;
+  destination: AwsEfsReplicationConfigurationArgsdestination;
+  timeouts: AwsEfsReplicationConfigurationArgstimeouts;
 }
 export class aws_efs_replication_configuration extends TerraformResource {
   readonly creation_time!: string;

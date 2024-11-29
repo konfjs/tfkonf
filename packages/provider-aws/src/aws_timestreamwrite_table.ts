@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Configuration {
+export interface AwsTimestreamwriteTableArgsMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration {
   bucket_name?: string;
   encryption_option?: string;
   kms_key_id?: string;
   object_key_prefix?: string;
 }
-export interface MagneticStoreRejectedDataLocation {
-  s3_configuration: S3Configuration;
+export interface AwsTimestreamwriteTableArgsMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation {
+  s3_configuration: AwsTimestreamwriteTableArgsMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration;
 }
-export interface MagneticStoreWriteProperties {
+export interface AwsTimestreamwriteTableArgsMagneticStoreWriteProperties {
   enable_magnetic_store_writes?: boolean;
-  magnetic_store_rejected_data_location: MagneticStoreRejectedDataLocation;
+  magnetic_store_rejected_data_location: AwsTimestreamwriteTableArgsMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation;
 }
-export interface RetentionProperties {
+export interface AwsTimestreamwriteTableArgsRetentionProperties {
   magnetic_store_retention_period_in_days: number;
   memory_store_retention_period_in_hours: number;
 }
-export interface CompositePartitionKey {
+export interface AwsTimestreamwriteTableArgsschemaCompositePartitionKey {
   enforcement_in_record?: string;
   name?: string;
   type: string;
 }
-export interface Schema {
-  composite_partition_key: CompositePartitionKey;
+export interface AwsTimestreamwriteTableArgsschema {
+  composite_partition_key: AwsTimestreamwriteTableArgsschemaCompositePartitionKey;
 }
 export interface AwsTimestreamwriteTableArgs {
   database_name: string;
@@ -30,9 +30,9 @@ export interface AwsTimestreamwriteTableArgs {
   tags?: {
     [key: string]: string;
   };
-  magnetic_store_write_properties: MagneticStoreWriteProperties;
-  retention_properties: RetentionProperties;
-  schema: Schema;
+  magnetic_store_write_properties: AwsTimestreamwriteTableArgsMagneticStoreWriteProperties;
+  retention_properties: AwsTimestreamwriteTableArgsRetentionProperties;
+  schema: AwsTimestreamwriteTableArgsschema;
 }
 export class aws_timestreamwrite_table extends TerraformResource {
   readonly arn!: string;

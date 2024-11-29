@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleIapTunnelIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -7,7 +7,7 @@ export interface Condition {
 export interface GoogleIapTunnelIamBindingArgs {
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleIapTunnelIamBindingArgscondition;
 }
 export class google_iap_tunnel_iam_binding extends TerraformResource {
   readonly etag!: string;

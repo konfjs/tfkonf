@@ -1,42 +1,42 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StandardSchedulerSettings {
+export interface GoogleAppEngineStandardAppVersionArgsAutomaticScalingStandardSchedulerSettings {
   max_instances?: number;
   min_instances?: number;
   target_cpu_utilization?: number;
   target_throughput_utilization?: number;
 }
-export interface AutomaticScaling {
+export interface GoogleAppEngineStandardAppVersionArgsAutomaticScaling {
   max_concurrent_requests?: number;
   max_idle_instances?: number;
   max_pending_latency?: string;
   min_idle_instances?: number;
   min_pending_latency?: string;
-  standard_scheduler_settings: StandardSchedulerSettings;
+  standard_scheduler_settings: GoogleAppEngineStandardAppVersionArgsAutomaticScalingStandardSchedulerSettings;
 }
-export interface BasicScaling {
+export interface GoogleAppEngineStandardAppVersionArgsBasicScaling {
   idle_timeout?: string;
   max_instances: number;
 }
-export interface Files {
+export interface GoogleAppEngineStandardAppVersionArgsdeploymentfiles {
   name: string;
   sha1_sum?: string;
   source_url: string;
 }
-export interface Zip {
+export interface GoogleAppEngineStandardAppVersionArgsdeploymentzip {
   files_count?: number;
   source_url: string;
 }
-export interface Deployment {
-  files: Files;
-  zip: Zip;
+export interface GoogleAppEngineStandardAppVersionArgsdeployment {
+  files: GoogleAppEngineStandardAppVersionArgsdeploymentfiles;
+  zip: GoogleAppEngineStandardAppVersionArgsdeploymentzip;
 }
-export interface Entrypoint {
+export interface GoogleAppEngineStandardAppVersionArgsentrypoint {
   shell: string;
 }
-export interface Script {
+export interface GoogleAppEngineStandardAppVersionArgshandlersscript {
   script_path: string;
 }
-export interface StaticFiles {
+export interface GoogleAppEngineStandardAppVersionArgshandlersStaticFiles {
   application_readable?: boolean;
   expiration?: string;
   http_headers?: {
@@ -47,28 +47,28 @@ export interface StaticFiles {
   require_matching_file?: boolean;
   upload_path_regex?: string;
 }
-export interface Handlers {
+export interface GoogleAppEngineStandardAppVersionArgshandlers {
   auth_fail_action?: string;
   login?: string;
   redirect_http_response_code?: string;
   security_level?: string;
   url_regex?: string;
-  script: Script;
-  static_files: StaticFiles;
+  script: GoogleAppEngineStandardAppVersionArgshandlersscript;
+  static_files: GoogleAppEngineStandardAppVersionArgshandlersStaticFiles;
 }
-export interface Libraries {
+export interface GoogleAppEngineStandardAppVersionArgslibraries {
   name?: string;
   version?: string;
 }
-export interface ManualScaling {
+export interface GoogleAppEngineStandardAppVersionArgsManualScaling {
   instances: number;
 }
-export interface Timeouts {
+export interface GoogleAppEngineStandardAppVersionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcAccessConnector {
+export interface GoogleAppEngineStandardAppVersionArgsVpcAccessConnector {
   egress_setting?: string;
   name: string;
 }
@@ -85,15 +85,15 @@ export interface GoogleAppEngineStandardAppVersionArgs {
   service: string;
   threadsafe?: boolean;
   version_id?: string;
-  automatic_scaling: AutomaticScaling;
-  basic_scaling: BasicScaling;
-  deployment: Deployment;
-  entrypoint: Entrypoint;
-  handlers: Handlers;
-  libraries: Libraries;
-  manual_scaling: ManualScaling;
-  timeouts: Timeouts;
-  vpc_access_connector: VpcAccessConnector;
+  automatic_scaling: GoogleAppEngineStandardAppVersionArgsAutomaticScaling;
+  basic_scaling: GoogleAppEngineStandardAppVersionArgsBasicScaling;
+  deployment: GoogleAppEngineStandardAppVersionArgsdeployment;
+  entrypoint: GoogleAppEngineStandardAppVersionArgsentrypoint;
+  handlers: GoogleAppEngineStandardAppVersionArgshandlers;
+  libraries: GoogleAppEngineStandardAppVersionArgslibraries;
+  manual_scaling: GoogleAppEngineStandardAppVersionArgsManualScaling;
+  timeouts: GoogleAppEngineStandardAppVersionArgstimeouts;
+  vpc_access_connector: GoogleAppEngineStandardAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_standard_app_version extends TerraformResource {
   readonly id?: string;

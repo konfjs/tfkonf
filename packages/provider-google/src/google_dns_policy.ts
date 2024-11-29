@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetNameServers {
+export interface GoogleDnsPolicyArgsAlternativeNameServerConfigTargetNameServers {
   forwarding_path?: string;
   ipv4_address: string;
 }
-export interface AlternativeNameServerConfig {
-  target_name_servers: TargetNameServers;
+export interface GoogleDnsPolicyArgsAlternativeNameServerConfig {
+  target_name_servers: GoogleDnsPolicyArgsAlternativeNameServerConfigTargetNameServers;
 }
-export interface Networks {
+export interface GoogleDnsPolicyArgsnetworks {
   network_url: string;
 }
-export interface Timeouts {
+export interface GoogleDnsPolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,9 +19,9 @@ export interface GoogleDnsPolicyArgs {
   enable_inbound_forwarding?: boolean;
   enable_logging?: boolean;
   name: string;
-  alternative_name_server_config: AlternativeNameServerConfig;
-  networks: Networks;
-  timeouts: Timeouts;
+  alternative_name_server_config: GoogleDnsPolicyArgsAlternativeNameServerConfig;
+  networks: GoogleDnsPolicyArgsnetworks;
+  timeouts: GoogleDnsPolicyArgstimeouts;
 }
 export class google_dns_policy extends TerraformResource {
   readonly id?: string;

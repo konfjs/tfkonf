@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSecurityposturePostureDeploymentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleSecurityposturePostureDeploymentArgs {
   posture_id: string;
   posture_revision_id: string;
   target_resource: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSecurityposturePostureDeploymentArgstimeouts;
 }
 export class google_securityposture_posture_deployment extends TerraformResource {
   readonly create_time!: string;

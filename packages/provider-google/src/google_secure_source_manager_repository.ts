@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InitialConfig {
+export interface GoogleSecureSourceManagerRepositoryArgsInitialConfig {
   default_branch?: string;
   gitignores?: string[];
   license?: string;
   readme?: string;
 }
-export interface Timeouts {
+export interface GoogleSecureSourceManagerRepositoryArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -14,8 +14,8 @@ export interface GoogleSecureSourceManagerRepositoryArgs {
   instance: string;
   location: string;
   repository_id: string;
-  initial_config: InitialConfig;
-  timeouts: Timeouts;
+  initial_config: GoogleSecureSourceManagerRepositoryArgsInitialConfig;
+  timeouts: GoogleSecureSourceManagerRepositoryArgstimeouts;
 }
 export class google_secure_source_manager_repository extends TerraformResource {
   readonly create_time!: string;

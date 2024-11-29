@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsFinspaceKxScalingGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface AwsFinspaceKxScalingGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsFinspaceKxScalingGroupArgstimeouts;
 }
 export class aws_finspace_kx_scaling_group extends TerraformResource {
   readonly arn!: string;

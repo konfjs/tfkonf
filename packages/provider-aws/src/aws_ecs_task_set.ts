@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CapacityProviderStrategy {
+export interface AwsEcsTaskSetArgsCapacityProviderStrategy {
   base?: number;
   capacity_provider: string;
   weight: number;
 }
-export interface LoadBalancer {
+export interface AwsEcsTaskSetArgsLoadBalancer {
   container_name: string;
   container_port?: number;
   load_balancer_name?: string;
   target_group_arn?: string;
 }
-export interface NetworkConfiguration {
+export interface AwsEcsTaskSetArgsNetworkConfiguration {
   assign_public_ip?: boolean;
   security_groups?: string[];
   subnets: string[];
 }
-export interface Scale {
+export interface AwsEcsTaskSetArgsscale {
   unit?: string;
   value?: number;
 }
-export interface ServiceRegistries {
+export interface AwsEcsTaskSetArgsServiceRegistries {
   container_name?: string;
   container_port?: number;
   port?: number;
@@ -35,11 +35,11 @@ export interface AwsEcsTaskSetArgs {
   task_definition: string;
   wait_until_stable?: boolean;
   wait_until_stable_timeout?: string;
-  capacity_provider_strategy: CapacityProviderStrategy;
-  load_balancer: LoadBalancer;
-  network_configuration: NetworkConfiguration;
-  scale: Scale;
-  service_registries: ServiceRegistries;
+  capacity_provider_strategy: AwsEcsTaskSetArgsCapacityProviderStrategy;
+  load_balancer: AwsEcsTaskSetArgsLoadBalancer;
+  network_configuration: AwsEcsTaskSetArgsNetworkConfiguration;
+  scale: AwsEcsTaskSetArgsscale;
+  service_registries: AwsEcsTaskSetArgsServiceRegistries;
 }
 export class aws_ecs_task_set extends TerraformResource {
   readonly arn!: string;

@@ -1,63 +1,63 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VectorKnowledgeBaseConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfigurationVectorKnowledgeBaseConfiguration {
   embedding_model_arn: string;
 }
-export interface KnowledgeBaseConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfiguration {
   type: string;
-  vector_knowledge_base_configuration: VectorKnowledgeBaseConfiguration;
+  vector_knowledge_base_configuration: AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfigurationVectorKnowledgeBaseConfiguration;
 }
-export interface FieldMapping {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationOpensearchServerlessConfigurationFieldMapping {
   metadata_field?: string;
   text_field?: string;
   vector_field?: string;
 }
-export interface OpensearchServerlessConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationOpensearchServerlessConfiguration {
   collection_arn: string;
   vector_index_name: string;
-  field_mapping: FieldMapping;
+  field_mapping: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationOpensearchServerlessConfigurationFieldMapping;
 }
-export interface FieldMapping {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationPineconeConfigurationFieldMapping {
   metadata_field?: string;
   text_field?: string;
 }
-export interface PineconeConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationPineconeConfiguration {
   connection_string: string;
   credentials_secret_arn: string;
   namespace?: string;
-  field_mapping: FieldMapping;
+  field_mapping: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationPineconeConfigurationFieldMapping;
 }
-export interface FieldMapping {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRdsConfigurationFieldMapping {
   metadata_field: string;
   primary_key_field: string;
   text_field: string;
   vector_field: string;
 }
-export interface RdsConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRdsConfiguration {
   credentials_secret_arn: string;
   database_name: string;
   resource_arn: string;
   table_name: string;
-  field_mapping: FieldMapping;
+  field_mapping: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRdsConfigurationFieldMapping;
 }
-export interface FieldMapping {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRedisEnterpriseCloudConfigurationFieldMapping {
   metadata_field?: string;
   text_field?: string;
   vector_field?: string;
 }
-export interface RedisEnterpriseCloudConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRedisEnterpriseCloudConfiguration {
   credentials_secret_arn: string;
   endpoint: string;
   vector_index_name: string;
-  field_mapping: FieldMapping;
+  field_mapping: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRedisEnterpriseCloudConfigurationFieldMapping;
 }
-export interface StorageConfiguration {
+export interface AwsBedrockagentKnowledgeBaseArgsStorageConfiguration {
   type: string;
-  opensearch_serverless_configuration: OpensearchServerlessConfiguration;
-  pinecone_configuration: PineconeConfiguration;
-  rds_configuration: RdsConfiguration;
-  redis_enterprise_cloud_configuration: RedisEnterpriseCloudConfiguration;
+  opensearch_serverless_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationOpensearchServerlessConfiguration;
+  pinecone_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationPineconeConfiguration;
+  rds_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRdsConfiguration;
+  redis_enterprise_cloud_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfigurationRedisEnterpriseCloudConfiguration;
 }
-export interface Timeouts {
+export interface AwsBedrockagentKnowledgeBaseArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -69,9 +69,9 @@ export interface AwsBedrockagentKnowledgeBaseArgs {
   tags?: {
     [key: string]: string;
   };
-  knowledge_base_configuration: KnowledgeBaseConfiguration;
-  storage_configuration: StorageConfiguration;
-  timeouts: Timeouts;
+  knowledge_base_configuration: AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfiguration;
+  storage_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfiguration;
+  timeouts: AwsBedrockagentKnowledgeBaseArgstimeouts;
 }
 export class aws_bedrockagent_knowledge_base extends TerraformResource {
   readonly arn!: string;

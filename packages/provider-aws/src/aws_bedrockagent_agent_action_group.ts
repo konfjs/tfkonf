@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ActionGroupExecutor {
+export interface AwsBedrockagentAgentActionGroupArgsActionGroupExecutor {
   custom_control?: string;
   lambda?: string;
 }
-export interface S3 {
+export interface AwsBedrockagentAgentActionGroupArgsApiSchemas3 {
   s3_bucket_name?: string;
   s3_object_key?: string;
 }
-export interface ApiSchema {
+export interface AwsBedrockagentAgentActionGroupArgsApiSchema {
   payload?: string;
-  s3: S3;
+  s3: AwsBedrockagentAgentActionGroupArgsApiSchemas3;
 }
-export interface Parameters {
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctionsparameters {
   description?: string;
   map_block_key: string;
   required?: boolean;
   type: string;
 }
-export interface Functions {
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctions {
   description?: string;
   name: string;
-  parameters: Parameters;
+  parameters: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctionsparameters;
 }
-export interface MemberFunctions {
-  functions: Functions;
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctions {
+  functions: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctionsfunctions;
 }
-export interface FunctionSchema {
-  member_functions: MemberFunctions;
+export interface AwsBedrockagentAgentActionGroupArgsFunctionSchema {
+  member_functions: AwsBedrockagentAgentActionGroupArgsFunctionSchemaMemberFunctions;
 }
-export interface Timeouts {
+export interface AwsBedrockagentAgentActionGroupArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -38,10 +38,10 @@ export interface AwsBedrockagentAgentActionGroupArgs {
   agent_version: string;
   description?: string;
   parent_action_group_signature?: string;
-  action_group_executor: ActionGroupExecutor;
-  api_schema: ApiSchema;
-  function_schema: FunctionSchema;
-  timeouts: Timeouts;
+  action_group_executor: AwsBedrockagentAgentActionGroupArgsActionGroupExecutor;
+  api_schema: AwsBedrockagentAgentActionGroupArgsApiSchema;
+  function_schema: AwsBedrockagentAgentActionGroupArgsFunctionSchema;
+  timeouts: AwsBedrockagentAgentActionGroupArgstimeouts;
 }
 export class aws_bedrockagent_agent_action_group extends TerraformResource {
   readonly action_group_id!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDxPublicVirtualInterfaceArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -13,7 +13,7 @@ export interface AwsDxPublicVirtualInterfaceArgs {
     [key: string]: string;
   };
   vlan: number;
-  timeouts: Timeouts;
+  timeouts: AwsDxPublicVirtualInterfaceArgstimeouts;
 }
 export class aws_dx_public_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;

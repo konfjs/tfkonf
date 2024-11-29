@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Backend {
+export interface GoogleComputeBackendServiceArgsbackend {
   balancing_mode?: string;
   capacity_scaler?: number;
   description?: string;
   group: string;
 }
-export interface BypassCacheOnRequestHeaders {
+export interface GoogleComputeBackendServiceArgsCdnPolicyBypassCacheOnRequestHeaders {
   header_name: string;
 }
-export interface CacheKeyPolicy {
+export interface GoogleComputeBackendServiceArgsCdnPolicyCacheKeyPolicy {
   include_host?: boolean;
   include_http_headers?: string[];
   include_named_cookies?: string[];
@@ -17,66 +17,66 @@ export interface CacheKeyPolicy {
   query_string_blacklist?: string[];
   query_string_whitelist?: string[];
 }
-export interface NegativeCachingPolicy {
+export interface GoogleComputeBackendServiceArgsCdnPolicyNegativeCachingPolicy {
   code?: number;
   ttl?: number;
 }
-export interface CdnPolicy {
+export interface GoogleComputeBackendServiceArgsCdnPolicy {
   signed_url_cache_max_age_sec?: number;
-  bypass_cache_on_request_headers: BypassCacheOnRequestHeaders;
-  cache_key_policy: CacheKeyPolicy;
-  negative_caching_policy: NegativeCachingPolicy;
+  bypass_cache_on_request_headers: GoogleComputeBackendServiceArgsCdnPolicyBypassCacheOnRequestHeaders;
+  cache_key_policy: GoogleComputeBackendServiceArgsCdnPolicyCacheKeyPolicy;
+  negative_caching_policy: GoogleComputeBackendServiceArgsCdnPolicyNegativeCachingPolicy;
 }
-export interface CircuitBreakers {
+export interface GoogleComputeBackendServiceArgsCircuitBreakers {
   max_connections?: number;
   max_pending_requests?: number;
   max_requests?: number;
   max_requests_per_connection?: number;
   max_retries?: number;
 }
-export interface Ttl {
+export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookiettl {
   nanos?: number;
   seconds: number;
 }
-export interface HttpCookie {
+export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
-  ttl: Ttl;
+  ttl: GoogleComputeBackendServiceArgsConsistentHashHttpCookiettl;
 }
-export interface ConsistentHash {
+export interface GoogleComputeBackendServiceArgsConsistentHash {
   http_header_name?: string;
   minimum_ring_size?: number;
-  http_cookie: HttpCookie;
+  http_cookie: GoogleComputeBackendServiceArgsConsistentHashHttpCookie;
 }
-export interface Iap {
+export interface GoogleComputeBackendServiceArgsiap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
 }
-export interface CustomPolicy {
+export interface GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy {
   data?: string;
   name: string;
 }
-export interface Policy {
+export interface GoogleComputeBackendServiceArgsLocalityLbPoliciespolicy {
   name: string;
 }
-export interface LocalityLbPolicies {
-  custom_policy: CustomPolicy;
-  policy: Policy;
+export interface GoogleComputeBackendServiceArgsLocalityLbPolicies {
+  custom_policy: GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy;
+  policy: GoogleComputeBackendServiceArgsLocalityLbPoliciespolicy;
 }
-export interface LogConfig {
+export interface GoogleComputeBackendServiceArgsLogConfig {
   enable?: boolean;
   sample_rate?: number;
 }
-export interface BaseEjectionTime {
+export interface GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime {
   nanos?: number;
   seconds: number;
 }
-export interface Interval {
+export interface GoogleComputeBackendServiceArgsOutlierDetectioninterval {
   nanos?: number;
   seconds: number;
 }
-export interface OutlierDetection {
+export interface GoogleComputeBackendServiceArgsOutlierDetection {
   consecutive_errors?: number;
   consecutive_gateway_failure?: number;
   enforcing_consecutive_errors?: number;
@@ -86,30 +86,30 @@ export interface OutlierDetection {
   success_rate_minimum_hosts?: number;
   success_rate_request_volume?: number;
   success_rate_stdev_factor?: number;
-  base_ejection_time: BaseEjectionTime;
-  interval: Interval;
+  base_ejection_time: GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime;
+  interval: GoogleComputeBackendServiceArgsOutlierDetectioninterval;
 }
-export interface AwsV4Authentication {
+export interface GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication {
   access_key?: string;
   access_key_id?: string;
   access_key_version?: string;
   origin_region?: string;
 }
-export interface SecuritySettings {
+export interface GoogleComputeBackendServiceArgsSecuritySettings {
   client_tls_policy?: string;
   subject_alt_names?: string[];
-  aws_v4_authentication: AwsV4Authentication;
+  aws_v4_authentication: GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication;
 }
-export interface Ttl {
+export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookiettl {
   nanos?: number;
   seconds: number;
 }
-export interface StrongSessionAffinityCookie {
+export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
-  ttl: Ttl;
+  ttl: GoogleComputeBackendServiceArgsStrongSessionAffinityCookiettl;
 }
-export interface Timeouts {
+export interface GoogleComputeBackendServiceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -130,17 +130,17 @@ export interface GoogleComputeBackendServiceArgs {
   name: string;
   security_policy?: string;
   service_lb_policy?: string;
-  backend: Backend;
-  cdn_policy: CdnPolicy;
-  circuit_breakers: CircuitBreakers;
-  consistent_hash: ConsistentHash;
-  iap: Iap;
-  locality_lb_policies: LocalityLbPolicies;
-  log_config: LogConfig;
-  outlier_detection: OutlierDetection;
-  security_settings: SecuritySettings;
-  strong_session_affinity_cookie: StrongSessionAffinityCookie;
-  timeouts: Timeouts;
+  backend: GoogleComputeBackendServiceArgsbackend;
+  cdn_policy: GoogleComputeBackendServiceArgsCdnPolicy;
+  circuit_breakers: GoogleComputeBackendServiceArgsCircuitBreakers;
+  consistent_hash: GoogleComputeBackendServiceArgsConsistentHash;
+  iap: GoogleComputeBackendServiceArgsiap;
+  locality_lb_policies: GoogleComputeBackendServiceArgsLocalityLbPolicies;
+  log_config: GoogleComputeBackendServiceArgsLogConfig;
+  outlier_detection: GoogleComputeBackendServiceArgsOutlierDetection;
+  security_settings: GoogleComputeBackendServiceArgsSecuritySettings;
+  strong_session_affinity_cookie: GoogleComputeBackendServiceArgsStrongSessionAffinityCookie;
+  timeouts: GoogleComputeBackendServiceArgstimeouts;
 }
 export class google_compute_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

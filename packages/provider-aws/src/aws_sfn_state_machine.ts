@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsSfnStateMachineArgsEncryptionConfiguration {
   kms_data_key_reuse_period_seconds?: number;
   kms_key_id?: string;
   type?: string;
 }
-export interface LoggingConfiguration {
+export interface AwsSfnStateMachineArgsLoggingConfiguration {
   include_execution_data?: boolean;
   level?: string;
   log_destination?: string;
 }
-export interface Timeouts {
+export interface AwsSfnStateMachineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TracingConfiguration {
+export interface AwsSfnStateMachineArgsTracingConfiguration {
   enabled?: boolean;
 }
 export interface AwsSfnStateMachineArgs {
@@ -25,10 +25,10 @@ export interface AwsSfnStateMachineArgs {
     [key: string]: string;
   };
   type?: string;
-  encryption_configuration: EncryptionConfiguration;
-  logging_configuration: LoggingConfiguration;
-  timeouts: Timeouts;
-  tracing_configuration: TracingConfiguration;
+  encryption_configuration: AwsSfnStateMachineArgsEncryptionConfiguration;
+  logging_configuration: AwsSfnStateMachineArgsLoggingConfiguration;
+  timeouts: AwsSfnStateMachineArgstimeouts;
+  tracing_configuration: AwsSfnStateMachineArgsTracingConfiguration;
 }
 export class aws_sfn_state_machine extends TerraformResource {
   readonly arn!: string;

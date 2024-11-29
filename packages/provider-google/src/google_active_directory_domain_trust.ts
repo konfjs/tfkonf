@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleActiveDirectoryDomainTrustArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleActiveDirectoryDomainTrustArgs {
   trust_direction: string;
   trust_handshake_secret: string;
   trust_type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleActiveDirectoryDomainTrustArgstimeouts;
 }
 export class google_active_directory_domain_trust extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CognitoIdentityProviders {
+export interface AwsCognitoIdentityPoolArgsCognitoIdentityProviders {
   client_id?: string;
   provider_name?: string;
   server_side_token_check?: boolean;
@@ -17,7 +17,7 @@ export interface AwsCognitoIdentityPoolArgs {
   tags?: {
     [key: string]: string;
   };
-  cognito_identity_providers: CognitoIdentityProviders;
+  cognito_identity_providers: AwsCognitoIdentityPoolArgsCognitoIdentityProviders;
 }
 export class aws_cognito_identity_pool extends TerraformResource {
   readonly arn!: string;

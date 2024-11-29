@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetTrackingScalingConfigs {
+export interface AwsCodebuildFleetArgsScalingConfigurationTargetTrackingScalingConfigs {
   metric_type?: string;
   target_value?: number;
 }
-export interface ScalingConfiguration {
+export interface AwsCodebuildFleetArgsScalingConfiguration {
   max_capacity?: number;
   scaling_type?: string;
-  target_tracking_scaling_configs: TargetTrackingScalingConfigs;
+  target_tracking_scaling_configs: AwsCodebuildFleetArgsScalingConfigurationTargetTrackingScalingConfigs;
 }
-export interface VpcConfig {
+export interface AwsCodebuildFleetArgsVpcConfig {
   security_group_ids: string[];
   subnets: string[];
   vpc_id: string;
@@ -23,8 +23,8 @@ export interface AwsCodebuildFleetArgs {
   tags?: {
     [key: string]: string;
   };
-  scaling_configuration: ScalingConfiguration;
-  vpc_config: VpcConfig;
+  scaling_configuration: AwsCodebuildFleetArgsScalingConfiguration;
+  vpc_config: AwsCodebuildFleetArgsVpcConfig;
 }
 export class aws_codebuild_fleet extends TerraformResource {
   readonly arn!: string;

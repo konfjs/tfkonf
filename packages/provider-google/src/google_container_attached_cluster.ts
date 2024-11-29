@@ -1,41 +1,41 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Authorization {
+export interface GoogleContainerAttachedClusterArgsauthorization {
   admin_groups?: string[];
   admin_users?: string[];
 }
-export interface BinaryAuthorization {
+export interface GoogleContainerAttachedClusterArgsBinaryAuthorization {
   evaluation_mode?: string;
 }
-export interface Fleet {
+export interface GoogleContainerAttachedClusterArgsfleet {
   project: string;
 }
-export interface ComponentConfig {
+export interface GoogleContainerAttachedClusterArgsLoggingConfigComponentConfig {
   enable_components?: string[];
 }
-export interface LoggingConfig {
-  component_config: ComponentConfig;
+export interface GoogleContainerAttachedClusterArgsLoggingConfig {
+  component_config: GoogleContainerAttachedClusterArgsLoggingConfigComponentConfig;
 }
-export interface ManagedPrometheusConfig {
+export interface GoogleContainerAttachedClusterArgsMonitoringConfigManagedPrometheusConfig {
   enabled?: boolean;
 }
-export interface MonitoringConfig {
-  managed_prometheus_config: ManagedPrometheusConfig;
+export interface GoogleContainerAttachedClusterArgsMonitoringConfig {
+  managed_prometheus_config: GoogleContainerAttachedClusterArgsMonitoringConfigManagedPrometheusConfig;
 }
-export interface OidcConfig {
+export interface GoogleContainerAttachedClusterArgsOidcConfig {
   issuer_url: string;
   jwks?: string;
 }
-export interface KubernetesSecret {
+export interface GoogleContainerAttachedClusterArgsProxyConfigKubernetesSecret {
   name: string;
   namespace: string;
 }
-export interface ProxyConfig {
-  kubernetes_secret: KubernetesSecret;
+export interface GoogleContainerAttachedClusterArgsProxyConfig {
+  kubernetes_secret: GoogleContainerAttachedClusterArgsProxyConfigKubernetesSecret;
 }
-export interface SecurityPostureConfig {
+export interface GoogleContainerAttachedClusterArgsSecurityPostureConfig {
   vulnerability_mode: string;
 }
-export interface Timeouts {
+export interface GoogleContainerAttachedClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -50,15 +50,15 @@ export interface GoogleContainerAttachedClusterArgs {
   location: string;
   name: string;
   platform_version: string;
-  authorization: Authorization;
-  binary_authorization: BinaryAuthorization;
-  fleet: Fleet;
-  logging_config: LoggingConfig;
-  monitoring_config: MonitoringConfig;
-  oidc_config: OidcConfig;
-  proxy_config: ProxyConfig;
-  security_posture_config: SecurityPostureConfig;
-  timeouts: Timeouts;
+  authorization: GoogleContainerAttachedClusterArgsauthorization;
+  binary_authorization: GoogleContainerAttachedClusterArgsBinaryAuthorization;
+  fleet: GoogleContainerAttachedClusterArgsfleet;
+  logging_config: GoogleContainerAttachedClusterArgsLoggingConfig;
+  monitoring_config: GoogleContainerAttachedClusterArgsMonitoringConfig;
+  oidc_config: GoogleContainerAttachedClusterArgsOidcConfig;
+  proxy_config: GoogleContainerAttachedClusterArgsProxyConfig;
+  security_posture_config: GoogleContainerAttachedClusterArgsSecurityPostureConfig;
+  timeouts: GoogleContainerAttachedClusterArgstimeouts;
 }
 export class google_container_attached_cluster extends TerraformResource {
   readonly cluster_region!: string;

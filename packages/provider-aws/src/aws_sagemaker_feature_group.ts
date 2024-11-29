@@ -1,41 +1,41 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VectorConfig {
+export interface AwsSagemakerFeatureGroupArgsFeatureDefinitionCollectionConfigVectorConfig {
   dimension?: number;
 }
-export interface CollectionConfig {
-  vector_config: VectorConfig;
+export interface AwsSagemakerFeatureGroupArgsFeatureDefinitionCollectionConfig {
+  vector_config: AwsSagemakerFeatureGroupArgsFeatureDefinitionCollectionConfigVectorConfig;
 }
-export interface FeatureDefinition {
+export interface AwsSagemakerFeatureGroupArgsFeatureDefinition {
   collection_type?: string;
   feature_name?: string;
   feature_type?: string;
-  collection_config: CollectionConfig;
+  collection_config: AwsSagemakerFeatureGroupArgsFeatureDefinitionCollectionConfig;
 }
-export interface DataCatalogConfig {}
-export interface S3StorageConfig {
+export interface AwsSagemakerFeatureGroupArgsOfflineStoreConfigDataCatalogConfig {}
+export interface AwsSagemakerFeatureGroupArgsOfflineStoreConfigS3StorageConfig {
   kms_key_id?: string;
   s3_uri: string;
 }
-export interface OfflineStoreConfig {
+export interface AwsSagemakerFeatureGroupArgsOfflineStoreConfig {
   disable_glue_table_creation?: boolean;
   table_format?: string;
-  data_catalog_config: DataCatalogConfig;
-  s3_storage_config: S3StorageConfig;
+  data_catalog_config: AwsSagemakerFeatureGroupArgsOfflineStoreConfigDataCatalogConfig;
+  s3_storage_config: AwsSagemakerFeatureGroupArgsOfflineStoreConfigS3StorageConfig;
 }
-export interface SecurityConfig {
+export interface AwsSagemakerFeatureGroupArgsOnlineStoreConfigSecurityConfig {
   kms_key_id?: string;
 }
-export interface TtlDuration {
+export interface AwsSagemakerFeatureGroupArgsOnlineStoreConfigTtlDuration {
   unit?: string;
   value?: number;
 }
-export interface OnlineStoreConfig {
+export interface AwsSagemakerFeatureGroupArgsOnlineStoreConfig {
   enable_online_store?: boolean;
   storage_type?: string;
-  security_config: SecurityConfig;
-  ttl_duration: TtlDuration;
+  security_config: AwsSagemakerFeatureGroupArgsOnlineStoreConfigSecurityConfig;
+  ttl_duration: AwsSagemakerFeatureGroupArgsOnlineStoreConfigTtlDuration;
 }
-export interface ThroughputConfig {
+export interface AwsSagemakerFeatureGroupArgsThroughputConfig {
   provisioned_read_capacity_units?: number;
   provisioned_write_capacity_units?: number;
 }
@@ -48,10 +48,10 @@ export interface AwsSagemakerFeatureGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  feature_definition: FeatureDefinition;
-  offline_store_config: OfflineStoreConfig;
-  online_store_config: OnlineStoreConfig;
-  throughput_config: ThroughputConfig;
+  feature_definition: AwsSagemakerFeatureGroupArgsFeatureDefinition;
+  offline_store_config: AwsSagemakerFeatureGroupArgsOfflineStoreConfig;
+  online_store_config: AwsSagemakerFeatureGroupArgsOnlineStoreConfig;
+  throughput_config: AwsSagemakerFeatureGroupArgsThroughputConfig;
 }
 export class aws_sagemaker_feature_group extends TerraformResource {
   readonly arn!: string;

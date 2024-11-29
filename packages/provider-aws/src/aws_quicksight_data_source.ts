@@ -1,139 +1,139 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CredentialPair {
+export interface AwsQuicksightDataSourceArgscredentialsCredentialPair {
   password: string;
   username: string;
 }
-export interface Credentials {
+export interface AwsQuicksightDataSourceArgscredentials {
   copy_source_arn?: string;
   secret_arn?: string;
-  credential_pair: CredentialPair;
+  credential_pair: AwsQuicksightDataSourceArgscredentialsCredentialPair;
 }
-export interface AmazonElasticsearch {
+export interface AwsQuicksightDataSourceArgsparametersAmazonElasticsearch {
   domain: string;
 }
-export interface Athena {
+export interface AwsQuicksightDataSourceArgsparametersathena {
   work_group?: string;
 }
-export interface Aurora {
+export interface AwsQuicksightDataSourceArgsparametersaurora {
   database: string;
   host: string;
   port: number;
 }
-export interface AuroraPostgresql {
+export interface AwsQuicksightDataSourceArgsparametersAuroraPostgresql {
   database: string;
   host: string;
   port: number;
 }
-export interface AwsIotAnalytics {
+export interface AwsQuicksightDataSourceArgsparametersAwsIotAnalytics {
   data_set_name: string;
 }
-export interface Databricks {
+export interface AwsQuicksightDataSourceArgsparametersdatabricks {
   host: string;
   port: number;
   sql_endpoint_path: string;
 }
-export interface Jira {
+export interface AwsQuicksightDataSourceArgsparametersjira {
   site_base_url: string;
 }
-export interface MariaDb {
+export interface AwsQuicksightDataSourceArgsparametersMariaDb {
   database: string;
   host: string;
   port: number;
 }
-export interface Mysql {
+export interface AwsQuicksightDataSourceArgsparametersmysql {
   database: string;
   host: string;
   port: number;
 }
-export interface Oracle {
+export interface AwsQuicksightDataSourceArgsparametersoracle {
   database: string;
   host: string;
   port: number;
 }
-export interface Postgresql {
+export interface AwsQuicksightDataSourceArgsparameterspostgresql {
   database: string;
   host: string;
   port: number;
 }
-export interface Presto {
+export interface AwsQuicksightDataSourceArgsparameterspresto {
   catalog: string;
   host: string;
   port: number;
 }
-export interface Rds {
+export interface AwsQuicksightDataSourceArgsparametersrds {
   database: string;
   instance_id: string;
 }
-export interface Redshift {
+export interface AwsQuicksightDataSourceArgsparametersredshift {
   cluster_id?: string;
   database: string;
   host?: string;
   port?: number;
 }
-export interface ManifestFileLocation {
+export interface AwsQuicksightDataSourceArgsparameterss3ManifestFileLocation {
   bucket: string;
   key: string;
 }
-export interface S3 {
-  manifest_file_location: ManifestFileLocation;
+export interface AwsQuicksightDataSourceArgsparameterss3 {
+  manifest_file_location: AwsQuicksightDataSourceArgsparameterss3ManifestFileLocation;
 }
-export interface ServiceNow {
+export interface AwsQuicksightDataSourceArgsparametersServiceNow {
   site_base_url: string;
 }
-export interface Snowflake {
+export interface AwsQuicksightDataSourceArgsparameterssnowflake {
   database: string;
   host: string;
   warehouse: string;
 }
-export interface Spark {
+export interface AwsQuicksightDataSourceArgsparametersspark {
   host: string;
   port: number;
 }
-export interface SqlServer {
+export interface AwsQuicksightDataSourceArgsparametersSqlServer {
   database: string;
   host: string;
   port: number;
 }
-export interface Teradata {
+export interface AwsQuicksightDataSourceArgsparametersteradata {
   database: string;
   host: string;
   port: number;
 }
-export interface Twitter {
+export interface AwsQuicksightDataSourceArgsparameterstwitter {
   max_rows: number;
   query: string;
 }
-export interface Parameters {
-  amazon_elasticsearch: AmazonElasticsearch;
-  athena: Athena;
-  aurora: Aurora;
-  aurora_postgresql: AuroraPostgresql;
-  aws_iot_analytics: AwsIotAnalytics;
-  databricks: Databricks;
-  jira: Jira;
-  maria_db: MariaDb;
-  mysql: Mysql;
-  oracle: Oracle;
-  postgresql: Postgresql;
-  presto: Presto;
-  rds: Rds;
-  redshift: Redshift;
-  s3: S3;
-  service_now: ServiceNow;
-  snowflake: Snowflake;
-  spark: Spark;
-  sql_server: SqlServer;
-  teradata: Teradata;
-  twitter: Twitter;
+export interface AwsQuicksightDataSourceArgsparameters {
+  amazon_elasticsearch: AwsQuicksightDataSourceArgsparametersAmazonElasticsearch;
+  athena: AwsQuicksightDataSourceArgsparametersathena;
+  aurora: AwsQuicksightDataSourceArgsparametersaurora;
+  aurora_postgresql: AwsQuicksightDataSourceArgsparametersAuroraPostgresql;
+  aws_iot_analytics: AwsQuicksightDataSourceArgsparametersAwsIotAnalytics;
+  databricks: AwsQuicksightDataSourceArgsparametersdatabricks;
+  jira: AwsQuicksightDataSourceArgsparametersjira;
+  maria_db: AwsQuicksightDataSourceArgsparametersMariaDb;
+  mysql: AwsQuicksightDataSourceArgsparametersmysql;
+  oracle: AwsQuicksightDataSourceArgsparametersoracle;
+  postgresql: AwsQuicksightDataSourceArgsparameterspostgresql;
+  presto: AwsQuicksightDataSourceArgsparameterspresto;
+  rds: AwsQuicksightDataSourceArgsparametersrds;
+  redshift: AwsQuicksightDataSourceArgsparametersredshift;
+  s3: AwsQuicksightDataSourceArgsparameterss3;
+  service_now: AwsQuicksightDataSourceArgsparametersServiceNow;
+  snowflake: AwsQuicksightDataSourceArgsparameterssnowflake;
+  spark: AwsQuicksightDataSourceArgsparametersspark;
+  sql_server: AwsQuicksightDataSourceArgsparametersSqlServer;
+  teradata: AwsQuicksightDataSourceArgsparametersteradata;
+  twitter: AwsQuicksightDataSourceArgsparameterstwitter;
 }
-export interface Permission {
+export interface AwsQuicksightDataSourceArgspermission {
   actions: string[];
   principal: string;
 }
-export interface SslProperties {
+export interface AwsQuicksightDataSourceArgsSslProperties {
   disable_ssl: boolean;
 }
-export interface VpcConnectionProperties {
+export interface AwsQuicksightDataSourceArgsVpcConnectionProperties {
   vpc_connection_arn: string;
 }
 export interface AwsQuicksightDataSourceArgs {
@@ -143,11 +143,11 @@ export interface AwsQuicksightDataSourceArgs {
     [key: string]: string;
   };
   type: string;
-  credentials: Credentials;
-  parameters: Parameters;
-  permission: Permission;
-  ssl_properties: SslProperties;
-  vpc_connection_properties: VpcConnectionProperties;
+  credentials: AwsQuicksightDataSourceArgscredentials;
+  parameters: AwsQuicksightDataSourceArgsparameters;
+  permission: AwsQuicksightDataSourceArgspermission;
+  ssl_properties: AwsQuicksightDataSourceArgsSslProperties;
+  vpc_connection_properties: AwsQuicksightDataSourceArgsVpcConnectionProperties;
 }
 export class aws_quicksight_data_source extends TerraformResource {
   readonly arn!: string;

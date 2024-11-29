@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationPortRange {
+export interface AwsEc2TrafficMirrorFilterRuleArgsDestinationPortRange {
   from_port?: number;
   to_port?: number;
 }
-export interface SourcePortRange {
+export interface AwsEc2TrafficMirrorFilterRuleArgsSourcePortRange {
   from_port?: number;
   to_port?: number;
 }
@@ -16,8 +16,8 @@ export interface AwsEc2TrafficMirrorFilterRuleArgs {
   source_cidr_block: string;
   traffic_direction: string;
   traffic_mirror_filter_id: string;
-  destination_port_range: DestinationPortRange;
-  source_port_range: SourcePortRange;
+  destination_port_range: AwsEc2TrafficMirrorFilterRuleArgsDestinationPortRange;
+  source_port_range: AwsEc2TrafficMirrorFilterRuleArgsSourcePortRange;
 }
 export class aws_ec2_traffic_mirror_filter_rule extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkSecurityFirewallEndpointAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface GoogleNetworkSecurityFirewallEndpointAssociationArgs {
   network: string;
   parent?: string;
   tls_inspection_policy?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkSecurityFirewallEndpointAssociationArgstimeouts;
 }
 export class google_network_security_firewall_endpoint_association extends TerraformResource {
   readonly create_time!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutomatedBackupPolicy {}
-export interface ColumnFamily {
+export interface GoogleBigtableTableArgsAutomatedBackupPolicy {}
+export interface GoogleBigtableTableArgsColumnFamily {
   family: string;
   type?: string;
 }
-export interface Timeouts {
+export interface GoogleBigtableTableArgstimeouts {
   create?: string;
   update?: string;
 }
@@ -12,9 +12,9 @@ export interface GoogleBigtableTableArgs {
   instance_name: string;
   name: string;
   split_keys?: string[];
-  automated_backup_policy: AutomatedBackupPolicy;
-  column_family: ColumnFamily;
-  timeouts: Timeouts;
+  automated_backup_policy: GoogleBigtableTableArgsAutomatedBackupPolicy;
+  column_family: GoogleBigtableTableArgsColumnFamily;
+  timeouts: GoogleBigtableTableArgstimeouts;
 }
 export class google_bigtable_table extends TerraformResource {
   readonly change_stream_retention?: string;

@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Value {
+export interface AwsSsoadminInstanceAccessControlAttributesArgsattributevalue {
   source: string[];
 }
-export interface Attribute {
+export interface AwsSsoadminInstanceAccessControlAttributesArgsattribute {
   key: string;
-  value: Value;
+  value: AwsSsoadminInstanceAccessControlAttributesArgsattributevalue;
 }
 export interface AwsSsoadminInstanceAccessControlAttributesArgs {
   instance_arn: string;
-  attribute: Attribute;
+  attribute: AwsSsoadminInstanceAccessControlAttributesArgsattribute;
 }
 export class aws_ssoadmin_instance_access_control_attributes extends TerraformResource {
   readonly id?: string;

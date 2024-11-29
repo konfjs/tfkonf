@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Note {
+export interface AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdatenote {
   text: string;
   updated_by: string;
 }
-export interface RelatedFindings {
+export interface AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateRelatedFindings {
   id: string;
   product_arn: string;
 }
-export interface Severity {
+export interface AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateseverity {
   product?: number;
 }
-export interface Workflow {
+export interface AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateworkflow {
   status?: string;
 }
-export interface FindingFieldsUpdate {
+export interface AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdate {
   confidence?: number;
   criticality?: number;
   types?: string[];
@@ -21,240 +21,240 @@ export interface FindingFieldsUpdate {
     [key: string]: string;
   };
   verification_state?: string;
-  note: Note;
-  related_findings: RelatedFindings;
-  severity: Severity;
-  workflow: Workflow;
+  note: AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdatenote;
+  related_findings: AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateRelatedFindings;
+  severity: AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateseverity;
+  workflow: AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdateworkflow;
 }
-export interface Actions {
+export interface AwsSecurityhubAutomationRuleArgsactions {
   type?: string;
-  finding_fields_update: FindingFieldsUpdate;
+  finding_fields_update: AwsSecurityhubAutomationRuleArgsactionsFindingFieldsUpdate;
 }
-export interface AwsAccountId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaAwsAccountId {
   comparison: string;
   value: string;
 }
-export interface AwsAccountName {
+export interface AwsSecurityhubAutomationRuleArgscriteriaAwsAccountName {
   comparison: string;
   value: string;
 }
-export interface CompanyName {
+export interface AwsSecurityhubAutomationRuleArgscriteriaCompanyName {
   comparison: string;
   value: string;
 }
-export interface ComplianceAssociatedStandardsId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaComplianceAssociatedStandardsId {
   comparison: string;
   value: string;
 }
-export interface ComplianceSecurityControlId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaComplianceSecurityControlId {
   comparison: string;
   value: string;
 }
-export interface ComplianceStatus {
+export interface AwsSecurityhubAutomationRuleArgscriteriaComplianceStatus {
   comparison: string;
   value: string;
 }
-export interface Confidence {
+export interface AwsSecurityhubAutomationRuleArgscriteriaconfidence {
   eq?: number;
   gt?: number;
   gte?: number;
   lt?: number;
   lte?: number;
 }
-export interface DateRange {
+export interface AwsSecurityhubAutomationRuleArgscriteriaCreatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface CreatedAt {
+export interface AwsSecurityhubAutomationRuleArgscriteriaCreatedAt {
   end?: string;
   start?: string;
-  date_range: DateRange;
+  date_range: AwsSecurityhubAutomationRuleArgscriteriaCreatedAtDateRange;
 }
-export interface Criticality {
+export interface AwsSecurityhubAutomationRuleArgscriteriacriticality {
   eq?: number;
   gt?: number;
   gte?: number;
   lt?: number;
   lte?: number;
 }
-export interface Description {
+export interface AwsSecurityhubAutomationRuleArgscriteriadescription {
   comparison: string;
   value: string;
 }
-export interface DateRange {
+export interface AwsSecurityhubAutomationRuleArgscriteriaFirstObservedAtDateRange {
   unit: string;
   value: number;
 }
-export interface FirstObservedAt {
+export interface AwsSecurityhubAutomationRuleArgscriteriaFirstObservedAt {
   end?: string;
   start?: string;
-  date_range: DateRange;
+  date_range: AwsSecurityhubAutomationRuleArgscriteriaFirstObservedAtDateRange;
 }
-export interface GeneratorId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaGeneratorId {
   comparison: string;
   value: string;
 }
-export interface Id {
+export interface AwsSecurityhubAutomationRuleArgscriteriaid {
   comparison: string;
   value: string;
 }
-export interface DateRange {
+export interface AwsSecurityhubAutomationRuleArgscriteriaLastObservedAtDateRange {
   unit: string;
   value: number;
 }
-export interface LastObservedAt {
+export interface AwsSecurityhubAutomationRuleArgscriteriaLastObservedAt {
   end?: string;
   start?: string;
-  date_range: DateRange;
+  date_range: AwsSecurityhubAutomationRuleArgscriteriaLastObservedAtDateRange;
 }
-export interface NoteText {
+export interface AwsSecurityhubAutomationRuleArgscriteriaNoteText {
   comparison: string;
   value: string;
 }
-export interface DateRange {
+export interface AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface NoteUpdatedAt {
+export interface AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedAt {
   end?: string;
   start?: string;
-  date_range: DateRange;
+  date_range: AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedAtDateRange;
 }
-export interface NoteUpdatedBy {
+export interface AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedBy {
   comparison: string;
   value: string;
 }
-export interface ProductArn {
+export interface AwsSecurityhubAutomationRuleArgscriteriaProductArn {
   comparison: string;
   value: string;
 }
-export interface ProductName {
+export interface AwsSecurityhubAutomationRuleArgscriteriaProductName {
   comparison: string;
   value: string;
 }
-export interface RecordState {
+export interface AwsSecurityhubAutomationRuleArgscriteriaRecordState {
   comparison: string;
   value: string;
 }
-export interface RelatedFindingsId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaRelatedFindingsId {
   comparison: string;
   value: string;
 }
-export interface RelatedFindingsProductArn {
+export interface AwsSecurityhubAutomationRuleArgscriteriaRelatedFindingsProductArn {
   comparison: string;
   value: string;
 }
-export interface ResourceApplicationArn {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceApplicationArn {
   comparison: string;
   value: string;
 }
-export interface ResourceApplicationName {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceApplicationName {
   comparison: string;
   value: string;
 }
-export interface ResourceDetailsOther {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceDetailsOther {
   comparison: string;
   key: string;
   value: string;
 }
-export interface ResourceId {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceId {
   comparison: string;
   value: string;
 }
-export interface ResourcePartition {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourcePartition {
   comparison: string;
   value: string;
 }
-export interface ResourceRegion {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceRegion {
   comparison: string;
   value: string;
 }
-export interface ResourceTags {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceTags {
   comparison: string;
   key: string;
   value: string;
 }
-export interface ResourceType {
+export interface AwsSecurityhubAutomationRuleArgscriteriaResourceType {
   comparison: string;
   value: string;
 }
-export interface SeverityLabel {
+export interface AwsSecurityhubAutomationRuleArgscriteriaSeverityLabel {
   comparison: string;
   value: string;
 }
-export interface SourceUrl {
+export interface AwsSecurityhubAutomationRuleArgscriteriaSourceUrl {
   comparison: string;
   value: string;
 }
-export interface Title {
+export interface AwsSecurityhubAutomationRuleArgscriteriatitle {
   comparison: string;
   value: string;
 }
-export interface Type {
+export interface AwsSecurityhubAutomationRuleArgscriteriatype {
   comparison: string;
   value: string;
 }
-export interface DateRange {
+export interface AwsSecurityhubAutomationRuleArgscriteriaUpdatedAtDateRange {
   unit: string;
   value: number;
 }
-export interface UpdatedAt {
+export interface AwsSecurityhubAutomationRuleArgscriteriaUpdatedAt {
   end?: string;
   start?: string;
-  date_range: DateRange;
+  date_range: AwsSecurityhubAutomationRuleArgscriteriaUpdatedAtDateRange;
 }
-export interface UserDefinedFields {
+export interface AwsSecurityhubAutomationRuleArgscriteriaUserDefinedFields {
   comparison: string;
   key: string;
   value: string;
 }
-export interface VerificationState {
+export interface AwsSecurityhubAutomationRuleArgscriteriaVerificationState {
   comparison: string;
   value: string;
 }
-export interface WorkflowStatus {
+export interface AwsSecurityhubAutomationRuleArgscriteriaWorkflowStatus {
   comparison: string;
   value: string;
 }
-export interface Criteria {
-  aws_account_id: AwsAccountId;
-  aws_account_name: AwsAccountName;
-  company_name: CompanyName;
-  compliance_associated_standards_id: ComplianceAssociatedStandardsId;
-  compliance_security_control_id: ComplianceSecurityControlId;
-  compliance_status: ComplianceStatus;
-  confidence: Confidence;
-  created_at: CreatedAt;
-  criticality: Criticality;
-  description: Description;
-  first_observed_at: FirstObservedAt;
-  generator_id: GeneratorId;
-  id: Id;
-  last_observed_at: LastObservedAt;
-  note_text: NoteText;
-  note_updated_at: NoteUpdatedAt;
-  note_updated_by: NoteUpdatedBy;
-  product_arn: ProductArn;
-  product_name: ProductName;
-  record_state: RecordState;
-  related_findings_id: RelatedFindingsId;
-  related_findings_product_arn: RelatedFindingsProductArn;
-  resource_application_arn: ResourceApplicationArn;
-  resource_application_name: ResourceApplicationName;
-  resource_details_other: ResourceDetailsOther;
-  resource_id: ResourceId;
-  resource_partition: ResourcePartition;
-  resource_region: ResourceRegion;
-  resource_tags: ResourceTags;
-  resource_type: ResourceType;
-  severity_label: SeverityLabel;
-  source_url: SourceUrl;
-  title: Title;
-  type: Type;
-  updated_at: UpdatedAt;
-  user_defined_fields: UserDefinedFields;
-  verification_state: VerificationState;
-  workflow_status: WorkflowStatus;
+export interface AwsSecurityhubAutomationRuleArgscriteria {
+  aws_account_id: AwsSecurityhubAutomationRuleArgscriteriaAwsAccountId;
+  aws_account_name: AwsSecurityhubAutomationRuleArgscriteriaAwsAccountName;
+  company_name: AwsSecurityhubAutomationRuleArgscriteriaCompanyName;
+  compliance_associated_standards_id: AwsSecurityhubAutomationRuleArgscriteriaComplianceAssociatedStandardsId;
+  compliance_security_control_id: AwsSecurityhubAutomationRuleArgscriteriaComplianceSecurityControlId;
+  compliance_status: AwsSecurityhubAutomationRuleArgscriteriaComplianceStatus;
+  confidence: AwsSecurityhubAutomationRuleArgscriteriaconfidence;
+  created_at: AwsSecurityhubAutomationRuleArgscriteriaCreatedAt;
+  criticality: AwsSecurityhubAutomationRuleArgscriteriacriticality;
+  description: AwsSecurityhubAutomationRuleArgscriteriadescription;
+  first_observed_at: AwsSecurityhubAutomationRuleArgscriteriaFirstObservedAt;
+  generator_id: AwsSecurityhubAutomationRuleArgscriteriaGeneratorId;
+  id: AwsSecurityhubAutomationRuleArgscriteriaid;
+  last_observed_at: AwsSecurityhubAutomationRuleArgscriteriaLastObservedAt;
+  note_text: AwsSecurityhubAutomationRuleArgscriteriaNoteText;
+  note_updated_at: AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedAt;
+  note_updated_by: AwsSecurityhubAutomationRuleArgscriteriaNoteUpdatedBy;
+  product_arn: AwsSecurityhubAutomationRuleArgscriteriaProductArn;
+  product_name: AwsSecurityhubAutomationRuleArgscriteriaProductName;
+  record_state: AwsSecurityhubAutomationRuleArgscriteriaRecordState;
+  related_findings_id: AwsSecurityhubAutomationRuleArgscriteriaRelatedFindingsId;
+  related_findings_product_arn: AwsSecurityhubAutomationRuleArgscriteriaRelatedFindingsProductArn;
+  resource_application_arn: AwsSecurityhubAutomationRuleArgscriteriaResourceApplicationArn;
+  resource_application_name: AwsSecurityhubAutomationRuleArgscriteriaResourceApplicationName;
+  resource_details_other: AwsSecurityhubAutomationRuleArgscriteriaResourceDetailsOther;
+  resource_id: AwsSecurityhubAutomationRuleArgscriteriaResourceId;
+  resource_partition: AwsSecurityhubAutomationRuleArgscriteriaResourcePartition;
+  resource_region: AwsSecurityhubAutomationRuleArgscriteriaResourceRegion;
+  resource_tags: AwsSecurityhubAutomationRuleArgscriteriaResourceTags;
+  resource_type: AwsSecurityhubAutomationRuleArgscriteriaResourceType;
+  severity_label: AwsSecurityhubAutomationRuleArgscriteriaSeverityLabel;
+  source_url: AwsSecurityhubAutomationRuleArgscriteriaSourceUrl;
+  title: AwsSecurityhubAutomationRuleArgscriteriatitle;
+  type: AwsSecurityhubAutomationRuleArgscriteriatype;
+  updated_at: AwsSecurityhubAutomationRuleArgscriteriaUpdatedAt;
+  user_defined_fields: AwsSecurityhubAutomationRuleArgscriteriaUserDefinedFields;
+  verification_state: AwsSecurityhubAutomationRuleArgscriteriaVerificationState;
+  workflow_status: AwsSecurityhubAutomationRuleArgscriteriaWorkflowStatus;
 }
 export interface AwsSecurityhubAutomationRuleArgs {
   description: string;
@@ -263,8 +263,8 @@ export interface AwsSecurityhubAutomationRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  actions: Actions;
-  criteria: Criteria;
+  actions: AwsSecurityhubAutomationRuleArgsactions;
+  criteria: AwsSecurityhubAutomationRuleArgscriteria;
 }
 export class aws_securityhub_automation_rule extends TerraformResource {
   readonly arn!: string;

@@ -1,93 +1,93 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PublicAccess {}
-export interface Sasl {}
-export interface ClientAuthentication {
-  sasl: Sasl;
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoPublicAccess {}
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationsasl {}
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication {
+  sasl: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthenticationsasl;
 }
-export interface VpcConnectivity {
-  client_authentication: ClientAuthentication;
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivity {
+  client_authentication: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivityClientAuthentication;
 }
-export interface ConnectivityInfo {
-  public_access: PublicAccess;
-  vpc_connectivity: VpcConnectivity;
+export interface AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfo {
+  public_access: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoPublicAccess;
+  vpc_connectivity: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfoVpcConnectivity;
 }
-export interface ProvisionedThroughput {
+export interface AwsMskClusterArgsBrokerNodeGroupInfoStorageInfoEbsStorageInfoProvisionedThroughput {
   enabled?: boolean;
   volume_throughput?: number;
 }
-export interface EbsStorageInfo {
+export interface AwsMskClusterArgsBrokerNodeGroupInfoStorageInfoEbsStorageInfo {
   volume_size?: number;
-  provisioned_throughput: ProvisionedThroughput;
+  provisioned_throughput: AwsMskClusterArgsBrokerNodeGroupInfoStorageInfoEbsStorageInfoProvisionedThroughput;
 }
-export interface StorageInfo {
-  ebs_storage_info: EbsStorageInfo;
+export interface AwsMskClusterArgsBrokerNodeGroupInfoStorageInfo {
+  ebs_storage_info: AwsMskClusterArgsBrokerNodeGroupInfoStorageInfoEbsStorageInfo;
 }
-export interface BrokerNodeGroupInfo {
+export interface AwsMskClusterArgsBrokerNodeGroupInfo {
   az_distribution?: string;
   client_subnets: string[];
   instance_type: string;
   security_groups: string[];
-  connectivity_info: ConnectivityInfo;
-  storage_info: StorageInfo;
+  connectivity_info: AwsMskClusterArgsBrokerNodeGroupInfoConnectivityInfo;
+  storage_info: AwsMskClusterArgsBrokerNodeGroupInfoStorageInfo;
 }
-export interface Sasl {
+export interface AwsMskClusterArgsClientAuthenticationsasl {
   iam?: boolean;
   scram?: boolean;
 }
-export interface Tls {
+export interface AwsMskClusterArgsClientAuthenticationtls {
   certificate_authority_arns?: string[];
 }
-export interface ClientAuthentication {
+export interface AwsMskClusterArgsClientAuthentication {
   unauthenticated?: boolean;
-  sasl: Sasl;
-  tls: Tls;
+  sasl: AwsMskClusterArgsClientAuthenticationsasl;
+  tls: AwsMskClusterArgsClientAuthenticationtls;
 }
-export interface ConfigurationInfo {
+export interface AwsMskClusterArgsConfigurationInfo {
   arn: string;
   revision: number;
 }
-export interface EncryptionInTransit {
+export interface AwsMskClusterArgsEncryptionInfoEncryptionInTransit {
   client_broker?: string;
   in_cluster?: boolean;
 }
-export interface EncryptionInfo {
-  encryption_in_transit: EncryptionInTransit;
+export interface AwsMskClusterArgsEncryptionInfo {
+  encryption_in_transit: AwsMskClusterArgsEncryptionInfoEncryptionInTransit;
 }
-export interface CloudwatchLogs {
+export interface AwsMskClusterArgsLoggingInfoBrokerLogsCloudwatchLogs {
   enabled: boolean;
   log_group?: string;
 }
-export interface Firehose {
+export interface AwsMskClusterArgsLoggingInfoBrokerLogsfirehose {
   delivery_stream?: string;
   enabled: boolean;
 }
-export interface S3 {
+export interface AwsMskClusterArgsLoggingInfoBrokerLogss3 {
   bucket?: string;
   enabled: boolean;
   prefix?: string;
 }
-export interface BrokerLogs {
-  cloudwatch_logs: CloudwatchLogs;
-  firehose: Firehose;
-  s3: S3;
+export interface AwsMskClusterArgsLoggingInfoBrokerLogs {
+  cloudwatch_logs: AwsMskClusterArgsLoggingInfoBrokerLogsCloudwatchLogs;
+  firehose: AwsMskClusterArgsLoggingInfoBrokerLogsfirehose;
+  s3: AwsMskClusterArgsLoggingInfoBrokerLogss3;
 }
-export interface LoggingInfo {
-  broker_logs: BrokerLogs;
+export interface AwsMskClusterArgsLoggingInfo {
+  broker_logs: AwsMskClusterArgsLoggingInfoBrokerLogs;
 }
-export interface JmxExporter {
+export interface AwsMskClusterArgsOpenMonitoringprometheusJmxExporter {
   enabled_in_broker: boolean;
 }
-export interface NodeExporter {
+export interface AwsMskClusterArgsOpenMonitoringprometheusNodeExporter {
   enabled_in_broker: boolean;
 }
-export interface Prometheus {
-  jmx_exporter: JmxExporter;
-  node_exporter: NodeExporter;
+export interface AwsMskClusterArgsOpenMonitoringprometheus {
+  jmx_exporter: AwsMskClusterArgsOpenMonitoringprometheusJmxExporter;
+  node_exporter: AwsMskClusterArgsOpenMonitoringprometheusNodeExporter;
 }
-export interface OpenMonitoring {
-  prometheus: Prometheus;
+export interface AwsMskClusterArgsOpenMonitoring {
+  prometheus: AwsMskClusterArgsOpenMonitoringprometheus;
 }
-export interface Timeouts {
+export interface AwsMskClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -100,13 +100,13 @@ export interface AwsMskClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  broker_node_group_info: BrokerNodeGroupInfo;
-  client_authentication: ClientAuthentication;
-  configuration_info: ConfigurationInfo;
-  encryption_info: EncryptionInfo;
-  logging_info: LoggingInfo;
-  open_monitoring: OpenMonitoring;
-  timeouts: Timeouts;
+  broker_node_group_info: AwsMskClusterArgsBrokerNodeGroupInfo;
+  client_authentication: AwsMskClusterArgsClientAuthentication;
+  configuration_info: AwsMskClusterArgsConfigurationInfo;
+  encryption_info: AwsMskClusterArgsEncryptionInfo;
+  logging_info: AwsMskClusterArgsLoggingInfo;
+  open_monitoring: AwsMskClusterArgsOpenMonitoring;
+  timeouts: AwsMskClusterArgstimeouts;
 }
 export class aws_msk_cluster extends TerraformResource {
   readonly arn!: string;

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface QuotaConfig {
+export interface GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig {
   annotations?: {
     [key: string]: string;
   };
   preferred_value: string;
 }
-export interface Timeouts {
+export interface GoogleCloudQuotasQuotaPreferenceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleCloudQuotasQuotaPreferenceArgs {
   contact_email?: string;
   ignore_safety_checks?: string;
   justification?: string;
-  quota_config: QuotaConfig;
-  timeouts: Timeouts;
+  quota_config: GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig;
+  timeouts: GoogleCloudQuotasQuotaPreferenceArgstimeouts;
 }
 export class google_cloud_quotas_quota_preference extends TerraformResource {
   readonly create_time!: string;

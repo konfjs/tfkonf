@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsBedrockagentAgentAliasArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsBedrockagentAgentAliasArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsBedrockagentAgentAliasArgstimeouts;
 }
 export class aws_bedrockagent_agent_alias extends TerraformResource {
   readonly agent_alias_arn!: string;

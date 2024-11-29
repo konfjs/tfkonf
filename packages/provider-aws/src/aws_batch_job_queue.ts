@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ComputeEnvironmentOrder {
+export interface AwsBatchJobQueueArgsComputeEnvironmentOrder {
   compute_environment: string;
   order: number;
 }
-export interface JobStateTimeLimitAction {
+export interface AwsBatchJobQueueArgsJobStateTimeLimitAction {
   action: string;
   max_time_seconds: number;
   reason: string;
   state: string;
 }
-export interface Timeouts {
+export interface AwsBatchJobQueueArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,9 +23,9 @@ export interface AwsBatchJobQueueArgs {
   tags?: {
     [key: string]: string;
   };
-  compute_environment_order: ComputeEnvironmentOrder;
-  job_state_time_limit_action: JobStateTimeLimitAction;
-  timeouts: Timeouts;
+  compute_environment_order: AwsBatchJobQueueArgsComputeEnvironmentOrder;
+  job_state_time_limit_action: AwsBatchJobQueueArgsJobStateTimeLimitAction;
+  timeouts: AwsBatchJobQueueArgstimeouts;
 }
 export class aws_batch_job_queue extends TerraformResource {
   readonly arn!: string;

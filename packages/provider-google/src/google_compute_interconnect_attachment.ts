@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeInterconnectAttachmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleComputeInterconnectAttachmentArgs {
   name: string;
   router: string;
   subnet_length?: number;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeInterconnectAttachmentArgstimeouts;
 }
 export class google_compute_interconnect_attachment extends TerraformResource {
   readonly bandwidth?: string;

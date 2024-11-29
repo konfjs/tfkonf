@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsVpcIpamResourceDiscoveryAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface AwsVpcIpamResourceDiscoveryAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsVpcIpamResourceDiscoveryAssociationArgstimeouts;
 }
 export class aws_vpc_ipam_resource_discovery_association extends TerraformResource {
   readonly arn!: string;

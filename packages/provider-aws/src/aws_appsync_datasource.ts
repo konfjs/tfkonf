@@ -1,48 +1,48 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeltaSyncConfig {
+export interface AwsAppsyncDatasourceArgsDynamodbConfigDeltaSyncConfig {
   base_table_ttl?: number;
   delta_sync_table_name: string;
   delta_sync_table_ttl?: number;
 }
-export interface DynamodbConfig {
+export interface AwsAppsyncDatasourceArgsDynamodbConfig {
   table_name: string;
   use_caller_credentials?: boolean;
   versioned?: boolean;
-  delta_sync_config: DeltaSyncConfig;
+  delta_sync_config: AwsAppsyncDatasourceArgsDynamodbConfigDeltaSyncConfig;
 }
-export interface ElasticsearchConfig {
+export interface AwsAppsyncDatasourceArgsElasticsearchConfig {
   endpoint: string;
 }
-export interface EventBridgeConfig {
+export interface AwsAppsyncDatasourceArgsEventBridgeConfig {
   event_bus_arn: string;
 }
-export interface AwsIamConfig {
+export interface AwsAppsyncDatasourceArgsHttpConfigAuthorizationConfigAwsIamConfig {
   signing_region?: string;
   signing_service_name?: string;
 }
-export interface AuthorizationConfig {
+export interface AwsAppsyncDatasourceArgsHttpConfigAuthorizationConfig {
   authorization_type?: string;
-  aws_iam_config: AwsIamConfig;
+  aws_iam_config: AwsAppsyncDatasourceArgsHttpConfigAuthorizationConfigAwsIamConfig;
 }
-export interface HttpConfig {
+export interface AwsAppsyncDatasourceArgsHttpConfig {
   endpoint: string;
-  authorization_config: AuthorizationConfig;
+  authorization_config: AwsAppsyncDatasourceArgsHttpConfigAuthorizationConfig;
 }
-export interface LambdaConfig {
+export interface AwsAppsyncDatasourceArgsLambdaConfig {
   function_arn: string;
 }
-export interface OpensearchserviceConfig {
+export interface AwsAppsyncDatasourceArgsOpensearchserviceConfig {
   endpoint: string;
 }
-export interface HttpEndpointConfig {
+export interface AwsAppsyncDatasourceArgsRelationalDatabaseConfigHttpEndpointConfig {
   aws_secret_store_arn: string;
   database_name?: string;
   db_cluster_identifier: string;
   schema?: string;
 }
-export interface RelationalDatabaseConfig {
+export interface AwsAppsyncDatasourceArgsRelationalDatabaseConfig {
   source_type?: string;
-  http_endpoint_config: HttpEndpointConfig;
+  http_endpoint_config: AwsAppsyncDatasourceArgsRelationalDatabaseConfigHttpEndpointConfig;
 }
 export interface AwsAppsyncDatasourceArgs {
   api_id: string;
@@ -50,13 +50,13 @@ export interface AwsAppsyncDatasourceArgs {
   name: string;
   service_role_arn?: string;
   type: string;
-  dynamodb_config: DynamodbConfig;
-  elasticsearch_config: ElasticsearchConfig;
-  event_bridge_config: EventBridgeConfig;
-  http_config: HttpConfig;
-  lambda_config: LambdaConfig;
-  opensearchservice_config: OpensearchserviceConfig;
-  relational_database_config: RelationalDatabaseConfig;
+  dynamodb_config: AwsAppsyncDatasourceArgsDynamodbConfig;
+  elasticsearch_config: AwsAppsyncDatasourceArgsElasticsearchConfig;
+  event_bridge_config: AwsAppsyncDatasourceArgsEventBridgeConfig;
+  http_config: AwsAppsyncDatasourceArgsHttpConfig;
+  lambda_config: AwsAppsyncDatasourceArgsLambdaConfig;
+  opensearchservice_config: AwsAppsyncDatasourceArgsOpensearchserviceConfig;
+  relational_database_config: AwsAppsyncDatasourceArgsRelationalDatabaseConfig;
 }
 export class aws_appsync_datasource extends TerraformResource {
   readonly arn!: string;

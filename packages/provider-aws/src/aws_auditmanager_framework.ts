@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Controls {
+export interface AwsAuditmanagerFrameworkArgsControlSetscontrols {
   id: string;
 }
-export interface ControlSets {
+export interface AwsAuditmanagerFrameworkArgsControlSets {
   name: string;
-  controls: Controls;
+  controls: AwsAuditmanagerFrameworkArgsControlSetscontrols;
 }
 export interface AwsAuditmanagerFrameworkArgs {
   compliance_type?: string;
@@ -13,7 +13,7 @@ export interface AwsAuditmanagerFrameworkArgs {
   tags?: {
     [key: string]: string;
   };
-  control_sets: ControlSets;
+  control_sets: AwsAuditmanagerFrameworkArgsControlSets;
 }
 export class aws_auditmanager_framework extends TerraformResource {
   readonly arn!: string;

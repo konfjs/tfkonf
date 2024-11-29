@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LoggingConfig {
+export interface AwsCloudformationTypeArgsLoggingConfig {
   log_group_name: string;
   log_role_arn: string;
 }
@@ -7,7 +7,7 @@ export interface AwsCloudformationTypeArgs {
   execution_role_arn?: string;
   schema_handler_package: string;
   type_name: string;
-  logging_config: LoggingConfig;
+  logging_config: AwsCloudformationTypeArgsLoggingConfig;
 }
 export class aws_cloudformation_type extends TerraformResource {
   readonly arn!: string;

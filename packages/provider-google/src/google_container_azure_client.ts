@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleContainerAzureClientArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleContainerAzureClientArgs {
   location: string;
   name: string;
   tenant_id: string;
-  timeouts: Timeouts;
+  timeouts: GoogleContainerAzureClientArgstimeouts;
 }
 export class google_container_azure_client extends TerraformResource {
   readonly certificate!: string;

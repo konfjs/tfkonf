@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3Destination {
+export interface AwsCodebuildReportGroupArgsExportConfigS3Destination {
   bucket: string;
   encryption_disabled?: boolean;
   encryption_key: string;
   packaging?: string;
   path?: string;
 }
-export interface ExportConfig {
+export interface AwsCodebuildReportGroupArgsExportConfig {
   type: string;
-  s3_destination: S3Destination;
+  s3_destination: AwsCodebuildReportGroupArgsExportConfigS3Destination;
 }
 export interface AwsCodebuildReportGroupArgs {
   delete_reports?: boolean;
@@ -17,7 +17,7 @@ export interface AwsCodebuildReportGroupArgs {
     [key: string]: string;
   };
   type: string;
-  export_config: ExportConfig;
+  export_config: AwsCodebuildReportGroupArgsExportConfig;
 }
 export class aws_codebuild_report_group extends TerraformResource {
   readonly arn!: string;

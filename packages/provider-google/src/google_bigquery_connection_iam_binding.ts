@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleBigqueryConnectionIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigqueryConnectionIamBindingArgs {
   connection_id: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleBigqueryConnectionIamBindingArgscondition;
 }
 export class google_bigquery_connection_iam_binding extends TerraformResource {
   readonly etag!: string;

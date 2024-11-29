@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleNotebooksRuntimeIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleNotebooksRuntimeIamMemberArgs {
   member: string;
   role: string;
   runtime_name: string;
-  condition: Condition;
+  condition: GoogleNotebooksRuntimeIamMemberArgscondition;
 }
 export class google_notebooks_runtime_iam_member extends TerraformResource {
   readonly etag!: string;

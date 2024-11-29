@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogStreams {
+export interface AwsOpsworksMemcachedLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
   buffer_duration?: number;
@@ -12,11 +12,11 @@ export interface LogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
-export interface CloudwatchConfiguration {
+export interface AwsOpsworksMemcachedLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
-  log_streams: LogStreams;
+  log_streams: AwsOpsworksMemcachedLayerArgsCloudwatchConfigurationLogStreams;
 }
-export interface EbsVolume {
+export interface AwsOpsworksMemcachedLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
   mount_point: string;
@@ -25,7 +25,7 @@ export interface EbsVolume {
   size: number;
   type?: string;
 }
-export interface Downscaling {
+export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingdownscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -34,7 +34,7 @@ export interface Downscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface Upscaling {
+export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingupscaling {
   alarms?: string[];
   cpu_threshold?: number;
   ignore_metrics_time?: number;
@@ -43,10 +43,10 @@ export interface Upscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
-export interface LoadBasedAutoScaling {
+export interface AwsOpsworksMemcachedLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
-  downscaling: Downscaling;
-  upscaling: Upscaling;
+  downscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingdownscaling;
+  upscaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScalingupscaling;
 }
 export interface AwsOpsworksMemcachedLayerArgs {
   allocated_memory?: number;
@@ -72,9 +72,9 @@ export interface AwsOpsworksMemcachedLayerArgs {
     [key: string]: string;
   };
   use_ebs_optimized_instances?: boolean;
-  cloudwatch_configuration: CloudwatchConfiguration;
-  ebs_volume: EbsVolume;
-  load_based_auto_scaling: LoadBasedAutoScaling;
+  cloudwatch_configuration: AwsOpsworksMemcachedLayerArgsCloudwatchConfiguration;
+  ebs_volume: AwsOpsworksMemcachedLayerArgsEbsVolume;
+  load_based_auto_scaling: AwsOpsworksMemcachedLayerArgsLoadBasedAutoScaling;
 }
 export class aws_opsworks_memcached_layer extends TerraformResource {
   readonly arn!: string;

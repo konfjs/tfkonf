@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDataplexAspectTypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleDataplexAspectTypeArgs {
   };
   location?: string;
   metadata_template?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDataplexAspectTypeArgstimeouts;
 }
 export class google_dataplex_aspect_type extends TerraformResource {
   readonly create_time!: string;

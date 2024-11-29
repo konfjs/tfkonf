@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleActiveDirectoryDomainArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleActiveDirectoryDomainArgs {
   };
   locations: string[];
   reserved_ip_range: string;
-  timeouts: Timeouts;
+  timeouts: GoogleActiveDirectoryDomainArgstimeouts;
 }
 export class google_active_directory_domain extends TerraformResource {
   readonly effective_labels!: {

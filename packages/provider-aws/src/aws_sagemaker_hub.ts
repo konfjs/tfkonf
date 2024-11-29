@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3StorageConfig {
+export interface AwsSagemakerHubArgsS3StorageConfig {
   s3_output_path?: string;
 }
 export interface AwsSagemakerHubArgs {
@@ -10,7 +10,7 @@ export interface AwsSagemakerHubArgs {
   tags?: {
     [key: string]: string;
   };
-  s3_storage_config: S3StorageConfig;
+  s3_storage_config: AwsSagemakerHubArgsS3StorageConfig;
 }
 export class aws_sagemaker_hub extends TerraformResource {
   readonly arn!: string;

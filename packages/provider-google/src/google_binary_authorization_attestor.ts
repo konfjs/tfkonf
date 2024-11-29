@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PkixPublicKey {
+export interface GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeysPkixPublicKey {
   public_key_pem?: string;
   signature_algorithm?: string;
 }
-export interface PublicKeys {
+export interface GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeys {
   ascii_armored_pgp_public_key?: string;
   comment?: string;
-  pkix_public_key: PkixPublicKey;
+  pkix_public_key: GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeysPkixPublicKey;
 }
-export interface AttestationAuthorityNote {
+export interface GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNote {
   note_reference: string;
-  public_keys: PublicKeys;
+  public_keys: GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeys;
 }
-export interface Timeouts {
+export interface GoogleBinaryAuthorizationAttestorArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface Timeouts {
 export interface GoogleBinaryAuthorizationAttestorArgs {
   description?: string;
   name: string;
-  attestation_authority_note: AttestationAuthorityNote;
-  timeouts: Timeouts;
+  attestation_authority_note: GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNote;
+  timeouts: GoogleBinaryAuthorizationAttestorArgstimeouts;
 }
 export class google_binary_authorization_attestor extends TerraformResource {
   readonly id?: string;

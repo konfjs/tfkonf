@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CacheAttributes {
+export interface AwsStoragegatewaySmbFileShareArgsCacheAttributes {
   cache_stale_timeout_in_seconds?: number;
 }
-export interface Timeouts {
+export interface AwsStoragegatewaySmbFileShareArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -32,8 +32,8 @@ export interface AwsStoragegatewaySmbFileShareArgs {
   };
   valid_user_list?: string[];
   vpc_endpoint_dns_name?: string;
-  cache_attributes: CacheAttributes;
-  timeouts: Timeouts;
+  cache_attributes: AwsStoragegatewaySmbFileShareArgsCacheAttributes;
+  timeouts: AwsStoragegatewaySmbFileShareArgstimeouts;
 }
 export class aws_storagegateway_smb_file_share extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MysqlColumns {
+export interface GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns {
   collation?: string;
   column?: string;
   data_type?: string;
@@ -7,108 +7,108 @@ export interface MysqlColumns {
   ordinal_position?: number;
   primary_key?: boolean;
 }
-export interface MysqlTables {
+export interface GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables {
   table: string;
-  mysql_columns: MysqlColumns;
+  mysql_columns: GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns;
 }
-export interface MysqlDatabases {
+export interface GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabases {
   database: string;
-  mysql_tables: MysqlTables;
+  mysql_tables: GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables;
 }
-export interface MysqlExcludedObjects {
-  mysql_databases: MysqlDatabases;
+export interface GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjects {
+  mysql_databases: GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjectsMysqlDatabases;
 }
-export interface OracleColumns {
+export interface GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns {
   column?: string;
   data_type?: string;
 }
-export interface OracleTables {
+export interface GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemasOracleTables {
   table: string;
-  oracle_columns: OracleColumns;
+  oracle_columns: GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns;
 }
-export interface OracleSchemas {
+export interface GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemas {
   schema: string;
-  oracle_tables: OracleTables;
+  oracle_tables: GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemasOracleTables;
 }
-export interface OracleExcludedObjects {
-  oracle_schemas: OracleSchemas;
+export interface GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjects {
+  oracle_schemas: GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjectsOracleSchemas;
 }
-export interface PostgresqlColumns {
+export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
   column?: string;
   data_type?: string;
   nullable?: boolean;
   ordinal_position?: number;
   primary_key?: boolean;
 }
-export interface PostgresqlTables {
+export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables {
   table: string;
-  postgresql_columns: PostgresqlColumns;
+  postgresql_columns: GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns;
 }
-export interface PostgresqlSchemas {
+export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas {
   schema: string;
-  postgresql_tables: PostgresqlTables;
+  postgresql_tables: GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables;
 }
-export interface PostgresqlExcludedObjects {
-  postgresql_schemas: PostgresqlSchemas;
+export interface GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjects {
+  postgresql_schemas: GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas;
 }
-export interface Columns {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastablescolumns {
   column?: string;
   data_type?: string;
 }
-export interface Tables {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastables {
   table: string;
-  columns: Columns;
+  columns: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastablescolumns;
 }
-export interface Schemas {
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemas {
   schema: string;
-  tables: Tables;
+  tables: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemastables;
 }
-export interface SqlServerExcludedObjects {
-  schemas: Schemas;
+export interface GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjects {
+  schemas: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjectsschemas;
 }
-export interface BackfillAll {
-  mysql_excluded_objects: MysqlExcludedObjects;
-  oracle_excluded_objects: OracleExcludedObjects;
-  postgresql_excluded_objects: PostgresqlExcludedObjects;
-  sql_server_excluded_objects: SqlServerExcludedObjects;
+export interface GoogleDatastreamStreamArgsBackfillAll {
+  mysql_excluded_objects: GoogleDatastreamStreamArgsBackfillAllMysqlExcludedObjects;
+  oracle_excluded_objects: GoogleDatastreamStreamArgsBackfillAllOracleExcludedObjects;
+  postgresql_excluded_objects: GoogleDatastreamStreamArgsBackfillAllPostgresqlExcludedObjects;
+  sql_server_excluded_objects: GoogleDatastreamStreamArgsBackfillAllSqlServerExcludedObjects;
 }
-export interface BackfillNone {}
-export interface AppendOnly {}
-export interface Merge {}
-export interface SingleTargetDataset {
+export interface GoogleDatastreamStreamArgsBackfillNone {}
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigAppendOnly {}
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigmerge {}
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSingleTargetDataset {
   dataset_id: string;
 }
-export interface DatasetTemplate {
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate {
   dataset_id_prefix?: string;
   kms_key_name?: string;
   location: string;
 }
-export interface SourceHierarchyDatasets {
-  dataset_template: DatasetTemplate;
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets {
+  dataset_template: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate;
 }
-export interface BigqueryDestinationConfig {
+export interface GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfig {
   data_freshness?: string;
-  append_only: AppendOnly;
-  merge: Merge;
-  single_target_dataset: SingleTargetDataset;
-  source_hierarchy_datasets: SourceHierarchyDatasets;
+  append_only: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigAppendOnly;
+  merge: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigmerge;
+  single_target_dataset: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSingleTargetDataset;
+  source_hierarchy_datasets: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets;
 }
-export interface AvroFileFormat {}
-export interface JsonFileFormat {
+export interface GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfigAvroFileFormat {}
+export interface GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfigJsonFileFormat {
   compression?: string;
   schema_file_format?: string;
 }
-export interface GcsDestinationConfig {
+export interface GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfig {
   path?: string;
-  avro_file_format: AvroFileFormat;
-  json_file_format: JsonFileFormat;
+  avro_file_format: GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfigAvroFileFormat;
+  json_file_format: GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfigJsonFileFormat;
 }
-export interface DestinationConfig {
+export interface GoogleDatastreamStreamArgsDestinationConfig {
   destination_connection_profile: string;
-  bigquery_destination_config: BigqueryDestinationConfig;
-  gcs_destination_config: GcsDestinationConfig;
+  bigquery_destination_config: GoogleDatastreamStreamArgsDestinationConfigBigqueryDestinationConfig;
+  gcs_destination_config: GoogleDatastreamStreamArgsDestinationConfigGcsDestinationConfig;
 }
-export interface MysqlColumns {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns {
   collation?: string;
   column?: string;
   data_type?: string;
@@ -116,18 +116,18 @@ export interface MysqlColumns {
   ordinal_position?: number;
   primary_key?: boolean;
 }
-export interface MysqlTables {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables {
   table: string;
-  mysql_columns: MysqlColumns;
+  mysql_columns: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns;
 }
-export interface MysqlDatabases {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases {
   database: string;
-  mysql_tables: MysqlTables;
+  mysql_tables: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables;
 }
-export interface ExcludeObjects {
-  mysql_databases: MysqlDatabases;
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjects {
+  mysql_databases: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases;
 }
-export interface MysqlColumns {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns {
   collation?: string;
   column?: string;
   data_type?: string;
@@ -135,147 +135,147 @@ export interface MysqlColumns {
   ordinal_position?: number;
   primary_key?: boolean;
 }
-export interface MysqlTables {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables {
   table: string;
-  mysql_columns: MysqlColumns;
+  mysql_columns: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns;
 }
-export interface MysqlDatabases {
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases {
   database: string;
-  mysql_tables: MysqlTables;
+  mysql_tables: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables;
 }
-export interface IncludeObjects {
-  mysql_databases: MysqlDatabases;
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjects {
+  mysql_databases: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases;
 }
-export interface MysqlSourceConfig {
-  exclude_objects: ExcludeObjects;
-  include_objects: IncludeObjects;
+export interface GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfig {
+  exclude_objects: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigExcludeObjects;
+  include_objects: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfigIncludeObjects;
 }
-export interface DropLargeObjects {}
-export interface OracleColumns {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigDropLargeObjects {}
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns {
   column?: string;
   data_type?: string;
 }
-export interface OracleTables {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables {
   table: string;
-  oracle_columns: OracleColumns;
+  oracle_columns: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns;
 }
-export interface OracleSchemas {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas {
   schema: string;
-  oracle_tables: OracleTables;
+  oracle_tables: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables;
 }
-export interface ExcludeObjects {
-  oracle_schemas: OracleSchemas;
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjects {
+  oracle_schemas: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas;
 }
-export interface OracleColumns {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns {
   column?: string;
   data_type?: string;
 }
-export interface OracleTables {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables {
   table: string;
-  oracle_columns: OracleColumns;
+  oracle_columns: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns;
 }
-export interface OracleSchemas {
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas {
   schema: string;
-  oracle_tables: OracleTables;
+  oracle_tables: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables;
 }
-export interface IncludeObjects {
-  oracle_schemas: OracleSchemas;
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjects {
+  oracle_schemas: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas;
 }
-export interface StreamLargeObjects {}
-export interface OracleSourceConfig {
-  drop_large_objects: DropLargeObjects;
-  exclude_objects: ExcludeObjects;
-  include_objects: IncludeObjects;
-  stream_large_objects: StreamLargeObjects;
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigStreamLargeObjects {}
+export interface GoogleDatastreamStreamArgsSourceConfigOracleSourceConfig {
+  drop_large_objects: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigDropLargeObjects;
+  exclude_objects: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigExcludeObjects;
+  include_objects: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigIncludeObjects;
+  stream_large_objects: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfigStreamLargeObjects;
 }
-export interface PostgresqlColumns {
-  column?: string;
-  data_type?: string;
-  nullable?: boolean;
-  ordinal_position?: number;
-  primary_key?: boolean;
-}
-export interface PostgresqlTables {
-  table: string;
-  postgresql_columns: PostgresqlColumns;
-}
-export interface PostgresqlSchemas {
-  schema: string;
-  postgresql_tables: PostgresqlTables;
-}
-export interface ExcludeObjects {
-  postgresql_schemas: PostgresqlSchemas;
-}
-export interface PostgresqlColumns {
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
   column?: string;
   data_type?: string;
   nullable?: boolean;
   ordinal_position?: number;
   primary_key?: boolean;
 }
-export interface PostgresqlTables {
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables {
   table: string;
-  postgresql_columns: PostgresqlColumns;
+  postgresql_columns: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns;
 }
-export interface PostgresqlSchemas {
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas {
   schema: string;
-  postgresql_tables: PostgresqlTables;
+  postgresql_tables: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables;
 }
-export interface IncludeObjects {
-  postgresql_schemas: PostgresqlSchemas;
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjects {
+  postgresql_schemas: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas;
 }
-export interface PostgresqlSourceConfig {
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns {
+  column?: string;
+  data_type?: string;
+  nullable?: boolean;
+  ordinal_position?: number;
+  primary_key?: boolean;
+}
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables {
+  table: string;
+  postgresql_columns: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns;
+}
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas {
+  schema: string;
+  postgresql_tables: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables;
+}
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjects {
+  postgresql_schemas: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas;
+}
+export interface GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfig {
   publication: string;
   replication_slot: string;
-  exclude_objects: ExcludeObjects;
-  include_objects: IncludeObjects;
+  exclude_objects: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigExcludeObjects;
+  include_objects: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfigIncludeObjects;
 }
-export interface ChangeTables {}
-export interface Columns {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigChangeTables {}
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastablescolumns {
   column?: string;
   data_type?: string;
 }
-export interface Tables {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastables {
   table: string;
-  columns: Columns;
+  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastablescolumns;
 }
-export interface Schemas {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemas {
   schema: string;
-  tables: Tables;
+  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemastables;
 }
-export interface ExcludeObjects {
-  schemas: Schemas;
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjects {
+  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjectsschemas;
 }
-export interface Columns {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastablescolumns {
   column?: string;
   data_type?: string;
 }
-export interface Tables {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastables {
   table: string;
-  columns: Columns;
+  columns: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastablescolumns;
 }
-export interface Schemas {
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemas {
   schema: string;
-  tables: Tables;
+  tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemastables;
 }
-export interface IncludeObjects {
-  schemas: Schemas;
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjects {
+  schemas: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjectsschemas;
 }
-export interface TransactionLogs {}
-export interface SqlServerSourceConfig {
-  change_tables: ChangeTables;
-  exclude_objects: ExcludeObjects;
-  include_objects: IncludeObjects;
-  transaction_logs: TransactionLogs;
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigTransactionLogs {}
+export interface GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfig {
+  change_tables: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigChangeTables;
+  exclude_objects: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigExcludeObjects;
+  include_objects: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigIncludeObjects;
+  transaction_logs: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfigTransactionLogs;
 }
-export interface SourceConfig {
+export interface GoogleDatastreamStreamArgsSourceConfig {
   source_connection_profile: string;
-  mysql_source_config: MysqlSourceConfig;
-  oracle_source_config: OracleSourceConfig;
-  postgresql_source_config: PostgresqlSourceConfig;
-  sql_server_source_config: SqlServerSourceConfig;
+  mysql_source_config: GoogleDatastreamStreamArgsSourceConfigMysqlSourceConfig;
+  oracle_source_config: GoogleDatastreamStreamArgsSourceConfigOracleSourceConfig;
+  postgresql_source_config: GoogleDatastreamStreamArgsSourceConfigPostgresqlSourceConfig;
+  sql_server_source_config: GoogleDatastreamStreamArgsSourceConfigSqlServerSourceConfig;
 }
-export interface Timeouts {
+export interface GoogleDatastreamStreamArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -290,11 +290,11 @@ export interface GoogleDatastreamStreamArgs {
   };
   location: string;
   stream_id: string;
-  backfill_all: BackfillAll;
-  backfill_none: BackfillNone;
-  destination_config: DestinationConfig;
-  source_config: SourceConfig;
-  timeouts: Timeouts;
+  backfill_all: GoogleDatastreamStreamArgsBackfillAll;
+  backfill_none: GoogleDatastreamStreamArgsBackfillNone;
+  destination_config: GoogleDatastreamStreamArgsDestinationConfig;
+  source_config: GoogleDatastreamStreamArgsSourceConfig;
+  timeouts: GoogleDatastreamStreamArgstimeouts;
 }
 export class google_datastream_stream extends TerraformResource {
   readonly effective_labels!: {

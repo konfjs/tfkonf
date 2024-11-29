@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleAccessContextManagerAccessPolicyIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleAccessContextManagerAccessPolicyIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleAccessContextManagerAccessPolicyIamMemberArgscondition;
 }
 export class google_access_context_manager_access_policy_iam_member extends TerraformResource {
   readonly etag!: string;

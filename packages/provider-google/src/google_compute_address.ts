@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeAddressArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleComputeAddressArgs {
   };
   name: string;
   network?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeAddressArgstimeouts;
 }
 export class google_compute_address extends TerraformResource {
   readonly address?: string;

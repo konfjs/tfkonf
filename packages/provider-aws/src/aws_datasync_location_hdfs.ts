@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NameNode {
+export interface AwsDatasyncLocationHdfsArgsNameNode {
   hostname: string;
   port: number;
 }
-export interface QopConfiguration {}
+export interface AwsDatasyncLocationHdfsArgsQopConfiguration {}
 export interface AwsDatasyncLocationHdfsArgs {
   agent_arns: string[];
   authentication_type?: string;
@@ -20,8 +20,8 @@ export interface AwsDatasyncLocationHdfsArgs {
   tags?: {
     [key: string]: string;
   };
-  name_node: NameNode;
-  qop_configuration: QopConfiguration;
+  name_node: AwsDatasyncLocationHdfsArgsNameNode;
+  qop_configuration: AwsDatasyncLocationHdfsArgsQopConfiguration;
 }
 export class aws_datasync_location_hdfs extends TerraformResource {
   readonly arn!: string;

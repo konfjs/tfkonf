@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsWafregionalWebAclAssociationArgstimeouts {
   create?: string;
 }
 export interface AwsWafregionalWebAclAssociationArgs {
   resource_arn: string;
   web_acl_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsWafregionalWebAclAssociationArgstimeouts;
 }
 export class aws_wafregional_web_acl_association extends TerraformResource {
   readonly id?: string;

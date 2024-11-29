@@ -1,35 +1,35 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CelExpression {
+export interface GooglePrivatecaCertificateTemplateArgsIdentityConstraintsCelExpression {
   description?: string;
   expression?: string;
   location?: string;
   title?: string;
 }
-export interface IdentityConstraints {
+export interface GooglePrivatecaCertificateTemplateArgsIdentityConstraints {
   allow_subject_alt_names_passthrough: boolean;
   allow_subject_passthrough: boolean;
-  cel_expression: CelExpression;
+  cel_expression: GooglePrivatecaCertificateTemplateArgsIdentityConstraintsCelExpression;
 }
-export interface AdditionalExtensions {
+export interface GooglePrivatecaCertificateTemplateArgsPassthroughExtensionsAdditionalExtensions {
   object_id_path: number[];
 }
-export interface PassthroughExtensions {
+export interface GooglePrivatecaCertificateTemplateArgsPassthroughExtensions {
   known_extensions?: string[];
-  additional_extensions: AdditionalExtensions;
+  additional_extensions: GooglePrivatecaCertificateTemplateArgsPassthroughExtensionsAdditionalExtensions;
 }
-export interface ObjectId {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesAdditionalExtensionsObjectId {
   object_id_path: number[];
 }
-export interface AdditionalExtensions {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesAdditionalExtensions {
   critical?: boolean;
   value: string;
-  object_id: ObjectId;
+  object_id: GooglePrivatecaCertificateTemplateArgsPredefinedValuesAdditionalExtensionsObjectId;
 }
-export interface CaOptions {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesCaOptions {
   is_ca?: boolean;
   max_issuer_path_length?: number;
 }
-export interface BaseKeyUsage {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageBaseKeyUsage {
   cert_sign?: boolean;
   content_commitment?: boolean;
   crl_sign?: boolean;
@@ -40,7 +40,7 @@ export interface BaseKeyUsage {
   key_agreement?: boolean;
   key_encipherment?: boolean;
 }
-export interface ExtendedKeyUsage {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageExtendedKeyUsage {
   client_auth?: boolean;
   code_signing?: boolean;
   email_protection?: boolean;
@@ -48,25 +48,25 @@ export interface ExtendedKeyUsage {
   server_auth?: boolean;
   time_stamping?: boolean;
 }
-export interface UnknownExtendedKeyUsages {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageUnknownExtendedKeyUsages {
   object_id_path: number[];
 }
-export interface KeyUsage {
-  base_key_usage: BaseKeyUsage;
-  extended_key_usage: ExtendedKeyUsage;
-  unknown_extended_key_usages: UnknownExtendedKeyUsages;
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsage {
+  base_key_usage: GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageBaseKeyUsage;
+  extended_key_usage: GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageExtendedKeyUsage;
+  unknown_extended_key_usages: GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsageUnknownExtendedKeyUsages;
 }
-export interface PolicyIds {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValuesPolicyIds {
   object_id_path: number[];
 }
-export interface PredefinedValues {
+export interface GooglePrivatecaCertificateTemplateArgsPredefinedValues {
   aia_ocsp_servers?: string[];
-  additional_extensions: AdditionalExtensions;
-  ca_options: CaOptions;
-  key_usage: KeyUsage;
-  policy_ids: PolicyIds;
+  additional_extensions: GooglePrivatecaCertificateTemplateArgsPredefinedValuesAdditionalExtensions;
+  ca_options: GooglePrivatecaCertificateTemplateArgsPredefinedValuesCaOptions;
+  key_usage: GooglePrivatecaCertificateTemplateArgsPredefinedValuesKeyUsage;
+  policy_ids: GooglePrivatecaCertificateTemplateArgsPredefinedValuesPolicyIds;
 }
-export interface Timeouts {
+export interface GooglePrivatecaCertificateTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -79,10 +79,10 @@ export interface GooglePrivatecaCertificateTemplateArgs {
   location: string;
   maximum_lifetime?: string;
   name: string;
-  identity_constraints: IdentityConstraints;
-  passthrough_extensions: PassthroughExtensions;
-  predefined_values: PredefinedValues;
-  timeouts: Timeouts;
+  identity_constraints: GooglePrivatecaCertificateTemplateArgsIdentityConstraints;
+  passthrough_extensions: GooglePrivatecaCertificateTemplateArgsPassthroughExtensions;
+  predefined_values: GooglePrivatecaCertificateTemplateArgsPredefinedValues;
+  timeouts: GooglePrivatecaCertificateTemplateArgstimeouts;
 }
 export class google_privateca_certificate_template extends TerraformResource {
   readonly create_time!: string;

@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppEngine {
+export interface GoogleComputeRegionNetworkEndpointGroupArgsAppEngine {
   service?: string;
   url_mask?: string;
   version?: string;
 }
-export interface CloudFunction {
+export interface GoogleComputeRegionNetworkEndpointGroupArgsCloudFunction {
   function?: string;
   url_mask?: string;
 }
-export interface CloudRun {
+export interface GoogleComputeRegionNetworkEndpointGroupArgsCloudRun {
   service?: string;
   tag?: string;
   url_mask?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionNetworkEndpointGroupArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -25,10 +25,10 @@ export interface GoogleComputeRegionNetworkEndpointGroupArgs {
   psc_target_service?: string;
   region: string;
   subnetwork?: string;
-  app_engine: AppEngine;
-  cloud_function: CloudFunction;
-  cloud_run: CloudRun;
-  timeouts: Timeouts;
+  app_engine: GoogleComputeRegionNetworkEndpointGroupArgsAppEngine;
+  cloud_function: GoogleComputeRegionNetworkEndpointGroupArgsCloudFunction;
+  cloud_run: GoogleComputeRegionNetworkEndpointGroupArgsCloudRun;
+  timeouts: GoogleComputeRegionNetworkEndpointGroupArgstimeouts;
 }
 export class google_compute_region_network_endpoint_group extends TerraformResource {
   readonly id?: string;

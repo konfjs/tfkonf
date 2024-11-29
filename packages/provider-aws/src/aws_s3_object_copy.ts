@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Grant {
+export interface AwsS3ObjectCopyArgsgrant {
   email?: string;
   id?: string;
   permissions: string[];
@@ -29,7 +29,7 @@ export interface AwsS3ObjectCopyArgs {
   tags?: {
     [key: string]: string;
   };
-  grant: Grant;
+  grant: AwsS3ObjectCopyArgsgrant;
 }
 export class aws_s3_object_copy extends TerraformResource {
   readonly acl?: string;

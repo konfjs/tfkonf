@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MountOptions {
+export interface AwsDatasyncLocationNfsArgsMountOptions {
   version?: string;
 }
-export interface OnPremConfig {
+export interface AwsDatasyncLocationNfsArgsOnPremConfig {
   agent_arns: string[];
 }
 export interface AwsDatasyncLocationNfsArgs {
@@ -11,8 +11,8 @@ export interface AwsDatasyncLocationNfsArgs {
   tags?: {
     [key: string]: string;
   };
-  mount_options: MountOptions;
-  on_prem_config: OnPremConfig;
+  mount_options: AwsDatasyncLocationNfsArgsMountOptions;
+  on_prem_config: AwsDatasyncLocationNfsArgsOnPremConfig;
 }
 export class aws_datasync_location_nfs extends TerraformResource {
   readonly arn!: string;

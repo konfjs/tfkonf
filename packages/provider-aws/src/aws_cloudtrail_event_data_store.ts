@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldSelector {}
-export interface AdvancedEventSelector {
-  field_selector: FieldSelector;
+export interface AwsCloudtrailEventDataStoreArgsAdvancedEventSelectorFieldSelector {}
+export interface AwsCloudtrailEventDataStoreArgsAdvancedEventSelector {
+  field_selector: AwsCloudtrailEventDataStoreArgsAdvancedEventSelectorFieldSelector;
 }
-export interface Timeouts {
+export interface AwsCloudtrailEventDataStoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface AwsCloudtrailEventDataStoreArgs {
     [key: string]: string;
   };
   termination_protection_enabled?: boolean;
-  advanced_event_selector: AdvancedEventSelector;
-  timeouts: Timeouts;
+  advanced_event_selector: AwsCloudtrailEventDataStoreArgsAdvancedEventSelector;
+  timeouts: AwsCloudtrailEventDataStoreArgstimeouts;
 }
 export class aws_cloudtrail_event_data_store extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PhysicalConnectionRequirements {
+export interface AwsGlueConnectionArgsPhysicalConnectionRequirements {
   availability_zone?: string;
   security_group_id_list?: string[];
   subnet_id?: string;
@@ -15,7 +15,7 @@ export interface AwsGlueConnectionArgs {
   tags?: {
     [key: string]: string;
   };
-  physical_connection_requirements: PhysicalConnectionRequirements;
+  physical_connection_requirements: AwsGlueConnectionArgsPhysicalConnectionRequirements;
 }
 export class aws_glue_connection extends TerraformResource {
   readonly arn!: string;

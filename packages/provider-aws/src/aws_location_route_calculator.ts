@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsLocationRouteCalculatorArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsLocationRouteCalculatorArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsLocationRouteCalculatorArgstimeouts;
 }
 export class aws_location_route_calculator extends TerraformResource {
   readonly calculator_arn!: string;

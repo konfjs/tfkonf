@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleBigqueryDatapolicyDataPolicyIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigqueryDatapolicyDataPolicyIamBindingArgs {
   data_policy_id: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleBigqueryDatapolicyDataPolicyIamBindingArgscondition;
 }
 export class google_bigquery_datapolicy_data_policy_iam_binding extends TerraformResource {
   readonly etag!: string;

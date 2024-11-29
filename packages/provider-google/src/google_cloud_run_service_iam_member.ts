@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleCloudRunServiceIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudRunServiceIamMemberArgs {
   member: string;
   role: string;
   service: string;
-  condition: Condition;
+  condition: GoogleCloudRunServiceIamMemberArgscondition;
 }
 export class google_cloud_run_service_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppMonitorConfiguration {
+export interface AwsRumAppMonitorArgsAppMonitorConfiguration {
   allow_cookies?: boolean;
   enable_xray?: boolean;
   excluded_pages?: string[];
@@ -10,7 +10,7 @@ export interface AppMonitorConfiguration {
   session_sample_rate?: number;
   telemetries?: string[];
 }
-export interface CustomEvents {
+export interface AwsRumAppMonitorArgsCustomEvents {
   status?: string;
 }
 export interface AwsRumAppMonitorArgs {
@@ -20,8 +20,8 @@ export interface AwsRumAppMonitorArgs {
   tags?: {
     [key: string]: string;
   };
-  app_monitor_configuration: AppMonitorConfiguration;
-  custom_events: CustomEvents;
+  app_monitor_configuration: AwsRumAppMonitorArgsAppMonitorConfiguration;
+  custom_events: AwsRumAppMonitorArgsCustomEvents;
 }
 export class aws_rum_app_monitor extends TerraformResource {
   readonly app_monitor_id!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ActionsSuppressor {
+export interface AwsCloudwatchCompositeAlarmArgsActionsSuppressor {
   alarm: string;
   extension_period: number;
   wait_period: number;
@@ -15,7 +15,7 @@ export interface AwsCloudwatchCompositeAlarmArgs {
   tags?: {
     [key: string]: string;
   };
-  actions_suppressor: ActionsSuppressor;
+  actions_suppressor: AwsCloudwatchCompositeAlarmArgsActionsSuppressor;
 }
 export class aws_cloudwatch_composite_alarm extends TerraformResource {
   readonly arn!: string;

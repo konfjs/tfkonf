@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleBillingProjectInfoArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleBillingProjectInfoArgs {
   billing_account: string;
-  timeouts: Timeouts;
+  timeouts: GoogleBillingProjectInfoArgstimeouts;
 }
 export class google_billing_project_info extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface As2Config {
+export interface AwsTransferConnectorArgsAs2Config {
   compression: string;
   encryption_algorithm: string;
   local_profile_id: string;
@@ -9,7 +9,7 @@ export interface As2Config {
   partner_profile_id: string;
   signing_algorithm: string;
 }
-export interface SftpConfig {
+export interface AwsTransferConnectorArgsSftpConfig {
   trusted_host_keys?: string[];
   user_secret_id?: string;
 }
@@ -20,8 +20,8 @@ export interface AwsTransferConnectorArgs {
     [key: string]: string;
   };
   url: string;
-  as2_config: As2Config;
-  sftp_config: SftpConfig;
+  as2_config: AwsTransferConnectorArgsAs2Config;
+  sftp_config: AwsTransferConnectorArgsSftpConfig;
 }
 export class aws_transfer_connector extends TerraformResource {
   readonly arn!: string;

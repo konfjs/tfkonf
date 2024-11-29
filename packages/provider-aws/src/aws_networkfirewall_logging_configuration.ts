@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogDestinationConfig {
+export interface AwsNetworkfirewallLoggingConfigurationArgsLoggingConfigurationLogDestinationConfig {
   log_destination: {
     [key: string]: string;
   };
   log_destination_type: string;
   log_type: string;
 }
-export interface LoggingConfiguration {
-  log_destination_config: LogDestinationConfig;
+export interface AwsNetworkfirewallLoggingConfigurationArgsLoggingConfiguration {
+  log_destination_config: AwsNetworkfirewallLoggingConfigurationArgsLoggingConfigurationLogDestinationConfig;
 }
 export interface AwsNetworkfirewallLoggingConfigurationArgs {
   firewall_arn: string;
-  logging_configuration: LoggingConfiguration;
+  logging_configuration: AwsNetworkfirewallLoggingConfigurationArgsLoggingConfiguration;
 }
 export class aws_networkfirewall_logging_configuration extends TerraformResource {
   readonly id?: string;

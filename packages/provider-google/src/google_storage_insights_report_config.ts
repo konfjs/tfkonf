@@ -1,37 +1,37 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CsvOptions {
+export interface GoogleStorageInsightsReportConfigArgsCsvOptions {
   delimiter?: string;
   header_required?: boolean;
   record_separator?: string;
 }
-export interface EndDate {
+export interface GoogleStorageInsightsReportConfigArgsFrequencyOptionsEndDate {
   day: number;
   month: number;
   year: number;
 }
-export interface StartDate {
+export interface GoogleStorageInsightsReportConfigArgsFrequencyOptionsStartDate {
   day: number;
   month: number;
   year: number;
 }
-export interface FrequencyOptions {
+export interface GoogleStorageInsightsReportConfigArgsFrequencyOptions {
   frequency: string;
-  end_date: EndDate;
-  start_date: StartDate;
+  end_date: GoogleStorageInsightsReportConfigArgsFrequencyOptionsEndDate;
+  start_date: GoogleStorageInsightsReportConfigArgsFrequencyOptionsStartDate;
 }
-export interface StorageDestinationOptions {
+export interface GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageDestinationOptions {
   bucket: string;
   destination_path?: string;
 }
-export interface StorageFilters {
+export interface GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageFilters {
   bucket?: string;
 }
-export interface ObjectMetadataReportOptions {
+export interface GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptions {
   metadata_fields: string[];
-  storage_destination_options: StorageDestinationOptions;
-  storage_filters: StorageFilters;
+  storage_destination_options: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageDestinationOptions;
+  storage_filters: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptionsStorageFilters;
 }
-export interface Timeouts {
+export interface GoogleStorageInsightsReportConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,10 +39,10 @@ export interface Timeouts {
 export interface GoogleStorageInsightsReportConfigArgs {
   display_name?: string;
   location: string;
-  csv_options: CsvOptions;
-  frequency_options: FrequencyOptions;
-  object_metadata_report_options: ObjectMetadataReportOptions;
-  timeouts: Timeouts;
+  csv_options: GoogleStorageInsightsReportConfigArgsCsvOptions;
+  frequency_options: GoogleStorageInsightsReportConfigArgsFrequencyOptions;
+  object_metadata_report_options: GoogleStorageInsightsReportConfigArgsObjectMetadataReportOptions;
+  timeouts: GoogleStorageInsightsReportConfigArgstimeouts;
 }
 export class google_storage_insights_report_config extends TerraformResource {
   readonly id?: string;

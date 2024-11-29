@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DiskIopsConfiguration {
+export interface AwsFsxOpenzfsFileSystemArgsDiskIopsConfiguration {
   mode?: string;
 }
-export interface ClientConfigurations {
+export interface AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationNfsExportsClientConfigurations {
   clients: string;
   options: string[];
 }
-export interface NfsExports {
-  client_configurations: ClientConfigurations;
+export interface AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationNfsExports {
+  client_configurations: AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationNfsExportsClientConfigurations;
 }
-export interface UserAndGroupQuotas {
+export interface AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationUserAndGroupQuotas {
   id: number;
   storage_capacity_quota_gib: number;
   type: string;
 }
-export interface RootVolumeConfiguration {
+export interface AwsFsxOpenzfsFileSystemArgsRootVolumeConfiguration {
   copy_tags_to_snapshots?: boolean;
   data_compression_type?: string;
   record_size_kib?: number;
-  nfs_exports: NfsExports;
-  user_and_group_quotas: UserAndGroupQuotas;
+  nfs_exports: AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationNfsExports;
+  user_and_group_quotas: AwsFsxOpenzfsFileSystemArgsRootVolumeConfigurationUserAndGroupQuotas;
 }
-export interface Timeouts {
+export interface AwsFsxOpenzfsFileSystemArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -46,9 +46,9 @@ export interface AwsFsxOpenzfsFileSystemArgs {
     [key: string]: string;
   };
   throughput_capacity: number;
-  disk_iops_configuration: DiskIopsConfiguration;
-  root_volume_configuration: RootVolumeConfiguration;
-  timeouts: Timeouts;
+  disk_iops_configuration: AwsFsxOpenzfsFileSystemArgsDiskIopsConfiguration;
+  root_volume_configuration: AwsFsxOpenzfsFileSystemArgsRootVolumeConfiguration;
+  timeouts: AwsFsxOpenzfsFileSystemArgstimeouts;
 }
 export class aws_fsx_openzfs_file_system extends TerraformResource {
   readonly arn!: string;

@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BlueGreenUpdate {
+export interface AwsDbInstanceArgsBlueGreenUpdate {
   enabled?: boolean;
 }
-export interface RestoreToPointInTime {
+export interface AwsDbInstanceArgsRestoreToPointInTime {
   restore_time?: string;
   source_db_instance_automated_backups_arn?: string;
   source_db_instance_identifier?: string;
   source_dbi_resource_id?: string;
   use_latest_restorable_time?: boolean;
 }
-export interface S3Import {
+export interface AwsDbInstanceArgsS3Import {
   bucket_name: string;
   bucket_prefix?: string;
   ingestion_role: string;
   source_engine: string;
   source_engine_version: string;
 }
-export interface Timeouts {
+export interface AwsDbInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -53,10 +53,10 @@ export interface AwsDbInstanceArgs {
     [key: string]: string;
   };
   upgrade_storage_config?: boolean;
-  blue_green_update: BlueGreenUpdate;
-  restore_to_point_in_time: RestoreToPointInTime;
-  s3_import: S3Import;
-  timeouts: Timeouts;
+  blue_green_update: AwsDbInstanceArgsBlueGreenUpdate;
+  restore_to_point_in_time: AwsDbInstanceArgsRestoreToPointInTime;
+  s3_import: AwsDbInstanceArgsS3Import;
+  timeouts: AwsDbInstanceArgstimeouts;
 }
 export class aws_db_instance extends TerraformResource {
   readonly address!: string;

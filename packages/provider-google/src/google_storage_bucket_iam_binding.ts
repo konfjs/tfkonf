@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleStorageBucketIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleStorageBucketIamBindingArgs {
   bucket: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleStorageBucketIamBindingArgscondition;
 }
 export class google_storage_bucket_iam_binding extends TerraformResource {
   readonly etag!: string;

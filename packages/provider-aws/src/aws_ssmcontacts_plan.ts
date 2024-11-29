@@ -1,23 +1,23 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ChannelTargetInfo {
+export interface AwsSsmcontactsPlanArgsstagetargetChannelTargetInfo {
   contact_channel_id: string;
   retry_interval_in_minutes?: number;
 }
-export interface ContactTargetInfo {
+export interface AwsSsmcontactsPlanArgsstagetargetContactTargetInfo {
   contact_id?: string;
   is_essential: boolean;
 }
-export interface Target {
-  channel_target_info: ChannelTargetInfo;
-  contact_target_info: ContactTargetInfo;
+export interface AwsSsmcontactsPlanArgsstagetarget {
+  channel_target_info: AwsSsmcontactsPlanArgsstagetargetChannelTargetInfo;
+  contact_target_info: AwsSsmcontactsPlanArgsstagetargetContactTargetInfo;
 }
-export interface Stage {
+export interface AwsSsmcontactsPlanArgsstage {
   duration_in_minutes: number;
-  target: Target;
+  target: AwsSsmcontactsPlanArgsstagetarget;
 }
 export interface AwsSsmcontactsPlanArgs {
   contact_id: string;
-  stage: Stage;
+  stage: AwsSsmcontactsPlanArgsstage;
 }
 export class aws_ssmcontacts_plan extends TerraformResource {
   readonly id?: string;

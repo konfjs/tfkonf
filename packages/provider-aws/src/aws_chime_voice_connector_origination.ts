@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Route {
+export interface AwsChimeVoiceConnectorOriginationArgsroute {
   host: string;
   port?: number;
   priority: number;
@@ -9,7 +9,7 @@ export interface Route {
 export interface AwsChimeVoiceConnectorOriginationArgs {
   disabled?: boolean;
   voice_connector_id: string;
-  route: Route;
+  route: AwsChimeVoiceConnectorOriginationArgsroute;
 }
 export class aws_chime_voice_connector_origination extends TerraformResource {
   readonly id?: string;

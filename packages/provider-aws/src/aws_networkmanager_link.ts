@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Bandwidth {
+export interface AwsNetworkmanagerLinkArgsbandwidth {
   download_speed?: number;
   upload_speed?: number;
 }
-export interface Timeouts {
+export interface AwsNetworkmanagerLinkArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface AwsNetworkmanagerLinkArgs {
     [key: string]: string;
   };
   type?: string;
-  bandwidth: Bandwidth;
-  timeouts: Timeouts;
+  bandwidth: AwsNetworkmanagerLinkArgsbandwidth;
+  timeouts: AwsNetworkmanagerLinkArgstimeouts;
 }
 export class aws_networkmanager_link extends TerraformResource {
   readonly arn!: string;

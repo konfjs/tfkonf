@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CsvClassifier {
+export interface AwsGlueClassifierArgsCsvClassifier {
   allow_single_column?: boolean;
   contains_header?: string;
   custom_datatype_configured?: boolean;
@@ -9,24 +9,24 @@ export interface CsvClassifier {
   header?: string[];
   quote_symbol?: string;
 }
-export interface GrokClassifier {
+export interface AwsGlueClassifierArgsGrokClassifier {
   classification: string;
   custom_patterns?: string;
   grok_pattern: string;
 }
-export interface JsonClassifier {
+export interface AwsGlueClassifierArgsJsonClassifier {
   json_path: string;
 }
-export interface XmlClassifier {
+export interface AwsGlueClassifierArgsXmlClassifier {
   classification: string;
   row_tag: string;
 }
 export interface AwsGlueClassifierArgs {
   name: string;
-  csv_classifier: CsvClassifier;
-  grok_classifier: GrokClassifier;
-  json_classifier: JsonClassifier;
-  xml_classifier: XmlClassifier;
+  csv_classifier: AwsGlueClassifierArgsCsvClassifier;
+  grok_classifier: AwsGlueClassifierArgsGrokClassifier;
+  json_classifier: AwsGlueClassifierArgsJsonClassifier;
+  xml_classifier: AwsGlueClassifierArgsXmlClassifier;
 }
 export class aws_glue_classifier extends TerraformResource {
   readonly id?: string;

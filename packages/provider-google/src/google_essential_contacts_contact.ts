@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleEssentialContactsContactArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleEssentialContactsContactArgs {
   language_tag: string;
   notification_category_subscriptions: string[];
   parent: string;
-  timeouts: Timeouts;
+  timeouts: GoogleEssentialContactsContactArgstimeouts;
 }
 export class google_essential_contacts_contact extends TerraformResource {
   readonly id?: string;

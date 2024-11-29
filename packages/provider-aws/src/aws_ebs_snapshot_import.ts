@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ClientData {
+export interface AwsEbsSnapshotImportArgsClientData {
   comment?: string;
 }
-export interface UserBucket {
+export interface AwsEbsSnapshotImportArgsDiskContainerUserBucket {
   s3_bucket: string;
   s3_key: string;
 }
-export interface DiskContainer {
+export interface AwsEbsSnapshotImportArgsDiskContainer {
   description?: string;
   format: string;
   url?: string;
-  user_bucket: UserBucket;
+  user_bucket: AwsEbsSnapshotImportArgsDiskContainerUserBucket;
 }
-export interface Timeouts {
+export interface AwsEbsSnapshotImportArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -25,9 +25,9 @@ export interface AwsEbsSnapshotImportArgs {
     [key: string]: string;
   };
   temporary_restore_days?: number;
-  client_data: ClientData;
-  disk_container: DiskContainer;
-  timeouts: Timeouts;
+  client_data: AwsEbsSnapshotImportArgsClientData;
+  disk_container: AwsEbsSnapshotImportArgsDiskContainer;
+  timeouts: AwsEbsSnapshotImportArgstimeouts;
 }
 export class aws_ebs_snapshot_import extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleBigqueryAnalyticsHubDataExchangeIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeIamMemberArgs {
   data_exchange_id: string;
   member: string;
   role: string;
-  condition: Condition;
+  condition: GoogleBigqueryAnalyticsHubDataExchangeIamMemberArgscondition;
 }
 export class google_bigquery_analytics_hub_data_exchange_iam_member extends TerraformResource {
   readonly etag!: string;

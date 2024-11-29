@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RoutingStrategy {
+export interface AwsGameliftAliasArgsRoutingStrategy {
   fleet_id?: string;
   message?: string;
   type: string;
@@ -10,7 +10,7 @@ export interface AwsGameliftAliasArgs {
   tags?: {
     [key: string]: string;
   };
-  routing_strategy: RoutingStrategy;
+  routing_strategy: AwsGameliftAliasArgsRoutingStrategy;
 }
 export class aws_gamelift_alias extends TerraformResource {
   readonly arn!: string;

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AbortIncompleteMultipartUpload {
+export interface AwsS3BucketLifecycleConfigurationArgsruleAbortIncompleteMultipartUpload {
   days_after_initiation?: number;
 }
-export interface Expiration {
+export interface AwsS3BucketLifecycleConfigurationArgsruleexpiration {
   date?: string;
   days?: number;
 }
-export interface And {
+export interface AwsS3BucketLifecycleConfigurationArgsrulefilterand {
   object_size_greater_than?: number;
   object_size_less_than?: number;
   prefix?: string;
@@ -14,51 +14,51 @@ export interface And {
     [key: string]: string;
   };
 }
-export interface Tag {
+export interface AwsS3BucketLifecycleConfigurationArgsrulefiltertag {
   key: string;
   value: string;
 }
-export interface Filter {
+export interface AwsS3BucketLifecycleConfigurationArgsrulefilter {
   object_size_greater_than?: string;
   object_size_less_than?: string;
   prefix?: string;
-  and: And;
-  tag: Tag;
+  and: AwsS3BucketLifecycleConfigurationArgsrulefilterand;
+  tag: AwsS3BucketLifecycleConfigurationArgsrulefiltertag;
 }
-export interface NoncurrentVersionExpiration {
+export interface AwsS3BucketLifecycleConfigurationArgsruleNoncurrentVersionExpiration {
   newer_noncurrent_versions?: string;
   noncurrent_days?: number;
 }
-export interface NoncurrentVersionTransition {
+export interface AwsS3BucketLifecycleConfigurationArgsruleNoncurrentVersionTransition {
   newer_noncurrent_versions?: string;
   noncurrent_days?: number;
   storage_class: string;
 }
-export interface Transition {
+export interface AwsS3BucketLifecycleConfigurationArgsruletransition {
   date?: string;
   days?: number;
   storage_class: string;
 }
-export interface Rule {
+export interface AwsS3BucketLifecycleConfigurationArgsrule {
   id: string;
   prefix?: string;
   status: string;
-  abort_incomplete_multipart_upload: AbortIncompleteMultipartUpload;
-  expiration: Expiration;
-  filter: Filter;
-  noncurrent_version_expiration: NoncurrentVersionExpiration;
-  noncurrent_version_transition: NoncurrentVersionTransition;
-  transition: Transition;
+  abort_incomplete_multipart_upload: AwsS3BucketLifecycleConfigurationArgsruleAbortIncompleteMultipartUpload;
+  expiration: AwsS3BucketLifecycleConfigurationArgsruleexpiration;
+  filter: AwsS3BucketLifecycleConfigurationArgsrulefilter;
+  noncurrent_version_expiration: AwsS3BucketLifecycleConfigurationArgsruleNoncurrentVersionExpiration;
+  noncurrent_version_transition: AwsS3BucketLifecycleConfigurationArgsruleNoncurrentVersionTransition;
+  transition: AwsS3BucketLifecycleConfigurationArgsruletransition;
 }
-export interface Timeouts {
+export interface AwsS3BucketLifecycleConfigurationArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsS3BucketLifecycleConfigurationArgs {
   bucket: string;
   expected_bucket_owner?: string;
-  rule: Rule;
-  timeouts: Timeouts;
+  rule: AwsS3BucketLifecycleConfigurationArgsrule;
+  timeouts: AwsS3BucketLifecycleConfigurationArgstimeouts;
 }
 export class aws_s3_bucket_lifecycle_configuration extends TerraformResource {
   readonly id?: string;

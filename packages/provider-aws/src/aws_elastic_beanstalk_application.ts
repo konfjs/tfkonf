@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppversionLifecycle {
+export interface AwsElasticBeanstalkApplicationArgsAppversionLifecycle {
   delete_source_from_s3?: boolean;
   max_age_in_days?: number;
   max_count?: number;
@@ -11,7 +11,7 @@ export interface AwsElasticBeanstalkApplicationArgs {
   tags?: {
     [key: string]: string;
   };
-  appversion_lifecycle: AppversionLifecycle;
+  appversion_lifecycle: AwsElasticBeanstalkApplicationArgsAppversionLifecycle;
 }
 export class aws_elastic_beanstalk_application extends TerraformResource {
   readonly arn!: string;

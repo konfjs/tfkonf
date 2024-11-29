@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GitConfig {
+export interface AwsSagemakerCodeRepositoryArgsGitConfig {
   branch?: string;
   repository_url: string;
   secret_arn?: string;
@@ -9,7 +9,7 @@ export interface AwsSagemakerCodeRepositoryArgs {
   tags?: {
     [key: string]: string;
   };
-  git_config: GitConfig;
+  git_config: AwsSagemakerCodeRepositoryArgsGitConfig;
 }
 export class aws_sagemaker_code_repository extends TerraformResource {
   readonly arn!: string;

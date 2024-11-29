@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Cors {
+export interface AwsLambdaFunctionUrlArgscors {
   allow_credentials?: boolean;
   allow_headers?: string[];
   allow_methods?: string[];
@@ -7,7 +7,7 @@ export interface Cors {
   expose_headers?: string[];
   max_age?: number;
 }
-export interface Timeouts {
+export interface AwsLambdaFunctionUrlArgstimeouts {
   create?: string;
 }
 export interface AwsLambdaFunctionUrlArgs {
@@ -15,8 +15,8 @@ export interface AwsLambdaFunctionUrlArgs {
   function_name: string;
   invoke_mode?: string;
   qualifier?: string;
-  cors: Cors;
-  timeouts: Timeouts;
+  cors: AwsLambdaFunctionUrlArgscors;
+  timeouts: AwsLambdaFunctionUrlArgstimeouts;
 }
 export class aws_lambda_function_url extends TerraformResource {
   readonly function_arn!: string;

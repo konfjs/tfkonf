@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ReservationPlanSettings {
+export interface AwsMediaConvertQueueArgsReservationPlanSettings {
   commitment: string;
   renewal_type: string;
   reserved_slots: number;
@@ -12,7 +12,7 @@ export interface AwsMediaConvertQueueArgs {
   tags?: {
     [key: string]: string;
   };
-  reservation_plan_settings: ReservationPlanSettings;
+  reservation_plan_settings: AwsMediaConvertQueueArgsReservationPlanSettings;
 }
 export class aws_media_convert_queue extends TerraformResource {
   readonly arn!: string;

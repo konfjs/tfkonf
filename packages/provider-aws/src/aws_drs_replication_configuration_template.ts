@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PitPolicy {
+export interface AwsDrsReplicationConfigurationTemplateArgsPitPolicy {
   enabled?: boolean;
   interval: number;
   retention_duration: number;
   rule_id?: number;
   units: string;
 }
-export interface Timeouts {
+export interface AwsDrsReplicationConfigurationTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,8 +29,8 @@ export interface AwsDrsReplicationConfigurationTemplateArgs {
     [key: string]: string;
   };
   use_dedicated_replication_server: boolean;
-  pit_policy: PitPolicy;
-  timeouts: Timeouts;
+  pit_policy: AwsDrsReplicationConfigurationTemplateArgsPitPolicy;
+  timeouts: AwsDrsReplicationConfigurationTemplateArgstimeouts;
 }
 export class aws_drs_replication_configuration_template extends TerraformResource {
   readonly arn!: string;

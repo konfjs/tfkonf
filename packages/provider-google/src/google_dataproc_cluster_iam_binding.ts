@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataprocClusterIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataprocClusterIamBindingArgs {
   cluster: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleDataprocClusterIamBindingArgscondition;
 }
 export class google_dataproc_cluster_iam_binding extends TerraformResource {
   readonly etag!: string;

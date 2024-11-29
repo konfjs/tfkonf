@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LocalDatas {
+export interface GoogleDnsResponsePolicyRuleArgsLocalDataLocalDatas {
   name: string;
   rrdatas?: string[];
   ttl?: number;
   type: string;
 }
-export interface LocalData {
-  local_datas: LocalDatas;
+export interface GoogleDnsResponsePolicyRuleArgsLocalData {
+  local_datas: GoogleDnsResponsePolicyRuleArgsLocalDataLocalDatas;
 }
-export interface Timeouts {
+export interface GoogleDnsResponsePolicyRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface GoogleDnsResponsePolicyRuleArgs {
   dns_name: string;
   response_policy: string;
   rule_name: string;
-  local_data: LocalData;
-  timeouts: Timeouts;
+  local_data: GoogleDnsResponsePolicyRuleArgsLocalData;
+  timeouts: GoogleDnsResponsePolicyRuleArgstimeouts;
 }
 export class google_dns_response_policy_rule extends TerraformResource {
   readonly id?: string;

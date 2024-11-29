@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudwatchAlarm {
+export interface AwsIotTopicRuleArgsCloudwatchAlarm {
   alarm_name: string;
   role_arn: string;
   state_reason: string;
   state_value: string;
 }
-export interface CloudwatchLogs {
+export interface AwsIotTopicRuleArgsCloudwatchLogs {
   batch_mode?: boolean;
   log_group_name: string;
   role_arn: string;
 }
-export interface CloudwatchMetric {
+export interface AwsIotTopicRuleArgsCloudwatchMetric {
   metric_name: string;
   metric_namespace: string;
   metric_timestamp?: string;
@@ -18,7 +18,7 @@ export interface CloudwatchMetric {
   metric_value: string;
   role_arn: string;
 }
-export interface Dynamodb {
+export interface AwsIotTopicRuleArgsdynamodb {
   hash_key_field: string;
   hash_key_type?: string;
   hash_key_value: string;
@@ -30,32 +30,32 @@ export interface Dynamodb {
   role_arn: string;
   table_name: string;
 }
-export interface PutItem {
+export interface AwsIotTopicRuleArgsdynamodbv2PutItem {
   table_name: string;
 }
-export interface Dynamodbv2 {
+export interface AwsIotTopicRuleArgsdynamodbv2 {
   role_arn: string;
-  put_item: PutItem;
+  put_item: AwsIotTopicRuleArgsdynamodbv2PutItem;
 }
-export interface Elasticsearch {
+export interface AwsIotTopicRuleArgselasticsearch {
   endpoint: string;
   id: string;
   index: string;
   role_arn: string;
   type: string;
 }
-export interface CloudwatchAlarm {
+export interface AwsIotTopicRuleArgsErrorActionCloudwatchAlarm {
   alarm_name: string;
   role_arn: string;
   state_reason: string;
   state_value: string;
 }
-export interface CloudwatchLogs {
+export interface AwsIotTopicRuleArgsErrorActionCloudwatchLogs {
   batch_mode?: boolean;
   log_group_name: string;
   role_arn: string;
 }
-export interface CloudwatchMetric {
+export interface AwsIotTopicRuleArgsErrorActionCloudwatchMetric {
   metric_name: string;
   metric_namespace: string;
   metric_timestamp?: string;
@@ -63,7 +63,7 @@ export interface CloudwatchMetric {
   metric_value: string;
   role_arn: string;
 }
-export interface Dynamodb {
+export interface AwsIotTopicRuleArgsErrorActiondynamodb {
   hash_key_field: string;
   hash_key_type?: string;
   hash_key_value: string;
@@ -75,51 +75,51 @@ export interface Dynamodb {
   role_arn: string;
   table_name: string;
 }
-export interface PutItem {
+export interface AwsIotTopicRuleArgsErrorActiondynamodbv2PutItem {
   table_name: string;
 }
-export interface Dynamodbv2 {
+export interface AwsIotTopicRuleArgsErrorActiondynamodbv2 {
   role_arn: string;
-  put_item: PutItem;
+  put_item: AwsIotTopicRuleArgsErrorActiondynamodbv2PutItem;
 }
-export interface Elasticsearch {
+export interface AwsIotTopicRuleArgsErrorActionelasticsearch {
   endpoint: string;
   id: string;
   index: string;
   role_arn: string;
   type: string;
 }
-export interface Firehose {
+export interface AwsIotTopicRuleArgsErrorActionfirehose {
   batch_mode?: boolean;
   delivery_stream_name: string;
   role_arn: string;
   separator?: string;
 }
-export interface HttpHeader {
+export interface AwsIotTopicRuleArgsErrorActionhttpHttpHeader {
   key: string;
   value: string;
 }
-export interface Http {
+export interface AwsIotTopicRuleArgsErrorActionhttp {
   confirmation_url?: string;
   url: string;
-  http_header: HttpHeader;
+  http_header: AwsIotTopicRuleArgsErrorActionhttpHttpHeader;
 }
-export interface IotAnalytics {
+export interface AwsIotTopicRuleArgsErrorActionIotAnalytics {
   batch_mode?: boolean;
   channel_name: string;
   role_arn: string;
 }
-export interface IotEvents {
+export interface AwsIotTopicRuleArgsErrorActionIotEvents {
   batch_mode?: boolean;
   input_name: string;
   message_id?: string;
   role_arn: string;
 }
-export interface Header {
+export interface AwsIotTopicRuleArgsErrorActionkafkaheader {
   key: string;
   value: string;
 }
-export interface Kafka {
+export interface AwsIotTopicRuleArgsErrorActionkafka {
   client_properties: {
     [key: string]: string;
   };
@@ -127,109 +127,109 @@ export interface Kafka {
   key?: string;
   partition?: string;
   topic: string;
-  header: Header;
+  header: AwsIotTopicRuleArgsErrorActionkafkaheader;
 }
-export interface Kinesis {
+export interface AwsIotTopicRuleArgsErrorActionkinesis {
   partition_key?: string;
   role_arn: string;
   stream_name: string;
 }
-export interface Lambda {
+export interface AwsIotTopicRuleArgsErrorActionlambda {
   function_arn: string;
 }
-export interface Republish {
+export interface AwsIotTopicRuleArgsErrorActionrepublish {
   qos?: number;
   role_arn: string;
   topic: string;
 }
-export interface S3 {
+export interface AwsIotTopicRuleArgsErrorActions3 {
   bucket_name: string;
   canned_acl?: string;
   key: string;
   role_arn: string;
 }
-export interface Sns {
+export interface AwsIotTopicRuleArgsErrorActionsns {
   message_format?: string;
   role_arn: string;
   target_arn: string;
 }
-export interface Sqs {
+export interface AwsIotTopicRuleArgsErrorActionsqs {
   queue_url: string;
   role_arn: string;
   use_base64: boolean;
 }
-export interface StepFunctions {
+export interface AwsIotTopicRuleArgsErrorActionStepFunctions {
   execution_name_prefix?: string;
   role_arn: string;
   state_machine_name: string;
 }
-export interface Dimension {
+export interface AwsIotTopicRuleArgsErrorActiontimestreamdimension {
   name: string;
   value: string;
 }
-export interface Timestamp {
+export interface AwsIotTopicRuleArgsErrorActiontimestreamtimestamp {
   unit: string;
   value: string;
 }
-export interface Timestream {
+export interface AwsIotTopicRuleArgsErrorActiontimestream {
   database_name: string;
   role_arn: string;
   table_name: string;
-  dimension: Dimension;
-  timestamp: Timestamp;
+  dimension: AwsIotTopicRuleArgsErrorActiontimestreamdimension;
+  timestamp: AwsIotTopicRuleArgsErrorActiontimestreamtimestamp;
 }
-export interface ErrorAction {
-  cloudwatch_alarm: CloudwatchAlarm;
-  cloudwatch_logs: CloudwatchLogs;
-  cloudwatch_metric: CloudwatchMetric;
-  dynamodb: Dynamodb;
-  dynamodbv2: Dynamodbv2;
-  elasticsearch: Elasticsearch;
-  firehose: Firehose;
-  http: Http;
-  iot_analytics: IotAnalytics;
-  iot_events: IotEvents;
-  kafka: Kafka;
-  kinesis: Kinesis;
-  lambda: Lambda;
-  republish: Republish;
-  s3: S3;
-  sns: Sns;
-  sqs: Sqs;
-  step_functions: StepFunctions;
-  timestream: Timestream;
+export interface AwsIotTopicRuleArgsErrorAction {
+  cloudwatch_alarm: AwsIotTopicRuleArgsErrorActionCloudwatchAlarm;
+  cloudwatch_logs: AwsIotTopicRuleArgsErrorActionCloudwatchLogs;
+  cloudwatch_metric: AwsIotTopicRuleArgsErrorActionCloudwatchMetric;
+  dynamodb: AwsIotTopicRuleArgsErrorActiondynamodb;
+  dynamodbv2: AwsIotTopicRuleArgsErrorActiondynamodbv2;
+  elasticsearch: AwsIotTopicRuleArgsErrorActionelasticsearch;
+  firehose: AwsIotTopicRuleArgsErrorActionfirehose;
+  http: AwsIotTopicRuleArgsErrorActionhttp;
+  iot_analytics: AwsIotTopicRuleArgsErrorActionIotAnalytics;
+  iot_events: AwsIotTopicRuleArgsErrorActionIotEvents;
+  kafka: AwsIotTopicRuleArgsErrorActionkafka;
+  kinesis: AwsIotTopicRuleArgsErrorActionkinesis;
+  lambda: AwsIotTopicRuleArgsErrorActionlambda;
+  republish: AwsIotTopicRuleArgsErrorActionrepublish;
+  s3: AwsIotTopicRuleArgsErrorActions3;
+  sns: AwsIotTopicRuleArgsErrorActionsns;
+  sqs: AwsIotTopicRuleArgsErrorActionsqs;
+  step_functions: AwsIotTopicRuleArgsErrorActionStepFunctions;
+  timestream: AwsIotTopicRuleArgsErrorActiontimestream;
 }
-export interface Firehose {
+export interface AwsIotTopicRuleArgsfirehose {
   batch_mode?: boolean;
   delivery_stream_name: string;
   role_arn: string;
   separator?: string;
 }
-export interface HttpHeader {
+export interface AwsIotTopicRuleArgshttpHttpHeader {
   key: string;
   value: string;
 }
-export interface Http {
+export interface AwsIotTopicRuleArgshttp {
   confirmation_url?: string;
   url: string;
-  http_header: HttpHeader;
+  http_header: AwsIotTopicRuleArgshttpHttpHeader;
 }
-export interface IotAnalytics {
+export interface AwsIotTopicRuleArgsIotAnalytics {
   batch_mode?: boolean;
   channel_name: string;
   role_arn: string;
 }
-export interface IotEvents {
+export interface AwsIotTopicRuleArgsIotEvents {
   batch_mode?: boolean;
   input_name: string;
   message_id?: string;
   role_arn: string;
 }
-export interface Header {
+export interface AwsIotTopicRuleArgskafkaheader {
   key: string;
   value: string;
 }
-export interface Kafka {
+export interface AwsIotTopicRuleArgskafka {
   client_properties: {
     [key: string]: string;
   };
@@ -237,56 +237,56 @@ export interface Kafka {
   key?: string;
   partition?: string;
   topic: string;
-  header: Header;
+  header: AwsIotTopicRuleArgskafkaheader;
 }
-export interface Kinesis {
+export interface AwsIotTopicRuleArgskinesis {
   partition_key?: string;
   role_arn: string;
   stream_name: string;
 }
-export interface Lambda {
+export interface AwsIotTopicRuleArgslambda {
   function_arn: string;
 }
-export interface Republish {
+export interface AwsIotTopicRuleArgsrepublish {
   qos?: number;
   role_arn: string;
   topic: string;
 }
-export interface S3 {
+export interface AwsIotTopicRuleArgss3 {
   bucket_name: string;
   canned_acl?: string;
   key: string;
   role_arn: string;
 }
-export interface Sns {
+export interface AwsIotTopicRuleArgssns {
   message_format?: string;
   role_arn: string;
   target_arn: string;
 }
-export interface Sqs {
+export interface AwsIotTopicRuleArgssqs {
   queue_url: string;
   role_arn: string;
   use_base64: boolean;
 }
-export interface StepFunctions {
+export interface AwsIotTopicRuleArgsStepFunctions {
   execution_name_prefix?: string;
   role_arn: string;
   state_machine_name: string;
 }
-export interface Dimension {
+export interface AwsIotTopicRuleArgstimestreamdimension {
   name: string;
   value: string;
 }
-export interface Timestamp {
+export interface AwsIotTopicRuleArgstimestreamtimestamp {
   unit: string;
   value: string;
 }
-export interface Timestream {
+export interface AwsIotTopicRuleArgstimestream {
   database_name: string;
   role_arn: string;
   table_name: string;
-  dimension: Dimension;
-  timestamp: Timestamp;
+  dimension: AwsIotTopicRuleArgstimestreamdimension;
+  timestamp: AwsIotTopicRuleArgstimestreamtimestamp;
 }
 export interface AwsIotTopicRuleArgs {
   description?: string;
@@ -297,26 +297,26 @@ export interface AwsIotTopicRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  cloudwatch_alarm: CloudwatchAlarm;
-  cloudwatch_logs: CloudwatchLogs;
-  cloudwatch_metric: CloudwatchMetric;
-  dynamodb: Dynamodb;
-  dynamodbv2: Dynamodbv2;
-  elasticsearch: Elasticsearch;
-  error_action: ErrorAction;
-  firehose: Firehose;
-  http: Http;
-  iot_analytics: IotAnalytics;
-  iot_events: IotEvents;
-  kafka: Kafka;
-  kinesis: Kinesis;
-  lambda: Lambda;
-  republish: Republish;
-  s3: S3;
-  sns: Sns;
-  sqs: Sqs;
-  step_functions: StepFunctions;
-  timestream: Timestream;
+  cloudwatch_alarm: AwsIotTopicRuleArgsCloudwatchAlarm;
+  cloudwatch_logs: AwsIotTopicRuleArgsCloudwatchLogs;
+  cloudwatch_metric: AwsIotTopicRuleArgsCloudwatchMetric;
+  dynamodb: AwsIotTopicRuleArgsdynamodb;
+  dynamodbv2: AwsIotTopicRuleArgsdynamodbv2;
+  elasticsearch: AwsIotTopicRuleArgselasticsearch;
+  error_action: AwsIotTopicRuleArgsErrorAction;
+  firehose: AwsIotTopicRuleArgsfirehose;
+  http: AwsIotTopicRuleArgshttp;
+  iot_analytics: AwsIotTopicRuleArgsIotAnalytics;
+  iot_events: AwsIotTopicRuleArgsIotEvents;
+  kafka: AwsIotTopicRuleArgskafka;
+  kinesis: AwsIotTopicRuleArgskinesis;
+  lambda: AwsIotTopicRuleArgslambda;
+  republish: AwsIotTopicRuleArgsrepublish;
+  s3: AwsIotTopicRuleArgss3;
+  sns: AwsIotTopicRuleArgssns;
+  sqs: AwsIotTopicRuleArgssqs;
+  step_functions: AwsIotTopicRuleArgsStepFunctions;
+  timestream: AwsIotTopicRuleArgstimestream;
 }
 export class aws_iot_topic_rule extends TerraformResource {
   readonly arn!: string;

@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DumpFlags {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsDumpFlagsDumpFlags {
   name?: string;
   value?: string;
 }
-export interface DumpFlags {
-  dump_flags: DumpFlags;
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsDumpFlags {
+  dump_flags: GoogleDatabaseMigrationServiceMigrationJobArgsDumpFlagsDumpFlags;
 }
-export interface PerformanceConfig {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsPerformanceConfig {
   dump_parallel_level?: string;
 }
-export interface ReverseSshConnectivity {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsReverseSshConnectivity {
   vm?: string;
   vm_ip?: string;
   vm_port?: number;
   vpc?: string;
 }
-export interface StaticIpConnectivity {}
-export interface Timeouts {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsStaticIpConnectivity {}
+export interface GoogleDatabaseMigrationServiceMigrationJobArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcPeeringConnectivity {
+export interface GoogleDatabaseMigrationServiceMigrationJobArgsVpcPeeringConnectivity {
   vpc?: string;
 }
 export interface GoogleDatabaseMigrationServiceMigrationJobArgs {
@@ -36,12 +36,12 @@ export interface GoogleDatabaseMigrationServiceMigrationJobArgs {
   migration_job_id: string;
   source: string;
   type: string;
-  dump_flags: DumpFlags;
-  performance_config: PerformanceConfig;
-  reverse_ssh_connectivity: ReverseSshConnectivity;
-  static_ip_connectivity: StaticIpConnectivity;
-  timeouts: Timeouts;
-  vpc_peering_connectivity: VpcPeeringConnectivity;
+  dump_flags: GoogleDatabaseMigrationServiceMigrationJobArgsDumpFlags;
+  performance_config: GoogleDatabaseMigrationServiceMigrationJobArgsPerformanceConfig;
+  reverse_ssh_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsReverseSshConnectivity;
+  static_ip_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsStaticIpConnectivity;
+  timeouts: GoogleDatabaseMigrationServiceMigrationJobArgstimeouts;
+  vpc_peering_connectivity: GoogleDatabaseMigrationServiceMigrationJobArgsVpcPeeringConnectivity;
 }
 export class google_database_migration_service_migration_job extends TerraformResource {
   readonly create_time!: string;

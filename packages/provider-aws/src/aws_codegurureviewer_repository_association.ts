@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KmsKeyDetails {
+export interface AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails {
   encryption_option?: string;
   kms_key_id?: string;
 }
-export interface Bitbucket {
+export interface AwsCodegurureviewerRepositoryAssociationArgsrepositorybitbucket {
   connection_arn: string;
   name: string;
   owner: string;
 }
-export interface Codecommit {
+export interface AwsCodegurureviewerRepositoryAssociationArgsrepositorycodecommit {
   name: string;
 }
-export interface GithubEnterpriseServer {
+export interface AwsCodegurureviewerRepositoryAssociationArgsrepositoryGithubEnterpriseServer {
   connection_arn: string;
   name: string;
   owner: string;
 }
-export interface S3Bucket {
+export interface AwsCodegurureviewerRepositoryAssociationArgsrepositoryS3Bucket {
   bucket_name: string;
   name: string;
 }
-export interface Repository {
-  bitbucket: Bitbucket;
-  codecommit: Codecommit;
-  github_enterprise_server: GithubEnterpriseServer;
-  s3_bucket: S3Bucket;
+export interface AwsCodegurureviewerRepositoryAssociationArgsrepository {
+  bitbucket: AwsCodegurureviewerRepositoryAssociationArgsrepositorybitbucket;
+  codecommit: AwsCodegurureviewerRepositoryAssociationArgsrepositorycodecommit;
+  github_enterprise_server: AwsCodegurureviewerRepositoryAssociationArgsrepositoryGithubEnterpriseServer;
+  s3_bucket: AwsCodegurureviewerRepositoryAssociationArgsrepositoryS3Bucket;
 }
-export interface Timeouts {
+export interface AwsCodegurureviewerRepositoryAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -35,9 +35,9 @@ export interface AwsCodegurureviewerRepositoryAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  kms_key_details: KmsKeyDetails;
-  repository: Repository;
-  timeouts: Timeouts;
+  kms_key_details: AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails;
+  repository: AwsCodegurureviewerRepositoryAssociationArgsrepository;
+  timeouts: AwsCodegurureviewerRepositoryAssociationArgstimeouts;
 }
 export class aws_codegurureviewer_repository_association extends TerraformResource {
   readonly arn!: string;

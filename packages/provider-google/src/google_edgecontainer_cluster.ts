@@ -1,48 +1,48 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdminUsers {
+export interface GoogleEdgecontainerClusterArgsauthorizationAdminUsers {
   username: string;
 }
-export interface Authorization {
-  admin_users: AdminUsers;
+export interface GoogleEdgecontainerClusterArgsauthorization {
+  admin_users: GoogleEdgecontainerClusterArgsauthorizationAdminUsers;
 }
-export interface Local {
+export interface GoogleEdgecontainerClusterArgsControlPlanelocal {
   machine_filter?: string;
 }
-export interface Remote {}
-export interface ControlPlane {
-  local: Local;
-  remote: Remote;
+export interface GoogleEdgecontainerClusterArgsControlPlaneremote {}
+export interface GoogleEdgecontainerClusterArgsControlPlane {
+  local: GoogleEdgecontainerClusterArgsControlPlanelocal;
+  remote: GoogleEdgecontainerClusterArgsControlPlaneremote;
 }
-export interface ControlPlaneEncryption {}
-export interface Fleet {
+export interface GoogleEdgecontainerClusterArgsControlPlaneEncryption {}
+export interface GoogleEdgecontainerClusterArgsfleet {
   project: string;
 }
-export interface Window {}
-export interface MaintenanceExclusions {
-  window: Window;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionswindow {}
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusions {
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusionswindow;
 }
-export interface Window {}
-export interface RecurringWindow {
-  window: Window;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindowwindow {}
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindow {
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindowwindow;
 }
-export interface Window {
-  recurring_window: RecurringWindow;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicywindow {
+  recurring_window: GoogleEdgecontainerClusterArgsMaintenancePolicywindowRecurringWindow;
 }
-export interface MaintenancePolicy {
-  maintenance_exclusions: MaintenanceExclusions;
-  window: Window;
+export interface GoogleEdgecontainerClusterArgsMaintenancePolicy {
+  maintenance_exclusions: GoogleEdgecontainerClusterArgsMaintenancePolicyMaintenanceExclusions;
+  window: GoogleEdgecontainerClusterArgsMaintenancePolicywindow;
 }
-export interface Networking {
+export interface GoogleEdgecontainerClusterArgsnetworking {
   cluster_ipv4_cidr_blocks: string[];
   cluster_ipv6_cidr_blocks?: string[];
   services_ipv4_cidr_blocks: string[];
   services_ipv6_cidr_blocks?: string[];
 }
-export interface Ingress {}
-export interface SystemAddonsConfig {
-  ingress: Ingress;
+export interface GoogleEdgecontainerClusterArgsSystemAddonsConfigingress {}
+export interface GoogleEdgecontainerClusterArgsSystemAddonsConfig {
+  ingress: GoogleEdgecontainerClusterArgsSystemAddonsConfigingress;
 }
-export interface Timeouts {
+export interface GoogleEdgecontainerClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -53,14 +53,14 @@ export interface GoogleEdgecontainerClusterArgs {
   };
   location: string;
   name: string;
-  authorization: Authorization;
-  control_plane: ControlPlane;
-  control_plane_encryption: ControlPlaneEncryption;
-  fleet: Fleet;
-  maintenance_policy: MaintenancePolicy;
-  networking: Networking;
-  system_addons_config: SystemAddonsConfig;
-  timeouts: Timeouts;
+  authorization: GoogleEdgecontainerClusterArgsauthorization;
+  control_plane: GoogleEdgecontainerClusterArgsControlPlane;
+  control_plane_encryption: GoogleEdgecontainerClusterArgsControlPlaneEncryption;
+  fleet: GoogleEdgecontainerClusterArgsfleet;
+  maintenance_policy: GoogleEdgecontainerClusterArgsMaintenancePolicy;
+  networking: GoogleEdgecontainerClusterArgsnetworking;
+  system_addons_config: GoogleEdgecontainerClusterArgsSystemAddonsConfig;
+  timeouts: GoogleEdgecontainerClusterArgstimeouts;
 }
 export class google_edgecontainer_cluster extends TerraformResource {
   readonly cluster_ca_certificate!: string;

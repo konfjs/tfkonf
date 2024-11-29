@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Predicates {
+export interface AwsWafRateBasedRuleArgspredicates {
   data_id: string;
   negated: boolean;
   type: string;
@@ -12,7 +12,7 @@ export interface AwsWafRateBasedRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  predicates: Predicates;
+  predicates: AwsWafRateBasedRuleArgspredicates;
 }
 export class aws_waf_rate_based_rule extends TerraformResource {
   readonly arn!: string;

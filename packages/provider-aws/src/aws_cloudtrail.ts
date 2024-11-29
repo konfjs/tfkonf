@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FieldSelector {
+export interface AwsCloudtrailArgsAdvancedEventSelectorFieldSelector {
   ends_with?: string[];
   equals?: string[];
   field: string;
@@ -8,21 +8,21 @@ export interface FieldSelector {
   not_starts_with?: string[];
   starts_with?: string[];
 }
-export interface AdvancedEventSelector {
+export interface AwsCloudtrailArgsAdvancedEventSelector {
   name?: string;
-  field_selector: FieldSelector;
+  field_selector: AwsCloudtrailArgsAdvancedEventSelectorFieldSelector;
 }
-export interface DataResource {
+export interface AwsCloudtrailArgsEventSelectorDataResource {
   type: string;
   values: string[];
 }
-export interface EventSelector {
+export interface AwsCloudtrailArgsEventSelector {
   exclude_management_event_sources?: string[];
   include_management_events?: boolean;
   read_write_type?: string;
-  data_resource: DataResource;
+  data_resource: AwsCloudtrailArgsEventSelectorDataResource;
 }
-export interface InsightSelector {
+export interface AwsCloudtrailArgsInsightSelector {
   insight_type: string;
 }
 export interface AwsCloudtrailArgs {
@@ -41,9 +41,9 @@ export interface AwsCloudtrailArgs {
   tags?: {
     [key: string]: string;
   };
-  advanced_event_selector: AdvancedEventSelector;
-  event_selector: EventSelector;
-  insight_selector: InsightSelector;
+  advanced_event_selector: AwsCloudtrailArgsAdvancedEventSelector;
+  event_selector: AwsCloudtrailArgsEventSelector;
+  insight_selector: AwsCloudtrailArgsInsightSelector;
 }
 export class aws_cloudtrail extends TerraformResource {
   readonly arn!: string;

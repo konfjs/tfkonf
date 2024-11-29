@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DefaultTags {
+export interface AwsS3ObjectArgsOverrideProviderDefaultTags {
   tags?: {
     [key: string]: string;
   };
 }
-export interface OverrideProvider {
-  default_tags: DefaultTags;
+export interface AwsS3ObjectArgsOverrideProvider {
+  default_tags: AwsS3ObjectArgsOverrideProviderDefaultTags;
 }
 export interface AwsS3ObjectArgs {
   bucket: string;
@@ -30,7 +30,7 @@ export interface AwsS3ObjectArgs {
     [key: string]: string;
   };
   website_redirect?: string;
-  override_provider: OverrideProvider;
+  override_provider: AwsS3ObjectArgsOverrideProvider;
 }
 export class aws_s3_object extends TerraformResource {
   readonly acl?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEc2TransitGatewayMulticastDomainArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -11,7 +11,7 @@ export interface AwsEc2TransitGatewayMulticastDomainArgs {
     [key: string]: string;
   };
   transit_gateway_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsEc2TransitGatewayMulticastDomainArgstimeouts;
 }
 export class aws_ec2_transit_gateway_multicast_domain extends TerraformResource {
   readonly arn!: string;

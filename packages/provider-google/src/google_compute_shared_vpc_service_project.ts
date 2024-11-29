@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeSharedVpcServiceProjectArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleComputeSharedVpcServiceProjectArgs {
   deletion_policy?: string;
   host_project: string;
   service_project: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeSharedVpcServiceProjectArgstimeouts;
 }
 export class google_compute_shared_vpc_service_project extends TerraformResource {
   readonly id?: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SensitiveLabels {
+export interface GoogleMonitoringNotificationChannelArgsSensitiveLabels {
   auth_token?: string;
   password?: string;
   service_key?: string;
 }
-export interface Timeouts {
+export interface GoogleMonitoringNotificationChannelArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface GoogleMonitoringNotificationChannelArgs {
   user_labels?: {
     [key: string]: string;
   };
-  sensitive_labels: SensitiveLabels;
-  timeouts: Timeouts;
+  sensitive_labels: GoogleMonitoringNotificationChannelArgsSensitiveLabels;
+  timeouts: GoogleMonitoringNotificationChannelArgstimeouts;
 }
 export class google_monitoring_notification_channel extends TerraformResource {
   readonly id?: string;

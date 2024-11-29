@@ -1,42 +1,42 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsNetworkfirewallRuleGroupArgsEncryptionConfiguration {
   key_id?: string;
   type: string;
 }
-export interface IpSetReference {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSetsIpSetReferencesIpSetReference {
   reference_arn: string;
 }
-export interface IpSetReferences {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSetsIpSetReferences {
   key: string;
-  ip_set_reference: IpSetReference;
+  ip_set_reference: AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSetsIpSetReferencesIpSetReference;
 }
-export interface ReferenceSets {
-  ip_set_references: IpSetReferences;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSets {
+  ip_set_references: AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSetsIpSetReferences;
 }
-export interface IpSet {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesIpSetsIpSet {
   definition: string[];
 }
-export interface IpSets {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesIpSets {
   key: string;
-  ip_set: IpSet;
+  ip_set: AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesIpSetsIpSet;
 }
-export interface PortSet {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesPortSetsPortSet {
   definition: string[];
 }
-export interface PortSets {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesPortSets {
   key: string;
-  port_set: PortSet;
+  port_set: AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesPortSetsPortSet;
 }
-export interface RuleVariables {
-  ip_sets: IpSets;
-  port_sets: PortSets;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariables {
+  ip_sets: AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesIpSets;
+  port_sets: AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariablesPortSets;
 }
-export interface RulesSourceList {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceRulesSourceList {
   generated_rules_type: string;
   target_types: string[];
   targets: string[];
 }
-export interface Header {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRuleheader {
   destination: string;
   destination_port: string;
   direction: string;
@@ -44,80 +44,80 @@ export interface Header {
   source: string;
   source_port: string;
 }
-export interface RuleOption {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRuleRuleOption {
   keyword: string;
   settings?: string[];
 }
-export interface StatefulRule {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRule {
   action: string;
-  header: Header;
-  rule_option: RuleOption;
+  header: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRuleheader;
+  rule_option: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRuleRuleOption;
 }
-export interface Dimension {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActiondimension {
   value: string;
 }
-export interface PublishMetricAction {
-  dimension: Dimension;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction {
+  dimension: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricActiondimension;
 }
-export interface ActionDefinition {
-  publish_metric_action: PublishMetricAction;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition {
+  publish_metric_action: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionPublishMetricAction;
 }
-export interface CustomAction {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction {
   action_name: string;
-  action_definition: ActionDefinition;
+  action_definition: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinition;
 }
-export interface Destination {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesdestination {
   address_definition: string;
 }
-export interface DestinationPort {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort {
   from_port: number;
   to_port?: number;
 }
-export interface Source {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributessource {
   address_definition: string;
 }
-export interface SourcePort {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort {
   from_port: number;
   to_port?: number;
 }
-export interface TcpFlag {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag {
   flags: string[];
   masks?: string[];
 }
-export interface MatchAttributes {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes {
   protocols?: number[];
-  destination: Destination;
-  destination_port: DestinationPort;
-  source: Source;
-  source_port: SourcePort;
-  tcp_flag: TcpFlag;
+  destination: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesdestination;
+  destination_port: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestinationPort;
+  source: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributessource;
+  source_port: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePort;
+  tcp_flag: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag;
 }
-export interface RuleDefinition {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition {
   actions: string[];
-  match_attributes: MatchAttributes;
+  match_attributes: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributes;
 }
-export interface StatelessRule {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule {
   priority: number;
-  rule_definition: RuleDefinition;
+  rule_definition: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinition;
 }
-export interface StatelessRulesAndCustomActions {
-  custom_action: CustomAction;
-  stateless_rule: StatelessRule;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActions {
+  custom_action: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomAction;
+  stateless_rule: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRule;
 }
-export interface RulesSource {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSource {
   rules_string?: string;
-  rules_source_list: RulesSourceList;
-  stateful_rule: StatefulRule;
-  stateless_rules_and_custom_actions: StatelessRulesAndCustomActions;
+  rules_source_list: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceRulesSourceList;
+  stateful_rule: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatefulRule;
+  stateless_rules_and_custom_actions: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSourceStatelessRulesAndCustomActions;
 }
-export interface StatefulRuleOptions {
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroupStatefulRuleOptions {
   rule_order: string;
 }
-export interface RuleGroup {
-  reference_sets: ReferenceSets;
-  rule_variables: RuleVariables;
-  rules_source: RulesSource;
-  stateful_rule_options: StatefulRuleOptions;
+export interface AwsNetworkfirewallRuleGroupArgsRuleGroup {
+  reference_sets: AwsNetworkfirewallRuleGroupArgsRuleGroupReferenceSets;
+  rule_variables: AwsNetworkfirewallRuleGroupArgsRuleGroupRuleVariables;
+  rules_source: AwsNetworkfirewallRuleGroupArgsRuleGroupRulesSource;
+  stateful_rule_options: AwsNetworkfirewallRuleGroupArgsRuleGroupStatefulRuleOptions;
 }
 export interface AwsNetworkfirewallRuleGroupArgs {
   capacity: number;
@@ -128,8 +128,8 @@ export interface AwsNetworkfirewallRuleGroupArgs {
     [key: string]: string;
   };
   type: string;
-  encryption_configuration: EncryptionConfiguration;
-  rule_group: RuleGroup;
+  encryption_configuration: AwsNetworkfirewallRuleGroupArgsEncryptionConfiguration;
+  rule_group: AwsNetworkfirewallRuleGroupArgsRuleGroup;
 }
 export class aws_networkfirewall_rule_group extends TerraformResource {
   readonly arn!: string;

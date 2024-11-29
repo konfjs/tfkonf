@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EnumerationValue {
+export interface AwsLexSlotTypeArgsEnumerationValue {
   synonyms?: string[];
   value: string;
 }
-export interface Timeouts {
+export interface AwsLexSlotTypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface AwsLexSlotTypeArgs {
   description?: string;
   name: string;
   value_selection_strategy?: string;
-  enumeration_value: EnumerationValue;
-  timeouts: Timeouts;
+  enumeration_value: AwsLexSlotTypeArgsEnumerationValue;
+  timeouts: AwsLexSlotTypeArgstimeouts;
 }
 export class aws_lex_slot_type extends TerraformResource {
   readonly checksum!: string;

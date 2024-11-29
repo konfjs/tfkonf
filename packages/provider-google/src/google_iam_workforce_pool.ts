@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AllowedServices {
+export interface GoogleIamWorkforcePoolArgsAccessRestrictionsAllowedServices {
   domain?: string;
 }
-export interface AccessRestrictions {
+export interface GoogleIamWorkforcePoolArgsAccessRestrictions {
   disable_programmatic_signin?: boolean;
-  allowed_services: AllowedServices;
+  allowed_services: GoogleIamWorkforcePoolArgsAccessRestrictionsAllowedServices;
 }
-export interface Timeouts {
+export interface GoogleIamWorkforcePoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface GoogleIamWorkforcePoolArgs {
   parent: string;
   session_duration?: string;
   workforce_pool_id: string;
-  access_restrictions: AccessRestrictions;
-  timeouts: Timeouts;
+  access_restrictions: GoogleIamWorkforcePoolArgsAccessRestrictions;
+  timeouts: GoogleIamWorkforcePoolArgstimeouts;
 }
 export class google_iam_workforce_pool extends TerraformResource {
   readonly id?: string;

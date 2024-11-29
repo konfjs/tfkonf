@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleApigeeSyncAuthorizationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface Timeouts {
 export interface GoogleApigeeSyncAuthorizationArgs {
   identities: string[];
   name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleApigeeSyncAuthorizationArgstimeouts;
 }
 export class google_apigee_sync_authorization extends TerraformResource {
   readonly etag!: string;

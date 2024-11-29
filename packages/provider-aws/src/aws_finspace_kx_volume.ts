@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Nas1Configuration {
+export interface AwsFinspaceKxVolumeArgsNas1Configuration {
   size: number;
   type: string;
 }
-export interface Timeouts {
+export interface AwsFinspaceKxVolumeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface AwsFinspaceKxVolumeArgs {
     [key: string]: string;
   };
   type: string;
-  nas1_configuration: Nas1Configuration;
-  timeouts: Timeouts;
+  nas1_configuration: AwsFinspaceKxVolumeArgsNas1Configuration;
+  timeouts: AwsFinspaceKxVolumeArgstimeouts;
 }
 export class aws_finspace_kx_volume extends TerraformResource {
   readonly arn!: string;

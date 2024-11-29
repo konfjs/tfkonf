@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoscalingPolicy {}
-export interface MaintenanceWindow {
+export interface GoogleComputeNodeGroupArgsAutoscalingPolicy {}
+export interface GoogleComputeNodeGroupArgsMaintenanceWindow {
   start_time: string;
 }
-export interface ProjectMap {
+export interface GoogleComputeNodeGroupArgsShareSettingsProjectMap {
   id: string;
   project_id: string;
 }
-export interface ShareSettings {
+export interface GoogleComputeNodeGroupArgsShareSettings {
   share_type: string;
-  project_map: ProjectMap;
+  project_map: GoogleComputeNodeGroupArgsShareSettingsProjectMap;
 }
-export interface Timeouts {
+export interface GoogleComputeNodeGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,10 +22,10 @@ export interface GoogleComputeNodeGroupArgs {
   maintenance_policy?: string;
   name?: string;
   node_template: string;
-  autoscaling_policy: AutoscalingPolicy;
-  maintenance_window: MaintenanceWindow;
-  share_settings: ShareSettings;
-  timeouts: Timeouts;
+  autoscaling_policy: GoogleComputeNodeGroupArgsAutoscalingPolicy;
+  maintenance_window: GoogleComputeNodeGroupArgsMaintenanceWindow;
+  share_settings: GoogleComputeNodeGroupArgsShareSettings;
+  timeouts: GoogleComputeNodeGroupArgstimeouts;
 }
 export class google_compute_node_group extends TerraformResource {
   readonly creation_timestamp!: string;

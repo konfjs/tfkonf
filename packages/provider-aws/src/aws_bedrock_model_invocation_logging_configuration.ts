@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LargeDataDeliveryS3Config {
+export interface AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigCloudwatchConfigLargeDataDeliveryS3Config {
   bucket_name?: string;
   key_prefix?: string;
 }
-export interface CloudwatchConfig {
+export interface AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigCloudwatchConfig {
   log_group_name?: string;
   role_arn?: string;
-  large_data_delivery_s3_config: LargeDataDeliveryS3Config;
+  large_data_delivery_s3_config: AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigCloudwatchConfigLargeDataDeliveryS3Config;
 }
-export interface S3Config {
+export interface AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigS3Config {
   bucket_name?: string;
   key_prefix?: string;
 }
-export interface LoggingConfig {
+export interface AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfig {
   embedding_data_delivery_enabled: boolean;
   image_data_delivery_enabled: boolean;
   text_data_delivery_enabled: boolean;
-  cloudwatch_config: CloudwatchConfig;
-  s3_config: S3Config;
+  cloudwatch_config: AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigCloudwatchConfig;
+  s3_config: AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfigS3Config;
 }
 export interface AwsBedrockModelInvocationLoggingConfigurationArgs {
-  logging_config: LoggingConfig;
+  logging_config: AwsBedrockModelInvocationLoggingConfigurationArgsLoggingConfig;
 }
 export class aws_bedrock_model_invocation_logging_configuration extends TerraformResource {
   readonly id!: string;

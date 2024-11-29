@@ -1,95 +1,95 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Ebs {
+export interface AwsLaunchTemplateArgsBlockDeviceMappingsebs {
   delete_on_termination?: string;
   encrypted?: string;
   kms_key_id?: string;
   snapshot_id?: string;
 }
-export interface BlockDeviceMappings {
+export interface AwsLaunchTemplateArgsBlockDeviceMappings {
   device_name?: string;
   no_device?: string;
   virtual_name?: string;
-  ebs: Ebs;
+  ebs: AwsLaunchTemplateArgsBlockDeviceMappingsebs;
 }
-export interface CapacityReservationTarget {
+export interface AwsLaunchTemplateArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
   capacity_reservation_resource_group_arn?: string;
 }
-export interface CapacityReservationSpecification {
+export interface AwsLaunchTemplateArgsCapacityReservationSpecification {
   capacity_reservation_preference?: string;
-  capacity_reservation_target: CapacityReservationTarget;
+  capacity_reservation_target: AwsLaunchTemplateArgsCapacityReservationSpecificationCapacityReservationTarget;
 }
-export interface CpuOptions {
+export interface AwsLaunchTemplateArgsCpuOptions {
   amd_sev_snp?: string;
   core_count?: number;
   threads_per_core?: number;
 }
-export interface CreditSpecification {
+export interface AwsLaunchTemplateArgsCreditSpecification {
   cpu_credits?: string;
 }
-export interface ElasticGpuSpecifications {
+export interface AwsLaunchTemplateArgsElasticGpuSpecifications {
   type: string;
 }
-export interface ElasticInferenceAccelerator {
+export interface AwsLaunchTemplateArgsElasticInferenceAccelerator {
   type: string;
 }
-export interface EnclaveOptions {
+export interface AwsLaunchTemplateArgsEnclaveOptions {
   enabled?: boolean;
 }
-export interface HibernationOptions {
+export interface AwsLaunchTemplateArgsHibernationOptions {
   configured: boolean;
 }
-export interface IamInstanceProfile {
+export interface AwsLaunchTemplateArgsIamInstanceProfile {
   arn?: string;
   name?: string;
 }
-export interface SpotOptions {
+export interface AwsLaunchTemplateArgsInstanceMarketOptionsSpotOptions {
   block_duration_minutes?: number;
   instance_interruption_behavior?: string;
   max_price?: string;
   spot_instance_type?: string;
 }
-export interface InstanceMarketOptions {
+export interface AwsLaunchTemplateArgsInstanceMarketOptions {
   market_type?: string;
-  spot_options: SpotOptions;
+  spot_options: AwsLaunchTemplateArgsInstanceMarketOptionsSpotOptions;
 }
-export interface AcceleratorCount {
+export interface AwsLaunchTemplateArgsInstanceRequirementsAcceleratorCount {
   max?: number;
   min?: number;
 }
-export interface AcceleratorTotalMemoryMib {
+export interface AwsLaunchTemplateArgsInstanceRequirementsAcceleratorTotalMemoryMib {
   max?: number;
   min?: number;
 }
-export interface BaselineEbsBandwidthMbps {
+export interface AwsLaunchTemplateArgsInstanceRequirementsBaselineEbsBandwidthMbps {
   max?: number;
   min?: number;
 }
-export interface MemoryGibPerVcpu {
+export interface AwsLaunchTemplateArgsInstanceRequirementsMemoryGibPerVcpu {
   max?: number;
   min?: number;
 }
-export interface MemoryMib {
+export interface AwsLaunchTemplateArgsInstanceRequirementsMemoryMib {
   max?: number;
   min: number;
 }
-export interface NetworkBandwidthGbps {
+export interface AwsLaunchTemplateArgsInstanceRequirementsNetworkBandwidthGbps {
   max?: number;
   min?: number;
 }
-export interface NetworkInterfaceCount {
+export interface AwsLaunchTemplateArgsInstanceRequirementsNetworkInterfaceCount {
   max?: number;
   min?: number;
 }
-export interface TotalLocalStorageGb {
+export interface AwsLaunchTemplateArgsInstanceRequirementsTotalLocalStorageGb {
   max?: number;
   min?: number;
 }
-export interface VcpuCount {
+export interface AwsLaunchTemplateArgsInstanceRequirementsVcpuCount {
   max?: number;
   min: number;
 }
-export interface InstanceRequirements {
+export interface AwsLaunchTemplateArgsInstanceRequirements {
   accelerator_manufacturers?: string[];
   accelerator_names?: string[];
   accelerator_types?: string[];
@@ -105,27 +105,27 @@ export interface InstanceRequirements {
   on_demand_max_price_percentage_over_lowest_price?: number;
   require_hibernate_support?: boolean;
   spot_max_price_percentage_over_lowest_price?: number;
-  accelerator_count: AcceleratorCount;
-  accelerator_total_memory_mib: AcceleratorTotalMemoryMib;
-  baseline_ebs_bandwidth_mbps: BaselineEbsBandwidthMbps;
-  memory_gib_per_vcpu: MemoryGibPerVcpu;
-  memory_mib: MemoryMib;
-  network_bandwidth_gbps: NetworkBandwidthGbps;
-  network_interface_count: NetworkInterfaceCount;
-  total_local_storage_gb: TotalLocalStorageGb;
-  vcpu_count: VcpuCount;
+  accelerator_count: AwsLaunchTemplateArgsInstanceRequirementsAcceleratorCount;
+  accelerator_total_memory_mib: AwsLaunchTemplateArgsInstanceRequirementsAcceleratorTotalMemoryMib;
+  baseline_ebs_bandwidth_mbps: AwsLaunchTemplateArgsInstanceRequirementsBaselineEbsBandwidthMbps;
+  memory_gib_per_vcpu: AwsLaunchTemplateArgsInstanceRequirementsMemoryGibPerVcpu;
+  memory_mib: AwsLaunchTemplateArgsInstanceRequirementsMemoryMib;
+  network_bandwidth_gbps: AwsLaunchTemplateArgsInstanceRequirementsNetworkBandwidthGbps;
+  network_interface_count: AwsLaunchTemplateArgsInstanceRequirementsNetworkInterfaceCount;
+  total_local_storage_gb: AwsLaunchTemplateArgsInstanceRequirementsTotalLocalStorageGb;
+  vcpu_count: AwsLaunchTemplateArgsInstanceRequirementsVcpuCount;
 }
-export interface LicenseSpecification {
+export interface AwsLaunchTemplateArgsLicenseSpecification {
   license_configuration_arn: string;
 }
-export interface MaintenanceOptions {
+export interface AwsLaunchTemplateArgsMaintenanceOptions {
   auto_recovery?: string;
 }
-export interface MetadataOptions {}
-export interface Monitoring {
+export interface AwsLaunchTemplateArgsMetadataOptions {}
+export interface AwsLaunchTemplateArgsmonitoring {
   enabled?: boolean;
 }
-export interface NetworkInterfaces {
+export interface AwsLaunchTemplateArgsNetworkInterfaces {
   associate_carrier_ip_address?: string;
   associate_public_ip_address?: string;
   delete_on_termination?: string;
@@ -147,7 +147,7 @@ export interface NetworkInterfaces {
   security_groups?: string[];
   subnet_id?: string;
 }
-export interface Placement {
+export interface AwsLaunchTemplateArgsplacement {
   affinity?: string;
   availability_zone?: string;
   group_name?: string;
@@ -157,12 +157,12 @@ export interface Placement {
   spread_domain?: string;
   tenancy?: string;
 }
-export interface PrivateDnsNameOptions {
+export interface AwsLaunchTemplateArgsPrivateDnsNameOptions {
   enable_resource_name_dns_a_record?: boolean;
   enable_resource_name_dns_aaaa_record?: boolean;
   hostname_type?: string;
 }
-export interface TagSpecifications {
+export interface AwsLaunchTemplateArgsTagSpecifications {
   resource_type?: string;
   tags?: {
     [key: string]: string;
@@ -186,25 +186,25 @@ export interface AwsLaunchTemplateArgs {
   update_default_version?: boolean;
   user_data?: string;
   vpc_security_group_ids?: string[];
-  block_device_mappings: BlockDeviceMappings;
-  capacity_reservation_specification: CapacityReservationSpecification;
-  cpu_options: CpuOptions;
-  credit_specification: CreditSpecification;
-  elastic_gpu_specifications: ElasticGpuSpecifications;
-  elastic_inference_accelerator: ElasticInferenceAccelerator;
-  enclave_options: EnclaveOptions;
-  hibernation_options: HibernationOptions;
-  iam_instance_profile: IamInstanceProfile;
-  instance_market_options: InstanceMarketOptions;
-  instance_requirements: InstanceRequirements;
-  license_specification: LicenseSpecification;
-  maintenance_options: MaintenanceOptions;
-  metadata_options: MetadataOptions;
-  monitoring: Monitoring;
-  network_interfaces: NetworkInterfaces;
-  placement: Placement;
-  private_dns_name_options: PrivateDnsNameOptions;
-  tag_specifications: TagSpecifications;
+  block_device_mappings: AwsLaunchTemplateArgsBlockDeviceMappings;
+  capacity_reservation_specification: AwsLaunchTemplateArgsCapacityReservationSpecification;
+  cpu_options: AwsLaunchTemplateArgsCpuOptions;
+  credit_specification: AwsLaunchTemplateArgsCreditSpecification;
+  elastic_gpu_specifications: AwsLaunchTemplateArgsElasticGpuSpecifications;
+  elastic_inference_accelerator: AwsLaunchTemplateArgsElasticInferenceAccelerator;
+  enclave_options: AwsLaunchTemplateArgsEnclaveOptions;
+  hibernation_options: AwsLaunchTemplateArgsHibernationOptions;
+  iam_instance_profile: AwsLaunchTemplateArgsIamInstanceProfile;
+  instance_market_options: AwsLaunchTemplateArgsInstanceMarketOptions;
+  instance_requirements: AwsLaunchTemplateArgsInstanceRequirements;
+  license_specification: AwsLaunchTemplateArgsLicenseSpecification;
+  maintenance_options: AwsLaunchTemplateArgsMaintenanceOptions;
+  metadata_options: AwsLaunchTemplateArgsMetadataOptions;
+  monitoring: AwsLaunchTemplateArgsmonitoring;
+  network_interfaces: AwsLaunchTemplateArgsNetworkInterfaces;
+  placement: AwsLaunchTemplateArgsplacement;
+  private_dns_name_options: AwsLaunchTemplateArgsPrivateDnsNameOptions;
+  tag_specifications: AwsLaunchTemplateArgsTagSpecifications;
 }
 export class aws_launch_template extends TerraformResource {
   readonly arn!: string;

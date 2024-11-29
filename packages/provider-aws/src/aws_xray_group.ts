@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface InsightsConfiguration {
+export interface AwsXrayGroupArgsInsightsConfiguration {
   insights_enabled: boolean;
 }
 export interface AwsXrayGroupArgs {
@@ -8,7 +8,7 @@ export interface AwsXrayGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  insights_configuration: InsightsConfiguration;
+  insights_configuration: AwsXrayGroupArgsInsightsConfiguration;
 }
 export class aws_xray_group extends TerraformResource {
   readonly arn!: string;

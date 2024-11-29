@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Configuration {
+export interface AwsLocationMapArgsconfiguration {
   style: string;
 }
 export interface AwsLocationMapArgs {
@@ -8,7 +8,7 @@ export interface AwsLocationMapArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration: Configuration;
+  configuration: AwsLocationMapArgsconfiguration;
 }
 export class aws_location_map extends TerraformResource {
   readonly create_time!: string;

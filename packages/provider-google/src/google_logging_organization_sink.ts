@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BigqueryOptions {
+export interface GoogleLoggingOrganizationSinkArgsBigqueryOptions {
   use_partitioned_tables: boolean;
 }
-export interface Exclusions {
+export interface GoogleLoggingOrganizationSinkArgsexclusions {
   description?: string;
   disabled?: boolean;
   filter: string;
@@ -17,8 +17,8 @@ export interface GoogleLoggingOrganizationSinkArgs {
   intercept_children?: boolean;
   name: string;
   org_id: string;
-  bigquery_options: BigqueryOptions;
-  exclusions: Exclusions;
+  bigquery_options: GoogleLoggingOrganizationSinkArgsBigqueryOptions;
+  exclusions: GoogleLoggingOrganizationSinkArgsexclusions;
 }
 export class google_logging_organization_sink extends TerraformResource {
   readonly id?: string;

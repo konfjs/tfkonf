@@ -1,133 +1,133 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoTerminationPolicy {
+export interface AwsEmrClusterArgsAutoTerminationPolicy {
   idle_timeout?: number;
 }
-export interface BootstrapAction {
+export interface AwsEmrClusterArgsBootstrapAction {
   args?: string[];
   name: string;
   path: string;
 }
-export interface Configurations {
+export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsconfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
   };
 }
-export interface EbsConfig {
+export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsEbsConfig {
   iops?: number;
   size: number;
   type: string;
   volumes_per_instance?: number;
 }
-export interface InstanceTypeConfigs {
+export interface AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigs {
   bid_price?: string;
   bid_price_as_percentage_of_on_demand_price?: number;
   instance_type: string;
   weighted_capacity?: number;
-  configurations: Configurations;
-  ebs_config: EbsConfig;
+  configurations: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsconfigurations;
+  ebs_config: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigsEbsConfig;
 }
-export interface OnDemandSpecification {
+export interface AwsEmrClusterArgsCoreInstanceFleetLaunchSpecificationsOnDemandSpecification {
   allocation_strategy: string;
 }
-export interface SpotSpecification {
+export interface AwsEmrClusterArgsCoreInstanceFleetLaunchSpecificationsSpotSpecification {
   allocation_strategy: string;
   block_duration_minutes?: number;
   timeout_action: string;
   timeout_duration_minutes: number;
 }
-export interface LaunchSpecifications {
-  on_demand_specification: OnDemandSpecification;
-  spot_specification: SpotSpecification;
+export interface AwsEmrClusterArgsCoreInstanceFleetLaunchSpecifications {
+  on_demand_specification: AwsEmrClusterArgsCoreInstanceFleetLaunchSpecificationsOnDemandSpecification;
+  spot_specification: AwsEmrClusterArgsCoreInstanceFleetLaunchSpecificationsSpotSpecification;
 }
-export interface CoreInstanceFleet {
+export interface AwsEmrClusterArgsCoreInstanceFleet {
   name?: string;
   target_on_demand_capacity?: number;
   target_spot_capacity?: number;
-  instance_type_configs: InstanceTypeConfigs;
-  launch_specifications: LaunchSpecifications;
+  instance_type_configs: AwsEmrClusterArgsCoreInstanceFleetInstanceTypeConfigs;
+  launch_specifications: AwsEmrClusterArgsCoreInstanceFleetLaunchSpecifications;
 }
-export interface EbsConfig {
+export interface AwsEmrClusterArgsCoreInstanceGroupEbsConfig {
   iops?: number;
   size: number;
   throughput?: number;
   type: string;
   volumes_per_instance?: number;
 }
-export interface CoreInstanceGroup {
+export interface AwsEmrClusterArgsCoreInstanceGroup {
   autoscaling_policy?: string;
   bid_price?: string;
   instance_count?: number;
   instance_type: string;
   name?: string;
-  ebs_config: EbsConfig;
+  ebs_config: AwsEmrClusterArgsCoreInstanceGroupEbsConfig;
 }
-export interface Ec2Attributes {
+export interface AwsEmrClusterArgsEc2Attributes {
   additional_master_security_groups?: string;
   additional_slave_security_groups?: string;
   instance_profile: string;
   key_name?: string;
 }
-export interface KerberosAttributes {
+export interface AwsEmrClusterArgsKerberosAttributes {
   ad_domain_join_password?: string;
   ad_domain_join_user?: string;
   cross_realm_trust_principal_password?: string;
   kdc_admin_password: string;
   realm: string;
 }
-export interface Configurations {
+export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsconfigurations {
   classification?: string;
   properties?: {
     [key: string]: string;
   };
 }
-export interface EbsConfig {
+export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsEbsConfig {
   iops?: number;
   size: number;
   type: string;
   volumes_per_instance?: number;
 }
-export interface InstanceTypeConfigs {
+export interface AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigs {
   bid_price?: string;
   bid_price_as_percentage_of_on_demand_price?: number;
   instance_type: string;
   weighted_capacity?: number;
-  configurations: Configurations;
-  ebs_config: EbsConfig;
+  configurations: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsconfigurations;
+  ebs_config: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigsEbsConfig;
 }
-export interface OnDemandSpecification {
+export interface AwsEmrClusterArgsMasterInstanceFleetLaunchSpecificationsOnDemandSpecification {
   allocation_strategy: string;
 }
-export interface SpotSpecification {
+export interface AwsEmrClusterArgsMasterInstanceFleetLaunchSpecificationsSpotSpecification {
   allocation_strategy: string;
   block_duration_minutes?: number;
   timeout_action: string;
   timeout_duration_minutes: number;
 }
-export interface LaunchSpecifications {
-  on_demand_specification: OnDemandSpecification;
-  spot_specification: SpotSpecification;
+export interface AwsEmrClusterArgsMasterInstanceFleetLaunchSpecifications {
+  on_demand_specification: AwsEmrClusterArgsMasterInstanceFleetLaunchSpecificationsOnDemandSpecification;
+  spot_specification: AwsEmrClusterArgsMasterInstanceFleetLaunchSpecificationsSpotSpecification;
 }
-export interface MasterInstanceFleet {
+export interface AwsEmrClusterArgsMasterInstanceFleet {
   name?: string;
   target_on_demand_capacity?: number;
   target_spot_capacity?: number;
-  instance_type_configs: InstanceTypeConfigs;
-  launch_specifications: LaunchSpecifications;
+  instance_type_configs: AwsEmrClusterArgsMasterInstanceFleetInstanceTypeConfigs;
+  launch_specifications: AwsEmrClusterArgsMasterInstanceFleetLaunchSpecifications;
 }
-export interface EbsConfig {
+export interface AwsEmrClusterArgsMasterInstanceGroupEbsConfig {
   iops?: number;
   size: number;
   throughput?: number;
   type: string;
   volumes_per_instance?: number;
 }
-export interface MasterInstanceGroup {
+export interface AwsEmrClusterArgsMasterInstanceGroup {
   bid_price?: string;
   instance_count?: number;
   instance_type: string;
   name?: string;
-  ebs_config: EbsConfig;
+  ebs_config: AwsEmrClusterArgsMasterInstanceGroupEbsConfig;
 }
 export interface AwsEmrClusterArgs {
   additional_info?: string;
@@ -151,14 +151,14 @@ export interface AwsEmrClusterArgs {
   };
   unhealthy_node_replacement?: boolean;
   visible_to_all_users?: boolean;
-  auto_termination_policy: AutoTerminationPolicy;
-  bootstrap_action: BootstrapAction;
-  core_instance_fleet: CoreInstanceFleet;
-  core_instance_group: CoreInstanceGroup;
-  ec2_attributes: Ec2Attributes;
-  kerberos_attributes: KerberosAttributes;
-  master_instance_fleet: MasterInstanceFleet;
-  master_instance_group: MasterInstanceGroup;
+  auto_termination_policy: AwsEmrClusterArgsAutoTerminationPolicy;
+  bootstrap_action: AwsEmrClusterArgsBootstrapAction;
+  core_instance_fleet: AwsEmrClusterArgsCoreInstanceFleet;
+  core_instance_group: AwsEmrClusterArgsCoreInstanceGroup;
+  ec2_attributes: AwsEmrClusterArgsEc2Attributes;
+  kerberos_attributes: AwsEmrClusterArgsKerberosAttributes;
+  master_instance_fleet: AwsEmrClusterArgsMasterInstanceFleet;
+  master_instance_group: AwsEmrClusterArgsMasterInstanceGroup;
 }
 export class aws_emr_cluster extends TerraformResource {
   readonly arn!: string;

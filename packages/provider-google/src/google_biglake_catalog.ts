@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleBiglakeCatalogArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleBiglakeCatalogArgs {
   location: string;
   name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleBiglakeCatalogArgstimeouts;
 }
 export class google_biglake_catalog extends TerraformResource {
   readonly create_time!: string;

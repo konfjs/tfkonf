@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RoutingConfiguration {
+export interface AwsSfnAliasArgsRoutingConfiguration {
   state_machine_version_arn: string;
   weight: number;
 }
-export interface Timeouts {
+export interface AwsSfnAliasArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,8 +11,8 @@ export interface Timeouts {
 export interface AwsSfnAliasArgs {
   description?: string;
   name: string;
-  routing_configuration: RoutingConfiguration;
-  timeouts: Timeouts;
+  routing_configuration: AwsSfnAliasArgsRoutingConfiguration;
+  timeouts: AwsSfnAliasArgstimeouts;
 }
 export class aws_sfn_alias extends TerraformResource {
   readonly arn!: string;

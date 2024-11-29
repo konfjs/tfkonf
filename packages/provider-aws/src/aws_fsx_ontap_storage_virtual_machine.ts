@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SelfManagedActiveDirectoryConfiguration {
+export interface AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration {
   dns_ips: string[];
   domain_name: string;
   file_system_administrators_group?: string;
@@ -7,11 +7,11 @@ export interface SelfManagedActiveDirectoryConfiguration {
   password: string;
   username: string;
 }
-export interface ActiveDirectoryConfiguration {
+export interface AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfiguration {
   netbios_name?: string;
-  self_managed_active_directory_configuration: SelfManagedActiveDirectoryConfiguration;
+  self_managed_active_directory_configuration: AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration;
 }
-export interface Timeouts {
+export interface AwsFsxOntapStorageVirtualMachineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -24,8 +24,8 @@ export interface AwsFsxOntapStorageVirtualMachineArgs {
   tags?: {
     [key: string]: string;
   };
-  active_directory_configuration: ActiveDirectoryConfiguration;
-  timeouts: Timeouts;
+  active_directory_configuration: AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfiguration;
+  timeouts: AwsFsxOntapStorageVirtualMachineArgstimeouts;
 }
 export class aws_fsx_ontap_storage_virtual_machine extends TerraformResource {
   readonly arn!: string;

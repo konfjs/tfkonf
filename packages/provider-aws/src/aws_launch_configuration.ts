@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EbsBlockDevice {
+export interface AwsLaunchConfigurationArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
   no_device?: boolean;
 }
-export interface EphemeralBlockDevice {
+export interface AwsLaunchConfigurationArgsEphemeralBlockDevice {
   device_name: string;
   no_device?: boolean;
   virtual_name?: string;
 }
-export interface MetadataOptions {}
-export interface RootBlockDevice {
+export interface AwsLaunchConfigurationArgsMetadataOptions {}
+export interface AwsLaunchConfigurationArgsRootBlockDevice {
   delete_on_termination?: boolean;
 }
 export interface AwsLaunchConfigurationArgs {
@@ -23,10 +23,10 @@ export interface AwsLaunchConfigurationArgs {
   spot_price?: string;
   user_data?: string;
   user_data_base64?: string;
-  ebs_block_device: EbsBlockDevice;
-  ephemeral_block_device: EphemeralBlockDevice;
-  metadata_options: MetadataOptions;
-  root_block_device: RootBlockDevice;
+  ebs_block_device: AwsLaunchConfigurationArgsEbsBlockDevice;
+  ephemeral_block_device: AwsLaunchConfigurationArgsEphemeralBlockDevice;
+  metadata_options: AwsLaunchConfigurationArgsMetadataOptions;
+  root_block_device: AwsLaunchConfigurationArgsRootBlockDevice;
 }
 export class aws_launch_configuration extends TerraformResource {
   readonly arn!: string;

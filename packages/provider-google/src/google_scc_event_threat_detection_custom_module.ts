@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSccEventThreatDetectionCustomModuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -10,7 +10,7 @@ export interface GoogleSccEventThreatDetectionCustomModuleArgs {
   enablement_state: string;
   organization: string;
   type: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSccEventThreatDetectionCustomModuleArgstimeouts;
 }
 export class google_scc_event_threat_detection_custom_module extends TerraformResource {
   readonly id?: string;

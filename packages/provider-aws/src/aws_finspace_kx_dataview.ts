@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SegmentConfigurations {
+export interface AwsFinspaceKxDataviewArgsSegmentConfigurations {
   db_paths: string[];
   on_demand?: boolean;
   volume_name: string;
 }
-export interface Timeouts {
+export interface AwsFinspaceKxDataviewArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,8 +22,8 @@ export interface AwsFinspaceKxDataviewArgs {
   tags?: {
     [key: string]: string;
   };
-  segment_configurations: SegmentConfigurations;
-  timeouts: Timeouts;
+  segment_configurations: AwsFinspaceKxDataviewArgsSegmentConfigurations;
+  timeouts: AwsFinspaceKxDataviewArgstimeouts;
 }
 export class aws_finspace_kx_dataview extends TerraformResource {
   readonly arn!: string;

@@ -1,67 +1,67 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface File {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificatefile {
   certificate_chain: string;
   private_key: string;
 }
-export interface Sds {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificatesds {
   secret_name: string;
 }
-export interface Certificate {
-  file: File;
-  sds: Sds;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificate {
+  file: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificatefile;
+  sds: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificatesds;
 }
-export interface Match {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNamesmatch {
   exact: string[];
 }
-export interface SubjectAlternativeNames {
-  match: Match;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNames {
+  match: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNamesmatch;
 }
-export interface Acm {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustacm {
   certificate_authority_arns: string[];
 }
-export interface File {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustfile {
   certificate_chain: string;
 }
-export interface Sds {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustsds {
   secret_name: string;
 }
-export interface Trust {
-  acm: Acm;
-  file: File;
-  sds: Sds;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrust {
+  acm: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustacm;
+  file: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustfile;
+  sds: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrustsds;
 }
-export interface Validation {
-  subject_alternative_names: SubjectAlternativeNames;
-  trust: Trust;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidation {
+  subject_alternative_names: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationSubjectAlternativeNames;
+  trust: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidationtrust;
 }
-export interface Tls {
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytls {
   enforce?: boolean;
   ports?: number[];
-  certificate: Certificate;
-  validation: Validation;
+  certificate: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlscertificate;
+  validation: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytlsvalidation;
 }
-export interface ClientPolicy {
-  tls: Tls;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicy {
+  tls: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicytls;
 }
-export interface BackendDefaults {
-  client_policy: ClientPolicy;
+export interface AwsAppmeshVirtualGatewayArgsspecBackendDefaults {
+  client_policy: AwsAppmeshVirtualGatewayArgsspecBackendDefaultsClientPolicy;
 }
-export interface Grpc {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolgrpc {
   max_requests: number;
 }
-export interface Http {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolhttp {
   max_connections: number;
   max_pending_requests?: number;
 }
-export interface Http2 {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolhttp2 {
   max_requests: number;
 }
-export interface ConnectionPool {
-  grpc: Grpc;
-  http: Http;
-  http2: Http2;
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPool {
+  grpc: AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolgrpc;
+  http: AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolhttp;
+  http2: AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPoolhttp2;
 }
-export interface HealthCheck {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerHealthCheck {
   healthy_threshold: number;
   interval_millis: number;
   path?: string;
@@ -69,78 +69,78 @@ export interface HealthCheck {
   timeout_millis: number;
   unhealthy_threshold: number;
 }
-export interface PortMapping {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenerPortMapping {
   port: number;
   protocol: string;
 }
-export interface Acm {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlscertificateacm {
   certificate_arn: string;
 }
-export interface File {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlscertificatefile {
   certificate_chain: string;
   private_key: string;
 }
-export interface Sds {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlscertificatesds {
   secret_name: string;
 }
-export interface Certificate {
-  acm: Acm;
-  file: File;
-  sds: Sds;
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlscertificate {
+  acm: AwsAppmeshVirtualGatewayArgsspeclistenertlscertificateacm;
+  file: AwsAppmeshVirtualGatewayArgsspeclistenertlscertificatefile;
+  sds: AwsAppmeshVirtualGatewayArgsspeclistenertlscertificatesds;
 }
-export interface Match {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationSubjectAlternativeNamesmatch {
   exact: string[];
 }
-export interface SubjectAlternativeNames {
-  match: Match;
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationSubjectAlternativeNames {
+  match: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationSubjectAlternativeNamesmatch;
 }
-export interface File {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrustfile {
   certificate_chain: string;
 }
-export interface Sds {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrustsds {
   secret_name: string;
 }
-export interface Trust {
-  file: File;
-  sds: Sds;
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrust {
+  file: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrustfile;
+  sds: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrustsds;
 }
-export interface Validation {
-  subject_alternative_names: SubjectAlternativeNames;
-  trust: Trust;
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidation {
+  subject_alternative_names: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationSubjectAlternativeNames;
+  trust: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidationtrust;
 }
-export interface Tls {
+export interface AwsAppmeshVirtualGatewayArgsspeclistenertls {
   mode: string;
-  certificate: Certificate;
-  validation: Validation;
+  certificate: AwsAppmeshVirtualGatewayArgsspeclistenertlscertificate;
+  validation: AwsAppmeshVirtualGatewayArgsspeclistenertlsvalidation;
 }
-export interface Listener {
-  connection_pool: ConnectionPool;
-  health_check: HealthCheck;
-  port_mapping: PortMapping;
-  tls: Tls;
+export interface AwsAppmeshVirtualGatewayArgsspeclistener {
+  connection_pool: AwsAppmeshVirtualGatewayArgsspeclistenerConnectionPool;
+  health_check: AwsAppmeshVirtualGatewayArgsspeclistenerHealthCheck;
+  port_mapping: AwsAppmeshVirtualGatewayArgsspeclistenerPortMapping;
+  tls: AwsAppmeshVirtualGatewayArgsspeclistenertls;
 }
-export interface Json {
+export interface AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfileformatjson {
   key: string;
   value: string;
 }
-export interface Format {
+export interface AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfileformat {
   text?: string;
-  json: Json;
+  json: AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfileformatjson;
 }
-export interface File {
+export interface AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfile {
   path: string;
-  format: Format;
+  format: AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfileformat;
 }
-export interface AccessLog {
-  file: File;
+export interface AwsAppmeshVirtualGatewayArgsspecloggingAccessLog {
+  file: AwsAppmeshVirtualGatewayArgsspecloggingAccessLogfile;
 }
-export interface Logging {
-  access_log: AccessLog;
+export interface AwsAppmeshVirtualGatewayArgsspeclogging {
+  access_log: AwsAppmeshVirtualGatewayArgsspecloggingAccessLog;
 }
-export interface Spec {
-  backend_defaults: BackendDefaults;
-  listener: Listener;
-  logging: Logging;
+export interface AwsAppmeshVirtualGatewayArgsspec {
+  backend_defaults: AwsAppmeshVirtualGatewayArgsspecBackendDefaults;
+  listener: AwsAppmeshVirtualGatewayArgsspeclistener;
+  logging: AwsAppmeshVirtualGatewayArgsspeclogging;
 }
 export interface AwsAppmeshVirtualGatewayArgs {
   mesh_name: string;
@@ -148,7 +148,7 @@ export interface AwsAppmeshVirtualGatewayArgs {
   tags?: {
     [key: string]: string;
   };
-  spec: Spec;
+  spec: AwsAppmeshVirtualGatewayArgsspec;
 }
 export class aws_appmesh_virtual_gateway extends TerraformResource {
   readonly arn!: string;

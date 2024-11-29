@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeInstanceGroupMembershipArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleComputeInstanceGroupMembershipArgs {
   instance: string;
   instance_group: string;
   zone?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeInstanceGroupMembershipArgstimeouts;
 }
 export class google_compute_instance_group_membership extends TerraformResource {
   readonly id?: string;

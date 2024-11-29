@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdvertisedIpRanges {
+export interface GoogleComputeRouterArgsbgpAdvertisedIpRanges {
   description?: string;
   range: string;
 }
-export interface Bgp {
+export interface GoogleComputeRouterArgsbgp {
   advertise_mode?: string;
   advertised_groups?: string[];
   asn: number;
   keepalive_interval?: number;
-  advertised_ip_ranges: AdvertisedIpRanges;
+  advertised_ip_ranges: GoogleComputeRouterArgsbgpAdvertisedIpRanges;
 }
-export interface Timeouts {
+export interface GoogleComputeRouterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface GoogleComputeRouterArgs {
   encrypted_interconnect_router?: boolean;
   name: string;
   network: string;
-  bgp: Bgp;
-  timeouts: Timeouts;
+  bgp: GoogleComputeRouterArgsbgp;
+  timeouts: GoogleComputeRouterArgstimeouts;
 }
 export class google_compute_router extends TerraformResource {
   readonly creation_timestamp!: string;

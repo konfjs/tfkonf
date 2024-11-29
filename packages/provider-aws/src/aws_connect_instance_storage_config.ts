@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KinesisFirehoseConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigKinesisFirehoseConfig {
   firehose_arn: string;
 }
-export interface KinesisStreamConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigKinesisStreamConfig {
   stream_arn: string;
 }
-export interface EncryptionConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigKinesisVideoStreamConfigEncryptionConfig {
   encryption_type: string;
   key_id: string;
 }
-export interface KinesisVideoStreamConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigKinesisVideoStreamConfig {
   prefix: string;
   retention_period_hours: number;
-  encryption_config: EncryptionConfig;
+  encryption_config: AwsConnectInstanceStorageConfigArgsStorageConfigKinesisVideoStreamConfigEncryptionConfig;
 }
-export interface EncryptionConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigS3ConfigEncryptionConfig {
   encryption_type: string;
   key_id: string;
 }
-export interface S3Config {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfigS3Config {
   bucket_name: string;
   bucket_prefix: string;
-  encryption_config: EncryptionConfig;
+  encryption_config: AwsConnectInstanceStorageConfigArgsStorageConfigS3ConfigEncryptionConfig;
 }
-export interface StorageConfig {
+export interface AwsConnectInstanceStorageConfigArgsStorageConfig {
   storage_type: string;
-  kinesis_firehose_config: KinesisFirehoseConfig;
-  kinesis_stream_config: KinesisStreamConfig;
-  kinesis_video_stream_config: KinesisVideoStreamConfig;
-  s3_config: S3Config;
+  kinesis_firehose_config: AwsConnectInstanceStorageConfigArgsStorageConfigKinesisFirehoseConfig;
+  kinesis_stream_config: AwsConnectInstanceStorageConfigArgsStorageConfigKinesisStreamConfig;
+  kinesis_video_stream_config: AwsConnectInstanceStorageConfigArgsStorageConfigKinesisVideoStreamConfig;
+  s3_config: AwsConnectInstanceStorageConfigArgsStorageConfigS3Config;
 }
 export interface AwsConnectInstanceStorageConfigArgs {
   instance_id: string;
   resource_type: string;
-  storage_config: StorageConfig;
+  storage_config: AwsConnectInstanceStorageConfigArgsStorageConfig;
 }
 export class aws_connect_instance_storage_config extends TerraformResource {
   readonly association_id!: string;

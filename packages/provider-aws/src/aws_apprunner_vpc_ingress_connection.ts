@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IngressVpcConfiguration {
+export interface AwsApprunnerVpcIngressConnectionArgsIngressVpcConfiguration {
   vpc_endpoint_id?: string;
   vpc_id?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsApprunnerVpcIngressConnectionArgs {
   tags?: {
     [key: string]: string;
   };
-  ingress_vpc_configuration: IngressVpcConfiguration;
+  ingress_vpc_configuration: AwsApprunnerVpcIngressConnectionArgsIngressVpcConfiguration;
 }
 export class aws_apprunner_vpc_ingress_connection extends TerraformResource {
   readonly arn!: string;

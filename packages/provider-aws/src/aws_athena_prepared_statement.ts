@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsAthenaPreparedStatementArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface AwsAthenaPreparedStatementArgs {
   name: string;
   query_statement: string;
   workgroup: string;
-  timeouts: Timeouts;
+  timeouts: AwsAthenaPreparedStatementArgstimeouts;
 }
 export class aws_athena_prepared_statement extends TerraformResource {
   readonly id?: string;

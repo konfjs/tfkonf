@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsElasticsearchDomainPolicyArgstimeouts {
   delete?: string;
   update?: string;
 }
 export interface AwsElasticsearchDomainPolicyArgs {
   access_policies: string;
   domain_name: string;
-  timeouts: Timeouts;
+  timeouts: AwsElasticsearchDomainPolicyArgstimeouts;
 }
 export class aws_elasticsearch_domain_policy extends TerraformResource {
   readonly id?: string;

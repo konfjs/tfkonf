@@ -1,73 +1,73 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ApiKey {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersApiKey {
   key: string;
   value: string;
 }
-export interface Basic {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersbasic {
   password: string;
   username: string;
 }
-export interface Body {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersbody {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface Header {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersheader {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface QueryString {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersQueryString {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface InvocationHttpParameters {
-  body: Body;
-  header: Header;
-  query_string: QueryString;
+export interface AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParameters {
+  body: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersbody;
+  header: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersheader;
+  query_string: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParametersQueryString;
 }
-export interface ClientParameters {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthClientParameters {
   client_id: string;
   client_secret: string;
 }
-export interface Body {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersbody {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface Header {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersheader {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface QueryString {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersQueryString {
   is_value_secret?: boolean;
   key?: string;
   value?: string;
 }
-export interface OauthHttpParameters {
-  body: Body;
-  header: Header;
-  query_string: QueryString;
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParameters {
+  body: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersbody;
+  header: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersheader;
+  query_string: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParametersQueryString;
 }
-export interface Oauth {
+export interface AwsCloudwatchEventConnectionArgsAuthParametersoauth {
   authorization_endpoint: string;
   http_method: string;
-  client_parameters: ClientParameters;
-  oauth_http_parameters: OauthHttpParameters;
+  client_parameters: AwsCloudwatchEventConnectionArgsAuthParametersoauthClientParameters;
+  oauth_http_parameters: AwsCloudwatchEventConnectionArgsAuthParametersoauthOauthHttpParameters;
 }
-export interface AuthParameters {
-  api_key: ApiKey;
-  basic: Basic;
-  invocation_http_parameters: InvocationHttpParameters;
-  oauth: Oauth;
+export interface AwsCloudwatchEventConnectionArgsAuthParameters {
+  api_key: AwsCloudwatchEventConnectionArgsAuthParametersApiKey;
+  basic: AwsCloudwatchEventConnectionArgsAuthParametersbasic;
+  invocation_http_parameters: AwsCloudwatchEventConnectionArgsAuthParametersInvocationHttpParameters;
+  oauth: AwsCloudwatchEventConnectionArgsAuthParametersoauth;
 }
 export interface AwsCloudwatchEventConnectionArgs {
   authorization_type: string;
   description?: string;
   name: string;
-  auth_parameters: AuthParameters;
+  auth_parameters: AwsCloudwatchEventConnectionArgsAuthParameters;
 }
 export class aws_cloudwatch_event_connection extends TerraformResource {
   readonly arn!: string;

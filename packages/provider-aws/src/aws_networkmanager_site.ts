@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Location {
+export interface AwsNetworkmanagerSiteArgslocation {
   address?: string;
   latitude?: string;
   longitude?: string;
 }
-export interface Timeouts {
+export interface AwsNetworkmanagerSiteArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface AwsNetworkmanagerSiteArgs {
   tags?: {
     [key: string]: string;
   };
-  location: Location;
-  timeouts: Timeouts;
+  location: AwsNetworkmanagerSiteArgslocation;
+  timeouts: AwsNetworkmanagerSiteArgstimeouts;
 }
 export class aws_networkmanager_site extends TerraformResource {
   readonly arn!: string;

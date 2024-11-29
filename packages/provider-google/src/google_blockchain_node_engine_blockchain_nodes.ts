@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GethDetails {
+export interface GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsGethDetails {
   garbage_collection_mode?: string;
 }
-export interface ValidatorConfig {
+export interface GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsValidatorConfig {
   mev_relay_urls?: string[];
 }
-export interface EthereumDetails {
+export interface GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetails {
   api_enable_admin?: boolean;
   api_enable_debug?: boolean;
   consensus_client?: string;
   execution_client?: string;
   network?: string;
   node_type?: string;
-  geth_details: GethDetails;
-  validator_config: ValidatorConfig;
+  geth_details: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsGethDetails;
+  validator_config: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetailsValidatorConfig;
 }
-export interface Timeouts {
+export interface GoogleBlockchainNodeEngineBlockchainNodesArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,8 +27,8 @@ export interface GoogleBlockchainNodeEngineBlockchainNodesArgs {
     [key: string]: string;
   };
   location: string;
-  ethereum_details: EthereumDetails;
-  timeouts: Timeouts;
+  ethereum_details: GoogleBlockchainNodeEngineBlockchainNodesArgsEthereumDetails;
+  timeouts: GoogleBlockchainNodeEngineBlockchainNodesArgstimeouts;
 }
 export class google_blockchain_node_engine_blockchain_nodes extends TerraformResource {
   readonly connection_info!: any[];

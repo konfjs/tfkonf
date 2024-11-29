@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeNetworkAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface GoogleComputeNetworkAttachmentArgs {
   producer_accept_lists?: string[];
   producer_reject_lists?: string[];
   subnetworks: string[];
-  timeouts: Timeouts;
+  timeouts: GoogleComputeNetworkAttachmentArgstimeouts;
 }
 export class google_compute_network_attachment extends TerraformResource {
   readonly connection_endpoints!: any[];

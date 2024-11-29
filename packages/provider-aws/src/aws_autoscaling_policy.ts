@@ -1,151 +1,151 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Dimensions {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatmetricdimensions {
   name: string;
   value: string;
 }
-export interface Metric {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatmetric {
   metric_name: string;
   namespace: string;
-  dimensions: Dimensions;
+  dimensions: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatmetricdimensions;
 }
-export interface MetricStat {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStat {
   stat: string;
   unit?: string;
-  metric: Metric;
+  metric: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStatmetric;
 }
-export interface MetricDataQueries {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueries {
   expression?: string;
   id: string;
   label?: string;
   return_data?: boolean;
-  metric_stat: MetricStat;
+  metric_stat: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStat;
 }
-export interface CustomizedCapacityMetricSpecification {
-  metric_data_queries: MetricDataQueries;
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecification {
+  metric_data_queries: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueries;
 }
-export interface Dimensions {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatmetricdimensions {
   name: string;
   value: string;
 }
-export interface Metric {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatmetric {
   metric_name: string;
   namespace: string;
-  dimensions: Dimensions;
+  dimensions: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatmetricdimensions;
 }
-export interface MetricStat {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStat {
   stat: string;
   unit?: string;
-  metric: Metric;
+  metric: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStatmetric;
 }
-export interface MetricDataQueries {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueries {
   expression?: string;
   id: string;
   label?: string;
   return_data?: boolean;
-  metric_stat: MetricStat;
+  metric_stat: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStat;
 }
-export interface CustomizedLoadMetricSpecification {
-  metric_data_queries: MetricDataQueries;
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecification {
+  metric_data_queries: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueries;
 }
-export interface Dimensions {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatmetricdimensions {
   name: string;
   value: string;
 }
-export interface Metric {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatmetric {
   metric_name: string;
   namespace: string;
-  dimensions: Dimensions;
+  dimensions: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatmetricdimensions;
 }
-export interface MetricStat {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStat {
   stat: string;
   unit?: string;
-  metric: Metric;
+  metric: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStatmetric;
 }
-export interface MetricDataQueries {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueries {
   expression?: string;
   id: string;
   label?: string;
   return_data?: boolean;
-  metric_stat: MetricStat;
+  metric_stat: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStat;
 }
-export interface CustomizedScalingMetricSpecification {
-  metric_data_queries: MetricDataQueries;
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecification {
+  metric_data_queries: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueries;
 }
-export interface PredefinedLoadMetricSpecification {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification {
   predefined_metric_type: string;
   resource_label?: string;
 }
-export interface PredefinedMetricPairSpecification {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification {
   predefined_metric_type: string;
   resource_label?: string;
 }
-export interface PredefinedScalingMetricSpecification {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification {
   predefined_metric_type: string;
   resource_label?: string;
 }
-export interface MetricSpecification {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecification {
   target_value: number;
-  customized_capacity_metric_specification: CustomizedCapacityMetricSpecification;
-  customized_load_metric_specification: CustomizedLoadMetricSpecification;
-  customized_scaling_metric_specification: CustomizedScalingMetricSpecification;
-  predefined_load_metric_specification: PredefinedLoadMetricSpecification;
-  predefined_metric_pair_specification: PredefinedMetricPairSpecification;
-  predefined_scaling_metric_specification: PredefinedScalingMetricSpecification;
+  customized_capacity_metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecification;
+  customized_load_metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecification;
+  customized_scaling_metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecification;
+  predefined_load_metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification;
+  predefined_metric_pair_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification;
+  predefined_scaling_metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification;
 }
-export interface PredictiveScalingConfiguration {
+export interface AwsAutoscalingPolicyArgsPredictiveScalingConfiguration {
   max_capacity_breach_behavior?: string;
   max_capacity_buffer?: string;
   mode?: string;
   scheduling_buffer_time?: string;
-  metric_specification: MetricSpecification;
+  metric_specification: AwsAutoscalingPolicyArgsPredictiveScalingConfigurationMetricSpecification;
 }
-export interface StepAdjustment {
+export interface AwsAutoscalingPolicyArgsStepAdjustment {
   metric_interval_lower_bound?: string;
   metric_interval_upper_bound?: string;
   scaling_adjustment: number;
 }
-export interface MetricDimension {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension {
   name: string;
   value: string;
 }
-export interface Dimensions {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStatmetricdimensions {
   name: string;
   value: string;
 }
-export interface Metric {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStatmetric {
   metric_name: string;
   namespace: string;
-  dimensions: Dimensions;
+  dimensions: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStatmetricdimensions;
 }
-export interface MetricStat {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStat {
   stat: string;
   unit?: string;
-  metric: Metric;
+  metric: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStatmetric;
 }
-export interface Metrics {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetrics {
   expression?: string;
   id: string;
   label?: string;
   return_data?: boolean;
-  metric_stat: MetricStat;
+  metric_stat: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetricsMetricStat;
 }
-export interface CustomizedMetricSpecification {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecification {
   metric_name?: string;
   namespace?: string;
   statistic?: string;
   unit?: string;
-  metric_dimension: MetricDimension;
-  metrics: Metrics;
+  metric_dimension: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension;
+  metrics: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecificationmetrics;
 }
-export interface PredefinedMetricSpecification {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfigurationPredefinedMetricSpecification {
   predefined_metric_type: string;
   resource_label?: string;
 }
-export interface TargetTrackingConfiguration {
+export interface AwsAutoscalingPolicyArgsTargetTrackingConfiguration {
   disable_scale_in?: boolean;
   target_value: number;
-  customized_metric_specification: CustomizedMetricSpecification;
-  predefined_metric_specification: PredefinedMetricSpecification;
+  customized_metric_specification: AwsAutoscalingPolicyArgsTargetTrackingConfigurationCustomizedMetricSpecification;
+  predefined_metric_specification: AwsAutoscalingPolicyArgsTargetTrackingConfigurationPredefinedMetricSpecification;
 }
 export interface AwsAutoscalingPolicyArgs {
   adjustment_type?: string;
@@ -157,9 +157,9 @@ export interface AwsAutoscalingPolicyArgs {
   name: string;
   policy_type?: string;
   scaling_adjustment?: number;
-  predictive_scaling_configuration: PredictiveScalingConfiguration;
-  step_adjustment: StepAdjustment;
-  target_tracking_configuration: TargetTrackingConfiguration;
+  predictive_scaling_configuration: AwsAutoscalingPolicyArgsPredictiveScalingConfiguration;
+  step_adjustment: AwsAutoscalingPolicyArgsStepAdjustment;
+  target_tracking_configuration: AwsAutoscalingPolicyArgsTargetTrackingConfiguration;
 }
 export class aws_autoscaling_policy extends TerraformResource {
   readonly arn!: string;

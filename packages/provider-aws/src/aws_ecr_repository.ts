@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsEcrRepositoryArgsEncryptionConfiguration {
   encryption_type?: string;
 }
-export interface ImageScanningConfiguration {
+export interface AwsEcrRepositoryArgsImageScanningConfiguration {
   scan_on_push: boolean;
 }
-export interface Timeouts {
+export interface AwsEcrRepositoryArgstimeouts {
   delete?: string;
 }
 export interface AwsEcrRepositoryArgs {
@@ -15,9 +15,9 @@ export interface AwsEcrRepositoryArgs {
   tags?: {
     [key: string]: string;
   };
-  encryption_configuration: EncryptionConfiguration;
-  image_scanning_configuration: ImageScanningConfiguration;
-  timeouts: Timeouts;
+  encryption_configuration: AwsEcrRepositoryArgsEncryptionConfiguration;
+  image_scanning_configuration: AwsEcrRepositoryArgsImageScanningConfiguration;
+  timeouts: AwsEcrRepositoryArgstimeouts;
 }
 export class aws_ecr_repository extends TerraformResource {
   readonly arn!: string;

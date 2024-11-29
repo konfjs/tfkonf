@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRoute53profilesAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsRoute53profilesAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsRoute53profilesAssociationArgstimeouts;
 }
 export class aws_route53profiles_association extends TerraformResource {
   readonly arn!: string;

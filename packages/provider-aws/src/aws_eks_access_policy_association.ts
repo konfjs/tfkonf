@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessScope {
+export interface AwsEksAccessPolicyAssociationArgsAccessScope {
   namespaces?: string[];
   type: string;
 }
-export interface Timeouts {
+export interface AwsEksAccessPolicyAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -11,8 +11,8 @@ export interface AwsEksAccessPolicyAssociationArgs {
   cluster_name: string;
   policy_arn: string;
   principal_arn: string;
-  access_scope: AccessScope;
-  timeouts: Timeouts;
+  access_scope: AwsEksAccessPolicyAssociationArgsAccessScope;
+  timeouts: AwsEksAccessPolicyAssociationArgstimeouts;
 }
 export class aws_eks_access_policy_association extends TerraformResource {
   readonly associated_at!: string;

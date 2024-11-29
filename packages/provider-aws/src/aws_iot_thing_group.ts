@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AttributePayload {
+export interface AwsIotThingGroupArgspropertiesAttributePayload {
   attributes?: {
     [key: string]: string;
   };
 }
-export interface Properties {
+export interface AwsIotThingGroupArgsproperties {
   description?: string;
-  attribute_payload: AttributePayload;
+  attribute_payload: AwsIotThingGroupArgspropertiesAttributePayload;
 }
 export interface AwsIotThingGroupArgs {
   name: string;
@@ -14,7 +14,7 @@ export interface AwsIotThingGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  properties: Properties;
+  properties: AwsIotThingGroupArgsproperties;
 }
 export class aws_iot_thing_group extends TerraformResource {
   readonly arn!: string;

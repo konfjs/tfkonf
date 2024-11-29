@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleApphubServiceProjectAttachmentArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleApphubServiceProjectAttachmentArgs {
   service_project?: string;
   service_project_attachment_id: string;
-  timeouts: Timeouts;
+  timeouts: GoogleApphubServiceProjectAttachmentArgstimeouts;
 }
 export class google_apphub_service_project_attachment extends TerraformResource {
   readonly create_time!: string;

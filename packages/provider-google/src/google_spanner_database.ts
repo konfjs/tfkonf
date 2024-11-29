@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfig {
+export interface GoogleSpannerDatabaseArgsEncryptionConfig {
   kms_key_name?: string;
   kms_key_names?: string[];
 }
-export interface Timeouts {
+export interface GoogleSpannerDatabaseArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleSpannerDatabaseArgs {
   enable_drop_protection?: boolean;
   instance: string;
   name: string;
-  encryption_config: EncryptionConfig;
-  timeouts: Timeouts;
+  encryption_config: GoogleSpannerDatabaseArgsEncryptionConfig;
+  timeouts: GoogleSpannerDatabaseArgstimeouts;
 }
 export class google_spanner_database extends TerraformResource {
   readonly database_dialect?: string;

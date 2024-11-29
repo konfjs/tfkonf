@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsEbsSnapshotArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -12,7 +12,7 @@ export interface AwsEbsSnapshotArgs {
   };
   temporary_restore_days?: number;
   volume_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsEbsSnapshotArgstimeouts;
 }
 export class aws_ebs_snapshot extends TerraformResource {
   readonly arn!: string;

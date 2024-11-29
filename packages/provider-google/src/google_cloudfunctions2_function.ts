@@ -1,7 +1,7 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutomaticUpdatePolicy {}
-export interface OnDeployUpdatePolicy {}
-export interface RepoSource {
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigAutomaticUpdatePolicy {}
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigOnDeployUpdatePolicy {}
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigsourceRepoSource {
   branch_name?: string;
   commit_sha?: string;
   dir?: string;
@@ -10,58 +10,58 @@ export interface RepoSource {
   repo_name?: string;
   tag_name?: string;
 }
-export interface StorageSource {
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigsourceStorageSource {
   bucket?: string;
   object?: string;
 }
-export interface Source {
-  repo_source: RepoSource;
-  storage_source: StorageSource;
+export interface GoogleCloudfunctions2FunctionArgsBuildConfigsource {
+  repo_source: GoogleCloudfunctions2FunctionArgsBuildConfigsourceRepoSource;
+  storage_source: GoogleCloudfunctions2FunctionArgsBuildConfigsourceStorageSource;
 }
-export interface BuildConfig {
+export interface GoogleCloudfunctions2FunctionArgsBuildConfig {
   entry_point?: string;
   runtime?: string;
   worker_pool?: string;
-  automatic_update_policy: AutomaticUpdatePolicy;
-  on_deploy_update_policy: OnDeployUpdatePolicy;
-  source: Source;
+  automatic_update_policy: GoogleCloudfunctions2FunctionArgsBuildConfigAutomaticUpdatePolicy;
+  on_deploy_update_policy: GoogleCloudfunctions2FunctionArgsBuildConfigOnDeployUpdatePolicy;
+  source: GoogleCloudfunctions2FunctionArgsBuildConfigsource;
 }
-export interface EventFilters {
+export interface GoogleCloudfunctions2FunctionArgsEventTriggerEventFilters {
   attribute: string;
   operator?: string;
   value: string;
 }
-export interface EventTrigger {
+export interface GoogleCloudfunctions2FunctionArgsEventTrigger {
   event_type?: string;
   retry_policy?: string;
-  event_filters: EventFilters;
+  event_filters: GoogleCloudfunctions2FunctionArgsEventTriggerEventFilters;
 }
-export interface SecretEnvironmentVariables {
+export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretEnvironmentVariables {
   key: string;
   project_id: string;
   secret: string;
   version: string;
 }
-export interface Versions {
+export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesversions {
   path: string;
   version: string;
 }
-export interface SecretVolumes {
+export interface GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumes {
   mount_path: string;
   project_id: string;
   secret: string;
-  versions: Versions;
+  versions: GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumesversions;
 }
-export interface ServiceConfig {
+export interface GoogleCloudfunctions2FunctionArgsServiceConfig {
   all_traffic_on_latest_revision?: boolean;
   ingress_settings?: string;
   min_instance_count?: number;
   vpc_connector?: string;
   vpc_connector_egress_settings?: string;
-  secret_environment_variables: SecretEnvironmentVariables;
-  secret_volumes: SecretVolumes;
+  secret_environment_variables: GoogleCloudfunctions2FunctionArgsServiceConfigSecretEnvironmentVariables;
+  secret_volumes: GoogleCloudfunctions2FunctionArgsServiceConfigSecretVolumes;
 }
-export interface Timeouts {
+export interface GoogleCloudfunctions2FunctionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -74,10 +74,10 @@ export interface GoogleCloudfunctions2FunctionArgs {
   };
   location: string;
   name: string;
-  build_config: BuildConfig;
-  event_trigger: EventTrigger;
-  service_config: ServiceConfig;
-  timeouts: Timeouts;
+  build_config: GoogleCloudfunctions2FunctionArgsBuildConfig;
+  event_trigger: GoogleCloudfunctions2FunctionArgsEventTrigger;
+  service_config: GoogleCloudfunctions2FunctionArgsServiceConfig;
+  timeouts: GoogleCloudfunctions2FunctionArgstimeouts;
 }
 export class google_cloudfunctions2_function extends TerraformResource {
   readonly effective_labels!: {

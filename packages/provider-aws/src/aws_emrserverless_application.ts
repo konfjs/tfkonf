@@ -1,32 +1,32 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoStartConfiguration {
+export interface AwsEmrserverlessApplicationArgsAutoStartConfiguration {
   enabled?: boolean;
 }
-export interface AutoStopConfiguration {
+export interface AwsEmrserverlessApplicationArgsAutoStopConfiguration {
   enabled?: boolean;
   idle_timeout_minutes?: number;
 }
-export interface ImageConfiguration {
+export interface AwsEmrserverlessApplicationArgsImageConfiguration {
   image_uri: string;
 }
-export interface WorkerConfiguration {
+export interface AwsEmrserverlessApplicationArgsInitialCapacityInitialCapacityConfigWorkerConfiguration {
   cpu: string;
   memory: string;
 }
-export interface InitialCapacityConfig {
+export interface AwsEmrserverlessApplicationArgsInitialCapacityInitialCapacityConfig {
   worker_count: number;
-  worker_configuration: WorkerConfiguration;
+  worker_configuration: AwsEmrserverlessApplicationArgsInitialCapacityInitialCapacityConfigWorkerConfiguration;
 }
-export interface InitialCapacity {
+export interface AwsEmrserverlessApplicationArgsInitialCapacity {
   initial_capacity_type: string;
-  initial_capacity_config: InitialCapacityConfig;
+  initial_capacity_config: AwsEmrserverlessApplicationArgsInitialCapacityInitialCapacityConfig;
 }
-export interface InteractiveConfiguration {}
-export interface MaximumCapacity {
+export interface AwsEmrserverlessApplicationArgsInteractiveConfiguration {}
+export interface AwsEmrserverlessApplicationArgsMaximumCapacity {
   cpu: string;
   memory: string;
 }
-export interface NetworkConfiguration {
+export interface AwsEmrserverlessApplicationArgsNetworkConfiguration {
   security_group_ids?: string[];
   subnet_ids?: string[];
 }
@@ -38,13 +38,13 @@ export interface AwsEmrserverlessApplicationArgs {
     [key: string]: string;
   };
   type: string;
-  auto_start_configuration: AutoStartConfiguration;
-  auto_stop_configuration: AutoStopConfiguration;
-  image_configuration: ImageConfiguration;
-  initial_capacity: InitialCapacity;
-  interactive_configuration: InteractiveConfiguration;
-  maximum_capacity: MaximumCapacity;
-  network_configuration: NetworkConfiguration;
+  auto_start_configuration: AwsEmrserverlessApplicationArgsAutoStartConfiguration;
+  auto_stop_configuration: AwsEmrserverlessApplicationArgsAutoStopConfiguration;
+  image_configuration: AwsEmrserverlessApplicationArgsImageConfiguration;
+  initial_capacity: AwsEmrserverlessApplicationArgsInitialCapacity;
+  interactive_configuration: AwsEmrserverlessApplicationArgsInteractiveConfiguration;
+  maximum_capacity: AwsEmrserverlessApplicationArgsMaximumCapacity;
+  network_configuration: AwsEmrserverlessApplicationArgsNetworkConfiguration;
 }
 export class aws_emrserverless_application extends TerraformResource {
   readonly arn!: string;

@@ -1,67 +1,67 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdvancedMachineFeatures {}
-export interface AttachedDisk {
+export interface GoogleComputeInstanceFromTemplateArgsAdvancedMachineFeatures {}
+export interface GoogleComputeInstanceFromTemplateArgsAttachedDisk {
   source: string;
 }
-export interface InitializeParams {}
-export interface BootDisk {
-  initialize_params: InitializeParams;
+export interface GoogleComputeInstanceFromTemplateArgsBootDiskInitializeParams {}
+export interface GoogleComputeInstanceFromTemplateArgsBootDisk {
+  initialize_params: GoogleComputeInstanceFromTemplateArgsBootDiskInitializeParams;
 }
-export interface ConfidentialInstanceConfig {}
-export interface GuestAccelerator {
+export interface GoogleComputeInstanceFromTemplateArgsConfidentialInstanceConfig {}
+export interface GoogleComputeInstanceFromTemplateArgsGuestAccelerator {
   count: number;
   type: string;
 }
-export interface AccessConfig {}
-export interface AliasIpRange {
+export interface GoogleComputeInstanceFromTemplateArgsNetworkInterfaceAccessConfig {}
+export interface GoogleComputeInstanceFromTemplateArgsNetworkInterfaceAliasIpRange {
   ip_cidr_range: string;
 }
-export interface Ipv6AccessConfig {
+export interface GoogleComputeInstanceFromTemplateArgsNetworkInterfaceIpv6AccessConfig {
   network_tier: string;
 }
-export interface NetworkInterface {
-  access_config: AccessConfig;
-  alias_ip_range: AliasIpRange;
-  ipv6_access_config: Ipv6AccessConfig;
+export interface GoogleComputeInstanceFromTemplateArgsNetworkInterface {
+  access_config: GoogleComputeInstanceFromTemplateArgsNetworkInterfaceAccessConfig;
+  alias_ip_range: GoogleComputeInstanceFromTemplateArgsNetworkInterfaceAliasIpRange;
+  ipv6_access_config: GoogleComputeInstanceFromTemplateArgsNetworkInterfaceIpv6AccessConfig;
 }
-export interface NetworkPerformanceConfig {
+export interface GoogleComputeInstanceFromTemplateArgsNetworkPerformanceConfig {
   total_egress_bandwidth_tier: string;
 }
-export interface Params {}
-export interface SpecificReservation {
+export interface GoogleComputeInstanceFromTemplateArgsparams {}
+export interface GoogleComputeInstanceFromTemplateArgsReservationAffinitySpecificReservation {
   key: string;
   values: string[];
 }
-export interface ReservationAffinity {
+export interface GoogleComputeInstanceFromTemplateArgsReservationAffinity {
   type: string;
-  specific_reservation: SpecificReservation;
+  specific_reservation: GoogleComputeInstanceFromTemplateArgsReservationAffinitySpecificReservation;
 }
-export interface LocalSsdRecoveryTimeout {
+export interface GoogleComputeInstanceFromTemplateArgsschedulingLocalSsdRecoveryTimeout {
   seconds: number;
 }
-export interface MaxRunDuration {
+export interface GoogleComputeInstanceFromTemplateArgsschedulingMaxRunDuration {
   seconds: number;
 }
-export interface NodeAffinities {
+export interface GoogleComputeInstanceFromTemplateArgsschedulingNodeAffinities {
   key: string;
   operator: string;
   values: string[];
 }
-export interface OnInstanceStopAction {}
-export interface Scheduling {
-  local_ssd_recovery_timeout: LocalSsdRecoveryTimeout;
-  max_run_duration: MaxRunDuration;
-  node_affinities: NodeAffinities;
-  on_instance_stop_action: OnInstanceStopAction;
+export interface GoogleComputeInstanceFromTemplateArgsschedulingOnInstanceStopAction {}
+export interface GoogleComputeInstanceFromTemplateArgsscheduling {
+  local_ssd_recovery_timeout: GoogleComputeInstanceFromTemplateArgsschedulingLocalSsdRecoveryTimeout;
+  max_run_duration: GoogleComputeInstanceFromTemplateArgsschedulingMaxRunDuration;
+  node_affinities: GoogleComputeInstanceFromTemplateArgsschedulingNodeAffinities;
+  on_instance_stop_action: GoogleComputeInstanceFromTemplateArgsschedulingOnInstanceStopAction;
 }
-export interface ScratchDisk {
+export interface GoogleComputeInstanceFromTemplateArgsScratchDisk {
   interface: string;
 }
-export interface ServiceAccount {
+export interface GoogleComputeInstanceFromTemplateArgsServiceAccount {
   scopes: string[];
 }
-export interface ShieldedInstanceConfig {}
-export interface Timeouts {
+export interface GoogleComputeInstanceFromTemplateArgsShieldedInstanceConfig {}
+export interface GoogleComputeInstanceFromTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -69,20 +69,20 @@ export interface Timeouts {
 export interface GoogleComputeInstanceFromTemplateArgs {
   name: string;
   source_instance_template: string;
-  advanced_machine_features: AdvancedMachineFeatures;
-  attached_disk: AttachedDisk;
-  boot_disk: BootDisk;
-  confidential_instance_config: ConfidentialInstanceConfig;
-  guest_accelerator: GuestAccelerator;
-  network_interface: NetworkInterface;
-  network_performance_config: NetworkPerformanceConfig;
-  params: Params;
-  reservation_affinity: ReservationAffinity;
-  scheduling: Scheduling;
-  scratch_disk: ScratchDisk;
-  service_account: ServiceAccount;
-  shielded_instance_config: ShieldedInstanceConfig;
-  timeouts: Timeouts;
+  advanced_machine_features: GoogleComputeInstanceFromTemplateArgsAdvancedMachineFeatures;
+  attached_disk: GoogleComputeInstanceFromTemplateArgsAttachedDisk;
+  boot_disk: GoogleComputeInstanceFromTemplateArgsBootDisk;
+  confidential_instance_config: GoogleComputeInstanceFromTemplateArgsConfidentialInstanceConfig;
+  guest_accelerator: GoogleComputeInstanceFromTemplateArgsGuestAccelerator;
+  network_interface: GoogleComputeInstanceFromTemplateArgsNetworkInterface;
+  network_performance_config: GoogleComputeInstanceFromTemplateArgsNetworkPerformanceConfig;
+  params: GoogleComputeInstanceFromTemplateArgsparams;
+  reservation_affinity: GoogleComputeInstanceFromTemplateArgsReservationAffinity;
+  scheduling: GoogleComputeInstanceFromTemplateArgsscheduling;
+  scratch_disk: GoogleComputeInstanceFromTemplateArgsScratchDisk;
+  service_account: GoogleComputeInstanceFromTemplateArgsServiceAccount;
+  shielded_instance_config: GoogleComputeInstanceFromTemplateArgsShieldedInstanceConfig;
+  timeouts: GoogleComputeInstanceFromTemplateArgstimeouts;
 }
 export class google_compute_instance_from_template extends TerraformResource {
   readonly allow_stopping_for_update?: boolean;

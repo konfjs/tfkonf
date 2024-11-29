@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KinesisStreamConfig {
+export interface AwsCloudfrontRealtimeLogConfigArgsendpointKinesisStreamConfig {
   role_arn: string;
   stream_arn: string;
 }
-export interface Endpoint {
+export interface AwsCloudfrontRealtimeLogConfigArgsendpoint {
   stream_type: string;
-  kinesis_stream_config: KinesisStreamConfig;
+  kinesis_stream_config: AwsCloudfrontRealtimeLogConfigArgsendpointKinesisStreamConfig;
 }
 export interface AwsCloudfrontRealtimeLogConfigArgs {
   fields: string[];
   name: string;
   sampling_rate: number;
-  endpoint: Endpoint;
+  endpoint: AwsCloudfrontRealtimeLogConfigArgsendpoint;
 }
 export class aws_cloudfront_realtime_log_config extends TerraformResource {
   readonly arn!: string;

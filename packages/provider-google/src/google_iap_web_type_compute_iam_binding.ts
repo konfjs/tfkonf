@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleIapWebTypeComputeIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -7,7 +7,7 @@ export interface Condition {
 export interface GoogleIapWebTypeComputeIamBindingArgs {
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleIapWebTypeComputeIamBindingArgscondition;
 }
 export class google_iap_web_type_compute_iam_binding extends TerraformResource {
   readonly etag!: string;

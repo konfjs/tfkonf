@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsOpensearchInboundConnectionAccepterArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsOpensearchInboundConnectionAccepterArgs {
   connection_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsOpensearchInboundConnectionAccepterArgstimeouts;
 }
 export class aws_opensearch_inbound_connection_accepter extends TerraformResource {
   readonly connection_status!: string;

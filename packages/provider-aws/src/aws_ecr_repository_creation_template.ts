@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionConfiguration {
+export interface AwsEcrRepositoryCreationTemplateArgsEncryptionConfiguration {
   encryption_type?: string;
 }
 export interface AwsEcrRepositoryCreationTemplateArgs {
@@ -13,7 +13,7 @@ export interface AwsEcrRepositoryCreationTemplateArgs {
   resource_tags?: {
     [key: string]: string;
   };
-  encryption_configuration: EncryptionConfiguration;
+  encryption_configuration: AwsEcrRepositoryCreationTemplateArgsEncryptionConfiguration;
 }
 export class aws_ecr_repository_creation_template extends TerraformResource {
   readonly id?: string;

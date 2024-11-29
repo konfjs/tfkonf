@@ -1,27 +1,27 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CollectorIlb {
+export interface GoogleComputePacketMirroringArgsCollectorIlb {
   url: string;
 }
-export interface Filter {
+export interface GoogleComputePacketMirroringArgsfilter {
   cidr_ranges?: string[];
   direction?: string;
   ip_protocols?: string[];
 }
-export interface Instances {
+export interface GoogleComputePacketMirroringArgsMirroredResourcesinstances {
   url: string;
 }
-export interface Subnetworks {
+export interface GoogleComputePacketMirroringArgsMirroredResourcessubnetworks {
   url: string;
 }
-export interface MirroredResources {
+export interface GoogleComputePacketMirroringArgsMirroredResources {
   tags?: string[];
-  instances: Instances;
-  subnetworks: Subnetworks;
+  instances: GoogleComputePacketMirroringArgsMirroredResourcesinstances;
+  subnetworks: GoogleComputePacketMirroringArgsMirroredResourcessubnetworks;
 }
-export interface Network {
+export interface GoogleComputePacketMirroringArgsnetwork {
   url: string;
 }
-export interface Timeouts {
+export interface GoogleComputePacketMirroringArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,11 +29,11 @@ export interface Timeouts {
 export interface GoogleComputePacketMirroringArgs {
   description?: string;
   name: string;
-  collector_ilb: CollectorIlb;
-  filter: Filter;
-  mirrored_resources: MirroredResources;
-  network: Network;
-  timeouts: Timeouts;
+  collector_ilb: GoogleComputePacketMirroringArgsCollectorIlb;
+  filter: GoogleComputePacketMirroringArgsfilter;
+  mirrored_resources: GoogleComputePacketMirroringArgsMirroredResources;
+  network: GoogleComputePacketMirroringArgsnetwork;
+  timeouts: GoogleComputePacketMirroringArgstimeouts;
 }
 export class google_compute_packet_mirroring extends TerraformResource {
   readonly id?: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleStorageBucketAccessControlArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleStorageBucketAccessControlArgs {
   bucket: string;
   entity: string;
   role?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleStorageBucketAccessControlArgstimeouts;
 }
 export class google_storage_bucket_access_control extends TerraformResource {
   readonly domain!: string;

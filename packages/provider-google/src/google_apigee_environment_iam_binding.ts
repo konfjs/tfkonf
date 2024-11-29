@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleApigeeEnvironmentIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -9,7 +9,7 @@ export interface GoogleApigeeEnvironmentIamBindingArgs {
   members: string[];
   org_id: string;
   role: string;
-  condition: Condition;
+  condition: GoogleApigeeEnvironmentIamBindingArgscondition;
 }
 export class google_apigee_environment_iam_binding extends TerraformResource {
   readonly etag!: string;

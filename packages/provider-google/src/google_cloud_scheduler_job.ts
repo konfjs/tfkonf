@@ -1,45 +1,45 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AppEngineRouting {
+export interface GoogleCloudSchedulerJobArgsAppEngineHttpTargetAppEngineRouting {
   instance?: string;
   service?: string;
   version?: string;
 }
-export interface AppEngineHttpTarget {
+export interface GoogleCloudSchedulerJobArgsAppEngineHttpTarget {
   body?: string;
   headers?: {
     [key: string]: string;
   };
   http_method?: string;
   relative_uri: string;
-  app_engine_routing: AppEngineRouting;
+  app_engine_routing: GoogleCloudSchedulerJobArgsAppEngineHttpTargetAppEngineRouting;
 }
-export interface OauthToken {
+export interface GoogleCloudSchedulerJobArgsHttpTargetOauthToken {
   scope?: string;
   service_account_email: string;
 }
-export interface OidcToken {
+export interface GoogleCloudSchedulerJobArgsHttpTargetOidcToken {
   audience?: string;
   service_account_email: string;
 }
-export interface HttpTarget {
+export interface GoogleCloudSchedulerJobArgsHttpTarget {
   body?: string;
   headers?: {
     [key: string]: string;
   };
   http_method?: string;
   uri: string;
-  oauth_token: OauthToken;
-  oidc_token: OidcToken;
+  oauth_token: GoogleCloudSchedulerJobArgsHttpTargetOauthToken;
+  oidc_token: GoogleCloudSchedulerJobArgsHttpTargetOidcToken;
 }
-export interface PubsubTarget {
+export interface GoogleCloudSchedulerJobArgsPubsubTarget {
   attributes?: {
     [key: string]: string;
   };
   data?: string;
   topic_name: string;
 }
-export interface RetryConfig {}
-export interface Timeouts {
+export interface GoogleCloudSchedulerJobArgsRetryConfig {}
+export interface GoogleCloudSchedulerJobArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -50,11 +50,11 @@ export interface GoogleCloudSchedulerJobArgs {
   name: string;
   schedule?: string;
   time_zone?: string;
-  app_engine_http_target: AppEngineHttpTarget;
-  http_target: HttpTarget;
-  pubsub_target: PubsubTarget;
-  retry_config: RetryConfig;
-  timeouts: Timeouts;
+  app_engine_http_target: GoogleCloudSchedulerJobArgsAppEngineHttpTarget;
+  http_target: GoogleCloudSchedulerJobArgsHttpTarget;
+  pubsub_target: GoogleCloudSchedulerJobArgsPubsubTarget;
+  retry_config: GoogleCloudSchedulerJobArgsRetryConfig;
+  timeouts: GoogleCloudSchedulerJobArgstimeouts;
 }
 export class google_cloud_scheduler_job extends TerraformResource {
   readonly id?: string;

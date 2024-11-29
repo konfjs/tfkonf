@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Options {
+export interface AwsEc2TransitGatewayPeeringAttachmentArgsoptions {
   dynamic_routing?: string;
 }
 export interface AwsEc2TransitGatewayPeeringAttachmentArgs {
@@ -9,7 +9,7 @@ export interface AwsEc2TransitGatewayPeeringAttachmentArgs {
     [key: string]: string;
   };
   transit_gateway_id: string;
-  options: Options;
+  options: AwsEc2TransitGatewayPeeringAttachmentArgsoptions;
 }
 export class aws_ec2_transit_gateway_peering_attachment extends TerraformResource {
   readonly id?: string;

@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SingleSignOn {
+export interface AwsDatazoneDomainArgsSingleSignOn {
   user_assignment?: string;
 }
-export interface Timeouts {
+export interface AwsDatazoneDomainArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -15,8 +15,8 @@ export interface AwsDatazoneDomainArgs {
   tags?: {
     [key: string]: string;
   };
-  single_sign_on: SingleSignOn;
-  timeouts: Timeouts;
+  single_sign_on: AwsDatazoneDomainArgsSingleSignOn;
+  timeouts: AwsDatazoneDomainArgstimeouts;
 }
 export class aws_datazone_domain extends TerraformResource {
   readonly arn!: string;

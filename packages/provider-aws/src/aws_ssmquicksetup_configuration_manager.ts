@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConfigurationDefinition {
+export interface AwsSsmquicksetupConfigurationManagerArgsConfigurationDefinition {
   local_deployment_administration_role_arn?: string;
   local_deployment_execution_role_name?: string;
   parameters: {
@@ -7,7 +7,7 @@ export interface ConfigurationDefinition {
   };
   type: string;
 }
-export interface Timeouts {
+export interface AwsSsmquicksetupConfigurationManagerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface AwsSsmquicksetupConfigurationManagerArgs {
   tags?: {
     [key: string]: string;
   };
-  configuration_definition: ConfigurationDefinition;
-  timeouts: Timeouts;
+  configuration_definition: AwsSsmquicksetupConfigurationManagerArgsConfigurationDefinition;
+  timeouts: AwsSsmquicksetupConfigurationManagerArgstimeouts;
 }
 export class aws_ssmquicksetup_configuration_manager extends TerraformResource {
   readonly description?: string;

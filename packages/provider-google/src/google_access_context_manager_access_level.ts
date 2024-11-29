@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OsConstraints {
+export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicyOsConstraints {
   minimum_version?: string;
   os_type: string;
   require_verified_chrome_os?: boolean;
 }
-export interface DevicePolicy {
+export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicy {
   allowed_device_management_levels?: string[];
   allowed_encryption_statuses?: string[];
   require_admin_approval?: boolean;
   require_corp_owned?: boolean;
   require_screen_lock?: boolean;
-  os_constraints: OsConstraints;
+  os_constraints: GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicyOsConstraints;
 }
-export interface VpcSubnetwork {
+export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSourcesVpcSubnetwork {
   network: string;
   vpc_ip_subnetworks?: string[];
 }
-export interface VpcNetworkSources {
-  vpc_subnetwork: VpcSubnetwork;
+export interface GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSources {
+  vpc_subnetwork: GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSourcesVpcSubnetwork;
 }
-export interface Conditions {
+export interface GoogleAccessContextManagerAccessLevelArgsbasicconditions {
   ip_subnetworks?: string[];
   members?: string[];
   negate?: boolean;
   regions?: string[];
   required_access_levels?: string[];
-  device_policy: DevicePolicy;
-  vpc_network_sources: VpcNetworkSources;
+  device_policy: GoogleAccessContextManagerAccessLevelArgsbasicconditionsDevicePolicy;
+  vpc_network_sources: GoogleAccessContextManagerAccessLevelArgsbasicconditionsVpcNetworkSources;
 }
-export interface Basic {
+export interface GoogleAccessContextManagerAccessLevelArgsbasic {
   combining_function?: string;
-  conditions: Conditions;
+  conditions: GoogleAccessContextManagerAccessLevelArgsbasicconditions;
 }
-export interface Expr {
+export interface GoogleAccessContextManagerAccessLevelArgscustomexpr {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface Custom {
-  expr: Expr;
+export interface GoogleAccessContextManagerAccessLevelArgscustom {
+  expr: GoogleAccessContextManagerAccessLevelArgscustomexpr;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerAccessLevelArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -51,9 +51,9 @@ export interface GoogleAccessContextManagerAccessLevelArgs {
   name: string;
   parent: string;
   title: string;
-  basic: Basic;
-  custom: Custom;
-  timeouts: Timeouts;
+  basic: GoogleAccessContextManagerAccessLevelArgsbasic;
+  custom: GoogleAccessContextManagerAccessLevelArgscustom;
+  timeouts: GoogleAccessContextManagerAccessLevelArgstimeouts;
 }
 export class google_access_context_manager_access_level extends TerraformResource {
   readonly id?: string;

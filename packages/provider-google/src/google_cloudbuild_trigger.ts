@@ -1,62 +1,62 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ApprovalConfig {
+export interface GoogleCloudbuildTriggerArgsApprovalConfig {
   approval_required?: boolean;
 }
-export interface PullRequest {
+export interface GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfigPullRequest {
   branch: string;
   comment_control?: string;
   invert_regex?: boolean;
 }
-export interface Push {
+export interface GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfigpush {
   branch?: string;
   invert_regex?: boolean;
   tag?: string;
 }
-export interface BitbucketServerTriggerConfig {
+export interface GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfig {
   bitbucket_server_config_resource: string;
   project_key: string;
   repo_slug: string;
-  pull_request: PullRequest;
-  push: Push;
+  pull_request: GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfigPullRequest;
+  push: GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfigpush;
 }
-export interface MavenArtifacts {
+export interface GoogleCloudbuildTriggerArgsbuildartifactsMavenArtifacts {
   artifact_id?: string;
   group_id?: string;
   path?: string;
   repository?: string;
   version?: string;
 }
-export interface NpmPackages {
+export interface GoogleCloudbuildTriggerArgsbuildartifactsNpmPackages {
   package_path?: string;
   repository?: string;
 }
-export interface Objects {
+export interface GoogleCloudbuildTriggerArgsbuildartifactsobjects {
   location?: string;
   paths?: string[];
 }
-export interface PythonPackages {
+export interface GoogleCloudbuildTriggerArgsbuildartifactsPythonPackages {
   paths?: string[];
   repository?: string;
 }
-export interface Artifacts {
+export interface GoogleCloudbuildTriggerArgsbuildartifacts {
   images?: string[];
-  maven_artifacts: MavenArtifacts;
-  npm_packages: NpmPackages;
-  objects: Objects;
-  python_packages: PythonPackages;
+  maven_artifacts: GoogleCloudbuildTriggerArgsbuildartifactsMavenArtifacts;
+  npm_packages: GoogleCloudbuildTriggerArgsbuildartifactsNpmPackages;
+  objects: GoogleCloudbuildTriggerArgsbuildartifactsobjects;
+  python_packages: GoogleCloudbuildTriggerArgsbuildartifactsPythonPackages;
 }
-export interface SecretManager {
+export interface GoogleCloudbuildTriggerArgsbuildAvailableSecretsSecretManager {
   env: string;
   version_name: string;
 }
-export interface AvailableSecrets {
-  secret_manager: SecretManager;
+export interface GoogleCloudbuildTriggerArgsbuildAvailableSecrets {
+  secret_manager: GoogleCloudbuildTriggerArgsbuildAvailableSecretsSecretManager;
 }
-export interface Volumes {
+export interface GoogleCloudbuildTriggerArgsbuildoptionsvolumes {
   name?: string;
   path?: string;
 }
-export interface Options {
+export interface GoogleCloudbuildTriggerArgsbuildoptions {
   disk_size_gb?: number;
   dynamic_substitutions?: boolean;
   env?: string[];
@@ -68,15 +68,15 @@ export interface Options {
   source_provenance_hash?: string[];
   substitution_option?: string;
   worker_pool?: string;
-  volumes: Volumes;
+  volumes: GoogleCloudbuildTriggerArgsbuildoptionsvolumes;
 }
-export interface Secret {
+export interface GoogleCloudbuildTriggerArgsbuildsecret {
   kms_key_name: string;
   secret_env?: {
     [key: string]: string;
   };
 }
-export interface RepoSource {
+export interface GoogleCloudbuildTriggerArgsbuildsourceRepoSource {
   branch_name?: string;
   commit_sha?: string;
   dir?: string;
@@ -88,20 +88,20 @@ export interface RepoSource {
   };
   tag_name?: string;
 }
-export interface StorageSource {
+export interface GoogleCloudbuildTriggerArgsbuildsourceStorageSource {
   bucket: string;
   generation?: string;
   object: string;
 }
-export interface Source {
-  repo_source: RepoSource;
-  storage_source: StorageSource;
+export interface GoogleCloudbuildTriggerArgsbuildsource {
+  repo_source: GoogleCloudbuildTriggerArgsbuildsourceRepoSource;
+  storage_source: GoogleCloudbuildTriggerArgsbuildsourceStorageSource;
 }
-export interface Volumes {
+export interface GoogleCloudbuildTriggerArgsbuildstepvolumes {
   name: string;
   path: string;
 }
-export interface Step {
+export interface GoogleCloudbuildTriggerArgsbuildstep {
   allow_exit_codes?: number[];
   allow_failure?: boolean;
   args?: string[];
@@ -115,9 +115,9 @@ export interface Step {
   timeout?: string;
   timing?: string;
   wait_for?: string[];
-  volumes: Volumes;
+  volumes: GoogleCloudbuildTriggerArgsbuildstepvolumes;
 }
-export interface Build {
+export interface GoogleCloudbuildTriggerArgsbuild {
   images?: string[];
   logs_bucket?: string;
   queue_ttl?: string;
@@ -126,14 +126,14 @@ export interface Build {
   };
   tags?: string[];
   timeout?: string;
-  artifacts: Artifacts;
-  available_secrets: AvailableSecrets;
-  options: Options;
-  secret: Secret;
-  source: Source;
-  step: Step;
+  artifacts: GoogleCloudbuildTriggerArgsbuildartifacts;
+  available_secrets: GoogleCloudbuildTriggerArgsbuildAvailableSecrets;
+  options: GoogleCloudbuildTriggerArgsbuildoptions;
+  secret: GoogleCloudbuildTriggerArgsbuildsecret;
+  source: GoogleCloudbuildTriggerArgsbuildsource;
+  step: GoogleCloudbuildTriggerArgsbuildstep;
 }
-export interface GitFileSource {
+export interface GoogleCloudbuildTriggerArgsGitFileSource {
   bitbucket_server_config?: string;
   github_enterprise_config?: string;
   path: string;
@@ -142,43 +142,43 @@ export interface GitFileSource {
   revision?: string;
   uri?: string;
 }
-export interface PullRequest {
+export interface GoogleCloudbuildTriggerArgsgithubPullRequest {
   branch: string;
   comment_control?: string;
   invert_regex?: boolean;
 }
-export interface Push {
+export interface GoogleCloudbuildTriggerArgsgithubpush {
   branch?: string;
   invert_regex?: boolean;
   tag?: string;
 }
-export interface Github {
+export interface GoogleCloudbuildTriggerArgsgithub {
   enterprise_config_resource_name?: string;
   name?: string;
   owner?: string;
-  pull_request: PullRequest;
-  push: Push;
+  pull_request: GoogleCloudbuildTriggerArgsgithubPullRequest;
+  push: GoogleCloudbuildTriggerArgsgithubpush;
 }
-export interface PubsubConfig {
+export interface GoogleCloudbuildTriggerArgsPubsubConfig {
   service_account_email?: string;
   topic: string;
 }
-export interface PullRequest {
+export interface GoogleCloudbuildTriggerArgsRepositoryEventConfigPullRequest {
   branch?: string;
   comment_control?: string;
   invert_regex?: boolean;
 }
-export interface Push {
+export interface GoogleCloudbuildTriggerArgsRepositoryEventConfigpush {
   branch?: string;
   invert_regex?: boolean;
   tag?: string;
 }
-export interface RepositoryEventConfig {
+export interface GoogleCloudbuildTriggerArgsRepositoryEventConfig {
   repository?: string;
-  pull_request: PullRequest;
-  push: Push;
+  pull_request: GoogleCloudbuildTriggerArgsRepositoryEventConfigPullRequest;
+  push: GoogleCloudbuildTriggerArgsRepositoryEventConfigpush;
 }
-export interface SourceToBuild {
+export interface GoogleCloudbuildTriggerArgsSourceToBuild {
   bitbucket_server_config?: string;
   github_enterprise_config?: string;
   ref: string;
@@ -186,12 +186,12 @@ export interface SourceToBuild {
   repository?: string;
   uri?: string;
 }
-export interface Timeouts {
+export interface GoogleCloudbuildTriggerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TriggerTemplate {
+export interface GoogleCloudbuildTriggerArgsTriggerTemplate {
   branch_name?: string;
   commit_sha?: string;
   dir?: string;
@@ -199,7 +199,7 @@ export interface TriggerTemplate {
   repo_name?: string;
   tag_name?: string;
 }
-export interface WebhookConfig {
+export interface GoogleCloudbuildTriggerArgsWebhookConfig {
   secret: string;
 }
 export interface GoogleCloudbuildTriggerArgs {
@@ -216,17 +216,17 @@ export interface GoogleCloudbuildTriggerArgs {
     [key: string]: string;
   };
   tags?: string[];
-  approval_config: ApprovalConfig;
-  bitbucket_server_trigger_config: BitbucketServerTriggerConfig;
-  build: Build;
-  git_file_source: GitFileSource;
-  github: Github;
-  pubsub_config: PubsubConfig;
-  repository_event_config: RepositoryEventConfig;
-  source_to_build: SourceToBuild;
-  timeouts: Timeouts;
-  trigger_template: TriggerTemplate;
-  webhook_config: WebhookConfig;
+  approval_config: GoogleCloudbuildTriggerArgsApprovalConfig;
+  bitbucket_server_trigger_config: GoogleCloudbuildTriggerArgsBitbucketServerTriggerConfig;
+  build: GoogleCloudbuildTriggerArgsbuild;
+  git_file_source: GoogleCloudbuildTriggerArgsGitFileSource;
+  github: GoogleCloudbuildTriggerArgsgithub;
+  pubsub_config: GoogleCloudbuildTriggerArgsPubsubConfig;
+  repository_event_config: GoogleCloudbuildTriggerArgsRepositoryEventConfig;
+  source_to_build: GoogleCloudbuildTriggerArgsSourceToBuild;
+  timeouts: GoogleCloudbuildTriggerArgstimeouts;
+  trigger_template: GoogleCloudbuildTriggerArgsTriggerTemplate;
+  webhook_config: GoogleCloudbuildTriggerArgsWebhookConfig;
 }
 export class google_cloudbuild_trigger extends TerraformResource {
   readonly create_time!: string;

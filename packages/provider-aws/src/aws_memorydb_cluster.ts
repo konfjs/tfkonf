@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsMemorydbClusterArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -22,7 +22,7 @@ export interface AwsMemorydbClusterArgs {
     [key: string]: string;
   };
   tls_enabled?: boolean;
-  timeouts: Timeouts;
+  timeouts: AwsMemorydbClusterArgstimeouts;
 }
 export class aws_memorydb_cluster extends TerraformResource {
   readonly arn!: string;

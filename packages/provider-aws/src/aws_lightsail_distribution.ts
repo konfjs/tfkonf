@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CacheBehavior {
+export interface AwsLightsailDistributionArgsCacheBehavior {
   behavior: string;
   path: string;
 }
-export interface ForwardedCookies {
+export interface AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedCookies {
   cookies_allow_list?: string[];
   option?: string;
 }
-export interface ForwardedHeaders {
+export interface AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedHeaders {
   headers_allow_list?: string[];
   option?: string;
 }
-export interface ForwardedQueryStrings {
+export interface AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedQueryStrings {
   option?: boolean;
   query_strings_allowed_list?: string[];
 }
-export interface CacheBehaviorSettings {
+export interface AwsLightsailDistributionArgsCacheBehaviorSettings {
   allowed_http_methods?: string;
   cached_http_methods?: string;
   default_ttl?: number;
   maximum_ttl?: number;
   minimum_ttl?: number;
-  forwarded_cookies: ForwardedCookies;
-  forwarded_headers: ForwardedHeaders;
-  forwarded_query_strings: ForwardedQueryStrings;
+  forwarded_cookies: AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedCookies;
+  forwarded_headers: AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedHeaders;
+  forwarded_query_strings: AwsLightsailDistributionArgsCacheBehaviorSettingsForwardedQueryStrings;
 }
-export interface DefaultCacheBehavior {
+export interface AwsLightsailDistributionArgsDefaultCacheBehavior {
   behavior: string;
 }
-export interface Origin {
+export interface AwsLightsailDistributionArgsorigin {
   name: string;
   protocol_policy?: string;
   region_name: string;
 }
-export interface Timeouts {
+export interface AwsLightsailDistributionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -47,11 +47,11 @@ export interface AwsLightsailDistributionArgs {
   tags?: {
     [key: string]: string;
   };
-  cache_behavior: CacheBehavior;
-  cache_behavior_settings: CacheBehaviorSettings;
-  default_cache_behavior: DefaultCacheBehavior;
-  origin: Origin;
-  timeouts: Timeouts;
+  cache_behavior: AwsLightsailDistributionArgsCacheBehavior;
+  cache_behavior_settings: AwsLightsailDistributionArgsCacheBehaviorSettings;
+  default_cache_behavior: AwsLightsailDistributionArgsDefaultCacheBehavior;
+  origin: AwsLightsailDistributionArgsorigin;
+  timeouts: AwsLightsailDistributionArgstimeouts;
 }
 export class aws_lightsail_distribution extends TerraformResource {
   readonly alternative_domain_names!: string[];

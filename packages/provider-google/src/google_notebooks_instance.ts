@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AcceleratorConfig {
+export interface GoogleNotebooksInstanceArgsAcceleratorConfig {
   core_count: number;
   type: string;
 }
-export interface ContainerImage {
+export interface GoogleNotebooksInstanceArgsContainerImage {
   repository: string;
   tag?: string;
 }
-export interface ReservationAffinity {
+export interface GoogleNotebooksInstanceArgsReservationAffinity {
   consume_reservation_type: string;
   key?: string;
   values?: string[];
 }
-export interface ShieldedInstanceConfig {
+export interface GoogleNotebooksInstanceArgsShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface Timeouts {
+export interface GoogleNotebooksInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VmImage {
+export interface GoogleNotebooksInstanceArgsVmImage {
   image_family?: string;
   image_name?: string;
   project: string;
@@ -51,12 +51,12 @@ export interface GoogleNotebooksInstanceArgs {
   no_public_ip?: boolean;
   no_remove_data_disk?: boolean;
   post_startup_script?: string;
-  accelerator_config: AcceleratorConfig;
-  container_image: ContainerImage;
-  reservation_affinity: ReservationAffinity;
-  shielded_instance_config: ShieldedInstanceConfig;
-  timeouts: Timeouts;
-  vm_image: VmImage;
+  accelerator_config: GoogleNotebooksInstanceArgsAcceleratorConfig;
+  container_image: GoogleNotebooksInstanceArgsContainerImage;
+  reservation_affinity: GoogleNotebooksInstanceArgsReservationAffinity;
+  shielded_instance_config: GoogleNotebooksInstanceArgsShieldedInstanceConfig;
+  timeouts: GoogleNotebooksInstanceArgstimeouts;
+  vm_image: GoogleNotebooksInstanceArgsVmImage;
 }
 export class google_notebooks_instance extends TerraformResource {
   readonly create_time?: string;

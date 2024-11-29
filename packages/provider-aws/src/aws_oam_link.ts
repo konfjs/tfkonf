@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogGroupConfiguration {
+export interface AwsOamLinkArgsLinkConfigurationLogGroupConfiguration {
   filter: string;
 }
-export interface MetricConfiguration {
+export interface AwsOamLinkArgsLinkConfigurationMetricConfiguration {
   filter: string;
 }
-export interface LinkConfiguration {
-  log_group_configuration: LogGroupConfiguration;
-  metric_configuration: MetricConfiguration;
+export interface AwsOamLinkArgsLinkConfiguration {
+  log_group_configuration: AwsOamLinkArgsLinkConfigurationLogGroupConfiguration;
+  metric_configuration: AwsOamLinkArgsLinkConfigurationMetricConfiguration;
 }
-export interface Timeouts {
+export interface AwsOamLinkArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface AwsOamLinkArgs {
   tags?: {
     [key: string]: string;
   };
-  link_configuration: LinkConfiguration;
-  timeouts: Timeouts;
+  link_configuration: AwsOamLinkArgsLinkConfiguration;
+  timeouts: AwsOamLinkArgstimeouts;
 }
 export class aws_oam_link extends TerraformResource {
   readonly arn!: string;

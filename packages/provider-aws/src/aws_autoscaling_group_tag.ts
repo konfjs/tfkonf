@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Tag {
+export interface AwsAutoscalingGroupTagArgstag {
   key: string;
   propagate_at_launch: boolean;
   value: string;
 }
 export interface AwsAutoscalingGroupTagArgs {
   autoscaling_group_name: string;
-  tag: Tag;
+  tag: AwsAutoscalingGroupTagArgstag;
 }
 export class aws_autoscaling_group_tag extends TerraformResource {
   readonly id?: string;

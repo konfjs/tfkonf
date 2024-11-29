@@ -1,60 +1,60 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StepAdjustment {
+export interface AwsAppautoscalingPolicyArgsStepScalingPolicyConfigurationStepAdjustment {
   metric_interval_lower_bound?: string;
   metric_interval_upper_bound?: string;
   scaling_adjustment: number;
 }
-export interface StepScalingPolicyConfiguration {
+export interface AwsAppautoscalingPolicyArgsStepScalingPolicyConfiguration {
   adjustment_type?: string;
   cooldown?: number;
   metric_aggregation_type?: string;
   min_adjustment_magnitude?: number;
-  step_adjustment: StepAdjustment;
+  step_adjustment: AwsAppautoscalingPolicyArgsStepScalingPolicyConfigurationStepAdjustment;
 }
-export interface Dimensions {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationdimensions {
   name: string;
   value: string;
 }
-export interface Dimensions {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStatmetricdimensions {
   name: string;
   value: string;
 }
-export interface Metric {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStatmetric {
   metric_name: string;
   namespace: string;
-  dimensions: Dimensions;
+  dimensions: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStatmetricdimensions;
 }
-export interface MetricStat {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStat {
   stat: string;
   unit?: string;
-  metric: Metric;
+  metric: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStatmetric;
 }
-export interface Metrics {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetrics {
   expression?: string;
   id: string;
   label?: string;
   return_data?: boolean;
-  metric_stat: MetricStat;
+  metric_stat: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetricsMetricStat;
 }
-export interface CustomizedMetricSpecification {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification {
   metric_name?: string;
   namespace?: string;
   statistic?: string;
   unit?: string;
-  dimensions: Dimensions;
-  metrics: Metrics;
+  dimensions: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationdimensions;
+  metrics: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationmetrics;
 }
-export interface PredefinedMetricSpecification {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification {
   predefined_metric_type: string;
   resource_label?: string;
 }
-export interface TargetTrackingScalingPolicyConfiguration {
+export interface AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfiguration {
   disable_scale_in?: boolean;
   scale_in_cooldown?: number;
   scale_out_cooldown?: number;
   target_value: number;
-  customized_metric_specification: CustomizedMetricSpecification;
-  predefined_metric_specification: PredefinedMetricSpecification;
+  customized_metric_specification: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification;
+  predefined_metric_specification: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification;
 }
 export interface AwsAppautoscalingPolicyArgs {
   name: string;
@@ -62,8 +62,8 @@ export interface AwsAppautoscalingPolicyArgs {
   resource_id: string;
   scalable_dimension: string;
   service_namespace: string;
-  step_scaling_policy_configuration: StepScalingPolicyConfiguration;
-  target_tracking_scaling_policy_configuration: TargetTrackingScalingPolicyConfiguration;
+  step_scaling_policy_configuration: AwsAppautoscalingPolicyArgsStepScalingPolicyConfiguration;
+  target_tracking_scaling_policy_configuration: AwsAppautoscalingPolicyArgsTargetTrackingScalingPolicyConfiguration;
 }
 export class aws_appautoscaling_policy extends TerraformResource {
   readonly alarm_arns!: string[];

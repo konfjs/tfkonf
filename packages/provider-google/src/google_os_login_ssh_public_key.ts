@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleOsLoginSshPublicKeyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleOsLoginSshPublicKeyArgs {
   key: string;
   project?: string;
   user: string;
-  timeouts: Timeouts;
+  timeouts: GoogleOsLoginSshPublicKeyArgstimeouts;
 }
 export class google_os_login_ssh_public_key extends TerraformResource {
   readonly fingerprint!: string;

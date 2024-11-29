@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticateCognito {
+export interface AwsLbListenerRuleArgsactionAuthenticateCognito {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -10,7 +10,7 @@ export interface AuthenticateCognito {
   user_pool_client_id: string;
   user_pool_domain: string;
 }
-export interface AuthenticateOidc {
+export interface AwsLbListenerRuleArgsactionAuthenticateOidc {
   authentication_request_extra_params?: {
     [key: string]: string;
   };
@@ -24,23 +24,23 @@ export interface AuthenticateOidc {
   token_endpoint: string;
   user_info_endpoint: string;
 }
-export interface FixedResponse {
+export interface AwsLbListenerRuleArgsactionFixedResponse {
   content_type: string;
   message_body?: string;
 }
-export interface Stickiness {
+export interface AwsLbListenerRuleArgsactionforwardstickiness {
   duration: number;
   enabled?: boolean;
 }
-export interface TargetGroup {
+export interface AwsLbListenerRuleArgsactionforwardTargetGroup {
   arn: string;
   weight?: number;
 }
-export interface Forward {
-  stickiness: Stickiness;
-  target_group: TargetGroup;
+export interface AwsLbListenerRuleArgsactionforward {
+  stickiness: AwsLbListenerRuleArgsactionforwardstickiness;
+  target_group: AwsLbListenerRuleArgsactionforwardTargetGroup;
 }
-export interface Redirect {
+export interface AwsLbListenerRuleArgsactionredirect {
   host?: string;
   path?: string;
   port?: string;
@@ -48,50 +48,50 @@ export interface Redirect {
   query?: string;
   status_code: string;
 }
-export interface Action {
+export interface AwsLbListenerRuleArgsaction {
   target_group_arn?: string;
   type: string;
-  authenticate_cognito: AuthenticateCognito;
-  authenticate_oidc: AuthenticateOidc;
-  fixed_response: FixedResponse;
-  forward: Forward;
-  redirect: Redirect;
+  authenticate_cognito: AwsLbListenerRuleArgsactionAuthenticateCognito;
+  authenticate_oidc: AwsLbListenerRuleArgsactionAuthenticateOidc;
+  fixed_response: AwsLbListenerRuleArgsactionFixedResponse;
+  forward: AwsLbListenerRuleArgsactionforward;
+  redirect: AwsLbListenerRuleArgsactionredirect;
 }
-export interface HostHeader {
+export interface AwsLbListenerRuleArgsconditionHostHeader {
   values: string[];
 }
-export interface HttpHeader {
+export interface AwsLbListenerRuleArgsconditionHttpHeader {
   http_header_name: string;
   values: string[];
 }
-export interface HttpRequestMethod {
+export interface AwsLbListenerRuleArgsconditionHttpRequestMethod {
   values: string[];
 }
-export interface PathPattern {
+export interface AwsLbListenerRuleArgsconditionPathPattern {
   values: string[];
 }
-export interface QueryString {
+export interface AwsLbListenerRuleArgsconditionQueryString {
   key?: string;
   value: string;
 }
-export interface SourceIp {
+export interface AwsLbListenerRuleArgsconditionSourceIp {
   values: string[];
 }
-export interface Condition {
-  host_header: HostHeader;
-  http_header: HttpHeader;
-  http_request_method: HttpRequestMethod;
-  path_pattern: PathPattern;
-  query_string: QueryString;
-  source_ip: SourceIp;
+export interface AwsLbListenerRuleArgscondition {
+  host_header: AwsLbListenerRuleArgsconditionHostHeader;
+  http_header: AwsLbListenerRuleArgsconditionHttpHeader;
+  http_request_method: AwsLbListenerRuleArgsconditionHttpRequestMethod;
+  path_pattern: AwsLbListenerRuleArgsconditionPathPattern;
+  query_string: AwsLbListenerRuleArgsconditionQueryString;
+  source_ip: AwsLbListenerRuleArgsconditionSourceIp;
 }
 export interface AwsLbListenerRuleArgs {
   listener_arn: string;
   tags?: {
     [key: string]: string;
   };
-  action: Action;
-  condition: Condition;
+  action: AwsLbListenerRuleArgsaction;
+  condition: AwsLbListenerRuleArgscondition;
 }
 export class aws_lb_listener_rule extends TerraformResource {
   readonly arn!: string;

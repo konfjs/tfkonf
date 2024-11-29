@@ -1,78 +1,78 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Message {
+export interface AwsLexIntentArgsConclusionStatementmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface ConclusionStatement {
+export interface AwsLexIntentArgsConclusionStatement {
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsConclusionStatementmessage;
 }
-export interface Message {
+export interface AwsLexIntentArgsConfirmationPromptmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface ConfirmationPrompt {
+export interface AwsLexIntentArgsConfirmationPrompt {
   max_attempts: number;
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsConfirmationPromptmessage;
 }
-export interface DialogCodeHook {
+export interface AwsLexIntentArgsDialogCodeHook {
   message_version: string;
   uri: string;
 }
-export interface Message {
+export interface AwsLexIntentArgsFollowUpPromptpromptmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface Prompt {
+export interface AwsLexIntentArgsFollowUpPromptprompt {
   max_attempts: number;
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsFollowUpPromptpromptmessage;
 }
-export interface Message {
+export interface AwsLexIntentArgsFollowUpPromptRejectionStatementmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface RejectionStatement {
+export interface AwsLexIntentArgsFollowUpPromptRejectionStatement {
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsFollowUpPromptRejectionStatementmessage;
 }
-export interface FollowUpPrompt {
-  prompt: Prompt;
-  rejection_statement: RejectionStatement;
+export interface AwsLexIntentArgsFollowUpPrompt {
+  prompt: AwsLexIntentArgsFollowUpPromptprompt;
+  rejection_statement: AwsLexIntentArgsFollowUpPromptRejectionStatement;
 }
-export interface CodeHook {
+export interface AwsLexIntentArgsFulfillmentActivityCodeHook {
   message_version: string;
   uri: string;
 }
-export interface FulfillmentActivity {
+export interface AwsLexIntentArgsFulfillmentActivity {
   type: string;
-  code_hook: CodeHook;
+  code_hook: AwsLexIntentArgsFulfillmentActivityCodeHook;
 }
-export interface Message {
+export interface AwsLexIntentArgsRejectionStatementmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface RejectionStatement {
+export interface AwsLexIntentArgsRejectionStatement {
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsRejectionStatementmessage;
 }
-export interface Message {
+export interface AwsLexIntentArgsslotValueElicitationPromptmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface ValueElicitationPrompt {
+export interface AwsLexIntentArgsslotValueElicitationPrompt {
   max_attempts: number;
   response_card?: string;
-  message: Message;
+  message: AwsLexIntentArgsslotValueElicitationPromptmessage;
 }
-export interface Slot {
+export interface AwsLexIntentArgsslot {
   description?: string;
   name: string;
   priority?: number;
@@ -81,9 +81,9 @@ export interface Slot {
   slot_constraint: string;
   slot_type: string;
   slot_type_version?: string;
-  value_elicitation_prompt: ValueElicitationPrompt;
+  value_elicitation_prompt: AwsLexIntentArgsslotValueElicitationPrompt;
 }
-export interface Timeouts {
+export interface AwsLexIntentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -94,14 +94,14 @@ export interface AwsLexIntentArgs {
   name: string;
   parent_intent_signature?: string;
   sample_utterances?: string[];
-  conclusion_statement: ConclusionStatement;
-  confirmation_prompt: ConfirmationPrompt;
-  dialog_code_hook: DialogCodeHook;
-  follow_up_prompt: FollowUpPrompt;
-  fulfillment_activity: FulfillmentActivity;
-  rejection_statement: RejectionStatement;
-  slot: Slot;
-  timeouts: Timeouts;
+  conclusion_statement: AwsLexIntentArgsConclusionStatement;
+  confirmation_prompt: AwsLexIntentArgsConfirmationPrompt;
+  dialog_code_hook: AwsLexIntentArgsDialogCodeHook;
+  follow_up_prompt: AwsLexIntentArgsFollowUpPrompt;
+  fulfillment_activity: AwsLexIntentArgsFulfillmentActivity;
+  rejection_statement: AwsLexIntentArgsRejectionStatement;
+  slot: AwsLexIntentArgsslot;
+  timeouts: AwsLexIntentArgstimeouts;
 }
 export class aws_lex_intent extends TerraformResource {
   readonly arn!: string;

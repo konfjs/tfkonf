@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AgentOrchestrationConfig {
+export interface AwsCodeguruprofilerProfilingGroupArgsAgentOrchestrationConfig {
   profiling_enabled: boolean;
 }
 export interface AwsCodeguruprofilerProfilingGroupArgs {
@@ -7,7 +7,7 @@ export interface AwsCodeguruprofilerProfilingGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  agent_orchestration_config: AgentOrchestrationConfig;
+  agent_orchestration_config: AwsCodeguruprofilerProfilingGroupArgsAgentOrchestrationConfig;
 }
 export class aws_codeguruprofiler_profiling_group extends TerraformResource {
   readonly arn!: string;

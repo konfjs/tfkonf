@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Static {
+export interface AwsVerifiedpermissionsPolicyArgsdefinitionstatic {
   description?: string;
   statement: string;
 }
-export interface Principal {
+export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedprincipal {
   entity_id: string;
   entity_type: string;
 }
-export interface Resource {
+export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedresource {
   entity_id: string;
   entity_type: string;
 }
-export interface TemplateLinked {
+export interface AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinked {
   policy_template_id: string;
-  principal: Principal;
-  resource: Resource;
+  principal: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedprincipal;
+  resource: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinkedresource;
 }
-export interface Definition {
-  static: Static;
-  template_linked: TemplateLinked;
+export interface AwsVerifiedpermissionsPolicyArgsdefinition {
+  static: AwsVerifiedpermissionsPolicyArgsdefinitionstatic;
+  template_linked: AwsVerifiedpermissionsPolicyArgsdefinitionTemplateLinked;
 }
 export interface AwsVerifiedpermissionsPolicyArgs {
   policy_store_id: string;
-  definition: Definition;
+  definition: AwsVerifiedpermissionsPolicyArgsdefinition;
 }
 export class aws_verifiedpermissions_policy extends TerraformResource {
   readonly created_date!: string;

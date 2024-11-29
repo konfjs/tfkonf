@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ComputeConfig {
+export interface AwsDmsReplicationConfigArgsComputeConfig {
   dns_name_servers?: string;
   max_capacity_units?: number;
   min_capacity_units?: number;
   replication_subnet_group_id: string;
 }
-export interface Timeouts {
+export interface AwsDmsReplicationConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,8 +21,8 @@ export interface AwsDmsReplicationConfigArgs {
     [key: string]: string;
   };
   target_endpoint_arn: string;
-  compute_config: ComputeConfig;
-  timeouts: Timeouts;
+  compute_config: AwsDmsReplicationConfigArgsComputeConfig;
+  timeouts: AwsDmsReplicationConfigArgstimeouts;
 }
 export class aws_dms_replication_config extends TerraformResource {
   readonly arn!: string;

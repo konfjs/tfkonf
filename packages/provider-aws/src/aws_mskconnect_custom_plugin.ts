@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface S3 {
+export interface AwsMskconnectCustomPluginArgslocations3 {
   bucket_arn: string;
   file_key: string;
   object_version?: string;
 }
-export interface Location {
-  s3: S3;
+export interface AwsMskconnectCustomPluginArgslocation {
+  s3: AwsMskconnectCustomPluginArgslocations3;
 }
-export interface Timeouts {
+export interface AwsMskconnectCustomPluginArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -18,8 +18,8 @@ export interface AwsMskconnectCustomPluginArgs {
   tags?: {
     [key: string]: string;
   };
-  location: Location;
-  timeouts: Timeouts;
+  location: AwsMskconnectCustomPluginArgslocation;
+  timeouts: AwsMskconnectCustomPluginArgstimeouts;
 }
 export class aws_mskconnect_custom_plugin extends TerraformResource {
   readonly arn!: string;

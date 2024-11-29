@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PreSharedKeys {
+export interface GoogleComputeInterconnectArgsmacsecPreSharedKeys {
   fail_open?: boolean;
   name: string;
   start_time?: string;
 }
-export interface Macsec {
+export interface GoogleComputeInterconnectArgsmacsec {
   fail_open?: boolean;
-  pre_shared_keys: PreSharedKeys;
+  pre_shared_keys: GoogleComputeInterconnectArgsmacsecPreSharedKeys;
 }
-export interface Timeouts {
+export interface GoogleComputeInterconnectArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -29,8 +29,8 @@ export interface GoogleComputeInterconnectArgs {
   remote_location?: string;
   requested_features?: string[];
   requested_link_count: number;
-  macsec: Macsec;
-  timeouts: Timeouts;
+  macsec: GoogleComputeInterconnectArgsmacsec;
+  timeouts: GoogleComputeInterconnectArgstimeouts;
 }
 export class google_compute_interconnect extends TerraformResource {
   readonly available_features!: string[];

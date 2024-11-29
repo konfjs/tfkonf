@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LogDeliveryConfiguration {
+export interface AwsElasticacheClusterArgsLogDeliveryConfiguration {
   destination: string;
   destination_type: string;
   log_format: string;
@@ -18,7 +18,7 @@ export interface AwsElasticacheClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  log_delivery_configuration: LogDeliveryConfiguration;
+  log_delivery_configuration: AwsElasticacheClusterArgsLogDeliveryConfiguration;
 }
 export class aws_elasticache_cluster extends TerraformResource {
   readonly apply_immediately?: boolean;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleBeyondcorpAppGatewayArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleBeyondcorpAppGatewayArgs {
   name: string;
   region?: string;
   type?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleBeyondcorpAppGatewayArgstimeouts;
 }
 export class google_beyondcorp_app_gateway extends TerraformResource {
   readonly allocated_connections!: any[];

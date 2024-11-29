@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeploymentTargets {
+export interface AwsCloudformationStackInstancesArgsDeploymentTargets {
   account_filter_type?: string;
   accounts?: string[];
   accounts_url?: string;
   organizational_unit_ids?: string[];
 }
-export interface OperationPreferences {
+export interface AwsCloudformationStackInstancesArgsOperationPreferences {
   concurrency_mode?: string;
   failure_tolerance_count?: number;
   failure_tolerance_percentage?: number;
@@ -14,7 +14,7 @@ export interface OperationPreferences {
   region_concurrency_type?: string;
   region_order?: string[];
 }
-export interface Timeouts {
+export interface AwsCloudformationStackInstancesArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,9 +26,9 @@ export interface AwsCloudformationStackInstancesArgs {
   };
   retain_stacks?: boolean;
   stack_set_name: string;
-  deployment_targets: DeploymentTargets;
-  operation_preferences: OperationPreferences;
-  timeouts: Timeouts;
+  deployment_targets: AwsCloudformationStackInstancesArgsDeploymentTargets;
+  operation_preferences: AwsCloudformationStackInstancesArgsOperationPreferences;
+  timeouts: AwsCloudformationStackInstancesArgstimeouts;
 }
 export class aws_cloudformation_stack_instances extends TerraformResource {
   readonly accounts?: string[];

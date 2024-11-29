@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRedshiftEventSubscriptionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,7 +15,7 @@ export interface AwsRedshiftEventSubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsRedshiftEventSubscriptionArgstimeouts;
 }
 export class aws_redshift_event_subscription extends TerraformResource {
   readonly arn!: string;

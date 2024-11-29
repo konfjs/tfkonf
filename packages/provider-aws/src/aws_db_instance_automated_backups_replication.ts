@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDbInstanceAutomatedBackupsReplicationArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface AwsDbInstanceAutomatedBackupsReplicationArgs {
   pre_signed_url?: string;
   retention_period?: number;
   source_db_instance_arn: string;
-  timeouts: Timeouts;
+  timeouts: AwsDbInstanceAutomatedBackupsReplicationArgstimeouts;
 }
 export class aws_db_instance_automated_backups_replication extends TerraformResource {
   readonly id?: string;

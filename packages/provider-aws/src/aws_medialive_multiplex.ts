@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface MultiplexSettings {
+export interface AwsMedialiveMultiplexArgsMultiplexSettings {
   transport_stream_bitrate: number;
   transport_stream_id: number;
 }
-export interface Timeouts {
+export interface AwsMedialiveMultiplexArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface AwsMedialiveMultiplexArgs {
   tags?: {
     [key: string]: string;
   };
-  multiplex_settings: MultiplexSettings;
-  timeouts: Timeouts;
+  multiplex_settings: AwsMedialiveMultiplexArgsMultiplexSettings;
+  timeouts: AwsMedialiveMultiplexArgstimeouts;
 }
 export class aws_medialive_multiplex extends TerraformResource {
   readonly arn!: string;

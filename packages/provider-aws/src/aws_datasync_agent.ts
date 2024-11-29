@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDatasyncAgentArgstimeouts {
   create?: string;
 }
 export interface AwsDatasyncAgentArgs {
@@ -10,7 +10,7 @@ export interface AwsDatasyncAgentArgs {
     [key: string]: string;
   };
   vpc_endpoint_id?: string;
-  timeouts: Timeouts;
+  timeouts: AwsDatasyncAgentArgstimeouts;
 }
 export class aws_datasync_agent extends TerraformResource {
   readonly activation_key?: string;

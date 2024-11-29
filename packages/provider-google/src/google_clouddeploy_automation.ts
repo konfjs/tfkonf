@@ -1,26 +1,26 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AdvanceRolloutRule {
+export interface GoogleClouddeployAutomationArgsrulesAdvanceRolloutRule {
   id: string;
   source_phases?: string[];
   wait?: string;
 }
-export interface PromoteReleaseRule {
+export interface GoogleClouddeployAutomationArgsrulesPromoteReleaseRule {
   destination_phase?: string;
   destination_target_id?: string;
   id: string;
   wait?: string;
 }
-export interface Rules {
-  advance_rollout_rule: AdvanceRolloutRule;
-  promote_release_rule: PromoteReleaseRule;
+export interface GoogleClouddeployAutomationArgsrules {
+  advance_rollout_rule: GoogleClouddeployAutomationArgsrulesAdvanceRolloutRule;
+  promote_release_rule: GoogleClouddeployAutomationArgsrulesPromoteReleaseRule;
 }
-export interface Targets {
+export interface GoogleClouddeployAutomationArgsselectortargets {
   id?: string;
 }
-export interface Selector {
-  targets: Targets;
+export interface GoogleClouddeployAutomationArgsselector {
+  targets: GoogleClouddeployAutomationArgsselectortargets;
 }
-export interface Timeouts {
+export interface GoogleClouddeployAutomationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,9 +38,9 @@ export interface GoogleClouddeployAutomationArgs {
   name: string;
   service_account: string;
   suspended?: boolean;
-  rules: Rules;
-  selector: Selector;
-  timeouts: Timeouts;
+  rules: GoogleClouddeployAutomationArgsrules;
+  selector: GoogleClouddeployAutomationArgsselector;
+  timeouts: GoogleClouddeployAutomationArgstimeouts;
 }
 export class google_clouddeploy_automation extends TerraformResource {
   readonly create_time!: string;

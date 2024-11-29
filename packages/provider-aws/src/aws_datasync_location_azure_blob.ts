@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SasConfiguration {
+export interface AwsDatasyncLocationAzureBlobArgsSasConfiguration {
   token: string;
 }
 export interface AwsDatasyncLocationAzureBlobArgs {
@@ -11,7 +11,7 @@ export interface AwsDatasyncLocationAzureBlobArgs {
   tags?: {
     [key: string]: string;
   };
-  sas_configuration: SasConfiguration;
+  sas_configuration: AwsDatasyncLocationAzureBlobArgsSasConfiguration;
 }
 export class aws_datasync_location_azure_blob extends TerraformResource {
   readonly arn!: string;

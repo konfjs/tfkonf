@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Sources {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromsources {
   access_level?: string;
   resource?: string;
 }
-export interface IngressFrom {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFrom {
   identities?: string[];
   identity_type?: string;
-  sources: Sources;
+  sources: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFromsources;
 }
-export interface MethodSelectors {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperationsMethodSelectors {
   method?: string;
   permission?: string;
 }
-export interface Operations {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperations {
   service_name?: string;
-  method_selectors: MethodSelectors;
+  method_selectors: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperationsMethodSelectors;
 }
-export interface IngressTo {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTo {
   resources?: string[];
-  operations: Operations;
+  operations: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTooperations;
 }
-export interface Timeouts {
+export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleAccessContextManagerServicePerimeterIngressPolicyArgs {
   perimeter: string;
-  ingress_from: IngressFrom;
-  ingress_to: IngressTo;
-  timeouts: Timeouts;
+  ingress_from: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressFrom;
+  ingress_to: GoogleAccessContextManagerServicePerimeterIngressPolicyArgsIngressTo;
+  timeouts: GoogleAccessContextManagerServicePerimeterIngressPolicyArgstimeouts;
 }
 export class google_access_context_manager_service_perimeter_ingress_policy extends TerraformResource {
   readonly id?: string;

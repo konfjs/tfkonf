@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Cookies {
+export interface AwsCloudfrontOriginRequestPolicyArgsCookiesConfigcookies {
   items?: string[];
 }
-export interface CookiesConfig {
+export interface AwsCloudfrontOriginRequestPolicyArgsCookiesConfig {
   cookie_behavior: string;
-  cookies: Cookies;
+  cookies: AwsCloudfrontOriginRequestPolicyArgsCookiesConfigcookies;
 }
-export interface Headers {
+export interface AwsCloudfrontOriginRequestPolicyArgsHeadersConfigheaders {
   items?: string[];
 }
-export interface HeadersConfig {
+export interface AwsCloudfrontOriginRequestPolicyArgsHeadersConfig {
   header_behavior?: string;
-  headers: Headers;
+  headers: AwsCloudfrontOriginRequestPolicyArgsHeadersConfigheaders;
 }
-export interface QueryStrings {
+export interface AwsCloudfrontOriginRequestPolicyArgsQueryStringsConfigQueryStrings {
   items?: string[];
 }
-export interface QueryStringsConfig {
+export interface AwsCloudfrontOriginRequestPolicyArgsQueryStringsConfig {
   query_string_behavior: string;
-  query_strings: QueryStrings;
+  query_strings: AwsCloudfrontOriginRequestPolicyArgsQueryStringsConfigQueryStrings;
 }
 export interface AwsCloudfrontOriginRequestPolicyArgs {
   comment?: string;
   name: string;
-  cookies_config: CookiesConfig;
-  headers_config: HeadersConfig;
-  query_strings_config: QueryStringsConfig;
+  cookies_config: AwsCloudfrontOriginRequestPolicyArgsCookiesConfig;
+  headers_config: AwsCloudfrontOriginRequestPolicyArgsHeadersConfig;
+  query_strings_config: AwsCloudfrontOriginRequestPolicyArgsQueryStringsConfig;
 }
 export class aws_cloudfront_origin_request_policy extends TerraformResource {
   readonly etag!: string;

@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsIotTopicRuleDestinationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcConfiguration {
+export interface AwsIotTopicRuleDestinationArgsVpcConfiguration {
   role_arn: string;
   security_groups?: string[];
   subnet_ids: string[];
@@ -12,8 +12,8 @@ export interface VpcConfiguration {
 }
 export interface AwsIotTopicRuleDestinationArgs {
   enabled?: boolean;
-  timeouts: Timeouts;
-  vpc_configuration: VpcConfiguration;
+  timeouts: AwsIotTopicRuleDestinationArgstimeouts;
+  vpc_configuration: AwsIotTopicRuleDestinationArgsVpcConfiguration;
 }
 export class aws_iot_topic_rule_destination extends TerraformResource {
   readonly arn!: string;

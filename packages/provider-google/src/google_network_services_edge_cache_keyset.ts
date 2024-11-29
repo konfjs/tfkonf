@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PublicKey {
+export interface GoogleNetworkServicesEdgeCacheKeysetArgsPublicKey {
   id: string;
   managed?: boolean;
   value?: string;
 }
-export interface Timeouts {
+export interface GoogleNetworkServicesEdgeCacheKeysetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface ValidationSharedKeys {
+export interface GoogleNetworkServicesEdgeCacheKeysetArgsValidationSharedKeys {
   secret_version: string;
 }
 export interface GoogleNetworkServicesEdgeCacheKeysetArgs {
@@ -18,9 +18,9 @@ export interface GoogleNetworkServicesEdgeCacheKeysetArgs {
     [key: string]: string;
   };
   name: string;
-  public_key: PublicKey;
-  timeouts: Timeouts;
-  validation_shared_keys: ValidationSharedKeys;
+  public_key: GoogleNetworkServicesEdgeCacheKeysetArgsPublicKey;
+  timeouts: GoogleNetworkServicesEdgeCacheKeysetArgstimeouts;
+  validation_shared_keys: GoogleNetworkServicesEdgeCacheKeysetArgsValidationSharedKeys;
 }
 export class google_network_services_edge_cache_keyset extends TerraformResource {
   readonly effective_labels!: {

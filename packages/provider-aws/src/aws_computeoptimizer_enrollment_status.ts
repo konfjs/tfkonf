@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsComputeoptimizerEnrollmentStatusArgstimeouts {
   create?: string;
   update?: string;
 }
 export interface AwsComputeoptimizerEnrollmentStatusArgs {
   status: string;
-  timeouts: Timeouts;
+  timeouts: AwsComputeoptimizerEnrollmentStatusArgstimeouts;
 }
 export class aws_computeoptimizer_enrollment_status extends TerraformResource {
   readonly id!: string;

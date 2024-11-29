@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EventSubscription {
+export interface AwsInspectorAssessmentTemplateArgsEventSubscription {
   event: string;
   topic_arn: string;
 }
@@ -11,7 +11,7 @@ export interface AwsInspectorAssessmentTemplateArgs {
     [key: string]: string;
   };
   target_arn: string;
-  event_subscription: EventSubscription;
+  event_subscription: AwsInspectorAssessmentTemplateArgsEventSubscription;
 }
 export class aws_inspector_assessment_template extends TerraformResource {
   readonly arn!: string;

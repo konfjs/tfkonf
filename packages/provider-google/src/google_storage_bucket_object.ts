@@ -1,13 +1,13 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomerEncryption {
+export interface GoogleStorageBucketObjectArgsCustomerEncryption {
   encryption_algorithm?: string;
   encryption_key: string;
 }
-export interface Retention {
+export interface GoogleStorageBucketObjectArgsretention {
   mode: string;
   retain_until_time: string;
 }
-export interface Timeouts {
+export interface GoogleStorageBucketObjectArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -26,9 +26,9 @@ export interface GoogleStorageBucketObjectArgs {
   name: string;
   source?: string;
   temporary_hold?: boolean;
-  customer_encryption: CustomerEncryption;
-  retention: Retention;
-  timeouts: Timeouts;
+  customer_encryption: GoogleStorageBucketObjectArgsCustomerEncryption;
+  retention: GoogleStorageBucketObjectArgsretention;
+  timeouts: GoogleStorageBucketObjectArgstimeouts;
 }
 export class google_storage_bucket_object extends TerraformResource {
   readonly content?: string;

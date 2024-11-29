@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KeyModesOfUse {}
-export interface KeyAttributes {
+export interface AwsPaymentcryptographyKeyArgsKeyAttributesKeyModesOfUse {}
+export interface AwsPaymentcryptographyKeyArgsKeyAttributes {
   key_algorithm: string;
   key_class: string;
   key_usage: string;
-  key_modes_of_use: KeyModesOfUse;
+  key_modes_of_use: AwsPaymentcryptographyKeyArgsKeyAttributesKeyModesOfUse;
 }
-export interface Timeouts {
+export interface AwsPaymentcryptographyKeyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface AwsPaymentcryptographyKeyArgs {
   tags?: {
     [key: string]: string;
   };
-  key_attributes: KeyAttributes;
-  timeouts: Timeouts;
+  key_attributes: AwsPaymentcryptographyKeyArgsKeyAttributes;
+  timeouts: AwsPaymentcryptographyKeyArgstimeouts;
 }
 export class aws_paymentcryptography_key extends TerraformResource {
   readonly arn!: string;

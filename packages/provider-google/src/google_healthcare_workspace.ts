@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Settings {
+export interface GoogleHealthcareWorkspaceArgssettings {
   data_project_ids: string[];
 }
-export interface Timeouts {
+export interface GoogleHealthcareWorkspaceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface GoogleHealthcareWorkspaceArgs {
     [key: string]: string;
   };
   name: string;
-  settings: Settings;
-  timeouts: Timeouts;
+  settings: GoogleHealthcareWorkspaceArgssettings;
+  timeouts: GoogleHealthcareWorkspaceArgstimeouts;
 }
 export class google_healthcare_workspace extends TerraformResource {
   readonly effective_labels!: {

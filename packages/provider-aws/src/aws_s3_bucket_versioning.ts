@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VersioningConfiguration {
+export interface AwsS3BucketVersioningArgsVersioningConfiguration {
   status: string;
 }
 export interface AwsS3BucketVersioningArgs {
   bucket: string;
   expected_bucket_owner?: string;
   mfa?: string;
-  versioning_configuration: VersioningConfiguration;
+  versioning_configuration: AwsS3BucketVersioningArgsVersioningConfiguration;
 }
 export class aws_s3_bucket_versioning extends TerraformResource {
   readonly id?: string;

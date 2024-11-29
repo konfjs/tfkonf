@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Autoscale {
+export interface GoogleBigqueryReservationArgsautoscale {
   max_slots?: number;
 }
-export interface Timeouts {
+export interface GoogleBigqueryReservationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface GoogleBigqueryReservationArgs {
   location?: string;
   name: string;
   slot_capacity: number;
-  autoscale: Autoscale;
-  timeouts: Timeouts;
+  autoscale: GoogleBigqueryReservationArgsautoscale;
+  timeouts: GoogleBigqueryReservationArgstimeouts;
 }
 export class google_bigquery_reservation extends TerraformResource {
   readonly edition?: string;

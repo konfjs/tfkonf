@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CachingConfig {
+export interface AwsAppsyncResolverArgsCachingConfig {
   caching_keys?: string[];
   ttl?: number;
 }
-export interface PipelineConfig {
+export interface AwsAppsyncResolverArgsPipelineConfig {
   functions?: string[];
 }
-export interface Runtime {
+export interface AwsAppsyncResolverArgsruntime {
   name: string;
   runtime_version: string;
 }
-export interface LambdaConflictHandlerConfig {
+export interface AwsAppsyncResolverArgsSyncConfigLambdaConflictHandlerConfig {
   lambda_conflict_handler_arn?: string;
 }
-export interface SyncConfig {
+export interface AwsAppsyncResolverArgsSyncConfig {
   conflict_detection?: string;
   conflict_handler?: string;
-  lambda_conflict_handler_config: LambdaConflictHandlerConfig;
+  lambda_conflict_handler_config: AwsAppsyncResolverArgsSyncConfigLambdaConflictHandlerConfig;
 }
 export interface AwsAppsyncResolverArgs {
   api_id: string;
@@ -28,10 +28,10 @@ export interface AwsAppsyncResolverArgs {
   request_template?: string;
   response_template?: string;
   type: string;
-  caching_config: CachingConfig;
-  pipeline_config: PipelineConfig;
-  runtime: Runtime;
-  sync_config: SyncConfig;
+  caching_config: AwsAppsyncResolverArgsCachingConfig;
+  pipeline_config: AwsAppsyncResolverArgsPipelineConfig;
+  runtime: AwsAppsyncResolverArgsruntime;
+  sync_config: AwsAppsyncResolverArgsSyncConfig;
 }
 export class aws_appsync_resolver extends TerraformResource {
   readonly arn!: string;

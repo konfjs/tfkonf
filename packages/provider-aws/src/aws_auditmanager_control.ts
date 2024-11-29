@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SourceKeyword {
+export interface AwsAuditmanagerControlArgsControlMappingSourcesSourceKeyword {
   keyword_input_type: string;
   keyword_value: string;
 }
-export interface ControlMappingSources {
+export interface AwsAuditmanagerControlArgsControlMappingSources {
   source_description?: string;
   source_frequency?: string;
   source_name: string;
   source_set_up_option: string;
   source_type: string;
   troubleshooting_text?: string;
-  source_keyword: SourceKeyword;
+  source_keyword: AwsAuditmanagerControlArgsControlMappingSourcesSourceKeyword;
 }
 export interface AwsAuditmanagerControlArgs {
   action_plan_instructions?: string;
@@ -21,7 +21,7 @@ export interface AwsAuditmanagerControlArgs {
     [key: string]: string;
   };
   testing_information?: string;
-  control_mapping_sources: ControlMappingSources;
+  control_mapping_sources: AwsAuditmanagerControlArgsControlMappingSources;
 }
 export class aws_auditmanager_control extends TerraformResource {
   readonly arn!: string;

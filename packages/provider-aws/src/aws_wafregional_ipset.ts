@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IpSetDescriptor {
+export interface AwsWafregionalIpsetArgsIpSetDescriptor {
   type: string;
   value: string;
 }
 export interface AwsWafregionalIpsetArgs {
   name: string;
-  ip_set_descriptor: IpSetDescriptor;
+  ip_set_descriptor: AwsWafregionalIpsetArgsIpSetDescriptor;
 }
 export class aws_wafregional_ipset extends TerraformResource {
   readonly arn!: string;

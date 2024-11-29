@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ConfigParameter {
+export interface AwsRedshiftserverlessWorkgroupArgsConfigParameter {
   parameter_key: string;
   parameter_value: string;
 }
-export interface Timeouts {
+export interface AwsRedshiftserverlessWorkgroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -17,8 +17,8 @@ export interface AwsRedshiftserverlessWorkgroupArgs {
     [key: string]: string;
   };
   workgroup_name: string;
-  config_parameter: ConfigParameter;
-  timeouts: Timeouts;
+  config_parameter: AwsRedshiftserverlessWorkgroupArgsConfigParameter;
+  timeouts: AwsRedshiftserverlessWorkgroupArgstimeouts;
 }
 export class aws_redshiftserverless_workgroup extends TerraformResource {
   readonly arn!: string;

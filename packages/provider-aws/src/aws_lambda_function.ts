@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeadLetterConfig {
+export interface AwsLambdaFunctionArgsDeadLetterConfig {
   target_arn: string;
 }
-export interface Environment {
+export interface AwsLambdaFunctionArgsenvironment {
   variables?: {
     [key: string]: string;
   };
 }
-export interface EphemeralStorage {}
-export interface FileSystemConfig {
+export interface AwsLambdaFunctionArgsEphemeralStorage {}
+export interface AwsLambdaFunctionArgsFileSystemConfig {
   arn: string;
   local_mount_path: string;
 }
-export interface ImageConfig {
+export interface AwsLambdaFunctionArgsImageConfig {
   command?: string[];
   entry_point?: string[];
   working_directory?: string;
 }
-export interface LoggingConfig {
+export interface AwsLambdaFunctionArgsLoggingConfig {
   application_log_level?: string;
   log_format: string;
   system_log_level?: string;
 }
-export interface SnapStart {
+export interface AwsLambdaFunctionArgsSnapStart {
   apply_on: string;
 }
-export interface Timeouts {
+export interface AwsLambdaFunctionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TracingConfig {
+export interface AwsLambdaFunctionArgsTracingConfig {
   mode: string;
 }
-export interface VpcConfig {
+export interface AwsLambdaFunctionArgsVpcConfig {
   ipv6_allowed_for_dual_stack?: boolean;
   security_group_ids: string[];
   subnet_ids: string[];
@@ -63,16 +63,16 @@ export interface AwsLambdaFunctionArgs {
     [key: string]: string;
   };
   timeout?: number;
-  dead_letter_config: DeadLetterConfig;
-  environment: Environment;
-  ephemeral_storage: EphemeralStorage;
-  file_system_config: FileSystemConfig;
-  image_config: ImageConfig;
-  logging_config: LoggingConfig;
-  snap_start: SnapStart;
-  timeouts: Timeouts;
-  tracing_config: TracingConfig;
-  vpc_config: VpcConfig;
+  dead_letter_config: AwsLambdaFunctionArgsDeadLetterConfig;
+  environment: AwsLambdaFunctionArgsenvironment;
+  ephemeral_storage: AwsLambdaFunctionArgsEphemeralStorage;
+  file_system_config: AwsLambdaFunctionArgsFileSystemConfig;
+  image_config: AwsLambdaFunctionArgsImageConfig;
+  logging_config: AwsLambdaFunctionArgsLoggingConfig;
+  snap_start: AwsLambdaFunctionArgsSnapStart;
+  timeouts: AwsLambdaFunctionArgstimeouts;
+  tracing_config: AwsLambdaFunctionArgsTracingConfig;
+  vpc_config: AwsLambdaFunctionArgsVpcConfig;
 }
 export class aws_lambda_function extends TerraformResource {
   readonly architectures?: string[];

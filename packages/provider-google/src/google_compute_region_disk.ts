@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AsyncPrimaryDisk {
+export interface GoogleComputeRegionDiskArgsAsyncPrimaryDisk {
   disk: string;
 }
-export interface DiskEncryptionKey {
+export interface GoogleComputeRegionDiskArgsDiskEncryptionKey {
   kms_key_name?: string;
   raw_key?: string;
 }
-export interface GuestOsFeatures {
+export interface GoogleComputeRegionDiskArgsGuestOsFeatures {
   type: string;
 }
-export interface SourceSnapshotEncryptionKey {
+export interface GoogleComputeRegionDiskArgsSourceSnapshotEncryptionKey {
   raw_key?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionDiskArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,11 +27,11 @@ export interface GoogleComputeRegionDiskArgs {
   snapshot?: string;
   source_disk?: string;
   type?: string;
-  async_primary_disk: AsyncPrimaryDisk;
-  disk_encryption_key: DiskEncryptionKey;
-  guest_os_features: GuestOsFeatures;
-  source_snapshot_encryption_key: SourceSnapshotEncryptionKey;
-  timeouts: Timeouts;
+  async_primary_disk: GoogleComputeRegionDiskArgsAsyncPrimaryDisk;
+  disk_encryption_key: GoogleComputeRegionDiskArgsDiskEncryptionKey;
+  guest_os_features: GoogleComputeRegionDiskArgsGuestOsFeatures;
+  source_snapshot_encryption_key: GoogleComputeRegionDiskArgsSourceSnapshotEncryptionKey;
+  timeouts: GoogleComputeRegionDiskArgstimeouts;
 }
 export class google_compute_region_disk extends TerraformResource {
   readonly creation_timestamp!: string;

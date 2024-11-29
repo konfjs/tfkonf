@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NetworkSettings {
+export interface GoogleAppEngineServiceNetworkSettingsArgsNetworkSettings {
   ingress_traffic_allowed?: string;
 }
-export interface Timeouts {
+export interface GoogleAppEngineServiceNetworkSettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleAppEngineServiceNetworkSettingsArgs {
   service: string;
-  network_settings: NetworkSettings;
-  timeouts: Timeouts;
+  network_settings: GoogleAppEngineServiceNetworkSettingsArgsNetworkSettings;
+  timeouts: GoogleAppEngineServiceNetworkSettingsArgstimeouts;
 }
 export class google_app_engine_service_network_settings extends TerraformResource {
   readonly id?: string;

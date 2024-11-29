@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSqlDatabaseArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleSqlDatabaseArgs {
   deletion_policy?: string;
   instance: string;
   name: string;
-  timeouts: Timeouts;
+  timeouts: GoogleSqlDatabaseArgstimeouts;
 }
 export class google_sql_database extends TerraformResource {
   readonly charset?: string;

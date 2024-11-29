@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NetworkEndpoints {
+export interface GoogleComputeNetworkEndpointsArgsNetworkEndpoints {
   instance?: string;
   ip_address: string;
   port?: number;
 }
-export interface Timeouts {
+export interface GoogleComputeNetworkEndpointsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleComputeNetworkEndpointsArgs {
   network_endpoint_group: string;
-  network_endpoints: NetworkEndpoints;
-  timeouts: Timeouts;
+  network_endpoints: GoogleComputeNetworkEndpointsArgsNetworkEndpoints;
+  timeouts: GoogleComputeNetworkEndpointsArgstimeouts;
 }
 export class google_compute_network_endpoints extends TerraformResource {
   readonly id?: string;

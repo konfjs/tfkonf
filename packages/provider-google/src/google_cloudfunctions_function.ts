@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FailurePolicy {
+export interface GoogleCloudfunctionsFunctionArgsEventTriggerFailurePolicy {
   retry: boolean;
 }
-export interface EventTrigger {
+export interface GoogleCloudfunctionsFunctionArgsEventTrigger {
   event_type: string;
   resource: string;
-  failure_policy: FailurePolicy;
+  failure_policy: GoogleCloudfunctionsFunctionArgsEventTriggerFailurePolicy;
 }
-export interface SecretEnvironmentVariables {
+export interface GoogleCloudfunctionsFunctionArgsSecretEnvironmentVariables {
   key: string;
   secret: string;
   version: string;
 }
-export interface Versions {
+export interface GoogleCloudfunctionsFunctionArgsSecretVolumesversions {
   path: string;
   version: string;
 }
-export interface SecretVolumes {
+export interface GoogleCloudfunctionsFunctionArgsSecretVolumes {
   mount_path: string;
   secret: string;
-  versions: Versions;
+  versions: GoogleCloudfunctionsFunctionArgsSecretVolumesversions;
 }
-export interface SourceRepository {
+export interface GoogleCloudfunctionsFunctionArgsSourceRepository {
   url: string;
 }
-export interface Timeouts {
+export interface GoogleCloudfunctionsFunctionArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -55,11 +55,11 @@ export interface GoogleCloudfunctionsFunctionArgs {
   timeout?: number;
   trigger_http?: boolean;
   vpc_connector?: string;
-  event_trigger: EventTrigger;
-  secret_environment_variables: SecretEnvironmentVariables;
-  secret_volumes: SecretVolumes;
-  source_repository: SourceRepository;
-  timeouts: Timeouts;
+  event_trigger: GoogleCloudfunctionsFunctionArgsEventTrigger;
+  secret_environment_variables: GoogleCloudfunctionsFunctionArgsSecretEnvironmentVariables;
+  secret_volumes: GoogleCloudfunctionsFunctionArgsSecretVolumes;
+  source_repository: GoogleCloudfunctionsFunctionArgsSourceRepository;
+  timeouts: GoogleCloudfunctionsFunctionArgstimeouts;
 }
 export class google_cloudfunctions_function extends TerraformResource {
   readonly build_service_account?: string;

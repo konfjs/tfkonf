@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GkeClusters {
+export interface GoogleDnsResponsePolicyArgsGkeClusters {
   gke_cluster_name: string;
 }
-export interface Networks {
+export interface GoogleDnsResponsePolicyArgsnetworks {
   network_url: string;
 }
-export interface Timeouts {
+export interface GoogleDnsResponsePolicyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,9 +13,9 @@ export interface Timeouts {
 export interface GoogleDnsResponsePolicyArgs {
   description?: string;
   response_policy_name: string;
-  gke_clusters: GkeClusters;
-  networks: Networks;
-  timeouts: Timeouts;
+  gke_clusters: GoogleDnsResponsePolicyArgsGkeClusters;
+  networks: GoogleDnsResponsePolicyArgsnetworks;
+  timeouts: GoogleDnsResponsePolicyArgstimeouts;
 }
 export class google_dns_response_policy extends TerraformResource {
   readonly id?: string;

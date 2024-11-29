@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ManagedScaling {}
-export interface AutoScalingGroupProvider {
+export interface AwsEcsCapacityProviderArgsAutoScalingGroupProviderManagedScaling {}
+export interface AwsEcsCapacityProviderArgsAutoScalingGroupProvider {
   auto_scaling_group_arn: string;
-  managed_scaling: ManagedScaling;
+  managed_scaling: AwsEcsCapacityProviderArgsAutoScalingGroupProviderManagedScaling;
 }
 export interface AwsEcsCapacityProviderArgs {
   name: string;
   tags?: {
     [key: string]: string;
   };
-  auto_scaling_group_provider: AutoScalingGroupProvider;
+  auto_scaling_group_provider: AwsEcsCapacityProviderArgsAutoScalingGroupProvider;
 }
 export class aws_ecs_capacity_provider extends TerraformResource {
   readonly arn!: string;

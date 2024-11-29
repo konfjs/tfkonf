@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DeployParameters {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesDeployParameters {
   match_target_labels?: {
     [key: string]: string;
   };
@@ -7,42 +7,42 @@ export interface DeployParameters {
     [key: string]: string;
   };
 }
-export interface Postdeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeploymentpostdeploy {
   actions?: string[];
 }
-export interface Predeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeploymentpredeploy {
   actions?: string[];
 }
-export interface CanaryDeployment {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeployment {
   percentages: number[];
   verify?: boolean;
-  postdeploy: Postdeploy;
-  predeploy: Predeploy;
+  postdeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeploymentpostdeploy;
+  predeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeploymentpredeploy;
 }
-export interface Postdeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigspostdeploy {
   actions?: string[];
 }
-export interface Predeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigspredeploy {
   actions?: string[];
 }
-export interface PhaseConfigs {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigs {
   percentage: number;
   phase_id: string;
   profiles?: string[];
   verify?: boolean;
-  postdeploy: Postdeploy;
-  predeploy: Predeploy;
+  postdeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigspostdeploy;
+  predeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigspredeploy;
 }
-export interface CustomCanaryDeployment {
-  phase_configs: PhaseConfigs;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeployment {
+  phase_configs: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeploymentPhaseConfigs;
 }
-export interface CloudRun {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigCloudRun {
   automatic_traffic_control?: boolean;
   canary_revision_tags?: string[];
   prior_revision_tags?: string[];
   stable_revision_tags?: string[];
 }
-export interface GatewayServiceMesh {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetesGatewayServiceMesh {
   deployment: string;
   http_route: string;
   pod_selector_label?: string;
@@ -50,50 +50,50 @@ export interface GatewayServiceMesh {
   service: string;
   stable_cutback_duration?: string;
 }
-export interface ServiceNetworking {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetesServiceNetworking {
   deployment: string;
   disable_pod_overprovisioning?: boolean;
   pod_selector_label?: string;
   service: string;
 }
-export interface Kubernetes {
-  gateway_service_mesh: GatewayServiceMesh;
-  service_networking: ServiceNetworking;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetes {
+  gateway_service_mesh: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetesGatewayServiceMesh;
+  service_networking: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetesServiceNetworking;
 }
-export interface RuntimeConfig {
-  cloud_run: CloudRun;
-  kubernetes: Kubernetes;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfig {
+  cloud_run: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigCloudRun;
+  kubernetes: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfigkubernetes;
 }
-export interface Canary {
-  canary_deployment: CanaryDeployment;
-  custom_canary_deployment: CustomCanaryDeployment;
-  runtime_config: RuntimeConfig;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanary {
+  canary_deployment: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCanaryDeployment;
+  custom_canary_deployment: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryCustomCanaryDeployment;
+  runtime_config: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanaryRuntimeConfig;
 }
-export interface Postdeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandardpostdeploy {
   actions?: string[];
 }
-export interface Predeploy {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandardpredeploy {
   actions?: string[];
 }
-export interface Standard {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandard {
   verify?: boolean;
-  postdeploy: Postdeploy;
-  predeploy: Predeploy;
+  postdeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandardpostdeploy;
+  predeploy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandardpredeploy;
 }
-export interface Strategy {
-  canary: Canary;
-  standard: Standard;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategy {
+  canary: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategycanary;
+  standard: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategystandard;
 }
-export interface Stages {
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipelinestages {
   profiles?: string[];
   target_id?: string;
-  deploy_parameters: DeployParameters;
-  strategy: Strategy;
+  deploy_parameters: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesDeployParameters;
+  strategy: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestagesstrategy;
 }
-export interface SerialPipeline {
-  stages: Stages;
+export interface GoogleClouddeployDeliveryPipelineArgsSerialPipeline {
+  stages: GoogleClouddeployDeliveryPipelineArgsSerialPipelinestages;
 }
-export interface Timeouts {
+export interface GoogleClouddeployDeliveryPipelineArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -109,8 +109,8 @@ export interface GoogleClouddeployDeliveryPipelineArgs {
   location: string;
   name: string;
   suspended?: boolean;
-  serial_pipeline: SerialPipeline;
-  timeouts: Timeouts;
+  serial_pipeline: GoogleClouddeployDeliveryPipelineArgsSerialPipeline;
+  timeouts: GoogleClouddeployDeliveryPipelineArgstimeouts;
 }
 export class google_clouddeploy_delivery_pipeline extends TerraformResource {
   readonly condition!: any[];

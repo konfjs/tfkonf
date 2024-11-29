@@ -1,53 +1,53 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleMigrationCenterPreferenceSetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AllowedMachineSeries {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferencesMachinePreferencesAllowedMachineSeries {
   code?: string;
 }
-export interface MachinePreferences {
-  allowed_machine_series: AllowedMachineSeries;
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferencesMachinePreferences {
+  allowed_machine_series: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferencesMachinePreferencesAllowedMachineSeries;
 }
-export interface ComputeEnginePreferences {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferences {
   license_type?: string;
-  machine_preferences: MachinePreferences;
+  machine_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferencesMachinePreferences;
 }
-export interface RegionPreferences {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesRegionPreferences {
   preferred_regions?: string[];
 }
-export interface NodeTypes {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesSoleTenancyPreferencesNodeTypes {
   node_name?: string;
 }
-export interface SoleTenancyPreferences {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesSoleTenancyPreferences {
   commitment_plan?: string;
   cpu_overcommit_ratio?: number;
   host_maintenance_policy?: string;
-  node_types: NodeTypes;
+  node_types: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesSoleTenancyPreferencesNodeTypes;
 }
-export interface VmwareEnginePreferences {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesVmwareEnginePreferences {
   commitment_plan?: string;
   cpu_overcommit_ratio?: number;
   memory_overcommit_ratio?: number;
   storage_deduplication_compression_ratio?: number;
 }
-export interface VirtualMachinePreferences {
+export interface GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferences {
   commitment_plan?: string;
   sizing_optimization_strategy?: string;
   target_product?: string;
-  compute_engine_preferences: ComputeEnginePreferences;
-  region_preferences: RegionPreferences;
-  sole_tenancy_preferences: SoleTenancyPreferences;
-  vmware_engine_preferences: VmwareEnginePreferences;
+  compute_engine_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesComputeEnginePreferences;
+  region_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesRegionPreferences;
+  sole_tenancy_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesSoleTenancyPreferences;
+  vmware_engine_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferencesVmwareEnginePreferences;
 }
 export interface GoogleMigrationCenterPreferenceSetArgs {
   description?: string;
   display_name?: string;
   location: string;
   preference_set_id: string;
-  timeouts: Timeouts;
-  virtual_machine_preferences: VirtualMachinePreferences;
+  timeouts: GoogleMigrationCenterPreferenceSetArgstimeouts;
+  virtual_machine_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferences;
 }
 export class google_migration_center_preference_set extends TerraformResource {
   readonly create_time!: string;

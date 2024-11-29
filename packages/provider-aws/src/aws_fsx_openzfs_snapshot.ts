@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsFsxOpenzfsSnapshotArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -11,7 +11,7 @@ export interface AwsFsxOpenzfsSnapshotArgs {
     [key: string]: string;
   };
   volume_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsFsxOpenzfsSnapshotArgstimeouts;
 }
 export class aws_fsx_openzfs_snapshot extends TerraformResource {
   readonly arn!: string;

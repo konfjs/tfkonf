@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LevelFive {
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelFive {
   name: string;
 }
-export interface LevelFour {
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelFour {
   name: string;
 }
-export interface LevelOne {
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelOne {
   name: string;
 }
-export interface LevelThree {
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelThree {
   name: string;
 }
-export interface LevelTwo {
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelTwo {
   name: string;
 }
-export interface HierarchyStructure {
-  level_five: LevelFive;
-  level_four: LevelFour;
-  level_one: LevelOne;
-  level_three: LevelThree;
-  level_two: LevelTwo;
+export interface AwsConnectUserHierarchyStructureArgsHierarchyStructure {
+  level_five: AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelFive;
+  level_four: AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelFour;
+  level_one: AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelOne;
+  level_three: AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelThree;
+  level_two: AwsConnectUserHierarchyStructureArgsHierarchyStructureLevelTwo;
 }
 export interface AwsConnectUserHierarchyStructureArgs {
   instance_id: string;
-  hierarchy_structure: HierarchyStructure;
+  hierarchy_structure: AwsConnectUserHierarchyStructureArgsHierarchyStructure;
 }
 export class aws_connect_user_hierarchy_structure extends TerraformResource {
   readonly id?: string;

@@ -1,21 +1,21 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ClientConfigurations {
+export interface AwsFsxOpenzfsVolumeArgsNfsExportsClientConfigurations {
   clients: string;
   options: string[];
 }
-export interface NfsExports {
-  client_configurations: ClientConfigurations;
+export interface AwsFsxOpenzfsVolumeArgsNfsExports {
+  client_configurations: AwsFsxOpenzfsVolumeArgsNfsExportsClientConfigurations;
 }
-export interface OriginSnapshot {
+export interface AwsFsxOpenzfsVolumeArgsOriginSnapshot {
   copy_strategy: string;
   snapshot_arn: string;
 }
-export interface Timeouts {
+export interface AwsFsxOpenzfsVolumeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UserAndGroupQuotas {
+export interface AwsFsxOpenzfsVolumeArgsUserAndGroupQuotas {
   id: number;
   storage_capacity_quota_gib: number;
   type: string;
@@ -31,10 +31,10 @@ export interface AwsFsxOpenzfsVolumeArgs {
     [key: string]: string;
   };
   volume_type?: string;
-  nfs_exports: NfsExports;
-  origin_snapshot: OriginSnapshot;
-  timeouts: Timeouts;
-  user_and_group_quotas: UserAndGroupQuotas;
+  nfs_exports: AwsFsxOpenzfsVolumeArgsNfsExports;
+  origin_snapshot: AwsFsxOpenzfsVolumeArgsOriginSnapshot;
+  timeouts: AwsFsxOpenzfsVolumeArgstimeouts;
+  user_and_group_quotas: AwsFsxOpenzfsVolumeArgsUserAndGroupQuotas;
 }
 export class aws_fsx_openzfs_volume extends TerraformResource {
   readonly arn!: string;

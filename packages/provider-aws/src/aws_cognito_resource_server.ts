@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Scope {
+export interface AwsCognitoResourceServerArgsscope {
   scope_description: string;
   scope_name: string;
 }
@@ -7,7 +7,7 @@ export interface AwsCognitoResourceServerArgs {
   identifier: string;
   name: string;
   user_pool_id: string;
-  scope: Scope;
+  scope: AwsCognitoResourceServerArgsscope;
 }
 export class aws_cognito_resource_server extends TerraformResource {
   readonly id?: string;

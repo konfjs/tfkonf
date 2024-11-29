@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessGrantsLocationConfiguration {
+export interface AwsS3controlAccessGrantArgsAccessGrantsLocationConfiguration {
   s3_sub_prefix?: string;
 }
-export interface Grantee {
+export interface AwsS3controlAccessGrantArgsgrantee {
   grantee_identifier: string;
   grantee_type: string;
 }
@@ -13,8 +13,8 @@ export interface AwsS3controlAccessGrantArgs {
   tags?: {
     [key: string]: string;
   };
-  access_grants_location_configuration: AccessGrantsLocationConfiguration;
-  grantee: Grantee;
+  access_grants_location_configuration: AwsS3controlAccessGrantArgsAccessGrantsLocationConfiguration;
+  grantee: AwsS3controlAccessGrantArgsgrantee;
 }
 export class aws_s3control_access_grant extends TerraformResource {
   readonly access_grant_arn!: string;

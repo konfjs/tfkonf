@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PolicyBindings {
+export interface GoogleGkeHubFleetArgsDefaultClusterConfigBinaryAuthorizationConfigPolicyBindings {
   name?: string;
 }
-export interface BinaryAuthorizationConfig {
+export interface GoogleGkeHubFleetArgsDefaultClusterConfigBinaryAuthorizationConfig {
   evaluation_mode?: string;
-  policy_bindings: PolicyBindings;
+  policy_bindings: GoogleGkeHubFleetArgsDefaultClusterConfigBinaryAuthorizationConfigPolicyBindings;
 }
-export interface SecurityPostureConfig {
+export interface GoogleGkeHubFleetArgsDefaultClusterConfigSecurityPostureConfig {
   mode?: string;
   vulnerability_mode?: string;
 }
-export interface DefaultClusterConfig {
-  binary_authorization_config: BinaryAuthorizationConfig;
-  security_posture_config: SecurityPostureConfig;
+export interface GoogleGkeHubFleetArgsDefaultClusterConfig {
+  binary_authorization_config: GoogleGkeHubFleetArgsDefaultClusterConfigBinaryAuthorizationConfig;
+  security_posture_config: GoogleGkeHubFleetArgsDefaultClusterConfigSecurityPostureConfig;
 }
-export interface Timeouts {
+export interface GoogleGkeHubFleetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleGkeHubFleetArgs {
   display_name?: string;
-  default_cluster_config: DefaultClusterConfig;
-  timeouts: Timeouts;
+  default_cluster_config: GoogleGkeHubFleetArgsDefaultClusterConfig;
+  timeouts: GoogleGkeHubFleetArgstimeouts;
 }
 export class google_gke_hub_fleet extends TerraformResource {
   readonly create_time!: string;

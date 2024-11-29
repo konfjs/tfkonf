@@ -1,45 +1,45 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface CheckCertificateRevocationStatus {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationCheckCertificateRevocationStatus {
   revoked_status_action?: string;
   unknown_status_action?: string;
 }
-export interface Destination {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopedestination {
   address_definition: string;
 }
-export interface DestinationPorts {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopeDestinationPorts {
   from_port: number;
   to_port: number;
 }
-export interface Source {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopesource {
   address_definition: string;
 }
-export interface SourcePorts {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopeSourcePorts {
   from_port: number;
   to_port: number;
 }
-export interface Scope {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscope {
   protocols: number[];
-  destination: Destination;
-  destination_ports: DestinationPorts;
-  source: Source;
-  source_ports: SourcePorts;
+  destination: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopedestination;
+  destination_ports: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopeDestinationPorts;
+  source: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopesource;
+  source_ports: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscopeSourcePorts;
 }
-export interface ServerCertificate {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationServerCertificate {
   resource_arn?: string;
 }
-export interface ServerCertificateConfiguration {
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfiguration {
   certificate_authority_arn?: string;
-  check_certificate_revocation_status: CheckCertificateRevocationStatus;
-  scope: Scope;
-  server_certificate: ServerCertificate;
+  check_certificate_revocation_status: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationCheckCertificateRevocationStatus;
+  scope: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationscope;
+  server_certificate: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfigurationServerCertificate;
 }
-export interface TlsInspectionConfiguration {
-  server_certificate_configuration: ServerCertificateConfiguration;
+export interface AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfiguration {
+  server_certificate_configuration: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfigurationServerCertificateConfiguration;
 }
 export interface AwsNetworkfirewallTlsInspectionConfigurationArgs {
   description?: string;
@@ -47,8 +47,8 @@ export interface AwsNetworkfirewallTlsInspectionConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
-  tls_inspection_configuration: TlsInspectionConfiguration;
+  timeouts: AwsNetworkfirewallTlsInspectionConfigurationArgstimeouts;
+  tls_inspection_configuration: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfiguration;
 }
 export class aws_networkfirewall_tls_inspection_configuration extends TerraformResource {
   readonly arn!: string;

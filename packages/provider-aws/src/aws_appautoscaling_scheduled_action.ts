@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ScalableTargetAction {
+export interface AwsAppautoscalingScheduledActionArgsScalableTargetAction {
   max_capacity?: string;
   min_capacity?: string;
 }
@@ -12,7 +12,7 @@ export interface AwsAppautoscalingScheduledActionArgs {
   service_namespace: string;
   start_time?: string;
   timezone?: string;
-  scalable_target_action: ScalableTargetAction;
+  scalable_target_action: AwsAppautoscalingScheduledActionArgsScalableTargetAction;
 }
 export class aws_appautoscaling_scheduled_action extends TerraformResource {
   readonly arn!: string;

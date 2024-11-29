@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface KmsSettings {
+export interface GoogleAssuredWorkloadsWorkloadArgsKmsSettings {
   next_rotation_time: string;
   rotation_period: string;
 }
-export interface PartnerPermissions {
+export interface GoogleAssuredWorkloadsWorkloadArgsPartnerPermissions {
   assured_workloads_monitoring?: boolean;
   data_logs_viewer?: boolean;
   service_access_approver?: boolean;
 }
-export interface ResourceSettings {
+export interface GoogleAssuredWorkloadsWorkloadArgsResourceSettings {
   display_name?: string;
   resource_id?: string;
   resource_type?: string;
 }
-export interface Timeouts {
+export interface GoogleAssuredWorkloadsWorkloadArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkloadOptions {
+export interface GoogleAssuredWorkloadsWorkloadArgsWorkloadOptions {
   kaj_enrollment_type?: string;
 }
 export interface GoogleAssuredWorkloadsWorkloadArgs {
@@ -34,11 +34,11 @@ export interface GoogleAssuredWorkloadsWorkloadArgs {
   partner?: string;
   partner_services_billing_account?: string;
   provisioned_resources_parent?: string;
-  kms_settings: KmsSettings;
-  partner_permissions: PartnerPermissions;
-  resource_settings: ResourceSettings;
-  timeouts: Timeouts;
-  workload_options: WorkloadOptions;
+  kms_settings: GoogleAssuredWorkloadsWorkloadArgsKmsSettings;
+  partner_permissions: GoogleAssuredWorkloadsWorkloadArgsPartnerPermissions;
+  resource_settings: GoogleAssuredWorkloadsWorkloadArgsResourceSettings;
+  timeouts: GoogleAssuredWorkloadsWorkloadArgstimeouts;
+  workload_options: GoogleAssuredWorkloadsWorkloadArgsWorkloadOptions;
 }
 export class google_assured_workloads_workload extends TerraformResource {
   readonly compliance_status!: any[];

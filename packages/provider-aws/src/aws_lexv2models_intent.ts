@@ -1,4020 +1,4020 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroupvariation;
 }
-export interface ClosingResponse {
+export interface AwsLexv2modelsIntentArgsClosingSettingClosingResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsClosingSettingClosingResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranchresponse;
 }
-export interface Conditional {
+export interface AwsLexv2modelsIntentArgsClosingSettingconditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsClosingSettingconditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsClosingSettingconditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsClosingSettingNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsClosingSettingNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsClosingSettingNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsClosingSettingNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsClosingSettingNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsClosingSettingNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsClosingSettingNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsClosingSettingNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsClosingSettingNextStepintent;
 }
-export interface ClosingSetting {
+export interface AwsLexv2modelsIntentArgsClosingSetting {
   active?: boolean;
-  closing_response: ClosingResponse;
-  conditional: Conditional;
-  next_step: NextStep;
+  closing_response: AwsLexv2modelsIntentArgsClosingSettingClosingResponse;
+  conditional: AwsLexv2modelsIntentArgsClosingSettingconditional;
+  next_step: AwsLexv2modelsIntentArgsClosingSettingNextStep;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponse;
 }
-export interface FailureConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslot;
 }
-export interface FailureNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariation;
 }
-export interface FailureResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponse;
 }
-export interface SuccessConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslot;
 }
-export interface SuccessNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariation;
 }
-export interface SuccessResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponse;
 }
-export interface TimeoutConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslot;
 }
-export interface TimeoutNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariation;
 }
-export interface TimeoutResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroup;
 }
-export interface PostCodeHookSpecification {
-  failure_conditional: FailureConditional;
-  failure_next_step: FailureNextStep;
-  failure_response: FailureResponse;
-  success_conditional: SuccessConditional;
-  success_next_step: SuccessNextStep;
-  success_response: SuccessResponse;
-  timeout_conditional: TimeoutConditional;
-  timeout_next_step: TimeoutNextStep;
-  timeout_response: TimeoutResponse;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecification {
+  failure_conditional: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureConditional;
+  failure_next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureNextStep;
+  failure_response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationFailureResponse;
+  success_conditional: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessConditional;
+  success_next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessNextStep;
+  success_response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationSuccessResponse;
+  timeout_conditional: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutConditional;
+  timeout_next_step: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutNextStep;
+  timeout_response: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecificationTimeoutResponse;
 }
-export interface CodeHook {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingCodeHook {
   active: boolean;
   enable_code_hook_invocation: boolean;
   invocation_label?: string;
-  post_code_hook_specification: PostCodeHookSpecification;
+  post_code_hook_specification: AwsLexv2modelsIntentArgsConfirmationSettingCodeHookPostCodeHookSpecification;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranchresponse;
 }
-export interface ConfirmationConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintentslot;
 }
-export interface ConfirmationNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroupvariation;
 }
-export interface ConfirmationResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranchresponse;
 }
-export interface DeclinationConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintentslot;
 }
-export interface DeclinationNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroupvariation;
 }
-export interface DeclinationResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponseMessageGroup;
 }
-export interface ElicitationCodeHook {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingElicitationCodeHook {
   enable_code_hook_invocation?: boolean;
   invocation_label?: string;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranchresponse;
 }
-export interface FailureConditional {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintentslot;
 }
-export interface FailureNextStep {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroupvariation;
 }
-export interface FailureResponse {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingFailureResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponseMessageGroup;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroup {
+  message: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroupvariation;
 }
-export interface AllowedInputTypes {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypes {
   allow_audio_input: boolean;
   allow_dtmf_input: boolean;
 }
-export interface AudioSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecification {
   end_timeout_ms: number;
   max_length_ms: number;
 }
-export interface DtmfSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecification {
   deletion_character: string;
   end_character: string;
   end_timeout_ms: number;
   max_length: number;
 }
-export interface AudioAndDtmfInputSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecification {
   start_timeout_ms: number;
-  audio_specification: AudioSpecification;
-  dtmf_specification: DtmfSpecification;
+  audio_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationAudioSpecification;
+  dtmf_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecificationDtmfSpecification;
 }
-export interface TextInputSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecification {
   start_timeout_ms: number;
 }
-export interface PromptAttemptsSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecification {
   allow_interrupt?: boolean;
   map_block_key: string;
-  allowed_input_types: AllowedInputTypes;
-  audio_and_dtmf_input_specification: AudioAndDtmfInputSpecification;
-  text_input_specification: TextInputSpecification;
+  allowed_input_types: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAllowedInputTypes;
+  audio_and_dtmf_input_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationAudioAndDtmfInputSpecification;
+  text_input_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecificationTextInputSpecification;
 }
-export interface PromptSpecification {
+export interface AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecification {
   allow_interrupt?: boolean;
   max_retries: number;
   message_selection_strategy?: string;
-  message_group: MessageGroup;
-  prompt_attempts_specification: PromptAttemptsSpecification;
+  message_group: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationMessageGroup;
+  prompt_attempts_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecificationPromptAttemptsSpecification;
 }
-export interface ConfirmationSetting {
+export interface AwsLexv2modelsIntentArgsConfirmationSetting {
   active?: boolean;
-  code_hook: CodeHook;
-  confirmation_conditional: ConfirmationConditional;
-  confirmation_next_step: ConfirmationNextStep;
-  confirmation_response: ConfirmationResponse;
-  declination_conditional: DeclinationConditional;
-  declination_next_step: DeclinationNextStep;
-  declination_response: DeclinationResponse;
-  elicitation_code_hook: ElicitationCodeHook;
-  failure_conditional: FailureConditional;
-  failure_next_step: FailureNextStep;
-  failure_response: FailureResponse;
-  prompt_specification: PromptSpecification;
+  code_hook: AwsLexv2modelsIntentArgsConfirmationSettingCodeHook;
+  confirmation_conditional: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationConditional;
+  confirmation_next_step: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationNextStep;
+  confirmation_response: AwsLexv2modelsIntentArgsConfirmationSettingConfirmationResponse;
+  declination_conditional: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationConditional;
+  declination_next_step: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationNextStep;
+  declination_response: AwsLexv2modelsIntentArgsConfirmationSettingDeclinationResponse;
+  elicitation_code_hook: AwsLexv2modelsIntentArgsConfirmationSettingElicitationCodeHook;
+  failure_conditional: AwsLexv2modelsIntentArgsConfirmationSettingFailureConditional;
+  failure_next_step: AwsLexv2modelsIntentArgsConfirmationSettingFailureNextStep;
+  failure_response: AwsLexv2modelsIntentArgsConfirmationSettingFailureResponse;
+  prompt_specification: AwsLexv2modelsIntentArgsConfirmationSettingPromptSpecification;
 }
-export interface DialogCodeHook {
+export interface AwsLexv2modelsIntentArgsDialogCodeHook {
   enabled: boolean;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroupvariation;
 }
-export interface StartResponse {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponse {
   allow_interrupt?: boolean;
   delay_in_seconds?: number;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponseMessageGroup;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroupvariation;
 }
-export interface UpdateResponse {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponse {
   allow_interrupt?: boolean;
   frequency_in_seconds: number;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponseMessageGroup;
 }
-export interface FulfillmentUpdatesSpecification {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecification {
   active: boolean;
   timeout_in_seconds?: number;
-  start_response: StartResponse;
-  update_response: UpdateResponse;
+  start_response: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationStartResponse;
+  update_response: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecificationUpdateResponse;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranchresponse;
 }
-export interface FailureConditional {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintentslot;
 }
-export interface FailureNextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroupvariation;
 }
-export interface FailureResponse {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranchresponse;
 }
-export interface SuccessConditional {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintentslot;
 }
-export interface SuccessNextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroupvariation;
 }
-export interface SuccessResponse {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranchresponse;
 }
-export interface TimeoutConditional {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintentslot;
 }
-export interface TimeoutNextStep {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroupvariation;
 }
-export interface TimeoutResponse {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponseMessageGroup;
 }
-export interface PostFulfillmentStatusSpecification {
-  failure_conditional: FailureConditional;
-  failure_next_step: FailureNextStep;
-  failure_response: FailureResponse;
-  success_conditional: SuccessConditional;
-  success_next_step: SuccessNextStep;
-  success_response: SuccessResponse;
-  timeout_conditional: TimeoutConditional;
-  timeout_next_step: TimeoutNextStep;
-  timeout_response: TimeoutResponse;
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecification {
+  failure_conditional: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureConditional;
+  failure_next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureNextStep;
+  failure_response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationFailureResponse;
+  success_conditional: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessConditional;
+  success_next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessNextStep;
+  success_response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationSuccessResponse;
+  timeout_conditional: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutConditional;
+  timeout_next_step: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutNextStep;
+  timeout_response: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecificationTimeoutResponse;
 }
-export interface FulfillmentCodeHook {
+export interface AwsLexv2modelsIntentArgsFulfillmentCodeHook {
   active?: boolean;
   enabled: boolean;
-  fulfillment_updates_specification: FulfillmentUpdatesSpecification;
-  post_fulfillment_status_specification: PostFulfillmentStatusSpecification;
+  fulfillment_updates_specification: AwsLexv2modelsIntentArgsFulfillmentCodeHookFulfillmentUpdatesSpecification;
+  post_fulfillment_status_specification: AwsLexv2modelsIntentArgsFulfillmentCodeHookPostFulfillmentStatusSpecification;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranchresponse;
 }
-export interface FailureConditional {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintentslot;
 }
-export interface FailureNextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroupvariation;
 }
-export interface FailureResponse {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranchresponse;
 }
-export interface SuccessConditional {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintentslot;
 }
-export interface SuccessNextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroupvariation;
 }
-export interface SuccessResponse {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponseMessageGroup;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranchresponse;
 }
-export interface TimeoutConditional {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditionalDefaultBranch;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintentslot;
 }
-export interface TimeoutNextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroupvariation;
 }
-export interface TimeoutResponse {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponseMessageGroup;
 }
-export interface PostCodeHookSpecification {
-  failure_conditional: FailureConditional;
-  failure_next_step: FailureNextStep;
-  failure_response: FailureResponse;
-  success_conditional: SuccessConditional;
-  success_next_step: SuccessNextStep;
-  success_response: SuccessResponse;
-  timeout_conditional: TimeoutConditional;
-  timeout_next_step: TimeoutNextStep;
-  timeout_response: TimeoutResponse;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecification {
+  failure_conditional: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureConditional;
+  failure_next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureNextStep;
+  failure_response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationFailureResponse;
+  success_conditional: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessConditional;
+  success_next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessNextStep;
+  success_response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationSuccessResponse;
+  timeout_conditional: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutConditional;
+  timeout_next_step: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutNextStep;
+  timeout_response: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecificationTimeoutResponse;
 }
-export interface CodeHook {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingCodeHook {
   active: boolean;
   enable_code_hook_invocation: boolean;
   invocation_label?: string;
-  post_code_hook_specification: PostCodeHookSpecification;
+  post_code_hook_specification: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHookPostCodeHookSpecification;
 }
-export interface Condition {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchcondition {
   expression_string: string;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponseMessageGroup;
 }
-export interface ConditionalBranch {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranch {
   name: string;
-  condition: Condition;
-  next_step: NextStep;
-  response: Response;
+  condition: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchcondition;
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranchresponse;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStepintent;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroupvariation;
 }
-export interface Response {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponseMessageGroup;
 }
-export interface DefaultBranch {
-  next_step: NextStep;
-  response: Response;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranch {
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchNextStep;
+  response: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranchresponse;
 }
-export interface Conditional {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingconditional {
   active: boolean;
-  conditional_branch: ConditionalBranch;
-  default_branch: DefaultBranch;
+  conditional_branch: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalConditionalBranch;
+  default_branch: AwsLexv2modelsIntentArgsInitialResponseSettingconditionalDefaultBranch;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessagePlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageSsmlMessage {
   value: string;
 }
-export interface Message {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessage {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessagePlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessageSsmlMessage;
 }
-export interface CustomPayload {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationCustomPayload {
   value: string;
 }
-export interface Button {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationImageResponseCardbutton {
   text: string;
   value: string;
 }
-export interface ImageResponseCard {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationImageResponseCard {
   image_url?: string;
   subtitle?: string;
   title: string;
-  button: Button;
+  button: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationImageResponseCardbutton;
 }
-export interface PlainTextMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationPlainTextMessage {
   value: string;
 }
-export interface SsmlMessage {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationSsmlMessage {
   value: string;
 }
-export interface Variation {
-  custom_payload: CustomPayload;
-  image_response_card: ImageResponseCard;
-  plain_text_message: PlainTextMessage;
-  ssml_message: SsmlMessage;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariation {
+  custom_payload: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationCustomPayload;
+  image_response_card: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationImageResponseCard;
+  plain_text_message: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationPlainTextMessage;
+  ssml_message: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariationSsmlMessage;
 }
-export interface MessageGroup {
-  message: Message;
-  variation: Variation;
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroup {
+  message: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupmessage;
+  variation: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroupvariation;
 }
-export interface InitialResponse {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponse {
   allow_interrupt?: boolean;
-  message_group: MessageGroup;
+  message_group: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponseMessageGroup;
 }
-export interface DialogAction {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingNextStepDialogAction {
   slot_to_elicit?: string;
   suppress_next_message?: boolean;
   type: string;
 }
-export interface Value {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintentslotvalue {
   interpreted_value?: string;
 }
-export interface Slot {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintentslot {
   map_block_key: string;
   shape?: string;
-  value: Value;
+  value: AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintentslotvalue;
 }
-export interface Intent {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintent {
   name?: string;
-  slot: Slot;
+  slot: AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintentslot;
 }
-export interface NextStep {
+export interface AwsLexv2modelsIntentArgsInitialResponseSettingNextStep {
   session_attributes?: {
     [key: string]: string;
   };
-  dialog_action: DialogAction;
-  intent: Intent;
+  dialog_action: AwsLexv2modelsIntentArgsInitialResponseSettingNextStepDialogAction;
+  intent: AwsLexv2modelsIntentArgsInitialResponseSettingNextStepintent;
 }
-export interface InitialResponseSetting {
-  code_hook: CodeHook;
-  conditional: Conditional;
-  initial_response: InitialResponse;
-  next_step: NextStep;
+export interface AwsLexv2modelsIntentArgsInitialResponseSetting {
+  code_hook: AwsLexv2modelsIntentArgsInitialResponseSettingCodeHook;
+  conditional: AwsLexv2modelsIntentArgsInitialResponseSettingconditional;
+  initial_response: AwsLexv2modelsIntentArgsInitialResponseSettingInitialResponse;
+  next_step: AwsLexv2modelsIntentArgsInitialResponseSettingNextStep;
 }
-export interface InputContext {
+export interface AwsLexv2modelsIntentArgsInputContext {
   name: string;
 }
-export interface KendraConfiguration {
+export interface AwsLexv2modelsIntentArgsKendraConfiguration {
   kendra_index: string;
   query_filter_string?: string;
   query_filter_string_enabled?: boolean;
 }
-export interface OutputContext {
+export interface AwsLexv2modelsIntentArgsOutputContext {
   name: string;
   time_to_live_in_seconds: number;
   turns_to_live: number;
 }
-export interface SampleUtterance {
+export interface AwsLexv2modelsIntentArgsSampleUtterance {
   utterance: string;
 }
-export interface SlotPriority {
+export interface AwsLexv2modelsIntentArgsSlotPriority {
   priority: number;
   slot_id: string;
 }
-export interface Timeouts {
+export interface AwsLexv2modelsIntentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -4026,17 +4026,17 @@ export interface AwsLexv2modelsIntentArgs {
   locale_id: string;
   name: string;
   parent_intent_signature?: string;
-  closing_setting: ClosingSetting;
-  confirmation_setting: ConfirmationSetting;
-  dialog_code_hook: DialogCodeHook;
-  fulfillment_code_hook: FulfillmentCodeHook;
-  initial_response_setting: InitialResponseSetting;
-  input_context: InputContext;
-  kendra_configuration: KendraConfiguration;
-  output_context: OutputContext;
-  sample_utterance: SampleUtterance;
-  slot_priority: SlotPriority;
-  timeouts: Timeouts;
+  closing_setting: AwsLexv2modelsIntentArgsClosingSetting;
+  confirmation_setting: AwsLexv2modelsIntentArgsConfirmationSetting;
+  dialog_code_hook: AwsLexv2modelsIntentArgsDialogCodeHook;
+  fulfillment_code_hook: AwsLexv2modelsIntentArgsFulfillmentCodeHook;
+  initial_response_setting: AwsLexv2modelsIntentArgsInitialResponseSetting;
+  input_context: AwsLexv2modelsIntentArgsInputContext;
+  kendra_configuration: AwsLexv2modelsIntentArgsKendraConfiguration;
+  output_context: AwsLexv2modelsIntentArgsOutputContext;
+  sample_utterance: AwsLexv2modelsIntentArgsSampleUtterance;
+  slot_priority: AwsLexv2modelsIntentArgsSlotPriority;
+  timeouts: AwsLexv2modelsIntentArgstimeouts;
 }
 export class aws_lexv2models_intent extends TerraformResource {
   readonly creation_date_time!: string;

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TargetIp {
+export interface AwsRoute53ResolverRuleArgsTargetIp {
   ip?: string;
   ipv6?: string;
   port?: number;
   protocol?: string;
 }
-export interface Timeouts {
+export interface AwsRoute53ResolverRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface AwsRoute53ResolverRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  target_ip: TargetIp;
-  timeouts: Timeouts;
+  target_ip: AwsRoute53ResolverRuleArgsTargetIp;
+  timeouts: AwsRoute53ResolverRuleArgstimeouts;
 }
 export class aws_route53_resolver_rule extends TerraformResource {
   readonly arn!: string;

@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDocdbClusterSnapshotArgstimeouts {
   create?: string;
 }
 export interface AwsDocdbClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
-  timeouts: Timeouts;
+  timeouts: AwsDocdbClusterSnapshotArgstimeouts;
 }
 export class aws_docdb_cluster_snapshot extends TerraformResource {
   readonly availability_zones!: string[];

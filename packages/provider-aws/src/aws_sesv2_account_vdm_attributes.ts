@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DashboardAttributes {
+export interface AwsSesv2AccountVdmAttributesArgsDashboardAttributes {
   engagement_metrics?: string;
 }
-export interface GuardianAttributes {
+export interface AwsSesv2AccountVdmAttributesArgsGuardianAttributes {
   optimized_shared_delivery?: string;
 }
 export interface AwsSesv2AccountVdmAttributesArgs {
   vdm_enabled: string;
-  dashboard_attributes: DashboardAttributes;
-  guardian_attributes: GuardianAttributes;
+  dashboard_attributes: AwsSesv2AccountVdmAttributesArgsDashboardAttributes;
+  guardian_attributes: AwsSesv2AccountVdmAttributesArgsGuardianAttributes;
 }
 export class aws_sesv2_account_vdm_attributes extends TerraformResource {
   readonly id?: string;

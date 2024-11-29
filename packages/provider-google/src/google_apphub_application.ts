@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BusinessOwners {
+export interface GoogleApphubApplicationArgsattributesBusinessOwners {
   display_name?: string;
   email: string;
 }
-export interface Criticality {
+export interface GoogleApphubApplicationArgsattributescriticality {
   type: string;
 }
-export interface DeveloperOwners {
+export interface GoogleApphubApplicationArgsattributesDeveloperOwners {
   display_name?: string;
   email: string;
 }
-export interface Environment {
+export interface GoogleApphubApplicationArgsattributesenvironment {
   type: string;
 }
-export interface OperatorOwners {
+export interface GoogleApphubApplicationArgsattributesOperatorOwners {
   display_name?: string;
   email: string;
 }
-export interface Attributes {
-  business_owners: BusinessOwners;
-  criticality: Criticality;
-  developer_owners: DeveloperOwners;
-  environment: Environment;
-  operator_owners: OperatorOwners;
+export interface GoogleApphubApplicationArgsattributes {
+  business_owners: GoogleApphubApplicationArgsattributesBusinessOwners;
+  criticality: GoogleApphubApplicationArgsattributescriticality;
+  developer_owners: GoogleApphubApplicationArgsattributesDeveloperOwners;
+  environment: GoogleApphubApplicationArgsattributesenvironment;
+  operator_owners: GoogleApphubApplicationArgsattributesOperatorOwners;
 }
-export interface Scope {
+export interface GoogleApphubApplicationArgsscope {
   type: string;
 }
-export interface Timeouts {
+export interface GoogleApphubApplicationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,9 +37,9 @@ export interface GoogleApphubApplicationArgs {
   description?: string;
   display_name?: string;
   location: string;
-  attributes: Attributes;
-  scope: Scope;
-  timeouts: Timeouts;
+  attributes: GoogleApphubApplicationArgsattributes;
+  scope: GoogleApphubApplicationArgsscope;
+  timeouts: GoogleApphubApplicationArgstimeouts;
 }
 export class google_apphub_application extends TerraformResource {
   readonly create_time!: string;

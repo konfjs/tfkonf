@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PodIdentityAssociation {
+export interface AwsEksAddonArgsPodIdentityAssociation {
   role_arn: string;
   service_account: string;
 }
-export interface Timeouts {
+export interface AwsEksAddonArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -19,8 +19,8 @@ export interface AwsEksAddonArgs {
   tags?: {
     [key: string]: string;
   };
-  pod_identity_association: PodIdentityAssociation;
-  timeouts: Timeouts;
+  pod_identity_association: AwsEksAddonArgsPodIdentityAssociation;
+  timeouts: AwsEksAddonArgstimeouts;
 }
 export class aws_eks_addon extends TerraformResource {
   readonly addon_version?: string;

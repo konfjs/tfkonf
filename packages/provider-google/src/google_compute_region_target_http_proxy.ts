@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleComputeRegionTargetHttpProxyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -9,7 +9,7 @@ export interface GoogleComputeRegionTargetHttpProxyArgs {
   http_keep_alive_timeout_sec?: number;
   name: string;
   url_map: string;
-  timeouts: Timeouts;
+  timeouts: GoogleComputeRegionTargetHttpProxyArgstimeouts;
 }
 export class google_compute_region_target_http_proxy extends TerraformResource {
   readonly creation_timestamp!: string;

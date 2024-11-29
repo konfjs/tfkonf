@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Split {
+export interface GoogleAppEngineServiceSplitTrafficArgssplit {
   allocations: {
     [key: string]: string;
   };
   shard_by?: string;
 }
-export interface Timeouts {
+export interface GoogleAppEngineServiceSplitTrafficArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface Timeouts {
 export interface GoogleAppEngineServiceSplitTrafficArgs {
   migrate_traffic?: boolean;
   service: string;
-  split: Split;
-  timeouts: Timeouts;
+  split: GoogleAppEngineServiceSplitTrafficArgssplit;
+  timeouts: GoogleAppEngineServiceSplitTrafficArgstimeouts;
 }
 export class google_app_engine_service_split_traffic extends TerraformResource {
   readonly id?: string;

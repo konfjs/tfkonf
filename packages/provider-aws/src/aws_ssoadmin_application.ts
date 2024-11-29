@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SignInOptions {
+export interface AwsSsoadminApplicationArgsPortalOptionsSignInOptions {
   application_url?: string;
   origin: string;
 }
-export interface PortalOptions {
-  sign_in_options: SignInOptions;
+export interface AwsSsoadminApplicationArgsPortalOptions {
+  sign_in_options: AwsSsoadminApplicationArgsPortalOptionsSignInOptions;
 }
 export interface AwsSsoadminApplicationArgs {
   application_provider_arn: string;
@@ -15,7 +15,7 @@ export interface AwsSsoadminApplicationArgs {
   tags?: {
     [key: string]: string;
   };
-  portal_options: PortalOptions;
+  portal_options: AwsSsoadminApplicationArgsPortalOptions;
 }
 export class aws_ssoadmin_application extends TerraformResource {
   readonly application_account!: string;

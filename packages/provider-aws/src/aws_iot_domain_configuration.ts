@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthorizerConfig {
+export interface AwsIotDomainConfigurationArgsAuthorizerConfig {
   allow_authorizer_override?: boolean;
   default_authorizer_name?: string;
 }
-export interface TlsConfig {}
+export interface AwsIotDomainConfigurationArgsTlsConfig {}
 export interface AwsIotDomainConfigurationArgs {
   domain_name?: string;
   name: string;
@@ -14,8 +14,8 @@ export interface AwsIotDomainConfigurationArgs {
     [key: string]: string;
   };
   validation_certificate_arn?: string;
-  authorizer_config: AuthorizerConfig;
-  tls_config: TlsConfig;
+  authorizer_config: AwsIotDomainConfigurationArgsAuthorizerConfig;
+  tls_config: AwsIotDomainConfigurationArgsTlsConfig;
 }
 export class aws_iot_domain_configuration extends TerraformResource {
   readonly arn!: string;

@@ -1,25 +1,25 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Indexes {
+export interface GoogleFirestoreFieldArgsIndexConfigindexes {
   array_config?: string;
   order?: string;
   query_scope?: string;
 }
-export interface IndexConfig {
-  indexes: Indexes;
+export interface GoogleFirestoreFieldArgsIndexConfig {
+  indexes: GoogleFirestoreFieldArgsIndexConfigindexes;
 }
-export interface Timeouts {
+export interface GoogleFirestoreFieldArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface TtlConfig {}
+export interface GoogleFirestoreFieldArgsTtlConfig {}
 export interface GoogleFirestoreFieldArgs {
   collection: string;
   database?: string;
   field: string;
-  index_config: IndexConfig;
-  timeouts: Timeouts;
-  ttl_config: TtlConfig;
+  index_config: GoogleFirestoreFieldArgsIndexConfig;
+  timeouts: GoogleFirestoreFieldArgstimeouts;
+  ttl_config: GoogleFirestoreFieldArgsTtlConfig;
 }
 export class google_firestore_field extends TerraformResource {
   readonly id?: string;

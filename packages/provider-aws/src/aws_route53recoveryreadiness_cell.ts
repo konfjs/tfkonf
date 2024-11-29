@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsRoute53recoveryreadinessCellArgstimeouts {
   delete?: string;
 }
 export interface AwsRoute53recoveryreadinessCellArgs {
@@ -8,7 +8,7 @@ export interface AwsRoute53recoveryreadinessCellArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsRoute53recoveryreadinessCellArgstimeouts;
 }
 export class aws_route53recoveryreadiness_cell extends TerraformResource {
   readonly arn!: string;

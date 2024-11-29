@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SseConfiguration {
+export interface AwsVerifiedaccessGroupArgsSseConfiguration {
   customer_managed_key_enabled?: boolean;
   kms_key_arn?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsVerifiedaccessGroupArgs {
     [key: string]: string;
   };
   verifiedaccess_instance_id: string;
-  sse_configuration: SseConfiguration;
+  sse_configuration: AwsVerifiedaccessGroupArgsSseConfiguration;
 }
 export class aws_verifiedaccess_group extends TerraformResource {
   readonly creation_time!: string;

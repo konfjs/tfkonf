@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface NotificationSettings {}
-export interface SourceData {
+export interface AwsRolesanywhereTrustAnchorArgsNotificationSettings {}
+export interface AwsRolesanywhereTrustAnchorArgssourceSourceData {
   acm_pca_arn?: string;
   x509_certificate_data?: string;
 }
-export interface Source {
+export interface AwsRolesanywhereTrustAnchorArgssource {
   source_type: string;
-  source_data: SourceData;
+  source_data: AwsRolesanywhereTrustAnchorArgssourceSourceData;
 }
 export interface AwsRolesanywhereTrustAnchorArgs {
   name: string;
   tags?: {
     [key: string]: string;
   };
-  notification_settings: NotificationSettings;
-  source: Source;
+  notification_settings: AwsRolesanywhereTrustAnchorArgsNotificationSettings;
+  source: AwsRolesanywhereTrustAnchorArgssource;
 }
 export class aws_rolesanywhere_trust_anchor extends TerraformResource {
   readonly arn!: string;

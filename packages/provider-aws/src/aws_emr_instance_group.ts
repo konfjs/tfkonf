@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EbsConfig {
+export interface AwsEmrInstanceGroupArgsEbsConfig {
   iops?: number;
   size: number;
   type: string;
@@ -13,7 +13,7 @@ export interface AwsEmrInstanceGroupArgs {
   ebs_optimized?: boolean;
   instance_type: string;
   name?: string;
-  ebs_config: EbsConfig;
+  ebs_config: AwsEmrInstanceGroupArgsEbsConfig;
 }
 export class aws_emr_instance_group extends TerraformResource {
   readonly id?: string;

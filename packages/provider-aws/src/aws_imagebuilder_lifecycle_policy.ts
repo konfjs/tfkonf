@@ -1,48 +1,48 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface IncludeResources {}
-export interface Action {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailactionIncludeResources {}
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailaction {
   type: string;
-  include_resources: IncludeResources;
+  include_resources: AwsImagebuilderLifecyclePolicyArgsPolicyDetailactionIncludeResources;
 }
-export interface LastLaunched {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamisLastLaunched {
   unit: string;
   value: number;
 }
-export interface Amis {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamis {
   is_public?: boolean;
   regions?: string[];
   shared_accounts?: string[];
   tag_map?: {
     [key: string]: string;
   };
-  last_launched: LastLaunched;
+  last_launched: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamisLastLaunched;
 }
-export interface ExclusionRules {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRules {
   tag_map?: {
     [key: string]: string;
   };
-  amis: Amis;
+  amis: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRulesamis;
 }
-export interface Filter {
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetailfilter {
   retain_at_least?: number;
   type: string;
   unit?: string;
   value: number;
 }
-export interface PolicyDetail {
-  action: Action;
-  exclusion_rules: ExclusionRules;
-  filter: Filter;
+export interface AwsImagebuilderLifecyclePolicyArgsPolicyDetail {
+  action: AwsImagebuilderLifecyclePolicyArgsPolicyDetailaction;
+  exclusion_rules: AwsImagebuilderLifecyclePolicyArgsPolicyDetailExclusionRules;
+  filter: AwsImagebuilderLifecyclePolicyArgsPolicyDetailfilter;
 }
-export interface Recipe {
+export interface AwsImagebuilderLifecyclePolicyArgsResourceSelectionrecipe {
   name: string;
   semantic_version: string;
 }
-export interface ResourceSelection {
+export interface AwsImagebuilderLifecyclePolicyArgsResourceSelection {
   tag_map?: {
     [key: string]: string;
   };
-  recipe: Recipe;
+  recipe: AwsImagebuilderLifecyclePolicyArgsResourceSelectionrecipe;
 }
 export interface AwsImagebuilderLifecyclePolicyArgs {
   description?: string;
@@ -52,8 +52,8 @@ export interface AwsImagebuilderLifecyclePolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  policy_detail: PolicyDetail;
-  resource_selection: ResourceSelection;
+  policy_detail: AwsImagebuilderLifecyclePolicyArgsPolicyDetail;
+  resource_selection: AwsImagebuilderLifecyclePolicyArgsResourceSelection;
 }
 export class aws_imagebuilder_lifecycle_policy extends TerraformResource {
   readonly arn!: string;

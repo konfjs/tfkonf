@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Throttle {
+export interface AwsApiGatewayUsagePlanArgsApiStagesthrottle {
   burst_limit?: number;
   path: string;
   rate_limit?: number;
 }
-export interface ApiStages {
+export interface AwsApiGatewayUsagePlanArgsApiStages {
   api_id: string;
   stage: string;
-  throttle: Throttle;
+  throttle: AwsApiGatewayUsagePlanArgsApiStagesthrottle;
 }
-export interface QuotaSettings {
+export interface AwsApiGatewayUsagePlanArgsQuotaSettings {
   limit: number;
   offset?: number;
   period: string;
 }
-export interface ThrottleSettings {
+export interface AwsApiGatewayUsagePlanArgsThrottleSettings {
   burst_limit?: number;
   rate_limit?: number;
 }
@@ -25,9 +25,9 @@ export interface AwsApiGatewayUsagePlanArgs {
   tags?: {
     [key: string]: string;
   };
-  api_stages: ApiStages;
-  quota_settings: QuotaSettings;
-  throttle_settings: ThrottleSettings;
+  api_stages: AwsApiGatewayUsagePlanArgsApiStages;
+  quota_settings: AwsApiGatewayUsagePlanArgsQuotaSettings;
+  throttle_settings: AwsApiGatewayUsagePlanArgsThrottleSettings;
 }
 export class aws_api_gateway_usage_plan extends TerraformResource {
   readonly arn!: string;

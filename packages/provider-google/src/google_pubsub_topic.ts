@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AwsKinesis {
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsAwsKinesis {
   aws_role_arn: string;
   consumer_arn: string;
   gcp_service_account: string;
   stream_arn: string;
 }
-export interface AvroFormat {}
-export interface PubsubAvroFormat {}
-export interface TextFormat {
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorageAvroFormat {}
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStoragePubsubAvroFormat {}
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorageTextFormat {
   delimiter?: string;
 }
-export interface CloudStorage {
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorage {
   bucket: string;
   match_glob?: string;
   minimum_object_create_time?: string;
-  avro_format: AvroFormat;
-  pubsub_avro_format: PubsubAvroFormat;
-  text_format: TextFormat;
+  avro_format: GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorageAvroFormat;
+  pubsub_avro_format: GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStoragePubsubAvroFormat;
+  text_format: GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorageTextFormat;
 }
-export interface PlatformLogsSettings {
+export interface GooglePubsubTopicArgsIngestionDataSourceSettingsPlatformLogsSettings {
   severity?: string;
 }
-export interface IngestionDataSourceSettings {
-  aws_kinesis: AwsKinesis;
-  cloud_storage: CloudStorage;
-  platform_logs_settings: PlatformLogsSettings;
+export interface GooglePubsubTopicArgsIngestionDataSourceSettings {
+  aws_kinesis: GooglePubsubTopicArgsIngestionDataSourceSettingsAwsKinesis;
+  cloud_storage: GooglePubsubTopicArgsIngestionDataSourceSettingsCloudStorage;
+  platform_logs_settings: GooglePubsubTopicArgsIngestionDataSourceSettingsPlatformLogsSettings;
 }
-export interface MessageStoragePolicy {
+export interface GooglePubsubTopicArgsMessageStoragePolicy {
   allowed_persistence_regions: string[];
 }
-export interface SchemaSettings {
+export interface GooglePubsubTopicArgsSchemaSettings {
   encoding?: string;
   schema: string;
 }
-export interface Timeouts {
+export interface GooglePubsubTopicArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,10 +45,10 @@ export interface GooglePubsubTopicArgs {
   };
   message_retention_duration?: string;
   name: string;
-  ingestion_data_source_settings: IngestionDataSourceSettings;
-  message_storage_policy: MessageStoragePolicy;
-  schema_settings: SchemaSettings;
-  timeouts: Timeouts;
+  ingestion_data_source_settings: GooglePubsubTopicArgsIngestionDataSourceSettings;
+  message_storage_policy: GooglePubsubTopicArgsMessageStoragePolicy;
+  schema_settings: GooglePubsubTopicArgsSchemaSettings;
+  timeouts: GooglePubsubTopicArgstimeouts;
 }
 export class google_pubsub_topic extends TerraformResource {
   readonly effective_labels!: {

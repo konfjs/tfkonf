@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsIotPolicyArgstimeouts {
   delete?: string;
   update?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsIotPolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsIotPolicyArgstimeouts;
 }
 export class aws_iot_policy extends TerraformResource {
   readonly arn!: string;

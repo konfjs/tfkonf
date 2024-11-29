@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Git {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSyncgit {
   gcp_service_account_email?: string;
   https_proxy?: string;
   policy_dir?: string;
@@ -9,7 +9,7 @@ export interface Git {
   sync_rev?: string;
   sync_wait_secs?: string;
 }
-export interface Oci {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSyncoci {
   gcp_service_account_email?: string;
   policy_dir?: string;
   secret_type: string;
@@ -17,57 +17,57 @@ export interface Oci {
   sync_wait_secs?: string;
   version?: string;
 }
-export interface ConfigSync {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSync {
   enabled?: boolean;
   prevent_drift?: boolean;
   source_format?: string;
-  git: Git;
-  oci: Oci;
+  git: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSyncgit;
+  oci: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSyncoci;
 }
-export interface Configmanagement {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagement {
   management?: string;
   version?: string;
-  config_sync: ConfigSync;
+  config_sync: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagementConfigSync;
 }
-export interface Mesh {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigmesh {
   management: string;
 }
-export interface Limits {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourceslimits {
   cpu?: string;
   memory?: string;
 }
-export interface Requests {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesrequests {
   cpu?: string;
   memory?: string;
 }
-export interface ContainerResources {
-  limits: Limits;
-  requests: Requests;
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources {
+  limits: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourceslimits;
+  requests: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResourcesrequests;
 }
-export interface PodToleration {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodToleration {
   effect?: string;
   key?: string;
   operator?: string;
   value?: string;
 }
-export interface DeploymentConfigs {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigs {
   component: string;
-  container_resources: ContainerResources;
-  pod_toleration: PodToleration;
+  container_resources: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsContainerResources;
+  pod_toleration: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigsPodToleration;
 }
-export interface Monitoring {}
-export interface Bundles {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigmonitoring {}
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContentbundles {
   bundle: string;
   exempted_namespaces?: string[];
 }
-export interface TemplateLibrary {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary {
   installation?: string;
 }
-export interface PolicyContent {
-  bundles: Bundles;
-  template_library: TemplateLibrary;
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContent {
+  bundles: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContentbundles;
+  template_library: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContentTemplateLibrary;
 }
-export interface PolicyControllerHubConfig {
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfig {
   audit_interval_seconds?: number;
   constraint_violation_limit?: number;
   exemptable_namespaces?: string[];
@@ -75,59 +75,59 @@ export interface PolicyControllerHubConfig {
   log_denies_enabled?: boolean;
   mutation_enabled?: boolean;
   referential_rules_enabled?: boolean;
-  deployment_configs: DeploymentConfigs;
-  monitoring: Monitoring;
-  policy_content: PolicyContent;
+  deployment_configs: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigDeploymentConfigs;
+  monitoring: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigmonitoring;
+  policy_content: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfigPolicyContent;
 }
-export interface Policycontroller {
-  policy_controller_hub_config: PolicyControllerHubConfig;
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontroller {
+  policy_controller_hub_config: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontrollerPolicyControllerHubConfig;
 }
-export interface FleetDefaultMemberConfig {
-  configmanagement: Configmanagement;
-  mesh: Mesh;
-  policycontroller: Policycontroller;
+export interface GoogleGkeHubFeatureArgsFleetDefaultMemberConfig {
+  configmanagement: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigconfigmanagement;
+  mesh: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigmesh;
+  policycontroller: GoogleGkeHubFeatureArgsFleetDefaultMemberConfigpolicycontroller;
 }
-export interface PostConditions {
+export interface GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverridesPostConditions {
   soaking: string;
 }
-export interface Upgrade {
+export interface GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverridesupgrade {
   name: string;
   version: string;
 }
-export interface GkeUpgradeOverrides {
-  post_conditions: PostConditions;
-  upgrade: Upgrade;
+export interface GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverrides {
+  post_conditions: GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverridesPostConditions;
+  upgrade: GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverridesupgrade;
 }
-export interface PostConditions {
+export interface GoogleGkeHubFeatureArgsspecclusterupgradePostConditions {
   soaking: string;
 }
-export interface Clusterupgrade {
+export interface GoogleGkeHubFeatureArgsspecclusterupgrade {
   upstream_fleets: string[];
-  gke_upgrade_overrides: GkeUpgradeOverrides;
-  post_conditions: PostConditions;
+  gke_upgrade_overrides: GoogleGkeHubFeatureArgsspecclusterupgradeGkeUpgradeOverrides;
+  post_conditions: GoogleGkeHubFeatureArgsspecclusterupgradePostConditions;
 }
-export interface DefaultConfig {
+export interface GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfigDefaultConfig {
   mode?: string;
 }
-export interface FleetScopeLogsConfig {
+export interface GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfigFleetScopeLogsConfig {
   mode?: string;
 }
-export interface LoggingConfig {
-  default_config: DefaultConfig;
-  fleet_scope_logs_config: FleetScopeLogsConfig;
+export interface GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfig {
+  default_config: GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfigDefaultConfig;
+  fleet_scope_logs_config: GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfigFleetScopeLogsConfig;
 }
-export interface Fleetobservability {
-  logging_config: LoggingConfig;
+export interface GoogleGkeHubFeatureArgsspecfleetobservability {
+  logging_config: GoogleGkeHubFeatureArgsspecfleetobservabilityLoggingConfig;
 }
-export interface Multiclusteringress {
+export interface GoogleGkeHubFeatureArgsspecmulticlusteringress {
   config_membership: string;
 }
-export interface Spec {
-  clusterupgrade: Clusterupgrade;
-  fleetobservability: Fleetobservability;
-  multiclusteringress: Multiclusteringress;
+export interface GoogleGkeHubFeatureArgsspec {
+  clusterupgrade: GoogleGkeHubFeatureArgsspecclusterupgrade;
+  fleetobservability: GoogleGkeHubFeatureArgsspecfleetobservability;
+  multiclusteringress: GoogleGkeHubFeatureArgsspecmulticlusteringress;
 }
-export interface Timeouts {
+export interface GoogleGkeHubFeatureArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -138,9 +138,9 @@ export interface GoogleGkeHubFeatureArgs {
   };
   location: string;
   name?: string;
-  fleet_default_member_config: FleetDefaultMemberConfig;
-  spec: Spec;
-  timeouts: Timeouts;
+  fleet_default_member_config: GoogleGkeHubFeatureArgsFleetDefaultMemberConfig;
+  spec: GoogleGkeHubFeatureArgsspec;
+  timeouts: GoogleGkeHubFeatureArgstimeouts;
 }
 export class google_gke_hub_feature extends TerraformResource {
   readonly create_time!: string;

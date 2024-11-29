@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsVpcSecurityGroupVpcAssociationArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsVpcSecurityGroupVpcAssociationArgs {
   security_group_id: string;
   vpc_id: string;
-  timeouts: Timeouts;
+  timeouts: AwsVpcSecurityGroupVpcAssociationArgstimeouts;
 }
 export class aws_vpc_security_group_vpc_association extends TerraformResource {
   readonly state!: string;

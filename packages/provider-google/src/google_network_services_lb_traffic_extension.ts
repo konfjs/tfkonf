@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Extensions {
+export interface GoogleNetworkServicesLbTrafficExtensionArgsExtensionChainsextensions {
   authority?: string;
   fail_open?: boolean;
   forward_headers?: string[];
@@ -8,15 +8,15 @@ export interface Extensions {
   supported_events?: string[];
   timeout?: string;
 }
-export interface MatchCondition {
+export interface GoogleNetworkServicesLbTrafficExtensionArgsExtensionChainsMatchCondition {
   cel_expression: string;
 }
-export interface ExtensionChains {
+export interface GoogleNetworkServicesLbTrafficExtensionArgsExtensionChains {
   name: string;
-  extensions: Extensions;
-  match_condition: MatchCondition;
+  extensions: GoogleNetworkServicesLbTrafficExtensionArgsExtensionChainsextensions;
+  match_condition: GoogleNetworkServicesLbTrafficExtensionArgsExtensionChainsMatchCondition;
 }
-export interface Timeouts {
+export interface GoogleNetworkServicesLbTrafficExtensionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,8 +30,8 @@ export interface GoogleNetworkServicesLbTrafficExtensionArgs {
   load_balancing_scheme?: string;
   location: string;
   name: string;
-  extension_chains: ExtensionChains;
-  timeouts: Timeouts;
+  extension_chains: GoogleNetworkServicesLbTrafficExtensionArgsExtensionChains;
+  timeouts: GoogleNetworkServicesLbTrafficExtensionArgstimeouts;
 }
 export class google_network_services_lb_traffic_extension extends TerraformResource {
   readonly effective_labels!: {

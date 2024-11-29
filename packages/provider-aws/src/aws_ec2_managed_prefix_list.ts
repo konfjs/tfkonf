@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Entry {
+export interface AwsEc2ManagedPrefixListArgsentry {
   cidr: string;
   description?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsEc2ManagedPrefixListArgs {
   tags?: {
     [key: string]: string;
   };
-  entry: Entry;
+  entry: AwsEc2ManagedPrefixListArgsentry;
 }
 export class aws_ec2_managed_prefix_list extends TerraformResource {
   readonly arn!: string;

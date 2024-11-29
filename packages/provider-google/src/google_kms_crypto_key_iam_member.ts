@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleKmsCryptoKeyIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleKmsCryptoKeyIamMemberArgs {
   crypto_key_id: string;
   member: string;
   role: string;
-  condition: Condition;
+  condition: GoogleKmsCryptoKeyIamMemberArgscondition;
 }
 export class google_kms_crypto_key_iam_member extends TerraformResource {
   readonly etag!: string;

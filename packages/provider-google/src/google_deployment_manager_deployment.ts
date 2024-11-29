@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Labels {
+export interface GoogleDeploymentManagerDeploymentArgslabels {
   key?: string;
   value?: string;
 }
-export interface Config {
+export interface GoogleDeploymentManagerDeploymentArgstargetconfig {
   content: string;
 }
-export interface Imports {
+export interface GoogleDeploymentManagerDeploymentArgstargetimports {
   content?: string;
   name?: string;
 }
-export interface Target {
-  config: Config;
-  imports: Imports;
+export interface GoogleDeploymentManagerDeploymentArgstarget {
+  config: GoogleDeploymentManagerDeploymentArgstargetconfig;
+  imports: GoogleDeploymentManagerDeploymentArgstargetimports;
 }
-export interface Timeouts {
+export interface GoogleDeploymentManagerDeploymentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -25,9 +25,9 @@ export interface GoogleDeploymentManagerDeploymentArgs {
   description?: string;
   name: string;
   preview?: boolean;
-  labels: Labels;
-  target: Target;
-  timeouts: Timeouts;
+  labels: GoogleDeploymentManagerDeploymentArgslabels;
+  target: GoogleDeploymentManagerDeploymentArgstarget;
+  timeouts: GoogleDeploymentManagerDeploymentArgstimeouts;
 }
 export class google_deployment_manager_deployment extends TerraformResource {
   readonly deployment_id!: string;

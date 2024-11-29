@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RegistrationConfig {
+export interface AwsIotCaCertificateArgsRegistrationConfig {
   role_arn?: string;
   template_body?: string;
   template_name?: string;
@@ -13,7 +13,7 @@ export interface AwsIotCaCertificateArgs {
     [key: string]: string;
   };
   verification_certificate_pem?: string;
-  registration_config: RegistrationConfig;
+  registration_config: AwsIotCaCertificateArgsRegistrationConfig;
 }
 export class aws_iot_ca_certificate extends TerraformResource {
   readonly arn!: string;

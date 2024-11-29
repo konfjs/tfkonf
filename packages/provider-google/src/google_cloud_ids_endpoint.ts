@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleCloudIdsEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface GoogleCloudIdsEndpointArgs {
   network: string;
   severity: string;
   threat_exceptions?: string[];
-  timeouts: Timeouts;
+  timeouts: GoogleCloudIdsEndpointArgstimeouts;
 }
 export class google_cloud_ids_endpoint extends TerraformResource {
   readonly create_time!: string;

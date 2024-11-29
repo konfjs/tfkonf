@@ -1,70 +1,70 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SimpleCriterion {}
-export interface TagValues {}
-export interface TagCriterion {
-  tag_values: TagValues;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandSimpleCriterion {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandTagCriterionTagValues {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandTagCriterion {
+  tag_values: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandTagCriterionTagValues;
 }
-export interface And {
-  simple_criterion: SimpleCriterion;
-  tag_criterion: TagCriterion;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesand {
+  simple_criterion: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandSimpleCriterion;
+  tag_criterion: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesandTagCriterion;
 }
-export interface Excludes {
-  and: And;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludes {
+  and: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludesand;
 }
-export interface SimpleCriterion {}
-export interface TagValues {}
-export interface TagCriterion {
-  tag_values: TagValues;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandSimpleCriterion {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandTagCriterionTagValues {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandTagCriterion {
+  tag_values: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandTagCriterionTagValues;
 }
-export interface And {
-  simple_criterion: SimpleCriterion;
-  tag_criterion: TagCriterion;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesand {
+  simple_criterion: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandSimpleCriterion;
+  tag_criterion: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesandTagCriterion;
 }
-export interface Includes {
-  and: And;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludes {
+  and: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludesand;
 }
-export interface BucketCriteria {
-  excludes: Excludes;
-  includes: Includes;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteria {
+  excludes: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaexcludes;
+  includes: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaincludes;
 }
-export interface BucketDefinitions {
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketDefinitions {
   account_id: string;
   buckets: string[];
 }
-export interface SimpleScopeTerm {}
-export interface TagValues {}
-export interface TagScopeTerm {
-  tag_values: TagValues;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandSimpleScopeTerm {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandTagScopeTermTagValues {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandTagScopeTerm {
+  tag_values: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandTagScopeTermTagValues;
 }
-export interface And {
-  simple_scope_term: SimpleScopeTerm;
-  tag_scope_term: TagScopeTerm;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesand {
+  simple_scope_term: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandSimpleScopeTerm;
+  tag_scope_term: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesandTagScopeTerm;
 }
-export interface Excludes {
-  and: And;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludes {
+  and: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludesand;
 }
-export interface SimpleScopeTerm {}
-export interface TagValues {}
-export interface TagScopeTerm {
-  tag_values: TagValues;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandSimpleScopeTerm {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandTagScopeTermTagValues {}
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandTagScopeTerm {
+  tag_values: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandTagScopeTermTagValues;
 }
-export interface And {
-  simple_scope_term: SimpleScopeTerm;
-  tag_scope_term: TagScopeTerm;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesand {
+  simple_scope_term: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandSimpleScopeTerm;
+  tag_scope_term: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesandTagScopeTerm;
 }
-export interface Includes {
-  and: And;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludes {
+  and: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludesand;
 }
-export interface Scoping {
-  excludes: Excludes;
-  includes: Includes;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinitionscoping {
+  excludes: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingexcludes;
+  includes: AwsMacie2ClassificationJobArgsS3JobDefinitionscopingincludes;
 }
-export interface S3JobDefinition {
-  bucket_criteria: BucketCriteria;
-  bucket_definitions: BucketDefinitions;
-  scoping: Scoping;
+export interface AwsMacie2ClassificationJobArgsS3JobDefinition {
+  bucket_criteria: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteria;
+  bucket_definitions: AwsMacie2ClassificationJobArgsS3JobDefinitionBucketDefinitions;
+  scoping: AwsMacie2ClassificationJobArgsS3JobDefinitionscoping;
 }
-export interface ScheduleFrequency {
+export interface AwsMacie2ClassificationJobArgsScheduleFrequency {
   daily_schedule?: boolean;
 }
 export interface AwsMacie2ClassificationJobArgs {
@@ -73,8 +73,8 @@ export interface AwsMacie2ClassificationJobArgs {
   tags?: {
     [key: string]: string;
   };
-  s3_job_definition: S3JobDefinition;
-  schedule_frequency: ScheduleFrequency;
+  s3_job_definition: AwsMacie2ClassificationJobArgsS3JobDefinition;
+  schedule_frequency: AwsMacie2ClassificationJobArgsScheduleFrequency;
 }
 export class aws_macie2_classification_job extends TerraformResource {
   readonly created_at!: string;

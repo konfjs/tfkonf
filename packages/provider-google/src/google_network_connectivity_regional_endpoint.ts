@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleNetworkConnectivityRegionalEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,7 +13,7 @@ export interface GoogleNetworkConnectivityRegionalEndpointArgs {
   location: string;
   name: string;
   target_google_api: string;
-  timeouts: Timeouts;
+  timeouts: GoogleNetworkConnectivityRegionalEndpointArgstimeouts;
 }
 export class google_network_connectivity_regional_endpoint extends TerraformResource {
   readonly address?: string;

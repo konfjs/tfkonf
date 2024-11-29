@@ -1,215 +1,215 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ProfileTable {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsExportDataProfileTable {
   dataset_id?: string;
   project_id?: string;
   table_id?: string;
 }
-export interface ExportData {
-  profile_table: ProfileTable;
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsExportData {
+  profile_table: GoogleDataLossPreventionDiscoveryConfigArgsactionsExportDataProfileTable;
 }
-export interface Conditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubConditionexpressionsconditions {
   minimum_risk_score?: string;
   minimum_sensitivity_score?: string;
 }
-export interface Expressions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubConditionexpressions {
   logical_operator?: string;
-  conditions: Conditions;
+  conditions: GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubConditionexpressionsconditions;
 }
-export interface PubsubCondition {
-  expressions: Expressions;
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubCondition {
+  expressions: GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubConditionexpressions;
 }
-export interface PubSubNotification {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotification {
   detail_of_message?: string;
   event?: string;
   topic?: string;
-  pubsub_condition: PubsubCondition;
+  pubsub_condition: GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotificationPubsubCondition;
 }
-export interface SensitivityScore {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditionsSensitivityScore {
   score: string;
 }
-export interface Tag {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditionstag {
   namespaced_value?: string;
 }
-export interface TagConditions {
-  sensitivity_score: SensitivityScore;
-  tag: Tag;
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditions {
+  sensitivity_score: GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditionsSensitivityScore;
+  tag: GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditionstag;
 }
-export interface TagResources {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResources {
   lower_data_risk_to_low?: boolean;
   profile_generations_to_tag?: string[];
-  tag_conditions: TagConditions;
+  tag_conditions: GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResourcesTagConditions;
 }
-export interface Actions {
-  export_data: ExportData;
-  pub_sub_notification: PubSubNotification;
-  tag_resources: TagResources;
+export interface GoogleDataLossPreventionDiscoveryConfigArgsactions {
+  export_data: GoogleDataLossPreventionDiscoveryConfigArgsactionsExportData;
+  pub_sub_notification: GoogleDataLossPreventionDiscoveryConfigArgsactionsPubSubNotification;
+  tag_resources: GoogleDataLossPreventionDiscoveryConfigArgsactionsTagResources;
 }
-export interface Location {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsOrgConfiglocation {
   folder_id?: string;
   organization_id?: string;
 }
-export interface OrgConfig {
+export interface GoogleDataLossPreventionDiscoveryConfigArgsOrgConfig {
   project_id?: string;
-  location: Location;
+  location: GoogleDataLossPreventionDiscoveryConfigArgsOrgConfiglocation;
 }
-export interface InspectTemplateModifiedCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceInspectTemplateModifiedCadence {
   frequency?: string;
 }
-export interface SchemaModifiedCadence {
-  frequency?: string;
-  types?: string[];
-}
-export interface TableModifiedCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceSchemaModifiedCadence {
   frequency?: string;
   types?: string[];
 }
-export interface Cadence {
-  inspect_template_modified_cadence: InspectTemplateModifiedCadence;
-  schema_modified_cadence: SchemaModifiedCadence;
-  table_modified_cadence: TableModifiedCadence;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceTableModifiedCadence {
+  frequency?: string;
+  types?: string[];
 }
-export interface OrConditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadence {
+  inspect_template_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceInspectTemplateModifiedCadence;
+  schema_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceSchemaModifiedCadence;
+  table_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadenceTableModifiedCadence;
+}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditionsOrConditions {
   min_age?: string;
   min_row_count?: number;
 }
-export interface Types {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditionstypes {
   types?: string[];
 }
-export interface Conditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditions {
   created_after?: string;
   type_collection?: string;
-  or_conditions: OrConditions;
-  types: Types;
+  or_conditions: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditionsOrConditions;
+  types: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditionstypes;
 }
-export interface Disabled {}
-export interface OtherTables {}
-export interface TableReference {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetdisabled {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilterOtherTables {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilterTableReference {
   dataset_id: string;
   table_id: string;
 }
-export interface Patterns {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertablesIncludeRegexespatterns {
   dataset_id_regex?: string;
   project_id_regex?: string;
   table_id_regex?: string;
 }
-export interface IncludeRegexes {
-  patterns: Patterns;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertablesIncludeRegexes {
+  patterns: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertablesIncludeRegexespatterns;
 }
-export interface Tables {
-  include_regexes: IncludeRegexes;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertables {
+  include_regexes: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertablesIncludeRegexes;
 }
-export interface Filter {
-  other_tables: OtherTables;
-  table_reference: TableReference;
-  tables: Tables;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilter {
+  other_tables: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilterOtherTables;
+  table_reference: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilterTableReference;
+  tables: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfiltertables;
 }
-export interface BigQueryTarget {
-  cadence: Cadence;
-  conditions: Conditions;
-  disabled: Disabled;
-  filter: Filter;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTarget {
+  cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetcadence;
+  conditions: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetconditions;
+  disabled: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetdisabled;
+  filter: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTargetfilter;
 }
-export interface Conditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetconditions {
   database_engines?: string[];
   types?: string[];
 }
-export interface Disabled {}
-export interface Patterns {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetdisabled {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollectionIncludeRegexespatterns {
   database_regex?: string;
   database_resource_name_regex?: string;
   instance_regex?: string;
   project_id_regex?: string;
 }
-export interface IncludeRegexes {
-  patterns: Patterns;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollectionIncludeRegexes {
+  patterns: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollectionIncludeRegexespatterns;
 }
-export interface Collection {
-  include_regexes: IncludeRegexes;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollection {
+  include_regexes: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollectionIncludeRegexes;
 }
-export interface DatabaseResourceReference {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilterDatabaseResourceReference {
   database: string;
   database_resource: string;
   instance: string;
   project_id: string;
 }
-export interface Others {}
-export interface Filter {
-  collection: Collection;
-  database_resource_reference: DatabaseResourceReference;
-  others: Others;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilterothers {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilter {
+  collection: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfiltercollection;
+  database_resource_reference: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilterDatabaseResourceReference;
+  others: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilterothers;
 }
-export interface InspectTemplateModifiedCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadenceInspectTemplateModifiedCadence {
   frequency: string;
 }
-export interface SchemaModifiedCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadenceSchemaModifiedCadence {
   frequency?: string;
   types?: string[];
 }
-export interface GenerationCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadence {
   refresh_frequency?: string;
-  inspect_template_modified_cadence: InspectTemplateModifiedCadence;
-  schema_modified_cadence: SchemaModifiedCadence;
+  inspect_template_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadenceInspectTemplateModifiedCadence;
+  schema_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadenceSchemaModifiedCadence;
 }
-export interface CloudSqlTarget {
-  conditions: Conditions;
-  disabled: Disabled;
-  filter: Filter;
-  generation_cadence: GenerationCadence;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTarget {
+  conditions: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetconditions;
+  disabled: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetdisabled;
+  filter: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetfilter;
+  generation_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTargetGenerationCadence;
 }
-export interface CloudStorageConditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetconditionsCloudStorageConditions {
   included_bucket_attributes?: string[];
   included_object_attributes?: string[];
 }
-export interface Conditions {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetconditions {
   created_after?: string;
   min_age?: string;
-  cloud_storage_conditions: CloudStorageConditions;
+  cloud_storage_conditions: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetconditionsCloudStorageConditions;
 }
-export interface Disabled {}
-export interface CloudStorageResourceReference {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetdisabled {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilterCloudStorageResourceReference {
   bucket_name?: string;
   project_id?: string;
 }
-export interface CloudStorageRegex {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexespatternsCloudStorageRegex {
   bucket_name_regex?: string;
   project_id_regex?: string;
 }
-export interface Patterns {
-  cloud_storage_regex: CloudStorageRegex;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexespatterns {
+  cloud_storage_regex: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexespatternsCloudStorageRegex;
 }
-export interface IncludeRegexes {
-  patterns: Patterns;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexes {
+  patterns: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexespatterns;
 }
-export interface Collection {
-  include_regexes: IncludeRegexes;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollection {
+  include_regexes: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollectionIncludeRegexes;
 }
-export interface Others {}
-export interface Filter {
-  cloud_storage_resource_reference: CloudStorageResourceReference;
-  collection: Collection;
-  others: Others;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilterothers {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilter {
+  cloud_storage_resource_reference: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilterCloudStorageResourceReference;
+  collection: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfiltercollection;
+  others: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilterothers;
 }
-export interface InspectTemplateModifiedCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetGenerationCadenceInspectTemplateModifiedCadence {
   frequency?: string;
 }
-export interface GenerationCadence {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetGenerationCadence {
   refresh_frequency?: string;
-  inspect_template_modified_cadence: InspectTemplateModifiedCadence;
+  inspect_template_modified_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetGenerationCadenceInspectTemplateModifiedCadence;
 }
-export interface CloudStorageTarget {
-  conditions: Conditions;
-  disabled: Disabled;
-  filter: Filter;
-  generation_cadence: GenerationCadence;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTarget {
+  conditions: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetconditions;
+  disabled: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetdisabled;
+  filter: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetfilter;
+  generation_cadence: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTargetGenerationCadence;
 }
-export interface SecretsTarget {}
-export interface Targets {
-  big_query_target: BigQueryTarget;
-  cloud_sql_target: CloudSqlTarget;
-  cloud_storage_target: CloudStorageTarget;
-  secrets_target: SecretsTarget;
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargetsSecretsTarget {}
+export interface GoogleDataLossPreventionDiscoveryConfigArgstargets {
+  big_query_target: GoogleDataLossPreventionDiscoveryConfigArgstargetsBigQueryTarget;
+  cloud_sql_target: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudSqlTarget;
+  cloud_storage_target: GoogleDataLossPreventionDiscoveryConfigArgstargetsCloudStorageTarget;
+  secrets_target: GoogleDataLossPreventionDiscoveryConfigArgstargetsSecretsTarget;
 }
-export interface Timeouts {
+export interface GoogleDataLossPreventionDiscoveryConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -220,10 +220,10 @@ export interface GoogleDataLossPreventionDiscoveryConfigArgs {
   location: string;
   parent: string;
   status?: string;
-  actions: Actions;
-  org_config: OrgConfig;
-  targets: Targets;
-  timeouts: Timeouts;
+  actions: GoogleDataLossPreventionDiscoveryConfigArgsactions;
+  org_config: GoogleDataLossPreventionDiscoveryConfigArgsOrgConfig;
+  targets: GoogleDataLossPreventionDiscoveryConfigArgstargets;
+  timeouts: GoogleDataLossPreventionDiscoveryConfigArgstimeouts;
 }
 export class google_data_loss_prevention_discovery_config extends TerraformResource {
   readonly create_time!: string;

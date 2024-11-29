@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ResourceSet {
+export interface AwsFmsResourceSetArgsResourceSet {
   description?: string;
   name: string;
   resource_type_list?: string[];
 }
-export interface Timeouts {
+export interface AwsFmsResourceSetArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -13,8 +13,8 @@ export interface AwsFmsResourceSetArgs {
   tags?: {
     [key: string]: string;
   };
-  resource_set: ResourceSet;
-  timeouts: Timeouts;
+  resource_set: AwsFmsResourceSetArgsResourceSet;
+  timeouts: AwsFmsResourceSetArgstimeouts;
 }
 export class aws_fms_resource_set extends TerraformResource {
   readonly arn!: string;

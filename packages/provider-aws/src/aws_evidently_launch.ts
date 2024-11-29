@@ -1,38 +1,38 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Groups {
+export interface AwsEvidentlyLaunchArgsgroups {
   description?: string;
   feature: string;
   name: string;
   variation: string;
 }
-export interface MetricDefinition {
+export interface AwsEvidentlyLaunchArgsMetricMonitorsMetricDefinition {
   entity_id_key: string;
   event_pattern?: string;
   name: string;
   unit_label?: string;
   value_key: string;
 }
-export interface MetricMonitors {
-  metric_definition: MetricDefinition;
+export interface AwsEvidentlyLaunchArgsMetricMonitors {
+  metric_definition: AwsEvidentlyLaunchArgsMetricMonitorsMetricDefinition;
 }
-export interface SegmentOverrides {
+export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigstepsSegmentOverrides {
   evaluation_order: number;
   segment: string;
   weights: {
     [key: string]: number;
   };
 }
-export interface Steps {
+export interface AwsEvidentlyLaunchArgsScheduledSplitsConfigsteps {
   group_weights: {
     [key: string]: number;
   };
   start_time: string;
-  segment_overrides: SegmentOverrides;
+  segment_overrides: AwsEvidentlyLaunchArgsScheduledSplitsConfigstepsSegmentOverrides;
 }
-export interface ScheduledSplitsConfig {
-  steps: Steps;
+export interface AwsEvidentlyLaunchArgsScheduledSplitsConfig {
+  steps: AwsEvidentlyLaunchArgsScheduledSplitsConfigsteps;
 }
-export interface Timeouts {
+export interface AwsEvidentlyLaunchArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,10 +45,10 @@ export interface AwsEvidentlyLaunchArgs {
   tags?: {
     [key: string]: string;
   };
-  groups: Groups;
-  metric_monitors: MetricMonitors;
-  scheduled_splits_config: ScheduledSplitsConfig;
-  timeouts: Timeouts;
+  groups: AwsEvidentlyLaunchArgsgroups;
+  metric_monitors: AwsEvidentlyLaunchArgsMetricMonitors;
+  scheduled_splits_config: AwsEvidentlyLaunchArgsScheduledSplitsConfig;
+  timeouts: AwsEvidentlyLaunchArgstimeouts;
 }
 export class aws_evidently_launch extends TerraformResource {
   readonly arn!: string;

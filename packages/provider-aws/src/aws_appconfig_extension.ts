@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Action {
+export interface AwsAppconfigExtensionArgsActionPointaction {
   description?: string;
   name: string;
   role_arn?: string;
   uri: string;
 }
-export interface ActionPoint {
+export interface AwsAppconfigExtensionArgsActionPoint {
   point: string;
-  action: Action;
+  action: AwsAppconfigExtensionArgsActionPointaction;
 }
-export interface Parameter {
+export interface AwsAppconfigExtensionArgsparameter {
   description?: string;
   name: string;
   required?: boolean;
@@ -19,8 +19,8 @@ export interface AwsAppconfigExtensionArgs {
   tags?: {
     [key: string]: string;
   };
-  action_point: ActionPoint;
-  parameter: Parameter;
+  action_point: AwsAppconfigExtensionArgsActionPoint;
+  parameter: AwsAppconfigExtensionArgsparameter;
 }
 export class aws_appconfig_extension extends TerraformResource {
   readonly arn!: string;

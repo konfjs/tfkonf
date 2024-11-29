@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Predicate {
+export interface AwsWafregionalRuleArgspredicate {
   data_id: string;
   negated: boolean;
   type: string;
@@ -10,7 +10,7 @@ export interface AwsWafregionalRuleArgs {
   tags?: {
     [key: string]: string;
   };
-  predicate: Predicate;
+  predicate: AwsWafregionalRuleArgspredicate;
 }
 export class aws_wafregional_rule extends TerraformResource {
   readonly arn!: string;

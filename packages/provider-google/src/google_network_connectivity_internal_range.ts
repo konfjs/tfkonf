@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Migration {
+export interface GoogleNetworkConnectivityInternalRangeArgsmigration {
   source: string;
   target: string;
 }
-export interface Timeouts {
+export interface GoogleNetworkConnectivityInternalRangeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,8 +20,8 @@ export interface GoogleNetworkConnectivityInternalRangeArgs {
   prefix_length?: number;
   target_cidr_range?: string[];
   usage: string;
-  migration: Migration;
-  timeouts: Timeouts;
+  migration: GoogleNetworkConnectivityInternalRangeArgsmigration;
+  timeouts: GoogleNetworkConnectivityInternalRangeArgstimeouts;
 }
 export class google_network_connectivity_internal_range extends TerraformResource {
   readonly effective_labels!: {

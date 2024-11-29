@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataBoostIsolationReadOnly {
+export interface GoogleBigtableAppProfileArgsDataBoostIsolationReadOnly {
   compute_billing_owner: string;
 }
-export interface SingleClusterRouting {
+export interface GoogleBigtableAppProfileArgsSingleClusterRouting {
   allow_transactional_writes?: boolean;
   cluster_id: string;
 }
-export interface StandardIsolation {
+export interface GoogleBigtableAppProfileArgsStandardIsolation {
   priority: string;
 }
-export interface Timeouts {
+export interface GoogleBigtableAppProfileArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,10 +21,10 @@ export interface GoogleBigtableAppProfileArgs {
   instance?: string;
   multi_cluster_routing_cluster_ids?: string[];
   multi_cluster_routing_use_any?: boolean;
-  data_boost_isolation_read_only: DataBoostIsolationReadOnly;
-  single_cluster_routing: SingleClusterRouting;
-  standard_isolation: StandardIsolation;
-  timeouts: Timeouts;
+  data_boost_isolation_read_only: GoogleBigtableAppProfileArgsDataBoostIsolationReadOnly;
+  single_cluster_routing: GoogleBigtableAppProfileArgsSingleClusterRouting;
+  standard_isolation: GoogleBigtableAppProfileArgsStandardIsolation;
+  timeouts: GoogleBigtableAppProfileArgstimeouts;
 }
 export class google_bigtable_app_profile extends TerraformResource {
   readonly id?: string;

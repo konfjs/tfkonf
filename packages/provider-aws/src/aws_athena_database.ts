@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AclConfiguration {
+export interface AwsAthenaDatabaseArgsAclConfiguration {
   s3_acl_option: string;
 }
-export interface EncryptionConfiguration {
+export interface AwsAthenaDatabaseArgsEncryptionConfiguration {
   encryption_option: string;
   kms_key?: string;
 }
@@ -15,8 +15,8 @@ export interface AwsAthenaDatabaseArgs {
   properties?: {
     [key: string]: string;
   };
-  acl_configuration: AclConfiguration;
-  encryption_configuration: EncryptionConfiguration;
+  acl_configuration: AwsAthenaDatabaseArgsAclConfiguration;
+  encryption_configuration: AwsAthenaDatabaseArgsEncryptionConfiguration;
 }
 export class aws_athena_database extends TerraformResource {
   readonly id?: string;

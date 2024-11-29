@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleClouddeployDeliveryPipelineIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleClouddeployDeliveryPipelineIamBindingArgs {
   members: string[];
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleClouddeployDeliveryPipelineIamBindingArgscondition;
 }
 export class google_clouddeploy_delivery_pipeline_iam_binding extends TerraformResource {
   readonly etag!: string;

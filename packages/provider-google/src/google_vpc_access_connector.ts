@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Subnet {
+export interface GoogleVpcAccessConnectorArgssubnet {
   name?: string;
 }
-export interface Timeouts {
+export interface GoogleVpcAccessConnectorArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,8 +10,8 @@ export interface GoogleVpcAccessConnectorArgs {
   ip_cidr_range?: string;
   machine_type?: string;
   name: string;
-  subnet: Subnet;
-  timeouts: Timeouts;
+  subnet: GoogleVpcAccessConnectorArgssubnet;
+  timeouts: GoogleVpcAccessConnectorArgstimeouts;
 }
 export class google_vpc_access_connector extends TerraformResource {
   readonly connected_projects!: string[];

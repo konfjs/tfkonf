@@ -1,165 +1,165 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface VirtualService {
+export interface AwsAppmeshGatewayRouteArgsspecGrpcRouteactiontargetVirtualService {
   virtual_service_name: string;
 }
-export interface Target {
+export interface AwsAppmeshGatewayRouteArgsspecGrpcRouteactiontarget {
   port?: number;
-  virtual_service: VirtualService;
+  virtual_service: AwsAppmeshGatewayRouteArgsspecGrpcRouteactiontargetVirtualService;
 }
-export interface Action {
-  target: Target;
+export interface AwsAppmeshGatewayRouteArgsspecGrpcRouteaction {
+  target: AwsAppmeshGatewayRouteArgsspecGrpcRouteactiontarget;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecGrpcRoutematch {
   port?: number;
   service_name: string;
 }
-export interface GrpcRoute {
-  action: Action;
-  match: Match;
+export interface AwsAppmeshGatewayRouteArgsspecGrpcRoute {
+  action: AwsAppmeshGatewayRouteArgsspecGrpcRouteaction;
+  match: AwsAppmeshGatewayRouteArgsspecGrpcRoutematch;
 }
-export interface Hostname {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewritehostname {
   default_target_hostname: string;
 }
-export interface Path {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewritepath {
   exact: string;
 }
-export interface Prefix {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewriteprefix {
   default_prefix?: string;
   value?: string;
 }
-export interface Rewrite {
-  hostname: Hostname;
-  path: Path;
-  prefix: Prefix;
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewrite {
+  hostname: AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewritehostname;
+  path: AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewritepath;
+  prefix: AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewriteprefix;
 }
-export interface VirtualService {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2RouteactiontargetVirtualService {
   virtual_service_name: string;
 }
-export interface Target {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeactiontarget {
   port?: number;
-  virtual_service: VirtualService;
+  virtual_service: AwsAppmeshGatewayRouteArgsspecHttp2RouteactiontargetVirtualService;
 }
-export interface Action {
-  rewrite: Rewrite;
-  target: Target;
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routeaction {
+  rewrite: AwsAppmeshGatewayRouteArgsspecHttp2Routeactionrewrite;
+  target: AwsAppmeshGatewayRouteArgsspecHttp2Routeactiontarget;
 }
-export interface Range {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematchheadermatchrange {
   end: number;
   start: number;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematchheadermatch {
   exact?: string;
   prefix?: string;
   regex?: string;
   suffix?: string;
-  range: Range;
+  range: AwsAppmeshGatewayRouteArgsspecHttp2Routematchheadermatchrange;
 }
-export interface Header {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematchheader {
   invert?: boolean;
   name: string;
-  match: Match;
+  match: AwsAppmeshGatewayRouteArgsspecHttp2Routematchheadermatch;
 }
-export interface Hostname {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematchhostname {
   exact?: string;
   suffix?: string;
 }
-export interface Path {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematchpath {
   exact?: string;
   regex?: string;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2RoutematchQueryParametermatch {
   exact?: string;
 }
-export interface QueryParameter {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2RoutematchQueryParameter {
   name: string;
-  match: Match;
+  match: AwsAppmeshGatewayRouteArgsspecHttp2RoutematchQueryParametermatch;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Routematch {
   port?: number;
   prefix?: string;
-  header: Header;
-  hostname: Hostname;
-  path: Path;
-  query_parameter: QueryParameter;
+  header: AwsAppmeshGatewayRouteArgsspecHttp2Routematchheader;
+  hostname: AwsAppmeshGatewayRouteArgsspecHttp2Routematchhostname;
+  path: AwsAppmeshGatewayRouteArgsspecHttp2Routematchpath;
+  query_parameter: AwsAppmeshGatewayRouteArgsspecHttp2RoutematchQueryParameter;
 }
-export interface Http2Route {
-  action: Action;
-  match: Match;
+export interface AwsAppmeshGatewayRouteArgsspecHttp2Route {
+  action: AwsAppmeshGatewayRouteArgsspecHttp2Routeaction;
+  match: AwsAppmeshGatewayRouteArgsspecHttp2Routematch;
 }
-export interface Hostname {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewritehostname {
   default_target_hostname: string;
 }
-export interface Path {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewritepath {
   exact: string;
 }
-export interface Prefix {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewriteprefix {
   default_prefix?: string;
   value?: string;
 }
-export interface Rewrite {
-  hostname: Hostname;
-  path: Path;
-  prefix: Prefix;
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewrite {
+  hostname: AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewritehostname;
+  path: AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewritepath;
+  prefix: AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewriteprefix;
 }
-export interface VirtualService {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactiontargetVirtualService {
   virtual_service_name: string;
 }
-export interface Target {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteactiontarget {
   port?: number;
-  virtual_service: VirtualService;
+  virtual_service: AwsAppmeshGatewayRouteArgsspecHttpRouteactiontargetVirtualService;
 }
-export interface Action {
-  rewrite: Rewrite;
-  target: Target;
+export interface AwsAppmeshGatewayRouteArgsspecHttpRouteaction {
+  rewrite: AwsAppmeshGatewayRouteArgsspecHttpRouteactionrewrite;
+  target: AwsAppmeshGatewayRouteArgsspecHttpRouteactiontarget;
 }
-export interface Range {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchheadermatchrange {
   end: number;
   start: number;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchheadermatch {
   exact?: string;
   prefix?: string;
   regex?: string;
   suffix?: string;
-  range: Range;
+  range: AwsAppmeshGatewayRouteArgsspecHttpRoutematchheadermatchrange;
 }
-export interface Header {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchheader {
   invert?: boolean;
   name: string;
-  match: Match;
+  match: AwsAppmeshGatewayRouteArgsspecHttpRoutematchheadermatch;
 }
-export interface Hostname {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchhostname {
   exact?: string;
   suffix?: string;
 }
-export interface Path {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchpath {
   exact?: string;
   regex?: string;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchQueryParametermatch {
   exact?: string;
 }
-export interface QueryParameter {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematchQueryParameter {
   name: string;
-  match: Match;
+  match: AwsAppmeshGatewayRouteArgsspecHttpRoutematchQueryParametermatch;
 }
-export interface Match {
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoutematch {
   port?: number;
   prefix?: string;
-  header: Header;
-  hostname: Hostname;
-  path: Path;
-  query_parameter: QueryParameter;
+  header: AwsAppmeshGatewayRouteArgsspecHttpRoutematchheader;
+  hostname: AwsAppmeshGatewayRouteArgsspecHttpRoutematchhostname;
+  path: AwsAppmeshGatewayRouteArgsspecHttpRoutematchpath;
+  query_parameter: AwsAppmeshGatewayRouteArgsspecHttpRoutematchQueryParameter;
 }
-export interface HttpRoute {
-  action: Action;
-  match: Match;
+export interface AwsAppmeshGatewayRouteArgsspecHttpRoute {
+  action: AwsAppmeshGatewayRouteArgsspecHttpRouteaction;
+  match: AwsAppmeshGatewayRouteArgsspecHttpRoutematch;
 }
-export interface Spec {
+export interface AwsAppmeshGatewayRouteArgsspec {
   priority?: number;
-  grpc_route: GrpcRoute;
-  http2_route: Http2Route;
-  http_route: HttpRoute;
+  grpc_route: AwsAppmeshGatewayRouteArgsspecGrpcRoute;
+  http2_route: AwsAppmeshGatewayRouteArgsspecHttp2Route;
+  http_route: AwsAppmeshGatewayRouteArgsspecHttpRoute;
 }
 export interface AwsAppmeshGatewayRouteArgs {
   mesh_name: string;
@@ -168,7 +168,7 @@ export interface AwsAppmeshGatewayRouteArgs {
     [key: string]: string;
   };
   virtual_gateway_name: string;
-  spec: Spec;
+  spec: AwsAppmeshGatewayRouteArgsspec;
 }
 export class aws_appmesh_gateway_route extends TerraformResource {
   readonly arn!: string;

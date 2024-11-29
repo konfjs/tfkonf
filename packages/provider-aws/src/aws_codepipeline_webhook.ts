@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticationConfiguration {
+export interface AwsCodepipelineWebhookArgsAuthenticationConfiguration {
   allowed_ip_range?: string;
   secret_token?: string;
 }
-export interface Filter {
+export interface AwsCodepipelineWebhookArgsfilter {
   json_path: string;
   match_equals: string;
 }
@@ -15,8 +15,8 @@ export interface AwsCodepipelineWebhookArgs {
   };
   target_action: string;
   target_pipeline: string;
-  authentication_configuration: AuthenticationConfiguration;
-  filter: Filter;
+  authentication_configuration: AwsCodepipelineWebhookArgsAuthenticationConfiguration;
+  filter: AwsCodepipelineWebhookArgsfilter;
 }
 export class aws_codepipeline_webhook extends TerraformResource {
   readonly arn!: string;

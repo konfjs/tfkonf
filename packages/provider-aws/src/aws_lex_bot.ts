@@ -1,28 +1,28 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Message {
+export interface AwsLexBotArgsAbortStatementmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface AbortStatement {
+export interface AwsLexBotArgsAbortStatement {
   response_card?: string;
-  message: Message;
+  message: AwsLexBotArgsAbortStatementmessage;
 }
-export interface Message {
+export interface AwsLexBotArgsClarificationPromptmessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
-export interface ClarificationPrompt {
+export interface AwsLexBotArgsClarificationPrompt {
   max_attempts: number;
   response_card?: string;
-  message: Message;
+  message: AwsLexBotArgsClarificationPromptmessage;
 }
-export interface Intent {
+export interface AwsLexBotArgsintent {
   intent_name: string;
   intent_version: string;
 }
-export interface Timeouts {
+export interface AwsLexBotArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -38,10 +38,10 @@ export interface AwsLexBotArgs {
   name: string;
   nlu_intent_confidence_threshold?: number;
   process_behavior?: string;
-  abort_statement: AbortStatement;
-  clarification_prompt: ClarificationPrompt;
-  intent: Intent;
-  timeouts: Timeouts;
+  abort_statement: AwsLexBotArgsAbortStatement;
+  clarification_prompt: AwsLexBotArgsClarificationPrompt;
+  intent: AwsLexBotArgsintent;
+  timeouts: AwsLexBotArgstimeouts;
 }
 export class aws_lex_bot extends TerraformResource {
   readonly arn!: string;

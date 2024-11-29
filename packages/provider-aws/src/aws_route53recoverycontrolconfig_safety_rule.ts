@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RuleConfig {
+export interface AwsRoute53recoverycontrolconfigSafetyRuleArgsRuleConfig {
   inverted: boolean;
   threshold: number;
   type: string;
@@ -11,7 +11,7 @@ export interface AwsRoute53recoverycontrolconfigSafetyRuleArgs {
   name: string;
   target_controls?: string[];
   wait_period_ms: number;
-  rule_config: RuleConfig;
+  rule_config: AwsRoute53recoverycontrolconfigSafetyRuleArgsRuleConfig;
 }
 export class aws_route53recoverycontrolconfig_safety_rule extends TerraformResource {
   readonly arn!: string;

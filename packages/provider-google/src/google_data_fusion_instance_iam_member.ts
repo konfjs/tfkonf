@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleDataFusionInstanceIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleDataFusionInstanceIamMemberArgs {
   member: string;
   name: string;
   role: string;
-  condition: Condition;
+  condition: GoogleDataFusionInstanceIamMemberArgscondition;
 }
 export class google_data_fusion_instance_iam_member extends TerraformResource {
   readonly etag!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GooglePrivatecaCaPoolIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GooglePrivatecaCaPoolIamBindingArgs {
   ca_pool: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GooglePrivatecaCaPoolIamBindingArgscondition;
 }
 export class google_privateca_ca_pool_iam_binding extends TerraformResource {
   readonly etag!: string;

@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AllowedIssuanceModes {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedIssuanceModes {
   allow_config_based_issuance: boolean;
   allow_csr_based_issuance: boolean;
 }
-export interface EllipticCurve {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesEllipticCurve {
   signature_algorithm: string;
 }
-export interface Rsa {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesrsa {
   max_modulus_size?: string;
   min_modulus_size?: string;
 }
-export interface AllowedKeyTypes {
-  elliptic_curve: EllipticCurve;
-  rsa: Rsa;
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypes {
+  elliptic_curve: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesEllipticCurve;
+  rsa: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypesrsa;
 }
-export interface ObjectId {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesAdditionalExtensionsObjectId {
   object_id_path: number[];
 }
-export interface AdditionalExtensions {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesAdditionalExtensions {
   critical: boolean;
   value: string;
-  object_id: ObjectId;
+  object_id: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesAdditionalExtensionsObjectId;
 }
-export interface CaOptions {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesCaOptions {
   is_ca?: boolean;
   max_issuer_path_length?: number;
   non_ca?: boolean;
   zero_max_issuer_path_length?: boolean;
 }
-export interface BaseKeyUsage {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
   cert_sign?: boolean;
   content_commitment?: boolean;
   crl_sign?: boolean;
@@ -39,7 +39,7 @@ export interface BaseKeyUsage {
   key_agreement?: boolean;
   key_encipherment?: boolean;
 }
-export interface ExtendedKeyUsage {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage {
   client_auth?: boolean;
   code_signing?: boolean;
   email_protection?: boolean;
@@ -47,15 +47,15 @@ export interface ExtendedKeyUsage {
   server_auth?: boolean;
   time_stamping?: boolean;
 }
-export interface UnknownExtendedKeyUsages {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages {
   object_id_path: number[];
 }
-export interface KeyUsage {
-  base_key_usage: BaseKeyUsage;
-  extended_key_usage: ExtendedKeyUsage;
-  unknown_extended_key_usages: UnknownExtendedKeyUsages;
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsage {
+  base_key_usage: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage;
+  extended_key_usage: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage;
+  unknown_extended_key_usages: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages;
 }
-export interface NameConstraints {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesNameConstraints {
   critical: boolean;
   excluded_dns_names?: string[];
   excluded_email_addresses?: string[];
@@ -66,41 +66,41 @@ export interface NameConstraints {
   permitted_ip_ranges?: string[];
   permitted_uris?: string[];
 }
-export interface PolicyIds {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesPolicyIds {
   object_id_path: number[];
 }
-export interface BaselineValues {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValues {
   aia_ocsp_servers?: string[];
-  additional_extensions: AdditionalExtensions;
-  ca_options: CaOptions;
-  key_usage: KeyUsage;
-  name_constraints: NameConstraints;
-  policy_ids: PolicyIds;
+  additional_extensions: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesAdditionalExtensions;
+  ca_options: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesCaOptions;
+  key_usage: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesKeyUsage;
+  name_constraints: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesNameConstraints;
+  policy_ids: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValuesPolicyIds;
 }
-export interface CelExpression {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyIdentityConstraintsCelExpression {
   description?: string;
   expression: string;
   location?: string;
   title?: string;
 }
-export interface IdentityConstraints {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicyIdentityConstraints {
   allow_subject_alt_names_passthrough: boolean;
   allow_subject_passthrough: boolean;
-  cel_expression: CelExpression;
+  cel_expression: GooglePrivatecaCaPoolArgsIssuancePolicyIdentityConstraintsCelExpression;
 }
-export interface IssuancePolicy {
+export interface GooglePrivatecaCaPoolArgsIssuancePolicy {
   maximum_lifetime?: string;
-  allowed_issuance_modes: AllowedIssuanceModes;
-  allowed_key_types: AllowedKeyTypes;
-  baseline_values: BaselineValues;
-  identity_constraints: IdentityConstraints;
+  allowed_issuance_modes: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedIssuanceModes;
+  allowed_key_types: GooglePrivatecaCaPoolArgsIssuancePolicyAllowedKeyTypes;
+  baseline_values: GooglePrivatecaCaPoolArgsIssuancePolicyBaselineValues;
+  identity_constraints: GooglePrivatecaCaPoolArgsIssuancePolicyIdentityConstraints;
 }
-export interface PublishingOptions {
+export interface GooglePrivatecaCaPoolArgsPublishingOptions {
   encoding_format?: string;
   publish_ca_cert: boolean;
   publish_crl: boolean;
 }
-export interface Timeouts {
+export interface GooglePrivatecaCaPoolArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -112,9 +112,9 @@ export interface GooglePrivatecaCaPoolArgs {
   location: string;
   name: string;
   tier: string;
-  issuance_policy: IssuancePolicy;
-  publishing_options: PublishingOptions;
-  timeouts: Timeouts;
+  issuance_policy: GooglePrivatecaCaPoolArgsIssuancePolicy;
+  publishing_options: GooglePrivatecaCaPoolArgsPublishingOptions;
+  timeouts: GooglePrivatecaCaPoolArgstimeouts;
 }
 export class google_privateca_ca_pool extends TerraformResource {
   readonly effective_labels!: {

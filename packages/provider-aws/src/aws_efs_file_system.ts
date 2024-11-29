@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LifecyclePolicy {
+export interface AwsEfsFileSystemArgsLifecyclePolicy {
   transition_to_archive?: string;
   transition_to_ia?: string;
   transition_to_primary_storage_class?: string;
 }
-export interface Protection {}
+export interface AwsEfsFileSystemArgsprotection {}
 export interface AwsEfsFileSystemArgs {
   provisioned_throughput_in_mibps?: number;
   tags?: {
     [key: string]: string;
   };
   throughput_mode?: string;
-  lifecycle_policy: LifecyclePolicy;
-  protection: Protection;
+  lifecycle_policy: AwsEfsFileSystemArgsLifecyclePolicy;
+  protection: AwsEfsFileSystemArgsprotection;
 }
 export class aws_efs_file_system extends TerraformResource {
   readonly arn!: string;

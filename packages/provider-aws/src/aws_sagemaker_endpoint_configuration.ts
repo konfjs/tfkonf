@@ -1,55 +1,55 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ClientConfig {
+export interface AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigClientConfig {
   max_concurrent_invocations_per_instance?: number;
 }
-export interface NotificationConfig {
+export interface AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigOutputConfigNotificationConfig {
   error_topic?: string;
   include_inference_response_in?: string[];
   success_topic?: string;
 }
-export interface OutputConfig {
+export interface AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigOutputConfig {
   kms_key_id?: string;
   s3_failure_path?: string;
   s3_output_path: string;
-  notification_config: NotificationConfig;
+  notification_config: AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigOutputConfigNotificationConfig;
 }
-export interface AsyncInferenceConfig {
-  client_config: ClientConfig;
-  output_config: OutputConfig;
+export interface AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfig {
+  client_config: AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigClientConfig;
+  output_config: AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfigOutputConfig;
 }
-export interface CaptureContentTypeHeader {
+export interface AwsSagemakerEndpointConfigurationArgsDataCaptureConfigCaptureContentTypeHeader {
   csv_content_types?: string[];
   json_content_types?: string[];
 }
-export interface CaptureOptions {
+export interface AwsSagemakerEndpointConfigurationArgsDataCaptureConfigCaptureOptions {
   capture_mode: string;
 }
-export interface DataCaptureConfig {
+export interface AwsSagemakerEndpointConfigurationArgsDataCaptureConfig {
   destination_s3_uri: string;
   enable_capture?: boolean;
   initial_sampling_percentage: number;
   kms_key_id?: string;
-  capture_content_type_header: CaptureContentTypeHeader;
-  capture_options: CaptureOptions;
+  capture_content_type_header: AwsSagemakerEndpointConfigurationArgsDataCaptureConfigCaptureContentTypeHeader;
+  capture_options: AwsSagemakerEndpointConfigurationArgsDataCaptureConfigCaptureOptions;
 }
-export interface CoreDumpConfig {
+export interface AwsSagemakerEndpointConfigurationArgsProductionVariantsCoreDumpConfig {
   destination_s3_uri: string;
   kms_key_id?: string;
 }
-export interface ManagedInstanceScaling {
+export interface AwsSagemakerEndpointConfigurationArgsProductionVariantsManagedInstanceScaling {
   max_instance_count?: number;
   min_instance_count?: number;
   status?: string;
 }
-export interface RoutingConfig {
+export interface AwsSagemakerEndpointConfigurationArgsProductionVariantsRoutingConfig {
   routing_strategy: string;
 }
-export interface ServerlessConfig {
+export interface AwsSagemakerEndpointConfigurationArgsProductionVariantsServerlessConfig {
   max_concurrency: number;
   memory_size_in_mb: number;
   provisioned_concurrency?: number;
 }
-export interface ProductionVariants {
+export interface AwsSagemakerEndpointConfigurationArgsProductionVariants {
   accelerator_type?: string;
   container_startup_health_check_timeout_in_seconds?: number;
   enable_ssm_access?: boolean;
@@ -59,29 +59,29 @@ export interface ProductionVariants {
   instance_type?: string;
   model_data_download_timeout_in_seconds?: number;
   model_name: string;
-  core_dump_config: CoreDumpConfig;
-  managed_instance_scaling: ManagedInstanceScaling;
-  routing_config: RoutingConfig;
-  serverless_config: ServerlessConfig;
+  core_dump_config: AwsSagemakerEndpointConfigurationArgsProductionVariantsCoreDumpConfig;
+  managed_instance_scaling: AwsSagemakerEndpointConfigurationArgsProductionVariantsManagedInstanceScaling;
+  routing_config: AwsSagemakerEndpointConfigurationArgsProductionVariantsRoutingConfig;
+  serverless_config: AwsSagemakerEndpointConfigurationArgsProductionVariantsServerlessConfig;
 }
-export interface CoreDumpConfig {
+export interface AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsCoreDumpConfig {
   destination_s3_uri: string;
   kms_key_id: string;
 }
-export interface ManagedInstanceScaling {
+export interface AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsManagedInstanceScaling {
   max_instance_count?: number;
   min_instance_count?: number;
   status?: string;
 }
-export interface RoutingConfig {
+export interface AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsRoutingConfig {
   routing_strategy: string;
 }
-export interface ServerlessConfig {
+export interface AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsServerlessConfig {
   max_concurrency: number;
   memory_size_in_mb: number;
   provisioned_concurrency?: number;
 }
-export interface ShadowProductionVariants {
+export interface AwsSagemakerEndpointConfigurationArgsShadowProductionVariants {
   accelerator_type?: string;
   container_startup_health_check_timeout_in_seconds?: number;
   enable_ssm_access?: boolean;
@@ -92,20 +92,20 @@ export interface ShadowProductionVariants {
   model_data_download_timeout_in_seconds?: number;
   model_name: string;
   volume_size_in_gb?: number;
-  core_dump_config: CoreDumpConfig;
-  managed_instance_scaling: ManagedInstanceScaling;
-  routing_config: RoutingConfig;
-  serverless_config: ServerlessConfig;
+  core_dump_config: AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsCoreDumpConfig;
+  managed_instance_scaling: AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsManagedInstanceScaling;
+  routing_config: AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsRoutingConfig;
+  serverless_config: AwsSagemakerEndpointConfigurationArgsShadowProductionVariantsServerlessConfig;
 }
 export interface AwsSagemakerEndpointConfigurationArgs {
   kms_key_arn?: string;
   tags?: {
     [key: string]: string;
   };
-  async_inference_config: AsyncInferenceConfig;
-  data_capture_config: DataCaptureConfig;
-  production_variants: ProductionVariants;
-  shadow_production_variants: ShadowProductionVariants;
+  async_inference_config: AwsSagemakerEndpointConfigurationArgsAsyncInferenceConfig;
+  data_capture_config: AwsSagemakerEndpointConfigurationArgsDataCaptureConfig;
+  production_variants: AwsSagemakerEndpointConfigurationArgsProductionVariants;
+  shadow_production_variants: AwsSagemakerEndpointConfigurationArgsShadowProductionVariants;
 }
 export class aws_sagemaker_endpoint_configuration extends TerraformResource {
   readonly arn!: string;

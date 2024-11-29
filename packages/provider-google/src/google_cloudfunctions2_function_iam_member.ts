@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleCloudfunctions2FunctionIamMemberArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleCloudfunctions2FunctionIamMemberArgs {
   cloud_function: string;
   member: string;
   role: string;
-  condition: Condition;
+  condition: GoogleCloudfunctions2FunctionIamMemberArgscondition;
 }
 export class google_cloudfunctions2_function_iam_member extends TerraformResource {
   readonly etag!: string;

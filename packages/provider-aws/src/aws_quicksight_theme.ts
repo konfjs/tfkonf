@@ -1,36 +1,36 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DataColorPalette {
+export interface AwsQuicksightThemeArgsconfigurationDataColorPalette {
   colors?: string[];
   empty_fill_color?: string;
   min_max_gradient?: string[];
 }
-export interface Border {
+export interface AwsQuicksightThemeArgsconfigurationsheettileborder {
   show?: boolean;
 }
-export interface Tile {
-  border: Border;
+export interface AwsQuicksightThemeArgsconfigurationsheettile {
+  border: AwsQuicksightThemeArgsconfigurationsheettileborder;
 }
-export interface Gutter {
+export interface AwsQuicksightThemeArgsconfigurationsheetTileLayoutgutter {
   show?: boolean;
 }
-export interface Margin {
+export interface AwsQuicksightThemeArgsconfigurationsheetTileLayoutmargin {
   show?: boolean;
 }
-export interface TileLayout {
-  gutter: Gutter;
-  margin: Margin;
+export interface AwsQuicksightThemeArgsconfigurationsheetTileLayout {
+  gutter: AwsQuicksightThemeArgsconfigurationsheetTileLayoutgutter;
+  margin: AwsQuicksightThemeArgsconfigurationsheetTileLayoutmargin;
 }
-export interface Sheet {
-  tile: Tile;
-  tile_layout: TileLayout;
+export interface AwsQuicksightThemeArgsconfigurationsheet {
+  tile: AwsQuicksightThemeArgsconfigurationsheettile;
+  tile_layout: AwsQuicksightThemeArgsconfigurationsheetTileLayout;
 }
-export interface FontFamilies {
+export interface AwsQuicksightThemeArgsconfigurationtypographyFontFamilies {
   font_family?: string;
 }
-export interface Typography {
-  font_families: FontFamilies;
+export interface AwsQuicksightThemeArgsconfigurationtypography {
+  font_families: AwsQuicksightThemeArgsconfigurationtypographyFontFamilies;
 }
-export interface UiColorPalette {
+export interface AwsQuicksightThemeArgsconfigurationUiColorPalette {
   accent?: string;
   accent_foreground?: string;
   danger?: string;
@@ -48,17 +48,17 @@ export interface UiColorPalette {
   warning?: string;
   warning_foreground?: string;
 }
-export interface Configuration {
-  data_color_palette: DataColorPalette;
-  sheet: Sheet;
-  typography: Typography;
-  ui_color_palette: UiColorPalette;
+export interface AwsQuicksightThemeArgsconfiguration {
+  data_color_palette: AwsQuicksightThemeArgsconfigurationDataColorPalette;
+  sheet: AwsQuicksightThemeArgsconfigurationsheet;
+  typography: AwsQuicksightThemeArgsconfigurationtypography;
+  ui_color_palette: AwsQuicksightThemeArgsconfigurationUiColorPalette;
 }
-export interface Permissions {
+export interface AwsQuicksightThemeArgspermissions {
   actions: string[];
   principal: string;
 }
-export interface Timeouts {
+export interface AwsQuicksightThemeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -71,9 +71,9 @@ export interface AwsQuicksightThemeArgs {
   };
   theme_id: string;
   version_description?: string;
-  configuration: Configuration;
-  permissions: Permissions;
-  timeouts: Timeouts;
+  configuration: AwsQuicksightThemeArgsconfiguration;
+  permissions: AwsQuicksightThemeArgspermissions;
+  timeouts: AwsQuicksightThemeArgstimeouts;
 }
 export class aws_quicksight_theme extends TerraformResource {
   readonly arn!: string;

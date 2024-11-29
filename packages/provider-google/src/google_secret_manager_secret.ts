@@ -1,34 +1,34 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CustomerManagedEncryption {
+export interface GoogleSecretManagerSecretArgsreplicationautoCustomerManagedEncryption {
   kms_key_name: string;
 }
-export interface Auto {
-  customer_managed_encryption: CustomerManagedEncryption;
+export interface GoogleSecretManagerSecretArgsreplicationauto {
+  customer_managed_encryption: GoogleSecretManagerSecretArgsreplicationautoCustomerManagedEncryption;
 }
-export interface CustomerManagedEncryption {
+export interface GoogleSecretManagerSecretArgsreplicationUserManagedreplicasCustomerManagedEncryption {
   kms_key_name: string;
 }
-export interface Replicas {
+export interface GoogleSecretManagerSecretArgsreplicationUserManagedreplicas {
   location: string;
-  customer_managed_encryption: CustomerManagedEncryption;
+  customer_managed_encryption: GoogleSecretManagerSecretArgsreplicationUserManagedreplicasCustomerManagedEncryption;
 }
-export interface UserManaged {
-  replicas: Replicas;
+export interface GoogleSecretManagerSecretArgsreplicationUserManaged {
+  replicas: GoogleSecretManagerSecretArgsreplicationUserManagedreplicas;
 }
-export interface Replication {
-  auto: Auto;
-  user_managed: UserManaged;
+export interface GoogleSecretManagerSecretArgsreplication {
+  auto: GoogleSecretManagerSecretArgsreplicationauto;
+  user_managed: GoogleSecretManagerSecretArgsreplicationUserManaged;
 }
-export interface Rotation {
+export interface GoogleSecretManagerSecretArgsrotation {
   next_rotation_time?: string;
   rotation_period?: string;
 }
-export interface Timeouts {
+export interface GoogleSecretManagerSecretArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface Topics {
+export interface GoogleSecretManagerSecretArgstopics {
   name: string;
 }
 export interface GoogleSecretManagerSecretArgs {
@@ -44,10 +44,10 @@ export interface GoogleSecretManagerSecretArgs {
     [key: string]: string;
   };
   version_destroy_ttl?: string;
-  replication: Replication;
-  rotation: Rotation;
-  timeouts: Timeouts;
-  topics: Topics;
+  replication: GoogleSecretManagerSecretArgsreplication;
+  rotation: GoogleSecretManagerSecretArgsrotation;
+  timeouts: GoogleSecretManagerSecretArgstimeouts;
+  topics: GoogleSecretManagerSecretArgstopics;
 }
 export class google_secret_manager_secret extends TerraformResource {
   readonly create_time!: string;

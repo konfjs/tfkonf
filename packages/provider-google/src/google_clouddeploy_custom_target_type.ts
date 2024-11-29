@@ -1,30 +1,30 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Git {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesgit {
   path?: string;
   ref?: string;
   repo: string;
 }
-export interface GoogleCloudBuildRepo {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo {
   path?: string;
   ref?: string;
   repository: string;
 }
-export interface GoogleCloudStorage {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudStorage {
   path?: string;
   source: string;
 }
-export interface IncludeSkaffoldModules {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModules {
   configs?: string[];
-  git: Git;
-  google_cloud_build_repo: GoogleCloudBuildRepo;
-  google_cloud_storage: GoogleCloudStorage;
+  git: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesgit;
+  google_cloud_build_repo: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudBuildRepo;
+  google_cloud_storage: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModulesGoogleCloudStorage;
 }
-export interface CustomActions {
+export interface GoogleClouddeployCustomTargetTypeArgsCustomActions {
   deploy_action: string;
   render_action?: string;
-  include_skaffold_modules: IncludeSkaffoldModules;
+  include_skaffold_modules: GoogleClouddeployCustomTargetTypeArgsCustomActionsIncludeSkaffoldModules;
 }
-export interface Timeouts {
+export interface GoogleClouddeployCustomTargetTypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -39,8 +39,8 @@ export interface GoogleClouddeployCustomTargetTypeArgs {
   };
   location: string;
   name: string;
-  custom_actions: CustomActions;
-  timeouts: Timeouts;
+  custom_actions: GoogleClouddeployCustomTargetTypeArgsCustomActions;
+  timeouts: GoogleClouddeployCustomTargetTypeArgstimeouts;
 }
 export class google_clouddeploy_custom_target_type extends TerraformResource {
   readonly create_time!: string;

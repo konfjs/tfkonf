@@ -1,155 +1,155 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GeoSpatialColumnGroup {
+export interface AwsQuicksightDataSetArgsColumnGroupsGeoSpatialColumnGroup {
   columns: string[];
   country_code: string;
   name: string;
 }
-export interface ColumnGroups {
-  geo_spatial_column_group: GeoSpatialColumnGroup;
+export interface AwsQuicksightDataSetArgsColumnGroups {
+  geo_spatial_column_group: AwsQuicksightDataSetArgsColumnGroupsGeoSpatialColumnGroup;
 }
-export interface ColumnLevelPermissionRules {
+export interface AwsQuicksightDataSetArgsColumnLevelPermissionRules {
   column_names?: string[];
   principals?: string[];
 }
-export interface DataSetUsageConfiguration {}
-export interface FieldFolders {
+export interface AwsQuicksightDataSetArgsDataSetUsageConfiguration {}
+export interface AwsQuicksightDataSetArgsFieldFolders {
   columns?: string[];
   description?: string;
   field_folders_id: string;
 }
-export interface CastColumnTypeOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCastColumnTypeOperation {
   column_name: string;
   new_column_type: string;
 }
-export interface Columns {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCreateColumnsOperationcolumns {
   column_id: string;
   column_name: string;
   expression: string;
 }
-export interface CreateColumnsOperation {
-  columns: Columns;
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCreateColumnsOperation {
+  columns: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCreateColumnsOperationcolumns;
 }
-export interface FilterOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsFilterOperation {
   condition_expression: string;
 }
-export interface ProjectOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsProjectOperation {
   projected_columns: string[];
 }
-export interface RenameColumnOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsRenameColumnOperation {
   column_name: string;
   new_column_name: string;
 }
-export interface ColumnDescription {}
-export interface Tags {
-  column_description: ColumnDescription;
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperationtagsColumnDescription {}
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperationtags {
+  column_description: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperationtagsColumnDescription;
 }
-export interface TagColumnOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperation {
   column_name: string;
-  tags: Tags;
+  tags: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperationtags;
 }
-export interface UntagColumnOperation {
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransformsUntagColumnOperation {
   column_name: string;
   tag_names: string[];
 }
-export interface DataTransforms {
-  cast_column_type_operation: CastColumnTypeOperation;
-  create_columns_operation: CreateColumnsOperation;
-  filter_operation: FilterOperation;
-  project_operation: ProjectOperation;
-  rename_column_operation: RenameColumnOperation;
-  tag_column_operation: TagColumnOperation;
-  untag_column_operation: UntagColumnOperation;
+export interface AwsQuicksightDataSetArgsLogicalTableMapDataTransforms {
+  cast_column_type_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCastColumnTypeOperation;
+  create_columns_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsCreateColumnsOperation;
+  filter_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsFilterOperation;
+  project_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsProjectOperation;
+  rename_column_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsRenameColumnOperation;
+  tag_column_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsTagColumnOperation;
+  untag_column_operation: AwsQuicksightDataSetArgsLogicalTableMapDataTransformsUntagColumnOperation;
 }
-export interface LeftJoinKeyProperties {}
-export interface RightJoinKeyProperties {}
-export interface JoinInstruction {
+export interface AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstructionLeftJoinKeyProperties {}
+export interface AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstructionRightJoinKeyProperties {}
+export interface AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstruction {
   left_operand: string;
   on_clause: string;
   right_operand: string;
   type: string;
-  left_join_key_properties: LeftJoinKeyProperties;
-  right_join_key_properties: RightJoinKeyProperties;
+  left_join_key_properties: AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstructionLeftJoinKeyProperties;
+  right_join_key_properties: AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstructionRightJoinKeyProperties;
 }
-export interface Source {
-  join_instruction: JoinInstruction;
+export interface AwsQuicksightDataSetArgsLogicalTableMapsource {
+  join_instruction: AwsQuicksightDataSetArgsLogicalTableMapsourceJoinInstruction;
 }
-export interface LogicalTableMap {
+export interface AwsQuicksightDataSetArgsLogicalTableMap {
   alias: string;
   logical_table_map_id: string;
-  data_transforms: DataTransforms;
-  source: Source;
+  data_transforms: AwsQuicksightDataSetArgsLogicalTableMapDataTransforms;
+  source: AwsQuicksightDataSetArgsLogicalTableMapsource;
 }
-export interface Permissions {
+export interface AwsQuicksightDataSetArgspermissions {
   actions: string[];
   principal: string;
 }
-export interface Columns {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapCustomSqlcolumns {
   name: string;
   type: string;
 }
-export interface CustomSql {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapCustomSql {
   data_source_arn: string;
   name: string;
   sql_query: string;
-  columns: Columns;
+  columns: AwsQuicksightDataSetArgsPhysicalTableMapCustomSqlcolumns;
 }
-export interface InputColumns {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapRelationalTableInputColumns {
   name: string;
   type: string;
 }
-export interface RelationalTable {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapRelationalTable {
   catalog?: string;
   data_source_arn: string;
   name: string;
   schema?: string;
-  input_columns: InputColumns;
+  input_columns: AwsQuicksightDataSetArgsPhysicalTableMapRelationalTableInputColumns;
 }
-export interface InputColumns {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapS3SourceInputColumns {
   name: string;
   type: string;
 }
-export interface UploadSettings {}
-export interface S3Source {
+export interface AwsQuicksightDataSetArgsPhysicalTableMapS3SourceUploadSettings {}
+export interface AwsQuicksightDataSetArgsPhysicalTableMapS3Source {
   data_source_arn: string;
-  input_columns: InputColumns;
-  upload_settings: UploadSettings;
+  input_columns: AwsQuicksightDataSetArgsPhysicalTableMapS3SourceInputColumns;
+  upload_settings: AwsQuicksightDataSetArgsPhysicalTableMapS3SourceUploadSettings;
 }
-export interface PhysicalTableMap {
+export interface AwsQuicksightDataSetArgsPhysicalTableMap {
   physical_table_map_id: string;
-  custom_sql: CustomSql;
-  relational_table: RelationalTable;
-  s3_source: S3Source;
+  custom_sql: AwsQuicksightDataSetArgsPhysicalTableMapCustomSql;
+  relational_table: AwsQuicksightDataSetArgsPhysicalTableMapRelationalTable;
+  s3_source: AwsQuicksightDataSetArgsPhysicalTableMapS3Source;
 }
-export interface LookbackWindow {
+export interface AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfigurationIncrementalRefreshLookbackWindow {
   column_name: string;
   size: number;
   size_unit: string;
 }
-export interface IncrementalRefresh {
-  lookback_window: LookbackWindow;
+export interface AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfigurationIncrementalRefresh {
+  lookback_window: AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfigurationIncrementalRefreshLookbackWindow;
 }
-export interface RefreshConfiguration {
-  incremental_refresh: IncrementalRefresh;
+export interface AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfiguration {
+  incremental_refresh: AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfigurationIncrementalRefresh;
 }
-export interface RefreshProperties {
-  refresh_configuration: RefreshConfiguration;
+export interface AwsQuicksightDataSetArgsRefreshProperties {
+  refresh_configuration: AwsQuicksightDataSetArgsRefreshPropertiesRefreshConfiguration;
 }
-export interface RowLevelPermissionDataSet {
+export interface AwsQuicksightDataSetArgsRowLevelPermissionDataSet {
   arn: string;
   format_version?: string;
   namespace?: string;
   permission_policy: string;
   status?: string;
 }
-export interface TagRules {
+export interface AwsQuicksightDataSetArgsRowLevelPermissionTagConfigurationTagRules {
   column_name: string;
   match_all_value?: string;
   tag_key: string;
   tag_multi_value_delimiter?: string;
 }
-export interface RowLevelPermissionTagConfiguration {
+export interface AwsQuicksightDataSetArgsRowLevelPermissionTagConfiguration {
   status?: string;
-  tag_rules: TagRules;
+  tag_rules: AwsQuicksightDataSetArgsRowLevelPermissionTagConfigurationTagRules;
 }
 export interface AwsQuicksightDataSetArgs {
   data_set_id: string;
@@ -158,16 +158,16 @@ export interface AwsQuicksightDataSetArgs {
   tags?: {
     [key: string]: string;
   };
-  column_groups: ColumnGroups;
-  column_level_permission_rules: ColumnLevelPermissionRules;
-  data_set_usage_configuration: DataSetUsageConfiguration;
-  field_folders: FieldFolders;
-  logical_table_map: LogicalTableMap;
-  permissions: Permissions;
-  physical_table_map: PhysicalTableMap;
-  refresh_properties: RefreshProperties;
-  row_level_permission_data_set: RowLevelPermissionDataSet;
-  row_level_permission_tag_configuration: RowLevelPermissionTagConfiguration;
+  column_groups: AwsQuicksightDataSetArgsColumnGroups;
+  column_level_permission_rules: AwsQuicksightDataSetArgsColumnLevelPermissionRules;
+  data_set_usage_configuration: AwsQuicksightDataSetArgsDataSetUsageConfiguration;
+  field_folders: AwsQuicksightDataSetArgsFieldFolders;
+  logical_table_map: AwsQuicksightDataSetArgsLogicalTableMap;
+  permissions: AwsQuicksightDataSetArgspermissions;
+  physical_table_map: AwsQuicksightDataSetArgsPhysicalTableMap;
+  refresh_properties: AwsQuicksightDataSetArgsRefreshProperties;
+  row_level_permission_data_set: AwsQuicksightDataSetArgsRowLevelPermissionDataSet;
+  row_level_permission_tag_configuration: AwsQuicksightDataSetArgsRowLevelPermissionTagConfiguration;
 }
 export class aws_quicksight_data_set extends TerraformResource {
   readonly arn!: string;

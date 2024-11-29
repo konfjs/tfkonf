@@ -1,24 +1,24 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PosixUser {
+export interface AwsEfsAccessPointArgsPosixUser {
   gid: number;
   secondary_gids?: number[];
   uid: number;
 }
-export interface CreationInfo {
+export interface AwsEfsAccessPointArgsRootDirectoryCreationInfo {
   owner_gid: number;
   owner_uid: number;
   permissions: string;
 }
-export interface RootDirectory {
-  creation_info: CreationInfo;
+export interface AwsEfsAccessPointArgsRootDirectory {
+  creation_info: AwsEfsAccessPointArgsRootDirectoryCreationInfo;
 }
 export interface AwsEfsAccessPointArgs {
   file_system_id: string;
   tags?: {
     [key: string]: string;
   };
-  posix_user: PosixUser;
-  root_directory: RootDirectory;
+  posix_user: AwsEfsAccessPointArgsPosixUser;
+  root_directory: AwsEfsAccessPointArgsRootDirectory;
 }
 export class aws_efs_access_point extends TerraformResource {
   readonly arn!: string;

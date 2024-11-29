@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudKmsConfig {
+export interface GoogleIntegrationsClientArgsCloudKmsConfig {
   key: string;
   key_version?: string;
   kms_location: string;
   kms_project_id?: string;
   kms_ring: string;
 }
-export interface Timeouts {
+export interface GoogleIntegrationsClientArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -14,8 +14,8 @@ export interface GoogleIntegrationsClientArgs {
   create_sample_integrations?: boolean;
   location: string;
   run_as_service_account?: string;
-  cloud_kms_config: CloudKmsConfig;
-  timeouts: Timeouts;
+  cloud_kms_config: GoogleIntegrationsClientArgsCloudKmsConfig;
+  timeouts: GoogleIntegrationsClientArgstimeouts;
 }
 export class google_integrations_client extends TerraformResource {
   readonly id?: string;

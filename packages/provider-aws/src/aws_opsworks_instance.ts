@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EbsBlockDevice {
+export interface AwsOpsworksInstanceArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
 }
-export interface EphemeralBlockDevice {
+export interface AwsOpsworksInstanceArgsEphemeralBlockDevice {
   device_name: string;
   virtual_name: string;
 }
-export interface RootBlockDevice {
+export interface AwsOpsworksInstanceArgsRootBlockDevice {
   delete_on_termination?: boolean;
 }
-export interface Timeouts {
+export interface AwsOpsworksInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -27,10 +27,10 @@ export interface AwsOpsworksInstanceArgs {
   layer_ids: string[];
   stack_id: string;
   state?: string;
-  ebs_block_device: EbsBlockDevice;
-  ephemeral_block_device: EphemeralBlockDevice;
-  root_block_device: RootBlockDevice;
-  timeouts: Timeouts;
+  ebs_block_device: AwsOpsworksInstanceArgsEbsBlockDevice;
+  ephemeral_block_device: AwsOpsworksInstanceArgsEphemeralBlockDevice;
+  root_block_device: AwsOpsworksInstanceArgsRootBlockDevice;
+  timeouts: AwsOpsworksInstanceArgstimeouts;
 }
 export class aws_opsworks_instance extends TerraformResource {
   readonly ami_id?: string;

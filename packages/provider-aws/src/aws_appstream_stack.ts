@@ -1,18 +1,18 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AccessEndpoints {
+export interface AwsAppstreamStackArgsAccessEndpoints {
   endpoint_type: string;
 }
-export interface ApplicationSettings {
+export interface AwsAppstreamStackArgsApplicationSettings {
   enabled: boolean;
   settings_group?: string;
 }
-export interface StorageConnectors {
+export interface AwsAppstreamStackArgsStorageConnectors {
   connector_type: string;
 }
-export interface StreamingExperienceSettings {
+export interface AwsAppstreamStackArgsStreamingExperienceSettings {
   preferred_protocol?: string;
 }
-export interface UserSettings {
+export interface AwsAppstreamStackArgsUserSettings {
   action: string;
   permission: string;
 }
@@ -23,11 +23,11 @@ export interface AwsAppstreamStackArgs {
   tags?: {
     [key: string]: string;
   };
-  access_endpoints: AccessEndpoints;
-  application_settings: ApplicationSettings;
-  storage_connectors: StorageConnectors;
-  streaming_experience_settings: StreamingExperienceSettings;
-  user_settings: UserSettings;
+  access_endpoints: AwsAppstreamStackArgsAccessEndpoints;
+  application_settings: AwsAppstreamStackArgsApplicationSettings;
+  storage_connectors: AwsAppstreamStackArgsStorageConnectors;
+  streaming_experience_settings: AwsAppstreamStackArgsStreamingExperienceSettings;
+  user_settings: AwsAppstreamStackArgsUserSettings;
 }
 export class aws_appstream_stack extends TerraformResource {
   readonly arn!: string;

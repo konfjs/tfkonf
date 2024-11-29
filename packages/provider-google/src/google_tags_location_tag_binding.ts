@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleTagsLocationTagBindingArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -7,7 +7,7 @@ export interface GoogleTagsLocationTagBindingArgs {
   location?: string;
   parent: string;
   tag_value: string;
-  timeouts: Timeouts;
+  timeouts: GoogleTagsLocationTagBindingArgstimeouts;
 }
 export class google_tags_location_tag_binding extends TerraformResource {
   readonly id?: string;

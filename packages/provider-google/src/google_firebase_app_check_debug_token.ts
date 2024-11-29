@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleFirebaseAppCheckDebugTokenArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -8,7 +8,7 @@ export interface GoogleFirebaseAppCheckDebugTokenArgs {
   app_id: string;
   display_name: string;
   token: string;
-  timeouts: Timeouts;
+  timeouts: GoogleFirebaseAppCheckDebugTokenArgstimeouts;
 }
 export class google_firebase_app_check_debug_token extends TerraformResource {
   readonly debug_token_id!: string;

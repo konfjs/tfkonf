@@ -1,52 +1,52 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DestinationEncryptionConfiguration {
+export interface GoogleBigqueryJobArgscopyDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
-export interface DestinationTable {
+export interface GoogleBigqueryJobArgscopyDestinationTable {
   table_id: string;
 }
-export interface SourceTables {
+export interface GoogleBigqueryJobArgscopySourceTables {
   table_id: string;
 }
-export interface Copy {
+export interface GoogleBigqueryJobArgscopy {
   create_disposition?: string;
   write_disposition?: string;
-  destination_encryption_configuration: DestinationEncryptionConfiguration;
-  destination_table: DestinationTable;
-  source_tables: SourceTables;
+  destination_encryption_configuration: GoogleBigqueryJobArgscopyDestinationEncryptionConfiguration;
+  destination_table: GoogleBigqueryJobArgscopyDestinationTable;
+  source_tables: GoogleBigqueryJobArgscopySourceTables;
 }
-export interface SourceModel {
+export interface GoogleBigqueryJobArgsextractSourceModel {
   dataset_id: string;
   model_id: string;
   project_id: string;
 }
-export interface SourceTable {
+export interface GoogleBigqueryJobArgsextractSourceTable {
   table_id: string;
 }
-export interface Extract {
+export interface GoogleBigqueryJobArgsextract {
   compression?: string;
   destination_uris: string[];
   print_header?: boolean;
   use_avro_logical_types?: boolean;
-  source_model: SourceModel;
-  source_table: SourceTable;
+  source_model: GoogleBigqueryJobArgsextractSourceModel;
+  source_table: GoogleBigqueryJobArgsextractSourceTable;
 }
-export interface DestinationEncryptionConfiguration {
+export interface GoogleBigqueryJobArgsloadDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
-export interface DestinationTable {
+export interface GoogleBigqueryJobArgsloadDestinationTable {
   table_id: string;
 }
-export interface ParquetOptions {
+export interface GoogleBigqueryJobArgsloadParquetOptions {
   enable_list_inference?: boolean;
   enum_as_string?: boolean;
 }
-export interface TimePartitioning {
+export interface GoogleBigqueryJobArgsloadTimePartitioning {
   expiration_ms?: string;
   field?: string;
   type: string;
 }
-export interface Load {
+export interface GoogleBigqueryJobArgsload {
   allow_jagged_rows?: boolean;
   allow_quoted_newlines?: boolean;
   autodetect?: boolean;
@@ -62,30 +62,30 @@ export interface Load {
   source_format?: string;
   source_uris: string[];
   write_disposition?: string;
-  destination_encryption_configuration: DestinationEncryptionConfiguration;
-  destination_table: DestinationTable;
-  parquet_options: ParquetOptions;
-  time_partitioning: TimePartitioning;
+  destination_encryption_configuration: GoogleBigqueryJobArgsloadDestinationEncryptionConfiguration;
+  destination_table: GoogleBigqueryJobArgsloadDestinationTable;
+  parquet_options: GoogleBigqueryJobArgsloadParquetOptions;
+  time_partitioning: GoogleBigqueryJobArgsloadTimePartitioning;
 }
-export interface DefaultDataset {
+export interface GoogleBigqueryJobArgsqueryDefaultDataset {
   dataset_id: string;
 }
-export interface DestinationEncryptionConfiguration {
+export interface GoogleBigqueryJobArgsqueryDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
-export interface DestinationTable {
+export interface GoogleBigqueryJobArgsqueryDestinationTable {
   table_id: string;
 }
-export interface ScriptOptions {
+export interface GoogleBigqueryJobArgsqueryScriptOptions {
   key_result_statement?: string;
   statement_byte_budget?: string;
   statement_timeout_ms?: string;
 }
-export interface UserDefinedFunctionResources {
+export interface GoogleBigqueryJobArgsqueryUserDefinedFunctionResources {
   inline_code?: string;
   resource_uri?: string;
 }
-export interface Query {
+export interface GoogleBigqueryJobArgsquery {
   allow_large_results?: boolean;
   create_disposition?: string;
   flatten_results?: boolean;
@@ -98,13 +98,13 @@ export interface Query {
   use_legacy_sql?: boolean;
   use_query_cache?: boolean;
   write_disposition?: string;
-  default_dataset: DefaultDataset;
-  destination_encryption_configuration: DestinationEncryptionConfiguration;
-  destination_table: DestinationTable;
-  script_options: ScriptOptions;
-  user_defined_function_resources: UserDefinedFunctionResources;
+  default_dataset: GoogleBigqueryJobArgsqueryDefaultDataset;
+  destination_encryption_configuration: GoogleBigqueryJobArgsqueryDestinationEncryptionConfiguration;
+  destination_table: GoogleBigqueryJobArgsqueryDestinationTable;
+  script_options: GoogleBigqueryJobArgsqueryScriptOptions;
+  user_defined_function_resources: GoogleBigqueryJobArgsqueryUserDefinedFunctionResources;
 }
-export interface Timeouts {
+export interface GoogleBigqueryJobArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -116,11 +116,11 @@ export interface GoogleBigqueryJobArgs {
     [key: string]: string;
   };
   location?: string;
-  copy: Copy;
-  extract: Extract;
-  load: Load;
-  query: Query;
-  timeouts: Timeouts;
+  copy: GoogleBigqueryJobArgscopy;
+  extract: GoogleBigqueryJobArgsextract;
+  load: GoogleBigqueryJobArgsload;
+  query: GoogleBigqueryJobArgsquery;
+  timeouts: GoogleBigqueryJobArgstimeouts;
 }
 export class google_bigquery_job extends TerraformResource {
   readonly effective_labels!: {

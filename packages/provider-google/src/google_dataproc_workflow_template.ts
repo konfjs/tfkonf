@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsHadoopJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface HadoopJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsHadoopJob {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -14,12 +14,12 @@ export interface HadoopJob {
   properties?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsHadoopJobLoggingConfig;
 }
-export interface QueryList {
+export interface GoogleDataprocWorkflowTemplateArgsjobsHiveJobQueryList {
   queries: string[];
 }
-export interface HiveJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsHiveJob {
   continue_on_failure?: boolean;
   jar_file_uris?: string[];
   properties?: {
@@ -29,17 +29,17 @@ export interface HiveJob {
   script_variables?: {
     [key: string]: string;
   };
-  query_list: QueryList;
+  query_list: GoogleDataprocWorkflowTemplateArgsjobsHiveJobQueryList;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPigJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface QueryList {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPigJobQueryList {
   queries: string[];
 }
-export interface PigJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPigJob {
   continue_on_failure?: boolean;
   jar_file_uris?: string[];
   properties?: {
@@ -49,18 +49,18 @@ export interface PigJob {
   script_variables?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
-  query_list: QueryList;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsPigJobLoggingConfig;
+  query_list: GoogleDataprocWorkflowTemplateArgsjobsPigJobQueryList;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPrestoJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface QueryList {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPrestoJobQueryList {
   queries: string[];
 }
-export interface PrestoJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPrestoJob {
   client_tags?: string[];
   continue_on_failure?: boolean;
   output_format?: string;
@@ -68,15 +68,15 @@ export interface PrestoJob {
     [key: string]: string;
   };
   query_file_uri?: string;
-  logging_config: LoggingConfig;
-  query_list: QueryList;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsPrestoJobLoggingConfig;
+  query_list: GoogleDataprocWorkflowTemplateArgsjobsPrestoJobQueryList;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPysparkJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface PysparkJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsPysparkJob {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -86,18 +86,18 @@ export interface PysparkJob {
     [key: string]: string;
   };
   python_file_uris?: string[];
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsPysparkJobLoggingConfig;
 }
-export interface Scheduling {
+export interface GoogleDataprocWorkflowTemplateArgsjobsscheduling {
   max_failures_per_hour?: number;
   max_failures_total?: number;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface SparkJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkJob {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -107,14 +107,14 @@ export interface SparkJob {
   properties?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsSparkJobLoggingConfig;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkRJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface SparkRJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkRJob {
   archive_uris?: string[];
   args?: string[];
   file_uris?: string[];
@@ -122,17 +122,17 @@ export interface SparkRJob {
   properties?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsSparkRJobLoggingConfig;
 }
-export interface LoggingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJobLoggingConfig {
   driver_log_levels?: {
     [key: string]: string;
   };
 }
-export interface QueryList {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJobQueryList {
   queries: string[];
 }
-export interface SparkSqlJob {
+export interface GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJob {
   jar_file_uris?: string[];
   properties?: {
     [key: string]: string;
@@ -141,69 +141,69 @@ export interface SparkSqlJob {
   script_variables?: {
     [key: string]: string;
   };
-  logging_config: LoggingConfig;
-  query_list: QueryList;
+  logging_config: GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJobLoggingConfig;
+  query_list: GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJobQueryList;
 }
-export interface Jobs {
+export interface GoogleDataprocWorkflowTemplateArgsjobs {
   labels?: {
     [key: string]: string;
   };
   prerequisite_step_ids?: string[];
   step_id: string;
-  hadoop_job: HadoopJob;
-  hive_job: HiveJob;
-  pig_job: PigJob;
-  presto_job: PrestoJob;
-  pyspark_job: PysparkJob;
-  scheduling: Scheduling;
-  spark_job: SparkJob;
-  spark_r_job: SparkRJob;
-  spark_sql_job: SparkSqlJob;
+  hadoop_job: GoogleDataprocWorkflowTemplateArgsjobsHadoopJob;
+  hive_job: GoogleDataprocWorkflowTemplateArgsjobsHiveJob;
+  pig_job: GoogleDataprocWorkflowTemplateArgsjobsPigJob;
+  presto_job: GoogleDataprocWorkflowTemplateArgsjobsPrestoJob;
+  pyspark_job: GoogleDataprocWorkflowTemplateArgsjobsPysparkJob;
+  scheduling: GoogleDataprocWorkflowTemplateArgsjobsscheduling;
+  spark_job: GoogleDataprocWorkflowTemplateArgsjobsSparkJob;
+  spark_r_job: GoogleDataprocWorkflowTemplateArgsjobsSparkRJob;
+  spark_sql_job: GoogleDataprocWorkflowTemplateArgsjobsSparkSqlJob;
 }
-export interface Regex {
+export interface GoogleDataprocWorkflowTemplateArgsparametersvalidationregex {
   regexes: string[];
 }
-export interface Values {
+export interface GoogleDataprocWorkflowTemplateArgsparametersvalidationvalues {
   values: string[];
 }
-export interface Validation {
-  regex: Regex;
-  values: Values;
+export interface GoogleDataprocWorkflowTemplateArgsparametersvalidation {
+  regex: GoogleDataprocWorkflowTemplateArgsparametersvalidationregex;
+  values: GoogleDataprocWorkflowTemplateArgsparametersvalidationvalues;
 }
-export interface Parameters {
+export interface GoogleDataprocWorkflowTemplateArgsparameters {
   description?: string;
   fields: string[];
   name: string;
-  validation: Validation;
+  validation: GoogleDataprocWorkflowTemplateArgsparametersvalidation;
 }
-export interface ClusterSelector {
+export interface GoogleDataprocWorkflowTemplateArgsplacementClusterSelector {
   cluster_labels: {
     [key: string]: string;
   };
 }
-export interface AutoscalingConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigAutoscalingConfig {
   policy?: string;
 }
-export interface EncryptionConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigEncryptionConfig {
   gce_pd_kms_key_name?: string;
 }
-export interface EndpointConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigEndpointConfig {
   enable_http_port_access?: boolean;
 }
-export interface NodeGroupAffinity {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigNodeGroupAffinity {
   node_group: string;
 }
-export interface ReservationAffinity {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigReservationAffinity {
   consume_reservation_type?: string;
   key?: string;
   values?: string[];
 }
-export interface ShieldedInstanceConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigShieldedInstanceConfig {
   enable_integrity_monitoring?: boolean;
   enable_secure_boot?: boolean;
   enable_vtpm?: boolean;
 }
-export interface GceClusterConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfig {
   metadata?: {
     [key: string]: string;
   };
@@ -213,52 +213,52 @@ export interface GceClusterConfig {
   service_account_scopes?: string[];
   subnetwork?: string;
   tags?: string[];
-  node_group_affinity: NodeGroupAffinity;
-  reservation_affinity: ReservationAffinity;
-  shielded_instance_config: ShieldedInstanceConfig;
+  node_group_affinity: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigNodeGroupAffinity;
+  reservation_affinity: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigReservationAffinity;
+  shielded_instance_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfigShieldedInstanceConfig;
 }
-export interface InitializationActions {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigInitializationActions {
   executable_file?: string;
   execution_timeout?: string;
 }
-export interface LifecycleConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigLifecycleConfig {
   auto_delete_time?: string;
   auto_delete_ttl?: string;
   idle_delete_ttl?: string;
 }
-export interface Accelerators {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfigaccelerators {
   accelerator_count?: number;
   accelerator_type?: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfigDiskConfig {
   boot_disk_size_gb?: number;
   boot_disk_type?: string;
 }
-export interface MasterConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfig {
   image?: string;
   machine_type?: string;
   num_instances?: number;
   preemptibility?: string;
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+  accelerators: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfigaccelerators;
+  disk_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfigDiskConfig;
 }
-export interface Accelerators {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfigaccelerators {
   accelerator_count?: number;
   accelerator_type?: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfigDiskConfig {
   boot_disk_size_gb?: number;
   boot_disk_type?: string;
 }
-export interface SecondaryWorkerConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfig {
   image?: string;
   machine_type?: string;
   num_instances?: number;
   preemptibility?: string;
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+  accelerators: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfigaccelerators;
+  disk_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfigDiskConfig;
 }
-export interface KerberosConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecurityConfigKerberosConfig {
   cross_realm_trust_admin_server?: string;
   cross_realm_trust_kdc?: string;
   cross_realm_trust_realm?: string;
@@ -275,59 +275,59 @@ export interface KerberosConfig {
   truststore?: string;
   truststore_password?: string;
 }
-export interface SecurityConfig {
-  kerberos_config: KerberosConfig;
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecurityConfig {
+  kerberos_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecurityConfigKerberosConfig;
 }
-export interface SoftwareConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSoftwareConfig {
   image_version?: string;
   optional_components?: string[];
   properties?: {
     [key: string]: string;
   };
 }
-export interface Accelerators {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfigaccelerators {
   accelerator_count?: number;
   accelerator_type?: string;
 }
-export interface DiskConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfigDiskConfig {
   boot_disk_size_gb?: number;
   boot_disk_type?: string;
 }
-export interface WorkerConfig {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfig {
   image?: string;
   machine_type?: string;
   num_instances?: number;
   preemptibility?: string;
-  accelerators: Accelerators;
-  disk_config: DiskConfig;
+  accelerators: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfigaccelerators;
+  disk_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfigDiskConfig;
 }
-export interface Config {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfig {
   staging_bucket?: string;
   temp_bucket?: string;
-  autoscaling_config: AutoscalingConfig;
-  encryption_config: EncryptionConfig;
-  endpoint_config: EndpointConfig;
-  gce_cluster_config: GceClusterConfig;
-  initialization_actions: InitializationActions;
-  lifecycle_config: LifecycleConfig;
-  master_config: MasterConfig;
-  secondary_worker_config: SecondaryWorkerConfig;
-  security_config: SecurityConfig;
-  software_config: SoftwareConfig;
-  worker_config: WorkerConfig;
+  autoscaling_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigAutoscalingConfig;
+  encryption_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigEncryptionConfig;
+  endpoint_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigEndpointConfig;
+  gce_cluster_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigGceClusterConfig;
+  initialization_actions: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigInitializationActions;
+  lifecycle_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigLifecycleConfig;
+  master_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigMasterConfig;
+  secondary_worker_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecondaryWorkerConfig;
+  security_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSecurityConfig;
+  software_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigSoftwareConfig;
+  worker_config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfigWorkerConfig;
 }
-export interface ManagedCluster {
+export interface GoogleDataprocWorkflowTemplateArgsplacementManagedCluster {
   cluster_name: string;
   labels?: {
     [key: string]: string;
   };
-  config: Config;
+  config: GoogleDataprocWorkflowTemplateArgsplacementManagedClusterconfig;
 }
-export interface Placement {
-  cluster_selector: ClusterSelector;
-  managed_cluster: ManagedCluster;
+export interface GoogleDataprocWorkflowTemplateArgsplacement {
+  cluster_selector: GoogleDataprocWorkflowTemplateArgsplacementClusterSelector;
+  managed_cluster: GoogleDataprocWorkflowTemplateArgsplacementManagedCluster;
 }
-export interface Timeouts {
+export interface GoogleDataprocWorkflowTemplateArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -339,10 +339,10 @@ export interface GoogleDataprocWorkflowTemplateArgs {
   };
   location: string;
   name: string;
-  jobs: Jobs;
-  parameters: Parameters;
-  placement: Placement;
-  timeouts: Timeouts;
+  jobs: GoogleDataprocWorkflowTemplateArgsjobs;
+  parameters: GoogleDataprocWorkflowTemplateArgsparameters;
+  placement: GoogleDataprocWorkflowTemplateArgsplacement;
+  timeouts: GoogleDataprocWorkflowTemplateArgstimeouts;
 }
 export class google_dataproc_workflow_template extends TerraformResource {
   readonly create_time!: string;

@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CacheAttributes {
+export interface AwsStoragegatewayNfsFileShareArgsCacheAttributes {
   cache_stale_timeout_in_seconds?: number;
 }
-export interface NfsFileShareDefaults {
+export interface AwsStoragegatewayNfsFileShareArgsNfsFileShareDefaults {
   directory_mode?: string;
   file_mode?: string;
   group_id?: string;
   owner_id?: string;
 }
-export interface Timeouts {
+export interface AwsStoragegatewayNfsFileShareArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -33,9 +33,9 @@ export interface AwsStoragegatewayNfsFileShareArgs {
     [key: string]: string;
   };
   vpc_endpoint_dns_name?: string;
-  cache_attributes: CacheAttributes;
-  nfs_file_share_defaults: NfsFileShareDefaults;
-  timeouts: Timeouts;
+  cache_attributes: AwsStoragegatewayNfsFileShareArgsCacheAttributes;
+  nfs_file_share_defaults: AwsStoragegatewayNfsFileShareArgsNfsFileShareDefaults;
+  timeouts: AwsStoragegatewayNfsFileShareArgstimeouts;
 }
 export class aws_storagegateway_nfs_file_share extends TerraformResource {
   readonly arn!: string;

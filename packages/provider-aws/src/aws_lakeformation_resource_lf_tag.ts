@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Database {
+export interface AwsLakeformationResourceLfTagArgsdatabase {
   catalog_id?: string;
   name: string;
 }
-export interface LfTag {
+export interface AwsLakeformationResourceLfTagArgsLfTag {
   key: string;
   value: string;
 }
-export interface Table {
+export interface AwsLakeformationResourceLfTagArgstable {
   catalog_id?: string;
   database_name: string;
   name?: string;
   wildcard?: boolean;
 }
-export interface ColumnWildcard {
+export interface AwsLakeformationResourceLfTagArgsTableWithColumnsColumnWildcard {
   excluded_column_names?: string[];
 }
-export interface TableWithColumns {
+export interface AwsLakeformationResourceLfTagArgsTableWithColumns {
   catalog_id?: string;
   column_names?: string[];
   database_name: string;
   name: string;
-  column_wildcard: ColumnWildcard;
+  column_wildcard: AwsLakeformationResourceLfTagArgsTableWithColumnsColumnWildcard;
 }
-export interface Timeouts {
+export interface AwsLakeformationResourceLfTagArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsLakeformationResourceLfTagArgs {
   catalog_id?: string;
-  database: Database;
-  lf_tag: LfTag;
-  table: Table;
-  table_with_columns: TableWithColumns;
-  timeouts: Timeouts;
+  database: AwsLakeformationResourceLfTagArgsdatabase;
+  lf_tag: AwsLakeformationResourceLfTagArgsLfTag;
+  table: AwsLakeformationResourceLfTagArgstable;
+  table_with_columns: AwsLakeformationResourceLfTagArgsTableWithColumns;
+  timeouts: AwsLakeformationResourceLfTagArgstimeouts;
 }
 export class aws_lakeformation_resource_lf_tag extends TerraformResource {
   readonly id!: string;

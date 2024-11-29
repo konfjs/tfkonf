@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Annotations {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigannotations {
   s3_uri: string;
   test_s3_uri?: string;
 }
-export interface AugmentedManifests {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigAugmentedManifests {
   annotation_data_s3_uri?: string;
   attribute_names: string[];
   document_type?: string;
@@ -11,31 +11,31 @@ export interface AugmentedManifests {
   source_documents_s3_uri?: string;
   split?: string;
 }
-export interface Documents {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigdocuments {
   input_format?: string;
   s3_uri: string;
   test_s3_uri?: string;
 }
-export interface EntityList {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigEntityList {
   s3_uri: string;
 }
-export interface EntityTypes {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfigEntityTypes {
   type: string;
 }
-export interface InputDataConfig {
+export interface AwsComprehendEntityRecognizerArgsInputDataConfig {
   data_format?: string;
-  annotations: Annotations;
-  augmented_manifests: AugmentedManifests;
-  documents: Documents;
-  entity_list: EntityList;
-  entity_types: EntityTypes;
+  annotations: AwsComprehendEntityRecognizerArgsInputDataConfigannotations;
+  augmented_manifests: AwsComprehendEntityRecognizerArgsInputDataConfigAugmentedManifests;
+  documents: AwsComprehendEntityRecognizerArgsInputDataConfigdocuments;
+  entity_list: AwsComprehendEntityRecognizerArgsInputDataConfigEntityList;
+  entity_types: AwsComprehendEntityRecognizerArgsInputDataConfigEntityTypes;
 }
-export interface Timeouts {
+export interface AwsComprehendEntityRecognizerArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VpcConfig {
+export interface AwsComprehendEntityRecognizerArgsVpcConfig {
   security_group_ids: string[];
   subnets: string[];
 }
@@ -48,9 +48,9 @@ export interface AwsComprehendEntityRecognizerArgs {
     [key: string]: string;
   };
   volume_kms_key_id?: string;
-  input_data_config: InputDataConfig;
-  timeouts: Timeouts;
-  vpc_config: VpcConfig;
+  input_data_config: AwsComprehendEntityRecognizerArgsInputDataConfig;
+  timeouts: AwsComprehendEntityRecognizerArgstimeouts;
+  vpc_config: AwsComprehendEntityRecognizerArgsVpcConfig;
 }
 export class aws_comprehend_entity_recognizer extends TerraformResource {
   readonly arn!: string;

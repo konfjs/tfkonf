@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AttachmentsSource {
+export interface AwsSsmDocumentArgsAttachmentsSource {
   key: string;
   name?: string;
   values: string[];
@@ -17,7 +17,7 @@ export interface AwsSsmDocumentArgs {
   };
   target_type?: string;
   version_name?: string;
-  attachments_source: AttachmentsSource;
+  attachments_source: AwsSsmDocumentArgsAttachmentsSource;
 }
 export class aws_ssm_document extends TerraformResource {
   readonly arn!: string;

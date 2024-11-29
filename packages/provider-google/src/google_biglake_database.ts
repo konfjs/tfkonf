@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HiveOptions {
+export interface GoogleBiglakeDatabaseArgsHiveOptions {
   location_uri?: string;
   parameters?: {
     [key: string]: string;
   };
 }
-export interface Timeouts {
+export interface GoogleBiglakeDatabaseArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,8 +14,8 @@ export interface GoogleBiglakeDatabaseArgs {
   catalog: string;
   name: string;
   type: string;
-  hive_options: HiveOptions;
-  timeouts: Timeouts;
+  hive_options: GoogleBiglakeDatabaseArgsHiveOptions;
+  timeouts: GoogleBiglakeDatabaseArgstimeouts;
 }
 export class google_biglake_database extends TerraformResource {
   readonly create_time!: string;

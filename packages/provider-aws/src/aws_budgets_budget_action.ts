@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ActionThreshold {
+export interface AwsBudgetsBudgetActionArgsActionThreshold {
   action_threshold_type: string;
   action_threshold_value: number;
 }
-export interface IamActionDefinition {
+export interface AwsBudgetsBudgetActionArgsdefinitionIamActionDefinition {
   groups?: string[];
   policy_arn: string;
   roles?: string[];
   users?: string[];
 }
-export interface ScpActionDefinition {
+export interface AwsBudgetsBudgetActionArgsdefinitionScpActionDefinition {
   policy_id: string;
   target_ids: string[];
 }
-export interface SsmActionDefinition {
+export interface AwsBudgetsBudgetActionArgsdefinitionSsmActionDefinition {
   action_sub_type: string;
   instance_ids: string[];
   region: string;
 }
-export interface Definition {
-  iam_action_definition: IamActionDefinition;
-  scp_action_definition: ScpActionDefinition;
-  ssm_action_definition: SsmActionDefinition;
+export interface AwsBudgetsBudgetActionArgsdefinition {
+  iam_action_definition: AwsBudgetsBudgetActionArgsdefinitionIamActionDefinition;
+  scp_action_definition: AwsBudgetsBudgetActionArgsdefinitionScpActionDefinition;
+  ssm_action_definition: AwsBudgetsBudgetActionArgsdefinitionSsmActionDefinition;
 }
-export interface Subscriber {
+export interface AwsBudgetsBudgetActionArgssubscriber {
   address: string;
   subscription_type: string;
 }
-export interface Timeouts {
+export interface AwsBudgetsBudgetActionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -41,10 +41,10 @@ export interface AwsBudgetsBudgetActionArgs {
   tags?: {
     [key: string]: string;
   };
-  action_threshold: ActionThreshold;
-  definition: Definition;
-  subscriber: Subscriber;
-  timeouts: Timeouts;
+  action_threshold: AwsBudgetsBudgetActionArgsActionThreshold;
+  definition: AwsBudgetsBudgetActionArgsdefinition;
+  subscriber: AwsBudgetsBudgetActionArgssubscriber;
+  timeouts: AwsBudgetsBudgetActionArgstimeouts;
 }
 export class aws_budgets_budget_action extends TerraformResource {
   readonly account_id?: string;

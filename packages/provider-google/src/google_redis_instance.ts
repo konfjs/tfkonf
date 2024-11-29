@@ -1,22 +1,22 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface StartTime {
+export interface GoogleRedisInstanceArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime {
   hours?: number;
   minutes?: number;
   nanos?: number;
   seconds?: number;
 }
-export interface WeeklyMaintenanceWindow {
+export interface GoogleRedisInstanceArgsMaintenancePolicyWeeklyMaintenanceWindow {
   day: string;
-  start_time: StartTime;
+  start_time: GoogleRedisInstanceArgsMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 }
-export interface MaintenancePolicy {
+export interface GoogleRedisInstanceArgsMaintenancePolicy {
   description?: string;
-  weekly_maintenance_window: WeeklyMaintenanceWindow;
+  weekly_maintenance_window: GoogleRedisInstanceArgsMaintenancePolicyWeeklyMaintenanceWindow;
 }
-export interface PersistenceConfig {
+export interface GoogleRedisInstanceArgsPersistenceConfig {
   rdb_snapshot_period?: string;
 }
-export interface Timeouts {
+export interface GoogleRedisInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -36,9 +36,9 @@ export interface GoogleRedisInstanceArgs {
   };
   tier?: string;
   transit_encryption_mode?: string;
-  maintenance_policy: MaintenancePolicy;
-  persistence_config: PersistenceConfig;
-  timeouts: Timeouts;
+  maintenance_policy: GoogleRedisInstanceArgsMaintenancePolicy;
+  persistence_config: GoogleRedisInstanceArgsPersistenceConfig;
+  timeouts: GoogleRedisInstanceArgstimeouts;
 }
 export class google_redis_instance extends TerraformResource {
   readonly alternative_location_id?: string;

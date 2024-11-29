@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Site {
+export interface GoogleSiteVerificationWebResourceArgssite {
   identifier: string;
   type: string;
 }
-export interface Timeouts {
+export interface GoogleSiteVerificationWebResourceArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface GoogleSiteVerificationWebResourceArgs {
   verification_method: string;
-  site: Site;
-  timeouts: Timeouts;
+  site: GoogleSiteVerificationWebResourceArgssite;
+  timeouts: GoogleSiteVerificationWebResourceArgstimeouts;
 }
 export class google_site_verification_web_resource extends TerraformResource {
   readonly id?: string;

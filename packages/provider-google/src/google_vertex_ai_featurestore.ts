@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EncryptionSpec {
+export interface GoogleVertexAiFeaturestoreArgsEncryptionSpec {
   kms_key_name: string;
 }
-export interface Scaling {
+export interface GoogleVertexAiFeaturestoreArgsOnlineServingConfigscaling {
   max_node_count: number;
   min_node_count: number;
 }
-export interface OnlineServingConfig {
+export interface GoogleVertexAiFeaturestoreArgsOnlineServingConfig {
   fixed_node_count?: number;
-  scaling: Scaling;
+  scaling: GoogleVertexAiFeaturestoreArgsOnlineServingConfigscaling;
 }
-export interface Timeouts {
+export interface GoogleVertexAiFeaturestoreArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -21,9 +21,9 @@ export interface GoogleVertexAiFeaturestoreArgs {
     [key: string]: string;
   };
   name?: string;
-  encryption_spec: EncryptionSpec;
-  online_serving_config: OnlineServingConfig;
-  timeouts: Timeouts;
+  encryption_spec: GoogleVertexAiFeaturestoreArgsEncryptionSpec;
+  online_serving_config: GoogleVertexAiFeaturestoreArgsOnlineServingConfig;
+  timeouts: GoogleVertexAiFeaturestoreArgstimeouts;
 }
 export class google_vertex_ai_featurestore extends TerraformResource {
   readonly create_time!: string;

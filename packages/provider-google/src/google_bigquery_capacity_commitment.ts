@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleBigqueryCapacityCommitmentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -12,7 +12,7 @@ export interface GoogleBigqueryCapacityCommitmentArgs {
   plan: string;
   renewal_plan?: string;
   slot_count: number;
-  timeouts: Timeouts;
+  timeouts: GoogleBigqueryCapacityCommitmentArgstimeouts;
 }
 export class google_bigquery_capacity_commitment extends TerraformResource {
   readonly commitment_end_time!: string;

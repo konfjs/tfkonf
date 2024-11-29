@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsSsoadminAccountAssignmentArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -10,7 +10,7 @@ export interface AwsSsoadminAccountAssignmentArgs {
   principal_type: string;
   target_id: string;
   target_type?: string;
-  timeouts: Timeouts;
+  timeouts: AwsSsoadminAccountAssignmentArgstimeouts;
 }
 export class aws_ssoadmin_account_assignment extends TerraformResource {
   readonly id?: string;

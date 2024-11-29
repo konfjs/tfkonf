@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LicenseResource {
+export interface GoogleComputeRegionCommitmentArgsLicenseResource {
   amount?: string;
   cores_per_license?: string;
   license: string;
 }
-export interface Resources {
+export interface GoogleComputeRegionCommitmentArgsresources {
   accelerator_type?: string;
   amount?: string;
   type?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionCommitmentArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -17,9 +17,9 @@ export interface GoogleComputeRegionCommitmentArgs {
   description?: string;
   name: string;
   plan: string;
-  license_resource: LicenseResource;
-  resources: Resources;
-  timeouts: Timeouts;
+  license_resource: GoogleComputeRegionCommitmentArgsLicenseResource;
+  resources: GoogleComputeRegionCommitmentArgsresources;
+  timeouts: GoogleComputeRegionCommitmentArgstimeouts;
 }
 export class google_compute_region_commitment extends TerraformResource {
   readonly auto_renew?: boolean;

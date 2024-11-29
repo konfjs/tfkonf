@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EndpointConfiguration {
+export interface AwsApiGatewayRestApiArgsEndpointConfiguration {
   types: string[];
 }
 export interface AwsApiGatewayRestApiArgs {
@@ -13,7 +13,7 @@ export interface AwsApiGatewayRestApiArgs {
   tags?: {
     [key: string]: string;
   };
-  endpoint_configuration: EndpointConfiguration;
+  endpoint_configuration: AwsApiGatewayRestApiArgsEndpointConfiguration;
 }
 export class aws_api_gateway_rest_api extends TerraformResource {
   readonly api_key_source?: string;

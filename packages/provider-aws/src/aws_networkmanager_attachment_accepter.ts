@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsNetworkmanagerAttachmentAccepterArgstimeouts {
   create?: string;
 }
 export interface AwsNetworkmanagerAttachmentAccepterArgs {
   attachment_id: string;
   attachment_type: string;
-  timeouts: Timeouts;
+  timeouts: AwsNetworkmanagerAttachmentAccepterArgstimeouts;
 }
 export class aws_networkmanager_attachment_accepter extends TerraformResource {
   readonly attachment_policy_rule_number!: number;

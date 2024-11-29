@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Monitor {
+export interface AwsAppconfigEnvironmentArgsmonitor {
   alarm_arn: string;
   alarm_role_arn?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsAppconfigEnvironmentArgs {
   tags?: {
     [key: string]: string;
   };
-  monitor: Monitor;
+  monitor: AwsAppconfigEnvironmentArgsmonitor;
 }
 export class aws_appconfig_environment extends TerraformResource {
   readonly arn!: string;

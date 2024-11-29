@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PortInfo {
+export interface AwsLightsailInstancePublicPortsArgsPortInfo {
   from_port: number;
   protocol: string;
   to_port: number;
 }
 export interface AwsLightsailInstancePublicPortsArgs {
   instance_name: string;
-  port_info: PortInfo;
+  port_info: AwsLightsailInstancePublicPortsArgsPortInfo;
 }
 export class aws_lightsail_instance_public_ports extends TerraformResource {
   readonly id?: string;

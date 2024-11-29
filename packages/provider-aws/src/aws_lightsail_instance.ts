@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AddOn {
+export interface AwsLightsailInstanceArgsAddOn {
   snapshot_time: string;
   status: string;
   type: string;
@@ -15,7 +15,7 @@ export interface AwsLightsailInstanceArgs {
     [key: string]: string;
   };
   user_data?: string;
-  add_on: AddOn;
+  add_on: AwsLightsailInstanceArgsAddOn;
 }
 export class aws_lightsail_instance extends TerraformResource {
   readonly arn!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Parameter {
+export interface AwsDocdbClusterParameterGroupArgsparameter {
   apply_method?: string;
   name: string;
   value: string;
@@ -10,7 +10,7 @@ export interface AwsDocdbClusterParameterGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  parameter: Parameter;
+  parameter: AwsDocdbClusterParameterGroupArgsparameter;
 }
 export class aws_docdb_cluster_parameter_group extends TerraformResource {
   readonly arn!: string;

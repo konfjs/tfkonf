@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Capacity {
+export interface GooglePubsubLiteTopicArgsPartitionConfigcapacity {
   publish_mib_per_sec: number;
   subscribe_mib_per_sec: number;
 }
-export interface PartitionConfig {
+export interface GooglePubsubLiteTopicArgsPartitionConfig {
   count: number;
-  capacity: Capacity;
+  capacity: GooglePubsubLiteTopicArgsPartitionConfigcapacity;
 }
-export interface ReservationConfig {
+export interface GooglePubsubLiteTopicArgsReservationConfig {
   throughput_reservation?: string;
 }
-export interface RetentionConfig {
+export interface GooglePubsubLiteTopicArgsRetentionConfig {
   per_partition_bytes: string;
   period?: string;
 }
-export interface Timeouts {
+export interface GooglePubsubLiteTopicArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -23,10 +23,10 @@ export interface GooglePubsubLiteTopicArgs {
   name: string;
   region?: string;
   zone?: string;
-  partition_config: PartitionConfig;
-  reservation_config: ReservationConfig;
-  retention_config: RetentionConfig;
-  timeouts: Timeouts;
+  partition_config: GooglePubsubLiteTopicArgsPartitionConfig;
+  reservation_config: GooglePubsubLiteTopicArgsReservationConfig;
+  retention_config: GooglePubsubLiteTopicArgsRetentionConfig;
+  timeouts: GooglePubsubLiteTopicArgstimeouts;
 }
 export class google_pubsub_lite_topic extends TerraformResource {
   readonly id?: string;

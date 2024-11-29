@@ -1,51 +1,51 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CapacityReservationTarget {
+export interface AwsSpotInstanceRequestArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
   capacity_reservation_resource_group_arn?: string;
 }
-export interface CapacityReservationSpecification {
+export interface AwsSpotInstanceRequestArgsCapacityReservationSpecification {
   capacity_reservation_preference?: string;
-  capacity_reservation_target: CapacityReservationTarget;
+  capacity_reservation_target: AwsSpotInstanceRequestArgsCapacityReservationSpecificationCapacityReservationTarget;
 }
-export interface CpuOptions {}
-export interface CreditSpecification {
+export interface AwsSpotInstanceRequestArgsCpuOptions {}
+export interface AwsSpotInstanceRequestArgsCreditSpecification {
   cpu_credits?: string;
 }
-export interface EbsBlockDevice {
+export interface AwsSpotInstanceRequestArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
   tags?: {
     [key: string]: string;
   };
 }
-export interface EnclaveOptions {}
-export interface EphemeralBlockDevice {
+export interface AwsSpotInstanceRequestArgsEnclaveOptions {}
+export interface AwsSpotInstanceRequestArgsEphemeralBlockDevice {
   device_name: string;
   no_device?: boolean;
   virtual_name?: string;
 }
-export interface LaunchTemplate {
+export interface AwsSpotInstanceRequestArgsLaunchTemplate {
   version?: string;
 }
-export interface MaintenanceOptions {}
-export interface MetadataOptions {
+export interface AwsSpotInstanceRequestArgsMaintenanceOptions {}
+export interface AwsSpotInstanceRequestArgsMetadataOptions {
   http_endpoint?: string;
   http_protocol_ipv6?: string;
 }
-export interface NetworkInterface {
+export interface AwsSpotInstanceRequestArgsNetworkInterface {
   delete_on_termination?: boolean;
   device_index: number;
   network_card_index?: number;
   network_interface_id: string;
 }
-export interface PrivateDnsNameOptions {}
-export interface RootBlockDevice {
+export interface AwsSpotInstanceRequestArgsPrivateDnsNameOptions {}
+export interface AwsSpotInstanceRequestArgsRootBlockDevice {
   delete_on_termination?: boolean;
   tags?: {
     [key: string]: string;
   };
 }
-export interface Timeouts {
+export interface AwsSpotInstanceRequestArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -66,19 +66,19 @@ export interface AwsSpotInstanceRequestArgs {
     [key: string]: string;
   };
   wait_for_fulfillment?: boolean;
-  capacity_reservation_specification: CapacityReservationSpecification;
-  cpu_options: CpuOptions;
-  credit_specification: CreditSpecification;
-  ebs_block_device: EbsBlockDevice;
-  enclave_options: EnclaveOptions;
-  ephemeral_block_device: EphemeralBlockDevice;
-  launch_template: LaunchTemplate;
-  maintenance_options: MaintenanceOptions;
-  metadata_options: MetadataOptions;
-  network_interface: NetworkInterface;
-  private_dns_name_options: PrivateDnsNameOptions;
-  root_block_device: RootBlockDevice;
-  timeouts: Timeouts;
+  capacity_reservation_specification: AwsSpotInstanceRequestArgsCapacityReservationSpecification;
+  cpu_options: AwsSpotInstanceRequestArgsCpuOptions;
+  credit_specification: AwsSpotInstanceRequestArgsCreditSpecification;
+  ebs_block_device: AwsSpotInstanceRequestArgsEbsBlockDevice;
+  enclave_options: AwsSpotInstanceRequestArgsEnclaveOptions;
+  ephemeral_block_device: AwsSpotInstanceRequestArgsEphemeralBlockDevice;
+  launch_template: AwsSpotInstanceRequestArgsLaunchTemplate;
+  maintenance_options: AwsSpotInstanceRequestArgsMaintenanceOptions;
+  metadata_options: AwsSpotInstanceRequestArgsMetadataOptions;
+  network_interface: AwsSpotInstanceRequestArgsNetworkInterface;
+  private_dns_name_options: AwsSpotInstanceRequestArgsPrivateDnsNameOptions;
+  root_block_device: AwsSpotInstanceRequestArgsRootBlockDevice;
+  timeouts: AwsSpotInstanceRequestArgstimeouts;
 }
 export class aws_spot_instance_request extends TerraformResource {
   readonly ami?: string;

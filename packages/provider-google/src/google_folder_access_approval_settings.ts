@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface EnrolledServices {
+export interface GoogleFolderAccessApprovalSettingsArgsEnrolledServices {
   cloud_product: string;
   enrollment_level?: string;
 }
-export interface Timeouts {
+export interface GoogleFolderAccessApprovalSettingsArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,8 +11,8 @@ export interface Timeouts {
 export interface GoogleFolderAccessApprovalSettingsArgs {
   active_key_version?: string;
   folder_id: string;
-  enrolled_services: EnrolledServices;
-  timeouts: Timeouts;
+  enrolled_services: GoogleFolderAccessApprovalSettingsArgsEnrolledServices;
+  timeouts: GoogleFolderAccessApprovalSettingsArgstimeouts;
 }
 export class google_folder_access_approval_settings extends TerraformResource {
   readonly ancestor_has_active_key_version!: boolean;

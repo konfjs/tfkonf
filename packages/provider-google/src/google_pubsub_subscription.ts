@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BigqueryConfig {
+export interface GooglePubsubSubscriptionArgsBigqueryConfig {
   drop_unknown_fields?: boolean;
   service_account_email?: string;
   table: string;
@@ -7,11 +7,11 @@ export interface BigqueryConfig {
   use_topic_schema?: boolean;
   write_metadata?: boolean;
 }
-export interface AvroConfig {
+export interface GooglePubsubSubscriptionArgsCloudStorageConfigAvroConfig {
   use_topic_schema?: boolean;
   write_metadata?: boolean;
 }
-export interface CloudStorageConfig {
+export interface GooglePubsubSubscriptionArgsCloudStorageConfig {
   bucket: string;
   filename_datetime_format?: string;
   filename_prefix?: string;
@@ -20,32 +20,32 @@ export interface CloudStorageConfig {
   max_duration?: string;
   max_messages?: number;
   service_account_email?: string;
-  avro_config: AvroConfig;
+  avro_config: GooglePubsubSubscriptionArgsCloudStorageConfigAvroConfig;
 }
-export interface DeadLetterPolicy {
+export interface GooglePubsubSubscriptionArgsDeadLetterPolicy {
   dead_letter_topic?: string;
   max_delivery_attempts?: number;
 }
-export interface ExpirationPolicy {
+export interface GooglePubsubSubscriptionArgsExpirationPolicy {
   ttl: string;
 }
-export interface NoWrapper {
+export interface GooglePubsubSubscriptionArgsPushConfigNoWrapper {
   write_metadata: boolean;
 }
-export interface OidcToken {
+export interface GooglePubsubSubscriptionArgsPushConfigOidcToken {
   audience?: string;
   service_account_email: string;
 }
-export interface PushConfig {
+export interface GooglePubsubSubscriptionArgsPushConfig {
   attributes?: {
     [key: string]: string;
   };
   push_endpoint: string;
-  no_wrapper: NoWrapper;
-  oidc_token: OidcToken;
+  no_wrapper: GooglePubsubSubscriptionArgsPushConfigNoWrapper;
+  oidc_token: GooglePubsubSubscriptionArgsPushConfigOidcToken;
 }
-export interface RetryPolicy {}
-export interface Timeouts {
+export interface GooglePubsubSubscriptionArgsRetryPolicy {}
+export interface GooglePubsubSubscriptionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -61,13 +61,13 @@ export interface GooglePubsubSubscriptionArgs {
   name: string;
   retain_acked_messages?: boolean;
   topic: string;
-  bigquery_config: BigqueryConfig;
-  cloud_storage_config: CloudStorageConfig;
-  dead_letter_policy: DeadLetterPolicy;
-  expiration_policy: ExpirationPolicy;
-  push_config: PushConfig;
-  retry_policy: RetryPolicy;
-  timeouts: Timeouts;
+  bigquery_config: GooglePubsubSubscriptionArgsBigqueryConfig;
+  cloud_storage_config: GooglePubsubSubscriptionArgsCloudStorageConfig;
+  dead_letter_policy: GooglePubsubSubscriptionArgsDeadLetterPolicy;
+  expiration_policy: GooglePubsubSubscriptionArgsExpirationPolicy;
+  push_config: GooglePubsubSubscriptionArgsPushConfig;
+  retry_policy: GooglePubsubSubscriptionArgsRetryPolicy;
+  timeouts: GooglePubsubSubscriptionArgstimeouts;
 }
 export class google_pubsub_subscription extends TerraformResource {
   readonly ack_deadline_seconds?: number;

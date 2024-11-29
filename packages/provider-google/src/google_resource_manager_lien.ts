@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleResourceManagerLienArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -8,7 +8,7 @@ export interface GoogleResourceManagerLienArgs {
   parent: string;
   reason: string;
   restrictions: string[];
-  timeouts: Timeouts;
+  timeouts: GoogleResourceManagerLienArgstimeouts;
 }
 export class google_resource_manager_lien extends TerraformResource {
   readonly create_time!: string;

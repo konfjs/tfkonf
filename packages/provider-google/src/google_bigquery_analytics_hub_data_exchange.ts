@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface DcrExchangeConfig {}
-export interface DefaultExchangeConfig {}
-export interface SharingEnvironmentConfig {
-  dcr_exchange_config: DcrExchangeConfig;
-  default_exchange_config: DefaultExchangeConfig;
+export interface GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDcrExchangeConfig {}
+export interface GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDefaultExchangeConfig {}
+export interface GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfig {
+  dcr_exchange_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDcrExchangeConfig;
+  default_exchange_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfigDefaultExchangeConfig;
 }
-export interface Timeouts {
+export interface GoogleBigqueryAnalyticsHubDataExchangeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -18,8 +18,8 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeArgs {
   icon?: string;
   location: string;
   primary_contact?: string;
-  sharing_environment_config: SharingEnvironmentConfig;
-  timeouts: Timeouts;
+  sharing_environment_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfig;
+  timeouts: GoogleBigqueryAnalyticsHubDataExchangeArgstimeouts;
 }
 export class google_bigquery_analytics_hub_data_exchange extends TerraformResource {
   readonly id?: string;

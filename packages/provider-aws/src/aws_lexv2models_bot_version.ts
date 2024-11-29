@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsLexv2modelsBotVersionArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -9,7 +9,7 @@ export interface AwsLexv2modelsBotVersionArgs {
   locale_specification: {
     [key: string]: any;
   };
-  timeouts: Timeouts;
+  timeouts: AwsLexv2modelsBotVersionArgstimeouts;
 }
 export class aws_lexv2models_bot_version extends TerraformResource {
   readonly bot_version?: string;

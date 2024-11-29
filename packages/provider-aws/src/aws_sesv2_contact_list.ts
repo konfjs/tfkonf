@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Topic {
+export interface AwsSesv2ContactListArgstopic {
   default_subscription_status: string;
   description?: string;
   display_name: string;
@@ -11,7 +11,7 @@ export interface AwsSesv2ContactListArgs {
   tags?: {
     [key: string]: string;
   };
-  topic: Topic;
+  topic: AwsSesv2ContactListArgstopic;
 }
 export class aws_sesv2_contact_list extends TerraformResource {
   readonly arn!: string;

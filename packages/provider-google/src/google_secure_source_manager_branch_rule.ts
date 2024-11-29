@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleSecureSourceManagerBranchRuleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,7 +16,7 @@ export interface GoogleSecureSourceManagerBranchRuleArgs {
   require_comments_resolved?: boolean;
   require_linear_history?: boolean;
   require_pull_request?: boolean;
-  timeouts: Timeouts;
+  timeouts: GoogleSecureSourceManagerBranchRuleArgstimeouts;
 }
 export class google_secure_source_manager_branch_rule extends TerraformResource {
   readonly create_time!: string;

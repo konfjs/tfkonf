@@ -1,42 +1,42 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CloudStoragePath {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsdictionaryCloudStoragePath {
   path: string;
 }
-export interface WordList {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsdictionaryWordList {
   words: string[];
 }
-export interface Dictionary {
-  cloud_storage_path: CloudStoragePath;
-  word_list: WordList;
+export interface GoogleDataLossPreventionStoredInfoTypeArgsdictionary {
+  cloud_storage_path: GoogleDataLossPreventionStoredInfoTypeArgsdictionaryCloudStoragePath;
+  word_list: GoogleDataLossPreventionStoredInfoTypeArgsdictionaryWordList;
 }
-export interface Field {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryFieldfield {
   name: string;
 }
-export interface Table {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryFieldtable {
   dataset_id: string;
   project_id: string;
   table_id: string;
 }
-export interface BigQueryField {
-  field: Field;
-  table: Table;
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryField {
+  field: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryFieldfield;
+  table: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryFieldtable;
 }
-export interface CloudStorageFileSet {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryCloudStorageFileSet {
   url: string;
 }
-export interface OutputPath {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryOutputPath {
   path: string;
 }
-export interface LargeCustomDictionary {
-  big_query_field: BigQueryField;
-  cloud_storage_file_set: CloudStorageFileSet;
-  output_path: OutputPath;
+export interface GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionary {
+  big_query_field: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryBigQueryField;
+  cloud_storage_file_set: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryCloudStorageFileSet;
+  output_path: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionaryOutputPath;
 }
-export interface Regex {
+export interface GoogleDataLossPreventionStoredInfoTypeArgsregex {
   group_indexes?: number[];
   pattern: string;
 }
-export interface Timeouts {
+export interface GoogleDataLossPreventionStoredInfoTypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -45,10 +45,10 @@ export interface GoogleDataLossPreventionStoredInfoTypeArgs {
   description?: string;
   display_name?: string;
   parent: string;
-  dictionary: Dictionary;
-  large_custom_dictionary: LargeCustomDictionary;
-  regex: Regex;
-  timeouts: Timeouts;
+  dictionary: GoogleDataLossPreventionStoredInfoTypeArgsdictionary;
+  large_custom_dictionary: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionary;
+  regex: GoogleDataLossPreventionStoredInfoTypeArgsregex;
+  timeouts: GoogleDataLossPreventionStoredInfoTypeArgstimeouts;
 }
 export class google_data_loss_prevention_stored_info_type extends TerraformResource {
   readonly id?: string;

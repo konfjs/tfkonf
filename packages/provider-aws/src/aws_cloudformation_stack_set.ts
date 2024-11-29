@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AutoDeployment {
+export interface AwsCloudformationStackSetArgsAutoDeployment {
   enabled?: boolean;
   retain_stacks_on_account_removal?: boolean;
 }
-export interface ManagedExecution {
+export interface AwsCloudformationStackSetArgsManagedExecution {
   active?: boolean;
 }
-export interface OperationPreferences {
+export interface AwsCloudformationStackSetArgsOperationPreferences {
   failure_tolerance_count?: number;
   failure_tolerance_percentage?: number;
   max_concurrent_count?: number;
@@ -14,7 +14,7 @@ export interface OperationPreferences {
   region_concurrency_type?: string;
   region_order?: string[];
 }
-export interface Timeouts {
+export interface AwsCloudformationStackSetArgstimeouts {
   update?: string;
 }
 export interface AwsCloudformationStackSetArgs {
@@ -31,10 +31,10 @@ export interface AwsCloudformationStackSetArgs {
     [key: string]: string;
   };
   template_url?: string;
-  auto_deployment: AutoDeployment;
-  managed_execution: ManagedExecution;
-  operation_preferences: OperationPreferences;
-  timeouts: Timeouts;
+  auto_deployment: AwsCloudformationStackSetArgsAutoDeployment;
+  managed_execution: AwsCloudformationStackSetArgsManagedExecution;
+  operation_preferences: AwsCloudformationStackSetArgsOperationPreferences;
+  timeouts: AwsCloudformationStackSetArgstimeouts;
 }
 export class aws_cloudformation_stack_set extends TerraformResource {
   readonly arn!: string;

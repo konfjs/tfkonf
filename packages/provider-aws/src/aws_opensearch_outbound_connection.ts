@@ -1,31 +1,31 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CrossClusterSearch {
+export interface AwsOpensearchOutboundConnectionArgsConnectionPropertiesCrossClusterSearch {
   skip_unavailable?: string;
 }
-export interface ConnectionProperties {
-  cross_cluster_search: CrossClusterSearch;
+export interface AwsOpensearchOutboundConnectionArgsConnectionProperties {
+  cross_cluster_search: AwsOpensearchOutboundConnectionArgsConnectionPropertiesCrossClusterSearch;
 }
-export interface LocalDomainInfo {
+export interface AwsOpensearchOutboundConnectionArgsLocalDomainInfo {
   domain_name: string;
   owner_id: string;
   region: string;
 }
-export interface RemoteDomainInfo {
+export interface AwsOpensearchOutboundConnectionArgsRemoteDomainInfo {
   domain_name: string;
   owner_id: string;
   region: string;
 }
-export interface Timeouts {
+export interface AwsOpensearchOutboundConnectionArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsOpensearchOutboundConnectionArgs {
   accept_connection?: boolean;
   connection_alias: string;
-  connection_properties: ConnectionProperties;
-  local_domain_info: LocalDomainInfo;
-  remote_domain_info: RemoteDomainInfo;
-  timeouts: Timeouts;
+  connection_properties: AwsOpensearchOutboundConnectionArgsConnectionProperties;
+  local_domain_info: AwsOpensearchOutboundConnectionArgsLocalDomainInfo;
+  remote_domain_info: AwsOpensearchOutboundConnectionArgsRemoteDomainInfo;
+  timeouts: AwsOpensearchOutboundConnectionArgstimeouts;
 }
 export class aws_opensearch_outbound_connection extends TerraformResource {
   readonly connection_mode?: string;

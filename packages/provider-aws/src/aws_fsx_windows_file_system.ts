@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuditLogConfiguration {
+export interface AwsFsxWindowsFileSystemArgsAuditLogConfiguration {
   file_access_audit_log_level?: string;
   file_share_access_audit_log_level?: string;
 }
-export interface DiskIopsConfiguration {
+export interface AwsFsxWindowsFileSystemArgsDiskIopsConfiguration {
   mode?: string;
 }
-export interface SelfManagedActiveDirectory {
+export interface AwsFsxWindowsFileSystemArgsSelfManagedActiveDirectory {
   dns_ips: string[];
   domain_name: string;
   file_system_administrators_group?: string;
@@ -14,7 +14,7 @@ export interface SelfManagedActiveDirectory {
   password: string;
   username: string;
 }
-export interface Timeouts {
+export interface AwsFsxWindowsFileSystemArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -37,10 +37,10 @@ export interface AwsFsxWindowsFileSystemArgs {
     [key: string]: string;
   };
   throughput_capacity: number;
-  audit_log_configuration: AuditLogConfiguration;
-  disk_iops_configuration: DiskIopsConfiguration;
-  self_managed_active_directory: SelfManagedActiveDirectory;
-  timeouts: Timeouts;
+  audit_log_configuration: AwsFsxWindowsFileSystemArgsAuditLogConfiguration;
+  disk_iops_configuration: AwsFsxWindowsFileSystemArgsDiskIopsConfiguration;
+  self_managed_active_directory: AwsFsxWindowsFileSystemArgsSelfManagedActiveDirectory;
+  timeouts: AwsFsxWindowsFileSystemArgstimeouts;
 }
 export class aws_fsx_windows_file_system extends TerraformResource {
   readonly arn!: string;

@@ -1,20 +1,20 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LoadBalancerOptions {
+export interface AwsVerifiedaccessEndpointArgsLoadBalancerOptions {
   load_balancer_arn?: string;
   port?: number;
   protocol?: string;
   subnet_ids?: string[];
 }
-export interface NetworkInterfaceOptions {
+export interface AwsVerifiedaccessEndpointArgsNetworkInterfaceOptions {
   network_interface_id?: string;
   port?: number;
   protocol?: string;
 }
-export interface SseSpecification {
+export interface AwsVerifiedaccessEndpointArgsSseSpecification {
   customer_managed_key_enabled?: boolean;
   kms_key_arn?: string;
 }
-export interface Timeouts {
+export interface AwsVerifiedaccessEndpointArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -32,10 +32,10 @@ export interface AwsVerifiedaccessEndpointArgs {
     [key: string]: string;
   };
   verified_access_group_id: string;
-  load_balancer_options: LoadBalancerOptions;
-  network_interface_options: NetworkInterfaceOptions;
-  sse_specification: SseSpecification;
-  timeouts: Timeouts;
+  load_balancer_options: AwsVerifiedaccessEndpointArgsLoadBalancerOptions;
+  network_interface_options: AwsVerifiedaccessEndpointArgsNetworkInterfaceOptions;
+  sse_specification: AwsVerifiedaccessEndpointArgsSseSpecification;
+  timeouts: AwsVerifiedaccessEndpointArgstimeouts;
 }
 export class aws_verifiedaccess_endpoint extends TerraformResource {
   readonly device_validation_domain!: string;

@@ -1,23 +1,23 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BypassCacheOnRequestHeaders {
+export interface GoogleComputeBackendBucketArgsCdnPolicyBypassCacheOnRequestHeaders {
   header_name?: string;
 }
-export interface CacheKeyPolicy {
+export interface GoogleComputeBackendBucketArgsCdnPolicyCacheKeyPolicy {
   include_http_headers?: string[];
   query_string_whitelist?: string[];
 }
-export interface NegativeCachingPolicy {
+export interface GoogleComputeBackendBucketArgsCdnPolicyNegativeCachingPolicy {
   code?: number;
   ttl?: number;
 }
-export interface CdnPolicy {
+export interface GoogleComputeBackendBucketArgsCdnPolicy {
   request_coalescing?: boolean;
   signed_url_cache_max_age_sec?: number;
-  bypass_cache_on_request_headers: BypassCacheOnRequestHeaders;
-  cache_key_policy: CacheKeyPolicy;
-  negative_caching_policy: NegativeCachingPolicy;
+  bypass_cache_on_request_headers: GoogleComputeBackendBucketArgsCdnPolicyBypassCacheOnRequestHeaders;
+  cache_key_policy: GoogleComputeBackendBucketArgsCdnPolicyCacheKeyPolicy;
+  negative_caching_policy: GoogleComputeBackendBucketArgsCdnPolicyNegativeCachingPolicy;
 }
-export interface Timeouts {
+export interface GoogleComputeBackendBucketArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -30,8 +30,8 @@ export interface GoogleComputeBackendBucketArgs {
   edge_security_policy?: string;
   enable_cdn?: boolean;
   name: string;
-  cdn_policy: CdnPolicy;
-  timeouts: Timeouts;
+  cdn_policy: GoogleComputeBackendBucketArgsCdnPolicy;
+  timeouts: GoogleComputeBackendBucketArgstimeouts;
 }
 export class google_compute_backend_bucket extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Condition {
+export interface GoogleBigtableInstanceIamBindingArgscondition {
   description?: string;
   expression: string;
   title: string;
@@ -8,7 +8,7 @@ export interface GoogleBigtableInstanceIamBindingArgs {
   instance: string;
   members: string[];
   role: string;
-  condition: Condition;
+  condition: GoogleBigtableInstanceIamBindingArgscondition;
 }
 export class google_bigtable_instance_iam_binding extends TerraformResource {
   readonly etag!: string;

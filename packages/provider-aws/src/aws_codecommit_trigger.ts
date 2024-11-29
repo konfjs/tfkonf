@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Trigger {
+export interface AwsCodecommitTriggerArgstrigger {
   branches?: string[];
   custom_data?: string;
   destination_arn: string;
@@ -8,7 +8,7 @@ export interface Trigger {
 }
 export interface AwsCodecommitTriggerArgs {
   repository_name: string;
-  trigger: Trigger;
+  trigger: AwsCodecommitTriggerArgstrigger;
 }
 export class aws_codecommit_trigger extends TerraformResource {
   readonly configuration_id!: string;

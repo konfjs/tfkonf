@@ -1,58 +1,58 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Bool {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterbool {
   value: boolean;
 }
-export interface Double {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterdouble {
   value: number;
 }
-export interface Enum {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterenum {
   value: string;
 }
-export interface EnumList {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterEnumList {
   value: string[];
 }
-export interface Int {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterint {
   value: number;
 }
-export interface IntList {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterIntList {
   value: number[];
 }
-export interface String {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterstring {
   value: string;
 }
-export interface StringList {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterStringList {
   value: string[];
 }
-export interface Parameter {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameter {
   name: string;
   value_type: string;
-  bool: Bool;
-  double: Double;
-  enum: Enum;
-  enum_list: EnumList;
-  int: Int;
-  int_list: IntList;
-  string: String;
-  string_list: StringList;
+  bool: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterbool;
+  double: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterdouble;
+  enum: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterenum;
+  enum_list: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterEnumList;
+  int: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterint;
+  int_list: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterIntList;
+  string: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterstring;
+  string_list: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameterStringList;
 }
-export interface SecurityControlCustomParameter {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameter {
   security_control_id: string;
-  parameter: Parameter;
+  parameter: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameterparameter;
 }
-export interface SecurityControlsConfiguration {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfiguration {
   disabled_control_identifiers?: string[];
   enabled_control_identifiers?: string[];
-  security_control_custom_parameter: SecurityControlCustomParameter;
+  security_control_custom_parameter: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfigurationSecurityControlCustomParameter;
 }
-export interface ConfigurationPolicy {
+export interface AwsSecurityhubConfigurationPolicyArgsConfigurationPolicy {
   enabled_standard_arns?: string[];
   service_enabled: boolean;
-  security_controls_configuration: SecurityControlsConfiguration;
+  security_controls_configuration: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicySecurityControlsConfiguration;
 }
 export interface AwsSecurityhubConfigurationPolicyArgs {
   description?: string;
   name: string;
-  configuration_policy: ConfigurationPolicy;
+  configuration_policy: AwsSecurityhubConfigurationPolicyArgsConfigurationPolicy;
 }
 export class aws_securityhub_configuration_policy extends TerraformResource {
   readonly arn!: string;

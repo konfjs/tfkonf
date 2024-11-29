@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Parameters {
+export interface AwsRedshiftdataStatementArgsparameters {
   name: string;
   value: string;
 }
-export interface Timeouts {
+export interface AwsRedshiftdataStatementArgstimeouts {
   create?: string;
 }
 export interface AwsRedshiftdataStatementArgs {
@@ -15,8 +15,8 @@ export interface AwsRedshiftdataStatementArgs {
   statement_name?: string;
   with_event?: boolean;
   workgroup_name?: string;
-  parameters: Parameters;
-  timeouts: Timeouts;
+  parameters: AwsRedshiftdataStatementArgsparameters;
+  timeouts: AwsRedshiftdataStatementArgstimeouts;
 }
 export class aws_redshiftdata_statement extends TerraformResource {
   readonly id?: string;

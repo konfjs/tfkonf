@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PrivateConfig {
+export interface GoogleSecureSourceManagerInstanceArgsPrivateConfig {
   ca_pool: string;
   is_private: boolean;
 }
-export interface Timeouts {
+export interface GoogleSecureSourceManagerInstanceArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface WorkforceIdentityFederationConfig {
+export interface GoogleSecureSourceManagerInstanceArgsWorkforceIdentityFederationConfig {
   enabled: boolean;
 }
 export interface GoogleSecureSourceManagerInstanceArgs {
@@ -18,9 +18,9 @@ export interface GoogleSecureSourceManagerInstanceArgs {
     [key: string]: string;
   };
   location: string;
-  private_config: PrivateConfig;
-  timeouts: Timeouts;
-  workforce_identity_federation_config: WorkforceIdentityFederationConfig;
+  private_config: GoogleSecureSourceManagerInstanceArgsPrivateConfig;
+  timeouts: GoogleSecureSourceManagerInstanceArgstimeouts;
+  workforce_identity_federation_config: GoogleSecureSourceManagerInstanceArgsWorkforceIdentityFederationConfig;
 }
 export class google_secure_source_manager_instance extends TerraformResource {
   readonly create_time!: string;

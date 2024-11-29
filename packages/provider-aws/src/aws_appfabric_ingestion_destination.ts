@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface FirehoseStream {
+export interface AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestinationFirehoseStream {
   stream_name: string;
 }
-export interface S3Bucket {
+export interface AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestinationS3Bucket {
   bucket_name: string;
   prefix?: string;
 }
-export interface Destination {
-  firehose_stream: FirehoseStream;
-  s3_bucket: S3Bucket;
+export interface AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestination {
+  firehose_stream: AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestinationFirehoseStream;
+  s3_bucket: AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestinationS3Bucket;
 }
-export interface AuditLog {
-  destination: Destination;
+export interface AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLog {
+  destination: AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLogdestination;
 }
-export interface DestinationConfiguration {
-  audit_log: AuditLog;
+export interface AwsAppfabricIngestionDestinationArgsDestinationConfiguration {
+  audit_log: AwsAppfabricIngestionDestinationArgsDestinationConfigurationAuditLog;
 }
-export interface AuditLog {
+export interface AwsAppfabricIngestionDestinationArgsProcessingConfigurationAuditLog {
   format: string;
   schema: string;
 }
-export interface ProcessingConfiguration {
-  audit_log: AuditLog;
+export interface AwsAppfabricIngestionDestinationArgsProcessingConfiguration {
+  audit_log: AwsAppfabricIngestionDestinationArgsProcessingConfigurationAuditLog;
 }
-export interface Timeouts {
+export interface AwsAppfabricIngestionDestinationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -34,9 +34,9 @@ export interface AwsAppfabricIngestionDestinationArgs {
   tags?: {
     [key: string]: string;
   };
-  destination_configuration: DestinationConfiguration;
-  processing_configuration: ProcessingConfiguration;
-  timeouts: Timeouts;
+  destination_configuration: AwsAppfabricIngestionDestinationArgsDestinationConfiguration;
+  processing_configuration: AwsAppfabricIngestionDestinationArgsProcessingConfiguration;
+  timeouts: AwsAppfabricIngestionDestinationArgstimeouts;
 }
 export class aws_appfabric_ingestion_destination extends TerraformResource {
   readonly arn!: string;

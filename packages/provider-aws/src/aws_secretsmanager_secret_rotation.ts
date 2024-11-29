@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface RotationRules {
+export interface AwsSecretsmanagerSecretRotationArgsRotationRules {
   automatically_after_days?: number;
   duration?: string;
   schedule_expression?: string;
@@ -8,7 +8,7 @@ export interface AwsSecretsmanagerSecretRotationArgs {
   rotate_immediately?: boolean;
   rotation_lambda_arn?: string;
   secret_id: string;
-  rotation_rules: RotationRules;
+  rotation_rules: AwsSecretsmanagerSecretRotationArgsRotationRules;
 }
 export class aws_secretsmanager_secret_rotation extends TerraformResource {
   readonly id?: string;

@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface LambdaFunction {
+export interface AwsS3BucketNotificationArgsLambdaFunction {
   events: string[];
   filter_prefix?: string;
   filter_suffix?: string;
   lambda_function_arn?: string;
 }
-export interface Queue {
+export interface AwsS3BucketNotificationArgsqueue {
   events: string[];
   filter_prefix?: string;
   filter_suffix?: string;
   queue_arn: string;
 }
-export interface Topic {
+export interface AwsS3BucketNotificationArgstopic {
   events: string[];
   filter_prefix?: string;
   filter_suffix?: string;
@@ -20,9 +20,9 @@ export interface Topic {
 export interface AwsS3BucketNotificationArgs {
   bucket: string;
   eventbridge?: boolean;
-  lambda_function: LambdaFunction;
-  queue: Queue;
-  topic: Topic;
+  lambda_function: AwsS3BucketNotificationArgsLambdaFunction;
+  queue: AwsS3BucketNotificationArgsqueue;
+  topic: AwsS3BucketNotificationArgstopic;
 }
 export class aws_s3_bucket_notification extends TerraformResource {
   readonly id?: string;

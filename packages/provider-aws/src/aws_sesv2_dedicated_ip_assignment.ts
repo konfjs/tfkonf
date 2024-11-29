@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsSesv2DedicatedIpAssignmentArgstimeouts {
   create?: string;
   delete?: string;
 }
 export interface AwsSesv2DedicatedIpAssignmentArgs {
   destination_pool_name: string;
   ip: string;
-  timeouts: Timeouts;
+  timeouts: AwsSesv2DedicatedIpAssignmentArgstimeouts;
 }
 export class aws_sesv2_dedicated_ip_assignment extends TerraformResource {
   readonly id?: string;

@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExternalProtectionLevelOptions {
+export interface GoogleKmsCryptoKeyVersionArgsExternalProtectionLevelOptions {
   ekm_connection_key_path?: string;
   external_key_uri?: string;
 }
-export interface Timeouts {
+export interface GoogleKmsCryptoKeyVersionArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface GoogleKmsCryptoKeyVersionArgs {
   crypto_key: string;
-  external_protection_level_options: ExternalProtectionLevelOptions;
-  timeouts: Timeouts;
+  external_protection_level_options: GoogleKmsCryptoKeyVersionArgsExternalProtectionLevelOptions;
+  timeouts: GoogleKmsCryptoKeyVersionArgstimeouts;
 }
 export class google_kms_crypto_key_version extends TerraformResource {
   readonly algorithm!: string;

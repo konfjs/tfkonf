@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleFirebaseAppCheckRecaptchaV3ConfigArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -7,7 +7,7 @@ export interface Timeouts {
 export interface GoogleFirebaseAppCheckRecaptchaV3ConfigArgs {
   app_id: string;
   site_secret: string;
-  timeouts: Timeouts;
+  timeouts: GoogleFirebaseAppCheckRecaptchaV3ConfigArgstimeouts;
 }
 export class google_firebase_app_check_recaptcha_v3_config extends TerraformResource {
   readonly id?: string;

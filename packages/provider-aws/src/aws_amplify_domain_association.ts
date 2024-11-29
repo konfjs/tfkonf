@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CertificateSettings {
+export interface AwsAmplifyDomainAssociationArgsCertificateSettings {
   custom_certificate_arn?: string;
   type: string;
 }
-export interface SubDomain {
+export interface AwsAmplifyDomainAssociationArgsSubDomain {
   branch_name: string;
   prefix: string;
 }
@@ -12,8 +12,8 @@ export interface AwsAmplifyDomainAssociationArgs {
   domain_name: string;
   enable_auto_sub_domain?: boolean;
   wait_for_verification?: boolean;
-  certificate_settings: CertificateSettings;
-  sub_domain: SubDomain;
+  certificate_settings: AwsAmplifyDomainAssociationArgsCertificateSettings;
+  sub_domain: AwsAmplifyDomainAssociationArgsSubDomain;
 }
 export class aws_amplify_domain_association extends TerraformResource {
   readonly arn!: string;

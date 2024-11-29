@@ -1,19 +1,19 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface HumanLoopActivationConditionsConfig {
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopActivationConfigHumanLoopActivationConditionsConfig {
   human_loop_activation_conditions: string;
 }
-export interface HumanLoopActivationConfig {
-  human_loop_activation_conditions_config: HumanLoopActivationConditionsConfig;
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopActivationConfig {
+  human_loop_activation_conditions_config: AwsSagemakerFlowDefinitionArgsHumanLoopActivationConfigHumanLoopActivationConditionsConfig;
 }
-export interface AmountInUsd {
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd {
   cents?: number;
   dollars?: number;
   tenth_fractions_of_a_cent?: number;
 }
-export interface PublicWorkforceTaskPrice {
-  amount_in_usd: AmountInUsd;
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopConfigPublicWorkforceTaskPrice {
+  amount_in_usd: AwsSagemakerFlowDefinitionArgsHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd;
 }
-export interface HumanLoopConfig {
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopConfig {
   human_task_ui_arn: string;
   task_availability_lifetime_in_seconds?: number;
   task_count: number;
@@ -22,12 +22,12 @@ export interface HumanLoopConfig {
   task_time_limit_in_seconds?: number;
   task_title: string;
   workteam_arn: string;
-  public_workforce_task_price: PublicWorkforceTaskPrice;
+  public_workforce_task_price: AwsSagemakerFlowDefinitionArgsHumanLoopConfigPublicWorkforceTaskPrice;
 }
-export interface HumanLoopRequestSource {
+export interface AwsSagemakerFlowDefinitionArgsHumanLoopRequestSource {
   aws_managed_human_loop_request_source: string;
 }
-export interface OutputConfig {
+export interface AwsSagemakerFlowDefinitionArgsOutputConfig {
   kms_key_id?: string;
   s3_output_path: string;
 }
@@ -37,10 +37,10 @@ export interface AwsSagemakerFlowDefinitionArgs {
   tags?: {
     [key: string]: string;
   };
-  human_loop_activation_config: HumanLoopActivationConfig;
-  human_loop_config: HumanLoopConfig;
-  human_loop_request_source: HumanLoopRequestSource;
-  output_config: OutputConfig;
+  human_loop_activation_config: AwsSagemakerFlowDefinitionArgsHumanLoopActivationConfig;
+  human_loop_config: AwsSagemakerFlowDefinitionArgsHumanLoopConfig;
+  human_loop_request_source: AwsSagemakerFlowDefinitionArgsHumanLoopRequestSource;
+  output_config: AwsSagemakerFlowDefinitionArgsOutputConfig;
 }
 export class aws_sagemaker_flow_definition extends TerraformResource {
   readonly arn!: string;

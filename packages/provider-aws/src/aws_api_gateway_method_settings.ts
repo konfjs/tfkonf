@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Settings {
+export interface AwsApiGatewayMethodSettingsArgssettings {
   throttling_burst_limit?: number;
   throttling_rate_limit?: number;
 }
@@ -7,7 +7,7 @@ export interface AwsApiGatewayMethodSettingsArgs {
   method_path: string;
   rest_api_id: string;
   stage_name: string;
-  settings: Settings;
+  settings: AwsApiGatewayMethodSettingsArgssettings;
 }
 export class aws_api_gateway_method_settings extends TerraformResource {
   readonly id?: string;

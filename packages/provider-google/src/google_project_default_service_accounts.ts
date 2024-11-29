@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleProjectDefaultServiceAccountsArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -8,7 +8,7 @@ export interface GoogleProjectDefaultServiceAccountsArgs {
   action: string;
   project: string;
   restore_policy?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleProjectDefaultServiceAccountsArgstimeouts;
 }
 export class google_project_default_service_accounts extends TerraformResource {
   readonly id?: string;

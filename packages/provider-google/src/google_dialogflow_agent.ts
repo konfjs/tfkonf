@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleDialogflowAgentArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -14,7 +14,7 @@ export interface GoogleDialogflowAgentArgs {
   supported_language_codes?: string[];
   tier?: string;
   time_zone: string;
-  timeouts: Timeouts;
+  timeouts: GoogleDialogflowAgentArgstimeouts;
 }
 export class google_dialogflow_agent extends TerraformResource {
   readonly api_version?: string;

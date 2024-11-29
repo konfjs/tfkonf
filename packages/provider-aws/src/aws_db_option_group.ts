@@ -1,17 +1,17 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OptionSettings {
+export interface AwsDbOptionGroupArgsoptionOptionSettings {
   name: string;
   value: string;
 }
-export interface Option {
+export interface AwsDbOptionGroupArgsoption {
   db_security_group_memberships?: string[];
   option_name: string;
   port?: number;
   version?: string;
   vpc_security_group_memberships?: string[];
-  option_settings: OptionSettings;
+  option_settings: AwsDbOptionGroupArgsoptionOptionSettings;
 }
-export interface Timeouts {
+export interface AwsDbOptionGroupArgstimeouts {
   delete?: string;
 }
 export interface AwsDbOptionGroupArgs {
@@ -22,8 +22,8 @@ export interface AwsDbOptionGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  option: Option;
-  timeouts: Timeouts;
+  option: AwsDbOptionGroupArgsoption;
+  timeouts: AwsDbOptionGroupArgstimeouts;
 }
 export class aws_db_option_group extends TerraformResource {
   readonly arn!: string;

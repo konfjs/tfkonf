@@ -1,29 +1,29 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CapacityUnits {}
-export interface Relevance {}
-export interface Search {}
-export interface DocumentMetadataConfigurationUpdates {
+export interface AwsKendraIndexArgsCapacityUnits {}
+export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesrelevance {}
+export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdatessearch {}
+export interface AwsKendraIndexArgsDocumentMetadataConfigurationUpdates {
   name: string;
   type: string;
-  relevance: Relevance;
-  search: Search;
+  relevance: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatesrelevance;
+  search: AwsKendraIndexArgsDocumentMetadataConfigurationUpdatessearch;
 }
-export interface ServerSideEncryptionConfiguration {
+export interface AwsKendraIndexArgsServerSideEncryptionConfiguration {
   kms_key_id?: string;
 }
-export interface Timeouts {
+export interface AwsKendraIndexArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface UserGroupResolutionConfiguration {
+export interface AwsKendraIndexArgsUserGroupResolutionConfiguration {
   user_group_resolution_mode: string;
 }
-export interface JsonTokenTypeConfiguration {
+export interface AwsKendraIndexArgsUserTokenConfigurationsJsonTokenTypeConfiguration {
   group_attribute_field: string;
   user_name_attribute_field: string;
 }
-export interface JwtTokenTypeConfiguration {
+export interface AwsKendraIndexArgsUserTokenConfigurationsJwtTokenTypeConfiguration {
   claim_regex?: string;
   group_attribute_field?: string;
   issuer?: string;
@@ -32,9 +32,9 @@ export interface JwtTokenTypeConfiguration {
   url?: string;
   user_name_attribute_field?: string;
 }
-export interface UserTokenConfigurations {
-  json_token_type_configuration: JsonTokenTypeConfiguration;
-  jwt_token_type_configuration: JwtTokenTypeConfiguration;
+export interface AwsKendraIndexArgsUserTokenConfigurations {
+  json_token_type_configuration: AwsKendraIndexArgsUserTokenConfigurationsJsonTokenTypeConfiguration;
+  jwt_token_type_configuration: AwsKendraIndexArgsUserTokenConfigurationsJwtTokenTypeConfiguration;
 }
 export interface AwsKendraIndexArgs {
   description?: string;
@@ -45,12 +45,12 @@ export interface AwsKendraIndexArgs {
     [key: string]: string;
   };
   user_context_policy?: string;
-  capacity_units: CapacityUnits;
-  document_metadata_configuration_updates: DocumentMetadataConfigurationUpdates;
-  server_side_encryption_configuration: ServerSideEncryptionConfiguration;
-  timeouts: Timeouts;
-  user_group_resolution_configuration: UserGroupResolutionConfiguration;
-  user_token_configurations: UserTokenConfigurations;
+  capacity_units: AwsKendraIndexArgsCapacityUnits;
+  document_metadata_configuration_updates: AwsKendraIndexArgsDocumentMetadataConfigurationUpdates;
+  server_side_encryption_configuration: AwsKendraIndexArgsServerSideEncryptionConfiguration;
+  timeouts: AwsKendraIndexArgstimeouts;
+  user_group_resolution_configuration: AwsKendraIndexArgsUserGroupResolutionConfiguration;
+  user_token_configurations: AwsKendraIndexArgsUserTokenConfigurations;
 }
 export class aws_kendra_index extends TerraformResource {
   readonly arn!: string;

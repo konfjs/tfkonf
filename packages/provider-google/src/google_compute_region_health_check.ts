@@ -1,11 +1,11 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface GrpcHealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsGrpcHealthCheck {
   grpc_service_name?: string;
   port?: number;
   port_name?: string;
   port_specification?: string;
 }
-export interface Http2HealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsHttp2HealthCheck {
   host?: string;
   port?: number;
   port_name?: string;
@@ -14,7 +14,7 @@ export interface Http2HealthCheck {
   request_path?: string;
   response?: string;
 }
-export interface HttpHealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsHttpHealthCheck {
   host?: string;
   port?: number;
   port_name?: string;
@@ -23,7 +23,7 @@ export interface HttpHealthCheck {
   request_path?: string;
   response?: string;
 }
-export interface HttpsHealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsHttpsHealthCheck {
   host?: string;
   port?: number;
   port_name?: string;
@@ -32,10 +32,10 @@ export interface HttpsHealthCheck {
   request_path?: string;
   response?: string;
 }
-export interface LogConfig {
+export interface GoogleComputeRegionHealthCheckArgsLogConfig {
   enable?: boolean;
 }
-export interface SslHealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsSslHealthCheck {
   port?: number;
   port_name?: string;
   port_specification?: string;
@@ -43,7 +43,7 @@ export interface SslHealthCheck {
   request?: string;
   response?: string;
 }
-export interface TcpHealthCheck {
+export interface GoogleComputeRegionHealthCheckArgsTcpHealthCheck {
   port?: number;
   port_name?: string;
   port_specification?: string;
@@ -51,7 +51,7 @@ export interface TcpHealthCheck {
   request?: string;
   response?: string;
 }
-export interface Timeouts {
+export interface GoogleComputeRegionHealthCheckArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -63,14 +63,14 @@ export interface GoogleComputeRegionHealthCheckArgs {
   name: string;
   timeout_sec?: number;
   unhealthy_threshold?: number;
-  grpc_health_check: GrpcHealthCheck;
-  http2_health_check: Http2HealthCheck;
-  http_health_check: HttpHealthCheck;
-  https_health_check: HttpsHealthCheck;
-  log_config: LogConfig;
-  ssl_health_check: SslHealthCheck;
-  tcp_health_check: TcpHealthCheck;
-  timeouts: Timeouts;
+  grpc_health_check: GoogleComputeRegionHealthCheckArgsGrpcHealthCheck;
+  http2_health_check: GoogleComputeRegionHealthCheckArgsHttp2HealthCheck;
+  http_health_check: GoogleComputeRegionHealthCheckArgsHttpHealthCheck;
+  https_health_check: GoogleComputeRegionHealthCheckArgsHttpsHealthCheck;
+  log_config: GoogleComputeRegionHealthCheckArgsLogConfig;
+  ssl_health_check: GoogleComputeRegionHealthCheckArgsSslHealthCheck;
+  tcp_health_check: GoogleComputeRegionHealthCheckArgsTcpHealthCheck;
+  timeouts: GoogleComputeRegionHealthCheckArgstimeouts;
 }
 export class google_compute_region_health_check extends TerraformResource {
   readonly creation_timestamp!: string;

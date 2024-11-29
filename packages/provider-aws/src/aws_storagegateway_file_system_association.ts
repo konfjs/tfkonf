@@ -1,8 +1,8 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface CacheAttributes {
+export interface AwsStoragegatewayFileSystemAssociationArgsCacheAttributes {
   cache_stale_timeout_in_seconds?: number;
 }
-export interface Timeouts {
+export interface AwsStoragegatewayFileSystemAssociationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -16,8 +16,8 @@ export interface AwsStoragegatewayFileSystemAssociationArgs {
     [key: string]: string;
   };
   username: string;
-  cache_attributes: CacheAttributes;
-  timeouts: Timeouts;
+  cache_attributes: AwsStoragegatewayFileSystemAssociationArgsCacheAttributes;
+  timeouts: AwsStoragegatewayFileSystemAssociationArgstimeouts;
 }
 export class aws_storagegateway_file_system_association extends TerraformResource {
   readonly arn!: string;

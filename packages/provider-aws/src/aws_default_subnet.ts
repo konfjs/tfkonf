@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsDefaultSubnetArgstimeouts {
   create?: string;
   delete?: string;
 }
@@ -17,7 +17,7 @@ export interface AwsDefaultSubnetArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: Timeouts;
+  timeouts: AwsDefaultSubnetArgstimeouts;
 }
 export class aws_default_subnet extends TerraformResource {
   readonly arn!: string;

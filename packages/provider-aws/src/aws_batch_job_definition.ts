@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Env {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersenv {
   name: string;
   value: string;
 }
-export interface Resources {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersresources {
   limits?: {
     [key: string]: string;
   };
@@ -11,37 +11,37 @@ export interface Resources {
     [key: string]: string;
   };
 }
-export interface SecurityContext {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersSecurityContext {
   privileged?: boolean;
   read_only_root_file_system?: boolean;
   run_as_group?: number;
   run_as_non_root?: boolean;
   run_as_user?: number;
 }
-export interface VolumeMounts {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersVolumeMounts {
   mount_path: string;
   name: string;
   read_only?: boolean;
 }
-export interface Containers {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainers {
   args?: string[];
   command?: string[];
   image: string;
   image_pull_policy?: string;
   name?: string;
-  env: Env;
-  resources: Resources;
-  security_context: SecurityContext;
-  volume_mounts: VolumeMounts;
+  env: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersenv;
+  resources: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersresources;
+  security_context: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersSecurityContext;
+  volume_mounts: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainersVolumeMounts;
 }
-export interface ImagePullSecret {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesImagePullSecret {
   name: string;
 }
-export interface Env {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersenv {
   name: string;
   value: string;
 }
-export interface Resources {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersresources {
   limits?: {
     [key: string]: string;
   };
@@ -49,76 +49,76 @@ export interface Resources {
     [key: string]: string;
   };
 }
-export interface SecurityContext {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersSecurityContext {
   privileged?: boolean;
   read_only_root_file_system?: boolean;
   run_as_group?: number;
   run_as_non_root?: boolean;
   run_as_user?: number;
 }
-export interface VolumeMounts {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersVolumeMounts {
   mount_path: string;
   name: string;
   read_only?: boolean;
 }
-export interface InitContainers {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainers {
   args?: string[];
   command?: string[];
   image: string;
   image_pull_policy?: string;
   name?: string;
-  env: Env;
-  resources: Resources;
-  security_context: SecurityContext;
-  volume_mounts: VolumeMounts;
+  env: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersenv;
+  resources: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersresources;
+  security_context: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersSecurityContext;
+  volume_mounts: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainersVolumeMounts;
 }
-export interface Metadata {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesmetadata {
   labels?: {
     [key: string]: string;
   };
 }
-export interface EmptyDir {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumesEmptyDir {
   medium?: string;
   size_limit: string;
 }
-export interface HostPath {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumesHostPath {
   path: string;
 }
-export interface Secret {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumessecret {
   optional?: boolean;
   secret_name: string;
 }
-export interface Volumes {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumes {
   name?: string;
-  empty_dir: EmptyDir;
-  host_path: HostPath;
-  secret: Secret;
+  empty_dir: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumesEmptyDir;
+  host_path: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumesHostPath;
+  secret: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumessecret;
 }
-export interface PodProperties {
+export interface AwsBatchJobDefinitionArgsEksPropertiesPodProperties {
   dns_policy?: string;
   host_network?: boolean;
   service_account_name?: string;
   share_process_namespace?: boolean;
-  containers: Containers;
-  image_pull_secret: ImagePullSecret;
-  init_containers: InitContainers;
-  metadata: Metadata;
-  volumes: Volumes;
+  containers: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiescontainers;
+  image_pull_secret: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesImagePullSecret;
+  init_containers: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesInitContainers;
+  metadata: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesmetadata;
+  volumes: AwsBatchJobDefinitionArgsEksPropertiesPodPropertiesvolumes;
 }
-export interface EksProperties {
-  pod_properties: PodProperties;
+export interface AwsBatchJobDefinitionArgsEksProperties {
+  pod_properties: AwsBatchJobDefinitionArgsEksPropertiesPodProperties;
 }
-export interface EvaluateOnExit {
+export interface AwsBatchJobDefinitionArgsRetryStrategyEvaluateOnExit {
   action: string;
   on_exit_code?: string;
   on_reason?: string;
   on_status_reason?: string;
 }
-export interface RetryStrategy {
+export interface AwsBatchJobDefinitionArgsRetryStrategy {
   attempts?: number;
-  evaluate_on_exit: EvaluateOnExit;
+  evaluate_on_exit: AwsBatchJobDefinitionArgsRetryStrategyEvaluateOnExit;
 }
-export interface Timeout {
+export interface AwsBatchJobDefinitionArgstimeout {
   attempt_duration_seconds?: number;
 }
 export interface AwsBatchJobDefinitionArgs {
@@ -137,9 +137,9 @@ export interface AwsBatchJobDefinitionArgs {
     [key: string]: string;
   };
   type: string;
-  eks_properties: EksProperties;
-  retry_strategy: RetryStrategy;
-  timeout: Timeout;
+  eks_properties: AwsBatchJobDefinitionArgsEksProperties;
+  retry_strategy: AwsBatchJobDefinitionArgsRetryStrategy;
+  timeout: AwsBatchJobDefinitionArgstimeout;
 }
 export class aws_batch_job_definition extends TerraformResource {
   readonly arn!: string;

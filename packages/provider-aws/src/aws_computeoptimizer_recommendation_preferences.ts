@@ -1,33 +1,33 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ExternalMetricsPreference {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsExternalMetricsPreference {
   source: string;
 }
-export interface PreferredResource {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsPreferredResource {
   exclude_list?: string[];
   include_list?: string[];
   name: string;
 }
-export interface Scope {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsscope {
   name: string;
   value: string;
 }
-export interface MetricParameters {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsUtilizationPreferenceMetricParameters {
   headroom: string;
   threshold?: string;
 }
-export interface UtilizationPreference {
+export interface AwsComputeoptimizerRecommendationPreferencesArgsUtilizationPreference {
   metric_name: string;
-  metric_parameters: MetricParameters;
+  metric_parameters: AwsComputeoptimizerRecommendationPreferencesArgsUtilizationPreferenceMetricParameters;
 }
 export interface AwsComputeoptimizerRecommendationPreferencesArgs {
   enhanced_infrastructure_metrics?: string;
   inferred_workload_types?: string;
   resource_type: string;
   savings_estimation_mode?: string;
-  external_metrics_preference: ExternalMetricsPreference;
-  preferred_resource: PreferredResource;
-  scope: Scope;
-  utilization_preference: UtilizationPreference;
+  external_metrics_preference: AwsComputeoptimizerRecommendationPreferencesArgsExternalMetricsPreference;
+  preferred_resource: AwsComputeoptimizerRecommendationPreferencesArgsPreferredResource;
+  scope: AwsComputeoptimizerRecommendationPreferencesArgsscope;
+  utilization_preference: AwsComputeoptimizerRecommendationPreferencesArgsUtilizationPreference;
 }
 export class aws_computeoptimizer_recommendation_preferences extends TerraformResource {
   readonly id!: string;

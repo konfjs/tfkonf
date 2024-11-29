@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface ValidationSettings {
+export interface AwsVerifiedpermissionsPolicyStoreArgsValidationSettings {
   mode: string;
 }
 export interface AwsVerifiedpermissionsPolicyStoreArgs {
   description?: string;
-  validation_settings: ValidationSettings;
+  validation_settings: AwsVerifiedpermissionsPolicyStoreArgsValidationSettings;
 }
 export class aws_verifiedpermissions_policy_store extends TerraformResource {
   readonly arn!: string;

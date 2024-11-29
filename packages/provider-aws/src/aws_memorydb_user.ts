@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface AuthenticationMode {
+export interface AwsMemorydbUserArgsAuthenticationMode {
   passwords?: string[];
   type: string;
 }
@@ -9,7 +9,7 @@ export interface AwsMemorydbUserArgs {
     [key: string]: string;
   };
   user_name: string;
-  authentication_mode: AuthenticationMode;
+  authentication_mode: AwsMemorydbUserArgsAuthenticationMode;
 }
 export class aws_memorydb_user extends TerraformResource {
   readonly arn!: string;

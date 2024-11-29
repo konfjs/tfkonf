@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface GoogleServiceNetworkingPeeredDnsDomainArgstimeouts {
   create?: string;
   delete?: string;
   read?: string;
@@ -9,7 +9,7 @@ export interface GoogleServiceNetworkingPeeredDnsDomainArgs {
   name: string;
   network: string;
   service?: string;
-  timeouts: Timeouts;
+  timeouts: GoogleServiceNetworkingPeeredDnsDomainArgstimeouts;
 }
 export class google_service_networking_peered_dns_domain extends TerraformResource {
   readonly id?: string;

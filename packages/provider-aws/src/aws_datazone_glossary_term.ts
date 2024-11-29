@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface TermRelations {
+export interface AwsDatazoneGlossaryTermArgsTermRelations {
   classifies?: string[];
   is_a?: string[];
 }
-export interface Timeouts {
+export interface AwsDatazoneGlossaryTermArgstimeouts {
   create?: string;
 }
 export interface AwsDatazoneGlossaryTermArgs {
@@ -13,8 +13,8 @@ export interface AwsDatazoneGlossaryTermArgs {
   name: string;
   short_description?: string;
   status?: string;
-  term_relations: TermRelations;
-  timeouts: Timeouts;
+  term_relations: AwsDatazoneGlossaryTermArgsTermRelations;
+  timeouts: AwsDatazoneGlossaryTermArgstimeouts;
 }
 export class aws_datazone_glossary_term extends TerraformResource {
   readonly created_at!: string;

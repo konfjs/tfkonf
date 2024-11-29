@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface PostalAddress {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsAdminContactPostalAddress {
   address_lines?: string[];
   administrative_area?: string;
   locality?: string;
@@ -8,13 +8,13 @@ export interface PostalAddress {
   recipients?: string[];
   region_code: string;
 }
-export interface AdminContact {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsAdminContact {
   email: string;
   fax_number?: string;
   phone_number: string;
-  postal_address: PostalAddress;
+  postal_address: GoogleClouddomainsRegistrationArgsContactSettingsAdminContactPostalAddress;
 }
-export interface PostalAddress {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsRegistrantContactPostalAddress {
   address_lines?: string[];
   administrative_area?: string;
   locality?: string;
@@ -23,13 +23,13 @@ export interface PostalAddress {
   recipients?: string[];
   region_code: string;
 }
-export interface RegistrantContact {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsRegistrantContact {
   email: string;
   fax_number?: string;
   phone_number: string;
-  postal_address: PostalAddress;
+  postal_address: GoogleClouddomainsRegistrationArgsContactSettingsRegistrantContactPostalAddress;
 }
-export interface PostalAddress {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsTechnicalContactPostalAddress {
   address_lines?: string[];
   administrative_area?: string;
   locality?: string;
@@ -38,44 +38,44 @@ export interface PostalAddress {
   recipients?: string[];
   region_code: string;
 }
-export interface TechnicalContact {
+export interface GoogleClouddomainsRegistrationArgsContactSettingsTechnicalContact {
   email: string;
   fax_number?: string;
   phone_number: string;
-  postal_address: PostalAddress;
+  postal_address: GoogleClouddomainsRegistrationArgsContactSettingsTechnicalContactPostalAddress;
 }
-export interface ContactSettings {
+export interface GoogleClouddomainsRegistrationArgsContactSettings {
   privacy: string;
-  admin_contact: AdminContact;
-  registrant_contact: RegistrantContact;
-  technical_contact: TechnicalContact;
+  admin_contact: GoogleClouddomainsRegistrationArgsContactSettingsAdminContact;
+  registrant_contact: GoogleClouddomainsRegistrationArgsContactSettingsRegistrantContact;
+  technical_contact: GoogleClouddomainsRegistrationArgsContactSettingsTechnicalContact;
 }
-export interface DsRecords {
+export interface GoogleClouddomainsRegistrationArgsDnsSettingsCustomDnsDsRecords {
   algorithm?: string;
   digest?: string;
   digest_type?: string;
   key_tag?: number;
 }
-export interface CustomDns {
+export interface GoogleClouddomainsRegistrationArgsDnsSettingsCustomDns {
   name_servers: string[];
-  ds_records: DsRecords;
+  ds_records: GoogleClouddomainsRegistrationArgsDnsSettingsCustomDnsDsRecords;
 }
-export interface GlueRecords {
+export interface GoogleClouddomainsRegistrationArgsDnsSettingsGlueRecords {
   host_name: string;
   ipv4_addresses?: string[];
   ipv6_addresses?: string[];
 }
-export interface DnsSettings {
-  custom_dns: CustomDns;
-  glue_records: GlueRecords;
+export interface GoogleClouddomainsRegistrationArgsDnsSettings {
+  custom_dns: GoogleClouddomainsRegistrationArgsDnsSettingsCustomDns;
+  glue_records: GoogleClouddomainsRegistrationArgsDnsSettingsGlueRecords;
 }
-export interface ManagementSettings {}
-export interface Timeouts {
+export interface GoogleClouddomainsRegistrationArgsManagementSettings {}
+export interface GoogleClouddomainsRegistrationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface YearlyPrice {
+export interface GoogleClouddomainsRegistrationArgsYearlyPrice {
   currency_code?: string;
   units?: string;
 }
@@ -87,11 +87,11 @@ export interface GoogleClouddomainsRegistrationArgs {
     [key: string]: string;
   };
   location: string;
-  contact_settings: ContactSettings;
-  dns_settings: DnsSettings;
-  management_settings: ManagementSettings;
-  timeouts: Timeouts;
-  yearly_price: YearlyPrice;
+  contact_settings: GoogleClouddomainsRegistrationArgsContactSettings;
+  dns_settings: GoogleClouddomainsRegistrationArgsDnsSettings;
+  management_settings: GoogleClouddomainsRegistrationArgsManagementSettings;
+  timeouts: GoogleClouddomainsRegistrationArgstimeouts;
+  yearly_price: GoogleClouddomainsRegistrationArgsYearlyPrice;
 }
 export class google_clouddomains_registration extends TerraformResource {
   readonly create_time!: string;

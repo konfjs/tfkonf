@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsLexv2modelsBotLocaleArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface VoiceSettings {
+export interface AwsLexv2modelsBotLocaleArgsVoiceSettings {
   voice_id: string;
 }
 export interface AwsLexv2modelsBotLocaleArgs {
@@ -13,8 +13,8 @@ export interface AwsLexv2modelsBotLocaleArgs {
   description?: string;
   locale_id: string;
   n_lu_intent_confidence_threshold: number;
-  timeouts: Timeouts;
-  voice_settings: VoiceSettings;
+  timeouts: AwsLexv2modelsBotLocaleArgstimeouts;
+  voice_settings: AwsLexv2modelsBotLocaleArgsVoiceSettings;
 }
 export class aws_lexv2models_bot_locale extends TerraformResource {
   readonly id!: string;

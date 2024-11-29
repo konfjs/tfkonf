@@ -1,5 +1,5 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Timeouts {
+export interface AwsTranscribeMedicalVocabularyArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -11,7 +11,7 @@ export interface AwsTranscribeMedicalVocabularyArgs {
   };
   vocabulary_file_uri: string;
   vocabulary_name: string;
-  timeouts: Timeouts;
+  timeouts: AwsTranscribeMedicalVocabularyArgstimeouts;
 }
 export class aws_transcribe_medical_vocabulary extends TerraformResource {
   readonly arn!: string;

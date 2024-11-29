@@ -1,9 +1,9 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Attributes {
+export interface GoogleApigeeAppGroupArgsattributes {
   name?: string;
   value?: string;
 }
-export interface Timeouts {
+export interface GoogleApigeeAppGroupArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -15,8 +15,8 @@ export interface GoogleApigeeAppGroupArgs {
   name: string;
   org_id: string;
   status?: string;
-  attributes: Attributes;
-  timeouts: Timeouts;
+  attributes: GoogleApigeeAppGroupArgsattributes;
+  timeouts: GoogleApigeeAppGroupArgstimeouts;
 }
 export class google_apigee_app_group extends TerraformResource {
   readonly app_group_id!: string;

@@ -1,15 +1,15 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface Hint {
+export interface GoogleContainerAnalysisNoteArgsAttestationAuthorityhint {
   human_readable_name: string;
 }
-export interface AttestationAuthority {
-  hint: Hint;
+export interface GoogleContainerAnalysisNoteArgsAttestationAuthority {
+  hint: GoogleContainerAnalysisNoteArgsAttestationAuthorityhint;
 }
-export interface RelatedUrl {
+export interface GoogleContainerAnalysisNoteArgsRelatedUrl {
   label?: string;
   url: string;
 }
-export interface Timeouts {
+export interface GoogleContainerAnalysisNoteArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -20,9 +20,9 @@ export interface GoogleContainerAnalysisNoteArgs {
   name: string;
   related_note_names?: string[];
   short_description?: string;
-  attestation_authority: AttestationAuthority;
-  related_url: RelatedUrl;
-  timeouts: Timeouts;
+  attestation_authority: GoogleContainerAnalysisNoteArgsAttestationAuthority;
+  related_url: GoogleContainerAnalysisNoteArgsRelatedUrl;
+  timeouts: GoogleContainerAnalysisNoteArgstimeouts;
 }
 export class google_container_analysis_note extends TerraformResource {
   readonly create_time!: string;

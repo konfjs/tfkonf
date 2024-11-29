@@ -1,39 +1,39 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface BackfillPipelineJob {
+export interface GoogleHealthcarePipelineJobArgsBackfillPipelineJob {
   mapping_pipeline_job?: string;
 }
-export interface FhirStreamingSource {
+export interface GoogleHealthcarePipelineJobArgsMappingPipelineJobFhirStreamingSource {
   description?: string;
   fhir_store: string;
 }
-export interface WhistleConfigSource {
+export interface GoogleHealthcarePipelineJobArgsMappingPipelineJobMappingConfigWhistleConfigSource {
   import_uri_prefix: string;
   uri: string;
 }
-export interface MappingConfig {
+export interface GoogleHealthcarePipelineJobArgsMappingPipelineJobMappingConfig {
   description?: string;
-  whistle_config_source: WhistleConfigSource;
+  whistle_config_source: GoogleHealthcarePipelineJobArgsMappingPipelineJobMappingConfigWhistleConfigSource;
 }
-export interface MappingPipelineJob {
+export interface GoogleHealthcarePipelineJobArgsMappingPipelineJob {
   fhir_store_destination?: string;
   reconciliation_destination?: boolean;
-  fhir_streaming_source: FhirStreamingSource;
-  mapping_config: MappingConfig;
+  fhir_streaming_source: GoogleHealthcarePipelineJobArgsMappingPipelineJobFhirStreamingSource;
+  mapping_config: GoogleHealthcarePipelineJobArgsMappingPipelineJobMappingConfig;
 }
-export interface WhistleConfigSource {
+export interface GoogleHealthcarePipelineJobArgsReconciliationPipelineJobMergeConfigWhistleConfigSource {
   import_uri_prefix: string;
   uri: string;
 }
-export interface MergeConfig {
+export interface GoogleHealthcarePipelineJobArgsReconciliationPipelineJobMergeConfig {
   description?: string;
-  whistle_config_source: WhistleConfigSource;
+  whistle_config_source: GoogleHealthcarePipelineJobArgsReconciliationPipelineJobMergeConfigWhistleConfigSource;
 }
-export interface ReconciliationPipelineJob {
+export interface GoogleHealthcarePipelineJobArgsReconciliationPipelineJob {
   fhir_store_destination?: string;
   matching_uri_prefix: string;
-  merge_config: MergeConfig;
+  merge_config: GoogleHealthcarePipelineJobArgsReconciliationPipelineJobMergeConfig;
 }
-export interface Timeouts {
+export interface GoogleHealthcarePipelineJobArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
@@ -46,10 +46,10 @@ export interface GoogleHealthcarePipelineJobArgs {
   };
   location: string;
   name: string;
-  backfill_pipeline_job: BackfillPipelineJob;
-  mapping_pipeline_job: MappingPipelineJob;
-  reconciliation_pipeline_job: ReconciliationPipelineJob;
-  timeouts: Timeouts;
+  backfill_pipeline_job: GoogleHealthcarePipelineJobArgsBackfillPipelineJob;
+  mapping_pipeline_job: GoogleHealthcarePipelineJobArgsMappingPipelineJob;
+  reconciliation_pipeline_job: GoogleHealthcarePipelineJobArgsReconciliationPipelineJob;
+  timeouts: GoogleHealthcarePipelineJobArgstimeouts;
 }
 export class google_healthcare_pipeline_job extends TerraformResource {
   readonly effective_labels!: {

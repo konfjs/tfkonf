@@ -1,47 +1,47 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface SubSlots {
+export interface AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSettingSubSlots {
   name: string;
   slot_type_id: string;
 }
-export interface CompositeSlotTypeSetting {
-  sub_slots: SubSlots;
+export interface AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSetting {
+  sub_slots: AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSettingSubSlots;
 }
-export interface Source {
+export interface AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingsource {
   kms_key_arn: string;
   s3_bucket_name: string;
   s3_object_key: string;
 }
-export interface GrammarSlotTypeSetting {
-  source: Source;
+export interface AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSetting {
+  source: AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSettingsource;
 }
-export interface ExternalSourceSetting {
-  grammar_slot_type_setting: GrammarSlotTypeSetting;
+export interface AwsLexv2modelsSlotTypeArgsExternalSourceSetting {
+  grammar_slot_type_setting: AwsLexv2modelsSlotTypeArgsExternalSourceSettingGrammarSlotTypeSetting;
 }
-export interface SampleValue {
+export interface AwsLexv2modelsSlotTypeArgsSlotTypeValuesSampleValue {
   value: string;
 }
-export interface Synonyms {
+export interface AwsLexv2modelsSlotTypeArgsSlotTypeValuessynonyms {
   value: string;
 }
-export interface SlotTypeValues {
-  sample_value: SampleValue;
-  synonyms: Synonyms;
+export interface AwsLexv2modelsSlotTypeArgsSlotTypeValues {
+  sample_value: AwsLexv2modelsSlotTypeArgsSlotTypeValuesSampleValue;
+  synonyms: AwsLexv2modelsSlotTypeArgsSlotTypeValuessynonyms;
 }
-export interface Timeouts {
+export interface AwsLexv2modelsSlotTypeArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
-export interface AdvancedRecognitionSetting {
+export interface AwsLexv2modelsSlotTypeArgsValueSelectionSettingAdvancedRecognitionSetting {
   audio_recognition_strategy?: string;
 }
-export interface RegexFilter {
+export interface AwsLexv2modelsSlotTypeArgsValueSelectionSettingRegexFilter {
   pattern: string;
 }
-export interface ValueSelectionSetting {
+export interface AwsLexv2modelsSlotTypeArgsValueSelectionSetting {
   resolution_strategy: string;
-  advanced_recognition_setting: AdvancedRecognitionSetting;
-  regex_filter: RegexFilter;
+  advanced_recognition_setting: AwsLexv2modelsSlotTypeArgsValueSelectionSettingAdvancedRecognitionSetting;
+  regex_filter: AwsLexv2modelsSlotTypeArgsValueSelectionSettingRegexFilter;
 }
 export interface AwsLexv2modelsSlotTypeArgs {
   bot_id: string;
@@ -50,11 +50,11 @@ export interface AwsLexv2modelsSlotTypeArgs {
   locale_id: string;
   name: string;
   parent_slot_type_signature?: string;
-  composite_slot_type_setting: CompositeSlotTypeSetting;
-  external_source_setting: ExternalSourceSetting;
-  slot_type_values: SlotTypeValues;
-  timeouts: Timeouts;
-  value_selection_setting: ValueSelectionSetting;
+  composite_slot_type_setting: AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSetting;
+  external_source_setting: AwsLexv2modelsSlotTypeArgsExternalSourceSetting;
+  slot_type_values: AwsLexv2modelsSlotTypeArgsSlotTypeValues;
+  timeouts: AwsLexv2modelsSlotTypeArgstimeouts;
+  value_selection_setting: AwsLexv2modelsSlotTypeArgsValueSelectionSetting;
 }
 export class aws_lexv2models_slot_type extends TerraformResource {
   readonly id!: string;

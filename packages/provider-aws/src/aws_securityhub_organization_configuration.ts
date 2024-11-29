@@ -1,16 +1,16 @@
 import { TerraformConfig, TerraformResource } from "tfs";
-export interface OrganizationConfiguration {
+export interface AwsSecurityhubOrganizationConfigurationArgsOrganizationConfiguration {
   configuration_type: string;
 }
-export interface Timeouts {
+export interface AwsSecurityhubOrganizationConfigurationArgstimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
 export interface AwsSecurityhubOrganizationConfigurationArgs {
   auto_enable: boolean;
-  organization_configuration: OrganizationConfiguration;
-  timeouts: Timeouts;
+  organization_configuration: AwsSecurityhubOrganizationConfigurationArgsOrganizationConfiguration;
+  timeouts: AwsSecurityhubOrganizationConfigurationArgstimeouts;
 }
 export class aws_securityhub_organization_configuration extends TerraformResource {
   readonly auto_enable_standards?: string;
