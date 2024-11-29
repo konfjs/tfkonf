@@ -31,9 +31,9 @@
     "updatePackage": "yq -i '.exports[\".\"] |= {\"import\": \"./dist/index.js\", \"types\": \"./dist/index.d.ts\" }' package.json",
     "build": "rm -rf dist && tsc",
     "prepack": "bun run build && bun run updatePackage",
-    "pull": "terraform providers schema -json > provider-schema.json",
-    "generate": "bun run pull && bun run src/index.ts provider-schema.json",
-    "gen": "bun run generate"
+    "pull": "terraform providers schema -json > schema.json",
+    "gen": "bun run src/index.ts",
+    "generate": "bun run gen"
   },
   "files": [
     "dist"
