@@ -8,6 +8,7 @@
     "verbatimModuleSyntax": true,
     "strict": true,
     "skipLibCheck": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true
   }
 }
