@@ -1,0 +1,19 @@
+import { TerraformConfig, TerraformResource } from "tfs";
+export interface Timeouts {
+  create?: string;
+  delete?: string;
+}
+export interface AwsGrafanaLicenseAssociationArgs {
+  grafana_token?: string;
+  license_type: string;
+  workspace_id: string;
+  timeouts: Timeouts;
+}
+export class aws_grafana_license_association extends TerraformResource {
+  readonly free_trial_expiration!: string;
+  readonly id?: string;
+  readonly license_expiration!: string;
+  constructor(config: TerraformConfig, resourceName: string, args: AwsGrafanaLicenseAssociationArgs) {
+    super(config, "resource", args, resourceName, "aws_grafana_license_association");
+  }
+}
