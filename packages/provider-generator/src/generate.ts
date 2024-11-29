@@ -11,7 +11,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
     for (const [providerName, schema] of Object.entries(providerSchemas)) {
         console.log(`Generating TypeScript code for provider: ${chalk.green(providerName)}`);
         const outDir = `provider-${path.basename(providerName)}`;
-        fs.rmdirSync(outDir, { recursive: true });
+        fs.rmSync(outDir, { recursive: true, force: true });
         fs.mkdirSync(outDir, { recursive: true });
 
         const resources: string[] = [];
@@ -41,8 +41,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
             );
             generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, '', true);
             generateClassDeclaration(ast, resourceName, resourceBlock.block);
-            // @ts-expect-error
-            const { code } = generate(ast, {});
+            const { code } = generate.default(ast, {});
             resources.push(resourceName);
 
             fs.writeFileSync(path.join(outDir, `${resourceName}.ts`), code, {
@@ -60,8 +59,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                 ),
             );
         }
-        // @ts-expect-error
-        const { code } = generate(ast, {});
+        const { code } = generate.default(ast, {});
 
         fs.writeFileSync(path.join(outDir, 'index.ts'), code, { encoding: 'utf8' });
     }
