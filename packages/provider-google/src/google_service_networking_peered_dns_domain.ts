@@ -9,7 +9,7 @@ export interface GoogleServiceNetworkingPeeredDnsDomainArgs {
   name: string;
   network: string;
   service?: string;
-  timeouts: GoogleServiceNetworkingPeeredDnsDomainArgsTimeouts;
+  timeouts?: GoogleServiceNetworkingPeeredDnsDomainArgsTimeouts;
 }
 export class google_service_networking_peered_dns_domain extends TerraformResource {
   readonly id?: string;

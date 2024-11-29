@@ -32,7 +32,7 @@ export interface AwsRoute53recoveryreadinessResourceSetArgs {
     [key: string]: string;
   };
   resources: AwsRoute53recoveryreadinessResourceSetArgsResources;
-  timeouts: AwsRoute53recoveryreadinessResourceSetArgsTimeouts;
+  timeouts?: AwsRoute53recoveryreadinessResourceSetArgsTimeouts;
 }
 export class aws_route53recoveryreadiness_resource_set extends TerraformResource {
   readonly arn!: string;

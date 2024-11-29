@@ -9,7 +9,7 @@ export interface GoogleAppEngineFirewallRuleArgs {
   description?: string;
   priority?: number;
   source_range: string;
-  timeouts: GoogleAppEngineFirewallRuleArgsTimeouts;
+  timeouts?: GoogleAppEngineFirewallRuleArgsTimeouts;
 }
 export class google_app_engine_firewall_rule extends TerraformResource {
   readonly id?: string;

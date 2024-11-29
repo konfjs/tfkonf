@@ -213,7 +213,7 @@ export interface GoogleDataprocClusterArgs {
   name: string;
   region?: string;
   cluster_config: GoogleDataprocClusterArgsClusterConfig;
-  timeouts: GoogleDataprocClusterArgsTimeouts;
+  timeouts?: GoogleDataprocClusterArgsTimeouts;
   virtual_cluster_config: GoogleDataprocClusterArgsVirtualClusterConfig;
 }
 export class google_dataproc_cluster extends TerraformResource {

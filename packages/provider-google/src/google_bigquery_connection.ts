@@ -54,7 +54,7 @@ export interface GoogleBigqueryConnectionArgs {
   cloud_spanner: GoogleBigqueryConnectionArgsCloudSpanner;
   cloud_sql: GoogleBigqueryConnectionArgsCloudSql;
   spark: GoogleBigqueryConnectionArgsSpark;
-  timeouts: GoogleBigqueryConnectionArgsTimeouts;
+  timeouts?: GoogleBigqueryConnectionArgsTimeouts;
 }
 export class google_bigquery_connection extends TerraformResource {
   readonly connection_id?: string;

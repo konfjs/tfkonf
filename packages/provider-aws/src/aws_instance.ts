@@ -79,7 +79,7 @@ export interface AwsInstanceArgs {
   network_interface: AwsInstanceArgsNetworkInterface;
   private_dns_name_options: AwsInstanceArgsPrivateDnsNameOptions;
   root_block_device: AwsInstanceArgsRootBlockDevice;
-  timeouts: AwsInstanceArgsTimeouts;
+  timeouts?: AwsInstanceArgsTimeouts;
 }
 export class aws_instance extends TerraformResource {
   readonly ami?: string;

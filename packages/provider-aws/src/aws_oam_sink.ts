@@ -9,7 +9,7 @@ export interface AwsOamSinkArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsOamSinkArgsTimeouts;
+  timeouts?: AwsOamSinkArgsTimeouts;
 }
 export class aws_oam_sink extends TerraformResource {
   readonly arn!: string;

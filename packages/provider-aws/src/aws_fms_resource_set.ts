@@ -14,7 +14,7 @@ export interface AwsFmsResourceSetArgs {
     [key: string]: string;
   };
   resource_set: AwsFmsResourceSetArgsResourceSet;
-  timeouts: AwsFmsResourceSetArgsTimeouts;
+  timeouts?: AwsFmsResourceSetArgsTimeouts;
 }
 export class aws_fms_resource_set extends TerraformResource {
   readonly arn!: string;

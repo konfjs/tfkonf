@@ -15,7 +15,7 @@ export interface AwsConfigOrganizationManagedRuleArgs {
   rule_identifier: string;
   tag_key_scope?: string;
   tag_value_scope?: string;
-  timeouts: AwsConfigOrganizationManagedRuleArgsTimeouts;
+  timeouts?: AwsConfigOrganizationManagedRuleArgsTimeouts;
 }
 export class aws_config_organization_managed_rule extends TerraformResource {
   readonly arn!: string;

@@ -44,7 +44,7 @@ export interface GoogleHealthcareFhirStoreArgs {
   notification_config: GoogleHealthcareFhirStoreArgsNotificationConfig;
   notification_configs: GoogleHealthcareFhirStoreArgsNotificationConfigs;
   stream_configs: GoogleHealthcareFhirStoreArgsStreamConfigs;
-  timeouts: GoogleHealthcareFhirStoreArgsTimeouts;
+  timeouts?: GoogleHealthcareFhirStoreArgsTimeouts;
 }
 export class google_healthcare_fhir_store extends TerraformResource {
   readonly complex_data_type_reference_parsing?: string;

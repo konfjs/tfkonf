@@ -20,7 +20,7 @@ export interface AwsCloudtrailEventDataStoreArgs {
   };
   termination_protection_enabled?: boolean;
   advanced_event_selector: AwsCloudtrailEventDataStoreArgsAdvancedEventSelector;
-  timeouts: AwsCloudtrailEventDataStoreArgsTimeouts;
+  timeouts?: AwsCloudtrailEventDataStoreArgsTimeouts;
 }
 export class aws_cloudtrail_event_data_store extends TerraformResource {
   readonly arn!: string;

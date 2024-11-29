@@ -8,7 +8,7 @@ export interface GoogleComputeAttachedDiskArgs {
   instance: string;
   interface?: string;
   mode?: string;
-  timeouts: GoogleComputeAttachedDiskArgsTimeouts;
+  timeouts?: GoogleComputeAttachedDiskArgsTimeouts;
 }
 export class google_compute_attached_disk extends TerraformResource {
   readonly device_name?: string;

@@ -5,7 +5,7 @@ export interface AwsAcmCertificateValidationArgsTimeouts {
 export interface AwsAcmCertificateValidationArgs {
   certificate_arn: string;
   validation_record_fqdns?: string[];
-  timeouts: AwsAcmCertificateValidationArgsTimeouts;
+  timeouts?: AwsAcmCertificateValidationArgsTimeouts;
 }
 export class aws_acm_certificate_validation extends TerraformResource {
   readonly id?: string;

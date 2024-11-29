@@ -15,7 +15,7 @@ export interface GoogleApigeeEnvironmentArgs {
   name: string;
   org_id: string;
   node_config: GoogleApigeeEnvironmentArgsNodeConfig;
-  timeouts: GoogleApigeeEnvironmentArgsTimeouts;
+  timeouts?: GoogleApigeeEnvironmentArgsTimeouts;
 }
 export class google_apigee_environment extends TerraformResource {
   readonly api_proxy_type?: string;

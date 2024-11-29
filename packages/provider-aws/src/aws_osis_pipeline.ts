@@ -32,7 +32,7 @@ export interface AwsOsisPipelineArgs {
   buffer_options: AwsOsisPipelineArgsBufferOptions;
   encryption_at_rest_options: AwsOsisPipelineArgsEncryptionAtRestOptions;
   log_publishing_options: AwsOsisPipelineArgsLogPublishingOptions;
-  timeouts: AwsOsisPipelineArgsTimeouts;
+  timeouts?: AwsOsisPipelineArgsTimeouts;
   vpc_options: AwsOsisPipelineArgsVpcOptions;
 }
 export class aws_osis_pipeline extends TerraformResource {

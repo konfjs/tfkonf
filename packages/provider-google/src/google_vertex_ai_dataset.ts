@@ -14,7 +14,7 @@ export interface GoogleVertexAiDatasetArgs {
   };
   metadata_schema_uri: string;
   encryption_spec: GoogleVertexAiDatasetArgsEncryptionSpec;
-  timeouts: GoogleVertexAiDatasetArgsTimeouts;
+  timeouts?: GoogleVertexAiDatasetArgsTimeouts;
 }
 export class google_vertex_ai_dataset extends TerraformResource {
   readonly create_time!: string;

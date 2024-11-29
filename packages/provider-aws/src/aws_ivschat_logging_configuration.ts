@@ -24,7 +24,7 @@ export interface AwsIvschatLoggingConfigurationArgs {
     [key: string]: string;
   };
   destination_configuration: AwsIvschatLoggingConfigurationArgsDestinationConfiguration;
-  timeouts: AwsIvschatLoggingConfigurationArgsTimeouts;
+  timeouts?: AwsIvschatLoggingConfigurationArgsTimeouts;
 }
 export class aws_ivschat_logging_configuration extends TerraformResource {
   readonly arn!: string;

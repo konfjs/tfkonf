@@ -14,7 +14,7 @@ export interface AwsChimesdkvoiceVoiceProfileDomainArgs {
     [key: string]: string;
   };
   server_side_encryption_configuration: AwsChimesdkvoiceVoiceProfileDomainArgsServerSideEncryptionConfiguration;
-  timeouts: AwsChimesdkvoiceVoiceProfileDomainArgsTimeouts;
+  timeouts?: AwsChimesdkvoiceVoiceProfileDomainArgsTimeouts;
 }
 export class aws_chimesdkvoice_voice_profile_domain extends TerraformResource {
   readonly arn!: string;

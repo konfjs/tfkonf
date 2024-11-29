@@ -71,7 +71,7 @@ export interface GoogleDatastreamConnectionProfileArgs {
   postgresql_profile: GoogleDatastreamConnectionProfileArgsPostgresqlProfile;
   private_connectivity: GoogleDatastreamConnectionProfileArgsPrivateConnectivity;
   sql_server_profile: GoogleDatastreamConnectionProfileArgsSqlServerProfile;
-  timeouts: GoogleDatastreamConnectionProfileArgsTimeouts;
+  timeouts?: GoogleDatastreamConnectionProfileArgsTimeouts;
 }
 export class google_datastream_connection_profile extends TerraformResource {
   readonly effective_labels!: {

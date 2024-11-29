@@ -7,7 +7,7 @@ export interface AwsEc2TransitGatewayMulticastDomainAssociationArgs {
   subnet_id: string;
   transit_gateway_attachment_id: string;
   transit_gateway_multicast_domain_id: string;
-  timeouts: AwsEc2TransitGatewayMulticastDomainAssociationArgsTimeouts;
+  timeouts?: AwsEc2TransitGatewayMulticastDomainAssociationArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_multicast_domain_association extends TerraformResource {
   readonly id?: string;

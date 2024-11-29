@@ -18,7 +18,7 @@ export interface GoogleVmwareengineNetworkPolicyArgs {
   vmware_engine_network: string;
   external_ip: GoogleVmwareengineNetworkPolicyArgsExternalIp;
   internet_access: GoogleVmwareengineNetworkPolicyArgsInternetAccess;
-  timeouts: GoogleVmwareengineNetworkPolicyArgsTimeouts;
+  timeouts?: GoogleVmwareengineNetworkPolicyArgsTimeouts;
 }
 export class google_vmwareengine_network_policy extends TerraformResource {
   readonly create_time!: string;

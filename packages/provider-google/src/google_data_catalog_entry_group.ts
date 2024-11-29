@@ -8,7 +8,7 @@ export interface GoogleDataCatalogEntryGroupArgs {
   description?: string;
   display_name?: string;
   entry_group_id: string;
-  timeouts: GoogleDataCatalogEntryGroupArgsTimeouts;
+  timeouts?: GoogleDataCatalogEntryGroupArgsTimeouts;
 }
 export class google_data_catalog_entry_group extends TerraformResource {
   readonly id?: string;

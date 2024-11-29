@@ -12,7 +12,7 @@ export interface GoogleFilestoreSnapshotArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleFilestoreSnapshotArgsTimeouts;
+  timeouts?: GoogleFilestoreSnapshotArgsTimeouts;
 }
 export class google_filestore_snapshot extends TerraformResource {
   readonly create_time!: string;

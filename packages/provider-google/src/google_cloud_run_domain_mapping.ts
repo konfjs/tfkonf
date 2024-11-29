@@ -22,7 +22,7 @@ export interface GoogleCloudRunDomainMappingArgs {
   name: string;
   metadata: GoogleCloudRunDomainMappingArgsMetadata;
   spec: GoogleCloudRunDomainMappingArgsSpec;
-  timeouts: GoogleCloudRunDomainMappingArgsTimeouts;
+  timeouts?: GoogleCloudRunDomainMappingArgsTimeouts;
 }
 export class google_cloud_run_domain_mapping extends TerraformResource {
   readonly id?: string;

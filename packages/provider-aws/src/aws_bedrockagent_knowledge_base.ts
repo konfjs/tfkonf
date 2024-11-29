@@ -71,7 +71,7 @@ export interface AwsBedrockagentKnowledgeBaseArgs {
   };
   knowledge_base_configuration: AwsBedrockagentKnowledgeBaseArgsKnowledgeBaseConfiguration;
   storage_configuration: AwsBedrockagentKnowledgeBaseArgsStorageConfiguration;
-  timeouts: AwsBedrockagentKnowledgeBaseArgsTimeouts;
+  timeouts?: AwsBedrockagentKnowledgeBaseArgsTimeouts;
 }
 export class aws_bedrockagent_knowledge_base extends TerraformResource {
   readonly arn!: string;

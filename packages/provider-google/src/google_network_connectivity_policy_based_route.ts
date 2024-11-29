@@ -28,7 +28,7 @@ export interface GoogleNetworkConnectivityPolicyBasedRouteArgs {
   priority?: number;
   filter: GoogleNetworkConnectivityPolicyBasedRouteArgsFilter;
   interconnect_attachment: GoogleNetworkConnectivityPolicyBasedRouteArgsInterconnectAttachment;
-  timeouts: GoogleNetworkConnectivityPolicyBasedRouteArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityPolicyBasedRouteArgsTimeouts;
   virtual_machine: GoogleNetworkConnectivityPolicyBasedRouteArgsVirtualMachine;
 }
 export class google_network_connectivity_policy_based_route extends TerraformResource {

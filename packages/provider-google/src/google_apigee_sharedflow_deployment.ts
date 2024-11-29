@@ -10,7 +10,7 @@ export interface GoogleApigeeSharedflowDeploymentArgs {
   revision: string;
   service_account?: string;
   sharedflow_id: string;
-  timeouts: GoogleApigeeSharedflowDeploymentArgsTimeouts;
+  timeouts?: GoogleApigeeSharedflowDeploymentArgsTimeouts;
 }
 export class google_apigee_sharedflow_deployment extends TerraformResource {
   readonly id?: string;

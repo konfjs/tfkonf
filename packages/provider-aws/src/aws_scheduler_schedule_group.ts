@@ -7,7 +7,7 @@ export interface AwsSchedulerScheduleGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSchedulerScheduleGroupArgsTimeouts;
+  timeouts?: AwsSchedulerScheduleGroupArgsTimeouts;
 }
 export class aws_scheduler_schedule_group extends TerraformResource {
   readonly arn!: string;

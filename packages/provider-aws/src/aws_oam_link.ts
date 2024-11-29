@@ -22,7 +22,7 @@ export interface AwsOamLinkArgs {
     [key: string]: string;
   };
   link_configuration: AwsOamLinkArgsLinkConfiguration;
-  timeouts: AwsOamLinkArgsTimeouts;
+  timeouts?: AwsOamLinkArgsTimeouts;
 }
 export class aws_oam_link extends TerraformResource {
   readonly arn!: string;

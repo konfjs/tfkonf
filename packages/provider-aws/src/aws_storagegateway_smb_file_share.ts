@@ -33,7 +33,7 @@ export interface AwsStoragegatewaySmbFileShareArgs {
   valid_user_list?: string[];
   vpc_endpoint_dns_name?: string;
   cache_attributes: AwsStoragegatewaySmbFileShareArgsCacheAttributes;
-  timeouts: AwsStoragegatewaySmbFileShareArgsTimeouts;
+  timeouts?: AwsStoragegatewaySmbFileShareArgsTimeouts;
 }
 export class aws_storagegateway_smb_file_share extends TerraformResource {
   readonly arn!: string;

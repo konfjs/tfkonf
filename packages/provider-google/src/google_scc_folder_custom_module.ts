@@ -39,7 +39,7 @@ export interface GoogleSccFolderCustomModuleArgs {
   enablement_state: string;
   folder: string;
   custom_config: GoogleSccFolderCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccFolderCustomModuleArgsTimeouts;
+  timeouts?: GoogleSccFolderCustomModuleArgsTimeouts;
 }
 export class google_scc_folder_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

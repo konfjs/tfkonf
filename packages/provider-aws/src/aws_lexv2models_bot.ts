@@ -27,7 +27,7 @@ export interface AwsLexv2modelsBotArgs {
   };
   data_privacy: AwsLexv2modelsBotArgsDataPrivacy;
   members: AwsLexv2modelsBotArgsMembers;
-  timeouts: AwsLexv2modelsBotArgsTimeouts;
+  timeouts?: AwsLexv2modelsBotArgsTimeouts;
 }
 export class aws_lexv2models_bot extends TerraformResource {
   readonly arn!: string;

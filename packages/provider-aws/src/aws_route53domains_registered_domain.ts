@@ -27,7 +27,7 @@ export interface AwsRoute53domainsRegisteredDomainArgs {
   name_server: AwsRoute53domainsRegisteredDomainArgsNameServer;
   registrant_contact: AwsRoute53domainsRegisteredDomainArgsRegistrantContact;
   tech_contact: AwsRoute53domainsRegisteredDomainArgsTechContact;
-  timeouts: AwsRoute53domainsRegisteredDomainArgsTimeouts;
+  timeouts?: AwsRoute53domainsRegisteredDomainArgsTimeouts;
 }
 export class aws_route53domains_registered_domain extends TerraformResource {
   readonly abuse_contact_email!: string;

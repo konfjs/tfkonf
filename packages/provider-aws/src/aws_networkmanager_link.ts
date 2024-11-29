@@ -18,7 +18,7 @@ export interface AwsNetworkmanagerLinkArgs {
   };
   type?: string;
   bandwidth: AwsNetworkmanagerLinkArgsBandwidth;
-  timeouts: AwsNetworkmanagerLinkArgsTimeouts;
+  timeouts?: AwsNetworkmanagerLinkArgsTimeouts;
 }
 export class aws_networkmanager_link extends TerraformResource {
   readonly arn!: string;

@@ -23,7 +23,7 @@ export interface GoogleBigtableInstanceArgs {
   };
   name: string;
   cluster: GoogleBigtableInstanceArgsCluster;
-  timeouts: GoogleBigtableInstanceArgsTimeouts;
+  timeouts?: GoogleBigtableInstanceArgsTimeouts;
 }
 export class google_bigtable_instance extends TerraformResource {
   readonly display_name?: string;

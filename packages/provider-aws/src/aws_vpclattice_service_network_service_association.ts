@@ -10,7 +10,7 @@ export interface AwsVpclatticeServiceNetworkServiceAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpclatticeServiceNetworkServiceAssociationArgsTimeouts;
+  timeouts?: AwsVpclatticeServiceNetworkServiceAssociationArgsTimeouts;
 }
 export class aws_vpclattice_service_network_service_association extends TerraformResource {
   readonly arn!: string;

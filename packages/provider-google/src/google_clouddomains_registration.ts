@@ -90,7 +90,7 @@ export interface GoogleClouddomainsRegistrationArgs {
   contact_settings: GoogleClouddomainsRegistrationArgsContactSettings;
   dns_settings: GoogleClouddomainsRegistrationArgsDnsSettings;
   management_settings: GoogleClouddomainsRegistrationArgsManagementSettings;
-  timeouts: GoogleClouddomainsRegistrationArgsTimeouts;
+  timeouts?: GoogleClouddomainsRegistrationArgsTimeouts;
   yearly_price: GoogleClouddomainsRegistrationArgsYearlyPrice;
 }
 export class google_clouddomains_registration extends TerraformResource {

@@ -11,7 +11,7 @@ export interface GoogleKmsCryptoKeyVersionArgsTimeouts {
 export interface GoogleKmsCryptoKeyVersionArgs {
   crypto_key: string;
   external_protection_level_options: GoogleKmsCryptoKeyVersionArgsExternalProtectionLevelOptions;
-  timeouts: GoogleKmsCryptoKeyVersionArgsTimeouts;
+  timeouts?: GoogleKmsCryptoKeyVersionArgsTimeouts;
 }
 export class google_kms_crypto_key_version extends TerraformResource {
   readonly algorithm!: string;

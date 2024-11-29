@@ -9,7 +9,7 @@ export interface GoogleStorageObjectAccessControlArgs {
   entity: string;
   object: string;
   role: string;
-  timeouts: GoogleStorageObjectAccessControlArgsTimeouts;
+  timeouts?: GoogleStorageObjectAccessControlArgsTimeouts;
 }
 export class google_storage_object_access_control extends TerraformResource {
   readonly domain!: string;

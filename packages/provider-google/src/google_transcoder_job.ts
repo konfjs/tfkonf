@@ -93,7 +93,7 @@ export interface GoogleTranscoderJobArgs {
   };
   location: string;
   config: GoogleTranscoderJobArgsConfig;
-  timeouts: GoogleTranscoderJobArgsTimeouts;
+  timeouts?: GoogleTranscoderJobArgsTimeouts;
 }
 export class google_transcoder_job extends TerraformResource {
   readonly create_time!: string;

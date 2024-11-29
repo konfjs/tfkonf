@@ -51,7 +51,7 @@ export interface AwsLightsailDistributionArgs {
   cache_behavior_settings: AwsLightsailDistributionArgsCacheBehaviorSettings;
   default_cache_behavior: AwsLightsailDistributionArgsDefaultCacheBehavior;
   origin: AwsLightsailDistributionArgsOrigin;
-  timeouts: AwsLightsailDistributionArgsTimeouts;
+  timeouts?: AwsLightsailDistributionArgsTimeouts;
 }
 export class aws_lightsail_distribution extends TerraformResource {
   readonly alternative_domain_names!: string[];

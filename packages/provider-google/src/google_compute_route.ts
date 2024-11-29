@@ -14,7 +14,7 @@ export interface GoogleComputeRouteArgs {
   next_hop_vpn_tunnel?: string;
   priority?: number;
   tags?: string[];
-  timeouts: GoogleComputeRouteArgsTimeouts;
+  timeouts?: GoogleComputeRouteArgsTimeouts;
 }
 export class google_compute_route extends TerraformResource {
   readonly id?: string;

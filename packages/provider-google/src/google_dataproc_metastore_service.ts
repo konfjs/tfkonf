@@ -72,7 +72,7 @@ export interface GoogleDataprocMetastoreServiceArgs {
   scaling_config: GoogleDataprocMetastoreServiceArgsScalingConfig;
   scheduled_backup: GoogleDataprocMetastoreServiceArgsScheduledBackup;
   telemetry_config: GoogleDataprocMetastoreServiceArgsTelemetryConfig;
-  timeouts: GoogleDataprocMetastoreServiceArgsTimeouts;
+  timeouts?: GoogleDataprocMetastoreServiceArgsTimeouts;
 }
 export class google_dataproc_metastore_service extends TerraformResource {
   readonly artifact_gcs_uri!: string;

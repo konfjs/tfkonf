@@ -8,7 +8,7 @@ export interface AwsWorkspacesConnectionAliasArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsWorkspacesConnectionAliasArgsTimeouts;
+  timeouts?: AwsWorkspacesConnectionAliasArgsTimeouts;
 }
 export class aws_workspaces_connection_alias extends TerraformResource {
   readonly id!: string;

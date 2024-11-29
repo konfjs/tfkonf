@@ -8,7 +8,7 @@ export interface GoogleFirebaseAppCheckDebugTokenArgs {
   app_id: string;
   display_name: string;
   token: string;
-  timeouts: GoogleFirebaseAppCheckDebugTokenArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckDebugTokenArgsTimeouts;
 }
 export class google_firebase_app_check_debug_token extends TerraformResource {
   readonly debug_token_id!: string;

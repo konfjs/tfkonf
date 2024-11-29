@@ -14,7 +14,7 @@ export interface GoogleFirestoreDatabaseArgs {
   point_in_time_recovery_enablement?: string;
   type: string;
   cmek_config: GoogleFirestoreDatabaseArgsCmekConfig;
-  timeouts: GoogleFirestoreDatabaseArgsTimeouts;
+  timeouts?: GoogleFirestoreDatabaseArgsTimeouts;
 }
 export class google_firestore_database extends TerraformResource {
   readonly app_engine_integration_mode?: string;

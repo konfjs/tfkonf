@@ -11,7 +11,7 @@ export interface AwsFinspaceKxUserArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsFinspaceKxUserArgsTimeouts;
+  timeouts?: AwsFinspaceKxUserArgsTimeouts;
 }
 export class aws_finspace_kx_user extends TerraformResource {
   readonly arn!: string;

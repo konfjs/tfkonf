@@ -9,7 +9,7 @@ export interface AwsBackupLogicallyAirGappedVaultArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBackupLogicallyAirGappedVaultArgsTimeouts;
+  timeouts?: AwsBackupLogicallyAirGappedVaultArgsTimeouts;
 }
 export class aws_backup_logically_air_gapped_vault extends TerraformResource {
   readonly arn!: string;

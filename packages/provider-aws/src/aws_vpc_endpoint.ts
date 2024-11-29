@@ -22,7 +22,7 @@ export interface AwsVpcEndpointArgs {
   vpc_id: string;
   dns_options: AwsVpcEndpointArgsDnsOptions;
   subnet_configuration: AwsVpcEndpointArgsSubnetConfiguration;
-  timeouts: AwsVpcEndpointArgsTimeouts;
+  timeouts?: AwsVpcEndpointArgsTimeouts;
 }
 export class aws_vpc_endpoint extends TerraformResource {
   readonly arn!: string;

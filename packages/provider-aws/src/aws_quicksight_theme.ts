@@ -73,7 +73,7 @@ export interface AwsQuicksightThemeArgs {
   version_description?: string;
   configuration: AwsQuicksightThemeArgsConfiguration;
   permissions: AwsQuicksightThemeArgsPermissions;
-  timeouts: AwsQuicksightThemeArgsTimeouts;
+  timeouts?: AwsQuicksightThemeArgsTimeouts;
 }
 export class aws_quicksight_theme extends TerraformResource {
   readonly arn!: string;

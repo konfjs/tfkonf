@@ -59,7 +59,7 @@ export interface GoogleWorkbenchInstanceArgs {
   location: string;
   name: string;
   gce_setup: GoogleWorkbenchInstanceArgsGceSetup;
-  timeouts: GoogleWorkbenchInstanceArgsTimeouts;
+  timeouts?: GoogleWorkbenchInstanceArgsTimeouts;
 }
 export class google_workbench_instance extends TerraformResource {
   readonly create_time!: string;

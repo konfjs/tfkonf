@@ -7,7 +7,7 @@ export interface AwsNetworkInterfaceSgAttachmentArgsTimeouts {
 export interface AwsNetworkInterfaceSgAttachmentArgs {
   network_interface_id: string;
   security_group_id: string;
-  timeouts: AwsNetworkInterfaceSgAttachmentArgsTimeouts;
+  timeouts?: AwsNetworkInterfaceSgAttachmentArgsTimeouts;
 }
 export class aws_network_interface_sg_attachment extends TerraformResource {
   readonly id?: string;

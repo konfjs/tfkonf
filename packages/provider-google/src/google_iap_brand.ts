@@ -6,7 +6,7 @@ export interface GoogleIapBrandArgsTimeouts {
 export interface GoogleIapBrandArgs {
   application_title: string;
   support_email: string;
-  timeouts: GoogleIapBrandArgsTimeouts;
+  timeouts?: GoogleIapBrandArgsTimeouts;
 }
 export class google_iap_brand extends TerraformResource {
   readonly id?: string;

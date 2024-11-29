@@ -35,7 +35,7 @@ export interface AwsStoragegatewayNfsFileShareArgs {
   vpc_endpoint_dns_name?: string;
   cache_attributes: AwsStoragegatewayNfsFileShareArgsCacheAttributes;
   nfs_file_share_defaults: AwsStoragegatewayNfsFileShareArgsNfsFileShareDefaults;
-  timeouts: AwsStoragegatewayNfsFileShareArgsTimeouts;
+  timeouts?: AwsStoragegatewayNfsFileShareArgsTimeouts;
 }
 export class aws_storagegateway_nfs_file_share extends TerraformResource {
   readonly arn!: string;

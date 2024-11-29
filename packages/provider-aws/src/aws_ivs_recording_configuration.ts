@@ -16,7 +16,7 @@ export interface AwsIvsRecordingConfigurationArgs {
   };
   destination_configuration: AwsIvsRecordingConfigurationArgsDestinationConfiguration;
   thumbnail_configuration: AwsIvsRecordingConfigurationArgsThumbnailConfiguration;
-  timeouts: AwsIvsRecordingConfigurationArgsTimeouts;
+  timeouts?: AwsIvsRecordingConfigurationArgsTimeouts;
 }
 export class aws_ivs_recording_configuration extends TerraformResource {
   readonly arn!: string;

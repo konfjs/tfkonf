@@ -13,7 +13,7 @@ export interface AwsGlobalacceleratorListenerArgs {
   client_affinity?: string;
   protocol: string;
   port_range: AwsGlobalacceleratorListenerArgsPortRange;
-  timeouts: AwsGlobalacceleratorListenerArgsTimeouts;
+  timeouts?: AwsGlobalacceleratorListenerArgsTimeouts;
 }
 export class aws_globalaccelerator_listener extends TerraformResource {
   readonly id?: string;

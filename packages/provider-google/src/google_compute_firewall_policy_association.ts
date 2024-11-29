@@ -7,7 +7,7 @@ export interface GoogleComputeFirewallPolicyAssociationArgs {
   attachment_target: string;
   firewall_policy: string;
   name: string;
-  timeouts: GoogleComputeFirewallPolicyAssociationArgsTimeouts;
+  timeouts?: GoogleComputeFirewallPolicyAssociationArgsTimeouts;
 }
 export class google_compute_firewall_policy_association extends TerraformResource {
   readonly id?: string;

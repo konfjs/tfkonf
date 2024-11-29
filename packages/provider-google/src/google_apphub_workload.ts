@@ -37,7 +37,7 @@ export interface GoogleApphubWorkloadArgs {
   location: string;
   workload_id: string;
   attributes: GoogleApphubWorkloadArgsAttributes;
-  timeouts: GoogleApphubWorkloadArgsTimeouts;
+  timeouts?: GoogleApphubWorkloadArgsTimeouts;
 }
 export class google_apphub_workload extends TerraformResource {
   readonly create_time!: string;

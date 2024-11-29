@@ -6,7 +6,7 @@ export interface AwsOpensearchDomainPolicyArgsTimeouts {
 export interface AwsOpensearchDomainPolicyArgs {
   access_policies: string;
   domain_name: string;
-  timeouts: AwsOpensearchDomainPolicyArgsTimeouts;
+  timeouts?: AwsOpensearchDomainPolicyArgsTimeouts;
 }
 export class aws_opensearch_domain_policy extends TerraformResource {
   readonly id?: string;

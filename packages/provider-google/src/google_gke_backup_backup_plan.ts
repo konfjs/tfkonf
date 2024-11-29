@@ -65,7 +65,7 @@ export interface GoogleGkeBackupBackupPlanArgs {
   backup_config: GoogleGkeBackupBackupPlanArgsBackupConfig;
   backup_schedule: GoogleGkeBackupBackupPlanArgsBackupSchedule;
   retention_policy: GoogleGkeBackupBackupPlanArgsRetentionPolicy;
-  timeouts: GoogleGkeBackupBackupPlanArgsTimeouts;
+  timeouts?: GoogleGkeBackupBackupPlanArgsTimeouts;
 }
 export class google_gke_backup_backup_plan extends TerraformResource {
   readonly deactivated?: boolean;

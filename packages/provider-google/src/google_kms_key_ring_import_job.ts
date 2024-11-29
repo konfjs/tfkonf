@@ -8,7 +8,7 @@ export interface GoogleKmsKeyRingImportJobArgs {
   import_method: string;
   key_ring: string;
   protection_level: string;
-  timeouts: GoogleKmsKeyRingImportJobArgsTimeouts;
+  timeouts?: GoogleKmsKeyRingImportJobArgsTimeouts;
 }
 export class google_kms_key_ring_import_job extends TerraformResource {
   readonly attestation!: any[];

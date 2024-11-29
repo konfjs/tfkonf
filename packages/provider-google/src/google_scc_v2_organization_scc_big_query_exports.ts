@@ -12,7 +12,7 @@ export interface GoogleSccV2OrganizationSccBigQueryExportsArgs {
   location?: string;
   name?: string;
   organization: string;
-  timeouts: GoogleSccV2OrganizationSccBigQueryExportsArgsTimeouts;
+  timeouts?: GoogleSccV2OrganizationSccBigQueryExportsArgsTimeouts;
 }
 export class google_scc_v2_organization_scc_big_query_exports extends TerraformResource {
   readonly create_time!: string;

@@ -4,7 +4,7 @@ export interface GoogleComputeProjectDefaultNetworkTierArgsTimeouts {
 }
 export interface GoogleComputeProjectDefaultNetworkTierArgs {
   network_tier: string;
-  timeouts: GoogleComputeProjectDefaultNetworkTierArgsTimeouts;
+  timeouts?: GoogleComputeProjectDefaultNetworkTierArgsTimeouts;
 }
 export class google_compute_project_default_network_tier extends TerraformResource {
   readonly id?: string;

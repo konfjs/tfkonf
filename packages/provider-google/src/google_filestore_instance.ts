@@ -46,7 +46,7 @@ export interface GoogleFilestoreInstanceArgs {
   file_shares: GoogleFilestoreInstanceArgsFileShares;
   networks: GoogleFilestoreInstanceArgsNetworks;
   performance_config: GoogleFilestoreInstanceArgsPerformanceConfig;
-  timeouts: GoogleFilestoreInstanceArgsTimeouts;
+  timeouts?: GoogleFilestoreInstanceArgsTimeouts;
 }
 export class google_filestore_instance extends TerraformResource {
   readonly create_time!: string;

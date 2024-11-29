@@ -162,7 +162,7 @@ export interface GoogleCloudRunServiceArgs {
   name: string;
   metadata: GoogleCloudRunServiceArgsMetadata;
   template: GoogleCloudRunServiceArgsTemplate;
-  timeouts: GoogleCloudRunServiceArgsTimeouts;
+  timeouts?: GoogleCloudRunServiceArgsTimeouts;
   traffic: GoogleCloudRunServiceArgsTraffic;
 }
 export class google_cloud_run_service extends TerraformResource {

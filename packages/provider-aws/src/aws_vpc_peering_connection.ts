@@ -19,7 +19,7 @@ export interface AwsVpcPeeringConnectionArgs {
   vpc_id: string;
   accepter: AwsVpcPeeringConnectionArgsAccepter;
   requester: AwsVpcPeeringConnectionArgsRequester;
-  timeouts: AwsVpcPeeringConnectionArgsTimeouts;
+  timeouts?: AwsVpcPeeringConnectionArgsTimeouts;
 }
 export class aws_vpc_peering_connection extends TerraformResource {
   readonly accept_status!: string;

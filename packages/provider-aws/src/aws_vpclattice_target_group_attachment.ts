@@ -9,7 +9,7 @@ export interface AwsVpclatticeTargetGroupAttachmentArgsTimeouts {
 export interface AwsVpclatticeTargetGroupAttachmentArgs {
   target_group_identifier: string;
   target: AwsVpclatticeTargetGroupAttachmentArgsTarget;
-  timeouts: AwsVpclatticeTargetGroupAttachmentArgsTimeouts;
+  timeouts?: AwsVpclatticeTargetGroupAttachmentArgsTimeouts;
 }
 export class aws_vpclattice_target_group_attachment extends TerraformResource {
   readonly id?: string;

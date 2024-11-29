@@ -48,7 +48,7 @@ export interface AwsEvidentlyLaunchArgs {
   groups: AwsEvidentlyLaunchArgsGroups;
   metric_monitors: AwsEvidentlyLaunchArgsMetricMonitors;
   scheduled_splits_config: AwsEvidentlyLaunchArgsScheduledSplitsConfig;
-  timeouts: AwsEvidentlyLaunchArgsTimeouts;
+  timeouts?: AwsEvidentlyLaunchArgsTimeouts;
 }
 export class aws_evidently_launch extends TerraformResource {
   readonly arn!: string;

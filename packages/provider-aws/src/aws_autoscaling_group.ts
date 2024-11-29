@@ -163,7 +163,7 @@ export interface AwsAutoscalingGroupArgs {
   launch_template: AwsAutoscalingGroupArgsLaunchTemplate;
   mixed_instances_policy: AwsAutoscalingGroupArgsMixedInstancesPolicy;
   tag: AwsAutoscalingGroupArgsTag;
-  timeouts: AwsAutoscalingGroupArgsTimeouts;
+  timeouts?: AwsAutoscalingGroupArgsTimeouts;
   traffic_source: AwsAutoscalingGroupArgsTrafficSource;
   warm_pool: AwsAutoscalingGroupArgsWarmPool;
 }

@@ -8,7 +8,7 @@ export interface AwsGrafanaRoleAssociationArgs {
   role: string;
   user_ids?: string[];
   workspace_id: string;
-  timeouts: AwsGrafanaRoleAssociationArgsTimeouts;
+  timeouts?: AwsGrafanaRoleAssociationArgsTimeouts;
 }
 export class aws_grafana_role_association extends TerraformResource {
   readonly id?: string;

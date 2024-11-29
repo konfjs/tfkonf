@@ -17,7 +17,7 @@ export interface GoogleComputeExternalVpnGatewayArgs {
   name: string;
   redundancy_type?: string;
   interface: GoogleComputeExternalVpnGatewayArgsInterface;
-  timeouts: GoogleComputeExternalVpnGatewayArgsTimeouts;
+  timeouts?: GoogleComputeExternalVpnGatewayArgsTimeouts;
 }
 export class google_compute_external_vpn_gateway extends TerraformResource {
   readonly effective_labels!: {

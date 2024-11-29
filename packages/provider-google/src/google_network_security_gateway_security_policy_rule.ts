@@ -15,7 +15,7 @@ export interface GoogleNetworkSecurityGatewaySecurityPolicyRuleArgs {
   priority: number;
   session_matcher: string;
   tls_inspection_enabled?: boolean;
-  timeouts: GoogleNetworkSecurityGatewaySecurityPolicyRuleArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityGatewaySecurityPolicyRuleArgsTimeouts;
 }
 export class google_network_security_gateway_security_policy_rule extends TerraformResource {
   readonly create_time!: string;

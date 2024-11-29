@@ -11,7 +11,7 @@ export interface AwsBedrockagentAgentAliasArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBedrockagentAgentAliasArgsTimeouts;
+  timeouts?: AwsBedrockagentAgentAliasArgsTimeouts;
 }
 export class aws_bedrockagent_agent_alias extends TerraformResource {
   readonly agent_alias_arn!: string;

@@ -9,7 +9,7 @@ export interface AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource {
 }
 export interface AwsAutoscalingTrafficSourceAttachmentArgs {
   autoscaling_group_name: string;
-  timeouts: AwsAutoscalingTrafficSourceAttachmentArgsTimeouts;
+  timeouts?: AwsAutoscalingTrafficSourceAttachmentArgsTimeouts;
   traffic_source: AwsAutoscalingTrafficSourceAttachmentArgsTrafficSource;
 }
 export class aws_autoscaling_traffic_source_attachment extends TerraformResource {

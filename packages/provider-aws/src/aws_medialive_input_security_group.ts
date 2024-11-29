@@ -11,7 +11,7 @@ export interface AwsMedialiveInputSecurityGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMedialiveInputSecurityGroupArgsTimeouts;
+  timeouts?: AwsMedialiveInputSecurityGroupArgsTimeouts;
   whitelist_rules: AwsMedialiveInputSecurityGroupArgsWhitelistRules;
 }
 export class aws_medialive_input_security_group extends TerraformResource {

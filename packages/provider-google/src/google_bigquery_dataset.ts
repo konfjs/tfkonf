@@ -57,7 +57,7 @@ export interface GoogleBigqueryDatasetArgs {
   access: GoogleBigqueryDatasetArgsAccess;
   default_encryption_configuration: GoogleBigqueryDatasetArgsDefaultEncryptionConfiguration;
   external_dataset_reference: GoogleBigqueryDatasetArgsExternalDatasetReference;
-  timeouts: GoogleBigqueryDatasetArgsTimeouts;
+  timeouts?: GoogleBigqueryDatasetArgsTimeouts;
 }
 export class google_bigquery_dataset extends TerraformResource {
   readonly creation_time!: number;

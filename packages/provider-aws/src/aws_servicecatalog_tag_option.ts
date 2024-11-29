@@ -9,7 +9,7 @@ export interface AwsServicecatalogTagOptionArgs {
   active?: boolean;
   key: string;
   value: string;
-  timeouts: AwsServicecatalogTagOptionArgsTimeouts;
+  timeouts?: AwsServicecatalogTagOptionArgsTimeouts;
 }
 export class aws_servicecatalog_tag_option extends TerraformResource {
   readonly id?: string;

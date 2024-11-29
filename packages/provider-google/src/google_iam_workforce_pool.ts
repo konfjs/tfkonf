@@ -20,7 +20,7 @@ export interface GoogleIamWorkforcePoolArgs {
   session_duration?: string;
   workforce_pool_id: string;
   access_restrictions: GoogleIamWorkforcePoolArgsAccessRestrictions;
-  timeouts: GoogleIamWorkforcePoolArgsTimeouts;
+  timeouts?: GoogleIamWorkforcePoolArgsTimeouts;
 }
 export class google_iam_workforce_pool extends TerraformResource {
   readonly id?: string;

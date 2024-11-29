@@ -124,7 +124,7 @@ export interface GooglePrivatecaCertificateAuthorityArgs {
   config: GooglePrivatecaCertificateAuthorityArgsConfig;
   key_spec: GooglePrivatecaCertificateAuthorityArgsKeySpec;
   subordinate_config: GooglePrivatecaCertificateAuthorityArgsSubordinateConfig;
-  timeouts: GooglePrivatecaCertificateAuthorityArgsTimeouts;
+  timeouts?: GooglePrivatecaCertificateAuthorityArgsTimeouts;
 }
 export class google_privateca_certificate_authority extends TerraformResource {
   readonly access_urls!: any[];

@@ -17,7 +17,7 @@ export interface GoogleBigtableAuthorizedViewArgs {
   name: string;
   table_name: string;
   subset_view: GoogleBigtableAuthorizedViewArgsSubsetView;
-  timeouts: GoogleBigtableAuthorizedViewArgsTimeouts;
+  timeouts?: GoogleBigtableAuthorizedViewArgsTimeouts;
 }
 export class google_bigtable_authorized_view extends TerraformResource {
   readonly deletion_protection?: string;

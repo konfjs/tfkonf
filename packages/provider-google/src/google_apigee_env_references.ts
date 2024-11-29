@@ -10,7 +10,7 @@ export interface GoogleApigeeEnvReferencesArgs {
   name: string;
   refers: string;
   resource_type: string;
-  timeouts: GoogleApigeeEnvReferencesArgsTimeouts;
+  timeouts?: GoogleApigeeEnvReferencesArgsTimeouts;
 }
 export class google_apigee_env_references extends TerraformResource {
   readonly id?: string;

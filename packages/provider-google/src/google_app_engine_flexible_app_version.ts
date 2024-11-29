@@ -175,7 +175,7 @@ export interface GoogleAppEngineFlexibleAppVersionArgs {
   network: GoogleAppEngineFlexibleAppVersionArgsNetwork;
   readiness_check: GoogleAppEngineFlexibleAppVersionArgsReadinessCheck;
   resources: GoogleAppEngineFlexibleAppVersionArgsResources;
-  timeouts: GoogleAppEngineFlexibleAppVersionArgsTimeouts;
+  timeouts?: GoogleAppEngineFlexibleAppVersionArgsTimeouts;
   vpc_access_connector: GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_flexible_app_version extends TerraformResource {

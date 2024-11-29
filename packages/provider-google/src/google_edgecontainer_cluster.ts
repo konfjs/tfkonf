@@ -60,7 +60,7 @@ export interface GoogleEdgecontainerClusterArgs {
   maintenance_policy: GoogleEdgecontainerClusterArgsMaintenancePolicy;
   networking: GoogleEdgecontainerClusterArgsNetworking;
   system_addons_config: GoogleEdgecontainerClusterArgsSystemAddonsConfig;
-  timeouts: GoogleEdgecontainerClusterArgsTimeouts;
+  timeouts?: GoogleEdgecontainerClusterArgsTimeouts;
 }
 export class google_edgecontainer_cluster extends TerraformResource {
   readonly cluster_ca_certificate!: string;

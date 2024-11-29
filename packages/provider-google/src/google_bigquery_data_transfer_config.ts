@@ -35,7 +35,7 @@ export interface GoogleBigqueryDataTransferConfigArgs {
   encryption_configuration: GoogleBigqueryDataTransferConfigArgsEncryptionConfiguration;
   schedule_options: GoogleBigqueryDataTransferConfigArgsScheduleOptions;
   sensitive_params: GoogleBigqueryDataTransferConfigArgsSensitiveParams;
-  timeouts: GoogleBigqueryDataTransferConfigArgsTimeouts;
+  timeouts?: GoogleBigqueryDataTransferConfigArgsTimeouts;
 }
 export class google_bigquery_data_transfer_config extends TerraformResource {
   readonly id?: string;

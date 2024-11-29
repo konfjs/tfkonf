@@ -30,7 +30,7 @@ export interface AwsLightsailContainerServiceDeploymentVersionArgs {
   service_name: string;
   container: AwsLightsailContainerServiceDeploymentVersionArgsContainer;
   public_endpoint: AwsLightsailContainerServiceDeploymentVersionArgsPublicEndpoint;
-  timeouts: AwsLightsailContainerServiceDeploymentVersionArgsTimeouts;
+  timeouts?: AwsLightsailContainerServiceDeploymentVersionArgsTimeouts;
 }
 export class aws_lightsail_container_service_deployment_version extends TerraformResource {
   readonly created_at!: string;

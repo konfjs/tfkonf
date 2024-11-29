@@ -55,7 +55,7 @@ export interface GoogleIamWorkforcePoolProviderArgs {
   extra_attributes_oauth2_client: GoogleIamWorkforcePoolProviderArgsExtraAttributesOauth2Client;
   oidc: GoogleIamWorkforcePoolProviderArgsOidc;
   saml: GoogleIamWorkforcePoolProviderArgsSaml;
-  timeouts: GoogleIamWorkforcePoolProviderArgsTimeouts;
+  timeouts?: GoogleIamWorkforcePoolProviderArgsTimeouts;
 }
 export class google_iam_workforce_pool_provider extends TerraformResource {
   readonly id?: string;

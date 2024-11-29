@@ -17,7 +17,7 @@ export interface AwsConnectInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsConnectInstanceArgsTimeouts;
+  timeouts?: AwsConnectInstanceArgsTimeouts;
 }
 export class aws_connect_instance extends TerraformResource {
   readonly arn!: string;

@@ -30,7 +30,7 @@ export interface GoogleComputeInterconnectArgs {
   requested_features?: string[];
   requested_link_count: number;
   macsec: GoogleComputeInterconnectArgsMacsec;
-  timeouts: GoogleComputeInterconnectArgsTimeouts;
+  timeouts?: GoogleComputeInterconnectArgsTimeouts;
 }
 export class google_compute_interconnect extends TerraformResource {
   readonly available_features!: string[];

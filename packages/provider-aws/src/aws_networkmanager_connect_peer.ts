@@ -16,7 +16,7 @@ export interface AwsNetworkmanagerConnectPeerArgs {
     [key: string]: string;
   };
   bgp_options: AwsNetworkmanagerConnectPeerArgsBgpOptions;
-  timeouts: AwsNetworkmanagerConnectPeerArgsTimeouts;
+  timeouts?: AwsNetworkmanagerConnectPeerArgsTimeouts;
 }
 export class aws_networkmanager_connect_peer extends TerraformResource {
   readonly arn!: string;

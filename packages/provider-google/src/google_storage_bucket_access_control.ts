@@ -8,7 +8,7 @@ export interface GoogleStorageBucketAccessControlArgs {
   bucket: string;
   entity: string;
   role?: string;
-  timeouts: GoogleStorageBucketAccessControlArgsTimeouts;
+  timeouts?: GoogleStorageBucketAccessControlArgsTimeouts;
 }
 export class google_storage_bucket_access_control extends TerraformResource {
   readonly domain!: string;

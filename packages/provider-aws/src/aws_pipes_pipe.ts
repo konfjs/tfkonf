@@ -305,7 +305,7 @@ export interface AwsPipesPipeArgs {
   log_configuration: AwsPipesPipeArgsLogConfiguration;
   source_parameters: AwsPipesPipeArgsSourceParameters;
   target_parameters: AwsPipesPipeArgsTargetParameters;
-  timeouts: AwsPipesPipeArgsTimeouts;
+  timeouts?: AwsPipesPipeArgsTimeouts;
 }
 export class aws_pipes_pipe extends TerraformResource {
   readonly arn!: string;

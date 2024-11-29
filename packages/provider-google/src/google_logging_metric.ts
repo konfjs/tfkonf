@@ -46,7 +46,7 @@ export interface GoogleLoggingMetricArgs {
   value_extractor?: string;
   bucket_options: GoogleLoggingMetricArgsBucketOptions;
   metric_descriptor: GoogleLoggingMetricArgsMetricDescriptor;
-  timeouts: GoogleLoggingMetricArgsTimeouts;
+  timeouts?: GoogleLoggingMetricArgsTimeouts;
 }
 export class google_logging_metric extends TerraformResource {
   readonly id?: string;

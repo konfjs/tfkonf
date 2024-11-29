@@ -33,7 +33,7 @@ export interface AwsMedialiveInputArgs {
   input_devices: AwsMedialiveInputArgsInputDevices;
   media_connect_flows: AwsMedialiveInputArgsMediaConnectFlows;
   sources: AwsMedialiveInputArgsSources;
-  timeouts: AwsMedialiveInputArgsTimeouts;
+  timeouts?: AwsMedialiveInputArgsTimeouts;
   vpc: AwsMedialiveInputArgsVpc;
 }
 export class aws_medialive_input extends TerraformResource {

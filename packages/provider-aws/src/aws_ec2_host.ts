@@ -14,7 +14,7 @@ export interface AwsEc2HostArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEc2HostArgsTimeouts;
+  timeouts?: AwsEc2HostArgsTimeouts;
 }
 export class aws_ec2_host extends TerraformResource {
   readonly arn!: string;

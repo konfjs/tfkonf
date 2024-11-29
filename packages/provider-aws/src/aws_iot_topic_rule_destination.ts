@@ -12,7 +12,7 @@ export interface AwsIotTopicRuleDestinationArgsVpcConfiguration {
 }
 export interface AwsIotTopicRuleDestinationArgs {
   enabled?: boolean;
-  timeouts: AwsIotTopicRuleDestinationArgsTimeouts;
+  timeouts?: AwsIotTopicRuleDestinationArgsTimeouts;
   vpc_configuration: AwsIotTopicRuleDestinationArgsVpcConfiguration;
 }
 export class aws_iot_topic_rule_destination extends TerraformResource {

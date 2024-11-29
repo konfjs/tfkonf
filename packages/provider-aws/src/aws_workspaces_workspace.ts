@@ -20,7 +20,7 @@ export interface AwsWorkspacesWorkspaceArgs {
   user_name: string;
   user_volume_encryption_enabled?: boolean;
   volume_encryption_key?: string;
-  timeouts: AwsWorkspacesWorkspaceArgsTimeouts;
+  timeouts?: AwsWorkspacesWorkspaceArgsTimeouts;
   workspace_properties: AwsWorkspacesWorkspaceArgsWorkspaceProperties;
 }
 export class aws_workspaces_workspace extends TerraformResource {

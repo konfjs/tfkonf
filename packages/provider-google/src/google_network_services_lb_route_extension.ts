@@ -30,7 +30,7 @@ export interface GoogleNetworkServicesLbRouteExtensionArgs {
   location: string;
   name: string;
   extension_chains: GoogleNetworkServicesLbRouteExtensionArgsExtensionChains;
-  timeouts: GoogleNetworkServicesLbRouteExtensionArgsTimeouts;
+  timeouts?: GoogleNetworkServicesLbRouteExtensionArgsTimeouts;
 }
 export class google_network_services_lb_route_extension extends TerraformResource {
   readonly effective_labels!: {

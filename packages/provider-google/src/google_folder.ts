@@ -12,7 +12,7 @@ export interface GoogleFolderArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: GoogleFolderArgsTimeouts;
+  timeouts?: GoogleFolderArgsTimeouts;
 }
 export class google_folder extends TerraformResource {
   readonly create_time!: string;

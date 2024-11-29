@@ -31,7 +31,7 @@ export interface AwsCloudwatchMetricStreamArgs {
   exclude_filter: AwsCloudwatchMetricStreamArgsExcludeFilter;
   include_filter: AwsCloudwatchMetricStreamArgsIncludeFilter;
   statistics_configuration: AwsCloudwatchMetricStreamArgsStatisticsConfiguration;
-  timeouts: AwsCloudwatchMetricStreamArgsTimeouts;
+  timeouts?: AwsCloudwatchMetricStreamArgsTimeouts;
 }
 export class aws_cloudwatch_metric_stream extends TerraformResource {
   readonly arn!: string;

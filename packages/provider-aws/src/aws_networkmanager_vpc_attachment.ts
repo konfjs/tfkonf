@@ -16,7 +16,7 @@ export interface AwsNetworkmanagerVpcAttachmentArgs {
   };
   vpc_arn: string;
   options: AwsNetworkmanagerVpcAttachmentArgsOptions;
-  timeouts: AwsNetworkmanagerVpcAttachmentArgsTimeouts;
+  timeouts?: AwsNetworkmanagerVpcAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_vpc_attachment extends TerraformResource {
   readonly arn!: string;

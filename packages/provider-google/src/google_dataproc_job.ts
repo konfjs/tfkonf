@@ -141,7 +141,7 @@ export interface GoogleDataprocJobArgs {
   scheduling: GoogleDataprocJobArgsScheduling;
   spark_config: GoogleDataprocJobArgsSparkConfig;
   sparksql_config: GoogleDataprocJobArgsSparksqlConfig;
-  timeouts: GoogleDataprocJobArgsTimeouts;
+  timeouts?: GoogleDataprocJobArgsTimeouts;
 }
 export class google_dataproc_job extends TerraformResource {
   readonly driver_controls_files_uri!: string;

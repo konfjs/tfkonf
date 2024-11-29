@@ -6,7 +6,7 @@ export interface AwsSnapshotCreateVolumePermissionArgsTimeouts {
 export interface AwsSnapshotCreateVolumePermissionArgs {
   account_id: string;
   snapshot_id: string;
-  timeouts: AwsSnapshotCreateVolumePermissionArgsTimeouts;
+  timeouts?: AwsSnapshotCreateVolumePermissionArgsTimeouts;
 }
 export class aws_snapshot_create_volume_permission extends TerraformResource {
   readonly id?: string;

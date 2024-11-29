@@ -16,7 +16,7 @@ export interface GoogleApigeeAppGroupArgs {
   org_id: string;
   status?: string;
   attributes: GoogleApigeeAppGroupArgsAttributes;
-  timeouts: GoogleApigeeAppGroupArgsTimeouts;
+  timeouts?: GoogleApigeeAppGroupArgsTimeouts;
 }
 export class google_apigee_app_group extends TerraformResource {
   readonly app_group_id!: string;

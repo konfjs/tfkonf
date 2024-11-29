@@ -140,7 +140,7 @@ export interface AwsEcsServiceArgs {
   placement_constraints: AwsEcsServiceArgsPlacementConstraints;
   service_connect_configuration: AwsEcsServiceArgsServiceConnectConfiguration;
   service_registries: AwsEcsServiceArgsServiceRegistries;
-  timeouts: AwsEcsServiceArgsTimeouts;
+  timeouts?: AwsEcsServiceArgsTimeouts;
   volume_configuration: AwsEcsServiceArgsVolumeConfiguration;
   vpc_lattice_configurations: AwsEcsServiceArgsVpcLatticeConfigurations;
 }

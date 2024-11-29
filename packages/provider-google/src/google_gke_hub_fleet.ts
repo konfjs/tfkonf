@@ -22,7 +22,7 @@ export interface GoogleGkeHubFleetArgsTimeouts {
 export interface GoogleGkeHubFleetArgs {
   display_name?: string;
   default_cluster_config: GoogleGkeHubFleetArgsDefaultClusterConfig;
-  timeouts: GoogleGkeHubFleetArgsTimeouts;
+  timeouts?: GoogleGkeHubFleetArgsTimeouts;
 }
 export class google_gke_hub_fleet extends TerraformResource {
   readonly create_time!: string;

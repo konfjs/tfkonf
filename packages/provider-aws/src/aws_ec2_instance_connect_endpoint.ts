@@ -8,7 +8,7 @@ export interface AwsEc2InstanceConnectEndpointArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEc2InstanceConnectEndpointArgsTimeouts;
+  timeouts?: AwsEc2InstanceConnectEndpointArgsTimeouts;
 }
 export class aws_ec2_instance_connect_endpoint extends TerraformResource {
   readonly arn!: string;

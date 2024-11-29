@@ -18,7 +18,7 @@ export interface GoogleNetworkConnectivityServiceConnectionPolicyArgs {
   network: string;
   service_class: string;
   psc_config: GoogleNetworkConnectivityServiceConnectionPolicyArgsPscConfig;
-  timeouts: GoogleNetworkConnectivityServiceConnectionPolicyArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityServiceConnectionPolicyArgsTimeouts;
 }
 export class google_network_connectivity_service_connection_policy extends TerraformResource {
   readonly create_time!: string;

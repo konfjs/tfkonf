@@ -35,7 +35,7 @@ export interface AwsImagebuilderImageArgs {
   };
   image_scanning_configuration: AwsImagebuilderImageArgsImageScanningConfiguration;
   image_tests_configuration: AwsImagebuilderImageArgsImageTestsConfiguration;
-  timeouts: AwsImagebuilderImageArgsTimeouts;
+  timeouts?: AwsImagebuilderImageArgsTimeouts;
   workflow: AwsImagebuilderImageArgsWorkflow;
 }
 export class aws_imagebuilder_image extends TerraformResource {

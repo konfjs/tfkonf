@@ -20,7 +20,7 @@ export interface GoogleFirestoreIndexArgs {
   database?: string;
   query_scope?: string;
   fields: GoogleFirestoreIndexArgsFields;
-  timeouts: GoogleFirestoreIndexArgsTimeouts;
+  timeouts?: GoogleFirestoreIndexArgsTimeouts;
 }
 export class google_firestore_index extends TerraformResource {
   readonly id?: string;

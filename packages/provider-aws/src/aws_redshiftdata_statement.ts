@@ -16,7 +16,7 @@ export interface AwsRedshiftdataStatementArgs {
   with_event?: boolean;
   workgroup_name?: string;
   parameters: AwsRedshiftdataStatementArgsParameters;
-  timeouts: AwsRedshiftdataStatementArgsTimeouts;
+  timeouts?: AwsRedshiftdataStatementArgsTimeouts;
 }
 export class aws_redshiftdata_statement extends TerraformResource {
   readonly id?: string;

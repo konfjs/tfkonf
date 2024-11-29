@@ -9,7 +9,7 @@ export interface GoogleNetworkSecurityUrlListsArgs {
   location: string;
   name: string;
   values: string[];
-  timeouts: GoogleNetworkSecurityUrlListsArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityUrlListsArgsTimeouts;
 }
 export class google_network_security_url_lists extends TerraformResource {
   readonly create_time!: string;

@@ -13,7 +13,7 @@ export interface AwsDbEventSubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDbEventSubscriptionArgsTimeouts;
+  timeouts?: AwsDbEventSubscriptionArgsTimeouts;
 }
 export class aws_db_event_subscription extends TerraformResource {
   readonly arn!: string;

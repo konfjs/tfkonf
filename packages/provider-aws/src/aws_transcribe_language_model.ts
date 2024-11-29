@@ -14,7 +14,7 @@ export interface AwsTranscribeLanguageModelArgs {
     [key: string]: string;
   };
   input_data_config: AwsTranscribeLanguageModelArgsInputDataConfig;
-  timeouts: AwsTranscribeLanguageModelArgsTimeouts;
+  timeouts?: AwsTranscribeLanguageModelArgsTimeouts;
 }
 export class aws_transcribe_language_model extends TerraformResource {
   readonly arn!: string;

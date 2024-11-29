@@ -28,7 +28,7 @@ export interface AwsGameliftGameServerGroupArgs {
   auto_scaling_policy: AwsGameliftGameServerGroupArgsAutoScalingPolicy;
   instance_definition: AwsGameliftGameServerGroupArgsInstanceDefinition;
   launch_template: AwsGameliftGameServerGroupArgsLaunchTemplate;
-  timeouts: AwsGameliftGameServerGroupArgsTimeouts;
+  timeouts?: AwsGameliftGameServerGroupArgsTimeouts;
 }
 export class aws_gamelift_game_server_group extends TerraformResource {
   readonly arn!: string;

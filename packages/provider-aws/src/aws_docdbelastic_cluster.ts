@@ -14,7 +14,7 @@ export interface AwsDocdbelasticClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDocdbelasticClusterArgsTimeouts;
+  timeouts?: AwsDocdbelasticClusterArgsTimeouts;
 }
 export class aws_docdbelastic_cluster extends TerraformResource {
   readonly arn!: string;

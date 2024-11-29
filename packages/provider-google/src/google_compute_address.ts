@@ -14,7 +14,7 @@ export interface GoogleComputeAddressArgs {
   };
   name: string;
   network?: string;
-  timeouts: GoogleComputeAddressArgsTimeouts;
+  timeouts?: GoogleComputeAddressArgsTimeouts;
 }
 export class google_compute_address extends TerraformResource {
   readonly address?: string;

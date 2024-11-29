@@ -9,7 +9,7 @@ export interface GoogleOsLoginSshPublicKeyArgs {
   key: string;
   project?: string;
   user: string;
-  timeouts: GoogleOsLoginSshPublicKeyArgsTimeouts;
+  timeouts?: GoogleOsLoginSshPublicKeyArgsTimeouts;
 }
 export class google_os_login_ssh_public_key extends TerraformResource {
   readonly fingerprint!: string;

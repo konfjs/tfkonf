@@ -6,7 +6,7 @@ export interface AwsResourcegroupsResourceArgsTimeouts {
 export interface AwsResourcegroupsResourceArgs {
   group_arn: string;
   resource_arn: string;
-  timeouts: AwsResourcegroupsResourceArgsTimeouts;
+  timeouts?: AwsResourcegroupsResourceArgsTimeouts;
 }
 export class aws_resourcegroups_resource extends TerraformResource {
   readonly id?: string;

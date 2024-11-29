@@ -5,7 +5,7 @@ export interface AwsNetworkmanagerCoreNetworkPolicyAttachmentArgsTimeouts {
 export interface AwsNetworkmanagerCoreNetworkPolicyAttachmentArgs {
   core_network_id: string;
   policy_document: string;
-  timeouts: AwsNetworkmanagerCoreNetworkPolicyAttachmentArgsTimeouts;
+  timeouts?: AwsNetworkmanagerCoreNetworkPolicyAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_core_network_policy_attachment extends TerraformResource {
   readonly id?: string;

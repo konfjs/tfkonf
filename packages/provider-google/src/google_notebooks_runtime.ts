@@ -76,7 +76,7 @@ export interface GoogleNotebooksRuntimeArgs {
   name: string;
   access_config: GoogleNotebooksRuntimeArgsAccessConfig;
   software_config: GoogleNotebooksRuntimeArgsSoftwareConfig;
-  timeouts: GoogleNotebooksRuntimeArgsTimeouts;
+  timeouts?: GoogleNotebooksRuntimeArgsTimeouts;
   virtual_machine: GoogleNotebooksRuntimeArgsVirtualMachine;
 }
 export class google_notebooks_runtime extends TerraformResource {

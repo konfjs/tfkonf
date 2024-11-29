@@ -24,7 +24,7 @@ export interface AwsPrometheusScraperArgs {
   };
   destination: AwsPrometheusScraperArgsDestination;
   source: AwsPrometheusScraperArgsSource;
-  timeouts: AwsPrometheusScraperArgsTimeouts;
+  timeouts?: AwsPrometheusScraperArgsTimeouts;
 }
 export class aws_prometheus_scraper extends TerraformResource {
   readonly arn!: string;

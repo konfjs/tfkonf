@@ -20,7 +20,7 @@ export interface GoogleAlloydbBackupArgs {
   };
   location: string;
   encryption_config: GoogleAlloydbBackupArgsEncryptionConfig;
-  timeouts: GoogleAlloydbBackupArgsTimeouts;
+  timeouts?: GoogleAlloydbBackupArgsTimeouts;
 }
 export class google_alloydb_backup extends TerraformResource {
   readonly cluster_uid!: string;

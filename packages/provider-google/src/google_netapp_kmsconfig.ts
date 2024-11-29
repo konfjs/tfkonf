@@ -12,7 +12,7 @@ export interface GoogleNetappKmsconfigArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleNetappKmsconfigArgsTimeouts;
+  timeouts?: GoogleNetappKmsconfigArgsTimeouts;
 }
 export class google_netapp_kmsconfig extends TerraformResource {
   readonly effective_labels!: {

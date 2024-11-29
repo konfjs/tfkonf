@@ -7,7 +7,7 @@ export interface AwsInspector2EnablerArgsTimeouts {
 export interface AwsInspector2EnablerArgs {
   account_ids: string[];
   resource_types: string[];
-  timeouts: AwsInspector2EnablerArgsTimeouts;
+  timeouts?: AwsInspector2EnablerArgsTimeouts;
 }
 export class aws_inspector2_enabler extends TerraformResource {
   readonly id?: string;

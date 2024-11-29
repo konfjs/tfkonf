@@ -9,7 +9,7 @@ export interface AwsKmsCustomKeyStoreArgs {
   custom_key_store_name: string;
   key_store_password: string;
   trust_anchor_certificate: string;
-  timeouts: AwsKmsCustomKeyStoreArgsTimeouts;
+  timeouts?: AwsKmsCustomKeyStoreArgsTimeouts;
 }
 export class aws_kms_custom_key_store extends TerraformResource {
   readonly id?: string;

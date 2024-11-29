@@ -49,7 +49,7 @@ export interface GoogleComputeAutoscalerArgs {
   name: string;
   target: string;
   autoscaling_policy: GoogleComputeAutoscalerArgsAutoscalingPolicy;
-  timeouts: GoogleComputeAutoscalerArgsTimeouts;
+  timeouts?: GoogleComputeAutoscalerArgsTimeouts;
 }
 export class google_compute_autoscaler extends TerraformResource {
   readonly creation_timestamp!: string;

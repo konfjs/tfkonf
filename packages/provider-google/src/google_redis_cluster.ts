@@ -41,7 +41,7 @@ export interface GoogleRedisClusterArgs {
   maintenance_policy: GoogleRedisClusterArgsMaintenancePolicy;
   persistence_config: GoogleRedisClusterArgsPersistenceConfig;
   psc_configs: GoogleRedisClusterArgsPscConfigs;
-  timeouts: GoogleRedisClusterArgsTimeouts;
+  timeouts?: GoogleRedisClusterArgsTimeouts;
   zone_distribution_config: GoogleRedisClusterArgsZoneDistributionConfig;
 }
 export class google_redis_cluster extends TerraformResource {

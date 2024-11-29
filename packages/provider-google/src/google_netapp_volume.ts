@@ -83,7 +83,7 @@ export interface GoogleNetappVolumeArgs {
   restore_parameters: GoogleNetappVolumeArgsRestoreParameters;
   snapshot_policy: GoogleNetappVolumeArgsSnapshotPolicy;
   tiering_policy: GoogleNetappVolumeArgsTieringPolicy;
-  timeouts: GoogleNetappVolumeArgsTimeouts;
+  timeouts?: GoogleNetappVolumeArgsTimeouts;
 }
 export class google_netapp_volume extends TerraformResource {
   readonly active_directory!: string;

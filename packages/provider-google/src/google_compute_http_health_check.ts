@@ -14,7 +14,7 @@ export interface GoogleComputeHttpHealthCheckArgs {
   request_path?: string;
   timeout_sec?: number;
   unhealthy_threshold?: number;
-  timeouts: GoogleComputeHttpHealthCheckArgsTimeouts;
+  timeouts?: GoogleComputeHttpHealthCheckArgsTimeouts;
 }
 export class google_compute_http_health_check extends TerraformResource {
   readonly creation_timestamp!: string;

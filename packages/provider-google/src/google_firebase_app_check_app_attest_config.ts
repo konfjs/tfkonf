@@ -6,7 +6,7 @@ export interface GoogleFirebaseAppCheckAppAttestConfigArgsTimeouts {
 }
 export interface GoogleFirebaseAppCheckAppAttestConfigArgs {
   app_id: string;
-  timeouts: GoogleFirebaseAppCheckAppAttestConfigArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckAppAttestConfigArgsTimeouts;
 }
 export class google_firebase_app_check_app_attest_config extends TerraformResource {
   readonly id?: string;

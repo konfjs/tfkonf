@@ -19,7 +19,7 @@ export interface AwsFinspaceKxVolumeArgs {
   };
   type: string;
   nas1_configuration: AwsFinspaceKxVolumeArgsNas1Configuration;
-  timeouts: AwsFinspaceKxVolumeArgsTimeouts;
+  timeouts?: AwsFinspaceKxVolumeArgsTimeouts;
 }
 export class aws_finspace_kx_volume extends TerraformResource {
   readonly arn!: string;

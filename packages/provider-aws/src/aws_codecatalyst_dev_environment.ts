@@ -24,7 +24,7 @@ export interface AwsCodecatalystDevEnvironmentArgs {
   ides: AwsCodecatalystDevEnvironmentArgsIdes;
   persistent_storage: AwsCodecatalystDevEnvironmentArgsPersistentStorage;
   repositories: AwsCodecatalystDevEnvironmentArgsRepositories;
-  timeouts: AwsCodecatalystDevEnvironmentArgsTimeouts;
+  timeouts?: AwsCodecatalystDevEnvironmentArgsTimeouts;
 }
 export class aws_codecatalyst_dev_environment extends TerraformResource {
   readonly id?: string;

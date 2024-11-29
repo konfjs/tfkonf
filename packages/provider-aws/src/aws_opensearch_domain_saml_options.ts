@@ -19,7 +19,7 @@ export interface AwsOpensearchDomainSamlOptionsArgsTimeouts {
 export interface AwsOpensearchDomainSamlOptionsArgs {
   domain_name: string;
   saml_options: AwsOpensearchDomainSamlOptionsArgsSamlOptions;
-  timeouts: AwsOpensearchDomainSamlOptionsArgsTimeouts;
+  timeouts?: AwsOpensearchDomainSamlOptionsArgsTimeouts;
 }
 export class aws_opensearch_domain_saml_options extends TerraformResource {
   readonly id?: string;

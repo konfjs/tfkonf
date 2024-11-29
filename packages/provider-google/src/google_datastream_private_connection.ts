@@ -16,7 +16,7 @@ export interface GoogleDatastreamPrivateConnectionArgs {
   };
   location: string;
   private_connection_id: string;
-  timeouts: GoogleDatastreamPrivateConnectionArgsTimeouts;
+  timeouts?: GoogleDatastreamPrivateConnectionArgsTimeouts;
   vpc_peering_config: GoogleDatastreamPrivateConnectionArgsVpcPeeringConfig;
 }
 export class google_datastream_private_connection extends TerraformResource {

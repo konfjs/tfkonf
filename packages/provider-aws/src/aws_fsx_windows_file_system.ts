@@ -40,7 +40,7 @@ export interface AwsFsxWindowsFileSystemArgs {
   audit_log_configuration: AwsFsxWindowsFileSystemArgsAuditLogConfiguration;
   disk_iops_configuration: AwsFsxWindowsFileSystemArgsDiskIopsConfiguration;
   self_managed_active_directory: AwsFsxWindowsFileSystemArgsSelfManagedActiveDirectory;
-  timeouts: AwsFsxWindowsFileSystemArgsTimeouts;
+  timeouts?: AwsFsxWindowsFileSystemArgsTimeouts;
 }
 export class aws_fsx_windows_file_system extends TerraformResource {
   readonly arn!: string;

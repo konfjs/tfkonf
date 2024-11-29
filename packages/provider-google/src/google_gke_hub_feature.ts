@@ -140,7 +140,7 @@ export interface GoogleGkeHubFeatureArgs {
   name?: string;
   fleet_default_member_config: GoogleGkeHubFeatureArgsFleetDefaultMemberConfig;
   spec: GoogleGkeHubFeatureArgsSpec;
-  timeouts: GoogleGkeHubFeatureArgsTimeouts;
+  timeouts?: GoogleGkeHubFeatureArgsTimeouts;
 }
 export class google_gke_hub_feature extends TerraformResource {
   readonly create_time!: string;

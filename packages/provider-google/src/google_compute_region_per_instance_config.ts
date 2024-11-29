@@ -42,7 +42,7 @@ export interface GoogleComputeRegionPerInstanceConfigArgs {
   remove_instance_on_destroy?: boolean;
   remove_instance_state_on_destroy?: boolean;
   preserved_state: GoogleComputeRegionPerInstanceConfigArgsPreservedState;
-  timeouts: GoogleComputeRegionPerInstanceConfigArgsTimeouts;
+  timeouts?: GoogleComputeRegionPerInstanceConfigArgsTimeouts;
 }
 export class google_compute_region_per_instance_config extends TerraformResource {
   readonly id?: string;

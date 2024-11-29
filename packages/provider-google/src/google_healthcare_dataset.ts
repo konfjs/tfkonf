@@ -11,7 +11,7 @@ export interface GoogleHealthcareDatasetArgs {
   location: string;
   name: string;
   encryption_spec: GoogleHealthcareDatasetArgsEncryptionSpec;
-  timeouts: GoogleHealthcareDatasetArgsTimeouts;
+  timeouts?: GoogleHealthcareDatasetArgsTimeouts;
 }
 export class google_healthcare_dataset extends TerraformResource {
   readonly id?: string;

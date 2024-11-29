@@ -77,7 +77,7 @@ export interface GoogleCloudfunctions2FunctionArgs {
   build_config: GoogleCloudfunctions2FunctionArgsBuildConfig;
   event_trigger: GoogleCloudfunctions2FunctionArgsEventTrigger;
   service_config: GoogleCloudfunctions2FunctionArgsServiceConfig;
-  timeouts: GoogleCloudfunctions2FunctionArgsTimeouts;
+  timeouts?: GoogleCloudfunctions2FunctionArgsTimeouts;
 }
 export class google_cloudfunctions2_function extends TerraformResource {
   readonly effective_labels!: {

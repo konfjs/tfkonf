@@ -10,7 +10,7 @@ export interface AwsM2DeploymentArgs {
   environment_id: string;
   force_stop?: boolean;
   start: boolean;
-  timeouts: AwsM2DeploymentArgsTimeouts;
+  timeouts?: AwsM2DeploymentArgsTimeouts;
 }
 export class aws_m2_deployment extends TerraformResource {
   readonly deployment_id!: string;

@@ -14,7 +14,7 @@ export interface GoogleVertexAiTensorboardArgs {
     [key: string]: string;
   };
   encryption_spec: GoogleVertexAiTensorboardArgsEncryptionSpec;
-  timeouts: GoogleVertexAiTensorboardArgsTimeouts;
+  timeouts?: GoogleVertexAiTensorboardArgsTimeouts;
 }
 export class google_vertex_ai_tensorboard extends TerraformResource {
   readonly blob_storage_path_prefix!: string;

@@ -92,7 +92,7 @@ export interface GoogleDataplexTaskArgs {
   execution_spec: GoogleDataplexTaskArgsExecutionSpec;
   notebook: GoogleDataplexTaskArgsNotebook;
   spark: GoogleDataplexTaskArgsSpark;
-  timeouts: GoogleDataplexTaskArgsTimeouts;
+  timeouts?: GoogleDataplexTaskArgsTimeouts;
   trigger_spec: GoogleDataplexTaskArgsTriggerSpec;
 }
 export class google_dataplex_task extends TerraformResource {

@@ -7,7 +7,7 @@ export interface GoogleComputeBackendServiceSignedUrlKeyArgs {
   backend_service: string;
   key_value: string;
   name: string;
-  timeouts: GoogleComputeBackendServiceSignedUrlKeyArgsTimeouts;
+  timeouts?: GoogleComputeBackendServiceSignedUrlKeyArgsTimeouts;
 }
 export class google_compute_backend_service_signed_url_key extends TerraformResource {
   readonly id?: string;

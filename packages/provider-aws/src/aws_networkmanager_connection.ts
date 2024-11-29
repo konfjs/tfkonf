@@ -14,7 +14,7 @@ export interface AwsNetworkmanagerConnectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNetworkmanagerConnectionArgsTimeouts;
+  timeouts?: AwsNetworkmanagerConnectionArgsTimeouts;
 }
 export class aws_networkmanager_connection extends TerraformResource {
   readonly arn!: string;

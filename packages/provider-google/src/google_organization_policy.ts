@@ -30,7 +30,7 @@ export interface GoogleOrganizationPolicyArgs {
   boolean_policy: GoogleOrganizationPolicyArgsBooleanPolicy;
   list_policy: GoogleOrganizationPolicyArgsListPolicy;
   restore_policy: GoogleOrganizationPolicyArgsRestorePolicy;
-  timeouts: GoogleOrganizationPolicyArgsTimeouts;
+  timeouts?: GoogleOrganizationPolicyArgsTimeouts;
 }
 export class google_organization_policy extends TerraformResource {
   readonly etag!: string;

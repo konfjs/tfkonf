@@ -6,7 +6,7 @@ export interface GoogleSqlSslCertArgsTimeouts {
 export interface GoogleSqlSslCertArgs {
   common_name: string;
   instance: string;
-  timeouts: GoogleSqlSslCertArgsTimeouts;
+  timeouts?: GoogleSqlSslCertArgsTimeouts;
 }
 export class google_sql_ssl_cert extends TerraformResource {
   readonly cert!: string;

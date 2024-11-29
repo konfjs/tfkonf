@@ -6,7 +6,7 @@ export interface AwsNetworkmanagerTransitGatewayRegistrationArgsTimeouts {
 export interface AwsNetworkmanagerTransitGatewayRegistrationArgs {
   global_network_id: string;
   transit_gateway_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayRegistrationArgsTimeouts;
+  timeouts?: AwsNetworkmanagerTransitGatewayRegistrationArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_registration extends TerraformResource {
   readonly id?: string;

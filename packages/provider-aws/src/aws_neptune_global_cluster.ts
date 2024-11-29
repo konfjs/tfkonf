@@ -7,7 +7,7 @@ export interface AwsNeptuneGlobalClusterArgsTimeouts {
 export interface AwsNeptuneGlobalClusterArgs {
   deletion_protection?: boolean;
   global_cluster_identifier: string;
-  timeouts: AwsNeptuneGlobalClusterArgsTimeouts;
+  timeouts?: AwsNeptuneGlobalClusterArgsTimeouts;
 }
 export class aws_neptune_global_cluster extends TerraformResource {
   readonly arn!: string;

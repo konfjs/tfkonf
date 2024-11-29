@@ -13,7 +13,7 @@ export interface AwsSecurityGroupRuleArgs {
   self?: boolean;
   to_port: number;
   type: string;
-  timeouts: AwsSecurityGroupRuleArgsTimeouts;
+  timeouts?: AwsSecurityGroupRuleArgsTimeouts;
 }
 export class aws_security_group_rule extends TerraformResource {
   readonly id?: string;

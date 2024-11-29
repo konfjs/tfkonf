@@ -9,7 +9,7 @@ export interface GoogleLoggingLinkedDatasetArgs {
   description?: string;
   link_id: string;
   bigquery_dataset: GoogleLoggingLinkedDatasetArgsBigqueryDataset;
-  timeouts: GoogleLoggingLinkedDatasetArgsTimeouts;
+  timeouts?: GoogleLoggingLinkedDatasetArgsTimeouts;
 }
 export class google_logging_linked_dataset extends TerraformResource {
   readonly create_time!: string;

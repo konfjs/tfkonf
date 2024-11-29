@@ -9,7 +9,7 @@ export interface GoogleComputeTargetGrpcProxyArgs {
   name: string;
   url_map?: string;
   validate_for_proxyless?: boolean;
-  timeouts: GoogleComputeTargetGrpcProxyArgsTimeouts;
+  timeouts?: GoogleComputeTargetGrpcProxyArgsTimeouts;
 }
 export class google_compute_target_grpc_proxy extends TerraformResource {
   readonly creation_timestamp!: string;

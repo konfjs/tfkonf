@@ -8,7 +8,7 @@ export interface AwsVpclatticeAuthPolicyArgs {
   policy: string;
   resource_identifier: string;
   state?: string;
-  timeouts: AwsVpclatticeAuthPolicyArgsTimeouts;
+  timeouts?: AwsVpclatticeAuthPolicyArgsTimeouts;
 }
 export class aws_vpclattice_auth_policy extends TerraformResource {
   readonly id?: string;

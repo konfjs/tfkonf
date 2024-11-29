@@ -31,7 +31,7 @@ export interface GoogleBigqueryDatasetAccessArgs {
   user_by_email?: string;
   dataset: GoogleBigqueryDatasetAccessArgsDataset;
   routine: GoogleBigqueryDatasetAccessArgsRoutine;
-  timeouts: GoogleBigqueryDatasetAccessArgsTimeouts;
+  timeouts?: GoogleBigqueryDatasetAccessArgsTimeouts;
   view: GoogleBigqueryDatasetAccessArgsView;
 }
 export class google_bigquery_dataset_access extends TerraformResource {

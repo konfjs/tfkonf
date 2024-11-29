@@ -7,7 +7,7 @@ export interface AwsNetworkmanagerLinkAssociationArgs {
   device_id: string;
   global_network_id: string;
   link_id: string;
-  timeouts: AwsNetworkmanagerLinkAssociationArgsTimeouts;
+  timeouts?: AwsNetworkmanagerLinkAssociationArgsTimeouts;
 }
 export class aws_networkmanager_link_association extends TerraformResource {
   readonly id?: string;

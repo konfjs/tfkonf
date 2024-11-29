@@ -9,7 +9,7 @@ export interface AwsMemorydbSnapshotArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMemorydbSnapshotArgsTimeouts;
+  timeouts?: AwsMemorydbSnapshotArgsTimeouts;
 }
 export class aws_memorydb_snapshot extends TerraformResource {
   readonly arn!: string;

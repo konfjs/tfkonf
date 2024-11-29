@@ -47,7 +47,7 @@ export interface GoogleDiscoveryEngineDataStoreArgs {
   skip_default_schema_creation?: boolean;
   solution_types?: string[];
   document_processing_config: GoogleDiscoveryEngineDataStoreArgsDocumentProcessingConfig;
-  timeouts: GoogleDiscoveryEngineDataStoreArgsTimeouts;
+  timeouts?: GoogleDiscoveryEngineDataStoreArgsTimeouts;
 }
 export class google_discovery_engine_data_store extends TerraformResource {
   readonly create_time!: string;

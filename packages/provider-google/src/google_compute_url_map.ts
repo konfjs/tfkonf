@@ -472,7 +472,7 @@ export interface GoogleComputeUrlMapArgs {
   host_rule: GoogleComputeUrlMapArgsHostRule;
   path_matcher: GoogleComputeUrlMapArgsPathMatcher;
   test: GoogleComputeUrlMapArgsTest;
-  timeouts: GoogleComputeUrlMapArgsTimeouts;
+  timeouts?: GoogleComputeUrlMapArgsTimeouts;
 }
 export class google_compute_url_map extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -5,7 +5,7 @@ export interface AwsNetworkmanagerAttachmentAccepterArgsTimeouts {
 export interface AwsNetworkmanagerAttachmentAccepterArgs {
   attachment_id: string;
   attachment_type: string;
-  timeouts: AwsNetworkmanagerAttachmentAccepterArgsTimeouts;
+  timeouts?: AwsNetworkmanagerAttachmentAccepterArgsTimeouts;
 }
 export class aws_networkmanager_attachment_accepter extends TerraformResource {
   readonly attachment_policy_rule_number!: number;

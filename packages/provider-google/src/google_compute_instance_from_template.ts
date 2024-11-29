@@ -82,7 +82,7 @@ export interface GoogleComputeInstanceFromTemplateArgs {
   scratch_disk: GoogleComputeInstanceFromTemplateArgsScratchDisk;
   service_account: GoogleComputeInstanceFromTemplateArgsServiceAccount;
   shielded_instance_config: GoogleComputeInstanceFromTemplateArgsShieldedInstanceConfig;
-  timeouts: GoogleComputeInstanceFromTemplateArgsTimeouts;
+  timeouts?: GoogleComputeInstanceFromTemplateArgsTimeouts;
 }
 export class google_compute_instance_from_template extends TerraformResource {
   readonly allow_stopping_for_update?: boolean;

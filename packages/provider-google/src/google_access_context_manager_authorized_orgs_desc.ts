@@ -11,7 +11,7 @@ export interface GoogleAccessContextManagerAuthorizedOrgsDescArgs {
   name: string;
   orgs?: string[];
   parent: string;
-  timeouts: GoogleAccessContextManagerAuthorizedOrgsDescArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerAuthorizedOrgsDescArgsTimeouts;
 }
 export class google_access_context_manager_authorized_orgs_desc extends TerraformResource {
   readonly create_time!: string;

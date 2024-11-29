@@ -4036,7 +4036,7 @@ export interface AwsLexv2modelsIntentArgs {
   output_context: AwsLexv2modelsIntentArgsOutputContext;
   sample_utterance: AwsLexv2modelsIntentArgsSampleUtterance;
   slot_priority: AwsLexv2modelsIntentArgsSlotPriority;
-  timeouts: AwsLexv2modelsIntentArgsTimeouts;
+  timeouts?: AwsLexv2modelsIntentArgsTimeouts;
 }
 export class aws_lexv2models_intent extends TerraformResource {
   readonly creation_date_time!: string;

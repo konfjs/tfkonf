@@ -13,7 +13,7 @@ export interface AwsNeptuneEventSubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNeptuneEventSubscriptionArgsTimeouts;
+  timeouts?: AwsNeptuneEventSubscriptionArgsTimeouts;
 }
 export class aws_neptune_event_subscription extends TerraformResource {
   readonly arn!: string;

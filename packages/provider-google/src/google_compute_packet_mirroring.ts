@@ -33,7 +33,7 @@ export interface GoogleComputePacketMirroringArgs {
   filter: GoogleComputePacketMirroringArgsFilter;
   mirrored_resources: GoogleComputePacketMirroringArgsMirroredResources;
   network: GoogleComputePacketMirroringArgsNetwork;
-  timeouts: GoogleComputePacketMirroringArgsTimeouts;
+  timeouts?: GoogleComputePacketMirroringArgsTimeouts;
 }
 export class google_compute_packet_mirroring extends TerraformResource {
   readonly id?: string;

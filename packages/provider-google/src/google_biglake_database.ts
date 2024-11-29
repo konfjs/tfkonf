@@ -15,7 +15,7 @@ export interface GoogleBiglakeDatabaseArgs {
   name: string;
   type: string;
   hive_options: GoogleBiglakeDatabaseArgsHiveOptions;
-  timeouts: GoogleBiglakeDatabaseArgsTimeouts;
+  timeouts?: GoogleBiglakeDatabaseArgsTimeouts;
 }
 export class google_biglake_database extends TerraformResource {
   readonly create_time!: string;

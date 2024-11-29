@@ -8,7 +8,7 @@ export interface GoogleDiscoveryEngineSchemaArgs {
   json_schema?: string;
   location: string;
   schema_id: string;
-  timeouts: GoogleDiscoveryEngineSchemaArgsTimeouts;
+  timeouts?: GoogleDiscoveryEngineSchemaArgsTimeouts;
 }
 export class google_discovery_engine_schema extends TerraformResource {
   readonly id?: string;

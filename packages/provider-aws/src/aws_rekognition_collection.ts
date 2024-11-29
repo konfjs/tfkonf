@@ -7,7 +7,7 @@ export interface AwsRekognitionCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRekognitionCollectionArgsTimeouts;
+  timeouts?: AwsRekognitionCollectionArgsTimeouts;
 }
 export class aws_rekognition_collection extends TerraformResource {
   readonly arn!: string;

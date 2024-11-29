@@ -10,7 +10,7 @@ export interface AwsEksAccessEntryArgs {
     [key: string]: string;
   };
   type?: string;
-  timeouts: AwsEksAccessEntryArgsTimeouts;
+  timeouts?: AwsEksAccessEntryArgsTimeouts;
 }
 export class aws_eks_access_entry extends TerraformResource {
   readonly access_entry_arn!: string;

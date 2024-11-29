@@ -115,7 +115,7 @@ export interface GoogleArtifactRegistryRepositoryArgs {
   docker_config: GoogleArtifactRegistryRepositoryArgsDockerConfig;
   maven_config: GoogleArtifactRegistryRepositoryArgsMavenConfig;
   remote_repository_config: GoogleArtifactRegistryRepositoryArgsRemoteRepositoryConfig;
-  timeouts: GoogleArtifactRegistryRepositoryArgsTimeouts;
+  timeouts?: GoogleArtifactRegistryRepositoryArgsTimeouts;
   virtual_repository_config: GoogleArtifactRegistryRepositoryArgsVirtualRepositoryConfig;
 }
 export class google_artifact_registry_repository extends TerraformResource {

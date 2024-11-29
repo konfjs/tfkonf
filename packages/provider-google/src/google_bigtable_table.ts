@@ -14,7 +14,7 @@ export interface GoogleBigtableTableArgs {
   split_keys?: string[];
   automated_backup_policy: GoogleBigtableTableArgsAutomatedBackupPolicy;
   column_family: GoogleBigtableTableArgsColumnFamily;
-  timeouts: GoogleBigtableTableArgsTimeouts;
+  timeouts?: GoogleBigtableTableArgsTimeouts;
 }
 export class google_bigtable_table extends TerraformResource {
   readonly change_stream_retention?: string;

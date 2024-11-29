@@ -56,7 +56,7 @@ export interface AwsMqBrokerArgs {
   ldap_server_metadata: AwsMqBrokerArgsLdapServerMetadata;
   logs: AwsMqBrokerArgsLogs;
   maintenance_window_start_time: AwsMqBrokerArgsMaintenanceWindowStartTime;
-  timeouts: AwsMqBrokerArgsTimeouts;
+  timeouts?: AwsMqBrokerArgsTimeouts;
   user: AwsMqBrokerArgsUser;
 }
 export class aws_mq_broker extends TerraformResource {

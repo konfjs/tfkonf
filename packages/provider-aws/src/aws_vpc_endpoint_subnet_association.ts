@@ -6,7 +6,7 @@ export interface AwsVpcEndpointSubnetAssociationArgsTimeouts {
 export interface AwsVpcEndpointSubnetAssociationArgs {
   subnet_id: string;
   vpc_endpoint_id: string;
-  timeouts: AwsVpcEndpointSubnetAssociationArgsTimeouts;
+  timeouts?: AwsVpcEndpointSubnetAssociationArgsTimeouts;
 }
 export class aws_vpc_endpoint_subnet_association extends TerraformResource {
   readonly id?: string;

@@ -22,7 +22,7 @@ export interface AwsDmsReplicationConfigArgs {
   };
   target_endpoint_arn: string;
   compute_config: AwsDmsReplicationConfigArgsComputeConfig;
-  timeouts: AwsDmsReplicationConfigArgsTimeouts;
+  timeouts?: AwsDmsReplicationConfigArgsTimeouts;
 }
 export class aws_dms_replication_config extends TerraformResource {
   readonly arn!: string;

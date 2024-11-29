@@ -114,7 +114,7 @@ export interface GooglePrivatecaCaPoolArgs {
   tier: string;
   issuance_policy: GooglePrivatecaCaPoolArgsIssuancePolicy;
   publishing_options: GooglePrivatecaCaPoolArgsPublishingOptions;
-  timeouts: GooglePrivatecaCaPoolArgsTimeouts;
+  timeouts?: GooglePrivatecaCaPoolArgsTimeouts;
 }
 export class google_privateca_ca_pool extends TerraformResource {
   readonly effective_labels!: {

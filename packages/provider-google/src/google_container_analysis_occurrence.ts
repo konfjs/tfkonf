@@ -17,7 +17,7 @@ export interface GoogleContainerAnalysisOccurrenceArgs {
   remediation?: string;
   resource_uri: string;
   attestation: GoogleContainerAnalysisOccurrenceArgsAttestation;
-  timeouts: GoogleContainerAnalysisOccurrenceArgsTimeouts;
+  timeouts?: GoogleContainerAnalysisOccurrenceArgsTimeouts;
 }
 export class google_container_analysis_occurrence extends TerraformResource {
   readonly create_time!: string;

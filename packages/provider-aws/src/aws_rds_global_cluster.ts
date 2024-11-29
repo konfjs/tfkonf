@@ -9,7 +9,7 @@ export interface AwsRdsGlobalClusterArgs {
   deletion_protection?: boolean;
   force_destroy?: boolean;
   global_cluster_identifier: string;
-  timeouts: AwsRdsGlobalClusterArgsTimeouts;
+  timeouts?: AwsRdsGlobalClusterArgsTimeouts;
 }
 export class aws_rds_global_cluster extends TerraformResource {
   readonly arn!: string;

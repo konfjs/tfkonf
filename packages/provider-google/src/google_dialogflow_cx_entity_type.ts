@@ -21,7 +21,7 @@ export interface GoogleDialogflowCxEntityTypeArgs {
   redact?: boolean;
   entities: GoogleDialogflowCxEntityTypeArgsEntities;
   excluded_phrases: GoogleDialogflowCxEntityTypeArgsExcludedPhrases;
-  timeouts: GoogleDialogflowCxEntityTypeArgsTimeouts;
+  timeouts?: GoogleDialogflowCxEntityTypeArgsTimeouts;
 }
 export class google_dialogflow_cx_entity_type extends TerraformResource {
   readonly id?: string;

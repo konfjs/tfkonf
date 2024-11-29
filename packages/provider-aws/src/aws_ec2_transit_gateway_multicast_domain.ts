@@ -11,7 +11,7 @@ export interface AwsEc2TransitGatewayMulticastDomainArgs {
     [key: string]: string;
   };
   transit_gateway_id: string;
-  timeouts: AwsEc2TransitGatewayMulticastDomainArgsTimeouts;
+  timeouts?: AwsEc2TransitGatewayMulticastDomainArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_multicast_domain extends TerraformResource {
   readonly arn!: string;

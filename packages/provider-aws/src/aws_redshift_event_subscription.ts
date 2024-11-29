@@ -15,7 +15,7 @@ export interface AwsRedshiftEventSubscriptionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRedshiftEventSubscriptionArgsTimeouts;
+  timeouts?: AwsRedshiftEventSubscriptionArgsTimeouts;
 }
 export class aws_redshift_event_subscription extends TerraformResource {
   readonly arn!: string;

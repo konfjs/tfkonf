@@ -9,7 +9,7 @@ export interface GoogleIamWorkloadIdentityPoolArgs {
   disabled?: boolean;
   display_name?: string;
   workload_identity_pool_id: string;
-  timeouts: GoogleIamWorkloadIdentityPoolArgsTimeouts;
+  timeouts?: GoogleIamWorkloadIdentityPoolArgsTimeouts;
 }
 export class google_iam_workload_identity_pool extends TerraformResource {
   readonly id?: string;

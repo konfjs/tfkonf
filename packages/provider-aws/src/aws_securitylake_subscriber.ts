@@ -26,7 +26,7 @@ export interface AwsSecuritylakeSubscriberArgs {
   };
   source: AwsSecuritylakeSubscriberArgsSource;
   subscriber_identity: AwsSecuritylakeSubscriberArgsSubscriberIdentity;
-  timeouts: AwsSecuritylakeSubscriberArgsTimeouts;
+  timeouts?: AwsSecuritylakeSubscriberArgsTimeouts;
 }
 export class aws_securitylake_subscriber extends TerraformResource {
   readonly access_type?: string;

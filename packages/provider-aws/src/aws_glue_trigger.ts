@@ -46,7 +46,7 @@ export interface AwsGlueTriggerArgs {
   actions: AwsGlueTriggerArgsActions;
   event_batching_condition: AwsGlueTriggerArgsEventBatchingCondition;
   predicate: AwsGlueTriggerArgsPredicate;
-  timeouts: AwsGlueTriggerArgsTimeouts;
+  timeouts?: AwsGlueTriggerArgsTimeouts;
 }
 export class aws_glue_trigger extends TerraformResource {
   readonly arn!: string;

@@ -8,7 +8,7 @@ export interface GoogleApigeeEnvgroupArgs {
   hostnames?: string[];
   name: string;
   org_id: string;
-  timeouts: GoogleApigeeEnvgroupArgsTimeouts;
+  timeouts?: GoogleApigeeEnvgroupArgsTimeouts;
 }
 export class google_apigee_envgroup extends TerraformResource {
   readonly id?: string;

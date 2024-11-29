@@ -20,7 +20,7 @@ export interface AwsEksAddonArgs {
     [key: string]: string;
   };
   pod_identity_association: AwsEksAddonArgsPodIdentityAssociation;
-  timeouts: AwsEksAddonArgsTimeouts;
+  timeouts?: AwsEksAddonArgsTimeouts;
 }
 export class aws_eks_addon extends TerraformResource {
   readonly addon_version?: string;

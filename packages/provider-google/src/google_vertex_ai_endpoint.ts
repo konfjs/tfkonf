@@ -34,7 +34,7 @@ export interface GoogleVertexAiEndpointArgs {
   encryption_spec: GoogleVertexAiEndpointArgsEncryptionSpec;
   predict_request_response_logging_config: GoogleVertexAiEndpointArgsPredictRequestResponseLoggingConfig;
   private_service_connect_config: GoogleVertexAiEndpointArgsPrivateServiceConnectConfig;
-  timeouts: GoogleVertexAiEndpointArgsTimeouts;
+  timeouts?: GoogleVertexAiEndpointArgsTimeouts;
 }
 export class google_vertex_ai_endpoint extends TerraformResource {
   readonly create_time!: string;

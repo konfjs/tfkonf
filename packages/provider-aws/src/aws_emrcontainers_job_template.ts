@@ -60,7 +60,7 @@ export interface AwsEmrcontainersJobTemplateArgs {
     [key: string]: string;
   };
   job_template_data: AwsEmrcontainersJobTemplateArgsJobTemplateData;
-  timeouts: AwsEmrcontainersJobTemplateArgsTimeouts;
+  timeouts?: AwsEmrcontainersJobTemplateArgsTimeouts;
 }
 export class aws_emrcontainers_job_template extends TerraformResource {
   readonly arn!: string;

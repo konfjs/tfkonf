@@ -22,7 +22,7 @@ export interface AwsEvidentlyProjectArgs {
     [key: string]: string;
   };
   data_delivery: AwsEvidentlyProjectArgsDataDelivery;
-  timeouts: AwsEvidentlyProjectArgsTimeouts;
+  timeouts?: AwsEvidentlyProjectArgsTimeouts;
 }
 export class aws_evidently_project extends TerraformResource {
   readonly active_experiment_count!: number;

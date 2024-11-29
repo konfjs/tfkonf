@@ -8,7 +8,7 @@ export interface GoogleDocumentAiProcessorArgs {
   kms_key_name?: string;
   location: string;
   type: string;
-  timeouts: GoogleDocumentAiProcessorArgsTimeouts;
+  timeouts?: GoogleDocumentAiProcessorArgsTimeouts;
 }
 export class google_document_ai_processor extends TerraformResource {
   readonly id?: string;

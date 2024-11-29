@@ -147,7 +147,7 @@ export interface GoogleDialogflowCxFlowArgs {
   advanced_settings: GoogleDialogflowCxFlowArgsAdvancedSettings;
   event_handlers: GoogleDialogflowCxFlowArgsEventHandlers;
   nlu_settings: GoogleDialogflowCxFlowArgsNluSettings;
-  timeouts: GoogleDialogflowCxFlowArgsTimeouts;
+  timeouts?: GoogleDialogflowCxFlowArgsTimeouts;
   transition_routes: GoogleDialogflowCxFlowArgsTransitionRoutes;
 }
 export class google_dialogflow_cx_flow extends TerraformResource {

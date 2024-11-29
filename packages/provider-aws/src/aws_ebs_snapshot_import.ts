@@ -27,7 +27,7 @@ export interface AwsEbsSnapshotImportArgs {
   temporary_restore_days?: number;
   client_data: AwsEbsSnapshotImportArgsClientData;
   disk_container: AwsEbsSnapshotImportArgsDiskContainer;
-  timeouts: AwsEbsSnapshotImportArgsTimeouts;
+  timeouts?: AwsEbsSnapshotImportArgsTimeouts;
 }
 export class aws_ebs_snapshot_import extends TerraformResource {
   readonly arn!: string;

@@ -136,7 +136,7 @@ export interface GoogleDatabaseMigrationServiceConnectionProfileArgs {
   mysql: GoogleDatabaseMigrationServiceConnectionProfileArgsMysql;
   oracle: GoogleDatabaseMigrationServiceConnectionProfileArgsOracle;
   postgresql: GoogleDatabaseMigrationServiceConnectionProfileArgsPostgresql;
-  timeouts: GoogleDatabaseMigrationServiceConnectionProfileArgsTimeouts;
+  timeouts?: GoogleDatabaseMigrationServiceConnectionProfileArgsTimeouts;
 }
 export class google_database_migration_service_connection_profile extends TerraformResource {
   readonly create_time!: string;

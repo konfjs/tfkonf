@@ -48,7 +48,7 @@ export interface AwsKendraIndexArgs {
   capacity_units: AwsKendraIndexArgsCapacityUnits;
   document_metadata_configuration_updates: AwsKendraIndexArgsDocumentMetadataConfigurationUpdates;
   server_side_encryption_configuration: AwsKendraIndexArgsServerSideEncryptionConfiguration;
-  timeouts: AwsKendraIndexArgsTimeouts;
+  timeouts?: AwsKendraIndexArgsTimeouts;
   user_group_resolution_configuration: AwsKendraIndexArgsUserGroupResolutionConfiguration;
   user_token_configurations: AwsKendraIndexArgsUserTokenConfigurations;
 }

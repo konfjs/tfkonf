@@ -7,7 +7,7 @@ export interface AwsOamSinkPolicyArgsTimeouts {
 export interface AwsOamSinkPolicyArgs {
   policy: string;
   sink_identifier: string;
-  timeouts: AwsOamSinkPolicyArgsTimeouts;
+  timeouts?: AwsOamSinkPolicyArgsTimeouts;
 }
 export class aws_oam_sink_policy extends TerraformResource {
   readonly arn!: string;

@@ -5,7 +5,7 @@ export interface AwsInspector2DelegatedAdminAccountArgsTimeouts {
 }
 export interface AwsInspector2DelegatedAdminAccountArgs {
   account_id: string;
-  timeouts: AwsInspector2DelegatedAdminAccountArgsTimeouts;
+  timeouts?: AwsInspector2DelegatedAdminAccountArgsTimeouts;
 }
 export class aws_inspector2_delegated_admin_account extends TerraformResource {
   readonly id?: string;

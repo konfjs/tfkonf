@@ -8,7 +8,7 @@ export interface AwsBackupVaultArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBackupVaultArgsTimeouts;
+  timeouts?: AwsBackupVaultArgsTimeouts;
 }
 export class aws_backup_vault extends TerraformResource {
   readonly arn!: string;

@@ -9,7 +9,7 @@ export interface GoogleEndpointsServiceArgs {
   openapi_config?: string;
   protoc_output_base64?: string;
   service_name: string;
-  timeouts: GoogleEndpointsServiceArgsTimeouts;
+  timeouts?: GoogleEndpointsServiceArgsTimeouts;
 }
 export class google_endpoints_service extends TerraformResource {
   readonly apis!: any[];

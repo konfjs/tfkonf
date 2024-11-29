@@ -29,7 +29,7 @@ export interface GoogleComputeFirewallArgs {
   allow: GoogleComputeFirewallArgsAllow;
   deny: GoogleComputeFirewallArgsDeny;
   log_config: GoogleComputeFirewallArgsLogConfig;
-  timeouts: GoogleComputeFirewallArgsTimeouts;
+  timeouts?: GoogleComputeFirewallArgsTimeouts;
 }
 export class google_compute_firewall extends TerraformResource {
   readonly creation_timestamp!: string;

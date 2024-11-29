@@ -13,7 +13,7 @@ export interface GoogleDataplexAspectTypeArgs {
   };
   location?: string;
   metadata_template?: string;
-  timeouts: GoogleDataplexAspectTypeArgsTimeouts;
+  timeouts?: GoogleDataplexAspectTypeArgsTimeouts;
 }
 export class google_dataplex_aspect_type extends TerraformResource {
   readonly create_time!: string;

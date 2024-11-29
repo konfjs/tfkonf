@@ -38178,7 +38178,7 @@ export interface AwsQuicksightTemplateArgs {
   definition: AwsQuicksightTemplateArgsDefinition;
   permissions: AwsQuicksightTemplateArgsPermissions;
   source_entity: AwsQuicksightTemplateArgsSourceEntity;
-  timeouts: AwsQuicksightTemplateArgsTimeouts;
+  timeouts?: AwsQuicksightTemplateArgsTimeouts;
 }
 export class aws_quicksight_template extends TerraformResource {
   readonly arn!: string;

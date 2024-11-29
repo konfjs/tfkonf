@@ -23,7 +23,7 @@ export interface GoogleBeyondcorpAppConnectionArgs {
   type?: string;
   application_endpoint: GoogleBeyondcorpAppConnectionArgsApplicationEndpoint;
   gateway: GoogleBeyondcorpAppConnectionArgsGateway;
-  timeouts: GoogleBeyondcorpAppConnectionArgsTimeouts;
+  timeouts?: GoogleBeyondcorpAppConnectionArgsTimeouts;
 }
 export class google_beyondcorp_app_connection extends TerraformResource {
   readonly effective_labels!: {

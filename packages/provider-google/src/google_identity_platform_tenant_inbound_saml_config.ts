@@ -24,7 +24,7 @@ export interface GoogleIdentityPlatformTenantInboundSamlConfigArgs {
   tenant: string;
   idp_config: GoogleIdentityPlatformTenantInboundSamlConfigArgsIdpConfig;
   sp_config: GoogleIdentityPlatformTenantInboundSamlConfigArgsSpConfig;
-  timeouts: GoogleIdentityPlatformTenantInboundSamlConfigArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformTenantInboundSamlConfigArgsTimeouts;
 }
 export class google_identity_platform_tenant_inbound_saml_config extends TerraformResource {
   readonly id?: string;

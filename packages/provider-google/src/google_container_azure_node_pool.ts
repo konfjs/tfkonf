@@ -44,7 +44,7 @@ export interface GoogleContainerAzureNodePoolArgs {
   config: GoogleContainerAzureNodePoolArgsConfig;
   management: GoogleContainerAzureNodePoolArgsManagement;
   max_pods_constraint: GoogleContainerAzureNodePoolArgsMaxPodsConstraint;
-  timeouts: GoogleContainerAzureNodePoolArgsTimeouts;
+  timeouts?: GoogleContainerAzureNodePoolArgsTimeouts;
 }
 export class google_container_azure_node_pool extends TerraformResource {
   readonly azure_availability_zone?: string;

@@ -9,7 +9,7 @@ export interface AwsDbClusterSnapshotArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDbClusterSnapshotArgsTimeouts;
+  timeouts?: AwsDbClusterSnapshotArgsTimeouts;
 }
 export class aws_db_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;

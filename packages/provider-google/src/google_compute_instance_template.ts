@@ -134,7 +134,7 @@ export interface GoogleComputeInstanceTemplateArgs {
   scheduling: GoogleComputeInstanceTemplateArgsScheduling;
   service_account: GoogleComputeInstanceTemplateArgsServiceAccount;
   shielded_instance_config: GoogleComputeInstanceTemplateArgsShieldedInstanceConfig;
-  timeouts: GoogleComputeInstanceTemplateArgsTimeouts;
+  timeouts?: GoogleComputeInstanceTemplateArgsTimeouts;
 }
 export class google_compute_instance_template extends TerraformResource {
   readonly creation_timestamp!: string;

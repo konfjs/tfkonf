@@ -110,7 +110,7 @@ export interface GoogleClouddeployDeliveryPipelineArgs {
   name: string;
   suspended?: boolean;
   serial_pipeline: GoogleClouddeployDeliveryPipelineArgsSerialPipeline;
-  timeouts: GoogleClouddeployDeliveryPipelineArgsTimeouts;
+  timeouts?: GoogleClouddeployDeliveryPipelineArgsTimeouts;
 }
 export class google_clouddeploy_delivery_pipeline extends TerraformResource {
   readonly condition!: any[];

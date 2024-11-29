@@ -7,7 +7,7 @@ export interface GoogleFirebaseAppCheckServiceConfigArgsTimeouts {
 export interface GoogleFirebaseAppCheckServiceConfigArgs {
   enforcement_mode?: string;
   service_id: string;
-  timeouts: GoogleFirebaseAppCheckServiceConfigArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckServiceConfigArgsTimeouts;
 }
 export class google_firebase_app_check_service_config extends TerraformResource {
   readonly id?: string;

@@ -13,7 +13,7 @@ export interface GoogleMonitoringCustomServiceArgs {
     [key: string]: string;
   };
   telemetry: GoogleMonitoringCustomServiceArgsTelemetry;
-  timeouts: GoogleMonitoringCustomServiceArgsTimeouts;
+  timeouts?: GoogleMonitoringCustomServiceArgsTimeouts;
 }
 export class google_monitoring_custom_service extends TerraformResource {
   readonly id?: string;

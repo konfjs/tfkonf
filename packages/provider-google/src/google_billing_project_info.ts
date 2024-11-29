@@ -6,7 +6,7 @@ export interface GoogleBillingProjectInfoArgsTimeouts {
 }
 export interface GoogleBillingProjectInfoArgs {
   billing_account: string;
-  timeouts: GoogleBillingProjectInfoArgsTimeouts;
+  timeouts?: GoogleBillingProjectInfoArgsTimeouts;
 }
 export class google_billing_project_info extends TerraformResource {
   readonly id?: string;

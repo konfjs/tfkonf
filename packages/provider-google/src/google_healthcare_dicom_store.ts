@@ -15,7 +15,7 @@ export interface GoogleHealthcareDicomStoreArgs {
   };
   name: string;
   notification_config: GoogleHealthcareDicomStoreArgsNotificationConfig;
-  timeouts: GoogleHealthcareDicomStoreArgsTimeouts;
+  timeouts?: GoogleHealthcareDicomStoreArgsTimeouts;
 }
 export class google_healthcare_dicom_store extends TerraformResource {
   readonly effective_labels!: {

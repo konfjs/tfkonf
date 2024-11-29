@@ -140,7 +140,7 @@ export interface GoogleComputeBackendServiceArgs {
   outlier_detection: GoogleComputeBackendServiceArgsOutlierDetection;
   security_settings: GoogleComputeBackendServiceArgsSecuritySettings;
   strong_session_affinity_cookie: GoogleComputeBackendServiceArgsStrongSessionAffinityCookie;
-  timeouts: GoogleComputeBackendServiceArgsTimeouts;
+  timeouts?: GoogleComputeBackendServiceArgsTimeouts;
 }
 export class google_compute_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

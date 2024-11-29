@@ -9,7 +9,7 @@ export interface AwsSecurityGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSecurityGroupArgsTimeouts;
+  timeouts?: AwsSecurityGroupArgsTimeouts;
 }
 export class aws_security_group extends TerraformResource {
   readonly arn!: string;

@@ -49,7 +49,7 @@ export interface AwsFsxOntapVolumeArgs {
   aggregate_configuration: AwsFsxOntapVolumeArgsAggregateConfiguration;
   snaplock_configuration: AwsFsxOntapVolumeArgsSnaplockConfiguration;
   tiering_policy: AwsFsxOntapVolumeArgsTieringPolicy;
-  timeouts: AwsFsxOntapVolumeArgsTimeouts;
+  timeouts?: AwsFsxOntapVolumeArgsTimeouts;
 }
 export class aws_fsx_ontap_volume extends TerraformResource {
   readonly arn!: string;

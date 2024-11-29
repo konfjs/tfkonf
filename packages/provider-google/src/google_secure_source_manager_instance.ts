@@ -19,7 +19,7 @@ export interface GoogleSecureSourceManagerInstanceArgs {
   };
   location: string;
   private_config: GoogleSecureSourceManagerInstanceArgsPrivateConfig;
-  timeouts: GoogleSecureSourceManagerInstanceArgsTimeouts;
+  timeouts?: GoogleSecureSourceManagerInstanceArgsTimeouts;
   workforce_identity_federation_config: GoogleSecureSourceManagerInstanceArgsWorkforceIdentityFederationConfig;
 }
 export class google_secure_source_manager_instance extends TerraformResource {

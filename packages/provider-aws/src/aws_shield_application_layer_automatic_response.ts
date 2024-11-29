@@ -7,7 +7,7 @@ export interface AwsShieldApplicationLayerAutomaticResponseArgsTimeouts {
 export interface AwsShieldApplicationLayerAutomaticResponseArgs {
   action: string;
   resource_arn: string;
-  timeouts: AwsShieldApplicationLayerAutomaticResponseArgsTimeouts;
+  timeouts?: AwsShieldApplicationLayerAutomaticResponseArgsTimeouts;
 }
 export class aws_shield_application_layer_automatic_response extends TerraformResource {
   readonly id!: string;

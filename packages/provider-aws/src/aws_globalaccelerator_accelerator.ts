@@ -17,7 +17,7 @@ export interface AwsGlobalacceleratorAcceleratorArgs {
     [key: string]: string;
   };
   attributes: AwsGlobalacceleratorAcceleratorArgsAttributes;
-  timeouts: AwsGlobalacceleratorAcceleratorArgsTimeouts;
+  timeouts?: AwsGlobalacceleratorAcceleratorArgsTimeouts;
 }
 export class aws_globalaccelerator_accelerator extends TerraformResource {
   readonly dns_name!: string;

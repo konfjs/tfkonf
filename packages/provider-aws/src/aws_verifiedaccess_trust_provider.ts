@@ -27,7 +27,7 @@ export interface AwsVerifiedaccessTrustProviderArgs {
   user_trust_provider_type?: string;
   device_options: AwsVerifiedaccessTrustProviderArgsDeviceOptions;
   oidc_options: AwsVerifiedaccessTrustProviderArgsOidcOptions;
-  timeouts: AwsVerifiedaccessTrustProviderArgsTimeouts;
+  timeouts?: AwsVerifiedaccessTrustProviderArgsTimeouts;
 }
 export class aws_verifiedaccess_trust_provider extends TerraformResource {
   readonly id?: string;

@@ -83,7 +83,7 @@ export interface GoogleIntegrationsAuthConfigArgs {
   visibility?: string;
   client_certificate: GoogleIntegrationsAuthConfigArgsClientCertificate;
   decrypted_credential: GoogleIntegrationsAuthConfigArgsDecryptedCredential;
-  timeouts: GoogleIntegrationsAuthConfigArgsTimeouts;
+  timeouts?: GoogleIntegrationsAuthConfigArgsTimeouts;
 }
 export class google_integrations_auth_config extends TerraformResource {
   readonly certificate_id!: string;

@@ -6,7 +6,7 @@ export interface GoogleNotebooksLocationArgsTimeouts {
 }
 export interface GoogleNotebooksLocationArgs {
   name?: string;
-  timeouts: GoogleNotebooksLocationArgsTimeouts;
+  timeouts?: GoogleNotebooksLocationArgsTimeouts;
 }
 export class google_notebooks_location extends TerraformResource {
   readonly id?: string;

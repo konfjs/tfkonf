@@ -19,7 +19,7 @@ export interface GoogleComputeRegionCommitmentArgs {
   plan: string;
   license_resource: GoogleComputeRegionCommitmentArgsLicenseResource;
   resources: GoogleComputeRegionCommitmentArgsResources;
-  timeouts: GoogleComputeRegionCommitmentArgsTimeouts;
+  timeouts?: GoogleComputeRegionCommitmentArgsTimeouts;
 }
 export class google_compute_region_commitment extends TerraformResource {
   readonly auto_renew?: boolean;

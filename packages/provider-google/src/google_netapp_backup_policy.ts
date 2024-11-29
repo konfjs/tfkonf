@@ -15,7 +15,7 @@ export interface GoogleNetappBackupPolicyArgs {
   monthly_backup_limit: number;
   name: string;
   weekly_backup_limit: number;
-  timeouts: GoogleNetappBackupPolicyArgsTimeouts;
+  timeouts?: GoogleNetappBackupPolicyArgsTimeouts;
 }
 export class google_netapp_backup_policy extends TerraformResource {
   readonly assigned_volume_count!: number;

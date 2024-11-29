@@ -13,7 +13,7 @@ export interface GoogleFilestoreBackupArgs {
   name: string;
   source_file_share: string;
   source_instance: string;
-  timeouts: GoogleFilestoreBackupArgsTimeouts;
+  timeouts?: GoogleFilestoreBackupArgsTimeouts;
 }
 export class google_filestore_backup extends TerraformResource {
   readonly capacity_gb!: string;

@@ -8,7 +8,7 @@ export interface AwsLambdaProvisionedConcurrencyConfigArgs {
   provisioned_concurrent_executions: number;
   qualifier: string;
   skip_destroy?: boolean;
-  timeouts: AwsLambdaProvisionedConcurrencyConfigArgsTimeouts;
+  timeouts?: AwsLambdaProvisionedConcurrencyConfigArgsTimeouts;
 }
 export class aws_lambda_provisioned_concurrency_config extends TerraformResource {
   readonly id?: string;

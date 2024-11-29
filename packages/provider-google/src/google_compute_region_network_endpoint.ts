@@ -8,7 +8,7 @@ export interface GoogleComputeRegionNetworkEndpointArgs {
   ip_address?: string;
   port: number;
   region_network_endpoint_group: string;
-  timeouts: GoogleComputeRegionNetworkEndpointArgsTimeouts;
+  timeouts?: GoogleComputeRegionNetworkEndpointArgsTimeouts;
 }
 export class google_compute_region_network_endpoint extends TerraformResource {
   readonly id?: string;

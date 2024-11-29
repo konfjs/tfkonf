@@ -35,7 +35,7 @@ export interface AwsFsxFileCacheArgs {
   };
   data_repository_association: AwsFsxFileCacheArgsDataRepositoryAssociation;
   lustre_configuration: AwsFsxFileCacheArgsLustreConfiguration;
-  timeouts: AwsFsxFileCacheArgsTimeouts;
+  timeouts?: AwsFsxFileCacheArgsTimeouts;
 }
 export class aws_fsx_file_cache extends TerraformResource {
   readonly arn!: string;

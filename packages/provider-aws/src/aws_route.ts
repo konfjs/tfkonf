@@ -18,7 +18,7 @@ export interface AwsRouteArgs {
   transit_gateway_id?: string;
   vpc_endpoint_id?: string;
   vpc_peering_connection_id?: string;
-  timeouts: AwsRouteArgsTimeouts;
+  timeouts?: AwsRouteArgsTimeouts;
 }
 export class aws_route extends TerraformResource {
   readonly id?: string;

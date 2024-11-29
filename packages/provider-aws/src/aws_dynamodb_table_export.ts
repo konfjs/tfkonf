@@ -8,7 +8,7 @@ export interface AwsDynamodbTableExportArgs {
   s3_bucket: string;
   s3_sse_kms_key_id?: string;
   table_arn: string;
-  timeouts: AwsDynamodbTableExportArgsTimeouts;
+  timeouts?: AwsDynamodbTableExportArgsTimeouts;
 }
 export class aws_dynamodb_table_export extends TerraformResource {
   readonly arn!: string;

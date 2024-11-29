@@ -5,7 +5,7 @@ export interface GoogleComputeSharedVpcHostProjectArgsTimeouts {
 }
 export interface GoogleComputeSharedVpcHostProjectArgs {
   project: string;
-  timeouts: GoogleComputeSharedVpcHostProjectArgsTimeouts;
+  timeouts?: GoogleComputeSharedVpcHostProjectArgsTimeouts;
 }
 export class google_compute_shared_vpc_host_project extends TerraformResource {
   readonly id?: string;

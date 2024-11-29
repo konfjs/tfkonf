@@ -38,7 +38,7 @@ export interface GoogleComputeRouterNatArgs {
   log_config: GoogleComputeRouterNatArgsLogConfig;
   rules: GoogleComputeRouterNatArgsRules;
   subnetwork: GoogleComputeRouterNatArgsSubnetwork;
-  timeouts: GoogleComputeRouterNatArgsTimeouts;
+  timeouts?: GoogleComputeRouterNatArgsTimeouts;
 }
 export class google_compute_router_nat extends TerraformResource {
   readonly auto_network_tier?: string;

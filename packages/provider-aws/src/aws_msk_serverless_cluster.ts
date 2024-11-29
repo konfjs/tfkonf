@@ -21,7 +21,7 @@ export interface AwsMskServerlessClusterArgs {
     [key: string]: string;
   };
   client_authentication: AwsMskServerlessClusterArgsClientAuthentication;
-  timeouts: AwsMskServerlessClusterArgsTimeouts;
+  timeouts?: AwsMskServerlessClusterArgsTimeouts;
   vpc_config: AwsMskServerlessClusterArgsVpcConfig;
 }
 export class aws_msk_serverless_cluster extends TerraformResource {

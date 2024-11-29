@@ -16,7 +16,7 @@ export interface AwsNetworkmanagerSiteArgs {
     [key: string]: string;
   };
   location: AwsNetworkmanagerSiteArgsLocation;
-  timeouts: AwsNetworkmanagerSiteArgsTimeouts;
+  timeouts?: AwsNetworkmanagerSiteArgsTimeouts;
 }
 export class aws_networkmanager_site extends TerraformResource {
   readonly arn!: string;

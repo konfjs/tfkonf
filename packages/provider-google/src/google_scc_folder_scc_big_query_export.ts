@@ -10,7 +10,7 @@ export interface GoogleSccFolderSccBigQueryExportArgs {
   description: string;
   filter: string;
   folder: string;
-  timeouts: GoogleSccFolderSccBigQueryExportArgsTimeouts;
+  timeouts?: GoogleSccFolderSccBigQueryExportArgsTimeouts;
 }
 export class google_scc_folder_scc_big_query_export extends TerraformResource {
   readonly create_time!: string;

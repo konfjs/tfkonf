@@ -8,7 +8,7 @@ export interface AwsRoute53recoveryreadinessReadinessCheckArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRoute53recoveryreadinessReadinessCheckArgsTimeouts;
+  timeouts?: AwsRoute53recoveryreadinessReadinessCheckArgsTimeouts;
 }
 export class aws_route53recoveryreadiness_readiness_check extends TerraformResource {
   readonly arn!: string;

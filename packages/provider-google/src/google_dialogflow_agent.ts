@@ -14,7 +14,7 @@ export interface GoogleDialogflowAgentArgs {
   supported_language_codes?: string[];
   tier?: string;
   time_zone: string;
-  timeouts: GoogleDialogflowAgentArgsTimeouts;
+  timeouts?: GoogleDialogflowAgentArgsTimeouts;
 }
 export class google_dialogflow_agent extends TerraformResource {
   readonly api_version?: string;

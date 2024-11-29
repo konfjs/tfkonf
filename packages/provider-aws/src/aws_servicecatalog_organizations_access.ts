@@ -4,7 +4,7 @@ export interface AwsServicecatalogOrganizationsAccessArgsTimeouts {
 }
 export interface AwsServicecatalogOrganizationsAccessArgs {
   enabled: boolean;
-  timeouts: AwsServicecatalogOrganizationsAccessArgsTimeouts;
+  timeouts?: AwsServicecatalogOrganizationsAccessArgsTimeouts;
 }
 export class aws_servicecatalog_organizations_access extends TerraformResource {
   readonly id?: string;

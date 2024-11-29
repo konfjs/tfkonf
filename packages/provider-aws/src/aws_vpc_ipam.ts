@@ -16,7 +16,7 @@ export interface AwsVpcIpamArgs {
   };
   tier?: string;
   operating_regions: AwsVpcIpamArgsOperatingRegions;
-  timeouts: AwsVpcIpamArgsTimeouts;
+  timeouts?: AwsVpcIpamArgsTimeouts;
 }
 export class aws_vpc_ipam extends TerraformResource {
   readonly arn!: string;

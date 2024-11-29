@@ -14,7 +14,7 @@ export interface GoogleComputeResizeRequestArgs {
   resize_by: number;
   zone: string;
   requested_run_duration: GoogleComputeResizeRequestArgsRequestedRunDuration;
-  timeouts: GoogleComputeResizeRequestArgsTimeouts;
+  timeouts?: GoogleComputeResizeRequestArgsTimeouts;
 }
 export class google_compute_resize_request extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -6,7 +6,7 @@ export interface GoogleAccessContextManagerServicePerimeterDryRunResourceArgsTim
 export interface GoogleAccessContextManagerServicePerimeterDryRunResourceArgs {
   perimeter_name: string;
   resource: string;
-  timeouts: GoogleAccessContextManagerServicePerimeterDryRunResourceArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerServicePerimeterDryRunResourceArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter_dry_run_resource extends TerraformResource {
   readonly id?: string;

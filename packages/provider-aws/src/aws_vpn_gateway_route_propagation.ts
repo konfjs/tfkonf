@@ -6,7 +6,7 @@ export interface AwsVpnGatewayRoutePropagationArgsTimeouts {
 export interface AwsVpnGatewayRoutePropagationArgs {
   route_table_id: string;
   vpn_gateway_id: string;
-  timeouts: AwsVpnGatewayRoutePropagationArgsTimeouts;
+  timeouts?: AwsVpnGatewayRoutePropagationArgsTimeouts;
 }
 export class aws_vpn_gateway_route_propagation extends TerraformResource {
   readonly id?: string;

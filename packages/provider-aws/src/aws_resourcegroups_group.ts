@@ -23,7 +23,7 @@ export interface AwsResourcegroupsGroupArgs {
   };
   configuration: AwsResourcegroupsGroupArgsConfiguration;
   resource_query: AwsResourcegroupsGroupArgsResourceQuery;
-  timeouts: AwsResourcegroupsGroupArgsTimeouts;
+  timeouts?: AwsResourcegroupsGroupArgsTimeouts;
 }
 export class aws_resourcegroups_group extends TerraformResource {
   readonly arn!: string;

@@ -94,7 +94,7 @@ export interface GoogleGkeBackupRestorePlanArgs {
   location: string;
   name: string;
   restore_config: GoogleGkeBackupRestorePlanArgsRestoreConfig;
-  timeouts: GoogleGkeBackupRestorePlanArgsTimeouts;
+  timeouts?: GoogleGkeBackupRestorePlanArgsTimeouts;
 }
 export class google_gke_backup_restore_plan extends TerraformResource {
   readonly effective_labels!: {

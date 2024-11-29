@@ -29,7 +29,7 @@ export interface GoogleComputeImageArgs {
   guest_os_features: GoogleComputeImageArgsGuestOsFeatures;
   image_encryption_key: GoogleComputeImageArgsImageEncryptionKey;
   raw_disk: GoogleComputeImageArgsRawDisk;
-  timeouts: GoogleComputeImageArgsTimeouts;
+  timeouts?: GoogleComputeImageArgsTimeouts;
 }
 export class google_compute_image extends TerraformResource {
   readonly archive_size_bytes!: number;

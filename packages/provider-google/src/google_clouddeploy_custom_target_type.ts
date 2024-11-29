@@ -40,7 +40,7 @@ export interface GoogleClouddeployCustomTargetTypeArgs {
   location: string;
   name: string;
   custom_actions: GoogleClouddeployCustomTargetTypeArgsCustomActions;
-  timeouts: GoogleClouddeployCustomTargetTypeArgsTimeouts;
+  timeouts?: GoogleClouddeployCustomTargetTypeArgsTimeouts;
 }
 export class google_clouddeploy_custom_target_type extends TerraformResource {
   readonly create_time!: string;

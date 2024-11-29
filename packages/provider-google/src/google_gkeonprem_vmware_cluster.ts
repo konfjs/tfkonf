@@ -124,7 +124,7 @@ export interface GoogleGkeonpremVmwareClusterArgs {
   load_balancer: GoogleGkeonpremVmwareClusterArgsLoadBalancer;
   network_config: GoogleGkeonpremVmwareClusterArgsNetworkConfig;
   storage: GoogleGkeonpremVmwareClusterArgsStorage;
-  timeouts: GoogleGkeonpremVmwareClusterArgsTimeouts;
+  timeouts?: GoogleGkeonpremVmwareClusterArgsTimeouts;
   upgrade_policy: GoogleGkeonpremVmwareClusterArgsUpgradePolicy;
   vcenter: GoogleGkeonpremVmwareClusterArgsVcenter;
 }

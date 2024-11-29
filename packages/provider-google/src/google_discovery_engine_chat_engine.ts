@@ -26,7 +26,7 @@ export interface GoogleDiscoveryEngineChatEngineArgs {
   location: string;
   chat_engine_config: GoogleDiscoveryEngineChatEngineArgsChatEngineConfig;
   common_config: GoogleDiscoveryEngineChatEngineArgsCommonConfig;
-  timeouts: GoogleDiscoveryEngineChatEngineArgsTimeouts;
+  timeouts?: GoogleDiscoveryEngineChatEngineArgsTimeouts;
 }
 export class google_discovery_engine_chat_engine extends TerraformResource {
   readonly chat_engine_metadata!: any[];

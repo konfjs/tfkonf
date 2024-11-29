@@ -17,7 +17,7 @@ export interface GoogleBigtableGcPolicyArgs {
   table: string;
   max_age: GoogleBigtableGcPolicyArgsMaxAge;
   max_version: GoogleBigtableGcPolicyArgsMaxVersion;
-  timeouts: GoogleBigtableGcPolicyArgsTimeouts;
+  timeouts?: GoogleBigtableGcPolicyArgsTimeouts;
 }
 export class google_bigtable_gc_policy extends TerraformResource {
   readonly id?: string;

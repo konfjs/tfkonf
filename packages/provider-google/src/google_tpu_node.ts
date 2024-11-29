@@ -17,7 +17,7 @@ export interface GoogleTpuNodeArgs {
   tensorflow_version: string;
   use_service_networking?: boolean;
   scheduling_config: GoogleTpuNodeArgsSchedulingConfig;
-  timeouts: GoogleTpuNodeArgsTimeouts;
+  timeouts?: GoogleTpuNodeArgsTimeouts;
 }
 export class google_tpu_node extends TerraformResource {
   readonly cidr_block?: string;

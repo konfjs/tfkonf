@@ -21,7 +21,7 @@ export interface GoogleBiglakeTableArgs {
   name: string;
   type?: string;
   hive_options: GoogleBiglakeTableArgsHiveOptions;
-  timeouts: GoogleBiglakeTableArgsTimeouts;
+  timeouts?: GoogleBiglakeTableArgsTimeouts;
 }
 export class google_biglake_table extends TerraformResource {
   readonly create_time!: string;

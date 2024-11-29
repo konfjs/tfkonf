@@ -12,7 +12,7 @@ export interface AwsEksAccessPolicyAssociationArgs {
   policy_arn: string;
   principal_arn: string;
   access_scope: AwsEksAccessPolicyAssociationArgsAccessScope;
-  timeouts: AwsEksAccessPolicyAssociationArgsTimeouts;
+  timeouts?: AwsEksAccessPolicyAssociationArgsTimeouts;
 }
 export class aws_eks_access_policy_association extends TerraformResource {
   readonly associated_at!: string;

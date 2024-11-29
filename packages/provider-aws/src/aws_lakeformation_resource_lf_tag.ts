@@ -33,7 +33,7 @@ export interface AwsLakeformationResourceLfTagArgs {
   lf_tag: AwsLakeformationResourceLfTagArgsLfTag;
   table: AwsLakeformationResourceLfTagArgsTable;
   table_with_columns: AwsLakeformationResourceLfTagArgsTableWithColumns;
-  timeouts: AwsLakeformationResourceLfTagArgsTimeouts;
+  timeouts?: AwsLakeformationResourceLfTagArgsTimeouts;
 }
 export class aws_lakeformation_resource_lf_tag extends TerraformResource {
   readonly id!: string;

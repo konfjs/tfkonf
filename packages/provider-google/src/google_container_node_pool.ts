@@ -190,7 +190,7 @@ export interface GoogleContainerNodePoolArgs {
   node_config: GoogleContainerNodePoolArgsNodeConfig;
   placement_policy: GoogleContainerNodePoolArgsPlacementPolicy;
   queued_provisioning: GoogleContainerNodePoolArgsQueuedProvisioning;
-  timeouts: GoogleContainerNodePoolArgsTimeouts;
+  timeouts?: GoogleContainerNodePoolArgsTimeouts;
   upgrade_settings: GoogleContainerNodePoolArgsUpgradeSettings;
 }
 export class google_container_node_pool extends TerraformResource {

@@ -19,7 +19,7 @@ export interface AwsAmiCopyArgs {
   };
   ebs_block_device: AwsAmiCopyArgsEbsBlockDevice;
   ephemeral_block_device: AwsAmiCopyArgsEphemeralBlockDevice;
-  timeouts: AwsAmiCopyArgsTimeouts;
+  timeouts?: AwsAmiCopyArgsTimeouts;
 }
 export class aws_ami_copy extends TerraformResource {
   readonly architecture!: string;

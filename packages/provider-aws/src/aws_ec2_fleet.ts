@@ -133,7 +133,7 @@ export interface AwsEc2FleetArgs {
   on_demand_options: AwsEc2FleetArgsOnDemandOptions;
   spot_options: AwsEc2FleetArgsSpotOptions;
   target_capacity_specification: AwsEc2FleetArgsTargetCapacitySpecification;
-  timeouts: AwsEc2FleetArgsTimeouts;
+  timeouts?: AwsEc2FleetArgsTimeouts;
 }
 export class aws_ec2_fleet extends TerraformResource {
   readonly arn!: string;

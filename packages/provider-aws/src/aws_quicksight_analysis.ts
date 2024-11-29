@@ -38182,7 +38182,7 @@ export interface AwsQuicksightAnalysisArgs {
   parameters: AwsQuicksightAnalysisArgsParameters;
   permissions: AwsQuicksightAnalysisArgsPermissions;
   source_entity: AwsQuicksightAnalysisArgsSourceEntity;
-  timeouts: AwsQuicksightAnalysisArgsTimeouts;
+  timeouts?: AwsQuicksightAnalysisArgsTimeouts;
 }
 export class aws_quicksight_analysis extends TerraformResource {
   readonly arn!: string;

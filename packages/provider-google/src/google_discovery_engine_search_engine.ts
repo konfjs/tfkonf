@@ -20,7 +20,7 @@ export interface GoogleDiscoveryEngineSearchEngineArgs {
   location: string;
   common_config: GoogleDiscoveryEngineSearchEngineArgsCommonConfig;
   search_engine_config: GoogleDiscoveryEngineSearchEngineArgsSearchEngineConfig;
-  timeouts: GoogleDiscoveryEngineSearchEngineArgsTimeouts;
+  timeouts?: GoogleDiscoveryEngineSearchEngineArgsTimeouts;
 }
 export class google_discovery_engine_search_engine extends TerraformResource {
   readonly create_time!: string;

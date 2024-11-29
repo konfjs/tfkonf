@@ -29,7 +29,7 @@ export interface GoogleOracleDatabaseAutonomousDatabaseArgs {
   location: string;
   network: string;
   properties: GoogleOracleDatabaseAutonomousDatabaseArgsProperties;
-  timeouts: GoogleOracleDatabaseAutonomousDatabaseArgsTimeouts;
+  timeouts?: GoogleOracleDatabaseAutonomousDatabaseArgsTimeouts;
 }
 export class google_oracle_database_autonomous_database extends TerraformResource {
   readonly create_time!: string;

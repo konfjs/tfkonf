@@ -55,7 +55,7 @@ export interface GoogleDnsManagedZoneArgs {
   forwarding_config: GoogleDnsManagedZoneArgsForwardingConfig;
   peering_config: GoogleDnsManagedZoneArgsPeeringConfig;
   private_visibility_config: GoogleDnsManagedZoneArgsPrivateVisibilityConfig;
-  timeouts: GoogleDnsManagedZoneArgsTimeouts;
+  timeouts?: GoogleDnsManagedZoneArgsTimeouts;
 }
 export class google_dns_managed_zone extends TerraformResource {
   readonly creation_time!: string;

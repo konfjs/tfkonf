@@ -17,7 +17,7 @@ export interface AwsPaymentcryptographyKeyArgs {
     [key: string]: string;
   };
   key_attributes: AwsPaymentcryptographyKeyArgsKeyAttributes;
-  timeouts: AwsPaymentcryptographyKeyArgsTimeouts;
+  timeouts?: AwsPaymentcryptographyKeyArgsTimeouts;
 }
 export class aws_paymentcryptography_key extends TerraformResource {
   readonly arn!: string;

@@ -30,7 +30,7 @@ export interface AwsDrsReplicationConfigurationTemplateArgs {
   };
   use_dedicated_replication_server: boolean;
   pit_policy: AwsDrsReplicationConfigurationTemplateArgsPitPolicy;
-  timeouts: AwsDrsReplicationConfigurationTemplateArgsTimeouts;
+  timeouts?: AwsDrsReplicationConfigurationTemplateArgsTimeouts;
 }
 export class aws_drs_replication_configuration_template extends TerraformResource {
   readonly arn!: string;

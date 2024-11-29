@@ -16,7 +16,7 @@ export interface AwsNeptuneClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNeptuneClusterInstanceArgsTimeouts;
+  timeouts?: AwsNeptuneClusterInstanceArgsTimeouts;
 }
 export class aws_neptune_cluster_instance extends TerraformResource {
   readonly address!: string;

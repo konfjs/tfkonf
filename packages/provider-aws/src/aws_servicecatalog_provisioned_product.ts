@@ -32,7 +32,7 @@ export interface AwsServicecatalogProvisionedProductArgs {
   };
   provisioning_parameters: AwsServicecatalogProvisionedProductArgsProvisioningParameters;
   stack_set_provisioning_preferences: AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences;
-  timeouts: AwsServicecatalogProvisionedProductArgsTimeouts;
+  timeouts?: AwsServicecatalogProvisionedProductArgsTimeouts;
 }
 export class aws_servicecatalog_provisioned_product extends TerraformResource {
   readonly arn!: string;

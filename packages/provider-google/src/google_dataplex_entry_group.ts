@@ -12,7 +12,7 @@ export interface GoogleDataplexEntryGroupArgs {
     [key: string]: string;
   };
   location?: string;
-  timeouts: GoogleDataplexEntryGroupArgsTimeouts;
+  timeouts?: GoogleDataplexEntryGroupArgsTimeouts;
 }
 export class google_dataplex_entry_group extends TerraformResource {
   readonly create_time!: string;

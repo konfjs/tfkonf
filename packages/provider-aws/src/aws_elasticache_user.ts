@@ -20,7 +20,7 @@ export interface AwsElasticacheUserArgs {
   user_id: string;
   user_name: string;
   authentication_mode: AwsElasticacheUserArgsAuthenticationMode;
-  timeouts: AwsElasticacheUserArgsTimeouts;
+  timeouts?: AwsElasticacheUserArgsTimeouts;
 }
 export class aws_elasticache_user extends TerraformResource {
   readonly arn!: string;

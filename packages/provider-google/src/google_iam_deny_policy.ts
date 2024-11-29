@@ -26,7 +26,7 @@ export interface GoogleIamDenyPolicyArgs {
   name: string;
   parent: string;
   rules: GoogleIamDenyPolicyArgsRules;
-  timeouts: GoogleIamDenyPolicyArgsTimeouts;
+  timeouts?: GoogleIamDenyPolicyArgsTimeouts;
 }
 export class google_iam_deny_policy extends TerraformResource {
   readonly etag!: string;

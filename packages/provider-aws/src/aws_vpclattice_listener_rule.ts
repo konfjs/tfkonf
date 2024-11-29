@@ -54,7 +54,7 @@ export interface AwsVpclatticeListenerRuleArgs {
   };
   action: AwsVpclatticeListenerRuleArgsAction;
   match: AwsVpclatticeListenerRuleArgsMatch;
-  timeouts: AwsVpclatticeListenerRuleArgsTimeouts;
+  timeouts?: AwsVpclatticeListenerRuleArgsTimeouts;
 }
 export class aws_vpclattice_listener_rule extends TerraformResource {
   readonly arn!: string;

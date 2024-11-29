@@ -9,7 +9,7 @@ export interface GoogleVmwareengineNetworkArgs {
   location: string;
   name: string;
   type: string;
-  timeouts: GoogleVmwareengineNetworkArgsTimeouts;
+  timeouts?: GoogleVmwareengineNetworkArgsTimeouts;
 }
 export class google_vmwareengine_network extends TerraformResource {
   readonly id?: string;

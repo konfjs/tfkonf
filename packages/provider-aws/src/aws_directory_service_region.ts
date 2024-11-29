@@ -14,7 +14,7 @@ export interface AwsDirectoryServiceRegionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDirectoryServiceRegionArgsTimeouts;
+  timeouts?: AwsDirectoryServiceRegionArgsTimeouts;
   vpc_settings: AwsDirectoryServiceRegionArgsVpcSettings;
 }
 export class aws_directory_service_region extends TerraformResource {

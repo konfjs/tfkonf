@@ -5,7 +5,7 @@ export interface AwsWafv2WebAclAssociationArgsTimeouts {
 export interface AwsWafv2WebAclAssociationArgs {
   resource_arn: string;
   web_acl_arn: string;
-  timeouts: AwsWafv2WebAclAssociationArgsTimeouts;
+  timeouts?: AwsWafv2WebAclAssociationArgsTimeouts;
 }
 export class aws_wafv2_web_acl_association extends TerraformResource {
   readonly id?: string;

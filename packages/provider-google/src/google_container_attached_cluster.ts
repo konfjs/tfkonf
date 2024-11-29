@@ -58,7 +58,7 @@ export interface GoogleContainerAttachedClusterArgs {
   oidc_config: GoogleContainerAttachedClusterArgsOidcConfig;
   proxy_config: GoogleContainerAttachedClusterArgsProxyConfig;
   security_posture_config: GoogleContainerAttachedClusterArgsSecurityPostureConfig;
-  timeouts: GoogleContainerAttachedClusterArgsTimeouts;
+  timeouts?: GoogleContainerAttachedClusterArgsTimeouts;
 }
 export class google_container_attached_cluster extends TerraformResource {
   readonly cluster_region!: string;

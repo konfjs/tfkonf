@@ -16,7 +16,7 @@ export interface AwsConfigOrganizationConformancePackArgs {
   template_body?: string;
   template_s3_uri?: string;
   input_parameter: AwsConfigOrganizationConformancePackArgsInputParameter;
-  timeouts: AwsConfigOrganizationConformancePackArgsTimeouts;
+  timeouts?: AwsConfigOrganizationConformancePackArgsTimeouts;
 }
 export class aws_config_organization_conformance_pack extends TerraformResource {
   readonly arn!: string;

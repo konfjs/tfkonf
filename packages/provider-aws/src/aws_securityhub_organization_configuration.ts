@@ -10,7 +10,7 @@ export interface AwsSecurityhubOrganizationConfigurationArgsTimeouts {
 export interface AwsSecurityhubOrganizationConfigurationArgs {
   auto_enable: boolean;
   organization_configuration: AwsSecurityhubOrganizationConfigurationArgsOrganizationConfiguration;
-  timeouts: AwsSecurityhubOrganizationConfigurationArgsTimeouts;
+  timeouts?: AwsSecurityhubOrganizationConfigurationArgsTimeouts;
 }
 export class aws_securityhub_organization_configuration extends TerraformResource {
   readonly auto_enable_standards?: string;

@@ -15,7 +15,7 @@ export interface GoogleDnsResponsePolicyArgs {
   response_policy_name: string;
   gke_clusters: GoogleDnsResponsePolicyArgsGkeClusters;
   networks: GoogleDnsResponsePolicyArgsNetworks;
-  timeouts: GoogleDnsResponsePolicyArgsTimeouts;
+  timeouts?: GoogleDnsResponsePolicyArgsTimeouts;
 }
 export class google_dns_response_policy extends TerraformResource {
   readonly id?: string;

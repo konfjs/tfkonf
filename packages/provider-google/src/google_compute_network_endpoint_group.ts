@@ -10,7 +10,7 @@ export interface GoogleComputeNetworkEndpointGroupArgs {
   network: string;
   network_endpoint_type?: string;
   subnetwork?: string;
-  timeouts: GoogleComputeNetworkEndpointGroupArgsTimeouts;
+  timeouts?: GoogleComputeNetworkEndpointGroupArgsTimeouts;
 }
 export class google_compute_network_endpoint_group extends TerraformResource {
   readonly id?: string;

@@ -12,7 +12,7 @@ export interface AwsEbsVolumeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEbsVolumeArgsTimeouts;
+  timeouts?: AwsEbsVolumeArgsTimeouts;
 }
 export class aws_ebs_volume extends TerraformResource {
   readonly arn!: string;

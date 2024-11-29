@@ -7,7 +7,7 @@ export interface GoogleApigeeSyncAuthorizationArgsTimeouts {
 export interface GoogleApigeeSyncAuthorizationArgs {
   identities: string[];
   name: string;
-  timeouts: GoogleApigeeSyncAuthorizationArgsTimeouts;
+  timeouts?: GoogleApigeeSyncAuthorizationArgsTimeouts;
 }
 export class google_apigee_sync_authorization extends TerraformResource {
   readonly etag!: string;

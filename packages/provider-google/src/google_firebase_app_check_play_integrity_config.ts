@@ -6,7 +6,7 @@ export interface GoogleFirebaseAppCheckPlayIntegrityConfigArgsTimeouts {
 }
 export interface GoogleFirebaseAppCheckPlayIntegrityConfigArgs {
   app_id: string;
-  timeouts: GoogleFirebaseAppCheckPlayIntegrityConfigArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckPlayIntegrityConfigArgsTimeouts;
 }
 export class google_firebase_app_check_play_integrity_config extends TerraformResource {
   readonly id?: string;

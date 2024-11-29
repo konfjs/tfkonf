@@ -79,7 +79,7 @@ export interface AwsDynamodbTableArgs {
   point_in_time_recovery: AwsDynamodbTableArgsPointInTimeRecovery;
   replica: AwsDynamodbTableArgsReplica;
   server_side_encryption: AwsDynamodbTableArgsServerSideEncryption;
-  timeouts: AwsDynamodbTableArgsTimeouts;
+  timeouts?: AwsDynamodbTableArgsTimeouts;
   ttl: AwsDynamodbTableArgsTtl;
 }
 export class aws_dynamodb_table extends TerraformResource {

@@ -81,7 +81,7 @@ export interface GoogleCloudbuildv2ConnectionArgs {
   github_config: GoogleCloudbuildv2ConnectionArgsGithubConfig;
   github_enterprise_config: GoogleCloudbuildv2ConnectionArgsGithubEnterpriseConfig;
   gitlab_config: GoogleCloudbuildv2ConnectionArgsGitlabConfig;
-  timeouts: GoogleCloudbuildv2ConnectionArgsTimeouts;
+  timeouts?: GoogleCloudbuildv2ConnectionArgsTimeouts;
 }
 export class google_cloudbuildv2_connection extends TerraformResource {
   readonly create_time!: string;

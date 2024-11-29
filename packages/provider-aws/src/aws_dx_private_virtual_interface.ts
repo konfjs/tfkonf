@@ -17,7 +17,7 @@ export interface AwsDxPrivateVirtualInterfaceArgs {
   };
   vlan: number;
   vpn_gateway_id?: string;
-  timeouts: AwsDxPrivateVirtualInterfaceArgsTimeouts;
+  timeouts?: AwsDxPrivateVirtualInterfaceArgsTimeouts;
 }
 export class aws_dx_private_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;

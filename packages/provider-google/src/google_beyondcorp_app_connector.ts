@@ -18,7 +18,7 @@ export interface GoogleBeyondcorpAppConnectorArgs {
   name: string;
   region?: string;
   principal_info: GoogleBeyondcorpAppConnectorArgsPrincipalInfo;
-  timeouts: GoogleBeyondcorpAppConnectorArgsTimeouts;
+  timeouts?: GoogleBeyondcorpAppConnectorArgsTimeouts;
 }
 export class google_beyondcorp_app_connector extends TerraformResource {
   readonly effective_labels!: {

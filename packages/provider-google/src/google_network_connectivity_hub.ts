@@ -9,7 +9,7 @@ export interface GoogleNetworkConnectivityHubArgs {
   labels?: {
     [key: string]: string;
   };
-  timeouts: GoogleNetworkConnectivityHubArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityHubArgsTimeouts;
 }
 export class google_network_connectivity_hub extends TerraformResource {
   readonly create_time!: string;

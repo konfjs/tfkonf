@@ -14,7 +14,7 @@ export interface GoogleSccV2FolderNotificationConfigArgs {
   location?: string;
   pubsub_topic: string;
   streaming_config: GoogleSccV2FolderNotificationConfigArgsStreamingConfig;
-  timeouts: GoogleSccV2FolderNotificationConfigArgsTimeouts;
+  timeouts?: GoogleSccV2FolderNotificationConfigArgsTimeouts;
 }
 export class google_scc_v2_folder_notification_config extends TerraformResource {
   readonly id?: string;

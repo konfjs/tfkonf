@@ -12,7 +12,7 @@ export interface AwsKeyspacesKeyspaceArgs {
     [key: string]: string;
   };
   replication_specification: AwsKeyspacesKeyspaceArgsReplicationSpecification;
-  timeouts: AwsKeyspacesKeyspaceArgsTimeouts;
+  timeouts?: AwsKeyspacesKeyspaceArgsTimeouts;
 }
 export class aws_keyspaces_keyspace extends TerraformResource {
   readonly arn!: string;

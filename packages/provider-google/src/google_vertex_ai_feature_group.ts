@@ -19,7 +19,7 @@ export interface GoogleVertexAiFeatureGroupArgs {
   name?: string;
   region?: string;
   big_query: GoogleVertexAiFeatureGroupArgsBigQuery;
-  timeouts: GoogleVertexAiFeatureGroupArgsTimeouts;
+  timeouts?: GoogleVertexAiFeatureGroupArgsTimeouts;
 }
 export class google_vertex_ai_feature_group extends TerraformResource {
   readonly create_time!: string;

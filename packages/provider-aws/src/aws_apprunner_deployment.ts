@@ -4,7 +4,7 @@ export interface AwsApprunnerDeploymentArgsTimeouts {
 }
 export interface AwsApprunnerDeploymentArgs {
   service_arn: string;
-  timeouts: AwsApprunnerDeploymentArgsTimeouts;
+  timeouts?: AwsApprunnerDeploymentArgsTimeouts;
 }
 export class aws_apprunner_deployment extends TerraformResource {
   readonly id!: string;

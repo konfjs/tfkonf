@@ -14,7 +14,7 @@ export interface AwsIvschatRoomArgs {
     [key: string]: string;
   };
   message_review_handler: AwsIvschatRoomArgsMessageReviewHandler;
-  timeouts: AwsIvschatRoomArgsTimeouts;
+  timeouts?: AwsIvschatRoomArgsTimeouts;
 }
 export class aws_ivschat_room extends TerraformResource {
   readonly arn!: string;

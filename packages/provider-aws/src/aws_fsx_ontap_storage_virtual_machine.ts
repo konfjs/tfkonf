@@ -25,7 +25,7 @@ export interface AwsFsxOntapStorageVirtualMachineArgs {
     [key: string]: string;
   };
   active_directory_configuration: AwsFsxOntapStorageVirtualMachineArgsActiveDirectoryConfiguration;
-  timeouts: AwsFsxOntapStorageVirtualMachineArgsTimeouts;
+  timeouts?: AwsFsxOntapStorageVirtualMachineArgsTimeouts;
 }
 export class aws_fsx_ontap_storage_virtual_machine extends TerraformResource {
   readonly arn!: string;

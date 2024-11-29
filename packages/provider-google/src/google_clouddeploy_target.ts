@@ -46,7 +46,7 @@ export interface GoogleClouddeployTargetArgs {
   gke: GoogleClouddeployTargetArgsGke;
   multi_target: GoogleClouddeployTargetArgsMultiTarget;
   run: GoogleClouddeployTargetArgsRun;
-  timeouts: GoogleClouddeployTargetArgsTimeouts;
+  timeouts?: GoogleClouddeployTargetArgsTimeouts;
 }
 export class google_clouddeploy_target extends TerraformResource {
   readonly create_time!: string;

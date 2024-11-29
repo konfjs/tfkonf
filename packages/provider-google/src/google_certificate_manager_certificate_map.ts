@@ -10,7 +10,7 @@ export interface GoogleCertificateManagerCertificateMapArgs {
     [key: string]: string;
   };
   name: string;
-  timeouts: GoogleCertificateManagerCertificateMapArgsTimeouts;
+  timeouts?: GoogleCertificateManagerCertificateMapArgsTimeouts;
 }
 export class google_certificate_manager_certificate_map extends TerraformResource {
   readonly create_time!: string;

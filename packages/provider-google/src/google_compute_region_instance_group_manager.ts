@@ -69,7 +69,7 @@ export interface GoogleComputeRegionInstanceGroupManagerArgs {
   stateful_disk: GoogleComputeRegionInstanceGroupManagerArgsStatefulDisk;
   stateful_external_ip: GoogleComputeRegionInstanceGroupManagerArgsStatefulExternalIp;
   stateful_internal_ip: GoogleComputeRegionInstanceGroupManagerArgsStatefulInternalIp;
-  timeouts: GoogleComputeRegionInstanceGroupManagerArgsTimeouts;
+  timeouts?: GoogleComputeRegionInstanceGroupManagerArgsTimeouts;
   update_policy: GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy;
   version: GoogleComputeRegionInstanceGroupManagerArgsVersion;
 }

@@ -16,7 +16,7 @@ export interface AwsLambdaFunctionUrlArgs {
   invoke_mode?: string;
   qualifier?: string;
   cors: AwsLambdaFunctionUrlArgsCors;
-  timeouts: AwsLambdaFunctionUrlArgsTimeouts;
+  timeouts?: AwsLambdaFunctionUrlArgsTimeouts;
 }
 export class aws_lambda_function_url extends TerraformResource {
   readonly function_arn!: string;

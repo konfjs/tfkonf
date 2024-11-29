@@ -11,7 +11,7 @@ export interface GoogleCloudIdsEndpointArgs {
   network: string;
   severity: string;
   threat_exceptions?: string[];
-  timeouts: GoogleCloudIdsEndpointArgsTimeouts;
+  timeouts?: GoogleCloudIdsEndpointArgsTimeouts;
 }
 export class google_cloud_ids_endpoint extends TerraformResource {
   readonly create_time!: string;

@@ -10,7 +10,7 @@ export interface GoogleSiteVerificationWebResourceArgsTimeouts {
 export interface GoogleSiteVerificationWebResourceArgs {
   verification_method: string;
   site: GoogleSiteVerificationWebResourceArgsSite;
-  timeouts: GoogleSiteVerificationWebResourceArgsTimeouts;
+  timeouts?: GoogleSiteVerificationWebResourceArgsTimeouts;
 }
 export class google_site_verification_web_resource extends TerraformResource {
   readonly id?: string;

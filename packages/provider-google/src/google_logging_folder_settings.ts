@@ -6,7 +6,7 @@ export interface GoogleLoggingFolderSettingsArgsTimeouts {
 }
 export interface GoogleLoggingFolderSettingsArgs {
   folder: string;
-  timeouts: GoogleLoggingFolderSettingsArgsTimeouts;
+  timeouts?: GoogleLoggingFolderSettingsArgsTimeouts;
 }
 export class google_logging_folder_settings extends TerraformResource {
   readonly disable_default_sink?: boolean;

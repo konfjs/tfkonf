@@ -70,7 +70,7 @@ export interface AwsLbListenerArgs {
   };
   default_action: AwsLbListenerArgsDefaultAction;
   mutual_authentication: AwsLbListenerArgsMutualAuthentication;
-  timeouts: AwsLbListenerArgsTimeouts;
+  timeouts?: AwsLbListenerArgsTimeouts;
 }
 export class aws_lb_listener extends TerraformResource {
   readonly arn!: string;

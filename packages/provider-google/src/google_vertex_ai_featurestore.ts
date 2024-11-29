@@ -23,7 +23,7 @@ export interface GoogleVertexAiFeaturestoreArgs {
   name?: string;
   encryption_spec: GoogleVertexAiFeaturestoreArgsEncryptionSpec;
   online_serving_config: GoogleVertexAiFeaturestoreArgsOnlineServingConfig;
-  timeouts: GoogleVertexAiFeaturestoreArgsTimeouts;
+  timeouts?: GoogleVertexAiFeaturestoreArgsTimeouts;
 }
 export class google_vertex_ai_featurestore extends TerraformResource {
   readonly create_time!: string;

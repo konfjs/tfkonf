@@ -6,7 +6,7 @@ export interface AwsElasticacheUserGroupAssociationArgsTimeouts {
 export interface AwsElasticacheUserGroupAssociationArgs {
   user_group_id: string;
   user_id: string;
-  timeouts: AwsElasticacheUserGroupAssociationArgsTimeouts;
+  timeouts?: AwsElasticacheUserGroupAssociationArgsTimeouts;
 }
 export class aws_elasticache_user_group_association extends TerraformResource {
   readonly id?: string;

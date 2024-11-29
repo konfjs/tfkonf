@@ -27,7 +27,7 @@ export interface AwsRbinRuleArgs {
   lock_configuration: AwsRbinRuleArgsLockConfiguration;
   resource_tags: AwsRbinRuleArgsResourceTags;
   retention_period: AwsRbinRuleArgsRetentionPeriod;
-  timeouts: AwsRbinRuleArgsTimeouts;
+  timeouts?: AwsRbinRuleArgsTimeouts;
 }
 export class aws_rbin_rule extends TerraformResource {
   readonly arn!: string;

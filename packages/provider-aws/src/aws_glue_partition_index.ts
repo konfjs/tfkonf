@@ -11,7 +11,7 @@ export interface AwsGluePartitionIndexArgs {
   database_name: string;
   table_name: string;
   partition_index: AwsGluePartitionIndexArgsPartitionIndex;
-  timeouts: AwsGluePartitionIndexArgsTimeouts;
+  timeouts?: AwsGluePartitionIndexArgsTimeouts;
 }
 export class aws_glue_partition_index extends TerraformResource {
   readonly catalog_id?: string;

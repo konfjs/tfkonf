@@ -9,7 +9,7 @@ export interface GoogleSccProjectSccBigQueryExportArgs {
   dataset?: string;
   description?: string;
   filter?: string;
-  timeouts: GoogleSccProjectSccBigQueryExportArgsTimeouts;
+  timeouts?: GoogleSccProjectSccBigQueryExportArgsTimeouts;
 }
 export class google_scc_project_scc_big_query_export extends TerraformResource {
   readonly create_time!: string;

@@ -12,7 +12,7 @@ export interface AwsFinspaceKxScalingGroupArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsFinspaceKxScalingGroupArgsTimeouts;
+  timeouts?: AwsFinspaceKxScalingGroupArgsTimeouts;
 }
 export class aws_finspace_kx_scaling_group extends TerraformResource {
   readonly arn!: string;

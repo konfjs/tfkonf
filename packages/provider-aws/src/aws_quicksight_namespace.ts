@@ -8,7 +8,7 @@ export interface AwsQuicksightNamespaceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsQuicksightNamespaceArgsTimeouts;
+  timeouts?: AwsQuicksightNamespaceArgsTimeouts;
 }
 export class aws_quicksight_namespace extends TerraformResource {
   readonly arn!: string;

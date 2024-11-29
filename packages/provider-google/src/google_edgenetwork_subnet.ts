@@ -15,7 +15,7 @@ export interface GoogleEdgenetworkSubnetArgs {
   network: string;
   subnet_id: string;
   zone: string;
-  timeouts: GoogleEdgenetworkSubnetArgsTimeouts;
+  timeouts?: GoogleEdgenetworkSubnetArgsTimeouts;
 }
 export class google_edgenetwork_subnet extends TerraformResource {
   readonly create_time!: string;

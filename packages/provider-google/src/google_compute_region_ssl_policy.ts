@@ -10,7 +10,7 @@ export interface GoogleComputeRegionSslPolicyArgs {
   min_tls_version?: string;
   name: string;
   profile?: string;
-  timeouts: GoogleComputeRegionSslPolicyArgsTimeouts;
+  timeouts?: GoogleComputeRegionSslPolicyArgsTimeouts;
 }
 export class google_compute_region_ssl_policy extends TerraformResource {
   readonly creation_timestamp!: string;

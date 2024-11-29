@@ -15,7 +15,7 @@ export interface AwsRoute53ResolverEndpointArgs {
     [key: string]: string;
   };
   ip_address: AwsRoute53ResolverEndpointArgsIpAddress;
-  timeouts: AwsRoute53ResolverEndpointArgsTimeouts;
+  timeouts?: AwsRoute53ResolverEndpointArgsTimeouts;
 }
 export class aws_route53_resolver_endpoint extends TerraformResource {
   readonly arn!: string;

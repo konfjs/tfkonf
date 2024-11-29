@@ -8,7 +8,7 @@ export interface AwsIvsPlaybackKeyPairArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIvsPlaybackKeyPairArgsTimeouts;
+  timeouts?: AwsIvsPlaybackKeyPairArgsTimeouts;
 }
 export class aws_ivs_playback_key_pair extends TerraformResource {
   readonly arn!: string;

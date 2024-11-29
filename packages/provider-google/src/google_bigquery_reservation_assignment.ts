@@ -7,7 +7,7 @@ export interface GoogleBigqueryReservationAssignmentArgs {
   assignee: string;
   job_type: string;
   reservation: string;
-  timeouts: GoogleBigqueryReservationAssignmentArgsTimeouts;
+  timeouts?: GoogleBigqueryReservationAssignmentArgsTimeouts;
 }
 export class google_bigquery_reservation_assignment extends TerraformResource {
   readonly id?: string;

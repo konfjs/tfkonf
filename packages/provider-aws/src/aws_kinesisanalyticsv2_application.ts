@@ -185,7 +185,7 @@ export interface AwsKinesisanalyticsv2ApplicationArgs {
   };
   application_configuration: AwsKinesisanalyticsv2ApplicationArgsApplicationConfiguration;
   cloudwatch_logging_options: AwsKinesisanalyticsv2ApplicationArgsCloudwatchLoggingOptions;
-  timeouts: AwsKinesisanalyticsv2ApplicationArgsTimeouts;
+  timeouts?: AwsKinesisanalyticsv2ApplicationArgsTimeouts;
 }
 export class aws_kinesisanalyticsv2_application extends TerraformResource {
   readonly application_mode?: string;

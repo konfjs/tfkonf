@@ -45,7 +45,7 @@ export interface AwsEksClusterArgs {
   encryption_config: AwsEksClusterArgsEncryptionConfig;
   kubernetes_network_config: AwsEksClusterArgsKubernetesNetworkConfig;
   outpost_config: AwsEksClusterArgsOutpostConfig;
-  timeouts: AwsEksClusterArgsTimeouts;
+  timeouts?: AwsEksClusterArgsTimeouts;
   upgrade_policy: AwsEksClusterArgsUpgradePolicy;
   vpc_config: AwsEksClusterArgsVpcConfig;
   zonal_shift_config: AwsEksClusterArgsZonalShiftConfig;

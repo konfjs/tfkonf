@@ -23,7 +23,7 @@ export interface GoogleDataprocGdcApplicationEnvironmentArgs {
   namespace?: string;
   serviceinstance: string;
   spark_application_environment_config: GoogleDataprocGdcApplicationEnvironmentArgsSparkApplicationEnvironmentConfig;
-  timeouts: GoogleDataprocGdcApplicationEnvironmentArgsTimeouts;
+  timeouts?: GoogleDataprocGdcApplicationEnvironmentArgsTimeouts;
 }
 export class google_dataproc_gdc_application_environment extends TerraformResource {
   readonly create_time!: string;

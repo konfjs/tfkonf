@@ -20,7 +20,7 @@ export interface AwsDaxClusterArgs {
     [key: string]: string;
   };
   server_side_encryption: AwsDaxClusterArgsServerSideEncryption;
-  timeouts: AwsDaxClusterArgsTimeouts;
+  timeouts?: AwsDaxClusterArgsTimeouts;
 }
 export class aws_dax_cluster extends TerraformResource {
   readonly arn!: string;

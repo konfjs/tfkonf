@@ -23,7 +23,7 @@ export interface GoogleOracleDatabaseCloudExadataInfrastructureArgs {
   };
   location: string;
   properties: GoogleOracleDatabaseCloudExadataInfrastructureArgsProperties;
-  timeouts: GoogleOracleDatabaseCloudExadataInfrastructureArgsTimeouts;
+  timeouts?: GoogleOracleDatabaseCloudExadataInfrastructureArgsTimeouts;
 }
 export class google_oracle_database_cloud_exadata_infrastructure extends TerraformResource {
   readonly create_time!: string;

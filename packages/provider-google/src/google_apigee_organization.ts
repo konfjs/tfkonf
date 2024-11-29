@@ -25,7 +25,7 @@ export interface GoogleApigeeOrganizationArgs {
   runtime_database_encryption_key_name?: string;
   runtime_type?: string;
   properties: GoogleApigeeOrganizationArgsProperties;
-  timeouts: GoogleApigeeOrganizationArgsTimeouts;
+  timeouts?: GoogleApigeeOrganizationArgsTimeouts;
 }
 export class google_apigee_organization extends TerraformResource {
   readonly apigee_project_id!: string;

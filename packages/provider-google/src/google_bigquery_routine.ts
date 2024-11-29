@@ -37,7 +37,7 @@ export interface GoogleBigqueryRoutineArgs {
   arguments: GoogleBigqueryRoutineArgsArguments;
   remote_function_options: GoogleBigqueryRoutineArgsRemoteFunctionOptions;
   spark_options: GoogleBigqueryRoutineArgsSparkOptions;
-  timeouts: GoogleBigqueryRoutineArgsTimeouts;
+  timeouts?: GoogleBigqueryRoutineArgsTimeouts;
 }
 export class google_bigquery_routine extends TerraformResource {
   readonly creation_time!: number;

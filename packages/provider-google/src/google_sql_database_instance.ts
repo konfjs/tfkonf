@@ -144,7 +144,7 @@ export interface GoogleSqlDatabaseInstanceArgs {
   replica_configuration: GoogleSqlDatabaseInstanceArgsReplicaConfiguration;
   restore_backup_context: GoogleSqlDatabaseInstanceArgsRestoreBackupContext;
   settings: GoogleSqlDatabaseInstanceArgsSettings;
-  timeouts: GoogleSqlDatabaseInstanceArgsTimeouts;
+  timeouts?: GoogleSqlDatabaseInstanceArgsTimeouts;
 }
 export class google_sql_database_instance extends TerraformResource {
   readonly available_maintenance_versions!: string[];

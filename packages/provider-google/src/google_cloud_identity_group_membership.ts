@@ -19,7 +19,7 @@ export interface GoogleCloudIdentityGroupMembershipArgs {
   group: string;
   preferred_member_key: GoogleCloudIdentityGroupMembershipArgsPreferredMemberKey;
   roles: GoogleCloudIdentityGroupMembershipArgsRoles;
-  timeouts: GoogleCloudIdentityGroupMembershipArgsTimeouts;
+  timeouts?: GoogleCloudIdentityGroupMembershipArgsTimeouts;
 }
 export class google_cloud_identity_group_membership extends TerraformResource {
   readonly create_time!: string;

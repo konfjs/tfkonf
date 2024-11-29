@@ -70,7 +70,7 @@ export interface AwsAlbListenerArgs {
   };
   default_action: AwsAlbListenerArgsDefaultAction;
   mutual_authentication: AwsAlbListenerArgsMutualAuthentication;
-  timeouts: AwsAlbListenerArgsTimeouts;
+  timeouts?: AwsAlbListenerArgsTimeouts;
 }
 export class aws_alb_listener extends TerraformResource {
   readonly arn!: string;

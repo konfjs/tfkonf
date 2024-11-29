@@ -16,7 +16,7 @@ export interface AwsDocdbClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDocdbClusterInstanceArgsTimeouts;
+  timeouts?: AwsDocdbClusterInstanceArgsTimeouts;
 }
 export class aws_docdb_cluster_instance extends TerraformResource {
   readonly arn!: string;

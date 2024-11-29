@@ -6,7 +6,7 @@ export interface GoogleProjectUsageExportBucketArgsTimeouts {
 export interface GoogleProjectUsageExportBucketArgs {
   bucket_name: string;
   prefix?: string;
-  timeouts: GoogleProjectUsageExportBucketArgsTimeouts;
+  timeouts?: GoogleProjectUsageExportBucketArgsTimeouts;
 }
 export class google_project_usage_export_bucket extends TerraformResource {
   readonly id?: string;

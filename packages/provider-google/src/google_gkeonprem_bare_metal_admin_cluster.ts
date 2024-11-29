@@ -114,7 +114,7 @@ export interface GoogleGkeonpremBareMetalAdminClusterArgs {
   proxy: GoogleGkeonpremBareMetalAdminClusterArgsProxy;
   security_config: GoogleGkeonpremBareMetalAdminClusterArgsSecurityConfig;
   storage: GoogleGkeonpremBareMetalAdminClusterArgsStorage;
-  timeouts: GoogleGkeonpremBareMetalAdminClusterArgsTimeouts;
+  timeouts?: GoogleGkeonpremBareMetalAdminClusterArgsTimeouts;
 }
 export class google_gkeonprem_bare_metal_admin_cluster extends TerraformResource {
   readonly create_time!: string;

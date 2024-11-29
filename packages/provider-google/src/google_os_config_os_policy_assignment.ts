@@ -239,7 +239,7 @@ export interface GoogleOsConfigOsPolicyAssignmentArgs {
   instance_filter: GoogleOsConfigOsPolicyAssignmentArgsInstanceFilter;
   os_policies: GoogleOsConfigOsPolicyAssignmentArgsOsPolicies;
   rollout: GoogleOsConfigOsPolicyAssignmentArgsRollout;
-  timeouts: GoogleOsConfigOsPolicyAssignmentArgsTimeouts;
+  timeouts?: GoogleOsConfigOsPolicyAssignmentArgsTimeouts;
 }
 export class google_os_config_os_policy_assignment extends TerraformResource {
   readonly baseline!: boolean;

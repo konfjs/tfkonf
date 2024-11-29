@@ -11,7 +11,7 @@ export interface AwsMacie2MemberArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsMacie2MemberArgsTimeouts;
+  timeouts?: AwsMacie2MemberArgsTimeouts;
 }
 export class aws_macie2_member extends TerraformResource {
   readonly administrator_account_id!: string;

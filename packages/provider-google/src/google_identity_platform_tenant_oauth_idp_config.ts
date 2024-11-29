@@ -12,7 +12,7 @@ export interface GoogleIdentityPlatformTenantOauthIdpConfigArgs {
   issuer: string;
   name: string;
   tenant: string;
-  timeouts: GoogleIdentityPlatformTenantOauthIdpConfigArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformTenantOauthIdpConfigArgsTimeouts;
 }
 export class google_identity_platform_tenant_oauth_idp_config extends TerraformResource {
   readonly id?: string;

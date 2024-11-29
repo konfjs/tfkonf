@@ -5,7 +5,7 @@ export interface AwsComputeoptimizerEnrollmentStatusArgsTimeouts {
 }
 export interface AwsComputeoptimizerEnrollmentStatusArgs {
   status: string;
-  timeouts: AwsComputeoptimizerEnrollmentStatusArgsTimeouts;
+  timeouts?: AwsComputeoptimizerEnrollmentStatusArgsTimeouts;
 }
 export class aws_computeoptimizer_enrollment_status extends TerraformResource {
   readonly id!: string;

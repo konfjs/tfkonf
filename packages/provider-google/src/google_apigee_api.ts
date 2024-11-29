@@ -9,7 +9,7 @@ export interface GoogleApigeeApiArgs {
   detect_md5hash?: string;
   name: string;
   org_id: string;
-  timeouts: GoogleApigeeApiArgsTimeouts;
+  timeouts?: GoogleApigeeApiArgsTimeouts;
 }
 export class google_apigee_api extends TerraformResource {
   readonly id?: string;

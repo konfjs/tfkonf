@@ -112,7 +112,7 @@ export interface GooglePrivatecaCertificateArgs {
   pem_csr?: string;
   pool: string;
   config: GooglePrivatecaCertificateArgsConfig;
-  timeouts: GooglePrivatecaCertificateArgsTimeouts;
+  timeouts?: GooglePrivatecaCertificateArgsTimeouts;
 }
 export class google_privateca_certificate extends TerraformResource {
   readonly certificate_description!: any[];

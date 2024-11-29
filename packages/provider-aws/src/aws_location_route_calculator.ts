@@ -11,7 +11,7 @@ export interface AwsLocationRouteCalculatorArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsLocationRouteCalculatorArgsTimeouts;
+  timeouts?: AwsLocationRouteCalculatorArgsTimeouts;
 }
 export class aws_location_route_calculator extends TerraformResource {
   readonly calculator_arn!: string;

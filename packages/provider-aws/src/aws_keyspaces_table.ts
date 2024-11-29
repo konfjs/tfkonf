@@ -52,7 +52,7 @@ export interface AwsKeyspacesTableArgs {
   encryption_specification: AwsKeyspacesTableArgsEncryptionSpecification;
   point_in_time_recovery: AwsKeyspacesTableArgsPointInTimeRecovery;
   schema_definition: AwsKeyspacesTableArgsSchemaDefinition;
-  timeouts: AwsKeyspacesTableArgsTimeouts;
+  timeouts?: AwsKeyspacesTableArgsTimeouts;
   ttl: AwsKeyspacesTableArgsTtl;
 }
 export class aws_keyspaces_table extends TerraformResource {

@@ -54,7 +54,7 @@ export interface GooglePrivilegedAccessManagerEntitlementArgs {
   eligible_users: GooglePrivilegedAccessManagerEntitlementArgsEligibleUsers;
   privileged_access: GooglePrivilegedAccessManagerEntitlementArgsPrivilegedAccess;
   requester_justification_config: GooglePrivilegedAccessManagerEntitlementArgsRequesterJustificationConfig;
-  timeouts: GooglePrivilegedAccessManagerEntitlementArgsTimeouts;
+  timeouts?: GooglePrivilegedAccessManagerEntitlementArgsTimeouts;
 }
 export class google_privileged_access_manager_entitlement extends TerraformResource {
   readonly create_time!: string;

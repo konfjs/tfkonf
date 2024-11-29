@@ -177,7 +177,7 @@ export interface GoogleCloudRunV2ServiceArgs {
   binary_authorization: GoogleCloudRunV2ServiceArgsBinaryAuthorization;
   scaling: GoogleCloudRunV2ServiceArgsScaling;
   template: GoogleCloudRunV2ServiceArgsTemplate;
-  timeouts: GoogleCloudRunV2ServiceArgsTimeouts;
+  timeouts?: GoogleCloudRunV2ServiceArgsTimeouts;
   traffic: GoogleCloudRunV2ServiceArgsTraffic;
 }
 export class google_cloud_run_v2_service extends TerraformResource {

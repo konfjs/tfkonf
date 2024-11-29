@@ -105,7 +105,7 @@ export interface AwsOpensearchDomainArgs {
   off_peak_window_options: AwsOpensearchDomainArgsOffPeakWindowOptions;
   snapshot_options: AwsOpensearchDomainArgsSnapshotOptions;
   software_update_options: AwsOpensearchDomainArgsSoftwareUpdateOptions;
-  timeouts: AwsOpensearchDomainArgsTimeouts;
+  timeouts?: AwsOpensearchDomainArgsTimeouts;
   vpc_options: AwsOpensearchDomainArgsVpcOptions;
 }
 export class aws_opensearch_domain extends TerraformResource {

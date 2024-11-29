@@ -11,7 +11,7 @@ export interface GoogleNetappBackupVaultArgs {
   };
   location: string;
   name: string;
-  timeouts: GoogleNetappBackupVaultArgsTimeouts;
+  timeouts?: GoogleNetappBackupVaultArgsTimeouts;
 }
 export class google_netapp_backup_vault extends TerraformResource {
   readonly create_time!: string;

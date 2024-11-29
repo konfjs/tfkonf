@@ -10,7 +10,7 @@ export interface GoogleAlloydbUserArgs {
   password?: string;
   user_id: string;
   user_type: string;
-  timeouts: GoogleAlloydbUserArgsTimeouts;
+  timeouts?: GoogleAlloydbUserArgsTimeouts;
 }
 export class google_alloydb_user extends TerraformResource {
   readonly id?: string;

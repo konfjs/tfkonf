@@ -22,7 +22,7 @@ export interface GoogleVertexAiDeploymentResourcePoolArgs {
   name: string;
   region?: string;
   dedicated_resources: GoogleVertexAiDeploymentResourcePoolArgsDedicatedResources;
-  timeouts: GoogleVertexAiDeploymentResourcePoolArgsTimeouts;
+  timeouts?: GoogleVertexAiDeploymentResourcePoolArgsTimeouts;
 }
 export class google_vertex_ai_deployment_resource_pool extends TerraformResource {
   readonly create_time!: string;

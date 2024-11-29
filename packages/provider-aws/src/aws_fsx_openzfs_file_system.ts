@@ -48,7 +48,7 @@ export interface AwsFsxOpenzfsFileSystemArgs {
   throughput_capacity: number;
   disk_iops_configuration: AwsFsxOpenzfsFileSystemArgsDiskIopsConfiguration;
   root_volume_configuration: AwsFsxOpenzfsFileSystemArgsRootVolumeConfiguration;
-  timeouts: AwsFsxOpenzfsFileSystemArgsTimeouts;
+  timeouts?: AwsFsxOpenzfsFileSystemArgsTimeouts;
 }
 export class aws_fsx_openzfs_file_system extends TerraformResource {
   readonly arn!: string;

@@ -223,7 +223,7 @@ export interface GoogleDataLossPreventionDiscoveryConfigArgs {
   actions: GoogleDataLossPreventionDiscoveryConfigArgsActions;
   org_config: GoogleDataLossPreventionDiscoveryConfigArgsOrgConfig;
   targets: GoogleDataLossPreventionDiscoveryConfigArgsTargets;
-  timeouts: GoogleDataLossPreventionDiscoveryConfigArgsTimeouts;
+  timeouts?: GoogleDataLossPreventionDiscoveryConfigArgsTimeouts;
 }
 export class google_data_loss_prevention_discovery_config extends TerraformResource {
   readonly create_time!: string;

@@ -17,7 +17,7 @@ export interface GoogleDataCatalogEntryArgs {
   user_specified_system?: string;
   user_specified_type?: string;
   gcs_fileset_spec: GoogleDataCatalogEntryArgsGcsFilesetSpec;
-  timeouts: GoogleDataCatalogEntryArgsTimeouts;
+  timeouts?: GoogleDataCatalogEntryArgsTimeouts;
 }
 export class google_data_catalog_entry extends TerraformResource {
   readonly bigquery_date_sharded_spec!: any[];

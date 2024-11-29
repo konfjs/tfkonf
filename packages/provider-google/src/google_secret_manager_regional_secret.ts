@@ -30,7 +30,7 @@ export interface GoogleSecretManagerRegionalSecretArgs {
   version_destroy_ttl?: string;
   customer_managed_encryption: GoogleSecretManagerRegionalSecretArgsCustomerManagedEncryption;
   rotation: GoogleSecretManagerRegionalSecretArgsRotation;
-  timeouts: GoogleSecretManagerRegionalSecretArgsTimeouts;
+  timeouts?: GoogleSecretManagerRegionalSecretArgsTimeouts;
   topics: GoogleSecretManagerRegionalSecretArgsTopics;
 }
 export class google_secret_manager_regional_secret extends TerraformResource {

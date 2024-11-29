@@ -7,7 +7,7 @@ export interface GoogleTagsLocationTagBindingArgs {
   location?: string;
   parent: string;
   tag_value: string;
-  timeouts: GoogleTagsLocationTagBindingArgsTimeouts;
+  timeouts?: GoogleTagsLocationTagBindingArgsTimeouts;
 }
 export class google_tags_location_tag_binding extends TerraformResource {
   readonly id?: string;

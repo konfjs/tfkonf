@@ -10,7 +10,7 @@ export interface AwsVpcIpamResourceDiscoveryAssociationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpcIpamResourceDiscoveryAssociationArgsTimeouts;
+  timeouts?: AwsVpcIpamResourceDiscoveryAssociationArgsTimeouts;
 }
 export class aws_vpc_ipam_resource_discovery_association extends TerraformResource {
   readonly arn!: string;

@@ -23,7 +23,7 @@ export interface GoogleComputeSnapshotArgs {
   source_disk: string;
   snapshot_encryption_key: GoogleComputeSnapshotArgsSnapshotEncryptionKey;
   source_disk_encryption_key: GoogleComputeSnapshotArgsSourceDiskEncryptionKey;
-  timeouts: GoogleComputeSnapshotArgsTimeouts;
+  timeouts?: GoogleComputeSnapshotArgsTimeouts;
 }
 export class google_compute_snapshot extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -55,7 +55,7 @@ export interface GoogleNotebooksInstanceArgs {
   container_image: GoogleNotebooksInstanceArgsContainerImage;
   reservation_affinity: GoogleNotebooksInstanceArgsReservationAffinity;
   shielded_instance_config: GoogleNotebooksInstanceArgsShieldedInstanceConfig;
-  timeouts: GoogleNotebooksInstanceArgsTimeouts;
+  timeouts?: GoogleNotebooksInstanceArgsTimeouts;
   vm_image: GoogleNotebooksInstanceArgsVmImage;
 }
 export class google_notebooks_instance extends TerraformResource {

@@ -13,7 +13,7 @@ export interface AwsConnectPhoneNumberArgs {
   };
   target_arn: string;
   type: string;
-  timeouts: AwsConnectPhoneNumberArgsTimeouts;
+  timeouts?: AwsConnectPhoneNumberArgsTimeouts;
 }
 export class aws_connect_phone_number extends TerraformResource {
   readonly arn!: string;

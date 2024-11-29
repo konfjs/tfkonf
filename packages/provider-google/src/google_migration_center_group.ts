@@ -12,7 +12,7 @@ export interface GoogleMigrationCenterGroupArgs {
     [key: string]: string;
   };
   location: string;
-  timeouts: GoogleMigrationCenterGroupArgsTimeouts;
+  timeouts?: GoogleMigrationCenterGroupArgsTimeouts;
 }
 export class google_migration_center_group extends TerraformResource {
   readonly create_time!: string;

@@ -64,7 +64,7 @@ export interface AwsRekognitionStreamProcessorArgs {
   output: AwsRekognitionStreamProcessorArgsOutput;
   regions_of_interest: AwsRekognitionStreamProcessorArgsRegionsOfInterest;
   settings: AwsRekognitionStreamProcessorArgsSettings;
-  timeouts: AwsRekognitionStreamProcessorArgsTimeouts;
+  timeouts?: AwsRekognitionStreamProcessorArgsTimeouts;
 }
 export class aws_rekognition_stream_processor extends TerraformResource {
   readonly stream_processor_arn!: string;

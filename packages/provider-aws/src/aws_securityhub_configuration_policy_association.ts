@@ -6,7 +6,7 @@ export interface AwsSecurityhubConfigurationPolicyAssociationArgsTimeouts {
 export interface AwsSecurityhubConfigurationPolicyAssociationArgs {
   policy_id: string;
   target_id: string;
-  timeouts: AwsSecurityhubConfigurationPolicyAssociationArgsTimeouts;
+  timeouts?: AwsSecurityhubConfigurationPolicyAssociationArgsTimeouts;
 }
 export class aws_securityhub_configuration_policy_association extends TerraformResource {
   readonly id?: string;

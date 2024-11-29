@@ -10,7 +10,7 @@ export interface AwsAppfabricAppAuthorizationConnectionArgs {
   app_authorization_arn: string;
   app_bundle_arn: string;
   auth_request: AwsAppfabricAppAuthorizationConnectionArgsAuthRequest;
-  timeouts: AwsAppfabricAppAuthorizationConnectionArgsTimeouts;
+  timeouts?: AwsAppfabricAppAuthorizationConnectionArgsTimeouts;
 }
 export class aws_appfabric_app_authorization_connection extends TerraformResource {
   readonly app!: string;

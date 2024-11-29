@@ -9,7 +9,7 @@ export interface AwsResourceexplorer2IndexArgs {
     [key: string]: string;
   };
   type: string;
-  timeouts: AwsResourceexplorer2IndexArgsTimeouts;
+  timeouts?: AwsResourceexplorer2IndexArgsTimeouts;
 }
 export class aws_resourceexplorer2_index extends TerraformResource {
   readonly arn!: string;

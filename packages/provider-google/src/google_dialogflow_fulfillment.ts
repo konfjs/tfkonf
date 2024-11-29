@@ -20,7 +20,7 @@ export interface GoogleDialogflowFulfillmentArgs {
   enabled?: boolean;
   features: GoogleDialogflowFulfillmentArgsFeatures;
   generic_web_service: GoogleDialogflowFulfillmentArgsGenericWebService;
-  timeouts: GoogleDialogflowFulfillmentArgsTimeouts;
+  timeouts?: GoogleDialogflowFulfillmentArgsTimeouts;
 }
 export class google_dialogflow_fulfillment extends TerraformResource {
   readonly id?: string;

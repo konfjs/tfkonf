@@ -6,7 +6,7 @@ export interface GoogleLoggingOrganizationSettingsArgsTimeouts {
 }
 export interface GoogleLoggingOrganizationSettingsArgs {
   organization: string;
-  timeouts: GoogleLoggingOrganizationSettingsArgsTimeouts;
+  timeouts?: GoogleLoggingOrganizationSettingsArgsTimeouts;
 }
 export class google_logging_organization_settings extends TerraformResource {
   readonly disable_default_sink?: boolean;

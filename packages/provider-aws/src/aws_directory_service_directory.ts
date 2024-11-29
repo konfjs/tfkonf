@@ -24,7 +24,7 @@ export interface AwsDirectoryServiceDirectoryArgs {
   };
   type?: string;
   connect_settings: AwsDirectoryServiceDirectoryArgsConnectSettings;
-  timeouts: AwsDirectoryServiceDirectoryArgsTimeouts;
+  timeouts?: AwsDirectoryServiceDirectoryArgsTimeouts;
   vpc_settings: AwsDirectoryServiceDirectoryArgsVpcSettings;
 }
 export class aws_directory_service_directory extends TerraformResource {

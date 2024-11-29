@@ -79,7 +79,7 @@ export interface AwsBedrockagentDataSourceArgs {
   name: string;
   data_source_configuration: AwsBedrockagentDataSourceArgsDataSourceConfiguration;
   server_side_encryption_configuration: AwsBedrockagentDataSourceArgsServerSideEncryptionConfiguration;
-  timeouts: AwsBedrockagentDataSourceArgsTimeouts;
+  timeouts?: AwsBedrockagentDataSourceArgsTimeouts;
   vector_ingestion_configuration: AwsBedrockagentDataSourceArgsVectorIngestionConfiguration;
 }
 export class aws_bedrockagent_data_source extends TerraformResource {

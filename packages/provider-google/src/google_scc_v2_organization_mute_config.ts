@@ -11,7 +11,7 @@ export interface GoogleSccV2OrganizationMuteConfigArgs {
   mute_config_id: string;
   organization: string;
   type: string;
-  timeouts: GoogleSccV2OrganizationMuteConfigArgsTimeouts;
+  timeouts?: GoogleSccV2OrganizationMuteConfigArgsTimeouts;
 }
 export class google_scc_v2_organization_mute_config extends TerraformResource {
   readonly create_time!: string;

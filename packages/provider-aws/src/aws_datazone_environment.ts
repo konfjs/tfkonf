@@ -15,7 +15,7 @@ export interface AwsDatazoneEnvironmentArgs {
   name: string;
   profile_identifier: string;
   project_identifier: string;
-  timeouts: AwsDatazoneEnvironmentArgsTimeouts;
+  timeouts?: AwsDatazoneEnvironmentArgsTimeouts;
   user_parameters: AwsDatazoneEnvironmentArgsUserParameters;
 }
 export class aws_datazone_environment extends TerraformResource {

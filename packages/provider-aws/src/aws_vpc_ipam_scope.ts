@@ -10,7 +10,7 @@ export interface AwsVpcIpamScopeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpcIpamScopeArgsTimeouts;
+  timeouts?: AwsVpcIpamScopeArgsTimeouts;
 }
 export class aws_vpc_ipam_scope extends TerraformResource {
   readonly arn!: string;

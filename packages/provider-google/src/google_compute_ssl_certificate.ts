@@ -7,7 +7,7 @@ export interface GoogleComputeSslCertificateArgs {
   certificate: string;
   description?: string;
   private_key: string;
-  timeouts: GoogleComputeSslCertificateArgsTimeouts;
+  timeouts?: GoogleComputeSslCertificateArgsTimeouts;
 }
 export class google_compute_ssl_certificate extends TerraformResource {
   readonly certificate_id!: number;

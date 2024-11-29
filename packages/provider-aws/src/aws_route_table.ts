@@ -9,7 +9,7 @@ export interface AwsRouteTableArgs {
     [key: string]: string;
   };
   vpc_id: string;
-  timeouts: AwsRouteTableArgsTimeouts;
+  timeouts?: AwsRouteTableArgsTimeouts;
 }
 export class aws_route_table extends TerraformResource {
   readonly arn!: string;

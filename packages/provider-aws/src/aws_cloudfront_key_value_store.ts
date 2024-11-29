@@ -5,7 +5,7 @@ export interface AwsCloudfrontKeyValueStoreArgsTimeouts {
 export interface AwsCloudfrontKeyValueStoreArgs {
   comment?: string;
   name: string;
-  timeouts: AwsCloudfrontKeyValueStoreArgsTimeouts;
+  timeouts?: AwsCloudfrontKeyValueStoreArgsTimeouts;
 }
 export class aws_cloudfront_key_value_store extends TerraformResource {
   readonly arn!: string;

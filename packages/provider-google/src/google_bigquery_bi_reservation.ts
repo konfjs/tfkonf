@@ -13,7 +13,7 @@ export interface GoogleBigqueryBiReservationArgs {
   location: string;
   size?: number;
   preferred_tables: GoogleBigqueryBiReservationArgsPreferredTables;
-  timeouts: GoogleBigqueryBiReservationArgsTimeouts;
+  timeouts?: GoogleBigqueryBiReservationArgsTimeouts;
 }
 export class google_bigquery_bi_reservation extends TerraformResource {
   readonly id?: string;

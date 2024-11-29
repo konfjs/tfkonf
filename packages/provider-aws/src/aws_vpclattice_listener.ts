@@ -25,7 +25,7 @@ export interface AwsVpclatticeListenerArgs {
     [key: string]: string;
   };
   default_action: AwsVpclatticeListenerArgsDefaultAction;
-  timeouts: AwsVpclatticeListenerArgsTimeouts;
+  timeouts?: AwsVpclatticeListenerArgsTimeouts;
 }
 export class aws_vpclattice_listener extends TerraformResource {
   readonly arn!: string;

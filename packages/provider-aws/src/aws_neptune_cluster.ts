@@ -28,7 +28,7 @@ export interface AwsNeptuneClusterArgs {
     [key: string]: string;
   };
   serverless_v2_scaling_configuration: AwsNeptuneClusterArgsServerlessV2ScalingConfiguration;
-  timeouts: AwsNeptuneClusterArgsTimeouts;
+  timeouts?: AwsNeptuneClusterArgsTimeouts;
 }
 export class aws_neptune_cluster extends TerraformResource {
   readonly allow_major_version_upgrade?: boolean;

@@ -22,7 +22,7 @@ export interface GoogleContainerAnalysisNoteArgs {
   short_description?: string;
   attestation_authority: GoogleContainerAnalysisNoteArgsAttestationAuthority;
   related_url: GoogleContainerAnalysisNoteArgsRelatedUrl;
-  timeouts: GoogleContainerAnalysisNoteArgsTimeouts;
+  timeouts?: GoogleContainerAnalysisNoteArgsTimeouts;
 }
 export class google_container_analysis_note extends TerraformResource {
   readonly create_time!: string;

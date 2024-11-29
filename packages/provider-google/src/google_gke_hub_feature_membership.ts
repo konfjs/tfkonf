@@ -117,7 +117,7 @@ export interface GoogleGkeHubFeatureMembershipArgs {
   configmanagement: GoogleGkeHubFeatureMembershipArgsConfigmanagement;
   mesh: GoogleGkeHubFeatureMembershipArgsMesh;
   policycontroller: GoogleGkeHubFeatureMembershipArgsPolicycontroller;
-  timeouts: GoogleGkeHubFeatureMembershipArgsTimeouts;
+  timeouts?: GoogleGkeHubFeatureMembershipArgsTimeouts;
 }
 export class google_gke_hub_feature_membership extends TerraformResource {
   readonly id?: string;

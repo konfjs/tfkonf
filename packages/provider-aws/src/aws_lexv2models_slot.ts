@@ -608,7 +608,7 @@ export interface AwsLexv2modelsSlotArgs {
   multiple_values_setting: AwsLexv2modelsSlotArgsMultipleValuesSetting;
   obfuscation_setting: AwsLexv2modelsSlotArgsObfuscationSetting;
   sub_slot_setting: AwsLexv2modelsSlotArgsSubSlotSetting;
-  timeouts: AwsLexv2modelsSlotArgsTimeouts;
+  timeouts?: AwsLexv2modelsSlotArgsTimeouts;
   value_elicitation_setting: AwsLexv2modelsSlotArgsValueElicitationSetting;
 }
 export class aws_lexv2models_slot extends TerraformResource {

@@ -10,7 +10,7 @@ export interface AwsEc2TransitGatewayConnectPeerArgs {
     [key: string]: string;
   };
   transit_gateway_attachment_id: string;
-  timeouts: AwsEc2TransitGatewayConnectPeerArgsTimeouts;
+  timeouts?: AwsEc2TransitGatewayConnectPeerArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_connect_peer extends TerraformResource {
   readonly arn!: string;

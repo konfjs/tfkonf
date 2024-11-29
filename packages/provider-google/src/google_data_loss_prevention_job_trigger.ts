@@ -302,7 +302,7 @@ export interface GoogleDataLossPreventionJobTriggerArgs {
   parent: string;
   status?: string;
   inspect_job: GoogleDataLossPreventionJobTriggerArgsInspectJob;
-  timeouts: GoogleDataLossPreventionJobTriggerArgsTimeouts;
+  timeouts?: GoogleDataLossPreventionJobTriggerArgsTimeouts;
   triggers: GoogleDataLossPreventionJobTriggerArgsTriggers;
 }
 export class google_data_loss_prevention_job_trigger extends TerraformResource {

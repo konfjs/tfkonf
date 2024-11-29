@@ -37,7 +37,7 @@ export interface GoogleComputeRouterPeerArgs {
   bfd: GoogleComputeRouterPeerArgsBfd;
   custom_learned_ip_ranges: GoogleComputeRouterPeerArgsCustomLearnedIpRanges;
   md5_authentication_key: GoogleComputeRouterPeerArgsMd5AuthenticationKey;
-  timeouts: GoogleComputeRouterPeerArgsTimeouts;
+  timeouts?: GoogleComputeRouterPeerArgsTimeouts;
 }
 export class google_compute_router_peer extends TerraformResource {
   readonly enable_ipv4?: boolean;

@@ -17,7 +17,7 @@ export interface GoogleMlEngineModelArgs {
   online_prediction_logging?: boolean;
   regions?: string[];
   default_version: GoogleMlEngineModelArgsDefaultVersion;
-  timeouts: GoogleMlEngineModelArgsTimeouts;
+  timeouts?: GoogleMlEngineModelArgsTimeouts;
 }
 export class google_ml_engine_model extends TerraformResource {
   readonly effective_labels!: {

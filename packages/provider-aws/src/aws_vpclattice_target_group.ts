@@ -28,7 +28,7 @@ export interface AwsVpclatticeTargetGroupArgs {
   };
   type: string;
   config: AwsVpclatticeTargetGroupArgsConfig;
-  timeouts: AwsVpclatticeTargetGroupArgsTimeouts;
+  timeouts?: AwsVpclatticeTargetGroupArgsTimeouts;
 }
 export class aws_vpclattice_target_group extends TerraformResource {
   readonly arn!: string;

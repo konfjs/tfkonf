@@ -64,7 +64,7 @@ export interface GoogleIapSettingsArgs {
   name: string;
   access_settings: GoogleIapSettingsArgsAccessSettings;
   application_settings: GoogleIapSettingsArgsApplicationSettings;
-  timeouts: GoogleIapSettingsArgsTimeouts;
+  timeouts?: GoogleIapSettingsArgsTimeouts;
 }
 export class google_iap_settings extends TerraformResource {
   readonly id?: string;

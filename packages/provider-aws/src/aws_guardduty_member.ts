@@ -10,7 +10,7 @@ export interface AwsGuarddutyMemberArgs {
   email: string;
   invitation_message?: string;
   invite?: boolean;
-  timeouts: AwsGuarddutyMemberArgsTimeouts;
+  timeouts?: AwsGuarddutyMemberArgsTimeouts;
 }
 export class aws_guardduty_member extends TerraformResource {
   readonly id?: string;

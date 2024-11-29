@@ -31,7 +31,7 @@ export interface GoogleDialogflowCxIntentArgs {
   parent?: string;
   priority?: number;
   parameters: GoogleDialogflowCxIntentArgsParameters;
-  timeouts: GoogleDialogflowCxIntentArgsTimeouts;
+  timeouts?: GoogleDialogflowCxIntentArgsTimeouts;
   training_phrases: GoogleDialogflowCxIntentArgsTrainingPhrases;
 }
 export class google_dialogflow_cx_intent extends TerraformResource {

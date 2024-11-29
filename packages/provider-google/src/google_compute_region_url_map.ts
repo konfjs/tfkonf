@@ -361,7 +361,7 @@ export interface GoogleComputeRegionUrlMapArgs {
   host_rule: GoogleComputeRegionUrlMapArgsHostRule;
   path_matcher: GoogleComputeRegionUrlMapArgsPathMatcher;
   test: GoogleComputeRegionUrlMapArgsTest;
-  timeouts: GoogleComputeRegionUrlMapArgsTimeouts;
+  timeouts?: GoogleComputeRegionUrlMapArgsTimeouts;
 }
 export class google_compute_region_url_map extends TerraformResource {
   readonly creation_timestamp!: string;

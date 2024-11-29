@@ -21,7 +21,7 @@ export interface GoogleGkeHubMembershipArgs {
   membership_id: string;
   authority: GoogleGkeHubMembershipArgsAuthority;
   endpoint: GoogleGkeHubMembershipArgsEndpoint;
-  timeouts: GoogleGkeHubMembershipArgsTimeouts;
+  timeouts?: GoogleGkeHubMembershipArgsTimeouts;
 }
 export class google_gke_hub_membership extends TerraformResource {
   readonly effective_labels!: {

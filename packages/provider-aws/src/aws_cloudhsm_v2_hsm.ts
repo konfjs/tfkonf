@@ -5,7 +5,7 @@ export interface AwsCloudhsmV2HsmArgsTimeouts {
 }
 export interface AwsCloudhsmV2HsmArgs {
   cluster_id: string;
-  timeouts: AwsCloudhsmV2HsmArgsTimeouts;
+  timeouts?: AwsCloudhsmV2HsmArgsTimeouts;
 }
 export class aws_cloudhsm_v2_hsm extends TerraformResource {
   readonly availability_zone?: string;

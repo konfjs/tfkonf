@@ -6,7 +6,7 @@ export interface GoogleDocumentAiProcessorDefaultVersionArgsTimeouts {
 export interface GoogleDocumentAiProcessorDefaultVersionArgs {
   processor: string;
   version: string;
-  timeouts: GoogleDocumentAiProcessorDefaultVersionArgsTimeouts;
+  timeouts?: GoogleDocumentAiProcessorDefaultVersionArgsTimeouts;
 }
 export class google_document_ai_processor_default_version extends TerraformResource {
   readonly id?: string;

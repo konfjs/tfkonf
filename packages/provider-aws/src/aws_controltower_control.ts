@@ -12,7 +12,7 @@ export interface AwsControltowerControlArgs {
   control_identifier: string;
   target_identifier: string;
   parameters: AwsControltowerControlArgsParameters;
-  timeouts: AwsControltowerControlArgsTimeouts;
+  timeouts?: AwsControltowerControlArgsTimeouts;
 }
 export class aws_controltower_control extends TerraformResource {
   readonly arn!: string;

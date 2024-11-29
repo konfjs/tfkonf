@@ -9,7 +9,7 @@ export interface GoogleSccMuteConfigArgs {
   filter: string;
   mute_config_id: string;
   parent: string;
-  timeouts: GoogleSccMuteConfigArgsTimeouts;
+  timeouts?: GoogleSccMuteConfigArgsTimeouts;
 }
 export class google_scc_mute_config extends TerraformResource {
   readonly create_time!: string;

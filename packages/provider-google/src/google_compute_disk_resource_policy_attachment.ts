@@ -6,7 +6,7 @@ export interface GoogleComputeDiskResourcePolicyAttachmentArgsTimeouts {
 export interface GoogleComputeDiskResourcePolicyAttachmentArgs {
   disk: string;
   name: string;
-  timeouts: GoogleComputeDiskResourcePolicyAttachmentArgsTimeouts;
+  timeouts?: GoogleComputeDiskResourcePolicyAttachmentArgsTimeouts;
 }
 export class google_compute_disk_resource_policy_attachment extends TerraformResource {
   readonly id?: string;

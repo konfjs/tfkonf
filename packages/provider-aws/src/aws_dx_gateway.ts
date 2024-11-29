@@ -6,7 +6,7 @@ export interface AwsDxGatewayArgsTimeouts {
 export interface AwsDxGatewayArgs {
   amazon_side_asn: string;
   name: string;
-  timeouts: AwsDxGatewayArgsTimeouts;
+  timeouts?: AwsDxGatewayArgsTimeouts;
 }
 export class aws_dx_gateway extends TerraformResource {
   readonly id?: string;

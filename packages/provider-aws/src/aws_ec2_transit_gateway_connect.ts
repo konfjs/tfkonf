@@ -13,7 +13,7 @@ export interface AwsEc2TransitGatewayConnectArgs {
   transit_gateway_default_route_table_propagation?: boolean;
   transit_gateway_id: string;
   transport_attachment_id: string;
-  timeouts: AwsEc2TransitGatewayConnectArgsTimeouts;
+  timeouts?: AwsEc2TransitGatewayConnectArgsTimeouts;
 }
 export class aws_ec2_transit_gateway_connect extends TerraformResource {
   readonly id?: string;

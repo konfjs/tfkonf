@@ -142,7 +142,7 @@ export interface AwsS3BucketArgs {
   object_lock_configuration: AwsS3BucketArgsObjectLockConfiguration;
   replication_configuration: AwsS3BucketArgsReplicationConfiguration;
   server_side_encryption_configuration: AwsS3BucketArgsServerSideEncryptionConfiguration;
-  timeouts: AwsS3BucketArgsTimeouts;
+  timeouts?: AwsS3BucketArgsTimeouts;
   versioning: AwsS3BucketArgsVersioning;
   website: AwsS3BucketArgsWebsite;
 }

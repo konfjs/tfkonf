@@ -19,7 +19,7 @@ export interface AwsS3controlMultiRegionAccessPointArgsTimeouts {
 }
 export interface AwsS3controlMultiRegionAccessPointArgs {
   details: AwsS3controlMultiRegionAccessPointArgsDetails;
-  timeouts: AwsS3controlMultiRegionAccessPointArgsTimeouts;
+  timeouts?: AwsS3controlMultiRegionAccessPointArgsTimeouts;
 }
 export class aws_s3control_multi_region_access_point extends TerraformResource {
   readonly account_id?: string;

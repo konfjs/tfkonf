@@ -142,7 +142,7 @@ export interface GoogleComputeInstanceArgs {
   scratch_disk: GoogleComputeInstanceArgsScratchDisk;
   service_account: GoogleComputeInstanceArgsServiceAccount;
   shielded_instance_config: GoogleComputeInstanceArgsShieldedInstanceConfig;
-  timeouts: GoogleComputeInstanceArgsTimeouts;
+  timeouts?: GoogleComputeInstanceArgsTimeouts;
 }
 export class google_compute_instance extends TerraformResource {
   readonly cpu_platform!: string;

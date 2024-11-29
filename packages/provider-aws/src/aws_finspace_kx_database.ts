@@ -11,7 +11,7 @@ export interface AwsFinspaceKxDatabaseArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsFinspaceKxDatabaseArgsTimeouts;
+  timeouts?: AwsFinspaceKxDatabaseArgsTimeouts;
 }
 export class aws_finspace_kx_database extends TerraformResource {
   readonly arn!: string;

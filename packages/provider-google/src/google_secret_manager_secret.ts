@@ -46,7 +46,7 @@ export interface GoogleSecretManagerSecretArgs {
   version_destroy_ttl?: string;
   replication: GoogleSecretManagerSecretArgsReplication;
   rotation: GoogleSecretManagerSecretArgsRotation;
-  timeouts: GoogleSecretManagerSecretArgsTimeouts;
+  timeouts?: GoogleSecretManagerSecretArgsTimeouts;
   topics: GoogleSecretManagerSecretArgsTopics;
 }
 export class google_secret_manager_secret extends TerraformResource {

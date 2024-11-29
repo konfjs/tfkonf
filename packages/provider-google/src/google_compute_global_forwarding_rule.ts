@@ -29,7 +29,7 @@ export interface GoogleComputeGlobalForwardingRuleArgs {
   target: string;
   metadata_filters: GoogleComputeGlobalForwardingRuleArgsMetadataFilters;
   service_directory_registrations: GoogleComputeGlobalForwardingRuleArgsServiceDirectoryRegistrations;
-  timeouts: GoogleComputeGlobalForwardingRuleArgsTimeouts;
+  timeouts?: GoogleComputeGlobalForwardingRuleArgsTimeouts;
 }
 export class google_compute_global_forwarding_rule extends TerraformResource {
   readonly base_forwarding_rule!: string;

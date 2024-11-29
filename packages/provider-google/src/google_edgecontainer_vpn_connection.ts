@@ -17,7 +17,7 @@ export interface GoogleEdgecontainerVpnConnectionArgs {
   nat_gateway_ip?: string;
   router?: string;
   vpc?: string;
-  timeouts: GoogleEdgecontainerVpnConnectionArgsTimeouts;
+  timeouts?: GoogleEdgecontainerVpnConnectionArgsTimeouts;
   vpc_project: GoogleEdgecontainerVpnConnectionArgsVpcProject;
 }
 export class google_edgecontainer_vpn_connection extends TerraformResource {

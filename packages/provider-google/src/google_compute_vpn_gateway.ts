@@ -7,7 +7,7 @@ export interface GoogleComputeVpnGatewayArgs {
   description?: string;
   name: string;
   network: string;
-  timeouts: GoogleComputeVpnGatewayArgsTimeouts;
+  timeouts?: GoogleComputeVpnGatewayArgsTimeouts;
 }
 export class google_compute_vpn_gateway extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -35,7 +35,7 @@ export interface GoogleApikeysKeyArgs {
   display_name?: string;
   name: string;
   restrictions: GoogleApikeysKeyArgsRestrictions;
-  timeouts: GoogleApikeysKeyArgsTimeouts;
+  timeouts?: GoogleApikeysKeyArgsTimeouts;
 }
 export class google_apikeys_key extends TerraformResource {
   readonly id?: string;

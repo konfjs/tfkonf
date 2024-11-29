@@ -116,7 +116,7 @@ export interface GoogleComputeSecurityPolicyArgs {
   advanced_options_config: GoogleComputeSecurityPolicyArgsAdvancedOptionsConfig;
   recaptcha_options_config: GoogleComputeSecurityPolicyArgsRecaptchaOptionsConfig;
   rule: GoogleComputeSecurityPolicyArgsRule;
-  timeouts: GoogleComputeSecurityPolicyArgsTimeouts;
+  timeouts?: GoogleComputeSecurityPolicyArgsTimeouts;
 }
 export class google_compute_security_policy extends TerraformResource {
   readonly fingerprint!: string;

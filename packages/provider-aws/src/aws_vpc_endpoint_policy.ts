@@ -5,7 +5,7 @@ export interface AwsVpcEndpointPolicyArgsTimeouts {
 }
 export interface AwsVpcEndpointPolicyArgs {
   vpc_endpoint_id: string;
-  timeouts: AwsVpcEndpointPolicyArgsTimeouts;
+  timeouts?: AwsVpcEndpointPolicyArgsTimeouts;
 }
 export class aws_vpc_endpoint_policy extends TerraformResource {
   readonly id?: string;

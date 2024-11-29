@@ -11,7 +11,7 @@ export interface AwsDynamodbTableReplicaArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDynamodbTableReplicaArgsTimeouts;
+  timeouts?: AwsDynamodbTableReplicaArgsTimeouts;
 }
 export class aws_dynamodb_table_replica extends TerraformResource {
   readonly arn!: string;

@@ -8,7 +8,7 @@ export interface GoogleDataCatalogTaxonomyArgs {
   activated_policy_types?: string[];
   description?: string;
   display_name: string;
-  timeouts: GoogleDataCatalogTaxonomyArgsTimeouts;
+  timeouts?: GoogleDataCatalogTaxonomyArgsTimeouts;
 }
 export class google_data_catalog_taxonomy extends TerraformResource {
   readonly id?: string;

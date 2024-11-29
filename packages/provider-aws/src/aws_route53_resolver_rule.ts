@@ -19,7 +19,7 @@ export interface AwsRoute53ResolverRuleArgs {
     [key: string]: string;
   };
   target_ip: AwsRoute53ResolverRuleArgsTargetIp;
-  timeouts: AwsRoute53ResolverRuleArgsTimeouts;
+  timeouts?: AwsRoute53ResolverRuleArgsTimeouts;
 }
 export class aws_route53_resolver_rule extends TerraformResource {
   readonly arn!: string;

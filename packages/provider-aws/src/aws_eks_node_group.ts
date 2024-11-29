@@ -40,7 +40,7 @@ export interface AwsEksNodeGroupArgs {
   remote_access: AwsEksNodeGroupArgsRemoteAccess;
   scaling_config: AwsEksNodeGroupArgsScalingConfig;
   taint: AwsEksNodeGroupArgsTaint;
-  timeouts: AwsEksNodeGroupArgsTimeouts;
+  timeouts?: AwsEksNodeGroupArgsTimeouts;
   update_config: AwsEksNodeGroupArgsUpdateConfig;
 }
 export class aws_eks_node_group extends TerraformResource {

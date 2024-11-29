@@ -31,7 +31,7 @@ export interface AwsElasticacheReplicationGroupArgs {
   };
   user_group_ids?: string[];
   log_delivery_configuration: AwsElasticacheReplicationGroupArgsLogDeliveryConfiguration;
-  timeouts: AwsElasticacheReplicationGroupArgsTimeouts;
+  timeouts?: AwsElasticacheReplicationGroupArgsTimeouts;
 }
 export class aws_elasticache_replication_group extends TerraformResource {
   readonly apply_immediately?: boolean;

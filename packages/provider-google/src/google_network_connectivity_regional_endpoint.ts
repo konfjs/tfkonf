@@ -13,7 +13,7 @@ export interface GoogleNetworkConnectivityRegionalEndpointArgs {
   location: string;
   name: string;
   target_google_api: string;
-  timeouts: GoogleNetworkConnectivityRegionalEndpointArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityRegionalEndpointArgsTimeouts;
 }
 export class google_network_connectivity_regional_endpoint extends TerraformResource {
   readonly address?: string;

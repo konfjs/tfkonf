@@ -11,7 +11,7 @@ export interface AwsConnectVocabularyArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsConnectVocabularyArgsTimeouts;
+  timeouts?: AwsConnectVocabularyArgsTimeouts;
 }
 export class aws_connect_vocabulary extends TerraformResource {
   readonly arn!: string;

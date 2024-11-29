@@ -6,7 +6,7 @@ export interface GoogleKmsKeyRingArgsTimeouts {
 export interface GoogleKmsKeyRingArgs {
   location: string;
   name: string;
-  timeouts: GoogleKmsKeyRingArgsTimeouts;
+  timeouts?: GoogleKmsKeyRingArgsTimeouts;
 }
 export class google_kms_key_ring extends TerraformResource {
   readonly id?: string;

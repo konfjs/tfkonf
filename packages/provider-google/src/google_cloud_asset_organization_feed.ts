@@ -25,7 +25,7 @@ export interface GoogleCloudAssetOrganizationFeedArgs {
   org_id: string;
   condition: GoogleCloudAssetOrganizationFeedArgsCondition;
   feed_output_config: GoogleCloudAssetOrganizationFeedArgsFeedOutputConfig;
-  timeouts: GoogleCloudAssetOrganizationFeedArgsTimeouts;
+  timeouts?: GoogleCloudAssetOrganizationFeedArgsTimeouts;
 }
 export class google_cloud_asset_organization_feed extends TerraformResource {
   readonly id?: string;

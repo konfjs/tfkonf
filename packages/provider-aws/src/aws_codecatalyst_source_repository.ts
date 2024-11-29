@@ -9,7 +9,7 @@ export interface AwsCodecatalystSourceRepositoryArgs {
   name: string;
   project_name: string;
   space_name: string;
-  timeouts: AwsCodecatalystSourceRepositoryArgsTimeouts;
+  timeouts?: AwsCodecatalystSourceRepositoryArgsTimeouts;
 }
 export class aws_codecatalyst_source_repository extends TerraformResource {
   readonly id?: string;

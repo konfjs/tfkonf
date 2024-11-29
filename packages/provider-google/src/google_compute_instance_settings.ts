@@ -12,7 +12,7 @@ export interface GoogleComputeInstanceSettingsArgsTimeouts {
 export interface GoogleComputeInstanceSettingsArgs {
   zone: string;
   metadata: GoogleComputeInstanceSettingsArgsMetadata;
-  timeouts: GoogleComputeInstanceSettingsArgsTimeouts;
+  timeouts?: GoogleComputeInstanceSettingsArgsTimeouts;
 }
 export class google_compute_instance_settings extends TerraformResource {
   readonly fingerprint!: string;

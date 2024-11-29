@@ -21,7 +21,7 @@ export interface GoogleNetworkServicesGatewayArgs {
   server_tls_policy?: string;
   subnetwork?: string;
   type: string;
-  timeouts: GoogleNetworkServicesGatewayArgsTimeouts;
+  timeouts?: GoogleNetworkServicesGatewayArgsTimeouts;
 }
 export class google_network_services_gateway extends TerraformResource {
   readonly addresses?: string[];

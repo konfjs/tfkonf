@@ -30,7 +30,7 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   regions?: string[];
   required_access_levels?: string[];
   device_policy: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy;
-  timeouts: GoogleAccessContextManagerAccessLevelConditionArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerAccessLevelConditionArgsTimeouts;
   vpc_network_sources: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources;
 }
 export class google_access_context_manager_access_level_condition extends TerraformResource {

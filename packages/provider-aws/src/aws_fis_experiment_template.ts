@@ -70,7 +70,7 @@ export interface AwsFisExperimentTemplateArgs {
   log_configuration: AwsFisExperimentTemplateArgsLogConfiguration;
   stop_condition: AwsFisExperimentTemplateArgsStopCondition;
   target: AwsFisExperimentTemplateArgsTarget;
-  timeouts: AwsFisExperimentTemplateArgsTimeouts;
+  timeouts?: AwsFisExperimentTemplateArgsTimeouts;
 }
 export class aws_fis_experiment_template extends TerraformResource {
   readonly id?: string;

@@ -37,7 +37,7 @@ export interface GoogleAssuredWorkloadsWorkloadArgs {
   kms_settings: GoogleAssuredWorkloadsWorkloadArgsKmsSettings;
   partner_permissions: GoogleAssuredWorkloadsWorkloadArgsPartnerPermissions;
   resource_settings: GoogleAssuredWorkloadsWorkloadArgsResourceSettings;
-  timeouts: GoogleAssuredWorkloadsWorkloadArgsTimeouts;
+  timeouts?: GoogleAssuredWorkloadsWorkloadArgsTimeouts;
   workload_options: GoogleAssuredWorkloadsWorkloadArgsWorkloadOptions;
 }
 export class google_assured_workloads_workload extends TerraformResource {

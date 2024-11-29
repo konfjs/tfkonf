@@ -20,7 +20,7 @@ export interface AwsSubnetArgs {
     [key: string]: string;
   };
   vpc_id: string;
-  timeouts: AwsSubnetArgsTimeouts;
+  timeouts?: AwsSubnetArgsTimeouts;
 }
 export class aws_subnet extends TerraformResource {
   readonly arn!: string;

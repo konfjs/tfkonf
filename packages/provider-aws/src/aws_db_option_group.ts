@@ -23,7 +23,7 @@ export interface AwsDbOptionGroupArgs {
     [key: string]: string;
   };
   option: AwsDbOptionGroupArgsOption;
-  timeouts: AwsDbOptionGroupArgsTimeouts;
+  timeouts?: AwsDbOptionGroupArgsTimeouts;
 }
 export class aws_db_option_group extends TerraformResource {
   readonly arn!: string;

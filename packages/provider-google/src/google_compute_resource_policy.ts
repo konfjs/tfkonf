@@ -69,7 +69,7 @@ export interface GoogleComputeResourcePolicyArgs {
   group_placement_policy: GoogleComputeResourcePolicyArgsGroupPlacementPolicy;
   instance_schedule_policy: GoogleComputeResourcePolicyArgsInstanceSchedulePolicy;
   snapshot_schedule_policy: GoogleComputeResourcePolicyArgsSnapshotSchedulePolicy;
-  timeouts: GoogleComputeResourcePolicyArgsTimeouts;
+  timeouts?: GoogleComputeResourcePolicyArgsTimeouts;
 }
 export class google_compute_resource_policy extends TerraformResource {
   readonly id?: string;

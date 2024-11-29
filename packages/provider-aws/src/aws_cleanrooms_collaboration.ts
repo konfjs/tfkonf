@@ -26,7 +26,7 @@ export interface AwsCleanroomsCollaborationArgs {
   };
   data_encryption_metadata: AwsCleanroomsCollaborationArgsDataEncryptionMetadata;
   member: AwsCleanroomsCollaborationArgsMember;
-  timeouts: AwsCleanroomsCollaborationArgsTimeouts;
+  timeouts?: AwsCleanroomsCollaborationArgsTimeouts;
 }
 export class aws_cleanrooms_collaboration extends TerraformResource {
   readonly arn!: string;
