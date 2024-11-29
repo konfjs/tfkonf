@@ -9,7 +9,7 @@ export interface GoogleNetworkSecurityGatewaySecurityPolicyArgs {
   location?: string;
   name: string;
   tls_inspection_policy?: string;
-  timeouts: GoogleNetworkSecurityGatewaySecurityPolicyArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityGatewaySecurityPolicyArgsTimeouts;
 }
 export class google_network_security_gateway_security_policy extends TerraformResource {
   readonly create_time!: string;

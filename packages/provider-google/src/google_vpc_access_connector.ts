@@ -11,7 +11,7 @@ export interface GoogleVpcAccessConnectorArgs {
   machine_type?: string;
   name: string;
   subnet: GoogleVpcAccessConnectorArgsSubnet;
-  timeouts: GoogleVpcAccessConnectorArgsTimeouts;
+  timeouts?: GoogleVpcAccessConnectorArgsTimeouts;
 }
 export class google_vpc_access_connector extends TerraformResource {
   readonly connected_projects!: string[];

@@ -15,7 +15,7 @@ export interface GoogleNetworkSecurityFirewallEndpointAssociationArgs {
   network: string;
   parent?: string;
   tls_inspection_policy?: string;
-  timeouts: GoogleNetworkSecurityFirewallEndpointAssociationArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityFirewallEndpointAssociationArgsTimeouts;
 }
 export class google_network_security_firewall_endpoint_association extends TerraformResource {
   readonly create_time!: string;

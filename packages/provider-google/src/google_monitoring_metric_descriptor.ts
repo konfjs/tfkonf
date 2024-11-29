@@ -23,7 +23,7 @@ export interface GoogleMonitoringMetricDescriptorArgs {
   value_type: string;
   labels: GoogleMonitoringMetricDescriptorArgsLabels;
   metadata: GoogleMonitoringMetricDescriptorArgsMetadata;
-  timeouts: GoogleMonitoringMetricDescriptorArgsTimeouts;
+  timeouts?: GoogleMonitoringMetricDescriptorArgsTimeouts;
 }
 export class google_monitoring_metric_descriptor extends TerraformResource {
   readonly id?: string;

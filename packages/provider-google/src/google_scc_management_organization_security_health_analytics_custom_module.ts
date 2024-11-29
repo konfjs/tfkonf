@@ -40,7 +40,7 @@ export interface GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomMod
   location?: string;
   organization: string;
   custom_config: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsTimeouts;
+  timeouts?: GoogleSccManagementOrganizationSecurityHealthAnalyticsCustomModuleArgsTimeouts;
 }
 export class google_scc_management_organization_security_health_analytics_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

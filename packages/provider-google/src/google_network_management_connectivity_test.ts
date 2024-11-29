@@ -29,7 +29,7 @@ export interface GoogleNetworkManagementConnectivityTestArgs {
   related_projects?: string[];
   destination: GoogleNetworkManagementConnectivityTestArgsDestination;
   source: GoogleNetworkManagementConnectivityTestArgsSource;
-  timeouts: GoogleNetworkManagementConnectivityTestArgsTimeouts;
+  timeouts?: GoogleNetworkManagementConnectivityTestArgsTimeouts;
 }
 export class google_network_management_connectivity_test extends TerraformResource {
   readonly effective_labels!: {

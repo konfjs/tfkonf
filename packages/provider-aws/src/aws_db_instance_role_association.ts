@@ -7,7 +7,7 @@ export interface AwsDbInstanceRoleAssociationArgs {
   db_instance_identifier: string;
   feature_name: string;
   role_arn: string;
-  timeouts: AwsDbInstanceRoleAssociationArgsTimeouts;
+  timeouts?: AwsDbInstanceRoleAssociationArgsTimeouts;
 }
 export class aws_db_instance_role_association extends TerraformResource {
   readonly id?: string;

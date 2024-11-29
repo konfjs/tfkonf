@@ -6,7 +6,7 @@ export interface AwsSesv2DedicatedIpAssignmentArgsTimeouts {
 export interface AwsSesv2DedicatedIpAssignmentArgs {
   destination_pool_name: string;
   ip: string;
-  timeouts: AwsSesv2DedicatedIpAssignmentArgsTimeouts;
+  timeouts?: AwsSesv2DedicatedIpAssignmentArgsTimeouts;
 }
 export class aws_sesv2_dedicated_ip_assignment extends TerraformResource {
   readonly id?: string;

@@ -70,7 +70,7 @@ export interface AwsLambdaFunctionArgs {
   image_config: AwsLambdaFunctionArgsImageConfig;
   logging_config: AwsLambdaFunctionArgsLoggingConfig;
   snap_start: AwsLambdaFunctionArgsSnapStart;
-  timeouts: AwsLambdaFunctionArgsTimeouts;
+  timeouts?: AwsLambdaFunctionArgsTimeouts;
   tracing_config: AwsLambdaFunctionArgsTracingConfig;
   vpc_config: AwsLambdaFunctionArgsVpcConfig;
 }

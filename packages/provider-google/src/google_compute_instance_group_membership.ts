@@ -7,7 +7,7 @@ export interface GoogleComputeInstanceGroupMembershipArgs {
   instance: string;
   instance_group: string;
   zone?: string;
-  timeouts: GoogleComputeInstanceGroupMembershipArgsTimeouts;
+  timeouts?: GoogleComputeInstanceGroupMembershipArgsTimeouts;
 }
 export class google_compute_instance_group_membership extends TerraformResource {
   readonly id?: string;

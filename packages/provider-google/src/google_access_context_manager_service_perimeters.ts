@@ -142,7 +142,7 @@ export interface GoogleAccessContextManagerServicePerimetersArgsTimeouts {
 export interface GoogleAccessContextManagerServicePerimetersArgs {
   parent: string;
   service_perimeters: GoogleAccessContextManagerServicePerimetersArgsServicePerimeters;
-  timeouts: GoogleAccessContextManagerServicePerimetersArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerServicePerimetersArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeters extends TerraformResource {
   readonly id?: string;

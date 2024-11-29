@@ -134,7 +134,7 @@ export interface GoogleNetworkServicesEdgeCacheServiceArgs {
   ssl_policy?: string;
   log_config: GoogleNetworkServicesEdgeCacheServiceArgsLogConfig;
   routing: GoogleNetworkServicesEdgeCacheServiceArgsRouting;
-  timeouts: GoogleNetworkServicesEdgeCacheServiceArgsTimeouts;
+  timeouts?: GoogleNetworkServicesEdgeCacheServiceArgsTimeouts;
 }
 export class google_network_services_edge_cache_service extends TerraformResource {
   readonly disable_quic?: boolean;

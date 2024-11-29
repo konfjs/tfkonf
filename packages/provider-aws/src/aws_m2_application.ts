@@ -18,7 +18,7 @@ export interface AwsM2ApplicationArgs {
     [key: string]: string;
   };
   definition: AwsM2ApplicationArgsDefinition;
-  timeouts: AwsM2ApplicationArgsTimeouts;
+  timeouts?: AwsM2ApplicationArgsTimeouts;
 }
 export class aws_m2_application extends TerraformResource {
   readonly application_id!: string;

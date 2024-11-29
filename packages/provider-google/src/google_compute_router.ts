@@ -21,7 +21,7 @@ export interface GoogleComputeRouterArgs {
   name: string;
   network: string;
   bgp: GoogleComputeRouterArgsBgp;
-  timeouts: GoogleComputeRouterArgsTimeouts;
+  timeouts?: GoogleComputeRouterArgsTimeouts;
 }
 export class google_compute_router extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -49,7 +49,7 @@ export interface AwsComprehendEntityRecognizerArgs {
   };
   volume_kms_key_id?: string;
   input_data_config: AwsComprehendEntityRecognizerArgsInputDataConfig;
-  timeouts: AwsComprehendEntityRecognizerArgsTimeouts;
+  timeouts?: AwsComprehendEntityRecognizerArgsTimeouts;
   vpc_config: AwsComprehendEntityRecognizerArgsVpcConfig;
 }
 export class aws_comprehend_entity_recognizer extends TerraformResource {

@@ -42,7 +42,7 @@ export interface AwsGameliftFleetArgs {
   ec2_inbound_permission: AwsGameliftFleetArgsEc2InboundPermission;
   resource_creation_limit_policy: AwsGameliftFleetArgsResourceCreationLimitPolicy;
   runtime_configuration: AwsGameliftFleetArgsRuntimeConfiguration;
-  timeouts: AwsGameliftFleetArgsTimeouts;
+  timeouts?: AwsGameliftFleetArgsTimeouts;
 }
 export class aws_gamelift_fleet extends TerraformResource {
   readonly arn!: string;

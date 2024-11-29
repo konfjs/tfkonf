@@ -6,7 +6,7 @@ export interface AwsAppsyncSourceApiAssociationArgsTimeouts {
 }
 export interface AwsAppsyncSourceApiAssociationArgs {
   description?: string;
-  timeouts: AwsAppsyncSourceApiAssociationArgsTimeouts;
+  timeouts?: AwsAppsyncSourceApiAssociationArgsTimeouts;
 }
 export class aws_appsync_source_api_association extends TerraformResource {
   readonly arn!: string;

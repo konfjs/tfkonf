@@ -38,7 +38,7 @@ export interface GoogleBigqueryAnalyticsHubListingArgs {
   data_provider: GoogleBigqueryAnalyticsHubListingArgsDataProvider;
   publisher: GoogleBigqueryAnalyticsHubListingArgsPublisher;
   restricted_export_config: GoogleBigqueryAnalyticsHubListingArgsRestrictedExportConfig;
-  timeouts: GoogleBigqueryAnalyticsHubListingArgsTimeouts;
+  timeouts?: GoogleBigqueryAnalyticsHubListingArgsTimeouts;
 }
 export class google_bigquery_analytics_hub_listing extends TerraformResource {
   readonly id?: string;

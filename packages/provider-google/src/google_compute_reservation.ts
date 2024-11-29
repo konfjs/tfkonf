@@ -35,7 +35,7 @@ export interface GoogleComputeReservationArgs {
   zone: string;
   share_settings: GoogleComputeReservationArgsShareSettings;
   specific_reservation: GoogleComputeReservationArgsSpecificReservation;
-  timeouts: GoogleComputeReservationArgsTimeouts;
+  timeouts?: GoogleComputeReservationArgsTimeouts;
 }
 export class google_compute_reservation extends TerraformResource {
   readonly commitment!: string;

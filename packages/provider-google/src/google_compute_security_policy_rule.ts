@@ -99,7 +99,7 @@ export interface GoogleComputeSecurityPolicyRuleArgs {
   preconfigured_waf_config: GoogleComputeSecurityPolicyRuleArgsPreconfiguredWafConfig;
   rate_limit_options: GoogleComputeSecurityPolicyRuleArgsRateLimitOptions;
   redirect_options: GoogleComputeSecurityPolicyRuleArgsRedirectOptions;
-  timeouts: GoogleComputeSecurityPolicyRuleArgsTimeouts;
+  timeouts?: GoogleComputeSecurityPolicyRuleArgsTimeouts;
 }
 export class google_compute_security_policy_rule extends TerraformResource {
   readonly id?: string;

@@ -110,7 +110,7 @@ export interface GoogleDataplexDatascanArgs {
   data_profile_spec: GoogleDataplexDatascanArgsDataProfileSpec;
   data_quality_spec: GoogleDataplexDatascanArgsDataQualitySpec;
   execution_spec: GoogleDataplexDatascanArgsExecutionSpec;
-  timeouts: GoogleDataplexDatascanArgsTimeouts;
+  timeouts?: GoogleDataplexDatascanArgsTimeouts;
 }
 export class google_dataplex_datascan extends TerraformResource {
   readonly create_time!: string;

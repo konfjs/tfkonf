@@ -15,7 +15,7 @@ export interface GoogleComputeTargetHttpsProxyArgs {
   ssl_certificates?: string[];
   ssl_policy?: string;
   url_map: string;
-  timeouts: GoogleComputeTargetHttpsProxyArgsTimeouts;
+  timeouts?: GoogleComputeTargetHttpsProxyArgsTimeouts;
 }
 export class google_compute_target_https_proxy extends TerraformResource {
   readonly creation_timestamp!: string;

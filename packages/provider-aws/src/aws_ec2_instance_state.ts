@@ -8,7 +8,7 @@ export interface AwsEc2InstanceStateArgs {
   force?: boolean;
   instance_id: string;
   state: string;
-  timeouts: AwsEc2InstanceStateArgsTimeouts;
+  timeouts?: AwsEc2InstanceStateArgsTimeouts;
 }
 export class aws_ec2_instance_state extends TerraformResource {
   readonly id?: string;

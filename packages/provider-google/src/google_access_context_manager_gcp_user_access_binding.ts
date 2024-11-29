@@ -8,7 +8,7 @@ export interface GoogleAccessContextManagerGcpUserAccessBindingArgs {
   access_levels: string[];
   group_key: string;
   organization_id: string;
-  timeouts: GoogleAccessContextManagerGcpUserAccessBindingArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerGcpUserAccessBindingArgsTimeouts;
 }
 export class google_access_context_manager_gcp_user_access_binding extends TerraformResource {
   readonly id?: string;

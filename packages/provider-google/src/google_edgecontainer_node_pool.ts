@@ -19,7 +19,7 @@ export interface GoogleEdgecontainerNodePoolArgs {
   node_location: string;
   local_disk_encryption: GoogleEdgecontainerNodePoolArgsLocalDiskEncryption;
   node_config: GoogleEdgecontainerNodePoolArgsNodeConfig;
-  timeouts: GoogleEdgecontainerNodePoolArgsTimeouts;
+  timeouts?: GoogleEdgecontainerNodePoolArgsTimeouts;
 }
 export class google_edgecontainer_node_pool extends TerraformResource {
   readonly create_time!: string;

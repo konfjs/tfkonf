@@ -4,7 +4,7 @@ export interface AwsMacie2InvitationAccepterArgsTimeouts {
 }
 export interface AwsMacie2InvitationAccepterArgs {
   administrator_account_id: string;
-  timeouts: AwsMacie2InvitationAccepterArgsTimeouts;
+  timeouts?: AwsMacie2InvitationAccepterArgsTimeouts;
 }
 export class aws_macie2_invitation_accepter extends TerraformResource {
   readonly id?: string;

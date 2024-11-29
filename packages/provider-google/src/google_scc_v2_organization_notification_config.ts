@@ -14,7 +14,7 @@ export interface GoogleSccV2OrganizationNotificationConfigArgs {
   organization: string;
   pubsub_topic: string;
   streaming_config: GoogleSccV2OrganizationNotificationConfigArgsStreamingConfig;
-  timeouts: GoogleSccV2OrganizationNotificationConfigArgsTimeouts;
+  timeouts?: GoogleSccV2OrganizationNotificationConfigArgsTimeouts;
 }
 export class google_scc_v2_organization_notification_config extends TerraformResource {
   readonly id?: string;

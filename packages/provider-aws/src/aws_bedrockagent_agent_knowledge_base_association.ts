@@ -8,7 +8,7 @@ export interface AwsBedrockagentAgentKnowledgeBaseAssociationArgs {
   description: string;
   knowledge_base_id: string;
   knowledge_base_state: string;
-  timeouts: AwsBedrockagentAgentKnowledgeBaseAssociationArgsTimeouts;
+  timeouts?: AwsBedrockagentAgentKnowledgeBaseAssociationArgsTimeouts;
 }
 export class aws_bedrockagent_agent_knowledge_base_association extends TerraformResource {
   readonly agent_version?: string;

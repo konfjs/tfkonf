@@ -39,7 +39,7 @@ export interface AwsBcmdataexportsExportArgs {
     [key: string]: string;
   };
   export: AwsBcmdataexportsExportArgsExport;
-  timeouts: AwsBcmdataexportsExportArgsTimeouts;
+  timeouts?: AwsBcmdataexportsExportArgsTimeouts;
 }
 export class aws_bcmdataexports_export extends TerraformResource {
   readonly id!: string;

@@ -80,7 +80,7 @@ export interface AwsFinspaceKxClusterArgs {
   savedown_storage_configuration: AwsFinspaceKxClusterArgsSavedownStorageConfiguration;
   scaling_group_configuration: AwsFinspaceKxClusterArgsScalingGroupConfiguration;
   tickerplant_log_configuration: AwsFinspaceKxClusterArgsTickerplantLogConfiguration;
-  timeouts: AwsFinspaceKxClusterArgsTimeouts;
+  timeouts?: AwsFinspaceKxClusterArgsTimeouts;
   vpc_configuration: AwsFinspaceKxClusterArgsVpcConfiguration;
 }
 export class aws_finspace_kx_cluster extends TerraformResource {

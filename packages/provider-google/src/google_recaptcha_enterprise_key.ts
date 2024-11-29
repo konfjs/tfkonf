@@ -33,7 +33,7 @@ export interface GoogleRecaptchaEnterpriseKeyArgs {
   android_settings: GoogleRecaptchaEnterpriseKeyArgsAndroidSettings;
   ios_settings: GoogleRecaptchaEnterpriseKeyArgsIosSettings;
   testing_options: GoogleRecaptchaEnterpriseKeyArgsTestingOptions;
-  timeouts: GoogleRecaptchaEnterpriseKeyArgsTimeouts;
+  timeouts?: GoogleRecaptchaEnterpriseKeyArgsTimeouts;
   waf_settings: GoogleRecaptchaEnterpriseKeyArgsWafSettings;
   web_settings: GoogleRecaptchaEnterpriseKeyArgsWebSettings;
 }

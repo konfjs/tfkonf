@@ -9,7 +9,7 @@ export interface GoogleFirestoreDocumentArgs {
   database?: string;
   document_id: string;
   fields: string;
-  timeouts: GoogleFirestoreDocumentArgsTimeouts;
+  timeouts?: GoogleFirestoreDocumentArgsTimeouts;
 }
 export class google_firestore_document extends TerraformResource {
   readonly create_time!: string;

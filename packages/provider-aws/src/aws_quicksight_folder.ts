@@ -18,7 +18,7 @@ export interface AwsQuicksightFolderArgs {
     [key: string]: string;
   };
   permissions: AwsQuicksightFolderArgsPermissions;
-  timeouts: AwsQuicksightFolderArgsTimeouts;
+  timeouts?: AwsQuicksightFolderArgsTimeouts;
 }
 export class aws_quicksight_folder extends TerraformResource {
   readonly arn!: string;

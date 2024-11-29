@@ -7,7 +7,7 @@ export interface AwsEipDomainNameArgsTimeouts {
 export interface AwsEipDomainNameArgs {
   allocation_id: string;
   domain_name: string;
-  timeouts: AwsEipDomainNameArgsTimeouts;
+  timeouts?: AwsEipDomainNameArgsTimeouts;
 }
 export class aws_eip_domain_name extends TerraformResource {
   readonly id!: string;

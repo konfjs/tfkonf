@@ -23,7 +23,7 @@ export interface AwsTransferUserArgs {
   user_name: string;
   home_directory_mappings: AwsTransferUserArgsHomeDirectoryMappings;
   posix_profile: AwsTransferUserArgsPosixProfile;
-  timeouts: AwsTransferUserArgsTimeouts;
+  timeouts?: AwsTransferUserArgsTimeouts;
 }
 export class aws_transfer_user extends TerraformResource {
   readonly arn!: string;

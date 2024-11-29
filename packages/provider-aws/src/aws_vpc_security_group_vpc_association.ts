@@ -6,7 +6,7 @@ export interface AwsVpcSecurityGroupVpcAssociationArgsTimeouts {
 export interface AwsVpcSecurityGroupVpcAssociationArgs {
   security_group_id: string;
   vpc_id: string;
-  timeouts: AwsVpcSecurityGroupVpcAssociationArgsTimeouts;
+  timeouts?: AwsVpcSecurityGroupVpcAssociationArgsTimeouts;
 }
 export class aws_vpc_security_group_vpc_association extends TerraformResource {
   readonly state!: string;

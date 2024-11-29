@@ -25,7 +25,7 @@ export interface GoogleApigeeKeystoresAliasesSelfSignedCertArgs {
   sig_alg: string;
   subject: GoogleApigeeKeystoresAliasesSelfSignedCertArgsSubject;
   subject_alternative_dns_names: GoogleApigeeKeystoresAliasesSelfSignedCertArgsSubjectAlternativeDnsNames;
-  timeouts: GoogleApigeeKeystoresAliasesSelfSignedCertArgsTimeouts;
+  timeouts?: GoogleApigeeKeystoresAliasesSelfSignedCertArgsTimeouts;
 }
 export class google_apigee_keystores_aliases_self_signed_cert extends TerraformResource {
   readonly certs_info!: any[];

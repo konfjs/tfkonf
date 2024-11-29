@@ -23,7 +23,7 @@ export interface GoogleCloudbuildBitbucketServerConfigArgs {
   username: string;
   connected_repositories: GoogleCloudbuildBitbucketServerConfigArgsConnectedRepositories;
   secrets: GoogleCloudbuildBitbucketServerConfigArgsSecrets;
-  timeouts: GoogleCloudbuildBitbucketServerConfigArgsTimeouts;
+  timeouts?: GoogleCloudbuildBitbucketServerConfigArgsTimeouts;
 }
 export class google_cloudbuild_bitbucket_server_config extends TerraformResource {
   readonly id?: string;

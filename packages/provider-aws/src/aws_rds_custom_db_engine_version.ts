@@ -17,7 +17,7 @@ export interface AwsRdsCustomDbEngineVersionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRdsCustomDbEngineVersionArgsTimeouts;
+  timeouts?: AwsRdsCustomDbEngineVersionArgsTimeouts;
 }
 export class aws_rds_custom_db_engine_version extends TerraformResource {
   readonly arn!: string;

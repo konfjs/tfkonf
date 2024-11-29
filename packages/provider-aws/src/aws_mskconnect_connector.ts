@@ -87,7 +87,7 @@ export interface AwsMskconnectConnectorArgs {
   kafka_cluster_encryption_in_transit: AwsMskconnectConnectorArgsKafkaClusterEncryptionInTransit;
   log_delivery: AwsMskconnectConnectorArgsLogDelivery;
   plugin: AwsMskconnectConnectorArgsPlugin;
-  timeouts: AwsMskconnectConnectorArgsTimeouts;
+  timeouts?: AwsMskconnectConnectorArgsTimeouts;
   worker_configuration: AwsMskconnectConnectorArgsWorkerConfiguration;
 }
 export class aws_mskconnect_connector extends TerraformResource {

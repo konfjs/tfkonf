@@ -9,7 +9,7 @@ export interface AwsIotPolicyArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIotPolicyArgsTimeouts;
+  timeouts?: AwsIotPolicyArgsTimeouts;
 }
 export class aws_iot_policy extends TerraformResource {
   readonly arn!: string;

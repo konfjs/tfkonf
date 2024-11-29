@@ -11,7 +11,7 @@ export interface AwsVpcIpamPoolCidrArgs {
   ipam_pool_id: string;
   netmask_length?: number;
   cidr_authorization_context: AwsVpcIpamPoolCidrArgsCidrAuthorizationContext;
-  timeouts: AwsVpcIpamPoolCidrArgsTimeouts;
+  timeouts?: AwsVpcIpamPoolCidrArgsTimeouts;
 }
 export class aws_vpc_ipam_pool_cidr extends TerraformResource {
   readonly cidr?: string;

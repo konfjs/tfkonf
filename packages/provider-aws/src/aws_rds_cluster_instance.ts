@@ -16,7 +16,7 @@ export interface AwsRdsClusterInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRdsClusterInstanceArgsTimeouts;
+  timeouts?: AwsRdsClusterInstanceArgsTimeouts;
 }
 export class aws_rds_cluster_instance extends TerraformResource {
   readonly apply_immediately?: boolean;

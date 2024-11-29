@@ -14,7 +14,7 @@ export interface GoogleNetworkSecurityTlsInspectionPolicyArgs {
   name: string;
   tls_feature_profile?: string;
   trust_config?: string;
-  timeouts: GoogleNetworkSecurityTlsInspectionPolicyArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityTlsInspectionPolicyArgsTimeouts;
 }
 export class google_network_security_tls_inspection_policy extends TerraformResource {
   readonly create_time!: string;

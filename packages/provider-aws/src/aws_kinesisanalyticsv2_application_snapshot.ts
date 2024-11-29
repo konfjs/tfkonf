@@ -6,7 +6,7 @@ export interface AwsKinesisanalyticsv2ApplicationSnapshotArgsTimeouts {
 export interface AwsKinesisanalyticsv2ApplicationSnapshotArgs {
   application_name: string;
   snapshot_name: string;
-  timeouts: AwsKinesisanalyticsv2ApplicationSnapshotArgsTimeouts;
+  timeouts?: AwsKinesisanalyticsv2ApplicationSnapshotArgsTimeouts;
 }
 export class aws_kinesisanalyticsv2_application_snapshot extends TerraformResource {
   readonly application_version_id!: number;

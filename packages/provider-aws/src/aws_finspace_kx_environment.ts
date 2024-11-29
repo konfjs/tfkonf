@@ -37,7 +37,7 @@ export interface AwsFinspaceKxEnvironmentArgs {
     [key: string]: string;
   };
   custom_dns_configuration: AwsFinspaceKxEnvironmentArgsCustomDnsConfiguration;
-  timeouts: AwsFinspaceKxEnvironmentArgsTimeouts;
+  timeouts?: AwsFinspaceKxEnvironmentArgsTimeouts;
   transit_gateway_configuration: AwsFinspaceKxEnvironmentArgsTransitGatewayConfiguration;
 }
 export class aws_finspace_kx_environment extends TerraformResource {

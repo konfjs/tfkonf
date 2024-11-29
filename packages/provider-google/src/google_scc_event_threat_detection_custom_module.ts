@@ -10,7 +10,7 @@ export interface GoogleSccEventThreatDetectionCustomModuleArgs {
   enablement_state: string;
   organization: string;
   type: string;
-  timeouts: GoogleSccEventThreatDetectionCustomModuleArgsTimeouts;
+  timeouts?: GoogleSccEventThreatDetectionCustomModuleArgsTimeouts;
 }
 export class google_scc_event_threat_detection_custom_module extends TerraformResource {
   readonly id?: string;

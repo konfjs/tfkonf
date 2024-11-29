@@ -48,7 +48,7 @@ export interface GoogleAlloydbInstanceArgs {
   psc_instance_config: GoogleAlloydbInstanceArgsPscInstanceConfig;
   query_insights_config: GoogleAlloydbInstanceArgsQueryInsightsConfig;
   read_pool_config: GoogleAlloydbInstanceArgsReadPoolConfig;
-  timeouts: GoogleAlloydbInstanceArgsTimeouts;
+  timeouts?: GoogleAlloydbInstanceArgsTimeouts;
 }
 export class google_alloydb_instance extends TerraformResource {
   readonly availability_type?: string;

@@ -10,7 +10,7 @@ export interface AwsDxHostedPrivateVirtualInterfaceAccepterArgs {
   };
   virtual_interface_id: string;
   vpn_gateway_id?: string;
-  timeouts: AwsDxHostedPrivateVirtualInterfaceAccepterArgsTimeouts;
+  timeouts?: AwsDxHostedPrivateVirtualInterfaceAccepterArgsTimeouts;
 }
 export class aws_dx_hosted_private_virtual_interface_accepter extends TerraformResource {
   readonly arn!: string;

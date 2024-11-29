@@ -8,7 +8,7 @@ export interface GoogleDialogflowCxVersionArgs {
   description?: string;
   display_name: string;
   parent?: string;
-  timeouts: GoogleDialogflowCxVersionArgsTimeouts;
+  timeouts?: GoogleDialogflowCxVersionArgsTimeouts;
 }
 export class google_dialogflow_cx_version extends TerraformResource {
   readonly create_time!: string;

@@ -24,7 +24,7 @@ export interface AwsEvidentlyFeatureArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEvidentlyFeatureArgsTimeouts;
+  timeouts?: AwsEvidentlyFeatureArgsTimeouts;
   variations: AwsEvidentlyFeatureArgsVariations;
 }
 export class aws_evidently_feature extends TerraformResource {

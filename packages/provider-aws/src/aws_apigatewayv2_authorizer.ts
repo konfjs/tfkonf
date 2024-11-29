@@ -16,7 +16,7 @@ export interface AwsApigatewayv2AuthorizerArgs {
   identity_sources?: string[];
   name: string;
   jwt_configuration: AwsApigatewayv2AuthorizerArgsJwtConfiguration;
-  timeouts: AwsApigatewayv2AuthorizerArgsTimeouts;
+  timeouts?: AwsApigatewayv2AuthorizerArgsTimeouts;
 }
 export class aws_apigatewayv2_authorizer extends TerraformResource {
   readonly authorizer_result_ttl_in_seconds?: number;

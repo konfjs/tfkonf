@@ -8,7 +8,7 @@ export interface AwsDocdbGlobalClusterArgs {
   database_name?: string;
   deletion_protection?: boolean;
   global_cluster_identifier: string;
-  timeouts: AwsDocdbGlobalClusterArgsTimeouts;
+  timeouts?: AwsDocdbGlobalClusterArgsTimeouts;
 }
 export class aws_docdb_global_cluster extends TerraformResource {
   readonly arn!: string;

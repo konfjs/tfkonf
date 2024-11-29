@@ -9,7 +9,7 @@ export interface AwsElasticacheReservedCacheNodeArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsElasticacheReservedCacheNodeArgsTimeouts;
+  timeouts?: AwsElasticacheReservedCacheNodeArgsTimeouts;
 }
 export class aws_elasticache_reserved_cache_node extends TerraformResource {
   readonly arn!: string;

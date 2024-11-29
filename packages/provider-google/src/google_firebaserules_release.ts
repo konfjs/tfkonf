@@ -6,7 +6,7 @@ export interface GoogleFirebaserulesReleaseArgsTimeouts {
 export interface GoogleFirebaserulesReleaseArgs {
   name: string;
   ruleset_name: string;
-  timeouts: GoogleFirebaserulesReleaseArgsTimeouts;
+  timeouts?: GoogleFirebaserulesReleaseArgsTimeouts;
 }
 export class google_firebaserules_release extends TerraformResource {
   readonly create_time!: string;

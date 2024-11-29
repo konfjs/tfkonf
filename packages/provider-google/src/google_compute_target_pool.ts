@@ -11,7 +11,7 @@ export interface GoogleComputeTargetPoolArgs {
   health_checks?: string[];
   name: string;
   session_affinity?: string;
-  timeouts: GoogleComputeTargetPoolArgsTimeouts;
+  timeouts?: GoogleComputeTargetPoolArgsTimeouts;
 }
 export class google_compute_target_pool extends TerraformResource {
   readonly id?: string;

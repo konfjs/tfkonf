@@ -9,7 +9,7 @@ export interface AwsElasticacheGlobalReplicationGroupArgs {
   global_replication_group_id_suffix: string;
   parameter_group_name?: string;
   primary_replication_group_id: string;
-  timeouts: AwsElasticacheGlobalReplicationGroupArgsTimeouts;
+  timeouts?: AwsElasticacheGlobalReplicationGroupArgsTimeouts;
 }
 export class aws_elasticache_global_replication_group extends TerraformResource {
   readonly arn!: string;

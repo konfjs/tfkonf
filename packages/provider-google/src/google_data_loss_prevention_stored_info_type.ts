@@ -48,7 +48,7 @@ export interface GoogleDataLossPreventionStoredInfoTypeArgs {
   dictionary: GoogleDataLossPreventionStoredInfoTypeArgsDictionary;
   large_custom_dictionary: GoogleDataLossPreventionStoredInfoTypeArgsLargeCustomDictionary;
   regex: GoogleDataLossPreventionStoredInfoTypeArgsRegex;
-  timeouts: GoogleDataLossPreventionStoredInfoTypeArgsTimeouts;
+  timeouts?: GoogleDataLossPreventionStoredInfoTypeArgsTimeouts;
 }
 export class google_data_loss_prevention_stored_info_type extends TerraformResource {
   readonly id?: string;

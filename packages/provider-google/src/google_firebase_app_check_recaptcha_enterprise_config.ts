@@ -7,7 +7,7 @@ export interface GoogleFirebaseAppCheckRecaptchaEnterpriseConfigArgsTimeouts {
 export interface GoogleFirebaseAppCheckRecaptchaEnterpriseConfigArgs {
   app_id: string;
   site_key: string;
-  timeouts: GoogleFirebaseAppCheckRecaptchaEnterpriseConfigArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckRecaptchaEnterpriseConfigArgsTimeouts;
 }
 export class google_firebase_app_check_recaptcha_enterprise_config extends TerraformResource {
   readonly id?: string;

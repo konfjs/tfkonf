@@ -9,7 +9,7 @@ export interface GoogleComputeDiskAsyncReplicationArgsTimeouts {
 export interface GoogleComputeDiskAsyncReplicationArgs {
   primary_disk: string;
   secondary_disk: GoogleComputeDiskAsyncReplicationArgsSecondaryDisk;
-  timeouts: GoogleComputeDiskAsyncReplicationArgsTimeouts;
+  timeouts?: GoogleComputeDiskAsyncReplicationArgsTimeouts;
 }
 export class google_compute_disk_async_replication extends TerraformResource {
   readonly id?: string;

@@ -6,7 +6,7 @@ export interface AwsDynamodbContributorInsightsArgsTimeouts {
 export interface AwsDynamodbContributorInsightsArgs {
   index_name?: string;
   table_name: string;
-  timeouts: AwsDynamodbContributorInsightsArgsTimeouts;
+  timeouts?: AwsDynamodbContributorInsightsArgsTimeouts;
 }
 export class aws_dynamodb_contributor_insights extends TerraformResource {
   readonly id?: string;

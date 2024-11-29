@@ -4,7 +4,7 @@ export interface AwsFmsAdminAccountArgsTimeouts {
   delete?: string;
 }
 export interface AwsFmsAdminAccountArgs {
-  timeouts: AwsFmsAdminAccountArgsTimeouts;
+  timeouts?: AwsFmsAdminAccountArgsTimeouts;
 }
 export class aws_fms_admin_account extends TerraformResource {
   readonly account_id?: string;

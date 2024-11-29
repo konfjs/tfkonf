@@ -78,7 +78,7 @@ export interface GoogleLookerInstanceArgs {
   maintenance_window: GoogleLookerInstanceArgsMaintenanceWindow;
   oauth_config: GoogleLookerInstanceArgsOauthConfig;
   psc_config: GoogleLookerInstanceArgsPscConfig;
-  timeouts: GoogleLookerInstanceArgsTimeouts;
+  timeouts?: GoogleLookerInstanceArgsTimeouts;
   user_metadata: GoogleLookerInstanceArgsUserMetadata;
 }
 export class google_looker_instance extends TerraformResource {

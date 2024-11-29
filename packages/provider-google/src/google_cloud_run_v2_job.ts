@@ -112,7 +112,7 @@ export interface GoogleCloudRunV2JobArgs {
   name: string;
   binary_authorization: GoogleCloudRunV2JobArgsBinaryAuthorization;
   template: GoogleCloudRunV2JobArgsTemplate;
-  timeouts: GoogleCloudRunV2JobArgsTimeouts;
+  timeouts?: GoogleCloudRunV2JobArgsTimeouts;
 }
 export class google_cloud_run_v2_job extends TerraformResource {
   readonly conditions!: any[];

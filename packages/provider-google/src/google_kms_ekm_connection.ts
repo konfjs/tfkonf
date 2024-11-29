@@ -17,7 +17,7 @@ export interface GoogleKmsEkmConnectionArgs {
   location: string;
   name: string;
   service_resolvers: GoogleKmsEkmConnectionArgsServiceResolvers;
-  timeouts: GoogleKmsEkmConnectionArgsTimeouts;
+  timeouts?: GoogleKmsEkmConnectionArgsTimeouts;
 }
 export class google_kms_ekm_connection extends TerraformResource {
   readonly create_time!: string;

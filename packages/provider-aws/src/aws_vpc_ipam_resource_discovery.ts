@@ -13,7 +13,7 @@ export interface AwsVpcIpamResourceDiscoveryArgs {
     [key: string]: string;
   };
   operating_regions: AwsVpcIpamResourceDiscoveryArgsOperatingRegions;
-  timeouts: AwsVpcIpamResourceDiscoveryArgsTimeouts;
+  timeouts?: AwsVpcIpamResourceDiscoveryArgsTimeouts;
 }
 export class aws_vpc_ipam_resource_discovery extends TerraformResource {
   readonly arn!: string;

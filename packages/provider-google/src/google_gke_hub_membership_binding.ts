@@ -12,7 +12,7 @@ export interface GoogleGkeHubMembershipBindingArgs {
   membership_binding_id: string;
   membership_id: string;
   scope: string;
-  timeouts: GoogleGkeHubMembershipBindingArgsTimeouts;
+  timeouts?: GoogleGkeHubMembershipBindingArgsTimeouts;
 }
 export class google_gke_hub_membership_binding extends TerraformResource {
   readonly create_time!: string;

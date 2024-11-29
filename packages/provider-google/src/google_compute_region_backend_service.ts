@@ -116,7 +116,7 @@ export interface GoogleComputeRegionBackendServiceArgs {
   log_config: GoogleComputeRegionBackendServiceArgsLogConfig;
   outlier_detection: GoogleComputeRegionBackendServiceArgsOutlierDetection;
   strong_session_affinity_cookie: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie;
-  timeouts: GoogleComputeRegionBackendServiceArgsTimeouts;
+  timeouts?: GoogleComputeRegionBackendServiceArgsTimeouts;
 }
 export class google_compute_region_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;

@@ -7,7 +7,7 @@ export interface GoogleComputeInstanceGroupNamedPortArgs {
   group: string;
   name: string;
   port: number;
-  timeouts: GoogleComputeInstanceGroupNamedPortArgsTimeouts;
+  timeouts?: GoogleComputeInstanceGroupNamedPortArgsTimeouts;
 }
 export class google_compute_instance_group_named_port extends TerraformResource {
   readonly id?: string;

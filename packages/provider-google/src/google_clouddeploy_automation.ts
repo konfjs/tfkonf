@@ -40,7 +40,7 @@ export interface GoogleClouddeployAutomationArgs {
   suspended?: boolean;
   rules: GoogleClouddeployAutomationArgsRules;
   selector: GoogleClouddeployAutomationArgsSelector;
-  timeouts: GoogleClouddeployAutomationArgsTimeouts;
+  timeouts?: GoogleClouddeployAutomationArgsTimeouts;
 }
 export class google_clouddeploy_automation extends TerraformResource {
   readonly create_time!: string;

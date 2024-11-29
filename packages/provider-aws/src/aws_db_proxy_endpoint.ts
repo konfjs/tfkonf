@@ -12,7 +12,7 @@ export interface AwsDbProxyEndpointArgs {
   };
   target_role?: string;
   vpc_subnet_ids: string[];
-  timeouts: AwsDbProxyEndpointArgsTimeouts;
+  timeouts?: AwsDbProxyEndpointArgsTimeouts;
 }
 export class aws_db_proxy_endpoint extends TerraformResource {
   readonly arn!: string;

@@ -94,7 +94,7 @@ export interface AwsElasticsearchDomainArgs {
   log_publishing_options: AwsElasticsearchDomainArgsLogPublishingOptions;
   node_to_node_encryption: AwsElasticsearchDomainArgsNodeToNodeEncryption;
   snapshot_options: AwsElasticsearchDomainArgsSnapshotOptions;
-  timeouts: AwsElasticsearchDomainArgsTimeouts;
+  timeouts?: AwsElasticsearchDomainArgsTimeouts;
   vpc_options: AwsElasticsearchDomainArgsVpcOptions;
 }
 export class aws_elasticsearch_domain extends TerraformResource {

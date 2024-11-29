@@ -18,7 +18,7 @@ export interface AwsConfigOrganizationCustomPolicyRuleArgs {
   tag_key_scope?: string;
   tag_value_scope?: string;
   trigger_types: string[];
-  timeouts: AwsConfigOrganizationCustomPolicyRuleArgsTimeouts;
+  timeouts?: AwsConfigOrganizationCustomPolicyRuleArgsTimeouts;
 }
 export class aws_config_organization_custom_policy_rule extends TerraformResource {
   readonly arn!: string;

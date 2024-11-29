@@ -30,7 +30,7 @@ export interface GoogleVertexAiIndexEndpointDeployedIndexArgs {
   automatic_resources: GoogleVertexAiIndexEndpointDeployedIndexArgsAutomaticResources;
   dedicated_resources: GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResources;
   deployed_index_auth_config: GoogleVertexAiIndexEndpointDeployedIndexArgsDeployedIndexAuthConfig;
-  timeouts: GoogleVertexAiIndexEndpointDeployedIndexArgsTimeouts;
+  timeouts?: GoogleVertexAiIndexEndpointDeployedIndexArgsTimeouts;
 }
 export class google_vertex_ai_index_endpoint_deployed_index extends TerraformResource {
   readonly create_time!: string;

@@ -15,7 +15,7 @@ export interface GoogleNetworkConnectivityGroupArgs {
   };
   name: string;
   auto_accept: GoogleNetworkConnectivityGroupArgsAutoAccept;
-  timeouts: GoogleNetworkConnectivityGroupArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityGroupArgsTimeouts;
 }
 export class google_network_connectivity_group extends TerraformResource {
   readonly create_time!: string;

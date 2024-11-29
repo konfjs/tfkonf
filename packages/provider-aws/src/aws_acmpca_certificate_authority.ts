@@ -45,7 +45,7 @@ export interface AwsAcmpcaCertificateAuthorityArgs {
   type?: string;
   certificate_authority_configuration: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfiguration;
   revocation_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfiguration;
-  timeouts: AwsAcmpcaCertificateAuthorityArgsTimeouts;
+  timeouts?: AwsAcmpcaCertificateAuthorityArgsTimeouts;
 }
 export class aws_acmpca_certificate_authority extends TerraformResource {
   readonly arn!: string;

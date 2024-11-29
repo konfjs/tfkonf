@@ -8,7 +8,7 @@ export interface AwsEc2CapacityBlockReservationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEc2CapacityBlockReservationArgsTimeouts;
+  timeouts?: AwsEc2CapacityBlockReservationArgsTimeouts;
 }
 export class aws_ec2_capacity_block_reservation extends TerraformResource {
   readonly arn!: string;

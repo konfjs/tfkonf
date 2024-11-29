@@ -13,7 +13,7 @@ export interface AwsRdsIntegrationArgs {
     [key: string]: string;
   };
   target_arn: string;
-  timeouts: AwsRdsIntegrationArgsTimeouts;
+  timeouts?: AwsRdsIntegrationArgsTimeouts;
 }
 export class aws_rds_integration extends TerraformResource {
   readonly arn!: string;

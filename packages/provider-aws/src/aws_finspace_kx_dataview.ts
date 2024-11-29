@@ -23,7 +23,7 @@ export interface AwsFinspaceKxDataviewArgs {
     [key: string]: string;
   };
   segment_configurations: AwsFinspaceKxDataviewArgsSegmentConfigurations;
-  timeouts: AwsFinspaceKxDataviewArgsTimeouts;
+  timeouts?: AwsFinspaceKxDataviewArgsTimeouts;
 }
 export class aws_finspace_kx_dataview extends TerraformResource {
   readonly arn!: string;

@@ -12,7 +12,7 @@ export interface AwsEbsSnapshotArgs {
   };
   temporary_restore_days?: number;
   volume_id: string;
-  timeouts: AwsEbsSnapshotArgsTimeouts;
+  timeouts?: AwsEbsSnapshotArgsTimeouts;
 }
 export class aws_ebs_snapshot extends TerraformResource {
   readonly arn!: string;

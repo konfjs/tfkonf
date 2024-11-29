@@ -37,7 +37,7 @@ export interface GoogleApphubServiceArgs {
   location: string;
   service_id: string;
   attributes: GoogleApphubServiceArgsAttributes;
-  timeouts: GoogleApphubServiceArgsTimeouts;
+  timeouts?: GoogleApphubServiceArgsTimeouts;
 }
 export class google_apphub_service extends TerraformResource {
   readonly create_time!: string;

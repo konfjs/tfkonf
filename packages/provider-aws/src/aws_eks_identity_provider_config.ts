@@ -21,7 +21,7 @@ export interface AwsEksIdentityProviderConfigArgs {
     [key: string]: string;
   };
   oidc: AwsEksIdentityProviderConfigArgsOidc;
-  timeouts: AwsEksIdentityProviderConfigArgsTimeouts;
+  timeouts?: AwsEksIdentityProviderConfigArgsTimeouts;
 }
 export class aws_eks_identity_provider_config extends TerraformResource {
   readonly arn!: string;

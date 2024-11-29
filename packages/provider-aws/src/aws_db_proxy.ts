@@ -22,7 +22,7 @@ export interface AwsDbProxyArgs {
   };
   vpc_subnet_ids: string[];
   auth: AwsDbProxyArgsAuth;
-  timeouts: AwsDbProxyArgsTimeouts;
+  timeouts?: AwsDbProxyArgsTimeouts;
 }
 export class aws_db_proxy extends TerraformResource {
   readonly arn!: string;

@@ -38,7 +38,7 @@ export interface GoogleSccProjectCustomModuleArgs {
   display_name: string;
   enablement_state: string;
   custom_config: GoogleSccProjectCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccProjectCustomModuleArgsTimeouts;
+  timeouts?: GoogleSccProjectCustomModuleArgsTimeouts;
 }
 export class google_scc_project_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

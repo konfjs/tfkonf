@@ -19,7 +19,7 @@ export interface AwsEmrcontainersVirtualClusterArgs {
     [key: string]: string;
   };
   container_provider: AwsEmrcontainersVirtualClusterArgsContainerProvider;
-  timeouts: AwsEmrcontainersVirtualClusterArgsTimeouts;
+  timeouts?: AwsEmrcontainersVirtualClusterArgsTimeouts;
 }
 export class aws_emrcontainers_virtual_cluster extends TerraformResource {
   readonly arn!: string;

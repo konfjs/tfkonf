@@ -49,7 +49,7 @@ export interface GoogleHealthcarePipelineJobArgs {
   backfill_pipeline_job: GoogleHealthcarePipelineJobArgsBackfillPipelineJob;
   mapping_pipeline_job: GoogleHealthcarePipelineJobArgsMappingPipelineJob;
   reconciliation_pipeline_job: GoogleHealthcarePipelineJobArgsReconciliationPipelineJob;
-  timeouts: GoogleHealthcarePipelineJobArgsTimeouts;
+  timeouts?: GoogleHealthcarePipelineJobArgsTimeouts;
 }
 export class google_healthcare_pipeline_job extends TerraformResource {
   readonly effective_labels!: {

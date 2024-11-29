@@ -12,7 +12,7 @@ export interface GoogleFirestoreBackupScheduleArgs {
   database?: string;
   retention: string;
   daily_recurrence: GoogleFirestoreBackupScheduleArgsDailyRecurrence;
-  timeouts: GoogleFirestoreBackupScheduleArgsTimeouts;
+  timeouts?: GoogleFirestoreBackupScheduleArgsTimeouts;
   weekly_recurrence: GoogleFirestoreBackupScheduleArgsWeeklyRecurrence;
 }
 export class google_firestore_backup_schedule extends TerraformResource {

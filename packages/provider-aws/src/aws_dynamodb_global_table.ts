@@ -10,7 +10,7 @@ export interface AwsDynamodbGlobalTableArgsTimeouts {
 export interface AwsDynamodbGlobalTableArgs {
   name: string;
   replica: AwsDynamodbGlobalTableArgsReplica;
-  timeouts: AwsDynamodbGlobalTableArgsTimeouts;
+  timeouts?: AwsDynamodbGlobalTableArgsTimeouts;
 }
 export class aws_dynamodb_global_table extends TerraformResource {
   readonly arn!: string;

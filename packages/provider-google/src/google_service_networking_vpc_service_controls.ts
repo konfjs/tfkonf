@@ -9,7 +9,7 @@ export interface GoogleServiceNetworkingVpcServiceControlsArgs {
   network: string;
   project?: string;
   service: string;
-  timeouts: GoogleServiceNetworkingVpcServiceControlsArgsTimeouts;
+  timeouts?: GoogleServiceNetworkingVpcServiceControlsArgsTimeouts;
 }
 export class google_service_networking_vpc_service_controls extends TerraformResource {
   readonly id?: string;

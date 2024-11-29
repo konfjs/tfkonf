@@ -12,7 +12,7 @@ export interface GoogleApigeeInstanceArgs {
   location: string;
   name: string;
   org_id: string;
-  timeouts: GoogleApigeeInstanceArgsTimeouts;
+  timeouts?: GoogleApigeeInstanceArgsTimeouts;
 }
 export class google_apigee_instance extends TerraformResource {
   readonly consumer_accept_list?: string[];

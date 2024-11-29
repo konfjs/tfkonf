@@ -31,7 +31,7 @@ export interface GoogleComputeBackendBucketArgs {
   enable_cdn?: boolean;
   name: string;
   cdn_policy: GoogleComputeBackendBucketArgsCdnPolicy;
-  timeouts: GoogleComputeBackendBucketArgsTimeouts;
+  timeouts?: GoogleComputeBackendBucketArgsTimeouts;
 }
 export class google_compute_backend_bucket extends TerraformResource {
   readonly creation_timestamp!: string;

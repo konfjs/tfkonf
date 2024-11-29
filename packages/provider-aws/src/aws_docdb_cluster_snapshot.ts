@@ -5,7 +5,7 @@ export interface AwsDocdbClusterSnapshotArgsTimeouts {
 export interface AwsDocdbClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
-  timeouts: AwsDocdbClusterSnapshotArgsTimeouts;
+  timeouts?: AwsDocdbClusterSnapshotArgsTimeouts;
 }
 export class aws_docdb_cluster_snapshot extends TerraformResource {
   readonly availability_zones!: string[];

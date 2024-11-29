@@ -11,7 +11,7 @@ export interface AwsDirectoryServiceSharedDirectoryArgs {
   method?: string;
   notes?: string;
   target: AwsDirectoryServiceSharedDirectoryArgsTarget;
-  timeouts: AwsDirectoryServiceSharedDirectoryArgsTimeouts;
+  timeouts?: AwsDirectoryServiceSharedDirectoryArgsTimeouts;
 }
 export class aws_directory_service_shared_directory extends TerraformResource {
   readonly id?: string;

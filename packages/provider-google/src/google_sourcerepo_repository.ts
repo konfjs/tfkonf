@@ -12,7 +12,7 @@ export interface GoogleSourcerepoRepositoryArgs {
   create_ignore_already_exists?: boolean;
   name: string;
   pubsub_configs: GoogleSourcerepoRepositoryArgsPubsubConfigs;
-  timeouts: GoogleSourcerepoRepositoryArgsTimeouts;
+  timeouts?: GoogleSourcerepoRepositoryArgsTimeouts;
 }
 export class google_sourcerepo_repository extends TerraformResource {
   readonly id?: string;

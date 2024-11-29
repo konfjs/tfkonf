@@ -27,7 +27,7 @@ export interface GoogleDeploymentManagerDeploymentArgs {
   preview?: boolean;
   labels: GoogleDeploymentManagerDeploymentArgsLabels;
   target: GoogleDeploymentManagerDeploymentArgsTarget;
-  timeouts: GoogleDeploymentManagerDeploymentArgsTimeouts;
+  timeouts?: GoogleDeploymentManagerDeploymentArgsTimeouts;
 }
 export class google_deployment_manager_deployment extends TerraformResource {
   readonly deployment_id!: string;

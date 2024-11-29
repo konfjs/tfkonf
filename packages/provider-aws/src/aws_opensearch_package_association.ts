@@ -6,7 +6,7 @@ export interface AwsOpensearchPackageAssociationArgsTimeouts {
 export interface AwsOpensearchPackageAssociationArgs {
   domain_name: string;
   package_id: string;
-  timeouts: AwsOpensearchPackageAssociationArgsTimeouts;
+  timeouts?: AwsOpensearchPackageAssociationArgsTimeouts;
 }
 export class aws_opensearch_package_association extends TerraformResource {
   readonly id?: string;

@@ -59,7 +59,7 @@ export interface GoogleCloudfunctionsFunctionArgs {
   secret_environment_variables: GoogleCloudfunctionsFunctionArgsSecretEnvironmentVariables;
   secret_volumes: GoogleCloudfunctionsFunctionArgsSecretVolumes;
   source_repository: GoogleCloudfunctionsFunctionArgsSourceRepository;
-  timeouts: GoogleCloudfunctionsFunctionArgsTimeouts;
+  timeouts?: GoogleCloudfunctionsFunctionArgsTimeouts;
 }
 export class google_cloudfunctions_function extends TerraformResource {
   readonly build_service_account?: string;

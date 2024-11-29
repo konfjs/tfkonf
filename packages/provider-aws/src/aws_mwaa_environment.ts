@@ -37,7 +37,7 @@ export interface AwsMwaaEnvironmentArgs {
   };
   logging_configuration: AwsMwaaEnvironmentArgsLoggingConfiguration;
   network_configuration: AwsMwaaEnvironmentArgsNetworkConfiguration;
-  timeouts: AwsMwaaEnvironmentArgsTimeouts;
+  timeouts?: AwsMwaaEnvironmentArgsTimeouts;
 }
 export class aws_mwaa_environment extends TerraformResource {
   readonly airflow_version?: string;

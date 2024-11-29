@@ -30,7 +30,7 @@ export interface GoogleFolderOrganizationPolicyArgs {
   boolean_policy: GoogleFolderOrganizationPolicyArgsBooleanPolicy;
   list_policy: GoogleFolderOrganizationPolicyArgsListPolicy;
   restore_policy: GoogleFolderOrganizationPolicyArgsRestorePolicy;
-  timeouts: GoogleFolderOrganizationPolicyArgsTimeouts;
+  timeouts?: GoogleFolderOrganizationPolicyArgsTimeouts;
 }
 export class google_folder_organization_policy extends TerraformResource {
   readonly etag!: string;

@@ -10,7 +10,7 @@ export interface GoogleSecretManagerSecretVersionArgs {
   is_secret_data_base64?: boolean;
   secret: string;
   secret_data: string;
-  timeouts: GoogleSecretManagerSecretVersionArgsTimeouts;
+  timeouts?: GoogleSecretManagerSecretVersionArgsTimeouts;
 }
 export class google_secret_manager_secret_version extends TerraformResource {
   readonly create_time!: string;

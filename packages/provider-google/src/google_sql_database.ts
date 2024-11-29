@@ -8,7 +8,7 @@ export interface GoogleSqlDatabaseArgs {
   deletion_policy?: string;
   instance: string;
   name: string;
-  timeouts: GoogleSqlDatabaseArgsTimeouts;
+  timeouts?: GoogleSqlDatabaseArgsTimeouts;
 }
 export class google_sql_database extends TerraformResource {
   readonly charset?: string;

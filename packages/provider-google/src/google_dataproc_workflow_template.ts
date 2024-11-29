@@ -342,7 +342,7 @@ export interface GoogleDataprocWorkflowTemplateArgs {
   jobs: GoogleDataprocWorkflowTemplateArgsJobs;
   parameters: GoogleDataprocWorkflowTemplateArgsParameters;
   placement: GoogleDataprocWorkflowTemplateArgsPlacement;
-  timeouts: GoogleDataprocWorkflowTemplateArgsTimeouts;
+  timeouts?: GoogleDataprocWorkflowTemplateArgsTimeouts;
 }
 export class google_dataproc_workflow_template extends TerraformResource {
   readonly create_time!: string;

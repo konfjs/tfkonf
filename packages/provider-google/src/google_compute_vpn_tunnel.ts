@@ -19,7 +19,7 @@ export interface GoogleComputeVpnTunnelArgs {
   target_vpn_gateway?: string;
   vpn_gateway?: string;
   vpn_gateway_interface?: number;
-  timeouts: GoogleComputeVpnTunnelArgsTimeouts;
+  timeouts?: GoogleComputeVpnTunnelArgsTimeouts;
 }
 export class google_compute_vpn_tunnel extends TerraformResource {
   readonly creation_timestamp!: string;

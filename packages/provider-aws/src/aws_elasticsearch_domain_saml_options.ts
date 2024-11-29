@@ -19,7 +19,7 @@ export interface AwsElasticsearchDomainSamlOptionsArgsTimeouts {
 export interface AwsElasticsearchDomainSamlOptionsArgs {
   domain_name: string;
   saml_options: AwsElasticsearchDomainSamlOptionsArgsSamlOptions;
-  timeouts: AwsElasticsearchDomainSamlOptionsArgsTimeouts;
+  timeouts?: AwsElasticsearchDomainSamlOptionsArgsTimeouts;
 }
 export class aws_elasticsearch_domain_saml_options extends TerraformResource {
   readonly id?: string;

@@ -8,7 +8,7 @@ export interface GoogleLoggingLogScopeArgs {
   description?: string;
   name: string;
   resource_names: string[];
-  timeouts: GoogleLoggingLogScopeArgsTimeouts;
+  timeouts?: GoogleLoggingLogScopeArgsTimeouts;
 }
 export class google_logging_log_scope extends TerraformResource {
   readonly create_time!: string;

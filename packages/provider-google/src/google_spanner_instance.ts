@@ -41,7 +41,7 @@ export interface GoogleSpannerInstanceArgs {
     [key: string]: string;
   };
   autoscaling_config: GoogleSpannerInstanceArgsAutoscalingConfig;
-  timeouts: GoogleSpannerInstanceArgsTimeouts;
+  timeouts?: GoogleSpannerInstanceArgsTimeouts;
 }
 export class google_spanner_instance extends TerraformResource {
   readonly default_backup_schedule_type?: string;

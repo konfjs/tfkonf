@@ -25,7 +25,7 @@ export interface AwsBackupFrameworkArgs {
     [key: string]: string;
   };
   control: AwsBackupFrameworkArgsControl;
-  timeouts: AwsBackupFrameworkArgsTimeouts;
+  timeouts?: AwsBackupFrameworkArgsTimeouts;
 }
 export class aws_backup_framework extends TerraformResource {
   readonly arn!: string;

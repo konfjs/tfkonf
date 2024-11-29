@@ -11,7 +11,7 @@ export interface AwsSsoadminPermissionSetArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsSsoadminPermissionSetArgsTimeouts;
+  timeouts?: AwsSsoadminPermissionSetArgsTimeouts;
 }
 export class aws_ssoadmin_permission_set extends TerraformResource {
   readonly arn!: string;

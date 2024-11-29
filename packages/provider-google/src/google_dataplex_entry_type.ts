@@ -19,7 +19,7 @@ export interface GoogleDataplexEntryTypeArgs {
   system?: string;
   type_aliases?: string[];
   required_aspects: GoogleDataplexEntryTypeArgsRequiredAspects;
-  timeouts: GoogleDataplexEntryTypeArgsTimeouts;
+  timeouts?: GoogleDataplexEntryTypeArgsTimeouts;
 }
 export class google_dataplex_entry_type extends TerraformResource {
   readonly create_time!: string;

@@ -5,7 +5,7 @@ export interface AwsDirectoryServiceSharedDirectoryAccepterArgsTimeouts {
 }
 export interface AwsDirectoryServiceSharedDirectoryAccepterArgs {
   shared_directory_id: string;
-  timeouts: AwsDirectoryServiceSharedDirectoryAccepterArgsTimeouts;
+  timeouts?: AwsDirectoryServiceSharedDirectoryAccepterArgsTimeouts;
 }
 export class aws_directory_service_shared_directory_accepter extends TerraformResource {
   readonly id?: string;

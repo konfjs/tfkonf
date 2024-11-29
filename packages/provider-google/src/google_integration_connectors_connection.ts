@@ -224,7 +224,7 @@ export interface GoogleIntegrationConnectorsConnectionArgs {
   log_config: GoogleIntegrationConnectorsConnectionArgsLogConfig;
   node_config: GoogleIntegrationConnectorsConnectionArgsNodeConfig;
   ssl_config: GoogleIntegrationConnectorsConnectionArgsSslConfig;
-  timeouts: GoogleIntegrationConnectorsConnectionArgsTimeouts;
+  timeouts?: GoogleIntegrationConnectorsConnectionArgsTimeouts;
 }
 export class google_integration_connectors_connection extends TerraformResource {
   readonly connection_revision!: string;

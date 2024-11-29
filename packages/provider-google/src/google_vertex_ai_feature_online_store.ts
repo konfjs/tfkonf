@@ -28,7 +28,7 @@ export interface GoogleVertexAiFeatureOnlineStoreArgs {
   bigtable: GoogleVertexAiFeatureOnlineStoreArgsBigtable;
   dedicated_serving_endpoint: GoogleVertexAiFeatureOnlineStoreArgsDedicatedServingEndpoint;
   optimized: GoogleVertexAiFeatureOnlineStoreArgsOptimized;
-  timeouts: GoogleVertexAiFeatureOnlineStoreArgsTimeouts;
+  timeouts?: GoogleVertexAiFeatureOnlineStoreArgsTimeouts;
 }
 export class google_vertex_ai_feature_online_store extends TerraformResource {
   readonly create_time!: string;

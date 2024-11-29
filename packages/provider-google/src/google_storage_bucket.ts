@@ -83,7 +83,7 @@ export interface GoogleStorageBucketArgs {
   logging: GoogleStorageBucketArgsLogging;
   retention_policy: GoogleStorageBucketArgsRetentionPolicy;
   soft_delete_policy: GoogleStorageBucketArgsSoftDeletePolicy;
-  timeouts: GoogleStorageBucketArgsTimeouts;
+  timeouts?: GoogleStorageBucketArgsTimeouts;
   versioning: GoogleStorageBucketArgsVersioning;
   website: GoogleStorageBucketArgsWebsite;
 }

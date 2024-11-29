@@ -10,7 +10,7 @@ export interface AwsEfsReplicationConfigurationArgsTimeouts {
 export interface AwsEfsReplicationConfigurationArgs {
   source_file_system_id: string;
   destination: AwsEfsReplicationConfigurationArgsDestination;
-  timeouts: AwsEfsReplicationConfigurationArgsTimeouts;
+  timeouts?: AwsEfsReplicationConfigurationArgsTimeouts;
 }
 export class aws_efs_replication_configuration extends TerraformResource {
   readonly creation_time!: string;

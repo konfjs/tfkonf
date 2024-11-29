@@ -13,7 +13,7 @@ export interface AwsChatbotTeamsChannelConfigurationArgs {
   };
   team_id: string;
   tenant_id: string;
-  timeouts: AwsChatbotTeamsChannelConfigurationArgsTimeouts;
+  timeouts?: AwsChatbotTeamsChannelConfigurationArgsTimeouts;
 }
 export class aws_chatbot_teams_channel_configuration extends TerraformResource {
   readonly channel_name?: string;

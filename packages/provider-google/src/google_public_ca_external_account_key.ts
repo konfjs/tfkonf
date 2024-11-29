@@ -5,7 +5,7 @@ export interface GooglePublicCaExternalAccountKeyArgsTimeouts {
 }
 export interface GooglePublicCaExternalAccountKeyArgs {
   location?: string;
-  timeouts: GooglePublicCaExternalAccountKeyArgsTimeouts;
+  timeouts?: GooglePublicCaExternalAccountKeyArgsTimeouts;
 }
 export class google_public_ca_external_account_key extends TerraformResource {
   readonly b64_mac_key!: string;

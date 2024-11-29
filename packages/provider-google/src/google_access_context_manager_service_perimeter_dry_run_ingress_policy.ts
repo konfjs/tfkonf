@@ -28,7 +28,7 @@ export interface GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyAr
   perimeter: string;
   ingress_from: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressFrom;
   ingress_to: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsIngressTo;
-  timeouts: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerServicePerimeterDryRunIngressPolicyArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter_dry_run_ingress_policy extends TerraformResource {
   readonly id?: string;

@@ -31,7 +31,7 @@ export interface AwsOpsworksStackArgs {
   use_custom_cookbooks?: boolean;
   use_opsworks_security_groups?: boolean;
   custom_cookbooks_source: AwsOpsworksStackArgsCustomCookbooksSource;
-  timeouts: AwsOpsworksStackArgsTimeouts;
+  timeouts?: AwsOpsworksStackArgsTimeouts;
 }
 export class aws_opsworks_stack extends TerraformResource {
   readonly agent_version?: string;

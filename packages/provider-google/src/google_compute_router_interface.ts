@@ -10,7 +10,7 @@ export interface GoogleComputeRouterInterfaceArgs {
   router: string;
   subnetwork?: string;
   vpn_tunnel?: string;
-  timeouts: GoogleComputeRouterInterfaceArgsTimeouts;
+  timeouts?: GoogleComputeRouterInterfaceArgsTimeouts;
 }
 export class google_compute_router_interface extends TerraformResource {
   readonly id?: string;

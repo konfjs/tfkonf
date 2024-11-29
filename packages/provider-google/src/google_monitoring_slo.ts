@@ -103,7 +103,7 @@ export interface GoogleMonitoringSloArgs {
   };
   basic_sli: GoogleMonitoringSloArgsBasicSli;
   request_based_sli: GoogleMonitoringSloArgsRequestBasedSli;
-  timeouts: GoogleMonitoringSloArgsTimeouts;
+  timeouts?: GoogleMonitoringSloArgsTimeouts;
   windows_based_sli: GoogleMonitoringSloArgsWindowsBasedSli;
 }
 export class google_monitoring_slo extends TerraformResource {

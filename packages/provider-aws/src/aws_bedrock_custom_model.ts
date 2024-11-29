@@ -32,7 +32,7 @@ export interface AwsBedrockCustomModelArgs {
     [key: string]: string;
   };
   output_data_config: AwsBedrockCustomModelArgsOutputDataConfig;
-  timeouts: AwsBedrockCustomModelArgsTimeouts;
+  timeouts?: AwsBedrockCustomModelArgsTimeouts;
   training_data_config: AwsBedrockCustomModelArgsTrainingDataConfig;
   validation_data_config: AwsBedrockCustomModelArgsValidationDataConfig;
   vpc_config: AwsBedrockCustomModelArgsVpcConfig;

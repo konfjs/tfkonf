@@ -16,7 +16,7 @@ export interface AwsServicecatalogServiceActionArgs {
   accept_language?: string;
   name: string;
   definition: AwsServicecatalogServiceActionArgsDefinition;
-  timeouts: AwsServicecatalogServiceActionArgsTimeouts;
+  timeouts?: AwsServicecatalogServiceActionArgsTimeouts;
 }
 export class aws_servicecatalog_service_action extends TerraformResource {
   readonly description?: string;

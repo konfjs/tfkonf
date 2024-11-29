@@ -28,7 +28,7 @@ export interface GoogleStorageBucketObjectArgs {
   temporary_hold?: boolean;
   customer_encryption: GoogleStorageBucketObjectArgsCustomerEncryption;
   retention: GoogleStorageBucketObjectArgsRetention;
-  timeouts: GoogleStorageBucketObjectArgsTimeouts;
+  timeouts?: GoogleStorageBucketObjectArgsTimeouts;
 }
 export class google_storage_bucket_object extends TerraformResource {
   readonly content?: string;

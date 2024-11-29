@@ -18,7 +18,7 @@ export interface GoogleVertexAiIndexEndpointArgs {
   public_endpoint_enabled?: boolean;
   region?: string;
   private_service_connect_config: GoogleVertexAiIndexEndpointArgsPrivateServiceConnectConfig;
-  timeouts: GoogleVertexAiIndexEndpointArgsTimeouts;
+  timeouts?: GoogleVertexAiIndexEndpointArgsTimeouts;
 }
 export class google_vertex_ai_index_endpoint extends TerraformResource {
   readonly create_time!: string;

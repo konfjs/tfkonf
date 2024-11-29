@@ -11,7 +11,7 @@ export interface GoogleIdentityPlatformOauthIdpConfigArgs {
   enabled?: boolean;
   issuer: string;
   name: string;
-  timeouts: GoogleIdentityPlatformOauthIdpConfigArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformOauthIdpConfigArgsTimeouts;
 }
 export class google_identity_platform_oauth_idp_config extends TerraformResource {
   readonly id?: string;

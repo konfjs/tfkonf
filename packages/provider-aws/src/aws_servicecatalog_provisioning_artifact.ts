@@ -14,7 +14,7 @@ export interface AwsServicecatalogProvisioningArtifactArgs {
   template_physical_id?: string;
   template_url?: string;
   type?: string;
-  timeouts: AwsServicecatalogProvisioningArtifactArgsTimeouts;
+  timeouts?: AwsServicecatalogProvisioningArtifactArgsTimeouts;
 }
 export class aws_servicecatalog_provisioning_artifact extends TerraformResource {
   readonly created_time!: string;

@@ -42,7 +42,7 @@ export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgs {
   tls_inspect?: boolean;
   match: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatch;
   target_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTargetSecureTags;
-  timeouts: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts;
+  timeouts?: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts;
 }
 export class google_compute_region_network_firewall_policy_rule extends TerraformResource {
   readonly creation_timestamp!: string;

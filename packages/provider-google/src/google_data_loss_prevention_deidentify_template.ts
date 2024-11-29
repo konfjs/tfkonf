@@ -940,7 +940,7 @@ export interface GoogleDataLossPreventionDeidentifyTemplateArgs {
   display_name?: string;
   parent: string;
   deidentify_config: GoogleDataLossPreventionDeidentifyTemplateArgsDeidentifyConfig;
-  timeouts: GoogleDataLossPreventionDeidentifyTemplateArgsTimeouts;
+  timeouts?: GoogleDataLossPreventionDeidentifyTemplateArgsTimeouts;
 }
 export class google_data_loss_prevention_deidentify_template extends TerraformResource {
   readonly create_time!: string;

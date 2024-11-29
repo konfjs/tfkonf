@@ -20,7 +20,7 @@ export interface AwsLexBotAliasArgs {
   description?: string;
   name: string;
   conversation_logs: AwsLexBotAliasArgsConversationLogs;
-  timeouts: AwsLexBotAliasArgsTimeouts;
+  timeouts?: AwsLexBotAliasArgsTimeouts;
 }
 export class aws_lex_bot_alias extends TerraformResource {
   readonly arn!: string;

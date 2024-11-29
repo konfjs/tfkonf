@@ -1,6 +1,6 @@
 {
   "name": "@konfjs/provider-generator",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": {
     "name": "konfjs",
     "url": "https://github.com/konfjs"
@@ -44,7 +44,7 @@
     "build": "rm -rf dist provider-aws provider-google && tsc && pnpm run add_shebang && chmod +x dist/index.js",
     "prepack": "pnpm run build",
     "pull": "terraform providers schema -json > schema.json",
-    "gen": "bun run src/index.ts",
+    "gen": "bun src/index.ts",
     "generate": "bun run gen"
   },
   "files": [

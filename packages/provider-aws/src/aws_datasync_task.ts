@@ -60,7 +60,7 @@ export interface AwsDatasyncTaskArgs {
   options: AwsDatasyncTaskArgsOptions;
   schedule: AwsDatasyncTaskArgsSchedule;
   task_report_config: AwsDatasyncTaskArgsTaskReportConfig;
-  timeouts: AwsDatasyncTaskArgsTimeouts;
+  timeouts?: AwsDatasyncTaskArgsTimeouts;
 }
 export class aws_datasync_task extends TerraformResource {
   readonly arn!: string;

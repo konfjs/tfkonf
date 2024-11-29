@@ -26,7 +26,7 @@ export interface GoogleNetappActiveDirectoryArgs {
   security_operators?: string[];
   site?: string;
   username: string;
-  timeouts: GoogleNetappActiveDirectoryArgsTimeouts;
+  timeouts?: GoogleNetappActiveDirectoryArgsTimeouts;
 }
 export class google_netapp_active_directory extends TerraformResource {
   readonly create_time!: string;

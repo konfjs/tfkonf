@@ -9,7 +9,7 @@ export interface GoogleApigeeSharedflowArgs {
   detect_md5hash?: string;
   name: string;
   org_id: string;
-  timeouts: GoogleApigeeSharedflowArgsTimeouts;
+  timeouts?: GoogleApigeeSharedflowArgsTimeouts;
 }
 export class google_apigee_sharedflow extends TerraformResource {
   readonly id?: string;

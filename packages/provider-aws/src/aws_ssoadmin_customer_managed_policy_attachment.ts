@@ -11,7 +11,7 @@ export interface AwsSsoadminCustomerManagedPolicyAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
   customer_managed_policy_reference: AwsSsoadminCustomerManagedPolicyAttachmentArgsCustomerManagedPolicyReference;
-  timeouts: AwsSsoadminCustomerManagedPolicyAttachmentArgsTimeouts;
+  timeouts?: AwsSsoadminCustomerManagedPolicyAttachmentArgsTimeouts;
 }
 export class aws_ssoadmin_customer_managed_policy_attachment extends TerraformResource {
   readonly id?: string;

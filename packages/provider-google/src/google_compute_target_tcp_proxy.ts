@@ -9,7 +9,7 @@ export interface GoogleComputeTargetTcpProxyArgs {
   description?: string;
   name: string;
   proxy_header?: string;
-  timeouts: GoogleComputeTargetTcpProxyArgsTimeouts;
+  timeouts?: GoogleComputeTargetTcpProxyArgsTimeouts;
 }
 export class google_compute_target_tcp_proxy extends TerraformResource {
   readonly creation_timestamp!: string;

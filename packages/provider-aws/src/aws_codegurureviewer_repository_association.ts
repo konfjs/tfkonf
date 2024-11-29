@@ -37,7 +37,7 @@ export interface AwsCodegurureviewerRepositoryAssociationArgs {
   };
   kms_key_details: AwsCodegurureviewerRepositoryAssociationArgsKmsKeyDetails;
   repository: AwsCodegurureviewerRepositoryAssociationArgsRepository;
-  timeouts: AwsCodegurureviewerRepositoryAssociationArgsTimeouts;
+  timeouts?: AwsCodegurureviewerRepositoryAssociationArgsTimeouts;
 }
 export class aws_codegurureviewer_repository_association extends TerraformResource {
   readonly arn!: string;

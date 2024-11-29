@@ -14,7 +14,7 @@ export interface GoogleVmwareengineNetworkPeeringArgs {
   peer_network: string;
   peer_network_type: string;
   vmware_engine_network: string;
-  timeouts: GoogleVmwareengineNetworkPeeringArgsTimeouts;
+  timeouts?: GoogleVmwareengineNetworkPeeringArgsTimeouts;
 }
 export class google_vmwareengine_network_peering extends TerraformResource {
   readonly create_time!: string;

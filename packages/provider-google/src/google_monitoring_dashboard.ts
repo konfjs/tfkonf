@@ -6,7 +6,7 @@ export interface GoogleMonitoringDashboardArgsTimeouts {
 }
 export interface GoogleMonitoringDashboardArgs {
   dashboard_json: string;
-  timeouts: GoogleMonitoringDashboardArgsTimeouts;
+  timeouts?: GoogleMonitoringDashboardArgsTimeouts;
 }
 export class google_monitoring_dashboard extends TerraformResource {
   readonly id?: string;

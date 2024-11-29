@@ -48,7 +48,7 @@ export interface AwsMskReplicatorArgs {
   };
   kafka_cluster: AwsMskReplicatorArgsKafkaCluster;
   replication_info_list: AwsMskReplicatorArgsReplicationInfoList;
-  timeouts: AwsMskReplicatorArgsTimeouts;
+  timeouts?: AwsMskReplicatorArgsTimeouts;
 }
 export class aws_msk_replicator extends TerraformResource {
   readonly arn!: string;

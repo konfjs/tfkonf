@@ -11,7 +11,7 @@ export interface GoogleStorageTransferAgentPoolArgs {
   display_name?: string;
   name: string;
   bandwidth_limit: GoogleStorageTransferAgentPoolArgsBandwidthLimit;
-  timeouts: GoogleStorageTransferAgentPoolArgsTimeouts;
+  timeouts?: GoogleStorageTransferAgentPoolArgsTimeouts;
 }
 export class google_storage_transfer_agent_pool extends TerraformResource {
   readonly id?: string;

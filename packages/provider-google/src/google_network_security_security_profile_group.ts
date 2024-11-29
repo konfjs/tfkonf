@@ -13,7 +13,7 @@ export interface GoogleNetworkSecuritySecurityProfileGroupArgs {
   name: string;
   parent?: string;
   threat_prevention_profile?: string;
-  timeouts: GoogleNetworkSecuritySecurityProfileGroupArgsTimeouts;
+  timeouts?: GoogleNetworkSecuritySecurityProfileGroupArgsTimeouts;
 }
 export class google_network_security_security_profile_group extends TerraformResource {
   readonly create_time!: string;

@@ -25,7 +25,7 @@ export interface GoogleComputeNodeGroupArgs {
   autoscaling_policy: GoogleComputeNodeGroupArgsAutoscalingPolicy;
   maintenance_window: GoogleComputeNodeGroupArgsMaintenanceWindow;
   share_settings: GoogleComputeNodeGroupArgsShareSettings;
-  timeouts: GoogleComputeNodeGroupArgsTimeouts;
+  timeouts?: GoogleComputeNodeGroupArgsTimeouts;
 }
 export class google_compute_node_group extends TerraformResource {
   readonly creation_timestamp!: string;

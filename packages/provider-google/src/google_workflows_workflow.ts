@@ -16,7 +16,7 @@ export interface GoogleWorkflowsWorkflowArgs {
   user_env_vars?: {
     [key: string]: string;
   };
-  timeouts: GoogleWorkflowsWorkflowArgsTimeouts;
+  timeouts?: GoogleWorkflowsWorkflowArgsTimeouts;
 }
 export class google_workflows_workflow extends TerraformResource {
   readonly create_time!: string;

@@ -13,7 +13,7 @@ export interface GoogleDialogflowEntityTypeArgs {
   enable_fuzzy_extraction?: boolean;
   kind: string;
   entities: GoogleDialogflowEntityTypeArgsEntities;
-  timeouts: GoogleDialogflowEntityTypeArgsTimeouts;
+  timeouts?: GoogleDialogflowEntityTypeArgsTimeouts;
 }
 export class google_dialogflow_entity_type extends TerraformResource {
   readonly id?: string;

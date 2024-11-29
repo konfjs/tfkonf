@@ -9,7 +9,7 @@ export interface GoogleProjectServiceArgs {
   disable_dependent_services?: boolean;
   disable_on_destroy?: boolean;
   service: string;
-  timeouts: GoogleProjectServiceArgsTimeouts;
+  timeouts?: GoogleProjectServiceArgsTimeouts;
 }
 export class google_project_service extends TerraformResource {
   readonly id?: string;

@@ -20,7 +20,7 @@ export interface GoogleSpannerBackupScheduleArgs {
   full_backup_spec: GoogleSpannerBackupScheduleArgsFullBackupSpec;
   incremental_backup_spec: GoogleSpannerBackupScheduleArgsIncrementalBackupSpec;
   spec: GoogleSpannerBackupScheduleArgsSpec;
-  timeouts: GoogleSpannerBackupScheduleArgsTimeouts;
+  timeouts?: GoogleSpannerBackupScheduleArgsTimeouts;
 }
 export class google_spanner_backup_schedule extends TerraformResource {
   readonly id?: string;

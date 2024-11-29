@@ -73,7 +73,7 @@ export interface GoogleContainerAwsClusterArgs {
   control_plane: GoogleContainerAwsClusterArgsControlPlane;
   fleet: GoogleContainerAwsClusterArgsFleet;
   networking: GoogleContainerAwsClusterArgsNetworking;
-  timeouts: GoogleContainerAwsClusterArgsTimeouts;
+  timeouts?: GoogleContainerAwsClusterArgsTimeouts;
 }
 export class google_container_aws_cluster extends TerraformResource {
   readonly create_time!: string;

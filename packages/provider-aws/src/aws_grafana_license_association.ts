@@ -7,7 +7,7 @@ export interface AwsGrafanaLicenseAssociationArgs {
   grafana_token?: string;
   license_type: string;
   workspace_id: string;
-  timeouts: AwsGrafanaLicenseAssociationArgsTimeouts;
+  timeouts?: AwsGrafanaLicenseAssociationArgsTimeouts;
 }
 export class aws_grafana_license_association extends TerraformResource {
   readonly free_trial_expiration!: string;

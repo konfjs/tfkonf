@@ -14,7 +14,7 @@ export interface GoogleActiveDirectoryDomainArgs {
   };
   locations: string[];
   reserved_ip_range: string;
-  timeouts: GoogleActiveDirectoryDomainArgsTimeouts;
+  timeouts?: GoogleActiveDirectoryDomainArgsTimeouts;
 }
 export class google_active_directory_domain extends TerraformResource {
   readonly effective_labels!: {

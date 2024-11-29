@@ -6,7 +6,7 @@ export interface AwsDatazoneUserProfileArgsTimeouts {
 export interface AwsDatazoneUserProfileArgs {
   domain_identifier: string;
   user_identifier: string;
-  timeouts: AwsDatazoneUserProfileArgsTimeouts;
+  timeouts?: AwsDatazoneUserProfileArgsTimeouts;
 }
 export class aws_datazone_user_profile extends TerraformResource {
   readonly details!: any[];

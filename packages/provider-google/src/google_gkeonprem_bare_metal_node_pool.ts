@@ -28,7 +28,7 @@ export interface GoogleGkeonpremBareMetalNodePoolArgs {
   location: string;
   name: string;
   node_pool_config: GoogleGkeonpremBareMetalNodePoolArgsNodePoolConfig;
-  timeouts: GoogleGkeonpremBareMetalNodePoolArgsTimeouts;
+  timeouts?: GoogleGkeonpremBareMetalNodePoolArgsTimeouts;
 }
 export class google_gkeonprem_bare_metal_node_pool extends TerraformResource {
   readonly create_time!: string;

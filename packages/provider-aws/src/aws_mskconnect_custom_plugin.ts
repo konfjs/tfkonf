@@ -19,7 +19,7 @@ export interface AwsMskconnectCustomPluginArgs {
     [key: string]: string;
   };
   location: AwsMskconnectCustomPluginArgsLocation;
-  timeouts: AwsMskconnectCustomPluginArgsTimeouts;
+  timeouts?: AwsMskconnectCustomPluginArgsTimeouts;
 }
 export class aws_mskconnect_custom_plugin extends TerraformResource {
   readonly arn!: string;

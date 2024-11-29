@@ -10,7 +10,7 @@ export interface AwsLbTrustStoreArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsLbTrustStoreArgsTimeouts;
+  timeouts?: AwsLbTrustStoreArgsTimeouts;
 }
 export class aws_lb_trust_store extends TerraformResource {
   readonly arn!: string;

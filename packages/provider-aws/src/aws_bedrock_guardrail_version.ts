@@ -7,7 +7,7 @@ export interface AwsBedrockGuardrailVersionArgs {
   description?: string;
   guardrail_arn: string;
   skip_destroy?: boolean;
-  timeouts: AwsBedrockGuardrailVersionArgsTimeouts;
+  timeouts?: AwsBedrockGuardrailVersionArgsTimeouts;
 }
 export class aws_bedrock_guardrail_version extends TerraformResource {
   readonly version!: string;

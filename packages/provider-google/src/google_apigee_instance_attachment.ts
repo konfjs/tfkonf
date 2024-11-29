@@ -6,7 +6,7 @@ export interface GoogleApigeeInstanceAttachmentArgsTimeouts {
 export interface GoogleApigeeInstanceAttachmentArgs {
   environment: string;
   instance_id: string;
-  timeouts: GoogleApigeeInstanceAttachmentArgsTimeouts;
+  timeouts?: GoogleApigeeInstanceAttachmentArgsTimeouts;
 }
 export class google_apigee_instance_attachment extends TerraformResource {
   readonly id?: string;

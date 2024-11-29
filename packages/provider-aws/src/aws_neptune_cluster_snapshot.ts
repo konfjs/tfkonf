@@ -5,7 +5,7 @@ export interface AwsNeptuneClusterSnapshotArgsTimeouts {
 export interface AwsNeptuneClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
-  timeouts: AwsNeptuneClusterSnapshotArgsTimeouts;
+  timeouts?: AwsNeptuneClusterSnapshotArgsTimeouts;
 }
 export class aws_neptune_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;

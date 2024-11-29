@@ -33,7 +33,7 @@ export interface AwsFsxOpenzfsVolumeArgs {
   volume_type?: string;
   nfs_exports: AwsFsxOpenzfsVolumeArgsNfsExports;
   origin_snapshot: AwsFsxOpenzfsVolumeArgsOriginSnapshot;
-  timeouts: AwsFsxOpenzfsVolumeArgsTimeouts;
+  timeouts?: AwsFsxOpenzfsVolumeArgsTimeouts;
   user_and_group_quotas: AwsFsxOpenzfsVolumeArgsUserAndGroupQuotas;
 }
 export class aws_fsx_openzfs_volume extends TerraformResource {

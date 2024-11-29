@@ -204,7 +204,7 @@ export interface GoogleGkeonpremBareMetalClusterArgs {
   proxy: GoogleGkeonpremBareMetalClusterArgsProxy;
   security_config: GoogleGkeonpremBareMetalClusterArgsSecurityConfig;
   storage: GoogleGkeonpremBareMetalClusterArgsStorage;
-  timeouts: GoogleGkeonpremBareMetalClusterArgsTimeouts;
+  timeouts?: GoogleGkeonpremBareMetalClusterArgsTimeouts;
   upgrade_policy: GoogleGkeonpremBareMetalClusterArgsUpgradePolicy;
 }
 export class google_gkeonprem_bare_metal_cluster extends TerraformResource {

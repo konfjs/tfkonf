@@ -17,7 +17,7 @@ export interface GoogleDataCatalogTagArgs {
   parent?: string;
   template: string;
   fields: GoogleDataCatalogTagArgsFields;
-  timeouts: GoogleDataCatalogTagArgsTimeouts;
+  timeouts?: GoogleDataCatalogTagArgsTimeouts;
 }
 export class google_data_catalog_tag extends TerraformResource {
   readonly id?: string;

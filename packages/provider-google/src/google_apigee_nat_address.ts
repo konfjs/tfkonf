@@ -8,7 +8,7 @@ export interface GoogleApigeeNatAddressArgs {
   activate?: boolean;
   instance_id: string;
   name: string;
-  timeouts: GoogleApigeeNatAddressArgsTimeouts;
+  timeouts?: GoogleApigeeNatAddressArgsTimeouts;
 }
 export class google_apigee_nat_address extends TerraformResource {
   readonly id?: string;

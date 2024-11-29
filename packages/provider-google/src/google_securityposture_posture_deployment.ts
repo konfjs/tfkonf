@@ -12,7 +12,7 @@ export interface GoogleSecurityposturePostureDeploymentArgs {
   posture_id: string;
   posture_revision_id: string;
   target_resource: string;
-  timeouts: GoogleSecurityposturePostureDeploymentArgsTimeouts;
+  timeouts?: GoogleSecurityposturePostureDeploymentArgsTimeouts;
 }
 export class google_securityposture_posture_deployment extends TerraformResource {
   readonly create_time!: string;

@@ -13,7 +13,7 @@ export interface GoogleEdgenetworkNetworkArgs {
   mtu?: number;
   network_id: string;
   zone: string;
-  timeouts: GoogleEdgenetworkNetworkArgsTimeouts;
+  timeouts?: GoogleEdgenetworkNetworkArgsTimeouts;
 }
 export class google_edgenetwork_network extends TerraformResource {
   readonly create_time!: string;

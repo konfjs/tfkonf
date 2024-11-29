@@ -43,7 +43,7 @@ export interface AwsAlbArgs {
   access_logs: AwsAlbArgsAccessLogs;
   connection_logs: AwsAlbArgsConnectionLogs;
   subnet_mapping: AwsAlbArgsSubnetMapping;
-  timeouts: AwsAlbArgsTimeouts;
+  timeouts?: AwsAlbArgsTimeouts;
 }
 export class aws_alb extends TerraformResource {
   readonly arn!: string;

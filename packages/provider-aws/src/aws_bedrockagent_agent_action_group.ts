@@ -41,7 +41,7 @@ export interface AwsBedrockagentAgentActionGroupArgs {
   action_group_executor: AwsBedrockagentAgentActionGroupArgsActionGroupExecutor;
   api_schema: AwsBedrockagentAgentActionGroupArgsApiSchema;
   function_schema: AwsBedrockagentAgentActionGroupArgsFunctionSchema;
-  timeouts: AwsBedrockagentAgentActionGroupArgsTimeouts;
+  timeouts?: AwsBedrockagentAgentActionGroupArgsTimeouts;
 }
 export class aws_bedrockagent_agent_action_group extends TerraformResource {
   readonly action_group_id!: string;

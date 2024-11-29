@@ -67,7 +67,7 @@ export interface GooglePubsubSubscriptionArgs {
   expiration_policy: GooglePubsubSubscriptionArgsExpirationPolicy;
   push_config: GooglePubsubSubscriptionArgsPushConfig;
   retry_policy: GooglePubsubSubscriptionArgsRetryPolicy;
-  timeouts: GooglePubsubSubscriptionArgsTimeouts;
+  timeouts?: GooglePubsubSubscriptionArgsTimeouts;
 }
 export class google_pubsub_subscription extends TerraformResource {
   readonly ack_deadline_seconds?: number;

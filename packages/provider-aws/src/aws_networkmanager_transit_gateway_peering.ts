@@ -9,7 +9,7 @@ export interface AwsNetworkmanagerTransitGatewayPeeringArgs {
     [key: string]: string;
   };
   transit_gateway_arn: string;
-  timeouts: AwsNetworkmanagerTransitGatewayPeeringArgsTimeouts;
+  timeouts?: AwsNetworkmanagerTransitGatewayPeeringArgsTimeouts;
 }
 export class aws_networkmanager_transit_gateway_peering extends TerraformResource {
   readonly arn!: string;

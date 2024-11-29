@@ -34,7 +34,7 @@ export interface AwsCloudformationStackSetArgs {
   auto_deployment: AwsCloudformationStackSetArgsAutoDeployment;
   managed_execution: AwsCloudformationStackSetArgsManagedExecution;
   operation_preferences: AwsCloudformationStackSetArgsOperationPreferences;
-  timeouts: AwsCloudformationStackSetArgsTimeouts;
+  timeouts?: AwsCloudformationStackSetArgsTimeouts;
 }
 export class aws_cloudformation_stack_set extends TerraformResource {
   readonly arn!: string;

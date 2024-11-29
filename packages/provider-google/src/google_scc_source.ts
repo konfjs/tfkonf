@@ -8,7 +8,7 @@ export interface GoogleSccSourceArgs {
   description?: string;
   display_name: string;
   organization: string;
-  timeouts: GoogleSccSourceArgsTimeouts;
+  timeouts?: GoogleSccSourceArgsTimeouts;
 }
 export class google_scc_source extends TerraformResource {
   readonly id?: string;

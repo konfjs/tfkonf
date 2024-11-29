@@ -10,7 +10,7 @@ export interface GoogleApigeeFlowhookArgs {
   flow_hook_point: string;
   org_id: string;
   sharedflow: string;
-  timeouts: GoogleApigeeFlowhookArgsTimeouts;
+  timeouts?: GoogleApigeeFlowhookArgsTimeouts;
 }
 export class google_apigee_flowhook extends TerraformResource {
   readonly id?: string;

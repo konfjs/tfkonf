@@ -6,7 +6,7 @@ export interface GoogleComputeProjectCloudArmorTierArgsTimeouts {
 }
 export interface GoogleComputeProjectCloudArmorTierArgs {
   cloud_armor_tier: string;
-  timeouts: GoogleComputeProjectCloudArmorTierArgsTimeouts;
+  timeouts?: GoogleComputeProjectCloudArmorTierArgsTimeouts;
 }
 export class google_compute_project_cloud_armor_tier extends TerraformResource {
   readonly id?: string;

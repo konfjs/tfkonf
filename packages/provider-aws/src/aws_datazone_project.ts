@@ -9,7 +9,7 @@ export interface AwsDatazoneProjectArgs {
   glossary_terms?: string[];
   name: string;
   skip_deletion_check?: boolean;
-  timeouts: AwsDatazoneProjectArgsTimeouts;
+  timeouts?: AwsDatazoneProjectArgsTimeouts;
 }
 export class aws_datazone_project extends TerraformResource {
   readonly created_at!: string;

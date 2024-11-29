@@ -26,7 +26,7 @@ export interface GooglePubsubLiteTopicArgs {
   partition_config: GooglePubsubLiteTopicArgsPartitionConfig;
   reservation_config: GooglePubsubLiteTopicArgsReservationConfig;
   retention_config: GooglePubsubLiteTopicArgsRetentionConfig;
-  timeouts: GooglePubsubLiteTopicArgsTimeouts;
+  timeouts?: GooglePubsubLiteTopicArgsTimeouts;
 }
 export class google_pubsub_lite_topic extends TerraformResource {
   readonly id?: string;

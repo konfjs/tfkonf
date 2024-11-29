@@ -8,7 +8,7 @@ export interface AwsRoute53recoveryreadinessCellArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRoute53recoveryreadinessCellArgsTimeouts;
+  timeouts?: AwsRoute53recoveryreadinessCellArgsTimeouts;
 }
 export class aws_route53recoveryreadiness_cell extends TerraformResource {
   readonly arn!: string;

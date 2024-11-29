@@ -8,7 +8,7 @@ export interface GoogleProjectDefaultServiceAccountsArgs {
   action: string;
   project: string;
   restore_policy?: string;
-  timeouts: GoogleProjectDefaultServiceAccountsArgsTimeouts;
+  timeouts?: GoogleProjectDefaultServiceAccountsArgsTimeouts;
 }
 export class google_project_default_service_accounts extends TerraformResource {
   readonly id?: string;

@@ -8,7 +8,7 @@ export interface GoogleApigeeEndpointAttachmentArgs {
   location: string;
   org_id: string;
   service_attachment: string;
-  timeouts: GoogleApigeeEndpointAttachmentArgsTimeouts;
+  timeouts?: GoogleApigeeEndpointAttachmentArgsTimeouts;
 }
 export class google_apigee_endpoint_attachment extends TerraformResource {
   readonly connection_state!: string;

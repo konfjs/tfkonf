@@ -32,7 +32,7 @@ export interface AwsM2EnvironmentArgs {
   };
   high_availability_config: AwsM2EnvironmentArgsHighAvailabilityConfig;
   storage_configuration: AwsM2EnvironmentArgsStorageConfiguration;
-  timeouts: AwsM2EnvironmentArgsTimeouts;
+  timeouts?: AwsM2EnvironmentArgsTimeouts;
 }
 export class aws_m2_environment extends TerraformResource {
   readonly arn!: string;

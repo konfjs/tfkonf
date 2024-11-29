@@ -6,7 +6,7 @@ export interface AwsRekognitionProjectArgsTimeouts {
 export interface AwsRekognitionProjectArgs {
   feature?: string;
   name: string;
-  timeouts: AwsRekognitionProjectArgsTimeouts;
+  timeouts?: AwsRekognitionProjectArgsTimeouts;
 }
 export class aws_rekognition_project extends TerraformResource {
   readonly arn!: string;

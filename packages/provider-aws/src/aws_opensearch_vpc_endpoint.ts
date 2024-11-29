@@ -9,7 +9,7 @@ export interface AwsOpensearchVpcEndpointArgsVpcOptions {
 }
 export interface AwsOpensearchVpcEndpointArgs {
   domain_arn: string;
-  timeouts: AwsOpensearchVpcEndpointArgsTimeouts;
+  timeouts?: AwsOpensearchVpcEndpointArgsTimeouts;
   vpc_options: AwsOpensearchVpcEndpointArgsVpcOptions;
 }
 export class aws_opensearch_vpc_endpoint extends TerraformResource {

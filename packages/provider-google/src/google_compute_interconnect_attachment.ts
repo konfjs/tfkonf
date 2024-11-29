@@ -14,7 +14,7 @@ export interface GoogleComputeInterconnectAttachmentArgs {
   name: string;
   router: string;
   subnet_length?: number;
-  timeouts: GoogleComputeInterconnectAttachmentArgsTimeouts;
+  timeouts?: GoogleComputeInterconnectAttachmentArgsTimeouts;
 }
 export class google_compute_interconnect_attachment extends TerraformResource {
   readonly bandwidth?: string;

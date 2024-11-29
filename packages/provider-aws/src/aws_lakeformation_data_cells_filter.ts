@@ -19,7 +19,7 @@ export interface AwsLakeformationDataCellsFilterArgsTimeouts {
 }
 export interface AwsLakeformationDataCellsFilterArgs {
   table_data: AwsLakeformationDataCellsFilterArgsTableData;
-  timeouts: AwsLakeformationDataCellsFilterArgsTimeouts;
+  timeouts?: AwsLakeformationDataCellsFilterArgsTimeouts;
 }
 export class aws_lakeformation_data_cells_filter extends TerraformResource {
   readonly id!: string;

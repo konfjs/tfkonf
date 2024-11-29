@@ -11,7 +11,7 @@ export interface AwsAccountAlternateContactArgs {
   name: string;
   phone_number: string;
   title: string;
-  timeouts: AwsAccountAlternateContactArgsTimeouts;
+  timeouts?: AwsAccountAlternateContactArgsTimeouts;
 }
 export class aws_account_alternate_contact extends TerraformResource {
   readonly id?: string;

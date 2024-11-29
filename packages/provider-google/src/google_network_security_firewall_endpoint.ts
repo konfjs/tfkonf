@@ -12,7 +12,7 @@ export interface GoogleNetworkSecurityFirewallEndpointArgs {
   location: string;
   name: string;
   parent: string;
-  timeouts: GoogleNetworkSecurityFirewallEndpointArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityFirewallEndpointArgsTimeouts;
 }
 export class google_network_security_firewall_endpoint extends TerraformResource {
   readonly associated_networks!: string[];

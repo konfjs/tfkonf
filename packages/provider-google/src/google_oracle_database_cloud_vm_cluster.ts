@@ -32,7 +32,7 @@ export interface GoogleOracleDatabaseCloudVmClusterArgs {
   location: string;
   network: string;
   properties: GoogleOracleDatabaseCloudVmClusterArgsProperties;
-  timeouts: GoogleOracleDatabaseCloudVmClusterArgsTimeouts;
+  timeouts?: GoogleOracleDatabaseCloudVmClusterArgsTimeouts;
 }
 export class google_oracle_database_cloud_vm_cluster extends TerraformResource {
   readonly create_time!: string;

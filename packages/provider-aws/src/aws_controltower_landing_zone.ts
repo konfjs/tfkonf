@@ -10,7 +10,7 @@ export interface AwsControltowerLandingZoneArgs {
     [key: string]: string;
   };
   version: string;
-  timeouts: AwsControltowerLandingZoneArgsTimeouts;
+  timeouts?: AwsControltowerLandingZoneArgsTimeouts;
 }
 export class aws_controltower_landing_zone extends TerraformResource {
   readonly arn!: string;

@@ -11,7 +11,7 @@ export interface GoogleDialogflowCxEnvironmentArgs {
   description?: string;
   display_name: string;
   parent?: string;
-  timeouts: GoogleDialogflowCxEnvironmentArgsTimeouts;
+  timeouts?: GoogleDialogflowCxEnvironmentArgsTimeouts;
   version_configs: GoogleDialogflowCxEnvironmentArgsVersionConfigs;
 }
 export class google_dialogflow_cx_environment extends TerraformResource {

@@ -27,7 +27,7 @@ export interface AwsElasticacheServerlessCacheArgs {
   };
   user_group_id?: string;
   cache_usage_limits: AwsElasticacheServerlessCacheArgsCacheUsageLimits;
-  timeouts: AwsElasticacheServerlessCacheArgsTimeouts;
+  timeouts?: AwsElasticacheServerlessCacheArgsTimeouts;
 }
 export class aws_elasticache_serverless_cache extends TerraformResource {
   readonly arn!: string;

@@ -12,7 +12,7 @@ export interface GoogleVertexAiFeaturestoreEntitytypeFeatureArgs {
   };
   name?: string;
   value_type: string;
-  timeouts: GoogleVertexAiFeaturestoreEntitytypeFeatureArgsTimeouts;
+  timeouts?: GoogleVertexAiFeaturestoreEntitytypeFeatureArgsTimeouts;
 }
 export class google_vertex_ai_featurestore_entitytype_feature extends TerraformResource {
   readonly create_time!: string;

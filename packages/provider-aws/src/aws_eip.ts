@@ -11,7 +11,7 @@ export interface AwsEipArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsEipArgsTimeouts;
+  timeouts?: AwsEipArgsTimeouts;
 }
 export class aws_eip extends TerraformResource {
   readonly allocation_id!: string;

@@ -11,7 +11,7 @@ export interface AwsCloudhsmV2ClusterArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsCloudhsmV2ClusterArgsTimeouts;
+  timeouts?: AwsCloudhsmV2ClusterArgsTimeouts;
 }
 export class aws_cloudhsm_v2_cluster extends TerraformResource {
   readonly cluster_certificates!: any[];

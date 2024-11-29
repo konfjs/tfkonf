@@ -117,7 +117,7 @@ export interface GoogleComposerEnvironmentArgs {
   name: string;
   config: GoogleComposerEnvironmentArgsConfig;
   storage_config: GoogleComposerEnvironmentArgsStorageConfig;
-  timeouts: GoogleComposerEnvironmentArgsTimeouts;
+  timeouts?: GoogleComposerEnvironmentArgsTimeouts;
 }
 export class google_composer_environment extends TerraformResource {
   readonly effective_labels!: {

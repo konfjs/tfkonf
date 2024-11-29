@@ -5,7 +5,7 @@ export interface AwsOpensearchInboundConnectionAccepterArgsTimeouts {
 }
 export interface AwsOpensearchInboundConnectionAccepterArgs {
   connection_id: string;
-  timeouts: AwsOpensearchInboundConnectionAccepterArgsTimeouts;
+  timeouts?: AwsOpensearchInboundConnectionAccepterArgsTimeouts;
 }
 export class aws_opensearch_inbound_connection_accepter extends TerraformResource {
   readonly connection_status!: string;

@@ -19,7 +19,7 @@ export interface GoogleProjectArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: GoogleProjectArgsTimeouts;
+  timeouts?: GoogleProjectArgsTimeouts;
 }
 export class google_project extends TerraformResource {
   readonly effective_labels!: {

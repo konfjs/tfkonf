@@ -11,7 +11,7 @@ export interface AwsDatazoneFormTypeArgs {
   name: string;
   owning_project_identifier: string;
   model: AwsDatazoneFormTypeArgsModel;
-  timeouts: AwsDatazoneFormTypeArgsTimeouts;
+  timeouts?: AwsDatazoneFormTypeArgsTimeouts;
 }
 export class aws_datazone_form_type extends TerraformResource {
   readonly created_at!: string;

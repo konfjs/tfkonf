@@ -44,7 +44,7 @@ export interface AwsBudgetsBudgetActionArgs {
   action_threshold: AwsBudgetsBudgetActionArgsActionThreshold;
   definition: AwsBudgetsBudgetActionArgsDefinition;
   subscriber: AwsBudgetsBudgetActionArgsSubscriber;
-  timeouts: AwsBudgetsBudgetActionArgsTimeouts;
+  timeouts?: AwsBudgetsBudgetActionArgsTimeouts;
 }
 export class aws_budgets_budget_action extends TerraformResource {
   readonly account_id?: string;

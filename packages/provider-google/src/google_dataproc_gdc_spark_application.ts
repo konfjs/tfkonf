@@ -59,7 +59,7 @@ export interface GoogleDataprocGdcSparkApplicationArgs {
   spark_application_config: GoogleDataprocGdcSparkApplicationArgsSparkApplicationConfig;
   spark_r_application_config: GoogleDataprocGdcSparkApplicationArgsSparkRApplicationConfig;
   spark_sql_application_config: GoogleDataprocGdcSparkApplicationArgsSparkSqlApplicationConfig;
-  timeouts: GoogleDataprocGdcSparkApplicationArgsTimeouts;
+  timeouts?: GoogleDataprocGdcSparkApplicationArgsTimeouts;
 }
 export class google_dataproc_gdc_spark_application extends TerraformResource {
   readonly create_time!: string;

@@ -17,7 +17,7 @@ export interface AwsEcrRepositoryArgs {
   };
   encryption_configuration: AwsEcrRepositoryArgsEncryptionConfiguration;
   image_scanning_configuration: AwsEcrRepositoryArgsImageScanningConfiguration;
-  timeouts: AwsEcrRepositoryArgsTimeouts;
+  timeouts?: AwsEcrRepositoryArgsTimeouts;
 }
 export class aws_ecr_repository extends TerraformResource {
   readonly arn!: string;

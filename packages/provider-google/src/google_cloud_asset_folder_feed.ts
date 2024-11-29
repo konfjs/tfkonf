@@ -25,7 +25,7 @@ export interface GoogleCloudAssetFolderFeedArgs {
   folder: string;
   condition: GoogleCloudAssetFolderFeedArgsCondition;
   feed_output_config: GoogleCloudAssetFolderFeedArgsFeedOutputConfig;
-  timeouts: GoogleCloudAssetFolderFeedArgsTimeouts;
+  timeouts?: GoogleCloudAssetFolderFeedArgsTimeouts;
 }
 export class google_cloud_asset_folder_feed extends TerraformResource {
   readonly folder_id!: string;

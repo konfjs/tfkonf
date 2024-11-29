@@ -141,7 +141,7 @@ export interface AwsSpotFleetRequestArgs {
   launch_specification: AwsSpotFleetRequestArgsLaunchSpecification;
   launch_template_config: AwsSpotFleetRequestArgsLaunchTemplateConfig;
   spot_maintenance_strategies: AwsSpotFleetRequestArgsSpotMaintenanceStrategies;
-  timeouts: AwsSpotFleetRequestArgsTimeouts;
+  timeouts?: AwsSpotFleetRequestArgsTimeouts;
 }
 export class aws_spot_fleet_request extends TerraformResource {
   readonly client_token!: string;

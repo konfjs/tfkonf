@@ -9,7 +9,7 @@ export interface AwsRoute53profilesResourceAssociationArgs {
   profile_id: string;
   resource_arn: string;
   resource_properties?: string;
-  timeouts: AwsRoute53profilesResourceAssociationArgsTimeouts;
+  timeouts?: AwsRoute53profilesResourceAssociationArgsTimeouts;
 }
 export class aws_route53profiles_resource_association extends TerraformResource {
   readonly id!: string;

@@ -28,7 +28,7 @@ export interface AwsAppfabricAppAuthorizationArgs {
   };
   credential: AwsAppfabricAppAuthorizationArgsCredential;
   tenant: AwsAppfabricAppAuthorizationArgsTenant;
-  timeouts: AwsAppfabricAppAuthorizationArgsTimeouts;
+  timeouts?: AwsAppfabricAppAuthorizationArgsTimeouts;
 }
 export class aws_appfabric_app_authorization extends TerraformResource {
   readonly arn!: string;

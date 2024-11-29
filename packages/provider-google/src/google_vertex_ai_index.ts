@@ -34,7 +34,7 @@ export interface GoogleVertexAiIndexArgs {
   };
   region?: string;
   metadata: GoogleVertexAiIndexArgsMetadata;
-  timeouts: GoogleVertexAiIndexArgsTimeouts;
+  timeouts?: GoogleVertexAiIndexArgsTimeouts;
 }
 export class google_vertex_ai_index extends TerraformResource {
   readonly create_time!: string;

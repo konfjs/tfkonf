@@ -53,7 +53,7 @@ export interface GoogleOrgPolicyPolicyArgs {
   parent: string;
   dry_run_spec: GoogleOrgPolicyPolicyArgsDryRunSpec;
   spec: GoogleOrgPolicyPolicyArgsSpec;
-  timeouts: GoogleOrgPolicyPolicyArgsTimeouts;
+  timeouts?: GoogleOrgPolicyPolicyArgsTimeouts;
 }
 export class google_org_policy_policy extends TerraformResource {
   readonly etag!: string;

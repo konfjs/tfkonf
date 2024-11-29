@@ -24,7 +24,7 @@ export interface AwsVpcIpamPoolArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpcIpamPoolArgsTimeouts;
+  timeouts?: AwsVpcIpamPoolArgsTimeouts;
 }
 export class aws_vpc_ipam_pool extends TerraformResource {
   readonly arn!: string;

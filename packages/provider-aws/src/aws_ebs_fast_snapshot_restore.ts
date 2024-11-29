@@ -6,7 +6,7 @@ export interface AwsEbsFastSnapshotRestoreArgsTimeouts {
 export interface AwsEbsFastSnapshotRestoreArgs {
   availability_zone: string;
   snapshot_id: string;
-  timeouts: AwsEbsFastSnapshotRestoreArgsTimeouts;
+  timeouts?: AwsEbsFastSnapshotRestoreArgsTimeouts;
 }
 export class aws_ebs_fast_snapshot_restore extends TerraformResource {
   readonly id!: string;

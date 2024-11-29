@@ -13,7 +13,7 @@ export interface AwsGrafanaWorkspaceSamlConfigurationArgs {
   org_assertion?: string;
   role_assertion?: string;
   workspace_id: string;
-  timeouts: AwsGrafanaWorkspaceSamlConfigurationArgsTimeouts;
+  timeouts?: AwsGrafanaWorkspaceSamlConfigurationArgsTimeouts;
 }
 export class aws_grafana_workspace_saml_configuration extends TerraformResource {
   readonly email_assertion?: string;

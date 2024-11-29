@@ -9,7 +9,7 @@ export interface AwsRamResourceShareArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRamResourceShareArgsTimeouts;
+  timeouts?: AwsRamResourceShareArgsTimeouts;
 }
 export class aws_ram_resource_share extends TerraformResource {
   readonly arn!: string;

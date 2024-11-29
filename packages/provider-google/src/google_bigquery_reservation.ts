@@ -14,7 +14,7 @@ export interface GoogleBigqueryReservationArgs {
   name: string;
   slot_capacity: number;
   autoscale: GoogleBigqueryReservationArgsAutoscale;
-  timeouts: GoogleBigqueryReservationArgsTimeouts;
+  timeouts?: GoogleBigqueryReservationArgsTimeouts;
 }
 export class google_bigquery_reservation extends TerraformResource {
   readonly edition?: string;

@@ -6,7 +6,7 @@ export interface GoogleApigeeEnvironmentKeyvaluemapsArgsTimeouts {
 export interface GoogleApigeeEnvironmentKeyvaluemapsArgs {
   env_id: string;
   name: string;
-  timeouts: GoogleApigeeEnvironmentKeyvaluemapsArgsTimeouts;
+  timeouts?: GoogleApigeeEnvironmentKeyvaluemapsArgsTimeouts;
 }
 export class google_apigee_environment_keyvaluemaps extends TerraformResource {
   readonly id?: string;

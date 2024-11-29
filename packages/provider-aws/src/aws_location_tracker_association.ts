@@ -6,7 +6,7 @@ export interface AwsLocationTrackerAssociationArgsTimeouts {
 export interface AwsLocationTrackerAssociationArgs {
   consumer_arn: string;
   tracker_name: string;
-  timeouts: AwsLocationTrackerAssociationArgsTimeouts;
+  timeouts?: AwsLocationTrackerAssociationArgsTimeouts;
 }
 export class aws_location_tracker_association extends TerraformResource {
   readonly id?: string;

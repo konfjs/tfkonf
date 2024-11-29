@@ -17,7 +17,7 @@ export interface AwsCleanroomsConfiguredTableArgs {
     [key: string]: string;
   };
   table_reference: AwsCleanroomsConfiguredTableArgsTableReference;
-  timeouts: AwsCleanroomsConfiguredTableArgsTimeouts;
+  timeouts?: AwsCleanroomsConfiguredTableArgsTimeouts;
 }
 export class aws_cleanrooms_configured_table extends TerraformResource {
   readonly arn!: string;

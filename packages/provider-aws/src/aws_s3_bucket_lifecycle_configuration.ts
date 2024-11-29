@@ -58,7 +58,7 @@ export interface AwsS3BucketLifecycleConfigurationArgs {
   bucket: string;
   expected_bucket_owner?: string;
   rule: AwsS3BucketLifecycleConfigurationArgsRule;
-  timeouts: AwsS3BucketLifecycleConfigurationArgsTimeouts;
+  timeouts?: AwsS3BucketLifecycleConfigurationArgsTimeouts;
 }
 export class aws_s3_bucket_lifecycle_configuration extends TerraformResource {
   readonly id?: string;

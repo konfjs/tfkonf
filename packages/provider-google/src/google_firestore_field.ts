@@ -18,7 +18,7 @@ export interface GoogleFirestoreFieldArgs {
   database?: string;
   field: string;
   index_config: GoogleFirestoreFieldArgsIndexConfig;
-  timeouts: GoogleFirestoreFieldArgsTimeouts;
+  timeouts?: GoogleFirestoreFieldArgsTimeouts;
   ttl_config: GoogleFirestoreFieldArgsTtlConfig;
 }
 export class google_firestore_field extends TerraformResource {

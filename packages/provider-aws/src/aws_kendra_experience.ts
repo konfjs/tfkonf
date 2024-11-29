@@ -22,7 +22,7 @@ export interface AwsKendraExperienceArgs {
   name: string;
   role_arn: string;
   configuration: AwsKendraExperienceArgsConfiguration;
-  timeouts: AwsKendraExperienceArgsTimeouts;
+  timeouts?: AwsKendraExperienceArgsTimeouts;
 }
 export class aws_kendra_experience extends TerraformResource {
   readonly arn!: string;

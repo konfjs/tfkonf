@@ -106,7 +106,7 @@ export interface AwsMskClusterArgs {
   encryption_info: AwsMskClusterArgsEncryptionInfo;
   logging_info: AwsMskClusterArgsLoggingInfo;
   open_monitoring: AwsMskClusterArgsOpenMonitoring;
-  timeouts: AwsMskClusterArgsTimeouts;
+  timeouts?: AwsMskClusterArgsTimeouts;
 }
 export class aws_msk_cluster extends TerraformResource {
   readonly arn!: string;

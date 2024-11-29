@@ -6,7 +6,7 @@ export interface AwsShieldDrtAccessRoleArnAssociationArgsTimeouts {
 }
 export interface AwsShieldDrtAccessRoleArnAssociationArgs {
   role_arn: string;
-  timeouts: AwsShieldDrtAccessRoleArnAssociationArgsTimeouts;
+  timeouts?: AwsShieldDrtAccessRoleArnAssociationArgsTimeouts;
 }
 export class aws_shield_drt_access_role_arn_association extends TerraformResource {
   readonly id!: string;

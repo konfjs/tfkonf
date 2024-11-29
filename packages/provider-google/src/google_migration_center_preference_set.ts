@@ -46,7 +46,7 @@ export interface GoogleMigrationCenterPreferenceSetArgs {
   display_name?: string;
   location: string;
   preference_set_id: string;
-  timeouts: GoogleMigrationCenterPreferenceSetArgsTimeouts;
+  timeouts?: GoogleMigrationCenterPreferenceSetArgsTimeouts;
   virtual_machine_preferences: GoogleMigrationCenterPreferenceSetArgsVirtualMachinePreferences;
 }
 export class google_migration_center_preference_set extends TerraformResource {

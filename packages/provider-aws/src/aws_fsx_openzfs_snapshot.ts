@@ -11,7 +11,7 @@ export interface AwsFsxOpenzfsSnapshotArgs {
     [key: string]: string;
   };
   volume_id: string;
-  timeouts: AwsFsxOpenzfsSnapshotArgsTimeouts;
+  timeouts?: AwsFsxOpenzfsSnapshotArgsTimeouts;
 }
 export class aws_fsx_openzfs_snapshot extends TerraformResource {
   readonly arn!: string;

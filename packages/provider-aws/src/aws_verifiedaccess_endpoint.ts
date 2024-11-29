@@ -35,7 +35,7 @@ export interface AwsVerifiedaccessEndpointArgs {
   load_balancer_options: AwsVerifiedaccessEndpointArgsLoadBalancerOptions;
   network_interface_options: AwsVerifiedaccessEndpointArgsNetworkInterfaceOptions;
   sse_specification: AwsVerifiedaccessEndpointArgsSseSpecification;
-  timeouts: AwsVerifiedaccessEndpointArgsTimeouts;
+  timeouts?: AwsVerifiedaccessEndpointArgsTimeouts;
 }
 export class aws_verifiedaccess_endpoint extends TerraformResource {
   readonly device_validation_domain!: string;

@@ -100,7 +100,7 @@ export interface GoogleDataPipelinePipelineArgs {
   state: string;
   type: string;
   schedule_info: GoogleDataPipelinePipelineArgsScheduleInfo;
-  timeouts: GoogleDataPipelinePipelineArgsTimeouts;
+  timeouts?: GoogleDataPipelinePipelineArgsTimeouts;
   workload: GoogleDataPipelinePipelineArgsWorkload;
 }
 export class google_data_pipeline_pipeline extends TerraformResource {

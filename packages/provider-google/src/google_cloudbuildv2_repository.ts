@@ -10,7 +10,7 @@ export interface GoogleCloudbuildv2RepositoryArgs {
   name: string;
   parent_connection: string;
   remote_uri: string;
-  timeouts: GoogleCloudbuildv2RepositoryArgsTimeouts;
+  timeouts?: GoogleCloudbuildv2RepositoryArgsTimeouts;
 }
 export class google_cloudbuildv2_repository extends TerraformResource {
   readonly create_time!: string;

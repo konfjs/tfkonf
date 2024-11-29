@@ -53,7 +53,7 @@ export interface AwsLexv2modelsSlotTypeArgs {
   composite_slot_type_setting: AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSetting;
   external_source_setting: AwsLexv2modelsSlotTypeArgsExternalSourceSetting;
   slot_type_values: AwsLexv2modelsSlotTypeArgsSlotTypeValues;
-  timeouts: AwsLexv2modelsSlotTypeArgsTimeouts;
+  timeouts?: AwsLexv2modelsSlotTypeArgsTimeouts;
   value_selection_setting: AwsLexv2modelsSlotTypeArgsValueSelectionSetting;
 }
 export class aws_lexv2models_slot_type extends TerraformResource {

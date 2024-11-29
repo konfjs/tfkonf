@@ -8,7 +8,7 @@ export interface AwsIvsChannelArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIvsChannelArgsTimeouts;
+  timeouts?: AwsIvsChannelArgsTimeouts;
 }
 export class aws_ivs_channel extends TerraformResource {
   readonly arn!: string;

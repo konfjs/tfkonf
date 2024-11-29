@@ -11,7 +11,7 @@ export interface AwsServerlessapplicationrepositoryCloudformationStackArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsServerlessapplicationrepositoryCloudformationStackArgsTimeouts;
+  timeouts?: AwsServerlessapplicationrepositoryCloudformationStackArgsTimeouts;
 }
 export class aws_serverlessapplicationrepository_cloudformation_stack extends TerraformResource {
   readonly id?: string;

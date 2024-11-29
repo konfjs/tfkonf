@@ -14,7 +14,7 @@ export interface AwsDatazoneAssetTypeArgs {
   name: string;
   owning_project_identifier: string;
   forms_input: AwsDatazoneAssetTypeArgsFormsInput;
-  timeouts: AwsDatazoneAssetTypeArgsTimeouts;
+  timeouts?: AwsDatazoneAssetTypeArgsTimeouts;
 }
 export class aws_datazone_asset_type extends TerraformResource {
   readonly created_at!: string;

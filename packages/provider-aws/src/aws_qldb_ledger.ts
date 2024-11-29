@@ -9,7 +9,7 @@ export interface AwsQldbLedgerArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsQldbLedgerArgsTimeouts;
+  timeouts?: AwsQldbLedgerArgsTimeouts;
 }
 export class aws_qldb_ledger extends TerraformResource {
   readonly arn!: string;

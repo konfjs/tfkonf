@@ -9,7 +9,7 @@ export interface GoogleEssentialContactsContactArgs {
   language_tag: string;
   notification_category_subscriptions: string[];
   parent: string;
-  timeouts: GoogleEssentialContactsContactArgsTimeouts;
+  timeouts?: GoogleEssentialContactsContactArgsTimeouts;
 }
 export class google_essential_contacts_contact extends TerraformResource {
   readonly id?: string;

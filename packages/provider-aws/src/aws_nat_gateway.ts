@@ -12,7 +12,7 @@ export interface AwsNatGatewayArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNatGatewayArgsTimeouts;
+  timeouts?: AwsNatGatewayArgsTimeouts;
 }
 export class aws_nat_gateway extends TerraformResource {
   readonly association_id!: string;

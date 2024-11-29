@@ -46,7 +46,7 @@ export interface GoogleNetworkServicesEdgeCacheOriginArgs {
   origin_override_action: GoogleNetworkServicesEdgeCacheOriginArgsOriginOverrideAction;
   origin_redirect: GoogleNetworkServicesEdgeCacheOriginArgsOriginRedirect;
   timeout: GoogleNetworkServicesEdgeCacheOriginArgsTimeout;
-  timeouts: GoogleNetworkServicesEdgeCacheOriginArgsTimeouts;
+  timeouts?: GoogleNetworkServicesEdgeCacheOriginArgsTimeouts;
 }
 export class google_network_services_edge_cache_origin extends TerraformResource {
   readonly effective_labels!: {

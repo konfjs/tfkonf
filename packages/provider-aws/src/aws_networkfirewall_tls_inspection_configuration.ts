@@ -47,7 +47,7 @@ export interface AwsNetworkfirewallTlsInspectionConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNetworkfirewallTlsInspectionConfigurationArgsTimeouts;
+  timeouts?: AwsNetworkfirewallTlsInspectionConfigurationArgsTimeouts;
   tls_inspection_configuration: AwsNetworkfirewallTlsInspectionConfigurationArgsTlsInspectionConfiguration;
 }
 export class aws_networkfirewall_tls_inspection_configuration extends TerraformResource {

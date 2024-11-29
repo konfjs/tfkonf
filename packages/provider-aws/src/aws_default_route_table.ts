@@ -9,7 +9,7 @@ export interface AwsDefaultRouteTableArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDefaultRouteTableArgsTimeouts;
+  timeouts?: AwsDefaultRouteTableArgsTimeouts;
 }
 export class aws_default_route_table extends TerraformResource {
   readonly arn!: string;

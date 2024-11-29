@@ -11,7 +11,7 @@ export interface GoogleAppEngineDomainMappingArgs {
   domain_name: string;
   override_strategy?: string;
   ssl_settings: GoogleAppEngineDomainMappingArgsSslSettings;
-  timeouts: GoogleAppEngineDomainMappingArgsTimeouts;
+  timeouts?: GoogleAppEngineDomainMappingArgsTimeouts;
 }
 export class google_app_engine_domain_mapping extends TerraformResource {
   readonly id?: string;

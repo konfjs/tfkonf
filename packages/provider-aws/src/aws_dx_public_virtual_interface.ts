@@ -13,7 +13,7 @@ export interface AwsDxPublicVirtualInterfaceArgs {
     [key: string]: string;
   };
   vlan: number;
-  timeouts: AwsDxPublicVirtualInterfaceArgsTimeouts;
+  timeouts?: AwsDxPublicVirtualInterfaceArgsTimeouts;
 }
 export class aws_dx_public_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;

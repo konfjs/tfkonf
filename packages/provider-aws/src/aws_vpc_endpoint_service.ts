@@ -11,7 +11,7 @@ export interface AwsVpcEndpointServiceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsVpcEndpointServiceArgsTimeouts;
+  timeouts?: AwsVpcEndpointServiceArgsTimeouts;
 }
 export class aws_vpc_endpoint_service extends TerraformResource {
   readonly allowed_principals?: string[];

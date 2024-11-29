@@ -10,7 +10,7 @@ export interface AwsSsoadminAccountAssignmentArgs {
   principal_type: string;
   target_id: string;
   target_type?: string;
-  timeouts: AwsSsoadminAccountAssignmentArgsTimeouts;
+  timeouts?: AwsSsoadminAccountAssignmentArgsTimeouts;
 }
 export class aws_ssoadmin_account_assignment extends TerraformResource {
   readonly id?: string;

@@ -12,7 +12,7 @@ export interface GoogleNetappVolumeSnapshotArgs {
   location: string;
   name: string;
   volume_name: string;
-  timeouts: GoogleNetappVolumeSnapshotArgsTimeouts;
+  timeouts?: GoogleNetappVolumeSnapshotArgsTimeouts;
 }
 export class google_netapp_volume_snapshot extends TerraformResource {
   readonly effective_labels!: {

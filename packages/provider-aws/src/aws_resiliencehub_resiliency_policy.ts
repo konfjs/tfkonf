@@ -34,7 +34,7 @@ export interface AwsResiliencehubResiliencyPolicyArgs {
   };
   tier: string;
   policy: AwsResiliencehubResiliencyPolicyArgsPolicy;
-  timeouts: AwsResiliencehubResiliencyPolicyArgsTimeouts;
+  timeouts?: AwsResiliencehubResiliencyPolicyArgsTimeouts;
 }
 export class aws_resiliencehub_resiliency_policy extends TerraformResource {
   readonly arn!: string;

@@ -27,7 +27,7 @@ export interface AwsLightsailContainerServiceArgs {
   };
   private_registry_access: AwsLightsailContainerServiceArgsPrivateRegistryAccess;
   public_domain_names: AwsLightsailContainerServiceArgsPublicDomainNames;
-  timeouts: AwsLightsailContainerServiceArgsTimeouts;
+  timeouts?: AwsLightsailContainerServiceArgsTimeouts;
 }
 export class aws_lightsail_container_service extends TerraformResource {
   readonly arn!: string;

@@ -28,7 +28,7 @@ export interface AwsCloudformationStackSetInstanceArgs {
   stack_set_name: string;
   deployment_targets: AwsCloudformationStackSetInstanceArgsDeploymentTargets;
   operation_preferences: AwsCloudformationStackSetInstanceArgsOperationPreferences;
-  timeouts: AwsCloudformationStackSetInstanceArgsTimeouts;
+  timeouts?: AwsCloudformationStackSetInstanceArgsTimeouts;
 }
 export class aws_cloudformation_stack_set_instance extends TerraformResource {
   readonly account_id?: string;

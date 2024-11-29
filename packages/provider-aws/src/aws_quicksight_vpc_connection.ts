@@ -14,7 +14,7 @@ export interface AwsQuicksightVpcConnectionArgs {
     [key: string]: string;
   };
   vpc_connection_id: string;
-  timeouts: AwsQuicksightVpcConnectionArgsTimeouts;
+  timeouts?: AwsQuicksightVpcConnectionArgsTimeouts;
 }
 export class aws_quicksight_vpc_connection extends TerraformResource {
   readonly arn!: string;

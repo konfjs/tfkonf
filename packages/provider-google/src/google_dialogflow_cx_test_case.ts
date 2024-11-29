@@ -57,7 +57,7 @@ export interface GoogleDialogflowCxTestCaseArgs {
   tags?: string[];
   test_case_conversation_turns: GoogleDialogflowCxTestCaseArgsTestCaseConversationTurns;
   test_config: GoogleDialogflowCxTestCaseArgsTestConfig;
-  timeouts: GoogleDialogflowCxTestCaseArgsTimeouts;
+  timeouts?: GoogleDialogflowCxTestCaseArgsTimeouts;
 }
 export class google_dialogflow_cx_test_case extends TerraformResource {
   readonly creation_time!: string;

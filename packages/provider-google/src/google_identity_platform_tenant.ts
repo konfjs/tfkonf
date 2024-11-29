@@ -9,7 +9,7 @@ export interface GoogleIdentityPlatformTenantArgs {
   disable_auth?: boolean;
   display_name: string;
   enable_email_link_signin?: boolean;
-  timeouts: GoogleIdentityPlatformTenantArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformTenantArgsTimeouts;
 }
 export class google_identity_platform_tenant extends TerraformResource {
   readonly id?: string;

@@ -44,7 +44,7 @@ export interface AwsRedshiftClusterArgs {
   };
   logging: AwsRedshiftClusterArgsLogging;
   snapshot_copy: AwsRedshiftClusterArgsSnapshotCopy;
-  timeouts: AwsRedshiftClusterArgsTimeouts;
+  timeouts?: AwsRedshiftClusterArgsTimeouts;
 }
 export class aws_redshift_cluster extends TerraformResource {
   readonly aqua_configuration_status?: string;

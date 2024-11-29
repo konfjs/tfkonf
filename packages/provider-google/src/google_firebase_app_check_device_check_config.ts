@@ -8,7 +8,7 @@ export interface GoogleFirebaseAppCheckDeviceCheckConfigArgs {
   app_id: string;
   key_id: string;
   private_key: string;
-  timeouts: GoogleFirebaseAppCheckDeviceCheckConfigArgsTimeouts;
+  timeouts?: GoogleFirebaseAppCheckDeviceCheckConfigArgsTimeouts;
 }
 export class google_firebase_app_check_device_check_config extends TerraformResource {
   readonly id?: string;

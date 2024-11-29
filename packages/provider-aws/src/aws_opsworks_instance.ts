@@ -30,7 +30,7 @@ export interface AwsOpsworksInstanceArgs {
   ebs_block_device: AwsOpsworksInstanceArgsEbsBlockDevice;
   ephemeral_block_device: AwsOpsworksInstanceArgsEphemeralBlockDevice;
   root_block_device: AwsOpsworksInstanceArgsRootBlockDevice;
-  timeouts: AwsOpsworksInstanceArgsTimeouts;
+  timeouts?: AwsOpsworksInstanceArgsTimeouts;
 }
 export class aws_opsworks_instance extends TerraformResource {
   readonly ami_id?: string;

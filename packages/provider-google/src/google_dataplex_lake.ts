@@ -16,7 +16,7 @@ export interface GoogleDataplexLakeArgs {
   location: string;
   name: string;
   metastore: GoogleDataplexLakeArgsMetastore;
-  timeouts: GoogleDataplexLakeArgsTimeouts;
+  timeouts?: GoogleDataplexLakeArgsTimeouts;
 }
 export class google_dataplex_lake extends TerraformResource {
   readonly asset_status!: any[];

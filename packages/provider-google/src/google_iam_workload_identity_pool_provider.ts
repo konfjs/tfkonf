@@ -41,7 +41,7 @@ export interface GoogleIamWorkloadIdentityPoolProviderArgs {
   aws: GoogleIamWorkloadIdentityPoolProviderArgsAws;
   oidc: GoogleIamWorkloadIdentityPoolProviderArgsOidc;
   saml: GoogleIamWorkloadIdentityPoolProviderArgsSaml;
-  timeouts: GoogleIamWorkloadIdentityPoolProviderArgsTimeouts;
+  timeouts?: GoogleIamWorkloadIdentityPoolProviderArgsTimeouts;
   x509: GoogleIamWorkloadIdentityPoolProviderArgsX509;
 }
 export class google_iam_workload_identity_pool_provider extends TerraformResource {

@@ -9,7 +9,7 @@ export interface AwsServicecatalogProductPortfolioAssociationArgs {
   portfolio_id: string;
   product_id: string;
   source_portfolio_id?: string;
-  timeouts: AwsServicecatalogProductPortfolioAssociationArgsTimeouts;
+  timeouts?: AwsServicecatalogProductPortfolioAssociationArgsTimeouts;
 }
 export class aws_servicecatalog_product_portfolio_association extends TerraformResource {
   readonly id?: string;

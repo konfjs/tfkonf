@@ -98,7 +98,7 @@ export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgs
   };
   elements: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsElements;
   real_time_alert_configuration: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsRealTimeAlertConfiguration;
-  timeouts: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsTimeouts;
+  timeouts?: AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsTimeouts;
 }
 export class aws_chimesdkmediapipelines_media_insights_pipeline_configuration extends TerraformResource {
   readonly arn!: string;

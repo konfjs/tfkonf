@@ -20,7 +20,7 @@ export interface AwsFsxOntapFileSystemArgs {
     [key: string]: string;
   };
   disk_iops_configuration: AwsFsxOntapFileSystemArgsDiskIopsConfiguration;
-  timeouts: AwsFsxOntapFileSystemArgsTimeouts;
+  timeouts?: AwsFsxOntapFileSystemArgsTimeouts;
 }
 export class aws_fsx_ontap_file_system extends TerraformResource {
   readonly arn!: string;

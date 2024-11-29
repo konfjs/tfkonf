@@ -9,7 +9,7 @@ export interface AwsEc2ClientVpnAuthorizationRuleArgs {
   client_vpn_endpoint_id: string;
   description?: string;
   target_network_cidr: string;
-  timeouts: AwsEc2ClientVpnAuthorizationRuleArgsTimeouts;
+  timeouts?: AwsEc2ClientVpnAuthorizationRuleArgsTimeouts;
 }
 export class aws_ec2_client_vpn_authorization_rule extends TerraformResource {
   readonly id?: string;

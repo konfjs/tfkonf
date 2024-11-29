@@ -17,7 +17,7 @@ export interface AwsStoragegatewayFileSystemAssociationArgs {
   };
   username: string;
   cache_attributes: AwsStoragegatewayFileSystemAssociationArgsCacheAttributes;
-  timeouts: AwsStoragegatewayFileSystemAssociationArgsTimeouts;
+  timeouts?: AwsStoragegatewayFileSystemAssociationArgsTimeouts;
 }
 export class aws_storagegateway_file_system_association extends TerraformResource {
   readonly arn!: string;

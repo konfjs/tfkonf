@@ -17,7 +17,7 @@ export interface AwsCloudformationStackArgs {
   };
   template_url?: string;
   timeout_in_minutes?: number;
-  timeouts: AwsCloudformationStackArgsTimeouts;
+  timeouts?: AwsCloudformationStackArgsTimeouts;
 }
 export class aws_cloudformation_stack extends TerraformResource {
   readonly id?: string;

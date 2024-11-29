@@ -224,7 +224,7 @@ export interface GoogleCloudbuildTriggerArgs {
   pubsub_config: GoogleCloudbuildTriggerArgsPubsubConfig;
   repository_event_config: GoogleCloudbuildTriggerArgsRepositoryEventConfig;
   source_to_build: GoogleCloudbuildTriggerArgsSourceToBuild;
-  timeouts: GoogleCloudbuildTriggerArgsTimeouts;
+  timeouts?: GoogleCloudbuildTriggerArgsTimeouts;
   trigger_template: GoogleCloudbuildTriggerArgsTriggerTemplate;
   webhook_config: GoogleCloudbuildTriggerArgsWebhookConfig;
 }

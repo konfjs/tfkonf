@@ -12,7 +12,7 @@ export interface GoogleActiveDirectoryDomainTrustArgs {
   trust_direction: string;
   trust_handshake_secret: string;
   trust_type: string;
-  timeouts: GoogleActiveDirectoryDomainTrustArgsTimeouts;
+  timeouts?: GoogleActiveDirectoryDomainTrustArgsTimeouts;
 }
 export class google_active_directory_domain_trust extends TerraformResource {
   readonly id?: string;

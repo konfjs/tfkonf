@@ -10,7 +10,7 @@ export interface AwsDatasyncAgentArgs {
     [key: string]: string;
   };
   vpc_endpoint_id?: string;
-  timeouts: AwsDatasyncAgentArgsTimeouts;
+  timeouts?: AwsDatasyncAgentArgsTimeouts;
 }
 export class aws_datasync_agent extends TerraformResource {
   readonly activation_key?: string;

@@ -12,7 +12,7 @@ export interface AwsChatbotSlackChannelConfigurationArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsChatbotSlackChannelConfigurationArgsTimeouts;
+  timeouts?: AwsChatbotSlackChannelConfigurationArgsTimeouts;
 }
 export class aws_chatbot_slack_channel_configuration extends TerraformResource {
   readonly chat_configuration_arn!: string;

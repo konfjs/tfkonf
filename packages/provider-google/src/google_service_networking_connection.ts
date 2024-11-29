@@ -10,7 +10,7 @@ export interface GoogleServiceNetworkingConnectionArgs {
   reserved_peering_ranges: string[];
   service: string;
   update_on_creation_fail?: boolean;
-  timeouts: GoogleServiceNetworkingConnectionArgsTimeouts;
+  timeouts?: GoogleServiceNetworkingConnectionArgsTimeouts;
 }
 export class google_service_networking_connection extends TerraformResource {
   readonly id?: string;

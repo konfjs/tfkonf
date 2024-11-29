@@ -38,7 +38,7 @@ export interface GoogleDataplexAssetArgs {
   name: string;
   discovery_spec: GoogleDataplexAssetArgsDiscoverySpec;
   resource_spec: GoogleDataplexAssetArgsResourceSpec;
-  timeouts: GoogleDataplexAssetArgsTimeouts;
+  timeouts?: GoogleDataplexAssetArgsTimeouts;
 }
 export class google_dataplex_asset extends TerraformResource {
   readonly create_time!: string;

@@ -49,7 +49,7 @@ export interface GoogleEventarcTriggerArgs {
   service_account?: string;
   destination: GoogleEventarcTriggerArgsDestination;
   matching_criteria: GoogleEventarcTriggerArgsMatchingCriteria;
-  timeouts: GoogleEventarcTriggerArgsTimeouts;
+  timeouts?: GoogleEventarcTriggerArgsTimeouts;
   transport: GoogleEventarcTriggerArgsTransport;
 }
 export class google_eventarc_trigger extends TerraformResource {

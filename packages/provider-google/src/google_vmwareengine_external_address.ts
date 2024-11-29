@@ -9,7 +9,7 @@ export interface GoogleVmwareengineExternalAddressArgs {
   internal_ip: string;
   name: string;
   parent: string;
-  timeouts: GoogleVmwareengineExternalAddressArgsTimeouts;
+  timeouts?: GoogleVmwareengineExternalAddressArgsTimeouts;
 }
 export class google_vmwareengine_external_address extends TerraformResource {
   readonly create_time!: string;

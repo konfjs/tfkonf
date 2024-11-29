@@ -15,7 +15,7 @@ export interface AwsSsoadminPermissionsBoundaryAttachmentArgs {
   instance_arn: string;
   permission_set_arn: string;
   permissions_boundary: AwsSsoadminPermissionsBoundaryAttachmentArgsPermissionsBoundary;
-  timeouts: AwsSsoadminPermissionsBoundaryAttachmentArgsTimeouts;
+  timeouts?: AwsSsoadminPermissionsBoundaryAttachmentArgsTimeouts;
 }
 export class aws_ssoadmin_permissions_boundary_attachment extends TerraformResource {
   readonly id?: string;

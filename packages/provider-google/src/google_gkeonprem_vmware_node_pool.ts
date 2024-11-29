@@ -43,7 +43,7 @@ export interface GoogleGkeonpremVmwareNodePoolArgs {
   vmware_cluster: string;
   config: GoogleGkeonpremVmwareNodePoolArgsConfig;
   node_pool_autoscaling: GoogleGkeonpremVmwareNodePoolArgsNodePoolAutoscaling;
-  timeouts: GoogleGkeonpremVmwareNodePoolArgsTimeouts;
+  timeouts?: GoogleGkeonpremVmwareNodePoolArgsTimeouts;
 }
 export class google_gkeonprem_vmware_node_pool extends TerraformResource {
   readonly create_time!: string;

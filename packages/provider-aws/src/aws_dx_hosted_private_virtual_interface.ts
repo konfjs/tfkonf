@@ -11,7 +11,7 @@ export interface AwsDxHostedPrivateVirtualInterfaceArgs {
   name: string;
   owner_account_id: string;
   vlan: number;
-  timeouts: AwsDxHostedPrivateVirtualInterfaceArgsTimeouts;
+  timeouts?: AwsDxHostedPrivateVirtualInterfaceArgsTimeouts;
 }
 export class aws_dx_hosted_private_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;

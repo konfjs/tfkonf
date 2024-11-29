@@ -26,7 +26,7 @@ export interface AwsLakeformationResourceLfTagsArgs {
   lf_tag: AwsLakeformationResourceLfTagsArgsLfTag;
   table: AwsLakeformationResourceLfTagsArgsTable;
   table_with_columns: AwsLakeformationResourceLfTagsArgsTableWithColumns;
-  timeouts: AwsLakeformationResourceLfTagsArgsTimeouts;
+  timeouts?: AwsLakeformationResourceLfTagsArgsTimeouts;
 }
 export class aws_lakeformation_resource_lf_tags extends TerraformResource {
   readonly catalog_id?: string;

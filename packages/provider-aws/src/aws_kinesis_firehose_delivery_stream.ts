@@ -612,7 +612,7 @@ export interface AwsKinesisFirehoseDeliveryStreamArgs {
   server_side_encryption: AwsKinesisFirehoseDeliveryStreamArgsServerSideEncryption;
   snowflake_configuration: AwsKinesisFirehoseDeliveryStreamArgsSnowflakeConfiguration;
   splunk_configuration: AwsKinesisFirehoseDeliveryStreamArgsSplunkConfiguration;
-  timeouts: AwsKinesisFirehoseDeliveryStreamArgsTimeouts;
+  timeouts?: AwsKinesisFirehoseDeliveryStreamArgsTimeouts;
 }
 export class aws_kinesis_firehose_delivery_stream extends TerraformResource {
   readonly arn?: string;

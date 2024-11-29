@@ -16,7 +16,7 @@ export interface GoogleGkeHubScopeRbacRoleBindingArgs {
   scope_rbac_role_binding_id: string;
   user?: string;
   role: GoogleGkeHubScopeRbacRoleBindingArgsRole;
-  timeouts: GoogleGkeHubScopeRbacRoleBindingArgsTimeouts;
+  timeouts?: GoogleGkeHubScopeRbacRoleBindingArgsTimeouts;
 }
 export class google_gke_hub_scope_rbac_role_binding extends TerraformResource {
   readonly create_time!: string;

@@ -120,7 +120,7 @@ export interface GoogleMonitoringAlertPolicyArgs {
   alert_strategy: GoogleMonitoringAlertPolicyArgsAlertStrategy;
   conditions: GoogleMonitoringAlertPolicyArgsConditions;
   documentation: GoogleMonitoringAlertPolicyArgsDocumentation;
-  timeouts: GoogleMonitoringAlertPolicyArgsTimeouts;
+  timeouts?: GoogleMonitoringAlertPolicyArgsTimeouts;
 }
 export class google_monitoring_alert_policy extends TerraformResource {
   readonly creation_record!: any[];

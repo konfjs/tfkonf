@@ -9,7 +9,7 @@ export interface AwsOpensearchserverlessCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsOpensearchserverlessCollectionArgsTimeouts;
+  timeouts?: AwsOpensearchserverlessCollectionArgsTimeouts;
 }
 export class aws_opensearchserverless_collection extends TerraformResource {
   readonly arn!: string;

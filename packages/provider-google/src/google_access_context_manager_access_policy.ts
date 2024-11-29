@@ -8,7 +8,7 @@ export interface GoogleAccessContextManagerAccessPolicyArgs {
   parent: string;
   scopes?: string[];
   title: string;
-  timeouts: GoogleAccessContextManagerAccessPolicyArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerAccessPolicyArgsTimeouts;
 }
 export class google_access_context_manager_access_policy extends TerraformResource {
   readonly create_time!: string;

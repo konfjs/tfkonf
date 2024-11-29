@@ -72,7 +72,7 @@ export interface GoogleContainerAwsNodePoolArgs {
   kubelet_config: GoogleContainerAwsNodePoolArgsKubeletConfig;
   management: GoogleContainerAwsNodePoolArgsManagement;
   max_pods_constraint: GoogleContainerAwsNodePoolArgsMaxPodsConstraint;
-  timeouts: GoogleContainerAwsNodePoolArgsTimeouts;
+  timeouts?: GoogleContainerAwsNodePoolArgsTimeouts;
   update_settings: GoogleContainerAwsNodePoolArgsUpdateSettings;
 }
 export class google_container_aws_node_pool extends TerraformResource {

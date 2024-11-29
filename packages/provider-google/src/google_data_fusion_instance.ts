@@ -42,7 +42,7 @@ export interface GoogleDataFusionInstanceArgs {
   crypto_key_config: GoogleDataFusionInstanceArgsCryptoKeyConfig;
   event_publish_config: GoogleDataFusionInstanceArgsEventPublishConfig;
   network_config: GoogleDataFusionInstanceArgsNetworkConfig;
-  timeouts: GoogleDataFusionInstanceArgsTimeouts;
+  timeouts?: GoogleDataFusionInstanceArgsTimeouts;
 }
 export class google_data_fusion_instance extends TerraformResource {
   readonly api_endpoint!: string;

@@ -52,7 +52,7 @@ export interface GoogleBillingBudgetArgs {
   amount: GoogleBillingBudgetArgsAmount;
   budget_filter: GoogleBillingBudgetArgsBudgetFilter;
   threshold_rules: GoogleBillingBudgetArgsThresholdRules;
-  timeouts: GoogleBillingBudgetArgsTimeouts;
+  timeouts?: GoogleBillingBudgetArgsTimeouts;
 }
 export class google_billing_budget extends TerraformResource {
   readonly id?: string;

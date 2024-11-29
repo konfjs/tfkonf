@@ -7,7 +7,7 @@ export interface GoogleComputeProjectMetadataArgs {
   metadata: {
     [key: string]: string;
   };
-  timeouts: GoogleComputeProjectMetadataArgsTimeouts;
+  timeouts?: GoogleComputeProjectMetadataArgsTimeouts;
 }
 export class google_compute_project_metadata extends TerraformResource {
   readonly id?: string;

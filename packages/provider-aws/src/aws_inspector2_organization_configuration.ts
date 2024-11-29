@@ -12,7 +12,7 @@ export interface AwsInspector2OrganizationConfigurationArgsTimeouts {
 }
 export interface AwsInspector2OrganizationConfigurationArgs {
   auto_enable: AwsInspector2OrganizationConfigurationArgsAutoEnable;
-  timeouts: AwsInspector2OrganizationConfigurationArgsTimeouts;
+  timeouts?: AwsInspector2OrganizationConfigurationArgsTimeouts;
 }
 export class aws_inspector2_organization_configuration extends TerraformResource {
   readonly id?: string;

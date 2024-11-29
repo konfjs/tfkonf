@@ -13,7 +13,7 @@ export interface GooglePubsubLiteSubscriptionArgs {
   topic: string;
   zone?: string;
   delivery_config: GooglePubsubLiteSubscriptionArgsDeliveryConfig;
-  timeouts: GooglePubsubLiteSubscriptionArgsTimeouts;
+  timeouts?: GooglePubsubLiteSubscriptionArgsTimeouts;
 }
 export class google_pubsub_lite_subscription extends TerraformResource {
   readonly id?: string;

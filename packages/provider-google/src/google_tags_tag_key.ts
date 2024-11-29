@@ -12,7 +12,7 @@ export interface GoogleTagsTagKeyArgs {
     [key: string]: string;
   };
   short_name: string;
-  timeouts: GoogleTagsTagKeyArgsTimeouts;
+  timeouts?: GoogleTagsTagKeyArgsTimeouts;
 }
 export class google_tags_tag_key extends TerraformResource {
   readonly create_time!: string;

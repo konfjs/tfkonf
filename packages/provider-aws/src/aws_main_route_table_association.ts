@@ -7,7 +7,7 @@ export interface AwsMainRouteTableAssociationArgsTimeouts {
 export interface AwsMainRouteTableAssociationArgs {
   route_table_id: string;
   vpc_id: string;
-  timeouts: AwsMainRouteTableAssociationArgsTimeouts;
+  timeouts?: AwsMainRouteTableAssociationArgsTimeouts;
 }
 export class aws_main_route_table_association extends TerraformResource {
   readonly id?: string;

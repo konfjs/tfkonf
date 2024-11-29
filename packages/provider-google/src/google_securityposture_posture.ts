@@ -122,7 +122,7 @@ export interface GoogleSecurityposturePostureArgs {
   posture_id: string;
   state: string;
   policy_sets: GoogleSecurityposturePostureArgsPolicySets;
-  timeouts: GoogleSecurityposturePostureArgsTimeouts;
+  timeouts?: GoogleSecurityposturePostureArgsTimeouts;
 }
 export class google_securityposture_posture extends TerraformResource {
   readonly create_time!: string;

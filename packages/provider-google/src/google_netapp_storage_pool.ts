@@ -20,7 +20,7 @@ export interface GoogleNetappStoragePoolArgs {
   replica_zone?: string;
   service_level: string;
   zone?: string;
-  timeouts: GoogleNetappStoragePoolArgsTimeouts;
+  timeouts?: GoogleNetappStoragePoolArgsTimeouts;
 }
 export class google_netapp_storage_pool extends TerraformResource {
   readonly effective_labels!: {

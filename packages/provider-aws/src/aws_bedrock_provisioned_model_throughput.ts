@@ -10,7 +10,7 @@ export interface AwsBedrockProvisionedModelThroughputArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsBedrockProvisionedModelThroughputArgsTimeouts;
+  timeouts?: AwsBedrockProvisionedModelThroughputArgsTimeouts;
 }
 export class aws_bedrock_provisioned_model_throughput extends TerraformResource {
   readonly id!: string;

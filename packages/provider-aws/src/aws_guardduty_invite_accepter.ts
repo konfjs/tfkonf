@@ -5,7 +5,7 @@ export interface AwsGuarddutyInviteAccepterArgsTimeouts {
 export interface AwsGuarddutyInviteAccepterArgs {
   detector_id: string;
   master_account_id: string;
-  timeouts: AwsGuarddutyInviteAccepterArgsTimeouts;
+  timeouts?: AwsGuarddutyInviteAccepterArgsTimeouts;
 }
 export class aws_guardduty_invite_accepter extends TerraformResource {
   readonly id?: string;

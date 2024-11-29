@@ -9,7 +9,7 @@ export interface AwsFsxBackupArgs {
     [key: string]: string;
   };
   volume_id?: string;
-  timeouts: AwsFsxBackupArgsTimeouts;
+  timeouts?: AwsFsxBackupArgsTimeouts;
 }
 export class aws_fsx_backup extends TerraformResource {
   readonly arn!: string;

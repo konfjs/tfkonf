@@ -13,7 +13,7 @@ export interface AwsServicecatalogPortfolioShareArgs {
   share_tag_options?: boolean;
   type: string;
   wait_for_acceptance?: boolean;
-  timeouts: AwsServicecatalogPortfolioShareArgsTimeouts;
+  timeouts?: AwsServicecatalogPortfolioShareArgsTimeouts;
 }
 export class aws_servicecatalog_portfolio_share extends TerraformResource {
   readonly accepted!: boolean;

@@ -24,7 +24,7 @@ export interface GoogleCloudAssetProjectFeedArgs {
   feed_id: string;
   condition: GoogleCloudAssetProjectFeedArgsCondition;
   feed_output_config: GoogleCloudAssetProjectFeedArgsFeedOutputConfig;
-  timeouts: GoogleCloudAssetProjectFeedArgsTimeouts;
+  timeouts?: GoogleCloudAssetProjectFeedArgsTimeouts;
 }
 export class google_cloud_asset_project_feed extends TerraformResource {
   readonly id?: string;

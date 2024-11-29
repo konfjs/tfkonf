@@ -13,7 +13,7 @@ export interface GoogleIntegrationConnectorsEndpointAttachmentArgs {
   location: string;
   name: string;
   service_attachment: string;
-  timeouts: GoogleIntegrationConnectorsEndpointAttachmentArgsTimeouts;
+  timeouts?: GoogleIntegrationConnectorsEndpointAttachmentArgsTimeouts;
 }
 export class google_integration_connectors_endpoint_attachment extends TerraformResource {
   readonly create_time!: string;

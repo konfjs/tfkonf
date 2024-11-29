@@ -17,7 +17,7 @@ export interface AwsDefaultSubnetArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDefaultSubnetArgsTimeouts;
+  timeouts?: AwsDefaultSubnetArgsTimeouts;
 }
 export class aws_default_subnet extends TerraformResource {
   readonly arn!: string;

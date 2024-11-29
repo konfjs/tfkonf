@@ -101,12 +101,16 @@ export function generateInterfaceDeclaration(
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
             const childInterfaceName = `${interfaceName}${toPascalCase(blockName)}`;
+            const propertyToInterface = t.identifier(blockName);
             const i = t.tsPropertySignature(
-                t.identifier(blockName),
+                propertyToInterface,
                 t.tsTypeAnnotation(
                     t.tsTypeReference(t.identifier(toPascalCase(childInterfaceName))),
                 ),
             );
+            if (blockName === 'timeouts') {
+                i.optional = true;
+            }
             properties.push(i);
             generateInterfaceDeclaration(ast, blockName, blockType.block, interfaceName);
         }

@@ -77,7 +77,7 @@ export interface GoogleDocumentAiWarehouseDocumentSchemaArgs {
   location: string;
   project_number: string;
   property_definitions: GoogleDocumentAiWarehouseDocumentSchemaArgsPropertyDefinitions;
-  timeouts: GoogleDocumentAiWarehouseDocumentSchemaArgsTimeouts;
+  timeouts?: GoogleDocumentAiWarehouseDocumentSchemaArgsTimeouts;
 }
 export class google_document_ai_warehouse_document_schema extends TerraformResource {
   readonly id?: string;

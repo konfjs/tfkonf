@@ -34,7 +34,7 @@ export interface GoogleNetworkSecurityClientTlsPolicyArgs {
   sni?: string;
   client_certificate: GoogleNetworkSecurityClientTlsPolicyArgsClientCertificate;
   server_validation_ca: GoogleNetworkSecurityClientTlsPolicyArgsServerValidationCa;
-  timeouts: GoogleNetworkSecurityClientTlsPolicyArgsTimeouts;
+  timeouts?: GoogleNetworkSecurityClientTlsPolicyArgsTimeouts;
 }
 export class google_network_security_client_tls_policy extends TerraformResource {
   readonly create_time!: string;

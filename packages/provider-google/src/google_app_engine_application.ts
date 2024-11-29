@@ -15,7 +15,7 @@ export interface GoogleAppEngineApplicationArgs {
   location_id: string;
   feature_settings: GoogleAppEngineApplicationArgsFeatureSettings;
   iap: GoogleAppEngineApplicationArgsIap;
-  timeouts: GoogleAppEngineApplicationArgsTimeouts;
+  timeouts?: GoogleAppEngineApplicationArgsTimeouts;
 }
 export class google_app_engine_application extends TerraformResource {
   readonly app_id!: string;

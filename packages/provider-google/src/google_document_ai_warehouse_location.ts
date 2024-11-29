@@ -10,7 +10,7 @@ export interface GoogleDocumentAiWarehouseLocationArgs {
   kms_key?: string;
   location: string;
   project_number: string;
-  timeouts: GoogleDocumentAiWarehouseLocationArgsTimeouts;
+  timeouts?: GoogleDocumentAiWarehouseLocationArgsTimeouts;
 }
 export class google_document_ai_warehouse_location extends TerraformResource {
   readonly id?: string;

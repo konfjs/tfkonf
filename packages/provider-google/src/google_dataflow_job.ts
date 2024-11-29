@@ -27,7 +27,7 @@ export interface GoogleDataflowJobArgs {
     [key: string]: string;
   };
   zone?: string;
-  timeouts: GoogleDataflowJobArgsTimeouts;
+  timeouts?: GoogleDataflowJobArgsTimeouts;
 }
 export class google_dataflow_job extends TerraformResource {
   readonly additional_experiments?: string[];

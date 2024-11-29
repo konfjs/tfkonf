@@ -8,7 +8,7 @@ export interface GoogleContainerAzureClientArgs {
   location: string;
   name: string;
   tenant_id: string;
-  timeouts: GoogleContainerAzureClientArgsTimeouts;
+  timeouts?: GoogleContainerAzureClientArgsTimeouts;
 }
 export class google_container_azure_client extends TerraformResource {
   readonly certificate!: string;

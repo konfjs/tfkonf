@@ -8,7 +8,7 @@ export interface GoogleResourceManagerLienArgs {
   parent: string;
   reason: string;
   restrictions: string[];
-  timeouts: GoogleResourceManagerLienArgsTimeouts;
+  timeouts?: GoogleResourceManagerLienArgsTimeouts;
 }
 export class google_resource_manager_lien extends TerraformResource {
   readonly create_time!: string;

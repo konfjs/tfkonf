@@ -675,7 +675,7 @@ export interface GoogleContainerClusterArgs {
   secret_manager_config: GoogleContainerClusterArgsSecretManagerConfig;
   security_posture_config: GoogleContainerClusterArgsSecurityPostureConfig;
   service_external_ips_config: GoogleContainerClusterArgsServiceExternalIpsConfig;
-  timeouts: GoogleContainerClusterArgsTimeouts;
+  timeouts?: GoogleContainerClusterArgsTimeouts;
   user_managed_keys_config: GoogleContainerClusterArgsUserManagedKeysConfig;
   vertical_pod_autoscaling: GoogleContainerClusterArgsVerticalPodAutoscaling;
   workload_identity_config: GoogleContainerClusterArgsWorkloadIdentityConfig;

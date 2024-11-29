@@ -6,7 +6,7 @@ export interface AwsRedshiftClusterIamRolesArgsTimeouts {
 }
 export interface AwsRedshiftClusterIamRolesArgs {
   cluster_identifier: string;
-  timeouts: AwsRedshiftClusterIamRolesArgsTimeouts;
+  timeouts?: AwsRedshiftClusterIamRolesArgsTimeouts;
 }
 export class aws_redshift_cluster_iam_roles extends TerraformResource {
   readonly default_iam_role_arn?: string;

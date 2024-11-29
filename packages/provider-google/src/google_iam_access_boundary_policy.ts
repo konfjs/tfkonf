@@ -24,7 +24,7 @@ export interface GoogleIamAccessBoundaryPolicyArgs {
   name: string;
   parent: string;
   rules: GoogleIamAccessBoundaryPolicyArgsRules;
-  timeouts: GoogleIamAccessBoundaryPolicyArgsTimeouts;
+  timeouts?: GoogleIamAccessBoundaryPolicyArgsTimeouts;
 }
 export class google_iam_access_boundary_policy extends TerraformResource {
   readonly etag!: string;

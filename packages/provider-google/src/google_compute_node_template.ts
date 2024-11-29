@@ -31,7 +31,7 @@ export interface GoogleComputeNodeTemplateArgs {
   disks: GoogleComputeNodeTemplateArgsDisks;
   node_type_flexibility: GoogleComputeNodeTemplateArgsNodeTypeFlexibility;
   server_binding: GoogleComputeNodeTemplateArgsServerBinding;
-  timeouts: GoogleComputeNodeTemplateArgsTimeouts;
+  timeouts?: GoogleComputeNodeTemplateArgsTimeouts;
 }
 export class google_compute_node_template extends TerraformResource {
   readonly creation_timestamp!: string;

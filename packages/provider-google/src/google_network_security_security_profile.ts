@@ -26,7 +26,7 @@ export interface GoogleNetworkSecuritySecurityProfileArgs {
   parent?: string;
   type: string;
   threat_prevention_profile: GoogleNetworkSecuritySecurityProfileArgsThreatPreventionProfile;
-  timeouts: GoogleNetworkSecuritySecurityProfileArgsTimeouts;
+  timeouts?: GoogleNetworkSecuritySecurityProfileArgsTimeouts;
 }
 export class google_network_security_security_profile extends TerraformResource {
   readonly create_time!: string;

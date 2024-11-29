@@ -22,7 +22,7 @@ export interface GoogleDataCatalogTagTemplateArgs {
   force_delete?: boolean;
   tag_template_id: string;
   fields: GoogleDataCatalogTagTemplateArgsFields;
-  timeouts: GoogleDataCatalogTagTemplateArgsTimeouts;
+  timeouts?: GoogleDataCatalogTagTemplateArgsTimeouts;
 }
 export class google_data_catalog_tag_template extends TerraformResource {
   readonly id?: string;

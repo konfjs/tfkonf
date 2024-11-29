@@ -38,7 +38,7 @@ export interface GoogleRedisInstanceArgs {
   transit_encryption_mode?: string;
   maintenance_policy: GoogleRedisInstanceArgsMaintenancePolicy;
   persistence_config: GoogleRedisInstanceArgsPersistenceConfig;
-  timeouts: GoogleRedisInstanceArgsTimeouts;
+  timeouts?: GoogleRedisInstanceArgsTimeouts;
 }
 export class google_redis_instance extends TerraformResource {
   readonly alternative_location_id?: string;

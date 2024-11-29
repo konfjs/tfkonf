@@ -15,7 +15,7 @@ export interface GoogleApigeeDeveloperArgs {
   org_id: string;
   user_name: string;
   attributes: GoogleApigeeDeveloperArgsAttributes;
-  timeouts: GoogleApigeeDeveloperArgsTimeouts;
+  timeouts?: GoogleApigeeDeveloperArgsTimeouts;
 }
 export class google_apigee_developer extends TerraformResource {
   readonly created_at!: string;

@@ -8,7 +8,7 @@ export interface GoogleComputeTargetInstanceArgs {
   instance: string;
   name: string;
   nat_policy?: string;
-  timeouts: GoogleComputeTargetInstanceArgsTimeouts;
+  timeouts?: GoogleComputeTargetInstanceArgsTimeouts;
 }
 export class google_compute_target_instance extends TerraformResource {
   readonly creation_timestamp!: string;

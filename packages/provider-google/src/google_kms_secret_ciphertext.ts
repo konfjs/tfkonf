@@ -7,7 +7,7 @@ export interface GoogleKmsSecretCiphertextArgs {
   additional_authenticated_data?: string;
   crypto_key: string;
   plaintext: string;
-  timeouts: GoogleKmsSecretCiphertextArgsTimeouts;
+  timeouts?: GoogleKmsSecretCiphertextArgsTimeouts;
 }
 export class google_kms_secret_ciphertext extends TerraformResource {
   readonly ciphertext!: string;

@@ -285,7 +285,7 @@ export interface GoogleDialogflowCxPageArgs {
   entry_fulfillment: GoogleDialogflowCxPageArgsEntryFulfillment;
   event_handlers: GoogleDialogflowCxPageArgsEventHandlers;
   form: GoogleDialogflowCxPageArgsForm;
-  timeouts: GoogleDialogflowCxPageArgsTimeouts;
+  timeouts?: GoogleDialogflowCxPageArgsTimeouts;
   transition_routes: GoogleDialogflowCxPageArgsTransitionRoutes;
 }
 export class google_dialogflow_cx_page extends TerraformResource {

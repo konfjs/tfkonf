@@ -13,7 +13,7 @@ export interface AwsDbProxyDefaultTargetGroupArgsTimeouts {
 export interface AwsDbProxyDefaultTargetGroupArgs {
   db_proxy_name: string;
   connection_pool_config: AwsDbProxyDefaultTargetGroupArgsConnectionPoolConfig;
-  timeouts: AwsDbProxyDefaultTargetGroupArgsTimeouts;
+  timeouts?: AwsDbProxyDefaultTargetGroupArgsTimeouts;
 }
 export class aws_db_proxy_default_target_group extends TerraformResource {
   readonly arn!: string;

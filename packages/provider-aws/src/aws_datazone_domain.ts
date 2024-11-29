@@ -16,7 +16,7 @@ export interface AwsDatazoneDomainArgs {
     [key: string]: string;
   };
   single_sign_on: AwsDatazoneDomainArgsSingleSignOn;
-  timeouts: AwsDatazoneDomainArgsTimeouts;
+  timeouts?: AwsDatazoneDomainArgsTimeouts;
 }
 export class aws_datazone_domain extends TerraformResource {
   readonly arn!: string;

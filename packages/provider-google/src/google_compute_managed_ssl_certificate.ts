@@ -11,7 +11,7 @@ export interface GoogleComputeManagedSslCertificateArgs {
   name?: string;
   type?: string;
   managed: GoogleComputeManagedSslCertificateArgsManaged;
-  timeouts: GoogleComputeManagedSslCertificateArgsTimeouts;
+  timeouts?: GoogleComputeManagedSslCertificateArgsTimeouts;
 }
 export class google_compute_managed_ssl_certificate extends TerraformResource {
   readonly certificate_id!: number;

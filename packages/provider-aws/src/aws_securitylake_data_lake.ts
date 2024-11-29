@@ -30,7 +30,7 @@ export interface AwsSecuritylakeDataLakeArgs {
     [key: string]: string;
   };
   configuration: AwsSecuritylakeDataLakeArgsConfiguration;
-  timeouts: AwsSecuritylakeDataLakeArgsTimeouts;
+  timeouts?: AwsSecuritylakeDataLakeArgsTimeouts;
 }
 export class aws_securitylake_data_lake extends TerraformResource {
   readonly arn!: string;

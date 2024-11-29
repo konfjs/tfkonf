@@ -13,7 +13,7 @@ export interface AwsSsmincidentsReplicationSetArgs {
     [key: string]: string;
   };
   region: AwsSsmincidentsReplicationSetArgsRegion;
-  timeouts: AwsSsmincidentsReplicationSetArgsTimeouts;
+  timeouts?: AwsSsmincidentsReplicationSetArgsTimeouts;
 }
 export class aws_ssmincidents_replication_set extends TerraformResource {
   readonly arn!: string;

@@ -17,7 +17,7 @@ export interface GoogleKmsCryptoKeyArgs {
   purpose?: string;
   rotation_period?: string;
   skip_initial_version_creation?: boolean;
-  timeouts: GoogleKmsCryptoKeyArgsTimeouts;
+  timeouts?: GoogleKmsCryptoKeyArgsTimeouts;
   version_template: GoogleKmsCryptoKeyArgsVersionTemplate;
 }
 export class google_kms_crypto_key extends TerraformResource {

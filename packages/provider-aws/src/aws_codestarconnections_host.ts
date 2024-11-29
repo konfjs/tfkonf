@@ -14,7 +14,7 @@ export interface AwsCodestarconnectionsHostArgs {
   name: string;
   provider_endpoint: string;
   provider_type: string;
-  timeouts: AwsCodestarconnectionsHostArgsTimeouts;
+  timeouts?: AwsCodestarconnectionsHostArgsTimeouts;
   vpc_configuration: AwsCodestarconnectionsHostArgsVpcConfiguration;
 }
 export class aws_codestarconnections_host extends TerraformResource {

@@ -19,7 +19,7 @@ export interface GoogleBigqueryAnalyticsHubDataExchangeArgs {
   location: string;
   primary_contact?: string;
   sharing_environment_config: GoogleBigqueryAnalyticsHubDataExchangeArgsSharingEnvironmentConfig;
-  timeouts: GoogleBigqueryAnalyticsHubDataExchangeArgsTimeouts;
+  timeouts?: GoogleBigqueryAnalyticsHubDataExchangeArgsTimeouts;
 }
 export class google_bigquery_analytics_hub_data_exchange extends TerraformResource {
   readonly id?: string;

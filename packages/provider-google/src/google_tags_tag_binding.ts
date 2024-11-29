@@ -6,7 +6,7 @@ export interface GoogleTagsTagBindingArgsTimeouts {
 export interface GoogleTagsTagBindingArgs {
   parent: string;
   tag_value: string;
-  timeouts: GoogleTagsTagBindingArgsTimeouts;
+  timeouts?: GoogleTagsTagBindingArgsTimeouts;
 }
 export class google_tags_tag_binding extends TerraformResource {
   readonly id?: string;

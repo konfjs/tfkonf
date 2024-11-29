@@ -11,7 +11,7 @@ export interface AwsTranscribeVocabularyArgs {
     [key: string]: string;
   };
   vocabulary_name: string;
-  timeouts: AwsTranscribeVocabularyArgsTimeouts;
+  timeouts?: AwsTranscribeVocabularyArgsTimeouts;
 }
 export class aws_transcribe_vocabulary extends TerraformResource {
   readonly arn!: string;

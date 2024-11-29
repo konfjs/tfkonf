@@ -9,7 +9,7 @@ export interface AwsNetworkmanagerGlobalNetworkArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsNetworkmanagerGlobalNetworkArgsTimeouts;
+  timeouts?: AwsNetworkmanagerGlobalNetworkArgsTimeouts;
 }
 export class aws_networkmanager_global_network extends TerraformResource {
   readonly arn!: string;

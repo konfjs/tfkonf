@@ -14,7 +14,7 @@ export interface AwsKmsKeyArgs {
     [key: string]: string;
   };
   xks_key_id?: string;
-  timeouts: AwsKmsKeyArgsTimeouts;
+  timeouts?: AwsKmsKeyArgsTimeouts;
 }
 export class aws_kms_key extends TerraformResource {
   readonly arn!: string;

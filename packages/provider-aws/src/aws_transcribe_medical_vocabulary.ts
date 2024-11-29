@@ -11,7 +11,7 @@ export interface AwsTranscribeMedicalVocabularyArgs {
   };
   vocabulary_file_uri: string;
   vocabulary_name: string;
-  timeouts: AwsTranscribeMedicalVocabularyArgsTimeouts;
+  timeouts?: AwsTranscribeMedicalVocabularyArgsTimeouts;
 }
 export class aws_transcribe_medical_vocabulary extends TerraformResource {
   readonly arn!: string;

@@ -13,7 +13,7 @@ export interface GoogleIntegrationConnectorsManagedZoneArgs {
   name: string;
   target_project: string;
   target_vpc: string;
-  timeouts: GoogleIntegrationConnectorsManagedZoneArgsTimeouts;
+  timeouts?: GoogleIntegrationConnectorsManagedZoneArgsTimeouts;
 }
 export class google_integration_connectors_managed_zone extends TerraformResource {
   readonly create_time!: string;

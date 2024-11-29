@@ -17,7 +17,7 @@ export interface AwsAmiFromInstanceArgs {
   };
   ebs_block_device: AwsAmiFromInstanceArgsEbsBlockDevice;
   ephemeral_block_device: AwsAmiFromInstanceArgsEphemeralBlockDevice;
-  timeouts: AwsAmiFromInstanceArgsTimeouts;
+  timeouts?: AwsAmiFromInstanceArgsTimeouts;
 }
 export class aws_ami_from_instance extends TerraformResource {
   readonly architecture!: string;

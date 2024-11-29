@@ -19,7 +19,7 @@ export interface AwsKinesisStreamArgs {
     [key: string]: string;
   };
   stream_mode_details: AwsKinesisStreamArgsStreamModeDetails;
-  timeouts: AwsKinesisStreamArgsTimeouts;
+  timeouts?: AwsKinesisStreamArgsTimeouts;
 }
 export class aws_kinesis_stream extends TerraformResource {
   readonly arn?: string;

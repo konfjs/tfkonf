@@ -25,7 +25,7 @@ export interface AwsBatchJobQueueArgs {
   };
   compute_environment_order: AwsBatchJobQueueArgsComputeEnvironmentOrder;
   job_state_time_limit_action: AwsBatchJobQueueArgsJobStateTimeLimitAction;
-  timeouts: AwsBatchJobQueueArgsTimeouts;
+  timeouts?: AwsBatchJobQueueArgsTimeouts;
 }
 export class aws_batch_job_queue extends TerraformResource {
   readonly arn!: string;

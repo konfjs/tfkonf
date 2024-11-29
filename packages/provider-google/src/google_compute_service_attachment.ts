@@ -19,7 +19,7 @@ export interface GoogleComputeServiceAttachmentArgs {
   nat_subnets: string[];
   target_service: string;
   consumer_accept_lists: GoogleComputeServiceAttachmentArgsConsumerAcceptLists;
-  timeouts: GoogleComputeServiceAttachmentArgsTimeouts;
+  timeouts?: GoogleComputeServiceAttachmentArgsTimeouts;
 }
 export class google_compute_service_attachment extends TerraformResource {
   readonly connected_endpoints!: any[];

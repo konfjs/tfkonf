@@ -8,7 +8,7 @@ export interface GoogleIapTunnelDestGroupArgs {
   cidrs?: string[];
   fqdns?: string[];
   group_name: string;
-  timeouts: GoogleIapTunnelDestGroupArgsTimeouts;
+  timeouts?: GoogleIapTunnelDestGroupArgsTimeouts;
 }
 export class google_iap_tunnel_dest_group extends TerraformResource {
   readonly id?: string;

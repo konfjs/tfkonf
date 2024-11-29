@@ -14,7 +14,7 @@ export interface GoogleSqlSourceRepresentationInstanceArgs {
   password?: string;
   port?: number;
   username?: string;
-  timeouts: GoogleSqlSourceRepresentationInstanceArgsTimeouts;
+  timeouts?: GoogleSqlSourceRepresentationInstanceArgsTimeouts;
 }
 export class google_sql_source_representation_instance extends TerraformResource {
   readonly id?: string;

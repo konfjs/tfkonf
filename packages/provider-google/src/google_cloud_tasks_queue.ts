@@ -49,7 +49,7 @@ export interface GoogleCloudTasksQueueArgs {
   rate_limits: GoogleCloudTasksQueueArgsRateLimits;
   retry_config: GoogleCloudTasksQueueArgsRetryConfig;
   stackdriver_logging_config: GoogleCloudTasksQueueArgsStackdriverLoggingConfig;
-  timeouts: GoogleCloudTasksQueueArgsTimeouts;
+  timeouts?: GoogleCloudTasksQueueArgsTimeouts;
 }
 export class google_cloud_tasks_queue extends TerraformResource {
   readonly id?: string;

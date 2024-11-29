@@ -9,7 +9,7 @@ export interface GoogleComputeRouterNatAddressArgs {
   nat_ips: string[];
   router: string;
   router_nat: string;
-  timeouts: GoogleComputeRouterNatAddressArgsTimeouts;
+  timeouts?: GoogleComputeRouterNatAddressArgsTimeouts;
 }
 export class google_compute_router_nat_address extends TerraformResource {
   readonly id?: string;

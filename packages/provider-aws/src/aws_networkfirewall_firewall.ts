@@ -24,7 +24,7 @@ export interface AwsNetworkfirewallFirewallArgs {
   vpc_id: string;
   encryption_configuration: AwsNetworkfirewallFirewallArgsEncryptionConfiguration;
   subnet_mapping: AwsNetworkfirewallFirewallArgsSubnetMapping;
-  timeouts: AwsNetworkfirewallFirewallArgsTimeouts;
+  timeouts?: AwsNetworkfirewallFirewallArgsTimeouts;
 }
 export class aws_networkfirewall_firewall extends TerraformResource {
   readonly arn!: string;

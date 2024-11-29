@@ -6,7 +6,7 @@ export interface GoogleSiteVerificationOwnerArgsTimeouts {
 export interface GoogleSiteVerificationOwnerArgs {
   email: string;
   web_resource_id: string;
-  timeouts: GoogleSiteVerificationOwnerArgsTimeouts;
+  timeouts?: GoogleSiteVerificationOwnerArgsTimeouts;
 }
 export class google_site_verification_owner extends TerraformResource {
   readonly id?: string;

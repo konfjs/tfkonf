@@ -21,7 +21,7 @@ export interface GoogleNetworkConnectivityInternalRangeArgs {
   target_cidr_range?: string[];
   usage: string;
   migration: GoogleNetworkConnectivityInternalRangeArgsMigration;
-  timeouts: GoogleNetworkConnectivityInternalRangeArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivityInternalRangeArgsTimeouts;
 }
 export class google_network_connectivity_internal_range extends TerraformResource {
   readonly effective_labels!: {

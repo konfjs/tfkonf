@@ -14,7 +14,7 @@ export interface AwsNetworkmanagerConnectAttachmentArgs {
   };
   transport_attachment_id: string;
   options: AwsNetworkmanagerConnectAttachmentArgsOptions;
-  timeouts: AwsNetworkmanagerConnectAttachmentArgsTimeouts;
+  timeouts?: AwsNetworkmanagerConnectAttachmentArgsTimeouts;
 }
 export class aws_networkmanager_connect_attachment extends TerraformResource {
   readonly arn!: string;

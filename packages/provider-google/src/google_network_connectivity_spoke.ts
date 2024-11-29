@@ -47,7 +47,7 @@ export interface GoogleNetworkConnectivitySpokeArgs {
   linked_router_appliance_instances: GoogleNetworkConnectivitySpokeArgsLinkedRouterApplianceInstances;
   linked_vpc_network: GoogleNetworkConnectivitySpokeArgsLinkedVpcNetwork;
   linked_vpn_tunnels: GoogleNetworkConnectivitySpokeArgsLinkedVpnTunnels;
-  timeouts: GoogleNetworkConnectivitySpokeArgsTimeouts;
+  timeouts?: GoogleNetworkConnectivitySpokeArgsTimeouts;
 }
 export class google_network_connectivity_spoke extends TerraformResource {
   readonly create_time!: string;

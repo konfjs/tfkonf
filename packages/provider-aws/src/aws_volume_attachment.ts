@@ -10,7 +10,7 @@ export interface AwsVolumeAttachmentArgs {
   skip_destroy?: boolean;
   stop_instance_before_detaching?: boolean;
   volume_id: string;
-  timeouts: AwsVolumeAttachmentArgsTimeouts;
+  timeouts?: AwsVolumeAttachmentArgsTimeouts;
 }
 export class aws_volume_attachment extends TerraformResource {
   readonly id?: string;

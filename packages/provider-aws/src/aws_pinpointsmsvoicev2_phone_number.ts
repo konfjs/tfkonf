@@ -14,7 +14,7 @@ export interface AwsPinpointsmsvoicev2PhoneNumberArgs {
     [key: string]: string;
   };
   two_way_channel_arn?: string;
-  timeouts: AwsPinpointsmsvoicev2PhoneNumberArgsTimeouts;
+  timeouts?: AwsPinpointsmsvoicev2PhoneNumberArgsTimeouts;
 }
 export class aws_pinpointsmsvoicev2_phone_number extends TerraformResource {
   readonly arn!: string;

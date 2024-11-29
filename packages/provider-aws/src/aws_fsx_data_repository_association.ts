@@ -20,7 +20,7 @@ export interface AwsFsxDataRepositoryAssociationArgs {
     [key: string]: string;
   };
   s3: AwsFsxDataRepositoryAssociationArgsS3;
-  timeouts: AwsFsxDataRepositoryAssociationArgsTimeouts;
+  timeouts?: AwsFsxDataRepositoryAssociationArgsTimeouts;
 }
 export class aws_fsx_data_repository_association extends TerraformResource {
   readonly arn!: string;

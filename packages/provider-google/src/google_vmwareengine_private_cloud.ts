@@ -58,7 +58,7 @@ export interface GoogleVmwareenginePrivateCloudArgs {
   type?: string;
   management_cluster: GoogleVmwareenginePrivateCloudArgsManagementCluster;
   network_config: GoogleVmwareenginePrivateCloudArgsNetworkConfig;
-  timeouts: GoogleVmwareenginePrivateCloudArgsTimeouts;
+  timeouts?: GoogleVmwareenginePrivateCloudArgsTimeouts;
 }
 export class google_vmwareengine_private_cloud extends TerraformResource {
   readonly hcx!: any[];

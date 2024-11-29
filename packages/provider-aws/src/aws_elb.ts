@@ -35,7 +35,7 @@ export interface AwsElbArgs {
   access_logs: AwsElbArgsAccessLogs;
   health_check: AwsElbArgsHealthCheck;
   listener: AwsElbArgsListener;
-  timeouts: AwsElbArgsTimeouts;
+  timeouts?: AwsElbArgsTimeouts;
 }
 export class aws_elb extends TerraformResource {
   readonly arn!: string;

@@ -7,7 +7,7 @@ export interface AwsAccountRegionArgs {
   account_id?: string;
   enabled: boolean;
   region_name: string;
-  timeouts: AwsAccountRegionArgsTimeouts;
+  timeouts?: AwsAccountRegionArgsTimeouts;
 }
 export class aws_account_region extends TerraformResource {
   readonly id?: string;

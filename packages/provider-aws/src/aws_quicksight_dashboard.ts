@@ -38225,7 +38225,7 @@ export interface AwsQuicksightDashboardArgs {
   parameters: AwsQuicksightDashboardArgsParameters;
   permissions: AwsQuicksightDashboardArgsPermissions;
   source_entity: AwsQuicksightDashboardArgsSourceEntity;
-  timeouts: AwsQuicksightDashboardArgsTimeouts;
+  timeouts?: AwsQuicksightDashboardArgsTimeouts;
 }
 export class aws_quicksight_dashboard extends TerraformResource {
   readonly arn!: string;

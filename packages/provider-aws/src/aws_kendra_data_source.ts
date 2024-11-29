@@ -134,7 +134,7 @@ export interface AwsKendraDataSourceArgs {
   type: string;
   configuration: AwsKendraDataSourceArgsConfiguration;
   custom_document_enrichment_configuration: AwsKendraDataSourceArgsCustomDocumentEnrichmentConfiguration;
-  timeouts: AwsKendraDataSourceArgsTimeouts;
+  timeouts?: AwsKendraDataSourceArgsTimeouts;
 }
 export class aws_kendra_data_source extends TerraformResource {
   readonly arn!: string;

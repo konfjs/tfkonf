@@ -13,7 +13,7 @@ export interface GoogleComputeHaVpnGatewayArgs {
   name: string;
   network: string;
   stack_type?: string;
-  timeouts: GoogleComputeHaVpnGatewayArgsTimeouts;
+  timeouts?: GoogleComputeHaVpnGatewayArgsTimeouts;
   vpn_interfaces: GoogleComputeHaVpnGatewayArgsVpnInterfaces;
 }
 export class google_compute_ha_vpn_gateway extends TerraformResource {

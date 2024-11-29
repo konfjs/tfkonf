@@ -92,7 +92,7 @@ export interface GoogleAppEngineStandardAppVersionArgs {
   handlers: GoogleAppEngineStandardAppVersionArgsHandlers;
   libraries: GoogleAppEngineStandardAppVersionArgsLibraries;
   manual_scaling: GoogleAppEngineStandardAppVersionArgsManualScaling;
-  timeouts: GoogleAppEngineStandardAppVersionArgsTimeouts;
+  timeouts?: GoogleAppEngineStandardAppVersionArgsTimeouts;
   vpc_access_connector: GoogleAppEngineStandardAppVersionArgsVpcAccessConnector;
 }
 export class google_app_engine_standard_app_version extends TerraformResource {

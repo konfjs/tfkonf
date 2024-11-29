@@ -9,7 +9,7 @@ export interface GoogleDataCatalogPolicyTagArgs {
   display_name: string;
   parent_policy_tag?: string;
   taxonomy: string;
-  timeouts: GoogleDataCatalogPolicyTagArgsTimeouts;
+  timeouts?: GoogleDataCatalogPolicyTagArgsTimeouts;
 }
 export class google_data_catalog_policy_tag extends TerraformResource {
   readonly child_policy_tags!: string[];

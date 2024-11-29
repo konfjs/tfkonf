@@ -8,7 +8,7 @@ export interface AwsInternetGatewayArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsInternetGatewayArgsTimeouts;
+  timeouts?: AwsInternetGatewayArgsTimeouts;
 }
 export class aws_internet_gateway extends TerraformResource {
   readonly arn!: string;

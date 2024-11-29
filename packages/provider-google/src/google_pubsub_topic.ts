@@ -48,7 +48,7 @@ export interface GooglePubsubTopicArgs {
   ingestion_data_source_settings: GooglePubsubTopicArgsIngestionDataSourceSettings;
   message_storage_policy: GooglePubsubTopicArgsMessageStoragePolicy;
   schema_settings: GooglePubsubTopicArgsSchemaSettings;
-  timeouts: GooglePubsubTopicArgsTimeouts;
+  timeouts?: GooglePubsubTopicArgsTimeouts;
 }
 export class google_pubsub_topic extends TerraformResource {
   readonly effective_labels!: {

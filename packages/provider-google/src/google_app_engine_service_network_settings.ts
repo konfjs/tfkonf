@@ -10,7 +10,7 @@ export interface GoogleAppEngineServiceNetworkSettingsArgsTimeouts {
 export interface GoogleAppEngineServiceNetworkSettingsArgs {
   service: string;
   network_settings: GoogleAppEngineServiceNetworkSettingsArgsNetworkSettings;
-  timeouts: GoogleAppEngineServiceNetworkSettingsArgsTimeouts;
+  timeouts?: GoogleAppEngineServiceNetworkSettingsArgsTimeouts;
 }
 export class google_app_engine_service_network_settings extends TerraformResource {
   readonly id?: string;

@@ -20,7 +20,7 @@ export interface AwsQuicksightAccountSubscriptionArgs {
   notification_email: string;
   reader_group?: string[];
   realm?: string;
-  timeouts: AwsQuicksightAccountSubscriptionArgsTimeouts;
+  timeouts?: AwsQuicksightAccountSubscriptionArgsTimeouts;
 }
 export class aws_quicksight_account_subscription extends TerraformResource {
   readonly account_subscription_status!: string;

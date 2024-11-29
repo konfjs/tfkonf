@@ -53,7 +53,7 @@ export interface GoogleAccessContextManagerAccessLevelArgs {
   title: string;
   basic: GoogleAccessContextManagerAccessLevelArgsBasic;
   custom: GoogleAccessContextManagerAccessLevelArgsCustom;
-  timeouts: GoogleAccessContextManagerAccessLevelArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerAccessLevelArgsTimeouts;
 }
 export class google_access_context_manager_access_level extends TerraformResource {
   readonly id?: string;

@@ -139,7 +139,7 @@ export interface GoogleAccessContextManagerServicePerimeterArgs {
   use_explicit_dry_run_spec?: boolean;
   spec: GoogleAccessContextManagerServicePerimeterArgsSpec;
   status: GoogleAccessContextManagerServicePerimeterArgsStatus;
-  timeouts: GoogleAccessContextManagerServicePerimeterArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerServicePerimeterArgsTimeouts;
 }
 export class google_access_context_manager_service_perimeter extends TerraformResource {
   readonly create_time!: string;

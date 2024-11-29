@@ -14,7 +14,7 @@ export interface GoogleGkeHubNamespaceArgs {
   scope: string;
   scope_id: string;
   scope_namespace_id: string;
-  timeouts: GoogleGkeHubNamespaceArgsTimeouts;
+  timeouts?: GoogleGkeHubNamespaceArgsTimeouts;
 }
 export class google_gke_hub_namespace extends TerraformResource {
   readonly create_time!: string;

@@ -14,7 +14,7 @@ export interface AwsDatazoneGlossaryTermArgs {
   short_description?: string;
   status?: string;
   term_relations: AwsDatazoneGlossaryTermArgsTermRelations;
-  timeouts: AwsDatazoneGlossaryTermArgsTimeouts;
+  timeouts?: AwsDatazoneGlossaryTermArgsTimeouts;
 }
 export class aws_datazone_glossary_term extends TerraformResource {
   readonly created_at!: string;

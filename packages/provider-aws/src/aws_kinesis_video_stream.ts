@@ -12,7 +12,7 @@ export interface AwsKinesisVideoStreamArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsKinesisVideoStreamArgsTimeouts;
+  timeouts?: AwsKinesisVideoStreamArgsTimeouts;
 }
 export class aws_kinesis_video_stream extends TerraformResource {
   readonly arn!: string;

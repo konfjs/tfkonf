@@ -27,7 +27,7 @@ export interface AwsSfnStateMachineArgs {
   type?: string;
   encryption_configuration: AwsSfnStateMachineArgsEncryptionConfiguration;
   logging_configuration: AwsSfnStateMachineArgsLoggingConfiguration;
-  timeouts: AwsSfnStateMachineArgsTimeouts;
+  timeouts?: AwsSfnStateMachineArgsTimeouts;
   tracing_configuration: AwsSfnStateMachineArgsTracingConfiguration;
 }
 export class aws_sfn_state_machine extends TerraformResource {

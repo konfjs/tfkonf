@@ -8,7 +8,7 @@ export interface GoogleServiceAccountArgs {
   description?: string;
   disabled?: boolean;
   display_name?: string;
-  timeouts: GoogleServiceAccountArgsTimeouts;
+  timeouts?: GoogleServiceAccountArgsTimeouts;
 }
 export class google_service_account extends TerraformResource {
   readonly email!: string;

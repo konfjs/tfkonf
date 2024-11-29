@@ -5,7 +5,7 @@ export interface AwsRamResourceShareAccepterArgsTimeouts {
 }
 export interface AwsRamResourceShareAccepterArgs {
   share_arn: string;
-  timeouts: AwsRamResourceShareAccepterArgsTimeouts;
+  timeouts?: AwsRamResourceShareAccepterArgsTimeouts;
 }
 export class aws_ram_resource_share_accepter extends TerraformResource {
   readonly id?: string;

@@ -8,7 +8,7 @@ export interface AwsDxGatewayAssociationArgs {
   dx_gateway_id: string;
   proposal_id?: string;
   vpn_gateway_id?: string;
-  timeouts: AwsDxGatewayAssociationArgsTimeouts;
+  timeouts?: AwsDxGatewayAssociationArgsTimeouts;
 }
 export class aws_dx_gateway_association extends TerraformResource {
   readonly allowed_prefixes?: string[];

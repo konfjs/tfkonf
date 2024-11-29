@@ -120,7 +120,7 @@ export interface GoogleBigqueryJobArgs {
   extract: GoogleBigqueryJobArgsExtract;
   load: GoogleBigqueryJobArgsLoad;
   query: GoogleBigqueryJobArgsQuery;
-  timeouts: GoogleBigqueryJobArgsTimeouts;
+  timeouts?: GoogleBigqueryJobArgsTimeouts;
 }
 export class google_bigquery_job extends TerraformResource {
   readonly effective_labels!: {

@@ -10,7 +10,7 @@ export interface AwsIamServerCertificateArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsIamServerCertificateArgsTimeouts;
+  timeouts?: AwsIamServerCertificateArgsTimeouts;
 }
 export class aws_iam_server_certificate extends TerraformResource {
   readonly arn!: string;

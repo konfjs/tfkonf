@@ -30,7 +30,7 @@ export interface GoogleManagedKafkaClusterArgs {
   capacity_config: GoogleManagedKafkaClusterArgsCapacityConfig;
   gcp_config: GoogleManagedKafkaClusterArgsGcpConfig;
   rebalance_config: GoogleManagedKafkaClusterArgsRebalanceConfig;
-  timeouts: GoogleManagedKafkaClusterArgsTimeouts;
+  timeouts?: GoogleManagedKafkaClusterArgsTimeouts;
 }
 export class google_managed_kafka_cluster extends TerraformResource {
   readonly create_time!: string;

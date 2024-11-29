@@ -9,7 +9,7 @@ export interface GoogleDialogflowIntentArgs {
   display_name: string;
   events?: string[];
   input_context_names?: string[];
-  timeouts: GoogleDialogflowIntentArgsTimeouts;
+  timeouts?: GoogleDialogflowIntentArgsTimeouts;
 }
 export class google_dialogflow_intent extends TerraformResource {
   readonly action?: string;

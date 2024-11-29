@@ -15,7 +15,7 @@ export interface GoogleSpannerDatabaseArgs {
   instance: string;
   name: string;
   encryption_config: GoogleSpannerDatabaseArgsEncryptionConfig;
-  timeouts: GoogleSpannerDatabaseArgsTimeouts;
+  timeouts?: GoogleSpannerDatabaseArgsTimeouts;
 }
 export class google_spanner_database extends TerraformResource {
   readonly database_dialect?: string;

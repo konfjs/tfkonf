@@ -7,7 +7,7 @@ export interface AwsVpcIpv6CidrBlockAssociationArgs {
   ipv6_ipam_pool_id?: string;
   ipv6_netmask_length?: number;
   vpc_id: string;
-  timeouts: AwsVpcIpv6CidrBlockAssociationArgsTimeouts;
+  timeouts?: AwsVpcIpv6CidrBlockAssociationArgsTimeouts;
 }
 export class aws_vpc_ipv6_cidr_block_association extends TerraformResource {
   readonly assign_generated_ipv6_cidr_block?: boolean;

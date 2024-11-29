@@ -42,7 +42,7 @@ export interface GoogleComputeDiskArgs {
   guest_os_features: GoogleComputeDiskArgsGuestOsFeatures;
   source_image_encryption_key: GoogleComputeDiskArgsSourceImageEncryptionKey;
   source_snapshot_encryption_key: GoogleComputeDiskArgsSourceSnapshotEncryptionKey;
-  timeouts: GoogleComputeDiskArgsTimeouts;
+  timeouts?: GoogleComputeDiskArgsTimeouts;
 }
 export class google_compute_disk extends TerraformResource {
   readonly access_mode?: string;

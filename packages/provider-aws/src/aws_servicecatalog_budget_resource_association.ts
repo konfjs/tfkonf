@@ -7,7 +7,7 @@ export interface AwsServicecatalogBudgetResourceAssociationArgsTimeouts {
 export interface AwsServicecatalogBudgetResourceAssociationArgs {
   budget_name: string;
   resource_id: string;
-  timeouts: AwsServicecatalogBudgetResourceAssociationArgsTimeouts;
+  timeouts?: AwsServicecatalogBudgetResourceAssociationArgsTimeouts;
 }
 export class aws_servicecatalog_budget_resource_association extends TerraformResource {
   readonly id?: string;

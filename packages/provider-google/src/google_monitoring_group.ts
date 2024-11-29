@@ -9,7 +9,7 @@ export interface GoogleMonitoringGroupArgs {
   filter: string;
   is_cluster?: boolean;
   parent_name?: string;
-  timeouts: GoogleMonitoringGroupArgsTimeouts;
+  timeouts?: GoogleMonitoringGroupArgsTimeouts;
 }
 export class google_monitoring_group extends TerraformResource {
   readonly id?: string;

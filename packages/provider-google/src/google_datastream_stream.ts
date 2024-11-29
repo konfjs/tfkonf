@@ -294,7 +294,7 @@ export interface GoogleDatastreamStreamArgs {
   backfill_none: GoogleDatastreamStreamArgsBackfillNone;
   destination_config: GoogleDatastreamStreamArgsDestinationConfig;
   source_config: GoogleDatastreamStreamArgsSourceConfig;
-  timeouts: GoogleDatastreamStreamArgsTimeouts;
+  timeouts?: GoogleDatastreamStreamArgsTimeouts;
 }
 export class google_datastream_stream extends TerraformResource {
   readonly effective_labels!: {

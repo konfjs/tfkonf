@@ -29,7 +29,7 @@ export interface AwsDocdbClusterArgs {
     [key: string]: string;
   };
   restore_to_point_in_time: AwsDocdbClusterArgsRestoreToPointInTime;
-  timeouts: AwsDocdbClusterArgsTimeouts;
+  timeouts?: AwsDocdbClusterArgsTimeouts;
 }
 export class aws_docdb_cluster extends TerraformResource {
   readonly arn!: string;

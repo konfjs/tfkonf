@@ -41,7 +41,7 @@ export interface AwsLexBotArgs {
   abort_statement: AwsLexBotArgsAbortStatement;
   clarification_prompt: AwsLexBotArgsClarificationPrompt;
   intent: AwsLexBotArgsIntent;
-  timeouts: AwsLexBotArgsTimeouts;
+  timeouts?: AwsLexBotArgsTimeouts;
 }
 export class aws_lex_bot extends TerraformResource {
   readonly arn!: string;

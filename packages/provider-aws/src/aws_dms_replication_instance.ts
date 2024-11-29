@@ -12,7 +12,7 @@ export interface AwsDmsReplicationInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsDmsReplicationInstanceArgsTimeouts;
+  timeouts?: AwsDmsReplicationInstanceArgsTimeouts;
 }
 export class aws_dms_replication_instance extends TerraformResource {
   readonly allocated_storage?: number;

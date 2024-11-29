@@ -18,7 +18,7 @@ export interface AwsEksFargateProfileArgs {
     [key: string]: string;
   };
   selector: AwsEksFargateProfileArgsSelector;
-  timeouts: AwsEksFargateProfileArgsTimeouts;
+  timeouts?: AwsEksFargateProfileArgsTimeouts;
 }
 export class aws_eks_fargate_profile extends TerraformResource {
   readonly arn!: string;

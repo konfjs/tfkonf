@@ -6,7 +6,7 @@ export interface AwsInternetGatewayAttachmentArgsTimeouts {
 export interface AwsInternetGatewayAttachmentArgs {
   internet_gateway_id: string;
   vpc_id: string;
-  timeouts: AwsInternetGatewayAttachmentArgsTimeouts;
+  timeouts?: AwsInternetGatewayAttachmentArgsTimeouts;
 }
 export class aws_internet_gateway_attachment extends TerraformResource {
   readonly id?: string;

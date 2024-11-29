@@ -39,7 +39,7 @@ export interface GoogleSccOrganizationCustomModuleArgs {
   enablement_state: string;
   organization: string;
   custom_config: GoogleSccOrganizationCustomModuleArgsCustomConfig;
-  timeouts: GoogleSccOrganizationCustomModuleArgsTimeouts;
+  timeouts?: GoogleSccOrganizationCustomModuleArgsTimeouts;
 }
 export class google_scc_organization_custom_module extends TerraformResource {
   readonly ancestor_module!: string;

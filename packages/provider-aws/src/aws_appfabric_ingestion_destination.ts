@@ -36,7 +36,7 @@ export interface AwsAppfabricIngestionDestinationArgs {
   };
   destination_configuration: AwsAppfabricIngestionDestinationArgsDestinationConfiguration;
   processing_configuration: AwsAppfabricIngestionDestinationArgsProcessingConfiguration;
-  timeouts: AwsAppfabricIngestionDestinationArgsTimeouts;
+  timeouts?: AwsAppfabricIngestionDestinationArgsTimeouts;
 }
 export class aws_appfabric_ingestion_destination extends TerraformResource {
   readonly arn!: string;

@@ -147,7 +147,7 @@ export interface AwsDmsEndpointArgs {
   redis_settings: AwsDmsEndpointArgsRedisSettings;
   redshift_settings: AwsDmsEndpointArgsRedshiftSettings;
   s3_settings: AwsDmsEndpointArgsS3Settings;
-  timeouts: AwsDmsEndpointArgsTimeouts;
+  timeouts?: AwsDmsEndpointArgsTimeouts;
 }
 export class aws_dms_endpoint extends TerraformResource {
   readonly certificate_arn?: string;

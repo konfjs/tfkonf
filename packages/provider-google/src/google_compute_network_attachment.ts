@@ -10,7 +10,7 @@ export interface GoogleComputeNetworkAttachmentArgs {
   producer_accept_lists?: string[];
   producer_reject_lists?: string[];
   subnetworks: string[];
-  timeouts: GoogleComputeNetworkAttachmentArgsTimeouts;
+  timeouts?: GoogleComputeNetworkAttachmentArgsTimeouts;
 }
 export class google_compute_network_attachment extends TerraformResource {
   readonly connection_endpoints!: any[];

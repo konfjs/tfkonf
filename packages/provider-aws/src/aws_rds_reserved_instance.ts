@@ -11,7 +11,7 @@ export interface AwsRdsReservedInstanceArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsRdsReservedInstanceArgsTimeouts;
+  timeouts?: AwsRdsReservedInstanceArgsTimeouts;
 }
 export class aws_rds_reserved_instance extends TerraformResource {
   readonly arn!: string;

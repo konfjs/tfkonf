@@ -25,7 +25,7 @@ export interface GoogleCertificateManagerTrustConfigArgs {
   location: string;
   name: string;
   allowlisted_certificates: GoogleCertificateManagerTrustConfigArgsAllowlistedCertificates;
-  timeouts: GoogleCertificateManagerTrustConfigArgsTimeouts;
+  timeouts?: GoogleCertificateManagerTrustConfigArgsTimeouts;
   trust_stores: GoogleCertificateManagerTrustConfigArgsTrustStores;
 }
 export class google_certificate_manager_trust_config extends TerraformResource {

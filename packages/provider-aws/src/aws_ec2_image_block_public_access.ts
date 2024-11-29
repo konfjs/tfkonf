@@ -4,7 +4,7 @@ export interface AwsEc2ImageBlockPublicAccessArgsTimeouts {
 }
 export interface AwsEc2ImageBlockPublicAccessArgs {
   state: string;
-  timeouts: AwsEc2ImageBlockPublicAccessArgsTimeouts;
+  timeouts?: AwsEc2ImageBlockPublicAccessArgsTimeouts;
 }
 export class aws_ec2_image_block_public_access extends TerraformResource {
   readonly id?: string;

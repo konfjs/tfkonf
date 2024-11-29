@@ -25,7 +25,7 @@ export interface GoogleCertificateManagerCertificateArgs {
   scope?: string;
   managed: GoogleCertificateManagerCertificateArgsManaged;
   self_managed: GoogleCertificateManagerCertificateArgsSelfManaged;
-  timeouts: GoogleCertificateManagerCertificateArgsTimeouts;
+  timeouts?: GoogleCertificateManagerCertificateArgsTimeouts;
 }
 export class google_certificate_manager_certificate extends TerraformResource {
   readonly effective_labels!: {

@@ -11,7 +11,7 @@ export interface AwsServicecatalogPortfolioArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsServicecatalogPortfolioArgsTimeouts;
+  timeouts?: AwsServicecatalogPortfolioArgsTimeouts;
 }
 export class aws_servicecatalog_portfolio extends TerraformResource {
   readonly arn!: string;

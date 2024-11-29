@@ -9,7 +9,7 @@ export interface AwsAthenaPreparedStatementArgs {
   name: string;
   query_statement: string;
   workgroup: string;
-  timeouts: AwsAthenaPreparedStatementArgsTimeouts;
+  timeouts?: AwsAthenaPreparedStatementArgsTimeouts;
 }
 export class aws_athena_prepared_statement extends TerraformResource {
   readonly id?: string;

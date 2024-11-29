@@ -8,7 +8,7 @@ export interface GoogleVmwareengineSubnetArgs {
   ip_cidr_range: string;
   name: string;
   parent: string;
-  timeouts: GoogleVmwareengineSubnetArgsTimeouts;
+  timeouts?: GoogleVmwareengineSubnetArgsTimeouts;
 }
 export class google_vmwareengine_subnet extends TerraformResource {
   readonly create_time!: string;

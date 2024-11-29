@@ -91,7 +91,7 @@ export interface GoogleIdentityPlatformConfigArgs {
   quota: GoogleIdentityPlatformConfigArgsQuota;
   sign_in: GoogleIdentityPlatformConfigArgsSignIn;
   sms_region_config: GoogleIdentityPlatformConfigArgsSmsRegionConfig;
-  timeouts: GoogleIdentityPlatformConfigArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformConfigArgsTimeouts;
 }
 export class google_identity_platform_config extends TerraformResource {
   readonly authorized_domains?: string[];

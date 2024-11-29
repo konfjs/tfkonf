@@ -6,7 +6,7 @@ export interface GoogleApigeeEnvKeystoreArgsTimeouts {
 export interface GoogleApigeeEnvKeystoreArgs {
   env_id: string;
   name?: string;
-  timeouts: GoogleApigeeEnvKeystoreArgsTimeouts;
+  timeouts?: GoogleApigeeEnvKeystoreArgsTimeouts;
 }
 export class google_apigee_env_keystore extends TerraformResource {
   readonly aliases!: string[];

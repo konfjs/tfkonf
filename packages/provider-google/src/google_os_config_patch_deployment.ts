@@ -155,7 +155,7 @@ export interface GoogleOsConfigPatchDeploymentArgs {
   patch_config: GoogleOsConfigPatchDeploymentArgsPatchConfig;
   recurring_schedule: GoogleOsConfigPatchDeploymentArgsRecurringSchedule;
   rollout: GoogleOsConfigPatchDeploymentArgsRollout;
-  timeouts: GoogleOsConfigPatchDeploymentArgsTimeouts;
+  timeouts?: GoogleOsConfigPatchDeploymentArgsTimeouts;
 }
 export class google_os_config_patch_deployment extends TerraformResource {
   readonly create_time!: string;

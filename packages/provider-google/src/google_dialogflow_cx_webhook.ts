@@ -32,7 +32,7 @@ export interface GoogleDialogflowCxWebhookArgs {
   timeout?: string;
   generic_web_service: GoogleDialogflowCxWebhookArgsGenericWebService;
   service_directory: GoogleDialogflowCxWebhookArgsServiceDirectory;
-  timeouts: GoogleDialogflowCxWebhookArgsTimeouts;
+  timeouts?: GoogleDialogflowCxWebhookArgsTimeouts;
 }
 export class google_dialogflow_cx_webhook extends TerraformResource {
   readonly id?: string;

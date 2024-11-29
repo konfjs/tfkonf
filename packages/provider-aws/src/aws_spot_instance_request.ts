@@ -78,7 +78,7 @@ export interface AwsSpotInstanceRequestArgs {
   network_interface: AwsSpotInstanceRequestArgsNetworkInterface;
   private_dns_name_options: AwsSpotInstanceRequestArgsPrivateDnsNameOptions;
   root_block_device: AwsSpotInstanceRequestArgsRootBlockDevice;
-  timeouts: AwsSpotInstanceRequestArgsTimeouts;
+  timeouts?: AwsSpotInstanceRequestArgsTimeouts;
 }
 export class aws_spot_instance_request extends TerraformResource {
   readonly ami?: string;

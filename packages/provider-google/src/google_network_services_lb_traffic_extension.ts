@@ -31,7 +31,7 @@ export interface GoogleNetworkServicesLbTrafficExtensionArgs {
   location: string;
   name: string;
   extension_chains: GoogleNetworkServicesLbTrafficExtensionArgsExtensionChains;
-  timeouts: GoogleNetworkServicesLbTrafficExtensionArgsTimeouts;
+  timeouts?: GoogleNetworkServicesLbTrafficExtensionArgsTimeouts;
 }
 export class google_network_services_lb_traffic_extension extends TerraformResource {
   readonly effective_labels!: {

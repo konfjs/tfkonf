@@ -160,7 +160,7 @@ export interface GoogleDataLossPreventionInspectTemplateArgs {
   display_name?: string;
   parent: string;
   inspect_config: GoogleDataLossPreventionInspectTemplateArgsInspectConfig;
-  timeouts: GoogleDataLossPreventionInspectTemplateArgsTimeouts;
+  timeouts?: GoogleDataLossPreventionInspectTemplateArgsTimeouts;
 }
 export class google_data_loss_prevention_inspect_template extends TerraformResource {
   readonly id?: string;

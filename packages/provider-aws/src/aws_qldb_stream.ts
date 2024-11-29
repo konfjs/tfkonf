@@ -17,7 +17,7 @@ export interface AwsQldbStreamArgs {
     [key: string]: string;
   };
   kinesis_configuration: AwsQldbStreamArgsKinesisConfiguration;
-  timeouts: AwsQldbStreamArgsTimeouts;
+  timeouts?: AwsQldbStreamArgsTimeouts;
 }
 export class aws_qldb_stream extends TerraformResource {
   readonly arn!: string;

@@ -14,7 +14,7 @@ export interface AwsEbsSnapshotCopyArgs {
     [key: string]: string;
   };
   temporary_restore_days?: number;
-  timeouts: AwsEbsSnapshotCopyArgsTimeouts;
+  timeouts?: AwsEbsSnapshotCopyArgsTimeouts;
 }
 export class aws_ebs_snapshot_copy extends TerraformResource {
   readonly arn!: string;

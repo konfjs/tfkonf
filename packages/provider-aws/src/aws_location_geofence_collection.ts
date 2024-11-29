@@ -11,7 +11,7 @@ export interface AwsLocationGeofenceCollectionArgs {
   tags?: {
     [key: string]: string;
   };
-  timeouts: AwsLocationGeofenceCollectionArgsTimeouts;
+  timeouts?: AwsLocationGeofenceCollectionArgsTimeouts;
 }
 export class aws_location_geofence_collection extends TerraformResource {
   readonly collection_arn!: string;

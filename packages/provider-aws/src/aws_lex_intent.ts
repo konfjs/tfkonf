@@ -101,7 +101,7 @@ export interface AwsLexIntentArgs {
   fulfillment_activity: AwsLexIntentArgsFulfillmentActivity;
   rejection_statement: AwsLexIntentArgsRejectionStatement;
   slot: AwsLexIntentArgsSlot;
-  timeouts: AwsLexIntentArgsTimeouts;
+  timeouts?: AwsLexIntentArgsTimeouts;
 }
 export class aws_lex_intent extends TerraformResource {
   readonly arn!: string;

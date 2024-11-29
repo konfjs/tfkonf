@@ -22,7 +22,7 @@ export interface AwsMemorydbClusterArgs {
     [key: string]: string;
   };
   tls_enabled?: boolean;
-  timeouts: AwsMemorydbClusterArgsTimeouts;
+  timeouts?: AwsMemorydbClusterArgsTimeouts;
 }
 export class aws_memorydb_cluster extends TerraformResource {
   readonly arn!: string;

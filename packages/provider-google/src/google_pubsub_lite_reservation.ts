@@ -8,7 +8,7 @@ export interface GooglePubsubLiteReservationArgs {
   name: string;
   region?: string;
   throughput_capacity: number;
-  timeouts: GooglePubsubLiteReservationArgsTimeouts;
+  timeouts?: GooglePubsubLiteReservationArgsTimeouts;
 }
 export class google_pubsub_lite_reservation extends TerraformResource {
   readonly id?: string;

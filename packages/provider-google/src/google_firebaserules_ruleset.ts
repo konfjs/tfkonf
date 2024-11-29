@@ -14,7 +14,7 @@ export interface GoogleFirebaserulesRulesetArgsTimeouts {
 }
 export interface GoogleFirebaserulesRulesetArgs {
   source: GoogleFirebaserulesRulesetArgsSource;
-  timeouts: GoogleFirebaserulesRulesetArgsTimeouts;
+  timeouts?: GoogleFirebaserulesRulesetArgsTimeouts;
 }
 export class google_firebaserules_ruleset extends TerraformResource {
   readonly create_time!: string;

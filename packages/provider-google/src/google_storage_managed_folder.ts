@@ -8,7 +8,7 @@ export interface GoogleStorageManagedFolderArgs {
   bucket: string;
   force_destroy?: boolean;
   name: string;
-  timeouts: GoogleStorageManagedFolderArgsTimeouts;
+  timeouts?: GoogleStorageManagedFolderArgsTimeouts;
 }
 export class google_storage_managed_folder extends TerraformResource {
   readonly create_time!: string;

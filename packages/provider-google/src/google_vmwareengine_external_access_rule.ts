@@ -23,7 +23,7 @@ export interface GoogleVmwareengineExternalAccessRuleArgs {
   source_ports: string[];
   destination_ip_ranges: GoogleVmwareengineExternalAccessRuleArgsDestinationIpRanges;
   source_ip_ranges: GoogleVmwareengineExternalAccessRuleArgsSourceIpRanges;
-  timeouts: GoogleVmwareengineExternalAccessRuleArgsTimeouts;
+  timeouts?: GoogleVmwareengineExternalAccessRuleArgsTimeouts;
 }
 export class google_vmwareengine_external_access_rule extends TerraformResource {
   readonly create_time!: string;

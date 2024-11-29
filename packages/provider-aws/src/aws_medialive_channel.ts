@@ -732,7 +732,7 @@ export interface AwsMedialiveChannelArgs {
   input_attachments: AwsMedialiveChannelArgsInputAttachments;
   input_specification: AwsMedialiveChannelArgsInputSpecification;
   maintenance: AwsMedialiveChannelArgsMaintenance;
-  timeouts: AwsMedialiveChannelArgsTimeouts;
+  timeouts?: AwsMedialiveChannelArgsTimeouts;
   vpc: AwsMedialiveChannelArgsVpc;
 }
 export class aws_medialive_channel extends TerraformResource {

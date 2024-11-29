@@ -7,7 +7,7 @@ export interface AwsServicecatalogTagOptionResourceAssociationArgsTimeouts {
 export interface AwsServicecatalogTagOptionResourceAssociationArgs {
   resource_id: string;
   tag_option_id: string;
-  timeouts: AwsServicecatalogTagOptionResourceAssociationArgsTimeouts;
+  timeouts?: AwsServicecatalogTagOptionResourceAssociationArgsTimeouts;
 }
 export class aws_servicecatalog_tag_option_resource_association extends TerraformResource {
   readonly id?: string;

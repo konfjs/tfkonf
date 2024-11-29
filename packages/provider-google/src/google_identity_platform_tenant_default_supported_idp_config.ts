@@ -10,7 +10,7 @@ export interface GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgs {
   enabled?: boolean;
   idp_id: string;
   tenant: string;
-  timeouts: GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgsTimeouts;
+  timeouts?: GoogleIdentityPlatformTenantDefaultSupportedIdpConfigArgsTimeouts;
 }
 export class google_identity_platform_tenant_default_supported_idp_config extends TerraformResource {
   readonly id?: string;

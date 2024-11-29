@@ -8,7 +8,7 @@ export interface AwsRouteTableAssociationArgs {
   gateway_id?: string;
   route_table_id: string;
   subnet_id?: string;
-  timeouts: AwsRouteTableAssociationArgsTimeouts;
+  timeouts?: AwsRouteTableAssociationArgsTimeouts;
 }
 export class aws_route_table_association extends TerraformResource {
   readonly id?: string;

@@ -9,7 +9,7 @@ export interface GoogleLoggingLogViewArgs {
   description?: string;
   filter?: string;
   name: string;
-  timeouts: GoogleLoggingLogViewArgsTimeouts;
+  timeouts?: GoogleLoggingLogViewArgsTimeouts;
 }
 export class google_logging_log_view extends TerraformResource {
   readonly create_time!: string;

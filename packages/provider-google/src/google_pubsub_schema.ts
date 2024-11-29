@@ -8,7 +8,7 @@ export interface GooglePubsubSchemaArgs {
   definition?: string;
   name: string;
   type?: string;
-  timeouts: GooglePubsubSchemaArgsTimeouts;
+  timeouts?: GooglePubsubSchemaArgsTimeouts;
 }
 export class google_pubsub_schema extends TerraformResource {
   readonly id?: string;

@@ -14,7 +14,7 @@ export interface GoogleAppEngineServiceSplitTrafficArgs {
   migrate_traffic?: boolean;
   service: string;
   split: GoogleAppEngineServiceSplitTrafficArgsSplit;
-  timeouts: GoogleAppEngineServiceSplitTrafficArgsTimeouts;
+  timeouts?: GoogleAppEngineServiceSplitTrafficArgsTimeouts;
 }
 export class google_app_engine_service_split_traffic extends TerraformResource {
   readonly id?: string;

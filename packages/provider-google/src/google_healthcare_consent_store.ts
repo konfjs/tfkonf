@@ -12,7 +12,7 @@ export interface GoogleHealthcareConsentStoreArgs {
     [key: string]: string;
   };
   name: string;
-  timeouts: GoogleHealthcareConsentStoreArgsTimeouts;
+  timeouts?: GoogleHealthcareConsentStoreArgsTimeouts;
 }
 export class google_healthcare_consent_store extends TerraformResource {
   readonly effective_labels!: {

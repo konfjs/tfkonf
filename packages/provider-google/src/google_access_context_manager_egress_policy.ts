@@ -6,7 +6,7 @@ export interface GoogleAccessContextManagerEgressPolicyArgsTimeouts {
 export interface GoogleAccessContextManagerEgressPolicyArgs {
   egress_policy_name: string;
   resource: string;
-  timeouts: GoogleAccessContextManagerEgressPolicyArgsTimeouts;
+  timeouts?: GoogleAccessContextManagerEgressPolicyArgsTimeouts;
 }
 export class google_access_context_manager_egress_policy extends TerraformResource {
   readonly id?: string;

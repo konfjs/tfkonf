@@ -17,7 +17,7 @@ export interface AwsGlobalacceleratorCustomRoutingAcceleratorArgs {
     [key: string]: string;
   };
   attributes: AwsGlobalacceleratorCustomRoutingAcceleratorArgsAttributes;
-  timeouts: AwsGlobalacceleratorCustomRoutingAcceleratorArgsTimeouts;
+  timeouts?: AwsGlobalacceleratorCustomRoutingAcceleratorArgsTimeouts;
 }
 export class aws_globalaccelerator_custom_routing_accelerator extends TerraformResource {
   readonly dns_name!: string;

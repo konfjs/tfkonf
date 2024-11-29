@@ -16,7 +16,7 @@ export interface AwsMedialiveMultiplexArgs {
     [key: string]: string;
   };
   multiplex_settings: AwsMedialiveMultiplexArgsMultiplexSettings;
-  timeouts: AwsMedialiveMultiplexArgsTimeouts;
+  timeouts?: AwsMedialiveMultiplexArgsTimeouts;
 }
 export class aws_medialive_multiplex extends TerraformResource {
   readonly arn!: string;

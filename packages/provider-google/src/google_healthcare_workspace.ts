@@ -14,7 +14,7 @@ export interface GoogleHealthcareWorkspaceArgs {
   };
   name: string;
   settings: GoogleHealthcareWorkspaceArgsSettings;
-  timeouts: GoogleHealthcareWorkspaceArgsTimeouts;
+  timeouts?: GoogleHealthcareWorkspaceArgsTimeouts;
 }
 export class google_healthcare_workspace extends TerraformResource {
   readonly effective_labels!: {

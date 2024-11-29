@@ -15,7 +15,7 @@ export interface GoogleSpannerInstanceConfigArgs {
     [key: string]: string;
   };
   replicas: GoogleSpannerInstanceConfigArgsReplicas;
-  timeouts: GoogleSpannerInstanceConfigArgsTimeouts;
+  timeouts?: GoogleSpannerInstanceConfigArgsTimeouts;
 }
 export class google_spanner_instance_config extends TerraformResource {
   readonly base_config?: string;

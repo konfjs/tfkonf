@@ -8,7 +8,7 @@ export interface GoogleComputeFirewallPolicyArgs {
   description?: string;
   parent: string;
   short_name: string;
-  timeouts: GoogleComputeFirewallPolicyArgsTimeouts;
+  timeouts?: GoogleComputeFirewallPolicyArgsTimeouts;
 }
 export class google_compute_firewall_policy extends TerraformResource {
   readonly creation_timestamp!: string;

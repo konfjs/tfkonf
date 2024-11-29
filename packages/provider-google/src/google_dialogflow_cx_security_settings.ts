@@ -25,7 +25,7 @@ export interface GoogleDialogflowCxSecuritySettingsArgs {
   retention_window_days?: number;
   audio_export_settings: GoogleDialogflowCxSecuritySettingsArgsAudioExportSettings;
   insights_export_settings: GoogleDialogflowCxSecuritySettingsArgsInsightsExportSettings;
-  timeouts: GoogleDialogflowCxSecuritySettingsArgsTimeouts;
+  timeouts?: GoogleDialogflowCxSecuritySettingsArgsTimeouts;
 }
 export class google_dialogflow_cx_security_settings extends TerraformResource {
   readonly id?: string;

@@ -9,7 +9,7 @@ export interface GoogleComputeNetworkPeeringRoutesConfigArgs {
   import_custom_routes: boolean;
   network: string;
   peering: string;
-  timeouts: GoogleComputeNetworkPeeringRoutesConfigArgsTimeouts;
+  timeouts?: GoogleComputeNetworkPeeringRoutesConfigArgsTimeouts;
 }
 export class google_compute_network_peering_routes_config extends TerraformResource {
   readonly id?: string;

@@ -6,7 +6,7 @@ export interface GoogleBiglakeCatalogArgsTimeouts {
 export interface GoogleBiglakeCatalogArgs {
   location: string;
   name: string;
-  timeouts: GoogleBiglakeCatalogArgsTimeouts;
+  timeouts?: GoogleBiglakeCatalogArgsTimeouts;
 }
 export class google_biglake_catalog extends TerraformResource {
   readonly create_time!: string;

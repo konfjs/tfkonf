@@ -21,7 +21,7 @@ export interface GoogleDnsPolicyArgs {
   name: string;
   alternative_name_server_config: GoogleDnsPolicyArgsAlternativeNameServerConfig;
   networks: GoogleDnsPolicyArgsNetworks;
-  timeouts: GoogleDnsPolicyArgsTimeouts;
+  timeouts?: GoogleDnsPolicyArgsTimeouts;
 }
 export class google_dns_policy extends TerraformResource {
   readonly id?: string;
