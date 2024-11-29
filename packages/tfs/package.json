@@ -9,7 +9,7 @@
   "homepage": "https://github.com/shinebayar-g/tfs",
   "repository": {
     "type": "git",
-    "url": "git@github.com:shinebayar-g/tfs.git",
+    "url": "git+ssh://git@github.com/shinebayar-g/tfs.git",
     "directory": "packages/tfs"
   },
   "bugs": {
