@@ -1,3 +1,4 @@
+import { execSync } from 'node:child_process';
 import * as fs from 'node:fs';
 import { HCLNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
@@ -27,6 +28,19 @@ export class TerraformConfig implements HCLNode {
      */
     save(): void {
         fs.writeFileSync(this.filename, this.toHCL(0), 'utf8');
-        console.log(`Terraform configuration written to ${this.filename}`);
+        console.log(`Terraform configuration file saved to ${this.filename}`);
+        if (isTerraformInstalled()) {
+            console.log(`Formatting file ${this.filename}`);
+            execSync(`terraform fmt ${this.filename}`);
+        }
+    }
+}
+
+function isTerraformInstalled(): boolean {
+    try {
+        const output = execSync('terraform --version', { stdio: 'pipe' }).toString();
+        return output.toLowerCase().includes('terraform');
+    } catch (error) {
+        return false;
     }
 }
