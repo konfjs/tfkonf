@@ -7,45 +7,40 @@ export class BlockNode implements HCLNode {
 
     constructor(
         readonly key: string,
-        attributes: { [key: string]: any },
+        args: { [key: string]: any },
+        meta: any,
     ) {
-        this.parseAttributesAndBlocks(attributes);
+        this.parseAttributesAndBlocks(args, meta);
     }
 
-    private parseAttributesAndBlocks(attributes: { [key: string]: any }): void {
-        for (const [key, value] of Object.entries(attributes)) {
-            if (this.isBlock(value)) {
-                this.children.push(new BlockNode(key, value));
+    private parseAttributesAndBlocks(args: { [key: string]: any }, meta: any): void {
+        for (const [key, value] of Object.entries(args)) {
+            if (meta[key].isBlock) {
+                this.children.push(new BlockNode(key, value, meta[key]));
             } else {
                 this.children.push(new AttributeNode(key, value));
             }
         }
     }
 
-    /**
-     * TODO: How to distinguish between HCL block and objects?
-     * They are both defined as objects in TypeScript.
-     *
-     * Example:
-     * gcfs_config {
-     *   enabled = true
-     * }
-     *
-     * vs
-     *
-     * labels = {
-     *  foo = "bar"
-     * }
-     */
-    private isBlock(value: unknown): boolean {
-        return typeof value === 'object' && value !== null && !Array.isArray(value);
-    }
+    // private isBlock(value: unknown): boolean {
+    //     return typeof value === 'object' && value !== null && !Array.isArray(value);
+    // }
 
     toHCL(level: number): string {
         const indent = '  '.repeat(level);
         const childrenHCL = this.children.map((child) => child.toHCL(level + 1)).join('\n');
         return `${indent}${this.key} {\n${childrenHCL}\n${indent}}`;
     }
+}
+
+function attributeToHCL(obj: any): string {
+    if (typeof obj === 'object') {
+        for (const [key, value] of Object.entries(obj)) {
+            return `{\n${key} = ${JSON.stringify(value)}\n}`;
+        }
+    }
+    return JSON.stringify(obj);
 }
 
 export class AttributeNode implements HCLNode {
@@ -56,8 +51,6 @@ export class AttributeNode implements HCLNode {
 
     toHCL(level: number): string {
         const indent = '  '.repeat(level);
-        const formattedValue =
-            typeof this.value === 'string' ? JSON.stringify(this.value) : this.value;
-        return `${indent}${this.key} = ${formattedValue}`;
+        return `${indent}${this.key} = ${attributeToHCL(this.value)}`;
     }
 }
