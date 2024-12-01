@@ -6,10 +6,7 @@ import { HCLNode } from './hcl.js';
  * Each TerraformResource will belong to a TerraformConfig.
  */
 export abstract class TerraformResource implements HCLNode {
-    constructor(
-        config: TerraformConfig,
-        readonly resourceName?: string,
-    ) {
+    constructor(config: TerraformConfig) {
         config.addResource(this);
     }
     abstract toHCL(level: number): string;

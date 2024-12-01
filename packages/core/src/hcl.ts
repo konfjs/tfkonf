@@ -6,7 +6,7 @@ export class BlockNode implements HCLNode {
     readonly children: HCLNode[] = [];
 
     constructor(
-        readonly key: string,
+        readonly blockName: string,
         args: { [key: string]: any },
         meta: any,
     ) {
@@ -30,7 +30,7 @@ export class BlockNode implements HCLNode {
     toHCL(level: number): string {
         const indent = '  '.repeat(level);
         const childrenHCL = this.children.map((child) => child.toHCL(level + 1)).join('\n');
-        return `${indent}${this.key} {\n${childrenHCL}\n${indent}}`;
+        return `${indent}${this.blockName} {\n${childrenHCL}\n${indent}}`;
     }
 }
 
