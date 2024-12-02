@@ -70,4 +70,5 @@ function generateClassProperties(classBody: t.ClassBody, block: Block) {
 
     // TODO: block_types are currently being generated as any.
     // Their interfaces should be generated.
+    // TODO: terraform block types must be generated in the meta property.
 }

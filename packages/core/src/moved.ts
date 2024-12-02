@@ -15,7 +15,6 @@ export class Moved extends TerraformResource {
         super(config);
     }
 
-    // TODO: Args must be resource reference
     toHCL(): string {
         return new BlockNode('moved', this.args).toHCL(0);
     }

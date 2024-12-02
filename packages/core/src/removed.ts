@@ -17,7 +17,6 @@ export class Removed extends TerraformResource {
         super(config);
     }
 
-    // TODO: args.from must be resource reference
     toHCL(): string {
         return new BlockNode('removed', this.args).toHCL(0);
     }

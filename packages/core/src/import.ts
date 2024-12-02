@@ -15,7 +15,6 @@ export class Import extends TerraformResource {
         super(config);
     }
 
-    // TODO: args.to must be resource reference
     toHCL(): string {
         return new BlockNode('import', this.args).toHCL(0);
     }

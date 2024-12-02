@@ -18,12 +18,15 @@ export class BlockNode implements HCLNode {
             /**
              * If the attribute is explicitly marked as a block
              */
-            if (meta?.[key].isBlock) {
+            if (meta?.[key]?.isBlock) {
                 this.children.push(new BlockNode(key, value, meta[key]));
                 /**
                  * Or if the attribute is an object and doesn't have isBlock in the meta object
                  */
-            } else if (this.isBlock(value) && meta?.[key] && !Reflect.has(meta?.[key], 'isBlock')) {
+            } else if (
+                this.isBlock(value) &&
+                (!meta || !meta[key] || !Reflect.has(meta[key], 'isBlock'))
+            ) {
                 this.children.push(new BlockNode(key, value));
             } else {
                 this.children.push(new AttributeNode(key, value));
@@ -50,13 +53,27 @@ export class BlockNode implements HCLNode {
     }
 }
 
-function attributeToHCL(obj: any): string {
-    if (typeof obj === 'object' && obj !== null) {
-        for (const [key, value] of Object.entries(obj)) {
-            return `{\n${key} = ${JSON.stringify(value)}\n}`;
+function attributeToHCL(value: any): string {
+    if (typeof value === 'object' && value !== null) {
+        for (const [key, val] of Object.entries(value)) {
+            return `{\n${key} = ${attributeToHCL(val)}\n}`;
         }
     }
-    return JSON.stringify(obj);
+    /**
+     * Check if the value is a reference to another resource
+     */
+    if (typeof value === 'string') {
+        const isResourceReference =
+            /^([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)$/;
+        if (isResourceReference.test(value)) {
+            return value;
+        }
+        const isLocalOrVariableReference = /^(local|var)\.[a-zA-Z_][a-zA-Z0-9_-]*$/;
+        if (isLocalOrVariableReference.test(value)) {
+            return value;
+        }
+    }
+    return JSON.stringify(value);
 }
 
 export class AttributeNode implements HCLNode {
