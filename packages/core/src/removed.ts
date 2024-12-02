@@ -2,21 +2,23 @@ import { TerraformConfig } from './config.js';
 import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
-interface MovedArgs {
+interface RemovedArgs {
     from: string;
-    to: string;
+    lifecycle: {
+        destroy: boolean;
+    };
 }
 
-export class Moved extends TerraformResource {
+export class Removed extends TerraformResource {
     constructor(
         protected readonly config: TerraformConfig,
-        readonly args: MovedArgs,
+        private readonly args: RemovedArgs,
     ) {
         super(config);
     }
 
-    // TODO: Args must be resource reference
+    // TODO: args.from must be resource reference
     toHCL(): string {
-        return new BlockNode('moved', this.args).toHCL(0);
+        return new BlockNode('removed', this.args).toHCL(0);
     }
 }
