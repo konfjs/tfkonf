@@ -2,21 +2,19 @@ import { TerraformConfig } from './config.js';
 import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
-interface ImportArgs {
-    to: string;
-    id: string;
+interface LocalsArgs {
+    [name: string]: any;
 }
 
-export class Import extends TerraformResource {
+export class Locals extends TerraformResource {
     constructor(
         protected readonly config: TerraformConfig,
-        readonly args: ImportArgs,
+        readonly args: LocalsArgs,
     ) {
         super(config);
     }
 
-    // TODO: args.to must be resource reference
     toHCL(): string {
-        return new BlockNode('import', this.args).toHCL(0);
+        return new BlockNode('locals', this.args).toHCL(0);
     }
 }
