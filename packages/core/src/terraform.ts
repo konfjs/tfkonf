@@ -16,10 +16,16 @@ export class Terraform extends TerraformResource {
         super(config);
     }
 
-    // TODO
     toHCL(): string {
-        const base = new BlockNode('terraform', this.args);
-        const backend = new BlockNode('backend', this.args.backend);
-        return new BlockNode('terraform', this.args).toHCL(0);
+        const terraformBlock = new BlockNode('terraform', {});
+        const backendType = Object.keys(this.args.backend)[0];
+        if (backendType) {
+            const backendConfig = this.args.backend[backendType as keyof Exclusive<BackendConfig>];
+            if (backendConfig) {
+                const backendBlock = new BlockNode(`backend ${backendType}`, backendConfig);
+                terraformBlock.children.push(backendBlock);
+            }
+        }
+        return terraformBlock.toHCL(0);
     }
 }
