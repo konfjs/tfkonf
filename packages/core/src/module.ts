@@ -8,18 +8,15 @@ interface ModuleArgs {
 }
 
 export class Module extends TerraformResource {
-    private block: BlockNode;
-
     constructor(
-        private readonly config: TerraformConfig,
-        readonly resourceName: string,
+        protected readonly config: TerraformConfig,
+        readonly name: string,
         readonly args: ModuleArgs,
     ) {
-        super(config, resourceName);
-        this.block = new BlockNode(`module "${resourceName}"`, args);
+        super(config);
     }
 
-    toHCL(level: number): string {
-        return this.block.toHCL(level);
+    toHCL(): string {
+        return new BlockNode(`module "${this.name}"`, this.args).toHCL(0);
     }
 }

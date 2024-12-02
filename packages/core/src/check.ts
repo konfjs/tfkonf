@@ -1,4 +1,5 @@
 import { TerraformConfig } from './config.js';
+import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface CheckArgs {
@@ -10,12 +11,14 @@ interface CheckArgs {
 }
 
 export class Check extends TerraformResource {
-    constructor(config: TerraformConfig, args: CheckArgs) {
+    constructor(
+        protected readonly config: TerraformConfig,
+        readonly args: CheckArgs,
+    ) {
         super(config);
     }
 
-    // TODO
-    toHCL(level: number): string {
-        return '';
+    toHCL(): string {
+        return new BlockNode('check', this.args).toHCL(0);
     }
 }

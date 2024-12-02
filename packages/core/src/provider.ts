@@ -1,21 +1,21 @@
 import { TerraformConfig } from './config.js';
+import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface ProviderArgs {
-    [key: string]: string;
+    [key: string]: any;
 }
 
 export class Provider extends TerraformResource {
     constructor(
-        private readonly config: TerraformConfig,
+        protected readonly config: TerraformConfig,
         readonly name: string,
         readonly args: ProviderArgs,
     ) {
-        super(config, name);
+        super(config);
     }
 
-    // TODO
-    toHCL(level: number): string {
-        return '';
+    toHCL(): string {
+        return new BlockNode(`provider "${this.name}"`, this.args).toHCL(0);
     }
 }

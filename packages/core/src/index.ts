@@ -1,4 +1,4 @@
-export * from './checked.js';
+export * from './check.js';
 export * from './config.js';
 export * from './hcl.js';
 export * from './import.js';

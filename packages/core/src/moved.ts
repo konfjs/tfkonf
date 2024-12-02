@@ -1,4 +1,5 @@
 import { TerraformConfig } from './config.js';
+import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface MovedArgs {
@@ -8,14 +9,13 @@ interface MovedArgs {
 
 export class Moved extends TerraformResource {
     constructor(
-        private readonly config: TerraformConfig,
+        protected readonly config: TerraformConfig,
         readonly args: MovedArgs,
     ) {
         super(config);
     }
 
-    // TODO
-    toHCL(level: number): string {
-        return '';
+    toHCL(): string {
+        return new BlockNode('moved', this.args).toHCL(0);
     }
 }

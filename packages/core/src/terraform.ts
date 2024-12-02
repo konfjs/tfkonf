@@ -1,21 +1,25 @@
+import { BackendConfig } from './backend.js';
 import { TerraformConfig } from './config.js';
+import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
+import { Exclusive } from './utils.js';
 
 interface TerraformArgs {
-    [key: string]: any;
-    backend: any;
+    backend: Exclusive<BackendConfig>;
 }
 
 export class Terraform extends TerraformResource {
     constructor(
-        private readonly config: TerraformConfig,
+        protected readonly config: TerraformConfig,
         readonly args: TerraformArgs,
     ) {
         super(config);
     }
 
     // TODO
-    toHCL(level: number): string {
-        return '';
+    toHCL(): string {
+        const base = new BlockNode('terraform', this.args);
+        const backend = new BlockNode('backend', this.args.backend);
+        return new BlockNode('terraform', this.args).toHCL(0);
     }
 }

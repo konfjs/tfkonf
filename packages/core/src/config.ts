@@ -19,15 +19,15 @@ export class TerraformConfig implements HCLNode {
     /**
      * Converts the Terraform configuration to HCL.
      */
-    toHCL(level: number): string {
-        return this.resources.map((resource) => resource.toHCL(level)).join('\n\n');
+    toHCL(): string {
+        return this.resources.map((resource) => resource.toHCL()).join('\n\n');
     }
 
     /**
      * Writes the Terraform configuration to the file system.
      */
     save(): void {
-        fs.writeFileSync(this.filename, this.toHCL(0), 'utf8');
+        fs.writeFileSync(this.filename, this.toHCL(), 'utf8');
         console.log(`Terraform configuration file saved to ${this.filename}`);
         if (isTerraformInstalled()) {
             console.log(`Formatting file ${this.filename}`);

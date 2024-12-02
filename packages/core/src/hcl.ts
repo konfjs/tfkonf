@@ -8,14 +8,14 @@ export class BlockNode implements HCLNode {
     constructor(
         readonly blockName: string,
         args: { [key: string]: any },
-        meta: any,
+        meta?: any,
     ) {
         this.parseAttributesAndBlocks(args, meta);
     }
 
-    private parseAttributesAndBlocks(args: { [key: string]: any }, meta: any): void {
+    private parseAttributesAndBlocks(args: { [key: string]: any }, meta?: any): void {
         for (const [key, value] of Object.entries(args)) {
-            if (meta[key].isBlock) {
+            if (meta?.[key].isBlock) {
                 this.children.push(new BlockNode(key, value, meta[key]));
             } else {
                 this.children.push(new AttributeNode(key, value));
