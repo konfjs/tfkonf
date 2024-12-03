@@ -43,7 +43,7 @@ export class Terraform extends TerraformResource {
         protected readonly config: TerraformConfig,
         readonly args: TerraformArgs,
     ) {
-        super(config);
+        super(config, 'terraform', args);
     }
 
     toHCL(): string {

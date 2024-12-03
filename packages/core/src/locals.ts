@@ -1,5 +1,4 @@
 import { TerraformConfig } from './config.js';
-import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface LocalsArgs {
@@ -11,10 +10,6 @@ export class Locals extends TerraformResource {
         protected readonly config: TerraformConfig,
         readonly args: LocalsArgs,
     ) {
-        super(config);
-    }
-
-    toHCL(): string {
-        return new BlockNode('locals', this.args).toHCL(0);
+        super(config, 'locals', args);
     }
 }

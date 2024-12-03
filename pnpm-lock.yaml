@@ -20,10 +20,10 @@ importers:
 
   examples:
     dependencies:
-      '@konfjs/core':
+      '@tfkonf/core':
         specifier: workspace:*
         version: link:../packages/core
-      '@konfjs/provider-google':
+      '@tfkonf/provider-google':
         specifier: workspace:*
         version: link:../packages/provider-google
     devDependencies:
@@ -35,7 +35,7 @@ importers:
 
   packages/provider-aws:
     dependencies:
-      '@konfjs/core':
+      '@tfkonf/core':
         specifier: workspace:*
         version: link:../core
 
@@ -60,7 +60,7 @@ importers:
 
   packages/provider-google:
     dependencies:
-      '@konfjs/core':
+      '@tfkonf/core':
         specifier: workspace:*
         version: link:../core
 

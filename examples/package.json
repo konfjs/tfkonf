@@ -6,7 +6,7 @@
     "typescript": "5.7.2"
   },
   "dependencies": {
-    "@konfjs/core": "workspace:*",
-    "@konfjs/provider-google": "workspace:*"
+    "@tfkonf/core": "workspace:*",
+    "@tfkonf/provider-google": "workspace:*"
   }
 }

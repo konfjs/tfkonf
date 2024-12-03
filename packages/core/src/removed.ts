@@ -1,5 +1,4 @@
 import { TerraformConfig } from './config.js';
-import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface RemovedArgs {
@@ -12,12 +11,8 @@ interface RemovedArgs {
 export class Removed extends TerraformResource {
     constructor(
         protected readonly config: TerraformConfig,
-        private readonly args: RemovedArgs,
+        protected readonly args: RemovedArgs,
     ) {
-        super(config);
-    }
-
-    toHCL(): string {
-        return new BlockNode('removed', this.args).toHCL(0);
+        super(config, 'removed', args);
     }
 }

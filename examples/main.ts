@@ -1,5 +1,5 @@
-import { Provider, Terraform, TerraformConfig } from '@konfjs/core';
-import { google_service_account } from '@konfjs/provider-google/google_service_account';
+import { Provider, Terraform, TerraformConfig } from '@tfkonf/core';
+import { google_service_account } from '@tfkonf/provider-google/google_service_account';
 
 const main = new TerraformConfig('main.tf');
 

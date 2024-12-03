@@ -1,5 +1,5 @@
 {
-  "name": "@konfjs/provider-generator",
+  "name": "@tfkonf/provider-generator",
   "version": "0.1.3",
   "author": {
     "name": "konfjs",
@@ -37,7 +37,7 @@
     }
   },
   "bin": {
-    "@konfjs/provider-generator": "./dist/index.js"
+    "@tfkonf/provider-generator": "./dist/index.js"
   },
   "scripts": {
     "add_shebang": "perl -i -pe 's,#!/usr/bin/env tsx,#!/usr/bin/env node,g' dist/index.js",
