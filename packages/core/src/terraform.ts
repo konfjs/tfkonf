@@ -6,6 +6,7 @@ import { Exclusive } from './utils.js';
 
 interface TerraformArgs {
     backend: Exclusive<BackendConfig>;
+    // TODO: Add other fields
 }
 
 export class Terraform extends TerraformResource {
