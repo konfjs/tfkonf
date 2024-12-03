@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSecurityhubFindingAggregatorArgs {
   linking_mode: string;
   specified_regions?: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsGameliftGameSessionQueueArgsPlayerLatencyPolicy {
   maximum_individual_player_latency_milliseconds: number;
   policy_duration_seconds?: number;

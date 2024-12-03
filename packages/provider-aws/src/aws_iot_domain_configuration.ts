@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIotDomainConfigurationArgsAuthorizerConfig {
   allow_authorizer_override?: boolean;
   default_authorizer_name?: string;

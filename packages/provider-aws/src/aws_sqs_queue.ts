@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSqsQueueArgs {
   content_based_deduplication?: boolean;
   delay_seconds?: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleAppEngineStandardAppVersionArgsAutomaticScalingStandardSchedulerSettings {
   max_instances?: number;
   min_instances?: number;

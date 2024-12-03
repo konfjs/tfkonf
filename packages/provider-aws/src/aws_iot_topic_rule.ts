@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIotTopicRuleArgsCloudwatchAlarm {
   alarm_name: string;
   role_arn: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSecuritylakeSubscriberNotificationArgsConfigurationHttpsNotificationConfiguration {
   authorization_api_key_name?: string;
   authorization_api_key_value?: string;

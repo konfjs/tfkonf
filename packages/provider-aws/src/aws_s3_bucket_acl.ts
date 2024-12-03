@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsS3BucketAclArgsAccessControlPolicyGrantGrantee {
   email_address?: string;
   id?: string;

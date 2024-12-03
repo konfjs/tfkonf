@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsKinesisanalyticsv2ApplicationArgsApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation {
   bucket_arn: string;
   file_key: string;

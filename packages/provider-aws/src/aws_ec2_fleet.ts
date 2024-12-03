@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEc2FleetArgsFleetInstanceSet {}
 export interface AwsEc2FleetArgsLaunchTemplateConfigLaunchTemplateSpecification {
   launch_template_id?: string;

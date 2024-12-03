@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsConnectQueueArgsOutboundCallerConfig {
   outbound_caller_id_name?: string;
   outbound_caller_id_number_id?: string;

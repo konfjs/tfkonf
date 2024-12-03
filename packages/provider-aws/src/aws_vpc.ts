@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsVpcArgs {
   assign_generated_ipv6_cidr_block?: boolean;
   enable_dns_support?: boolean;

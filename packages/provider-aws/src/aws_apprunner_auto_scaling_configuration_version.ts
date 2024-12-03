@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApprunnerAutoScalingConfigurationVersionArgs {
   auto_scaling_configuration_name: string;
   max_concurrency?: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOrganizationsOrganizationArgs {
   aws_service_access_principals?: string[];
   enabled_policy_types?: string[];

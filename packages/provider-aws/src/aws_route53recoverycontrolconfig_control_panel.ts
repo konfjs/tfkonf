@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRoute53recoverycontrolconfigControlPanelArgs {
   cluster_arn: string;
   name: string;

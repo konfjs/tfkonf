@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleSpannerInstanceConfigArgsReplicas {
   default_leader_location?: boolean;
   location?: string;

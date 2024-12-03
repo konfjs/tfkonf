@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIotCaCertificateArgsRegistrationConfig {
   role_arn?: string;
   template_body?: string;

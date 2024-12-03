@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsNeptuneClusterArgsServerlessV2ScalingConfiguration {
   max_capacity?: number;
   min_capacity?: number;

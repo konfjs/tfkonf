@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOpensearchPackageArgsPackageSource {
   s3_bucket_name: string;
   s3_key: string;

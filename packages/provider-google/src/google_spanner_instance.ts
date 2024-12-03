@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleSpannerInstanceArgsAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits {
   max_nodes: number;
   min_nodes: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsVerifiedaccessInstanceTrustProviderAttachmentArgs {
   verifiedaccess_instance_id: string;
   verifiedaccess_trust_provider_id: string;

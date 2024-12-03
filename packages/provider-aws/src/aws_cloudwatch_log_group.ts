@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCloudwatchLogGroupArgs {
   kms_key_id?: string;
   retention_in_days?: number;

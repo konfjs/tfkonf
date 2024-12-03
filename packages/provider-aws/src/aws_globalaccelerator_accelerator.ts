@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsGlobalacceleratorAcceleratorArgsAttributes {
   flow_logs_enabled?: boolean;
   flow_logs_s3_bucket?: string;

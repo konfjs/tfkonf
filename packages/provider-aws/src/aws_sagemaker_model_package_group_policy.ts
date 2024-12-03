@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSagemakerModelPackageGroupPolicyArgs {
   model_package_group_name: string;
   resource_policy: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleCloudfunctions2FunctionArgsBuildConfigAutomaticUpdatePolicy {}
 export interface GoogleCloudfunctions2FunctionArgsBuildConfigOnDeployUpdatePolicy {}
 export interface GoogleCloudfunctions2FunctionArgsBuildConfigSourceRepoSource {

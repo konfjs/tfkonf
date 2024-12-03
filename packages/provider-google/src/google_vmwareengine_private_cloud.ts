@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleVmwareenginePrivateCloudArgsManagementClusterAutoscalingSettingsAutoscalingPoliciesConsumedMemoryThresholds {
   scale_in: number;
   scale_out: number;

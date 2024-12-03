@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsElasticBeanstalkApplicationArgsAppversionLifecycle {
   delete_source_from_s3?: boolean;
   max_age_in_days?: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSagemakerDeviceFleetArgsOutputConfig {
   kms_key_id?: string;
   s3_output_location: string;

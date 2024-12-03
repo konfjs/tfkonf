@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIamGroupPoliciesExclusiveArgs {
   group_name: string;
   policy_names: string[];

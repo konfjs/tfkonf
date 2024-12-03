@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsBudgetsBudgetActionArgsActionThreshold {
   action_threshold_type: string;
   action_threshold_value: number;

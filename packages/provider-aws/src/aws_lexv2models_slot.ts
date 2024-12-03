@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsLexv2modelsSlotArgsMultipleValuesSetting {
   allow_multiple_values?: boolean;
 }

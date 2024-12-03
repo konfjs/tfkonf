@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDevicefarmProjectArgs {
   default_job_timeout_minutes?: number;
   name: string;

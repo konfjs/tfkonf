@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsGlueConnectionArgsPhysicalConnectionRequirements {
   availability_zone?: string;
   security_group_id_list?: string[];

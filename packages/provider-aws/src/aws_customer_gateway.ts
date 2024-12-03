@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCustomerGatewayArgs {
   bgp_asn?: string;
   bgp_asn_extended?: string;

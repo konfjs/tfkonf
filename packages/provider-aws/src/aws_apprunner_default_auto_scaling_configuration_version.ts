@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApprunnerDefaultAutoScalingConfigurationVersionArgs {
   auto_scaling_configuration_arn: string;
 }

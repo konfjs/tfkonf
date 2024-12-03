@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsS3BucketServerSideEncryptionConfigurationArgsRuleApplyServerSideEncryptionByDefault {
   kms_master_key_id?: string;
   sse_algorithm: string;

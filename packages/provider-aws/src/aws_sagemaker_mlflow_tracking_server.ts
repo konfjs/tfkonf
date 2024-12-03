@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSagemakerMlflowTrackingServerArgs {
   artifact_store_uri: string;
   automatic_model_registration?: boolean;

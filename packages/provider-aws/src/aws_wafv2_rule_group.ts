@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsWafv2RuleGroupArgsCustomResponseBody {
   content: string;
   content_type: string;

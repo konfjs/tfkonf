@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEc2LocalGatewayRouteTableVpcAssociationArgs {
   local_gateway_route_table_id: string;
   tags?: {

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsImagebuilderImagePipelineArgsImageScanningConfigurationEcrConfiguration {
   container_tags?: string[];
   repository_name?: string;

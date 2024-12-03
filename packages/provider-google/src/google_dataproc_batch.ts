@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleDataprocBatchArgsEnvironmentConfigExecutionConfig {
   kms_key?: string;
   network_tags?: string[];

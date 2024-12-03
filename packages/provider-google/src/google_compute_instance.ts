@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleComputeInstanceArgsAdvancedMachineFeatures {
   enable_nested_virtualization?: boolean;
   threads_per_core?: number;

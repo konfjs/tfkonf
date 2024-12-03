@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsPaymentcryptographyKeyAliasArgs {
   alias_name: string;
   key_arn?: string;

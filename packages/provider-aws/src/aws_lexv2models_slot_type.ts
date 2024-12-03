@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsLexv2modelsSlotTypeArgsCompositeSlotTypeSettingSubSlots {
   name: string;
   slot_type_id: string;

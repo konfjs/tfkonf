@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleComputeRegionNetworkEndpointGroupArgsAppEngine {
   service?: string;
   url_mask?: string;

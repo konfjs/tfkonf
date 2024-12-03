@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEmrManagedScalingPolicyArgsComputeLimits {
   maximum_capacity_units: number;
   maximum_core_capacity_units?: number;

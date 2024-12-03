@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEksIdentityProviderConfigArgsOidc {
   client_id: string;
   groups_claim?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleVertexAiIndexEndpointDeployedIndexArgsAutomaticResources {}
 export interface GoogleVertexAiIndexEndpointDeployedIndexArgsDedicatedResourcesMachineSpec {
   machine_type?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOpsworksUserProfileArgs {
   allow_self_management?: boolean;
   ssh_public_key?: string;

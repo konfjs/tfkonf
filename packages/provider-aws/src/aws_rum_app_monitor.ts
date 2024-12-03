@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRumAppMonitorArgsAppMonitorConfiguration {
   allow_cookies?: boolean;
   enable_xray?: boolean;

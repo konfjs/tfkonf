@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApplicationinsightsApplicationArgs {
   auto_config_enabled?: boolean;
   auto_create?: boolean;

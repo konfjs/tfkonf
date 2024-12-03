@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSsmResourceDataSyncArgsS3Destination {
   bucket_name: string;
   kms_key_arn?: string;

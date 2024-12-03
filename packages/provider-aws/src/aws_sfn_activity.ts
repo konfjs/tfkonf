@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSfnActivityArgsEncryptionConfiguration {
   kms_data_key_reuse_period_seconds?: number;
   kms_key_id?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDetectiveMemberArgs {
   account_id: string;
   disable_email_notification?: boolean;

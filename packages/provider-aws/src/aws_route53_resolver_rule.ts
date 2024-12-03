@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRoute53ResolverRuleArgsTargetIp {
   ip?: string;
   ipv6?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDatasyncLocationEfsArgsEc2Config {
   security_group_arns: string[];
   subnet_arn: string;

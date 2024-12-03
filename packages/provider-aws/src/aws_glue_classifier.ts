@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsGlueClassifierArgsCsvClassifier {
   allow_single_column?: boolean;
   contains_header?: string;

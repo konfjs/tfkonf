@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleBinaryAuthorizationAttestorArgsAttestationAuthorityNotePublicKeysPkixPublicKey {
   public_key_pem?: string;
   signature_algorithm?: string;

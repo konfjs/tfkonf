@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleCloudfunctionsFunctionIamPolicyArgs {
   cloud_function: string;
   policy_data: string;

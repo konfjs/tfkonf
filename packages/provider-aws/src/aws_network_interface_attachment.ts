@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsNetworkInterfaceAttachmentArgs {
   device_index: number;
   instance_id: string;

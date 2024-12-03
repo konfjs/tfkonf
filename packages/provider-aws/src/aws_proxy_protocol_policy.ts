@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsProxyProtocolPolicyArgs {
   instance_ports: string[];
   load_balancer: string;

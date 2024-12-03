@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsInspectorAssessmentTargetArgs {
   name: string;
   resource_group_arn?: string;

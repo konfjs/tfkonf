@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEc2TransitGatewayRouteTableAssociationArgs {
   replace_existing_association?: boolean;
   transit_gateway_attachment_id: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GooglePubsubTopicArgsIngestionDataSourceSettingsAwsKinesis {
   aws_role_arn: string;
   consumer_arn: string;

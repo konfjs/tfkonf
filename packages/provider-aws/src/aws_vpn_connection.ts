@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsVpnConnectionArgsTunnel1LogOptionsCloudwatchLogOptions {
   log_enabled?: boolean;
   log_group_arn?: string;

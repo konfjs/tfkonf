@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleAssuredWorkloadsWorkloadArgsKmsSettings {
   next_rotation_time: string;
   rotation_period: string;

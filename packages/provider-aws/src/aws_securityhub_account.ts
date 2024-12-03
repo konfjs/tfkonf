@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSecurityhubAccountArgs {
   auto_enable_controls?: boolean;
   enable_default_standards?: boolean;

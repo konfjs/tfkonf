@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterion {}
 export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaExcludesAndTagCriterionTagValues {}
 export interface AwsMacie2ClassificationJobArgsS3JobDefinitionBucketCriteriaExcludesAndTagCriterion {

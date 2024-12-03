@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsNetworkAclAssociationArgs {
   network_acl_id: string;
   subnet_id: string;

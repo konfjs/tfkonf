@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApigatewayv2IntegrationResponseArgs {
   api_id: string;
   content_handling_strategy?: string;

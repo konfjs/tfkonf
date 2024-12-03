@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleIapWebBackendServiceIamPolicyArgs {
   policy_data: string;
   web_backend_service: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsAppconfigDeploymentStrategyArgs {
   deployment_duration_in_minutes: number;
   description?: string;

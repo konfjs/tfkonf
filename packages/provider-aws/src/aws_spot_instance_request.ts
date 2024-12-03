@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSpotInstanceRequestArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
   capacity_reservation_resource_group_arn?: string;

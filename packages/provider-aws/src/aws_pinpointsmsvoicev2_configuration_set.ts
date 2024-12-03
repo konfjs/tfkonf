@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsPinpointsmsvoicev2ConfigurationSetArgs {
   default_message_type?: string;
   default_sender_id?: string;

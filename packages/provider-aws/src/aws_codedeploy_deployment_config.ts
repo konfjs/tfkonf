@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCodedeployDeploymentConfigArgsMinimumHealthyHosts {
   type?: string;
   value?: number;

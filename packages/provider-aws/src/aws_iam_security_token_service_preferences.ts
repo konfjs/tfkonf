@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIamSecurityTokenServicePreferencesArgs {
   global_endpoint_token_version: string;
 }

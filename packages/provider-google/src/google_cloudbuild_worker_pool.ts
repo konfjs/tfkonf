@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleCloudbuildWorkerPoolArgsNetworkConfig {
   peered_network: string;
   peered_network_ip_range?: string;

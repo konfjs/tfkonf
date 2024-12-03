@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApigatewayv2ApiMappingArgs {
   api_id: string;
   api_mapping_key?: string;

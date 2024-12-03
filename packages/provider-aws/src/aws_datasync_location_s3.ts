@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDatasyncLocationS3ArgsS3Config {
   bucket_access_role_arn: string;
 }

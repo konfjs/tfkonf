@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleVertexAiIndexArgsMetadataConfigAlgorithmConfigBruteForceConfig {}
 export interface GoogleVertexAiIndexArgsMetadataConfigAlgorithmConfigTreeAhConfig {
   leaf_node_embedding_count?: number;

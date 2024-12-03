@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsMacie2CustomDataIdentifierArgs {
   description?: string;
   ignore_words?: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GooglePubsubTopicIamPolicyArgs {
   policy_data: string;
   topic: string;

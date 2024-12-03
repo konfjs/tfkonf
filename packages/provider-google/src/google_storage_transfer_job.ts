@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleStorageTransferJobArgsEventStream {
   event_stream_expiration_time?: string;
   event_stream_start_time?: string;

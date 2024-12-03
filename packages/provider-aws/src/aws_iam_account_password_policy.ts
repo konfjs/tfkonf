@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIamAccountPasswordPolicyArgs {
   allow_users_to_change_password?: boolean;
   minimum_password_length?: number;

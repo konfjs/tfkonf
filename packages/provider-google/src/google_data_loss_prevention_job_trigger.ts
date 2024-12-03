@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleDataLossPreventionJobTriggerArgsInspectJobActionsDeidentifyTransformationConfig {
   deidentify_template?: string;
   image_redact_template?: string;

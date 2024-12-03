@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleBillingBudgetArgsAllUpdatesRule {
   disable_default_iam_recipients?: boolean;
   enable_project_level_recipients?: boolean;

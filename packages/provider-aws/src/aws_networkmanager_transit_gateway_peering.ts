@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsNetworkmanagerTransitGatewayPeeringArgsTimeouts {
   create?: string;
   delete?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsKendraExperienceArgsConfigurationContentSourceConfiguration {
   data_source_ids?: string[];
   direct_put_content?: boolean;

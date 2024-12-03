@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCostoptimizationhubPreferencesArgs {}
 export class aws_costoptimizationhub_preferences extends TerraformResource {
   readonly id!: string;

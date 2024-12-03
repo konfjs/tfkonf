@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApiGatewayAuthorizerArgs {
   authorizer_credentials?: string;
   authorizer_result_ttl_in_seconds?: number;

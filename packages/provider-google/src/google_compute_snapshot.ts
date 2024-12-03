@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleComputeSnapshotArgsSnapshotEncryptionKey {
   kms_key_self_link?: string;
   kms_key_service_account?: string;

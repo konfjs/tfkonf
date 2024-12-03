@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleBigqueryAnalyticsHubListingIamPolicyArgs {
   data_exchange_id: string;
   listing_id: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsFsxWindowsFileSystemArgsAuditLogConfiguration {
   file_access_audit_log_level?: string;
   file_share_access_audit_log_level?: string;

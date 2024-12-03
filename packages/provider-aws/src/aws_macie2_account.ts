@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsMacie2AccountArgs {}
 export class aws_macie2_account extends TerraformResource {
   readonly created_at!: string;

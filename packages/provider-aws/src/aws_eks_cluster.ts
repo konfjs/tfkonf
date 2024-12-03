@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEksClusterArgsAccessConfig {
   bootstrap_cluster_creator_admin_permissions?: boolean;
 }
