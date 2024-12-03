@@ -38,9 +38,10 @@ export class BlockNode implements HCLNode {
 
 function attributeToHCL(value: any): string {
     if (typeof value === 'object' && value !== null) {
-        for (const [key, val] of Object.entries(value)) {
-            return `{\n${key} = ${attributeToHCL(val)}\n}`;
-        }
+        const entries = Object.entries(value).map(
+            ([key, val]) => `${key} = ${attributeToHCL(val)}`,
+        );
+        return `{\n${entries.join('\n')}\n}`;
     }
     /**
      * Check if the value is a reference to another resource
