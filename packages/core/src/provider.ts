@@ -6,7 +6,8 @@ interface ProviderArgs {
     [key: string]: any;
 }
 
-export class Provider extends TerraformResource {
+// TODO: Each provider resource must be generated in the provider specific package
+export abstract class Provider extends TerraformResource {
     constructor(
         protected readonly config: TerraformConfig,
         readonly name: string,

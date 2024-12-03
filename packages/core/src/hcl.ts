@@ -16,31 +16,14 @@ export class BlockNode implements HCLNode {
     private parseAttributesAndBlocks(args: { [key: string]: any }, meta?: any): void {
         for (const [key, value] of Object.entries(args)) {
             /**
-             * If the attribute is explicitly marked as a block
+             * All nested blocks must be explicitly marked as blocks in the meta object.
              */
             if (meta?.[key]?.isBlock) {
                 this.children.push(new BlockNode(key, value, meta[key]));
-                /**
-                 * Or if the attribute is an object and doesn't have isBlock in the meta object
-                 */
-            } else if (
-                this.isBlock(value) &&
-                (!meta || !meta[key] || !Reflect.has(meta[key], 'isBlock'))
-            ) {
-                this.children.push(new BlockNode(key, value));
             } else {
                 this.children.push(new AttributeNode(key, value));
             }
         }
-    }
-
-    /**
-     * If the value is supposed to be a terraform object,
-     * then it has to be epxlicitly marked as a block in the meta object.
-     * Otherwise, it will be treated as a block.
-     */
-    private isBlock(value: unknown): boolean {
-        return typeof value === 'object' && value !== null && !Array.isArray(value);
     }
 
     toHCL(level: number): string {
