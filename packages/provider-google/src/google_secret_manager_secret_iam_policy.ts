@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleSecretManagerSecretIamPolicyArgs {
   policy_data: string;
   secret_id: string;

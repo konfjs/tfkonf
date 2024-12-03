@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCodecommitApprovalRuleTemplateAssociationArgs {
   approval_rule_template_name: string;
   repository_name: string;

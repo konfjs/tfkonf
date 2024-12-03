@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsServicecatalogProductArgsProvisioningArtifactParameters {
   description?: string;
   disable_template_validation?: boolean;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsQuicksightRefreshScheduleArgsScheduleScheduleFrequencyRefreshOnDay {
   day_of_month?: string;
   day_of_week?: string;

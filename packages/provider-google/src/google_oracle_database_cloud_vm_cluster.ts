@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleOracleDatabaseCloudVmClusterArgsPropertiesDiagnosticsDataCollectionOptions {
   diagnostics_events_enabled?: boolean;
   health_monitoring_enabled?: boolean;

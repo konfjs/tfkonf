@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCloudformationStackSetArgsAutoDeployment {
   enabled?: boolean;
   retain_stacks_on_account_removal?: boolean;

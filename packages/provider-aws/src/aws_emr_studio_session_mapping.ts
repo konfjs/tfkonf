@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEmrStudioSessionMappingArgs {
   identity_type: string;
   session_policy_arn: string;

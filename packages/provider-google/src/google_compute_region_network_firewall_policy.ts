@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleComputeRegionNetworkFirewallPolicyArgsTimeouts {
   create?: string;
   delete?: string;

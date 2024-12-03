@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApprunnerVpcIngressConnectionArgsIngressVpcConfiguration {
   vpc_endpoint_id?: string;
   vpc_id?: string;

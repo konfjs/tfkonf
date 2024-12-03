@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRedshiftAuthenticationProfileArgs {
   authentication_profile_content: string;
   authentication_profile_name: string;

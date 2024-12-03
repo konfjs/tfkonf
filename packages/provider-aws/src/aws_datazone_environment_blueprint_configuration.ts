@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDatazoneEnvironmentBlueprintConfigurationArgs {
   domain_id: string;
   enabled_regions: string[];

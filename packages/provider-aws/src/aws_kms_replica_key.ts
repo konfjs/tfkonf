@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsKmsReplicaKeyArgs {
   bypass_policy_lockout_safety_check?: boolean;
   deletion_window_in_days?: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsWafv2WebAclArgsAssociationConfigRequestBodyApiGateway {
   default_size_inspection_limit: string;
 }

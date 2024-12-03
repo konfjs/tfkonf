@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsLightsailStaticIpAttachmentArgs {
   instance_name: string;
   static_ip_name: string;

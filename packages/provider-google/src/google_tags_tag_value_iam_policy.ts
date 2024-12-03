@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleTagsTagValueIamPolicyArgs {
   policy_data: string;
   tag_value: string;

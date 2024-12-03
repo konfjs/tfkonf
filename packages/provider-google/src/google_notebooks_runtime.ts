@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleNotebooksRuntimeArgsAccessConfig {
   access_type?: string;
   runtime_owner?: string;

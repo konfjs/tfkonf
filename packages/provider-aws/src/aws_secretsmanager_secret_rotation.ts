@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSecretsmanagerSecretRotationArgsRotationRules {
   automatically_after_days?: number;
   duration?: string;

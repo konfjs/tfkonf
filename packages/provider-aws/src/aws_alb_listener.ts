@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsAlbListenerArgsDefaultActionAuthenticateCognito {
   authentication_request_extra_params?: {
     [key: string]: string;

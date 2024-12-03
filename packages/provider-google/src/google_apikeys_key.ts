@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleApikeysKeyArgsRestrictionsAndroidKeyRestrictionsAllowedApplications {
   package_name: string;
   sha1_fingerprint: string;

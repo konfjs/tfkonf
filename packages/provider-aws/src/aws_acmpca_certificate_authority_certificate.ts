@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsAcmpcaCertificateAuthorityCertificateArgs {
   certificate: string;
   certificate_authority_arn: string;

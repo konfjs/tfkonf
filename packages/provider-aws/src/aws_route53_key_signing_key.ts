@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRoute53KeySigningKeyArgs {
   hosted_zone_id: string;
   key_management_service_arn: string;

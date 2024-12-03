@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSagemakerStudioLifecycleConfigArgs {
   studio_lifecycle_config_app_type: string;
   studio_lifecycle_config_content: string;

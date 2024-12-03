@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsChimeVoiceConnectorTerminationArgs {
   calling_regions: string[];
   cidr_allow_list: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsTransferServerArgsEndpointDetails {
   address_allocation_ids?: string[];
   subnet_ids?: string[];

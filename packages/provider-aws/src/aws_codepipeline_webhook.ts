@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsCodepipelineWebhookArgsAuthenticationConfiguration {
   allowed_ip_range?: string;
   secret_token?: string;

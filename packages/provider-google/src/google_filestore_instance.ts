@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleFilestoreInstanceArgsFileSharesNfsExportOptions {
   access_mode?: string;
   anon_gid?: number;

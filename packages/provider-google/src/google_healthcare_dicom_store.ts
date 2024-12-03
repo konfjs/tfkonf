@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleHealthcareDicomStoreArgsNotificationConfig {
   pubsub_topic: string;
   send_for_bulk_import?: boolean;

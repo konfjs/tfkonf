@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSecretsmanagerSecretPolicyArgs {
   block_public_policy?: boolean;
   policy: string;

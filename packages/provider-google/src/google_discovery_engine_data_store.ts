@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleDiscoveryEngineDataStoreArgsDocumentProcessingConfigChunkingConfigLayoutBasedChunkingConfig {
   chunk_size?: number;
   include_ancestor_headings?: boolean;

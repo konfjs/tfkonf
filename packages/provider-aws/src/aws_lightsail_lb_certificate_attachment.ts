@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsLightsailLbCertificateAttachmentArgs {
   certificate_name: string;
   lb_name: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEfsReplicationConfigurationArgsDestination {
   availability_zone_name?: string;
   kms_key_id?: string;

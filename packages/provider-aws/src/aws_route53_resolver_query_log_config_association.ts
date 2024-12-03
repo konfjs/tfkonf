@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRoute53ResolverQueryLogConfigAssociationArgs {
   resolver_query_log_config_id: string;
   resource_id: string;

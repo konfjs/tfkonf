@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsImagebuilderInfrastructureConfigurationArgsInstanceMetadataOptions {
   http_put_response_hop_limit?: number;
   http_tokens?: string;

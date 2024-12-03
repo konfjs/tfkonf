@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSesDomainMailFromArgs {
   behavior_on_mx_failure?: string;
   domain: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleCloudbuildBitbucketServerConfigArgsConnectedRepositories {
   project_key: string;
   repo_slug: string;

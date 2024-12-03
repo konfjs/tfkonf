@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsEcsClusterArgsConfigurationExecuteCommandConfigurationLogConfiguration {
   cloud_watch_encryption_enabled?: boolean;
   cloud_watch_log_group_name?: string;

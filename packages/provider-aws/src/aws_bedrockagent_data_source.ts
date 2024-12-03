@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsBedrockagentDataSourceArgsDataSourceConfigurationS3Configuration {
   bucket_arn: string;
   bucket_owner_account_id?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleNetworkConnectivityPolicyBasedRouteArgsFilter {
   dest_range?: string;
   ip_protocol?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSfnAliasArgsRoutingConfiguration {
   state_machine_version_arn: string;
   weight: number;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsKinesisAnalyticsApplicationArgsCloudwatchLoggingOptions {
   log_stream_arn: string;
   role_arn: string;

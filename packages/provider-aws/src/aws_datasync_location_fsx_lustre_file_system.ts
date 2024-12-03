@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsDatasyncLocationFsxLustreFileSystemArgs {
   fsx_filesystem_arn: string;
   security_group_arns: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsBackupVaultNotificationsArgs {
   backup_vault_events: string[];
   backup_vault_name: string;

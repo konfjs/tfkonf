@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsAppautoscalingPolicyArgsStepScalingPolicyConfigurationStepAdjustment {
   metric_interval_lower_bound?: string;
   metric_interval_upper_bound?: string;

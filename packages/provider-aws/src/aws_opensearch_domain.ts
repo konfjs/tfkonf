@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOpensearchDomainArgsAdvancedSecurityOptionsMasterUserOptions {
   master_user_arn?: string;
   master_user_name?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleComputeRegionCommitmentArgsLicenseResource {
   amount?: string;
   cores_per_license?: string;

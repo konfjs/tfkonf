@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsWorkspacesDirectoryArgsSamlProperties {
   relay_state_parameter_name?: string;
   status?: string;

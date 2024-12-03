@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOrganizationsPolicyAttachmentArgs {
   policy_id: string;
   skip_destroy?: boolean;

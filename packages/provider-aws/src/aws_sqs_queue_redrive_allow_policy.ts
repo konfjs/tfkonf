@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSqsQueueRedriveAllowPolicyArgs {
   queue_url: string;
   redrive_allow_policy: string;

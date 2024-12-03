@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsOrganizationsAccountArgs {
   close_on_deletion?: boolean;
   create_govcloud?: boolean;

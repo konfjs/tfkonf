@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsApigatewayv2RouteResponseArgs {
   api_id: string;
   model_selection_expression?: string;

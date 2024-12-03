@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleArtifactRegistryRepositoryArgsCleanupPoliciesCondition {
   newer_than?: string;
   older_than?: string;

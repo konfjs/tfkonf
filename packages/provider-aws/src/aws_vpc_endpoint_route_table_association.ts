@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsVpcEndpointRouteTableAssociationArgs {
   route_table_id: string;
   vpc_endpoint_id: string;

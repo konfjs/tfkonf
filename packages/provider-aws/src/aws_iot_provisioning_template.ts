@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIotProvisioningTemplateArgsPreProvisioningHook {
   payload_version?: string;
   target_arn: string;

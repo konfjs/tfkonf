@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsBackupRegionSettingsArgs {
   resource_type_opt_in_preference: {
     [key: string]: any;

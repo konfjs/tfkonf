@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsLaunchConfigurationArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;

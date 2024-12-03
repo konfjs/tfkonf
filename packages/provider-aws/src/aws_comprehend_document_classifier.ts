@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsComprehendDocumentClassifierArgsInputDataConfigAugmentedManifests {
   annotation_data_s3_uri?: string;
   attribute_names: string[];

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSsoadminTrustedTokenIssuerArgsTrustedTokenIssuerConfigurationOidcJwtConfiguration {
   claim_attribute_path: string;
   identity_store_attribute_path: string;

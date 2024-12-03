@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSsmquicksetupConfigurationManagerArgsConfigurationDefinition {
   local_deployment_administration_role_arn?: string;
   local_deployment_execution_role_name?: string;

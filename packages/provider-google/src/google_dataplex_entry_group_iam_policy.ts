@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface GoogleDataplexEntryGroupIamPolicyArgs {
   entry_group_id: string;
   policy_data: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsSnsTopicArgs {
   application_failure_feedback_role_arn?: string;
   application_success_feedback_role_arn?: string;

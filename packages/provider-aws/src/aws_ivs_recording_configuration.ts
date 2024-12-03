@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsIvsRecordingConfigurationArgsDestinationConfigurationS3 {
   bucket_name: string;
 }

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRolesanywhereTrustAnchorArgsNotificationSettings {}
 export interface AwsRolesanywhereTrustAnchorArgsSourceSourceData {
   acm_pca_arn?: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsRoute53ResolverFirewallRuleGroupAssociationArgs {
   firewall_rule_group_id: string;
   name: string;

@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsVpcIpamOrganizationAdminAccountArgs {
   delegated_admin_account_id: string;
 }

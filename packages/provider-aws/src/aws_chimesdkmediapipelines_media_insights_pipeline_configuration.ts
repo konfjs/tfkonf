@@ -1,4 +1,4 @@
-import { TerraformConfig, TerraformResource } from "@konfjs/core";
+import { TerraformConfig, TerraformResource } from "@tfkonf/core";
 export interface AwsChimesdkmediapipelinesMediaInsightsPipelineConfigurationArgsElementsAmazonTranscribeCallAnalyticsProcessorConfigurationPostCallAnalyticsSettings {
   content_redaction_output?: string;
   data_access_role_arn: string;
