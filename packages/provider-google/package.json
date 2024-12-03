@@ -1,5 +1,5 @@
 {
-  "name": "@konfjs/provider-google",
+  "name": "@tfkonf/provider-google",
   "version": "0.1.3",
   "author": {
     "name": "konfjs",
@@ -40,8 +40,8 @@
       "types": "./src/index.ts"
     },
     "./*": {
-      "import": "./src/*.js",
-      "types": "./src/*.d.ts"
+      "import": "./src/*.ts",
+      "types": "./src/*.ts"
     }
   },
   "scripts": {
@@ -52,6 +52,6 @@
     "dist"
   ],
   "dependencies": {
-    "@konfjs/core": "workspace:*"
+    "@tfkonf/core": "workspace:*"
   }
 }

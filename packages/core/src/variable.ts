@@ -1,5 +1,4 @@
 import { TerraformConfig } from './config.js';
-import { BlockNode } from './hcl.js';
 import { TerraformResource } from './resource.js';
 
 interface VariableArgs {
@@ -16,21 +15,15 @@ interface VariableArgs {
 }
 
 export class Variable extends TerraformResource {
-    private readonly meta: any;
     constructor(
         protected readonly config: TerraformConfig,
-        readonly name: string,
-        readonly args: VariableArgs,
+        protected readonly resourceName: string,
+        protected readonly args: VariableArgs,
     ) {
-        super(config);
-        this.meta = {
+        super(config, 'variable', args, resourceName, undefined, {
             validation: {
                 isBlock: true,
             },
-        };
-    }
-
-    toHCL(): string {
-        return new BlockNode(`variable ${this.name}`, this.args, this.meta).toHCL(0);
+        });
     }
 }

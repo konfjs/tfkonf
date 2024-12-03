@@ -6,9 +6,22 @@ import { BlockNode, HCLNode } from './hcl.js';
  * Each TerraformResource will belong to a TerraformConfig.
  */
 export abstract class TerraformResource implements HCLNode {
-    constructor(protected readonly config: TerraformConfig) {
+    constructor(
+        protected readonly config: TerraformConfig,
+        protected readonly blockType: string,
+        protected readonly args: { [key: string]: any },
+        protected readonly resourceName?: string,
+        protected readonly resourceType?: string,
+        protected readonly meta?: any,
+    ) {
         config.addResource(this);
     }
 
-    abstract toHCL(): string;
+    toHCL(): string {
+        return new BlockNode(
+            `${this.blockType} ${this.resourceType} ${this.resourceName}`,
+            this.args,
+            this.meta,
+        ).toHCL(0);
+    }
 }

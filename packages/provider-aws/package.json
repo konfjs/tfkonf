@@ -1,5 +1,5 @@
 {
-  "name": "@konfjs/provider-aws",
+  "name": "@tfkonf/provider-aws",
   "version": "0.1.5",
   "author": {
     "name": "konfjs",
@@ -40,8 +40,8 @@
       "types": "./src/index.ts"
     },
     "./*": {
-      "import": "./src/*.js",
-      "types": "./src/*.d.ts"
+      "import": "./src/*.ts",
+      "types": "./src/*.ts"
     }
   },
   "scripts": {
@@ -52,6 +52,6 @@
     "dist"
   ],
   "dependencies": {
-    "@konfjs/core": "workspace:*"
+    "@tfkonf/core": "workspace:*"
   }
 }

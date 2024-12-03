@@ -4,20 +4,20 @@ Terraform / OpenTofu in Typescript. Like CDKTF but simpler.
 
 ## Concepts
 
-`@konfjs/core` - Core library that provides the basic building blocks for creating Terraform configurations.
+`@tfkonf/core` - Core library that provides the basic building blocks for creating Terraform configurations.
 For example, `TerraformConfig` - Represents a Terraform configuration file. Each Terraform resource must belong to a `TerraformConfig`.
 
-`@konfjs/provider-<provider>` - Provider libraries that provide resources for a specific Terraform provider. Example: `@konfjs/provider-google` provides resources for Google Cloud Platform.
+`@tfkonf/provider-<provider>` - Provider libraries that provide resources for a specific Terraform provider. Example: `@tfkonf/provider-google` provides resources for Google Cloud Platform.
 
-`@konfjs/provider-generator` - CLI tool that generates Typescript code from Terraform provider schemas.
+`@tfkonf/provider-generator` - CLI tool that generates Typescript code from Terraform provider schemas.
 
 ## Example
 
 Input
 
 ```ts
-import { Provider, Terraform, TerraformConfig } from '@konfjs/core';
-import { google_service_account } from '@konfjs/provider-google/google_service_account';
+import { Provider, Terraform, TerraformConfig } from '@tfkonf/core';
+import { google_service_account } from '@tfkonf/provider-google/google_service_account';
 
 const main = new TerraformConfig('main.tf');
 

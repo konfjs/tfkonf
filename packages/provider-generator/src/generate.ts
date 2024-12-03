@@ -33,7 +33,7 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                                 t.identifier('TerraformResource'),
                             ),
                         ],
-                        t.stringLiteral('@konfjs/core'),
+                        t.stringLiteral('@tfkonf/core'),
                     ),
                 ],
                 [],

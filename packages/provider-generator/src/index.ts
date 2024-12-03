@@ -8,10 +8,11 @@ import type { ProviderSchema } from './schema.js';
 function main() {
     const program = new Command();
     program
-        .name('@konfjs/provider-generator')
+        .name('@tfkonf/provider-generator')
         .argument('<schema-path>', 'Terraform provider schema JSON file path')
         .parse();
 
+    // @ts-expect-error Commander.argument will throw an error if not provided
     const schemaPath = path.join(process.cwd(), program.args[0]);
 
     const providerSchemas: Record<string, ProviderSchema> = JSON.parse(
