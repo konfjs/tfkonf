@@ -37,7 +37,7 @@ export class BlockNode implements HCLNode {
 }
 
 function attributeToHCL(value: any): string {
-    if (typeof value === 'object' && value !== null) {
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
         const entries = Object.entries(value).map(
             ([key, val]) => `${key} = ${attributeToHCL(val)}`,
         );
