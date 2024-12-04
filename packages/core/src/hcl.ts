@@ -15,6 +15,20 @@ export class BlockNode implements HCLNode {
 
     private parseAttributesAndBlocks(args: { [key: string]: any }, meta?: any): void {
         for (const [key, value] of Object.entries(args)) {
+            let isRepeatedBlock = false;
+            if (Array.isArray(value)) {
+                for (const item of value) {
+                    if (typeof item === 'object' && item !== null) {
+                        if (meta?.[key]?.isBlock) {
+                            isRepeatedBlock = true;
+                            this.children.push(new BlockNode(key, item, meta[key]));
+                        }
+                    }
+                }
+            }
+            if (isRepeatedBlock) {
+                continue;
+            }
             /**
              * All nested blocks must be explicitly marked as blocks in the meta object.
              */
