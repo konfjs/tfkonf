@@ -117,13 +117,18 @@ export function generateInterfaceDeclaration(
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
             const childInterfaceName = `${interfaceName}${toPascalCase(blockName)}`;
+            let nestedBlockType = '';
+            if (
+                (blockType.nesting_mode === 'list' || blockType.nesting_mode === 'set') &&
+                blockType.max_items !== 1
+            ) {
+                nestedBlockType = '[]';
+            }
             properties.push({
                 kind: StructureKind.PropertySignature,
                 name: blockName,
-                // TODO: Check if the block is a list, set or map. Generate correct block type.
-                type: toPascalCase(childInterfaceName),
-                hasQuestionToken:
-                    blockName === 'timeouts' || !blockType.min_items || blockType.min_items === 0,
+                type: `${toPascalCase(childInterfaceName)}${nestedBlockType}`,
+                hasQuestionToken: blockName === 'timeouts' || !blockType.min_items,
             });
             generateInterfaceDeclaration(blockName, blockType.block, interfaces, interfaceName);
         }
