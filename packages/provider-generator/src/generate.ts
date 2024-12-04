@@ -9,7 +9,7 @@ import {
     StructureKind,
 } from 'ts-morph';
 import { generateClassDeclaration } from './class.js';
-import { generateInterfaces } from './interface.js';
+import { generateProperties } from './properties.js';
 import type { ProviderSchema } from './schema.js';
 
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
@@ -52,14 +52,16 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
 
             const sourceFile = project.createSourceFile(
                 path.join(outDir, `${resourceName}.ts`),
-                '',
+                {
+                    kind: StructureKind.SourceFile,
+                },
                 {
                     overwrite: true,
                 },
             );
 
-            generateInterfaces(sourceFile, resourceName, resourceBlock.block, '', true);
-            generateClassDeclaration(sourceFile, resourceName, resourceBlock.block);
+            const classDeclaration = generateClassDeclaration(sourceFile, resourceName);
+            generateProperties(sourceFile, classDeclaration, resourceName, resourceBlock.block, '');
 
             exportDeclarations.push({
                 kind: StructureKind.ExportDeclaration,
