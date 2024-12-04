@@ -29,7 +29,7 @@
       }
     }
   },
-  "type": "commonjs",
+  "type": "module",
   "exports": {
     ".": {
       "import": "./src/index.ts",
@@ -51,12 +51,11 @@
     "dist"
   ],
   "dependencies": {
-    "@babel/generator": "7.26.2",
-    "@babel/types": "7.26.0",
     "commander": "12.1.0",
-    "picocolors": "1.1.1"
+    "picocolors": "1.1.1",
+    "ts-morph": "24.0.0"
   },
   "devDependencies": {
-    "@types/babel__generator": "7.6.8"
+    "@tfkonf/core": "workspace:*"
   }
 }
