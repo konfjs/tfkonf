@@ -18,8 +18,13 @@ export interface Attribute {
     computed?: boolean;
 }
 
+/**
+ * nesting_mode can be one of the following:
+ * jq '[.. | objects | select(has("nesting_mode")) | .nesting_mode] | unique' google/schema.json
+ * jq '[.. | objects | select(has("nesting_mode")) | {nesting_mode, min_items, max_items}] | unique' google/schema.json
+ */
 export interface BlockType {
-    nesting_mode: 'single' | 'list' | 'set' | 'map';
+    nesting_mode: 'single' | 'list' | 'set';
     block: Block;
     min_items?: number;
     max_items?: number;
