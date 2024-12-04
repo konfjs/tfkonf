@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSsmMaintenanceWindowTargetArgsTargets {
   key: string;
   values: string[];
 }
+
 export interface AwsSsmMaintenanceWindowTargetArgs {
   description?: string;
   name?: string;
@@ -11,8 +13,10 @@ export interface AwsSsmMaintenanceWindowTargetArgs {
   window_id: string;
   targets: AwsSsmMaintenanceWindowTargetArgsTargets;
 }
+
 export class aws_ssm_maintenance_window_target extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSsmMaintenanceWindowTargetArgs) {
     super(config, "resource", args, resourceName, "aws_ssm_maintenance_window_target");
   }

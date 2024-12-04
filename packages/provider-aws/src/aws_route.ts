@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRouteArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRouteArgs {
   carrier_gateway_id?: string;
   core_network_arn?: string;
@@ -20,6 +22,7 @@ export interface AwsRouteArgs {
   vpc_peering_connection_id?: string;
   timeouts?: AwsRouteArgsTimeouts;
 }
+
 export class aws_route extends TerraformResource {
   readonly id?: string;
   readonly instance_id!: string;
@@ -27,6 +30,7 @@ export class aws_route extends TerraformResource {
   readonly network_interface_id?: string;
   readonly origin!: string;
   readonly state!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRouteArgs) {
     super(config, "resource", args, resourceName, "aws_route");
   }

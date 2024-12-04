@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDxTransitVirtualInterfaceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsDxTransitVirtualInterfaceArgs {
   address_family: string;
   bgp_asn: number;
@@ -12,12 +14,11 @@ export interface AwsDxTransitVirtualInterfaceArgs {
   mtu?: number;
   name: string;
   sitelink_enabled?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   vlan: number;
   timeouts?: AwsDxTransitVirtualInterfaceArgsTimeouts;
 }
+
 export class aws_dx_transit_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;
   readonly amazon_side_asn!: string;
@@ -27,9 +28,8 @@ export class aws_dx_transit_virtual_interface extends TerraformResource {
   readonly customer_address?: string;
   readonly id?: string;
   readonly jumbo_frame_capable!: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDxTransitVirtualInterfaceArgs) {
     super(config, "resource", args, resourceName, "aws_dx_transit_virtual_interface");
   }

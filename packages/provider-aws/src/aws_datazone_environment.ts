@@ -1,13 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDatazoneEnvironmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsDatazoneEnvironmentArgsUserParameters {
   name?: string;
   value?: string;
 }
+
 export interface AwsDatazoneEnvironmentArgs {
   description?: string;
   domain_identifier: string;
@@ -18,6 +21,7 @@ export interface AwsDatazoneEnvironmentArgs {
   timeouts?: AwsDatazoneEnvironmentArgsTimeouts;
   user_parameters: AwsDatazoneEnvironmentArgsUserParameters;
 }
+
 export class aws_datazone_environment extends TerraformResource {
   readonly account_identifier?: string;
   readonly account_region?: string;
@@ -28,6 +32,7 @@ export class aws_datazone_environment extends TerraformResource {
   readonly last_deployment!: any[];
   readonly provider_environment!: string;
   readonly provisioned_resources!: any[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDatazoneEnvironmentArgs) {
     super(config, "resource", args, resourceName, "aws_datazone_environment");
   }

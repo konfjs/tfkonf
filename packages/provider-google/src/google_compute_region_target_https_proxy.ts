@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionTargetHttpsProxyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionTargetHttpsProxyArgs {
   certificate_manager_certificates?: string[];
   description?: string;
@@ -15,6 +17,7 @@ export interface GoogleComputeRegionTargetHttpsProxyArgs {
   url_map: string;
   timeouts?: GoogleComputeRegionTargetHttpsProxyArgsTimeouts;
 }
+
 export class google_compute_region_target_https_proxy extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
@@ -22,6 +25,7 @@ export class google_compute_region_target_https_proxy extends TerraformResource 
   readonly proxy_id!: number;
   readonly region?: string;
   readonly self_link!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionTargetHttpsProxyArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_target_https_proxy");
   }

@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleDialogflowAgentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleDialogflowAgentArgs {
   avatar_uri?: string;
   classification_threshold?: number;
@@ -16,12 +18,14 @@ export interface GoogleDialogflowAgentArgs {
   time_zone: string;
   timeouts?: GoogleDialogflowAgentArgsTimeouts;
 }
+
 export class google_dialogflow_agent extends TerraformResource {
   readonly api_version?: string;
   readonly avatar_uri_backend!: string;
   readonly id?: string;
   readonly match_mode?: string;
   readonly project?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleDialogflowAgentArgs) {
     super(config, "resource", args, resourceName, "google_dialogflow_agent");
   }

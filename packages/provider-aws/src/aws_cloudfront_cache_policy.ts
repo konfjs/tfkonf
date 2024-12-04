@@ -1,25 +1,32 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies {
   items?: string[];
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfig {
   cookie_behavior: string;
   cookies: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginCookiesConfigCookies;
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders {
   items?: string[];
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfig {
   header_behavior?: string;
   headers: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfigHeaders;
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings {
   items?: string[];
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfig {
   query_string_behavior: string;
   query_strings: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings;
 }
+
 export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOrigin {
   enable_accept_encoding_brotli?: boolean;
   enable_accept_encoding_gzip?: boolean;
@@ -27,6 +34,7 @@ export interface AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToO
   headers_config: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginHeadersConfig;
   query_strings_config: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOriginQueryStringsConfig;
 }
+
 export interface AwsCloudfrontCachePolicyArgs {
   comment?: string;
   default_ttl?: number;
@@ -35,9 +43,11 @@ export interface AwsCloudfrontCachePolicyArgs {
   name: string;
   parameters_in_cache_key_and_forwarded_to_origin: AwsCloudfrontCachePolicyArgsParametersInCacheKeyAndForwardedToOrigin;
 }
+
 export class aws_cloudfront_cache_policy extends TerraformResource {
   readonly etag!: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCloudfrontCachePolicyArgs) {
     super(config, "resource", args, resourceName, "aws_cloudfront_cache_policy");
   }

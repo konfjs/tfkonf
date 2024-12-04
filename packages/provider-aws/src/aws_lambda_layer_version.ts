@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLambdaLayerVersionArgs {
   compatible_architectures?: string[];
   compatible_runtimes?: string[];
@@ -11,6 +12,7 @@ export interface AwsLambdaLayerVersionArgs {
   s3_object_version?: string;
   skip_destroy?: boolean;
 }
+
 export class aws_lambda_layer_version extends TerraformResource {
   readonly arn!: string;
   readonly code_sha256!: string;
@@ -22,6 +24,7 @@ export class aws_lambda_layer_version extends TerraformResource {
   readonly source_code_hash?: string;
   readonly source_code_size!: number;
   readonly version!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLambdaLayerVersionArgs) {
     super(config, "resource", args, resourceName, "aws_lambda_layer_version");
   }

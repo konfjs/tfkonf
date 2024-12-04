@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNetworkAclRuleArgs {
   cidr_block?: string;
   egress?: boolean;
@@ -12,8 +13,10 @@ export interface AwsNetworkAclRuleArgs {
   rule_number: number;
   to_port?: number;
 }
+
 export class aws_network_acl_rule extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNetworkAclRuleArgs) {
     super(config, "resource", args, resourceName, "aws_network_acl_rule");
   }

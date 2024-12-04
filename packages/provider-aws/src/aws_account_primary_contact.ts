@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsAccountPrimaryContactArgs {
   account_id?: string;
   address_line_1: string;
@@ -14,8 +15,10 @@ export interface AwsAccountPrimaryContactArgs {
   state_or_region?: string;
   website_url?: string;
 }
+
 export class aws_account_primary_contact extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAccountPrimaryContactArgs) {
     super(config, "resource", args, resourceName, "aws_account_primary_contact");
   }

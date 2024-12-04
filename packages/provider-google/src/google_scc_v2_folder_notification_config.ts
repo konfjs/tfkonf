@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSccV2FolderNotificationConfigArgsStreamingConfig {
   filter: string;
 }
+
 export interface GoogleSccV2FolderNotificationConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSccV2FolderNotificationConfigArgs {
   config_id: string;
   description?: string;
@@ -16,10 +19,12 @@ export interface GoogleSccV2FolderNotificationConfigArgs {
   streaming_config: GoogleSccV2FolderNotificationConfigArgsStreamingConfig;
   timeouts?: GoogleSccV2FolderNotificationConfigArgsTimeouts;
 }
+
 export class google_scc_v2_folder_notification_config extends TerraformResource {
   readonly id?: string;
   readonly name!: string;
   readonly service_account!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSccV2FolderNotificationConfigArgs) {
     super(config, "resource", args, resourceName, "google_scc_v2_folder_notification_config");
   }

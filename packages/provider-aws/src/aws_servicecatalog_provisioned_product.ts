@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsServicecatalogProvisionedProductArgsProvisioningParameters {
   key: string;
   use_previous_value?: boolean;
   value?: string;
 }
+
 export interface AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences {
   accounts?: string[];
   failure_tolerance_count?: number;
@@ -12,12 +14,14 @@ export interface AwsServicecatalogProvisionedProductArgsStackSetProvisioningPref
   max_concurrency_percentage?: number;
   regions?: string[];
 }
+
 export interface AwsServicecatalogProvisionedProductArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
   update?: string;
 }
+
 export interface AwsServicecatalogProvisionedProductArgs {
   accept_language?: string;
   ignore_errors?: boolean;
@@ -27,13 +31,12 @@ export interface AwsServicecatalogProvisionedProductArgs {
   product_name?: string;
   provisioning_artifact_name?: string;
   retain_physical_resources?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   provisioning_parameters: AwsServicecatalogProvisionedProductArgsProvisioningParameters;
   stack_set_provisioning_preferences: AwsServicecatalogProvisionedProductArgsStackSetProvisioningPreferences;
   timeouts?: AwsServicecatalogProvisionedProductArgsTimeouts;
 }
+
 export class aws_servicecatalog_provisioned_product extends TerraformResource {
   readonly arn!: string;
   readonly cloudwatch_dashboard_names!: string[];
@@ -49,10 +52,9 @@ export class aws_servicecatalog_provisioned_product extends TerraformResource {
   readonly provisioning_artifact_id?: string;
   readonly status!: string;
   readonly status_message!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly type!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsServicecatalogProvisionedProductArgs) {
     super(config, "resource", args, resourceName, "aws_servicecatalog_provisioned_product");
   }

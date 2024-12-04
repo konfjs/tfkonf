@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsQuicksightUserArgs {
   email: string;
   iam_arn?: string;
@@ -8,10 +9,12 @@ export interface AwsQuicksightUserArgs {
   user_name?: string;
   user_role: string;
 }
+
 export class aws_quicksight_user extends TerraformResource {
   readonly arn!: string;
   readonly aws_account_id?: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsQuicksightUserArgs) {
     super(config, "resource", args, resourceName, "aws_quicksight_user");
   }

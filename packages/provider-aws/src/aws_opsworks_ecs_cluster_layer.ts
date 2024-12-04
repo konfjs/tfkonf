@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksEcsClusterLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksEcsClusterLayerArgsCloudwatchConfigurationLogStreams
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksEcsClusterLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksEcsClusterLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksEcsClusterLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -68,20 +75,18 @@ export interface AwsOpsworksEcsClusterLayerArgs {
   name?: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksEcsClusterLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksEcsClusterLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksEcsClusterLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_ecs_cluster_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksEcsClusterLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_ecs_cluster_layer");
   }

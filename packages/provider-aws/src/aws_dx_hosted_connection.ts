@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDxHostedConnectionArgs {
   bandwidth: string;
   connection_id: string;
@@ -6,6 +7,7 @@ export interface AwsDxHostedConnectionArgs {
   owner_account_id: string;
   vlan: number;
 }
+
 export class aws_dx_hosted_connection extends TerraformResource {
   readonly aws_device!: string;
   readonly has_logical_redundancy!: string;
@@ -18,6 +20,7 @@ export class aws_dx_hosted_connection extends TerraformResource {
   readonly provider_name!: string;
   readonly region!: string;
   readonly state!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDxHostedConnectionArgs) {
     super(config, "resource", args, resourceName, "aws_dx_hosted_connection");
   }

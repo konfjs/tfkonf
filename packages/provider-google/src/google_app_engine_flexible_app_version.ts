@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleAppEngineFlexibleAppVersionArgsApiConfig {
   auth_fail_action?: string;
   login?: string;
@@ -6,26 +7,31 @@ export interface GoogleAppEngineFlexibleAppVersionArgsApiConfig {
   security_level?: string;
   url?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingCpuUtilization {
   aggregation_window_length?: string;
   target_utilization: number;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingDiskUtilization {
   target_read_bytes_per_second?: number;
   target_read_ops_per_second?: number;
   target_write_bytes_per_second?: number;
   target_write_ops_per_second?: number;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingNetworkUtilization {
   target_received_bytes_per_second?: number;
   target_received_packets_per_second?: number;
   target_sent_bytes_per_second?: number;
   target_sent_packets_per_second?: number;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingRequestUtilization {
   target_concurrent_requests?: number;
   target_request_count_per_second?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling {
   cool_down_period?: string;
   max_idle_instances?: number;
@@ -39,55 +45,64 @@ export interface GoogleAppEngineFlexibleAppVersionArgsAutomaticScaling {
   network_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingNetworkUtilization;
   request_utilization: GoogleAppEngineFlexibleAppVersionArgsAutomaticScalingRequestUtilization;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentCloudBuildOptions {
   app_yaml_path: string;
   cloud_build_timeout?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentContainer {
   image: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentFiles {
   name: string;
   sha1_sum?: string;
   source_url: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsDeploymentZip {
   files_count?: number;
   source_url: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsDeployment {
   cloud_build_options: GoogleAppEngineFlexibleAppVersionArgsDeploymentCloudBuildOptions;
   container: GoogleAppEngineFlexibleAppVersionArgsDeploymentContainer;
   files: GoogleAppEngineFlexibleAppVersionArgsDeploymentFiles;
   zip: GoogleAppEngineFlexibleAppVersionArgsDeploymentZip;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsEndpointsApiService {
   config_id?: string;
   disable_trace_sampling?: boolean;
   name: string;
   rollout_strategy?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsEntrypoint {
   shell: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsFlexibleRuntimeSettings {
   operating_system?: string;
   runtime_version?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsHandlersScript {
   script_path: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsHandlersStaticFiles {
   application_readable?: boolean;
   expiration?: string;
-  http_headers?: {
-    [key: string]: string;
-  };
+  http_headers?: { [key: string]: string };
   mime_type?: string;
   path?: string;
   require_matching_file?: boolean;
   upload_path_regex?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsHandlers {
   auth_fail_action?: string;
   login?: string;
@@ -97,6 +112,7 @@ export interface GoogleAppEngineFlexibleAppVersionArgsHandlers {
   script: GoogleAppEngineFlexibleAppVersionArgsHandlersScript;
   static_files: GoogleAppEngineFlexibleAppVersionArgsHandlersStaticFiles;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsLivenessCheck {
   check_interval?: string;
   failure_threshold?: number;
@@ -106,9 +122,11 @@ export interface GoogleAppEngineFlexibleAppVersionArgsLivenessCheck {
   success_threshold?: number;
   timeout?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsManualScaling {
   instances: number;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsNetwork {
   forwarded_ports?: string[];
   instance_tag?: string;
@@ -116,6 +134,7 @@ export interface GoogleAppEngineFlexibleAppVersionArgsNetwork {
   session_affinity?: boolean;
   subnetwork?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsReadinessCheck {
   app_start_timeout?: string;
   check_interval?: string;
@@ -125,34 +144,35 @@ export interface GoogleAppEngineFlexibleAppVersionArgsReadinessCheck {
   success_threshold?: number;
   timeout?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsResourcesVolumes {
   name: string;
   size_gb: number;
   volume_type: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsResources {
   cpu?: number;
   disk_gb?: number;
   memory_gb?: number;
   volumes: GoogleAppEngineFlexibleAppVersionArgsResourcesVolumes;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector {
   name: string;
 }
+
 export interface GoogleAppEngineFlexibleAppVersionArgs {
-  beta_settings?: {
-    [key: string]: string;
-  };
+  beta_settings?: { [key: string]: string };
   default_expiration?: string;
   delete_service_on_destroy?: boolean;
-  env_variables?: {
-    [key: string]: string;
-  };
+  env_variables?: { [key: string]: string };
   inbound_services?: string[];
   instance_class?: string;
   nobuild_files_regex?: string;
@@ -178,12 +198,14 @@ export interface GoogleAppEngineFlexibleAppVersionArgs {
   timeouts?: GoogleAppEngineFlexibleAppVersionArgsTimeouts;
   vpc_access_connector: GoogleAppEngineFlexibleAppVersionArgsVpcAccessConnector;
 }
+
 export class google_app_engine_flexible_app_version extends TerraformResource {
   readonly id?: string;
   readonly name!: string;
   readonly project?: string;
   readonly runtime_api_version?: string;
   readonly service_account?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleAppEngineFlexibleAppVersionArgs) {
     super(config, "resource", args, resourceName, "google_app_engine_flexible_app_version");
   }

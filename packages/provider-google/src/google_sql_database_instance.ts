@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSqlDatabaseInstanceArgsClone {
   allocated_ip_range?: string;
   database_names?: string[];
@@ -6,6 +7,7 @@ export interface GoogleSqlDatabaseInstanceArgsClone {
   preferred_zone?: string;
   source_instance_name: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsReplicaConfiguration {
   ca_certificate?: string;
   cascadable_replica?: boolean;
@@ -20,21 +22,26 @@ export interface GoogleSqlDatabaseInstanceArgsReplicaConfiguration {
   username?: string;
   verify_server_certificate?: boolean;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsRestoreBackupContext {
   backup_run_id: number;
   instance_id?: string;
   project?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsActiveDirectoryConfig {
   domain: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsAdvancedMachineFeatures {
   threads_per_core?: number;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsBackupConfigurationBackupRetentionSettings {
   retained_backups: number;
   retention_unit?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsBackupConfiguration {
   binary_log_enabled?: boolean;
   enabled?: boolean;
@@ -42,38 +49,46 @@ export interface GoogleSqlDatabaseInstanceArgsSettingsBackupConfiguration {
   point_in_time_recovery_enabled?: boolean;
   backup_retention_settings: GoogleSqlDatabaseInstanceArgsSettingsBackupConfigurationBackupRetentionSettings;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsDataCacheConfig {
   data_cache_enabled?: boolean;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsDatabaseFlags {
   name: string;
   value: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsDenyMaintenancePeriod {
   end_date: string;
   start_date: string;
   time: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsInsightsConfig {
   query_insights_enabled?: boolean;
   query_string_length?: number;
   record_application_tags?: boolean;
   record_client_address?: boolean;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationAuthorizedNetworks {
   expiration_time?: string;
   name?: string;
   value: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationPscConfigPscAutoConnections {
   consumer_network: string;
   consumer_service_project_id?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationPscConfig {
   allowed_consumer_projects?: string[];
   psc_enabled?: boolean;
   psc_auto_connections: GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationPscConfigPscAutoConnections;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsIpConfiguration {
   allocated_ip_range?: string;
   enable_private_path_for_google_cloud_services?: boolean;
@@ -82,16 +97,19 @@ export interface GoogleSqlDatabaseInstanceArgsSettingsIpConfiguration {
   authorized_networks: GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationAuthorizedNetworks;
   psc_config: GoogleSqlDatabaseInstanceArgsSettingsIpConfigurationPscConfig;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsLocationPreference {
   follow_gae_application?: string;
   secondary_zone?: string;
   zone?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsMaintenanceWindow {
   day?: number;
   hour?: number;
   update_track?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsPasswordValidationPolicy {
   complexity?: string;
   disallow_username_substring?: boolean;
@@ -100,11 +118,13 @@ export interface GoogleSqlDatabaseInstanceArgsSettingsPasswordValidationPolicy {
   password_change_interval?: string;
   reuse_interval?: number;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettingsSqlServerAuditConfig {
   bucket?: string;
   retention_interval?: string;
   upload_interval?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsSettings {
   activation_policy?: string;
   availability_type?: string;
@@ -131,11 +151,13 @@ export interface GoogleSqlDatabaseInstanceArgsSettings {
   password_validation_policy: GoogleSqlDatabaseInstanceArgsSettingsPasswordValidationPolicy;
   sql_server_audit_config: GoogleSqlDatabaseInstanceArgsSettingsSqlServerAuditConfig;
 }
+
 export interface GoogleSqlDatabaseInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSqlDatabaseInstanceArgs {
   database_version: string;
   deletion_protection?: boolean;
@@ -146,6 +168,7 @@ export interface GoogleSqlDatabaseInstanceArgs {
   settings: GoogleSqlDatabaseInstanceArgsSettings;
   timeouts?: GoogleSqlDatabaseInstanceArgsTimeouts;
 }
+
 export class google_sql_database_instance extends TerraformResource {
   readonly available_maintenance_versions!: string[];
   readonly connection_name!: string;
@@ -167,6 +190,7 @@ export class google_sql_database_instance extends TerraformResource {
   readonly self_link!: string;
   readonly server_ca_cert!: any[];
   readonly service_account_email_address!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSqlDatabaseInstanceArgs) {
     super(config, "resource", args, resourceName, "google_sql_database_instance");
   }

@@ -1,13 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNeptuneClusterArgsServerlessV2ScalingConfiguration {
   max_capacity?: number;
   min_capacity?: number;
 }
+
 export interface AwsNeptuneClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsNeptuneClusterArgs {
   backup_retention_period?: number;
   copy_tags_to_snapshot?: boolean;
@@ -24,12 +27,11 @@ export interface AwsNeptuneClusterArgs {
   skip_final_snapshot?: boolean;
   snapshot_identifier?: string;
   storage_encrypted?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   serverless_v2_scaling_configuration: AwsNeptuneClusterArgsServerlessV2ScalingConfiguration;
   timeouts?: AwsNeptuneClusterArgsTimeouts;
 }
+
 export class aws_neptune_cluster extends TerraformResource {
   readonly allow_major_version_upgrade?: boolean;
   readonly apply_immediately?: boolean;
@@ -50,10 +52,9 @@ export class aws_neptune_cluster extends TerraformResource {
   readonly preferred_maintenance_window?: string;
   readonly reader_endpoint!: string;
   readonly storage_type?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNeptuneClusterArgs) {
     super(config, "resource", args, resourceName, "aws_neptune_cluster");
   }

@@ -1,13 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsEfsMountTargetArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsEfsMountTargetArgs {
   file_system_id: string;
   subnet_id: string;
   timeouts?: AwsEfsMountTargetArgsTimeouts;
 }
+
 export class aws_efs_mount_target extends TerraformResource {
   readonly availability_zone_id!: string;
   readonly availability_zone_name!: string;
@@ -19,6 +22,7 @@ export class aws_efs_mount_target extends TerraformResource {
   readonly network_interface_id!: string;
   readonly owner_id!: string;
   readonly security_groups?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsEfsMountTargetArgs) {
     super(config, "resource", args, resourceName, "aws_efs_mount_target");
   }

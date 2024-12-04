@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsElasticacheGlobalReplicationGroupArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsElasticacheGlobalReplicationGroupArgs {
   global_replication_group_description?: string;
   global_replication_group_id_suffix: string;
@@ -11,6 +13,7 @@ export interface AwsElasticacheGlobalReplicationGroupArgs {
   primary_replication_group_id: string;
   timeouts?: AwsElasticacheGlobalReplicationGroupArgsTimeouts;
 }
+
 export class aws_elasticache_global_replication_group extends TerraformResource {
   readonly arn!: string;
   readonly at_rest_encryption_enabled!: boolean;
@@ -26,6 +29,7 @@ export class aws_elasticache_global_replication_group extends TerraformResource 
   readonly id?: string;
   readonly num_node_groups?: number;
   readonly transit_encryption_enabled!: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsElasticacheGlobalReplicationGroupArgs) {
     super(config, "resource", args, resourceName, "aws_elasticache_global_replication_group");
   }

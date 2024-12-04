@@ -1,15 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsIvsChannelArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsIvsChannelArgs {
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsIvsChannelArgsTimeouts;
 }
+
 export class aws_ivs_channel extends TerraformResource {
   readonly arn!: string;
   readonly authorized?: boolean;
@@ -19,10 +20,9 @@ export class aws_ivs_channel extends TerraformResource {
   readonly name?: string;
   readonly playback_url!: string;
   readonly recording_configuration_arn?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly type?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsIvsChannelArgs) {
     super(config, "resource", args, resourceName, "aws_ivs_channel");
   }

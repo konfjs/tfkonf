@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GooglePrivatecaCertificateArgsConfigPublicKey {
   format: string;
   key?: string;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigSubjectConfigSubject {
   common_name: string;
   country_code?: string;
@@ -13,33 +15,40 @@ export interface GooglePrivatecaCertificateArgsConfigSubjectConfigSubject {
   province?: string;
   street_address?: string;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigSubjectConfigSubjectAltName {
   dns_names?: string[];
   email_addresses?: string[];
   ip_addresses?: string[];
   uris?: string[];
 }
+
 export interface GooglePrivatecaCertificateArgsConfigSubjectConfig {
   subject: GooglePrivatecaCertificateArgsConfigSubjectConfigSubject;
   subject_alt_name: GooglePrivatecaCertificateArgsConfigSubjectConfigSubjectAltName;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigSubjectKeyId {
   key_id?: string;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensionsObjectId {
   object_id_path: number[];
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensions {
   critical: boolean;
   value: string;
   object_id: GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensionsObjectId;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigCaOptions {
   is_ca?: boolean;
   max_issuer_path_length?: number;
   non_ca?: boolean;
   zero_max_issuer_path_length?: boolean;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageBaseKeyUsage {
   cert_sign?: boolean;
   content_commitment?: boolean;
@@ -51,6 +60,7 @@ export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageBaseKeyUs
   key_agreement?: boolean;
   key_encipherment?: boolean;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageExtendedKeyUsage {
   client_auth?: boolean;
   code_signing?: boolean;
@@ -59,14 +69,17 @@ export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageExtendedK
   server_auth?: boolean;
   time_stamping?: boolean;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageUnknownExtendedKeyUsages {
   object_id_path: number[];
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsage {
   base_key_usage: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageBaseKeyUsage;
   extended_key_usage: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageExtendedKeyUsage;
   unknown_extended_key_usages: GooglePrivatecaCertificateArgsConfigX509ConfigKeyUsageUnknownExtendedKeyUsages;
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigNameConstraints {
   critical: boolean;
   excluded_dns_names?: string[];
@@ -78,9 +91,11 @@ export interface GooglePrivatecaCertificateArgsConfigX509ConfigNameConstraints {
   permitted_ip_ranges?: string[];
   permitted_uris?: string[];
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509ConfigPolicyIds {
   object_id_path: number[];
 }
+
 export interface GooglePrivatecaCertificateArgsConfigX509Config {
   aia_ocsp_servers?: string[];
   additional_extensions: GooglePrivatecaCertificateArgsConfigX509ConfigAdditionalExtensions;
@@ -89,23 +104,24 @@ export interface GooglePrivatecaCertificateArgsConfigX509Config {
   name_constraints: GooglePrivatecaCertificateArgsConfigX509ConfigNameConstraints;
   policy_ids: GooglePrivatecaCertificateArgsConfigX509ConfigPolicyIds;
 }
+
 export interface GooglePrivatecaCertificateArgsConfig {
   public_key: GooglePrivatecaCertificateArgsConfigPublicKey;
   subject_config: GooglePrivatecaCertificateArgsConfigSubjectConfig;
   subject_key_id: GooglePrivatecaCertificateArgsConfigSubjectKeyId;
   x509_config: GooglePrivatecaCertificateArgsConfigX509Config;
 }
+
 export interface GooglePrivatecaCertificateArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GooglePrivatecaCertificateArgs {
   certificate_authority?: string;
   certificate_template?: string;
-  labels?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
   lifetime?: string;
   location: string;
   name: string;
@@ -114,22 +130,20 @@ export interface GooglePrivatecaCertificateArgs {
   config: GooglePrivatecaCertificateArgsConfig;
   timeouts?: GooglePrivatecaCertificateArgsTimeouts;
 }
+
 export class google_privateca_certificate extends TerraformResource {
   readonly certificate_description!: any[];
   readonly create_time!: string;
-  readonly effective_labels!: {
-    [key: string]: string;
-  };
+  readonly effective_labels!: { [key: string]: string };
   readonly id?: string;
   readonly issuer_certificate_authority!: string;
   readonly pem_certificate!: string;
   readonly pem_certificate_chain!: string[];
   readonly project?: string;
   readonly revocation_details!: any[];
-  readonly terraform_labels!: {
-    [key: string]: string;
-  };
+  readonly terraform_labels!: { [key: string]: string };
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GooglePrivatecaCertificateArgs) {
     super(config, "resource", args, resourceName, "google_privateca_certificate");
   }

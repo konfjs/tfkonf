@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLightsailLbCertificateArgs {
   lb_name: string;
   name: string;
 }
+
 export class aws_lightsail_lb_certificate extends TerraformResource {
   readonly arn!: string;
   readonly created_at!: string;
@@ -11,6 +13,7 @@ export class aws_lightsail_lb_certificate extends TerraformResource {
   readonly id?: string;
   readonly subject_alternative_names?: string[];
   readonly support_code!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLightsailLbCertificateArgs) {
     super(config, "resource", args, resourceName, "aws_lightsail_lb_certificate");
   }

@@ -1,17 +1,18 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsVpcIpamScopeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsVpcIpamScopeArgs {
   description?: string;
   ipam_id: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsVpcIpamScopeArgsTimeouts;
 }
+
 export class aws_vpc_ipam_scope extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
@@ -19,9 +20,8 @@ export class aws_vpc_ipam_scope extends TerraformResource {
   readonly ipam_scope_type!: string;
   readonly is_default!: boolean;
   readonly pool_count!: number;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsVpcIpamScopeArgs) {
     super(config, "resource", args, resourceName, "aws_vpc_ipam_scope");
   }

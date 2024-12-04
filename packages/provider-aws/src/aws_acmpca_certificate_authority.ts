@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationSubject {
   common_name?: string;
   country?: string;
@@ -14,39 +15,44 @@ export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurat
   surname?: string;
   title?: string;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfiguration {
   key_algorithm: string;
   signing_algorithm: string;
   subject: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfigurationSubject;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationCrlConfiguration {
   custom_cname?: string;
   enabled?: boolean;
   expiration_in_days?: number;
   s3_bucket_name?: string;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationOcspConfiguration {
   enabled: boolean;
   ocsp_custom_cname?: string;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgsRevocationConfiguration {
   crl_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationCrlConfiguration;
   ocsp_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfigurationOcspConfiguration;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgsTimeouts {
   create?: string;
 }
+
 export interface AwsAcmpcaCertificateAuthorityArgs {
   enabled?: boolean;
   permanent_deletion_time_in_days?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   type?: string;
   certificate_authority_configuration: AwsAcmpcaCertificateAuthorityArgsCertificateAuthorityConfiguration;
   revocation_configuration: AwsAcmpcaCertificateAuthorityArgsRevocationConfiguration;
   timeouts?: AwsAcmpcaCertificateAuthorityArgsTimeouts;
 }
+
 export class aws_acmpca_certificate_authority extends TerraformResource {
   readonly arn!: string;
   readonly certificate!: string;
@@ -57,10 +63,9 @@ export class aws_acmpca_certificate_authority extends TerraformResource {
   readonly not_after!: string;
   readonly not_before!: string;
   readonly serial!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly usage_mode?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAcmpcaCertificateAuthorityArgs) {
     super(config, "resource", args, resourceName, "aws_acmpca_certificate_authority");
   }

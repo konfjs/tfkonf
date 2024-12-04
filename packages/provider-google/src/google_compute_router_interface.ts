@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRouterInterfaceArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleComputeRouterInterfaceArgs {
   interconnect_attachment?: string;
   name: string;
@@ -12,6 +14,7 @@ export interface GoogleComputeRouterInterfaceArgs {
   vpn_tunnel?: string;
   timeouts?: GoogleComputeRouterInterfaceArgsTimeouts;
 }
+
 export class google_compute_router_interface extends TerraformResource {
   readonly id?: string;
   readonly ip_range?: string;
@@ -19,6 +22,7 @@ export class google_compute_router_interface extends TerraformResource {
   readonly project?: string;
   readonly redundant_interface?: string;
   readonly region?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRouterInterfaceArgs) {
     super(config, "resource", args, resourceName, "google_compute_router_interface");
   }

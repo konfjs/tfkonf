@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsAthenaNamedQueryArgs {
   database: string;
   description?: string;
@@ -6,8 +7,10 @@ export interface AwsAthenaNamedQueryArgs {
   query: string;
   workgroup?: string;
 }
+
 export class aws_athena_named_query extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAthenaNamedQueryArgs) {
     super(config, "resource", args, resourceName, "aws_athena_named_query");
   }

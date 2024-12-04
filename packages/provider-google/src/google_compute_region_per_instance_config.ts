@@ -1,39 +1,45 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateDisk {
   delete_rule?: string;
   device_name: string;
   mode?: string;
   source: string;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIpIpAddress {
   address?: string;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIp {
   auto_delete?: string;
   interface_name: string;
   ip_address: GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIpIpAddress;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIpIpAddress {
   address?: string;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIp {
   auto_delete?: string;
   interface_name: string;
   ip_address: GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIpIpAddress;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsPreservedState {
-  metadata?: {
-    [key: string]: string;
-  };
+  metadata?: { [key: string]: string };
   disk: GoogleComputeRegionPerInstanceConfigArgsPreservedStateDisk;
   external_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateExternalIp;
   internal_ip: GoogleComputeRegionPerInstanceConfigArgsPreservedStateInternalIp;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionPerInstanceConfigArgs {
   minimal_action?: string;
   most_disruptive_allowed_action?: string;
@@ -44,10 +50,12 @@ export interface GoogleComputeRegionPerInstanceConfigArgs {
   preserved_state: GoogleComputeRegionPerInstanceConfigArgsPreservedState;
   timeouts?: GoogleComputeRegionPerInstanceConfigArgsTimeouts;
 }
+
 export class google_compute_region_per_instance_config extends TerraformResource {
   readonly id?: string;
   readonly project?: string;
   readonly region?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionPerInstanceConfigArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_per_instance_config");
   }

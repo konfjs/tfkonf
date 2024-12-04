@@ -1,7 +1,9 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSecurityGroupRuleArgsTimeouts {
   create?: string;
 }
+
 export interface AwsSecurityGroupRuleArgs {
   cidr_blocks?: string[];
   description?: string;
@@ -15,10 +17,12 @@ export interface AwsSecurityGroupRuleArgs {
   type: string;
   timeouts?: AwsSecurityGroupRuleArgsTimeouts;
 }
+
 export class aws_security_group_rule extends TerraformResource {
   readonly id?: string;
   readonly security_group_rule_id!: string;
   readonly source_security_group_id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSecurityGroupRuleArgs) {
     super(config, "resource", args, resourceName, "aws_security_group_rule");
   }

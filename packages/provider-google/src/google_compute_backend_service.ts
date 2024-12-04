@@ -1,13 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeBackendServiceArgsBackend {
   balancing_mode?: string;
   capacity_scaler?: number;
   description?: string;
   group: string;
 }
+
 export interface GoogleComputeBackendServiceArgsCdnPolicyBypassCacheOnRequestHeaders {
   header_name: string;
 }
+
 export interface GoogleComputeBackendServiceArgsCdnPolicyCacheKeyPolicy {
   include_host?: boolean;
   include_http_headers?: string[];
@@ -17,16 +20,19 @@ export interface GoogleComputeBackendServiceArgsCdnPolicyCacheKeyPolicy {
   query_string_blacklist?: string[];
   query_string_whitelist?: string[];
 }
+
 export interface GoogleComputeBackendServiceArgsCdnPolicyNegativeCachingPolicy {
   code?: number;
   ttl?: number;
 }
+
 export interface GoogleComputeBackendServiceArgsCdnPolicy {
   signed_url_cache_max_age_sec?: number;
   bypass_cache_on_request_headers: GoogleComputeBackendServiceArgsCdnPolicyBypassCacheOnRequestHeaders;
   cache_key_policy: GoogleComputeBackendServiceArgsCdnPolicyCacheKeyPolicy;
   negative_caching_policy: GoogleComputeBackendServiceArgsCdnPolicyNegativeCachingPolicy;
 }
+
 export interface GoogleComputeBackendServiceArgsCircuitBreakers {
   max_connections?: number;
   max_pending_requests?: number;
@@ -34,48 +40,59 @@ export interface GoogleComputeBackendServiceArgsCircuitBreakers {
   max_requests_per_connection?: number;
   max_retries?: number;
 }
+
 export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookieTtl {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
   ttl: GoogleComputeBackendServiceArgsConsistentHashHttpCookieTtl;
 }
+
 export interface GoogleComputeBackendServiceArgsConsistentHash {
   http_header_name?: string;
   minimum_ring_size?: number;
   http_cookie: GoogleComputeBackendServiceArgsConsistentHashHttpCookie;
 }
+
 export interface GoogleComputeBackendServiceArgsIap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
 }
+
 export interface GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy {
   data?: string;
   name: string;
 }
+
 export interface GoogleComputeBackendServiceArgsLocalityLbPoliciesPolicy {
   name: string;
 }
+
 export interface GoogleComputeBackendServiceArgsLocalityLbPolicies {
   custom_policy: GoogleComputeBackendServiceArgsLocalityLbPoliciesCustomPolicy;
   policy: GoogleComputeBackendServiceArgsLocalityLbPoliciesPolicy;
 }
+
 export interface GoogleComputeBackendServiceArgsLogConfig {
   enable?: boolean;
   sample_rate?: number;
 }
+
 export interface GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeBackendServiceArgsOutlierDetectionInterval {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeBackendServiceArgsOutlierDetection {
   consecutive_errors?: number;
   consecutive_gateway_failure?: number;
@@ -89,31 +106,37 @@ export interface GoogleComputeBackendServiceArgsOutlierDetection {
   base_ejection_time: GoogleComputeBackendServiceArgsOutlierDetectionBaseEjectionTime;
   interval: GoogleComputeBackendServiceArgsOutlierDetectionInterval;
 }
+
 export interface GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication {
   access_key?: string;
   access_key_id?: string;
   access_key_version?: string;
   origin_region?: string;
 }
+
 export interface GoogleComputeBackendServiceArgsSecuritySettings {
   client_tls_policy?: string;
   subject_alt_names?: string[];
   aws_v4_authentication: GoogleComputeBackendServiceArgsSecuritySettingsAwsV4Authentication;
 }
+
 export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookieTtl {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
   ttl: GoogleComputeBackendServiceArgsStrongSessionAffinityCookieTtl;
 }
+
 export interface GoogleComputeBackendServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeBackendServiceArgs {
   affinity_cookie_ttl_sec?: number;
   compression_mode?: string;
@@ -142,6 +165,7 @@ export interface GoogleComputeBackendServiceArgs {
   strong_session_affinity_cookie: GoogleComputeBackendServiceArgsStrongSessionAffinityCookie;
   timeouts?: GoogleComputeBackendServiceArgsTimeouts;
 }
+
 export class google_compute_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly fingerprint!: string;
@@ -153,6 +177,7 @@ export class google_compute_backend_service extends TerraformResource {
   readonly self_link!: string;
   readonly session_affinity?: string;
   readonly timeout_sec?: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeBackendServiceArgs) {
     super(config, "resource", args, resourceName, "google_compute_backend_service");
   }

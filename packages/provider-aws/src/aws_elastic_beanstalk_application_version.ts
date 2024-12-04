@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsElasticBeanstalkApplicationVersionArgs {
   application: string;
   bucket: string;
@@ -7,16 +8,14 @@ export interface AwsElasticBeanstalkApplicationVersionArgs {
   key: string;
   name: string;
   process?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_elastic_beanstalk_application_version extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsElasticBeanstalkApplicationVersionArgs) {
     super(config, "resource", args, resourceName, "aws_elastic_beanstalk_application_version");
   }

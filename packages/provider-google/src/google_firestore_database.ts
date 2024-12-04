@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleFirestoreDatabaseArgsCmekConfig {
   kms_key_name: string;
 }
+
 export interface GoogleFirestoreDatabaseArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleFirestoreDatabaseArgs {
   deletion_policy?: string;
   location_id: string;
@@ -16,6 +19,7 @@ export interface GoogleFirestoreDatabaseArgs {
   cmek_config: GoogleFirestoreDatabaseArgsCmekConfig;
   timeouts?: GoogleFirestoreDatabaseArgsTimeouts;
 }
+
 export class google_firestore_database extends TerraformResource {
   readonly app_engine_integration_mode?: string;
   readonly concurrency_mode?: string;
@@ -29,6 +33,7 @@ export class google_firestore_database extends TerraformResource {
   readonly uid!: string;
   readonly update_time!: string;
   readonly version_retention_period!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleFirestoreDatabaseArgs) {
     super(config, "resource", args, resourceName, "google_firestore_database");
   }

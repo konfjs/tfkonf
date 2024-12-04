@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeSubnetworkArgsLogConfig {
   aggregation_interval?: string;
   filter_expr?: string;
@@ -6,15 +7,18 @@ export interface GoogleComputeSubnetworkArgsLogConfig {
   metadata?: string;
   metadata_fields?: string[];
 }
+
 export interface GoogleComputeSubnetworkArgsSecondaryIpRange {
   range_name: string;
   reserved_internal_range?: string;
 }
+
 export interface GoogleComputeSubnetworkArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeSubnetworkArgs {
   description?: string;
   ipv6_access_type?: string;
@@ -27,6 +31,7 @@ export interface GoogleComputeSubnetworkArgs {
   secondary_ip_range: GoogleComputeSubnetworkArgsSecondaryIpRange;
   timeouts?: GoogleComputeSubnetworkArgsTimeouts;
 }
+
 export class google_compute_subnetwork extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly external_ipv6_prefix?: string;
@@ -43,6 +48,7 @@ export class google_compute_subnetwork extends TerraformResource {
   readonly region?: string;
   readonly self_link!: string;
   readonly stack_type?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeSubnetworkArgs) {
     super(config, "resource", args, resourceName, "google_compute_subnetwork");
   }

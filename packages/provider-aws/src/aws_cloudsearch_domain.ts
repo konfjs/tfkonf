@@ -1,5 +1,8 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
-export interface AwsCloudsearchDomainArgsEndpointOptions {}
+
+export interface AwsCloudsearchDomainArgsEndpointOptions {
+}
+
 export interface AwsCloudsearchDomainArgsIndexField {
   analysis_scheme?: string;
   default_value?: string;
@@ -12,12 +15,16 @@ export interface AwsCloudsearchDomainArgsIndexField {
   source_fields?: string;
   type: string;
 }
-export interface AwsCloudsearchDomainArgsScalingParameters {}
+
+export interface AwsCloudsearchDomainArgsScalingParameters {
+}
+
 export interface AwsCloudsearchDomainArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsCloudsearchDomainArgs {
   name: string;
   endpoint_options: AwsCloudsearchDomainArgsEndpointOptions;
@@ -25,6 +32,7 @@ export interface AwsCloudsearchDomainArgs {
   scaling_parameters: AwsCloudsearchDomainArgsScalingParameters;
   timeouts?: AwsCloudsearchDomainArgsTimeouts;
 }
+
 export class aws_cloudsearch_domain extends TerraformResource {
   readonly arn!: string;
   readonly document_service_endpoint!: string;
@@ -32,6 +40,7 @@ export class aws_cloudsearch_domain extends TerraformResource {
   readonly id?: string;
   readonly multi_az?: boolean;
   readonly search_service_endpoint!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCloudsearchDomainArgs) {
     super(config, "resource", args, resourceName, "aws_cloudsearch_domain");
   }

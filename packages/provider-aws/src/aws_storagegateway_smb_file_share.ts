@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsStoragegatewaySmbFileShareArgsCacheAttributes {
   cache_stale_timeout_in_seconds?: number;
 }
+
 export interface AwsStoragegatewaySmbFileShareArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsStoragegatewaySmbFileShareArgs {
   access_based_enumeration?: boolean;
   admin_user_list?: string[];
@@ -27,14 +30,13 @@ export interface AwsStoragegatewaySmbFileShareArgs {
   requester_pays?: boolean;
   role_arn: string;
   smb_acl_enabled?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   valid_user_list?: string[];
   vpc_endpoint_dns_name?: string;
   cache_attributes: AwsStoragegatewaySmbFileShareArgsCacheAttributes;
   timeouts?: AwsStoragegatewaySmbFileShareArgsTimeouts;
 }
+
 export class aws_storagegateway_smb_file_share extends TerraformResource {
   readonly arn!: string;
   readonly file_share_name?: string;
@@ -42,9 +44,8 @@ export class aws_storagegateway_smb_file_share extends TerraformResource {
   readonly id?: string;
   readonly oplocks_enabled?: boolean;
   readonly path!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsStoragegatewaySmbFileShareArgs) {
     super(config, "resource", args, resourceName, "aws_storagegateway_smb_file_share");
   }

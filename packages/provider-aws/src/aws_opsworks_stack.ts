@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksStackArgsCustomCookbooksSource {
   password?: string;
   revision?: string;
@@ -7,9 +8,11 @@ export interface AwsOpsworksStackArgsCustomCookbooksSource {
   url: string;
   username?: string;
 }
+
 export interface AwsOpsworksStackArgsTimeouts {
   create?: string;
 }
+
 export interface AwsOpsworksStackArgs {
   berkshelf_version?: string;
   color?: string;
@@ -25,14 +28,13 @@ export interface AwsOpsworksStackArgs {
   name: string;
   region: string;
   service_role_arn: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_custom_cookbooks?: boolean;
   use_opsworks_security_groups?: boolean;
   custom_cookbooks_source: AwsOpsworksStackArgsCustomCookbooksSource;
   timeouts?: AwsOpsworksStackArgsTimeouts;
 }
+
 export class aws_opsworks_stack extends TerraformResource {
   readonly agent_version?: string;
   readonly arn!: string;
@@ -40,10 +42,9 @@ export class aws_opsworks_stack extends TerraformResource {
   readonly default_subnet_id?: string;
   readonly id?: string;
   readonly stack_endpoint!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksStackArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_stack");
   }

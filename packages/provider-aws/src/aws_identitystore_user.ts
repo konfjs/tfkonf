@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsIdentitystoreUserArgsAddresses {
   country?: string;
   formatted?: string;
@@ -9,11 +10,13 @@ export interface AwsIdentitystoreUserArgsAddresses {
   street_address?: string;
   type?: string;
 }
+
 export interface AwsIdentitystoreUserArgsEmails {
   primary?: boolean;
   type?: string;
   value?: string;
 }
+
 export interface AwsIdentitystoreUserArgsName {
   family_name: string;
   formatted?: string;
@@ -22,11 +25,13 @@ export interface AwsIdentitystoreUserArgsName {
   honorific_suffix?: string;
   middle_name?: string;
 }
+
 export interface AwsIdentitystoreUserArgsPhoneNumbers {
   primary?: boolean;
   type?: string;
   value?: string;
 }
+
 export interface AwsIdentitystoreUserArgs {
   display_name: string;
   identity_store_id: string;
@@ -43,10 +48,12 @@ export interface AwsIdentitystoreUserArgs {
   name: AwsIdentitystoreUserArgsName;
   phone_numbers: AwsIdentitystoreUserArgsPhoneNumbers;
 }
+
 export class aws_identitystore_user extends TerraformResource {
   readonly external_ids!: any[];
   readonly id?: string;
   readonly user_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsIdentitystoreUserArgs) {
     super(config, "resource", args, resourceName, "aws_identitystore_user");
   }

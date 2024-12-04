@@ -1,18 +1,19 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsEipArgsTimeouts {
   delete?: string;
   read?: string;
   update?: string;
 }
+
 export interface AwsEipArgs {
   address?: string;
   associate_with_private_ip?: string;
   customer_owned_ipv4_pool?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsEipArgsTimeouts;
 }
+
 export class aws_eip extends TerraformResource {
   readonly allocation_id!: string;
   readonly arn!: string;
@@ -31,10 +32,9 @@ export class aws_eip extends TerraformResource {
   readonly public_dns!: string;
   readonly public_ip!: string;
   readonly public_ipv4_pool?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc?: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsEipArgs) {
     super(config, "resource", args, resourceName, "aws_eip");
   }

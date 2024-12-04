@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeNetworkAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleComputeNetworkAttachmentArgs {
   connection_preference: string;
   description?: string;
@@ -12,6 +14,7 @@ export interface GoogleComputeNetworkAttachmentArgs {
   subnetworks: string[];
   timeouts?: GoogleComputeNetworkAttachmentArgsTimeouts;
 }
+
 export class google_compute_network_attachment extends TerraformResource {
   readonly connection_endpoints!: any[];
   readonly creation_timestamp!: string;
@@ -23,6 +26,7 @@ export class google_compute_network_attachment extends TerraformResource {
   readonly region?: string;
   readonly self_link!: string;
   readonly self_link_with_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeNetworkAttachmentArgs) {
     super(config, "resource", args, resourceName, "google_compute_network_attachment");
   }

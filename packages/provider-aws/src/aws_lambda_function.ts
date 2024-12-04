@@ -1,43 +1,53 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLambdaFunctionArgsDeadLetterConfig {
   target_arn: string;
 }
+
 export interface AwsLambdaFunctionArgsEnvironment {
-  variables?: {
-    [key: string]: string;
-  };
+  variables?: { [key: string]: string };
 }
-export interface AwsLambdaFunctionArgsEphemeralStorage {}
+
+export interface AwsLambdaFunctionArgsEphemeralStorage {
+}
+
 export interface AwsLambdaFunctionArgsFileSystemConfig {
   arn: string;
   local_mount_path: string;
 }
+
 export interface AwsLambdaFunctionArgsImageConfig {
   command?: string[];
   entry_point?: string[];
   working_directory?: string;
 }
+
 export interface AwsLambdaFunctionArgsLoggingConfig {
   application_log_level?: string;
   log_format: string;
   system_log_level?: string;
 }
+
 export interface AwsLambdaFunctionArgsSnapStart {
   apply_on: string;
 }
+
 export interface AwsLambdaFunctionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsLambdaFunctionArgsTracingConfig {
   mode: string;
 }
+
 export interface AwsLambdaFunctionArgsVpcConfig {
   ipv6_allowed_for_dual_stack?: boolean;
   security_group_ids: string[];
   subnet_ids: string[];
 }
+
 export interface AwsLambdaFunctionArgs {
   code_signing_config_arn?: string;
   description?: string;
@@ -59,9 +69,7 @@ export interface AwsLambdaFunctionArgs {
   s3_key?: string;
   s3_object_version?: string;
   skip_destroy?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeout?: number;
   dead_letter_config: AwsLambdaFunctionArgsDeadLetterConfig;
   environment: AwsLambdaFunctionArgsEnvironment;
@@ -74,6 +82,7 @@ export interface AwsLambdaFunctionArgs {
   tracing_config: AwsLambdaFunctionArgsTracingConfig;
   vpc_config: AwsLambdaFunctionArgsVpcConfig;
 }
+
 export class aws_lambda_function extends TerraformResource {
   readonly architectures?: string[];
   readonly arn!: string;
@@ -87,10 +96,9 @@ export class aws_lambda_function extends TerraformResource {
   readonly signing_profile_version_arn!: string;
   readonly source_code_hash?: string;
   readonly source_code_size!: number;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly version!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLambdaFunctionArgs) {
     super(config, "resource", args, resourceName, "aws_lambda_function");
   }

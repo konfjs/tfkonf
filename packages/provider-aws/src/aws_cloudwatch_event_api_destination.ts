@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCloudwatchEventApiDestinationArgs {
   connection_arn: string;
   description?: string;
@@ -7,9 +8,11 @@ export interface AwsCloudwatchEventApiDestinationArgs {
   invocation_rate_limit_per_second?: number;
   name: string;
 }
+
 export class aws_cloudwatch_event_api_destination extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCloudwatchEventApiDestinationArgs) {
     super(config, "resource", args, resourceName, "aws_cloudwatch_event_api_destination");
   }

@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSqlSourceRepresentationInstanceArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleSqlSourceRepresentationInstanceArgs {
   ca_certificate?: string;
   client_certificate?: string;
@@ -16,10 +18,12 @@ export interface GoogleSqlSourceRepresentationInstanceArgs {
   username?: string;
   timeouts?: GoogleSqlSourceRepresentationInstanceArgsTimeouts;
 }
+
 export class google_sql_source_representation_instance extends TerraformResource {
   readonly id?: string;
   readonly project?: string;
   readonly region?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSqlSourceRepresentationInstanceArgs) {
     super(config, "resource", args, resourceName, "google_sql_source_representation_instance");
   }

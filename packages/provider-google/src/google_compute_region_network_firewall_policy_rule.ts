@@ -1,11 +1,14 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchSrcSecureTags {
   name?: string;
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatch {
   dest_address_groups?: string[];
   dest_fqdns?: string[];
@@ -20,14 +23,17 @@ export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatch {
   layer4_configs: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchLayer4Configs;
   src_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsMatchSrcSecureTags;
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsTargetSecureTags {
   name?: string;
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgs {
   action: string;
   description?: string;
@@ -44,6 +50,7 @@ export interface GoogleComputeRegionNetworkFirewallPolicyRuleArgs {
   target_secure_tags: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTargetSecureTags;
   timeouts?: GoogleComputeRegionNetworkFirewallPolicyRuleArgsTimeouts;
 }
+
 export class google_compute_region_network_firewall_policy_rule extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
@@ -51,6 +58,7 @@ export class google_compute_region_network_firewall_policy_rule extends Terrafor
   readonly project?: string;
   readonly region?: string;
   readonly rule_tuple_count!: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionNetworkFirewallPolicyRuleArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_network_firewall_policy_rule");
   }

@@ -1,7 +1,9 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDbInstanceArgsBlueGreenUpdate {
   enabled?: boolean;
 }
+
 export interface AwsDbInstanceArgsRestoreToPointInTime {
   restore_time?: string;
   source_db_instance_automated_backups_arn?: string;
@@ -9,6 +11,7 @@ export interface AwsDbInstanceArgsRestoreToPointInTime {
   source_dbi_resource_id?: string;
   use_latest_restorable_time?: boolean;
 }
+
 export interface AwsDbInstanceArgsS3Import {
   bucket_name: string;
   bucket_prefix?: string;
@@ -16,11 +19,13 @@ export interface AwsDbInstanceArgsS3Import {
   source_engine: string;
   source_engine_version: string;
 }
+
 export interface AwsDbInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsDbInstanceArgs {
   allow_major_version_upgrade?: boolean;
   apply_immediately?: boolean;
@@ -49,15 +54,14 @@ export interface AwsDbInstanceArgs {
   replicate_source_db?: string;
   skip_final_snapshot?: boolean;
   storage_encrypted?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   upgrade_storage_config?: boolean;
   blue_green_update: AwsDbInstanceArgsBlueGreenUpdate;
   restore_to_point_in_time: AwsDbInstanceArgsRestoreToPointInTime;
   s3_import: AwsDbInstanceArgsS3Import;
   timeouts?: AwsDbInstanceArgsTimeouts;
 }
+
 export class aws_db_instance extends TerraformResource {
   readonly address!: string;
   readonly allocated_storage?: number;
@@ -104,12 +108,11 @@ export class aws_db_instance extends TerraformResource {
   readonly status!: string;
   readonly storage_throughput?: number;
   readonly storage_type?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly timezone?: string;
   readonly username?: string;
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDbInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_db_instance");
   }

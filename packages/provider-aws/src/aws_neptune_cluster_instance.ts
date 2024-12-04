@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNeptuneClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsNeptuneClusterInstanceArgs {
   auto_minor_version_upgrade?: boolean;
   cluster_identifier: string;
@@ -13,11 +15,10 @@ export interface AwsNeptuneClusterInstanceArgs {
   promotion_tier?: number;
   publicly_accessible?: boolean;
   skip_final_snapshot?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsNeptuneClusterInstanceArgsTimeouts;
 }
+
 export class aws_neptune_cluster_instance extends TerraformResource {
   readonly address!: string;
   readonly apply_immediately?: boolean;
@@ -36,10 +37,9 @@ export class aws_neptune_cluster_instance extends TerraformResource {
   readonly preferred_maintenance_window?: string;
   readonly storage_encrypted!: boolean;
   readonly storage_type!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly writer!: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNeptuneClusterInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_neptune_cluster_instance");
   }

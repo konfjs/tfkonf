@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCloudwatchLogAccountPolicyArgs {
   policy_document: string;
   policy_name: string;
@@ -6,8 +7,10 @@ export interface AwsCloudwatchLogAccountPolicyArgs {
   scope?: string;
   selection_criteria?: string;
 }
+
 export class aws_cloudwatch_log_account_policy extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCloudwatchLogAccountPolicyArgs) {
     super(config, "resource", args, resourceName, "aws_cloudwatch_log_account_policy");
   }

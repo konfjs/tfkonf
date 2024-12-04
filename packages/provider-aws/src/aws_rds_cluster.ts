@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRdsClusterArgsRestoreToPointInTime {
   restore_to_time?: string;
   restore_type?: string;
@@ -6,6 +7,7 @@ export interface AwsRdsClusterArgsRestoreToPointInTime {
   source_cluster_resource_id?: string;
   use_latest_restorable_time?: boolean;
 }
+
 export interface AwsRdsClusterArgsS3Import {
   bucket_name: string;
   bucket_prefix?: string;
@@ -13,6 +15,7 @@ export interface AwsRdsClusterArgsS3Import {
   source_engine: string;
   source_engine_version: string;
 }
+
 export interface AwsRdsClusterArgsScalingConfiguration {
   auto_pause?: boolean;
   max_capacity?: number;
@@ -21,15 +24,18 @@ export interface AwsRdsClusterArgsScalingConfiguration {
   seconds_until_auto_pause?: number;
   timeout_action?: string;
 }
+
 export interface AwsRdsClusterArgsServerlessv2ScalingConfiguration {
   max_capacity: number;
   min_capacity: number;
 }
+
 export interface AwsRdsClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRdsClusterArgs {
   allow_major_version_upgrade?: boolean;
   backtrack_window?: number;
@@ -57,15 +63,14 @@ export interface AwsRdsClusterArgs {
   skip_final_snapshot?: boolean;
   snapshot_identifier?: string;
   source_region?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   restore_to_point_in_time: AwsRdsClusterArgsRestoreToPointInTime;
   s3_import: AwsRdsClusterArgsS3Import;
   scaling_configuration: AwsRdsClusterArgsScalingConfiguration;
   serverlessv2_scaling_configuration: AwsRdsClusterArgsServerlessv2ScalingConfiguration;
   timeouts?: AwsRdsClusterArgsTimeouts;
 }
+
 export class aws_rds_cluster extends TerraformResource {
   readonly allocated_storage?: number;
   readonly apply_immediately?: boolean;
@@ -102,10 +107,9 @@ export class aws_rds_cluster extends TerraformResource {
   readonly reader_endpoint!: string;
   readonly storage_encrypted?: boolean;
   readonly storage_type?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRdsClusterArgs) {
     super(config, "resource", args, resourceName, "aws_rds_cluster");
   }

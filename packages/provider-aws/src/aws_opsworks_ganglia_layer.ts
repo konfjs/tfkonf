@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksGangliaLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksGangliaLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksGangliaLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksGangliaLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksGangliaLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksGangliaLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksGangliaLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksGangliaLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksGangliaLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -68,9 +75,7 @@ export interface AwsOpsworksGangliaLayerArgs {
   password: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   url?: string;
   use_ebs_optimized_instances?: boolean;
   username?: string;
@@ -78,12 +83,12 @@ export interface AwsOpsworksGangliaLayerArgs {
   ebs_volume: AwsOpsworksGangliaLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksGangliaLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_ganglia_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksGangliaLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_ganglia_layer");
   }

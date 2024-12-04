@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNetworkmanagerAttachmentAccepterArgsTimeouts {
   create?: string;
 }
+
 export interface AwsNetworkmanagerAttachmentAccepterArgs {
   attachment_id: string;
   attachment_type: string;
   timeouts?: AwsNetworkmanagerAttachmentAccepterArgsTimeouts;
 }
+
 export class aws_networkmanager_attachment_accepter extends TerraformResource {
   readonly attachment_policy_rule_number!: number;
   readonly core_network_arn!: string;
@@ -17,6 +20,7 @@ export class aws_networkmanager_attachment_accepter extends TerraformResource {
   readonly resource_arn!: string;
   readonly segment_name!: string;
   readonly state!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNetworkmanagerAttachmentAccepterArgs) {
     super(config, "resource", args, resourceName, "aws_networkmanager_attachment_accepter");
   }

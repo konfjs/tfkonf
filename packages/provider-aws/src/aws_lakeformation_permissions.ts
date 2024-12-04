@@ -1,32 +1,40 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLakeformationPermissionsArgsDataCellsFilter {
   database_name: string;
   name: string;
   table_catalog_id: string;
   table_name: string;
 }
+
 export interface AwsLakeformationPermissionsArgsDataLocation {
   arn: string;
 }
+
 export interface AwsLakeformationPermissionsArgsDatabase {
   name: string;
 }
+
 export interface AwsLakeformationPermissionsArgsLfTag {
   key: string;
   values: string[];
 }
+
 export interface AwsLakeformationPermissionsArgsLfTagPolicyExpression {
   key: string;
   values: string[];
 }
+
 export interface AwsLakeformationPermissionsArgsLfTagPolicy {
   resource_type: string;
   expression: AwsLakeformationPermissionsArgsLfTagPolicyExpression;
 }
+
 export interface AwsLakeformationPermissionsArgsTable {
   database_name: string;
   wildcard?: boolean;
 }
+
 export interface AwsLakeformationPermissionsArgsTableWithColumns {
   column_names?: string[];
   database_name: string;
@@ -34,6 +42,7 @@ export interface AwsLakeformationPermissionsArgsTableWithColumns {
   name: string;
   wildcard?: boolean;
 }
+
 export interface AwsLakeformationPermissionsArgs {
   catalog_id?: string;
   catalog_resource?: boolean;
@@ -47,9 +56,11 @@ export interface AwsLakeformationPermissionsArgs {
   table: AwsLakeformationPermissionsArgsTable;
   table_with_columns: AwsLakeformationPermissionsArgsTableWithColumns;
 }
+
 export class aws_lakeformation_permissions extends TerraformResource {
   readonly id?: string;
   readonly permissions_with_grant_option?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLakeformationPermissionsArgs) {
     super(config, "resource", args, resourceName, "aws_lakeformation_permissions");
   }

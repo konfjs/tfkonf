@@ -1,11 +1,14 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeManagedSslCertificateArgsManaged {
   domains: string[];
 }
+
 export interface GoogleComputeManagedSslCertificateArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleComputeManagedSslCertificateArgs {
   description?: string;
   name?: string;
@@ -13,6 +16,7 @@ export interface GoogleComputeManagedSslCertificateArgs {
   managed: GoogleComputeManagedSslCertificateArgsManaged;
   timeouts?: GoogleComputeManagedSslCertificateArgsTimeouts;
 }
+
 export class google_compute_managed_ssl_certificate extends TerraformResource {
   readonly certificate_id!: number;
   readonly creation_timestamp!: string;
@@ -21,6 +25,7 @@ export class google_compute_managed_ssl_certificate extends TerraformResource {
   readonly project?: string;
   readonly self_link!: string;
   readonly subject_alternative_names!: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeManagedSslCertificateArgs) {
     super(config, "resource", args, resourceName, "google_compute_managed_ssl_certificate");
   }

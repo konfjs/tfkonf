@@ -1,19 +1,23 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRedshiftClusterArgsLogging {
   enable: boolean;
   log_destination_type?: string;
   log_exports?: string[];
 }
+
 export interface AwsRedshiftClusterArgsSnapshotCopy {
   destination_region: string;
   grant_name?: string;
   retention_period?: number;
 }
+
 export interface AwsRedshiftClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRedshiftClusterArgs {
   allow_version_upgrade?: boolean;
   apply_immediately?: boolean;
@@ -39,13 +43,12 @@ export interface AwsRedshiftClusterArgs {
   snapshot_arn?: string;
   snapshot_cluster_identifier?: string;
   snapshot_identifier?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   logging: AwsRedshiftClusterArgsLogging;
   snapshot_copy: AwsRedshiftClusterArgsSnapshotCopy;
   timeouts?: AwsRedshiftClusterArgsTimeouts;
 }
+
 export class aws_redshift_cluster extends TerraformResource {
   readonly aqua_configuration_status?: string;
   readonly arn!: string;
@@ -68,10 +71,9 @@ export class aws_redshift_cluster extends TerraformResource {
   readonly master_password_secret_arn!: string;
   readonly master_password_secret_kms_key_id?: string;
   readonly preferred_maintenance_window?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRedshiftClusterArgs) {
     super(config, "resource", args, resourceName, "aws_redshift_cluster");
   }

@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRdsClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRdsClusterInstanceArgs {
   auto_minor_version_upgrade?: boolean;
   cluster_identifier: string;
@@ -13,11 +15,10 @@ export interface AwsRdsClusterInstanceArgs {
   instance_class: string;
   monitoring_interval?: number;
   promotion_tier?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsRdsClusterInstanceArgsTimeouts;
 }
+
 export class aws_rds_cluster_instance extends TerraformResource {
   readonly apply_immediately?: boolean;
   readonly arn!: string;
@@ -43,10 +44,9 @@ export class aws_rds_cluster_instance extends TerraformResource {
   readonly preferred_maintenance_window?: string;
   readonly publicly_accessible?: boolean;
   readonly storage_encrypted!: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly writer!: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRdsClusterInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_rds_cluster_instance");
   }

@@ -1,15 +1,18 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDocdbClusterArgsRestoreToPointInTime {
   restore_to_time?: string;
   restore_type?: string;
   source_cluster_identifier: string;
   use_latest_restorable_time?: boolean;
 }
+
 export interface AwsDocdbClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsDocdbClusterArgs {
   allow_major_version_upgrade?: boolean;
   apply_immediately?: boolean;
@@ -25,12 +28,11 @@ export interface AwsDocdbClusterArgs {
   snapshot_identifier?: string;
   storage_encrypted?: boolean;
   storage_type?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   restore_to_point_in_time: AwsDocdbClusterArgsRestoreToPointInTime;
   timeouts?: AwsDocdbClusterArgsTimeouts;
 }
+
 export class aws_docdb_cluster extends TerraformResource {
   readonly arn!: string;
   readonly availability_zones?: string[];
@@ -49,10 +51,9 @@ export class aws_docdb_cluster extends TerraformResource {
   readonly preferred_backup_window?: string;
   readonly preferred_maintenance_window?: string;
   readonly reader_endpoint!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDocdbClusterArgs) {
     super(config, "resource", args, resourceName, "aws_docdb_cluster");
   }

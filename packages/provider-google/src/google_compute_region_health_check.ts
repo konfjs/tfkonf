@@ -1,10 +1,12 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionHealthCheckArgsGrpcHealthCheck {
   grpc_service_name?: string;
   port?: number;
   port_name?: string;
   port_specification?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsHttp2HealthCheck {
   host?: string;
   port?: number;
@@ -14,6 +16,7 @@ export interface GoogleComputeRegionHealthCheckArgsHttp2HealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsHttpHealthCheck {
   host?: string;
   port?: number;
@@ -23,6 +26,7 @@ export interface GoogleComputeRegionHealthCheckArgsHttpHealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsHttpsHealthCheck {
   host?: string;
   port?: number;
@@ -32,9 +36,11 @@ export interface GoogleComputeRegionHealthCheckArgsHttpsHealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsLogConfig {
   enable?: boolean;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsSslHealthCheck {
   port?: number;
   port_name?: string;
@@ -43,6 +49,7 @@ export interface GoogleComputeRegionHealthCheckArgsSslHealthCheck {
   request?: string;
   response?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsTcpHealthCheck {
   port?: number;
   port_name?: string;
@@ -51,11 +58,13 @@ export interface GoogleComputeRegionHealthCheckArgsTcpHealthCheck {
   request?: string;
   response?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionHealthCheckArgs {
   check_interval_sec?: number;
   description?: string;
@@ -72,6 +81,7 @@ export interface GoogleComputeRegionHealthCheckArgs {
   tcp_health_check: GoogleComputeRegionHealthCheckArgsTcpHealthCheck;
   timeouts?: GoogleComputeRegionHealthCheckArgsTimeouts;
 }
+
 export class google_compute_region_health_check extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
@@ -79,6 +89,7 @@ export class google_compute_region_health_check extends TerraformResource {
   readonly region?: string;
   readonly self_link!: string;
   readonly type!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionHealthCheckArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_health_check");
   }

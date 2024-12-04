@@ -1,37 +1,48 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelActivityMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelAdvancedDataProtectionMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelActivityMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelAdvancedDataProtectionMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria {
   delimiter?: string;
   max_depth?: number;
   min_storage_bytes_percentage?: number;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics {
   enabled?: boolean;
   selection_criteria: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetricsSelectionCriteria;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevel {
   storage_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevelStorageMetrics;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevel {
   activity_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelActivityMetrics;
   advanced_cost_optimization_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelAdvancedCostOptimizationMetrics;
@@ -39,9 +50,11 @@ export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfiguratio
   detailed_status_code_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelDetailedStatusCodeMetrics;
   prefix_level: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevelPrefixLevel;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics {
   enabled?: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevel {
   activity_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelActivityMetrics;
   advanced_cost_optimization_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelAdvancedCostOptimizationMetrics;
@@ -49,20 +62,27 @@ export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfiguratio
   bucket_level: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelBucketLevel;
   detailed_status_code_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevelDetailedStatusCodeMetrics;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAwsOrg {
   arn: string;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportCloudWatchMetrics {
   enabled: boolean;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKms {
   key_id: string;
 }
-export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3 {}
+
+export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3 {
+}
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryption {
   sse_kms: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseKms;
   sse_s3: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryptionSseS3;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestination {
   account_id: string;
   arn: string;
@@ -71,18 +91,22 @@ export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfiguratio
   prefix?: string;
   encryption: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestinationEncryption;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExport {
   cloud_watch_metrics: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportCloudWatchMetrics;
   s3_bucket_destination: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationDataExportS3BucketDestination;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationExclude {
   buckets?: string[];
   regions?: string[];
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationInclude {
   buckets?: string[];
   regions?: string[];
 }
+
 export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfiguration {
   enabled: boolean;
   account_level: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationAccountLevel;
@@ -91,20 +115,19 @@ export interface AwsS3controlStorageLensConfigurationArgsStorageLensConfiguratio
   exclude: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationExclude;
   include: AwsS3controlStorageLensConfigurationArgsStorageLensConfigurationInclude;
 }
+
 export interface AwsS3controlStorageLensConfigurationArgs {
   config_id: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   storage_lens_configuration: AwsS3controlStorageLensConfigurationArgsStorageLensConfiguration;
 }
+
 export class aws_s3control_storage_lens_configuration extends TerraformResource {
   readonly account_id?: string;
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsS3controlStorageLensConfigurationArgs) {
     super(config, "resource", args, resourceName, "aws_s3control_storage_lens_configuration");
   }

@@ -1,15 +1,16 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig {
-  annotations?: {
-    [key: string]: string;
-  };
+  annotations?: { [key: string]: string };
   preferred_value: string;
 }
+
 export interface GoogleCloudQuotasQuotaPreferenceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleCloudQuotasQuotaPreferenceArgs {
   contact_email?: string;
   ignore_safety_checks?: string;
@@ -17,11 +18,10 @@ export interface GoogleCloudQuotasQuotaPreferenceArgs {
   quota_config: GoogleCloudQuotasQuotaPreferenceArgsQuotaConfig;
   timeouts?: GoogleCloudQuotasQuotaPreferenceArgsTimeouts;
 }
+
 export class google_cloud_quotas_quota_preference extends TerraformResource {
   readonly create_time!: string;
-  readonly dimensions?: {
-    [key: string]: string;
-  };
+  readonly dimensions?: { [key: string]: string };
   readonly etag!: string;
   readonly id?: string;
   readonly name?: string;
@@ -30,6 +30,7 @@ export class google_cloud_quotas_quota_preference extends TerraformResource {
   readonly reconciling!: boolean;
   readonly service?: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleCloudQuotasQuotaPreferenceArgs) {
     super(config, "resource", args, resourceName, "google_cloud_quotas_quota_preference");
   }

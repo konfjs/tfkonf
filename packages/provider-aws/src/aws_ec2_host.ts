@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsEc2HostArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsEc2HostArgs {
   auto_placement?: string;
   availability_zone: string;
@@ -11,19 +13,17 @@ export interface AwsEc2HostArgs {
   instance_family?: string;
   instance_type?: string;
   outpost_arn?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsEc2HostArgsTimeouts;
 }
+
 export class aws_ec2_host extends TerraformResource {
   readonly arn!: string;
   readonly asset_id?: string;
   readonly id?: string;
   readonly owner_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsEc2HostArgs) {
     super(config, "resource", args, resourceName, "aws_ec2_host");
   }

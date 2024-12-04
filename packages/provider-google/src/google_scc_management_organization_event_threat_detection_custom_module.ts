@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSccManagementOrganizationEventThreatDetectionCustomModuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSccManagementOrganizationEventThreatDetectionCustomModuleArgs {
   config?: string;
   display_name?: string;
@@ -13,11 +15,13 @@ export interface GoogleSccManagementOrganizationEventThreatDetectionCustomModule
   type?: string;
   timeouts?: GoogleSccManagementOrganizationEventThreatDetectionCustomModuleArgsTimeouts;
 }
+
 export class google_scc_management_organization_event_threat_detection_custom_module extends TerraformResource {
   readonly id?: string;
   readonly last_editor!: string;
   readonly name!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSccManagementOrganizationEventThreatDetectionCustomModuleArgs) {
     super(config, "resource", args, resourceName, "google_scc_management_organization_event_threat_detection_custom_module");
   }

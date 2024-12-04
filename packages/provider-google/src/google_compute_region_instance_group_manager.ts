@@ -1,41 +1,46 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsAllInstancesConfig {
-  labels?: {
-    [key: string]: string;
-  };
-  metadata?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
+  metadata?: { [key: string]: string };
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsAutoHealingPolicies {
   health_check: string;
   initial_delay_sec: number;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsInstanceLifecyclePolicy {
   default_action_on_failure?: string;
   force_update_on_repair?: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsNamedPort {
   name: string;
   port: number;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsStatefulDisk {
   delete_rule?: string;
   device_name: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsStatefulExternalIp {
   delete_rule?: string;
   interface_name?: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsStatefulInternalIp {
   delete_rule?: string;
   interface_name?: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy {
   instance_redistribution_type?: string;
   max_surge_percent?: number;
@@ -45,15 +50,18 @@ export interface GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy {
   replacement_method?: string;
   type: string;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsVersionTargetSize {
   fixed?: number;
   percent?: number;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgsVersion {
   instance_template: string;
   name?: string;
   target_size: GoogleComputeRegionInstanceGroupManagerArgsVersionTargetSize;
 }
+
 export interface GoogleComputeRegionInstanceGroupManagerArgs {
   base_instance_name: string;
   description?: string;
@@ -73,6 +81,7 @@ export interface GoogleComputeRegionInstanceGroupManagerArgs {
   update_policy: GoogleComputeRegionInstanceGroupManagerArgsUpdatePolicy;
   version: GoogleComputeRegionInstanceGroupManagerArgsVersion;
 }
+
 export class google_compute_region_instance_group_manager extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly distribution_policy_target_shape?: string;
@@ -85,6 +94,7 @@ export class google_compute_region_instance_group_manager extends TerraformResou
   readonly self_link!: string;
   readonly status!: any[];
   readonly target_size?: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionInstanceGroupManagerArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_instance_group_manager");
   }

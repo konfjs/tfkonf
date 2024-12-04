@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDirectoryServiceRadiusSettingsArgsTimeouts {
   create?: string;
   update?: string;
 }
+
 export interface AwsDirectoryServiceRadiusSettingsArgs {
   authentication_protocol: string;
   directory_id: string;
@@ -15,8 +17,10 @@ export interface AwsDirectoryServiceRadiusSettingsArgs {
   use_same_username?: boolean;
   timeouts?: AwsDirectoryServiceRadiusSettingsArgsTimeouts;
 }
+
 export class aws_directory_service_radius_settings extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDirectoryServiceRadiusSettingsArgs) {
     super(config, "resource", args, resourceName, "aws_directory_service_radius_settings");
   }

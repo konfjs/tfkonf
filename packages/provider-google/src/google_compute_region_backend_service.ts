@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionBackendServiceArgsBackend {
   balancing_mode?: string;
   capacity_scaler?: number;
@@ -12,6 +13,7 @@ export interface GoogleComputeRegionBackendServiceArgsBackend {
   max_rate_per_instance?: number;
   max_utilization?: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsCdnPolicyCacheKeyPolicy {
   include_host?: boolean;
   include_named_cookies?: string[];
@@ -20,14 +22,17 @@ export interface GoogleComputeRegionBackendServiceArgsCdnPolicyCacheKeyPolicy {
   query_string_blacklist?: string[];
   query_string_whitelist?: string[];
 }
+
 export interface GoogleComputeRegionBackendServiceArgsCdnPolicyNegativeCachingPolicy {
   code?: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsCdnPolicy {
   signed_url_cache_max_age_sec?: number;
   cache_key_policy: GoogleComputeRegionBackendServiceArgsCdnPolicyCacheKeyPolicy;
   negative_caching_policy: GoogleComputeRegionBackendServiceArgsCdnPolicyNegativeCachingPolicy;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsCircuitBreakers {
   max_connections?: number;
   max_pending_requests?: number;
@@ -35,40 +40,49 @@ export interface GoogleComputeRegionBackendServiceArgsCircuitBreakers {
   max_requests_per_connection?: number;
   max_retries?: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookieTtl {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookie {
   name?: string;
   path?: string;
   ttl: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookieTtl;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsConsistentHash {
   http_header_name?: string;
   minimum_ring_size?: number;
   http_cookie: GoogleComputeRegionBackendServiceArgsConsistentHashHttpCookie;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsFailoverPolicy {
   failover_ratio?: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsIap {
   enabled: boolean;
   oauth2_client_id?: string;
   oauth2_client_secret?: string;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsLogConfig {
   enable?: boolean;
   sample_rate?: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjectionTime {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsOutlierDetectionInterval {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsOutlierDetection {
   consecutive_errors?: number;
   consecutive_gateway_failure?: number;
@@ -82,20 +96,24 @@ export interface GoogleComputeRegionBackendServiceArgsOutlierDetection {
   base_ejection_time: GoogleComputeRegionBackendServiceArgsOutlierDetectionBaseEjectionTime;
   interval: GoogleComputeRegionBackendServiceArgsOutlierDetectionInterval;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookieTtl {
   nanos?: number;
   seconds: number;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie {
   name?: string;
   path?: string;
   ttl: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookieTtl;
 }
+
 export interface GoogleComputeRegionBackendServiceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionBackendServiceArgs {
   affinity_cookie_ttl_sec?: number;
   connection_draining_timeout_sec?: number;
@@ -118,6 +136,7 @@ export interface GoogleComputeRegionBackendServiceArgs {
   strong_session_affinity_cookie: GoogleComputeRegionBackendServiceArgsStrongSessionAffinityCookie;
   timeouts?: GoogleComputeRegionBackendServiceArgsTimeouts;
 }
+
 export class google_compute_region_backend_service extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly fingerprint!: string;
@@ -130,6 +149,7 @@ export class google_compute_region_backend_service extends TerraformResource {
   readonly self_link!: string;
   readonly session_affinity?: string;
   readonly timeout_sec?: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionBackendServiceArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_backend_service");
   }

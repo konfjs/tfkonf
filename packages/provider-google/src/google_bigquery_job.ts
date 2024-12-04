@@ -1,13 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleBigqueryJobArgsCopyDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
+
 export interface GoogleBigqueryJobArgsCopyDestinationTable {
   table_id: string;
 }
+
 export interface GoogleBigqueryJobArgsCopySourceTables {
   table_id: string;
 }
+
 export interface GoogleBigqueryJobArgsCopy {
   create_disposition?: string;
   write_disposition?: string;
@@ -15,14 +19,17 @@ export interface GoogleBigqueryJobArgsCopy {
   destination_table: GoogleBigqueryJobArgsCopyDestinationTable;
   source_tables: GoogleBigqueryJobArgsCopySourceTables;
 }
+
 export interface GoogleBigqueryJobArgsExtractSourceModel {
   dataset_id: string;
   model_id: string;
   project_id: string;
 }
+
 export interface GoogleBigqueryJobArgsExtractSourceTable {
   table_id: string;
 }
+
 export interface GoogleBigqueryJobArgsExtract {
   compression?: string;
   destination_uris: string[];
@@ -31,21 +38,26 @@ export interface GoogleBigqueryJobArgsExtract {
   source_model: GoogleBigqueryJobArgsExtractSourceModel;
   source_table: GoogleBigqueryJobArgsExtractSourceTable;
 }
+
 export interface GoogleBigqueryJobArgsLoadDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
+
 export interface GoogleBigqueryJobArgsLoadDestinationTable {
   table_id: string;
 }
+
 export interface GoogleBigqueryJobArgsLoadParquetOptions {
   enable_list_inference?: boolean;
   enum_as_string?: boolean;
 }
+
 export interface GoogleBigqueryJobArgsLoadTimePartitioning {
   expiration_ms?: string;
   field?: string;
   type: string;
 }
+
 export interface GoogleBigqueryJobArgsLoad {
   allow_jagged_rows?: boolean;
   allow_quoted_newlines?: boolean;
@@ -67,24 +79,30 @@ export interface GoogleBigqueryJobArgsLoad {
   parquet_options: GoogleBigqueryJobArgsLoadParquetOptions;
   time_partitioning: GoogleBigqueryJobArgsLoadTimePartitioning;
 }
+
 export interface GoogleBigqueryJobArgsQueryDefaultDataset {
   dataset_id: string;
 }
+
 export interface GoogleBigqueryJobArgsQueryDestinationEncryptionConfiguration {
   kms_key_name: string;
 }
+
 export interface GoogleBigqueryJobArgsQueryDestinationTable {
   table_id: string;
 }
+
 export interface GoogleBigqueryJobArgsQueryScriptOptions {
   key_result_statement?: string;
   statement_byte_budget?: string;
   statement_timeout_ms?: string;
 }
+
 export interface GoogleBigqueryJobArgsQueryUserDefinedFunctionResources {
   inline_code?: string;
   resource_uri?: string;
 }
+
 export interface GoogleBigqueryJobArgsQuery {
   allow_large_results?: boolean;
   create_disposition?: string;
@@ -104,17 +122,17 @@ export interface GoogleBigqueryJobArgsQuery {
   script_options: GoogleBigqueryJobArgsQueryScriptOptions;
   user_defined_function_resources: GoogleBigqueryJobArgsQueryUserDefinedFunctionResources;
 }
+
 export interface GoogleBigqueryJobArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleBigqueryJobArgs {
   job_id: string;
   job_timeout_ms?: string;
-  labels?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
   location?: string;
   copy: GoogleBigqueryJobArgsCopy;
   extract: GoogleBigqueryJobArgsExtract;
@@ -122,18 +140,16 @@ export interface GoogleBigqueryJobArgs {
   query: GoogleBigqueryJobArgsQuery;
   timeouts?: GoogleBigqueryJobArgsTimeouts;
 }
+
 export class google_bigquery_job extends TerraformResource {
-  readonly effective_labels!: {
-    [key: string]: string;
-  };
+  readonly effective_labels!: { [key: string]: string };
   readonly id?: string;
   readonly job_type!: string;
   readonly project?: string;
   readonly status!: any[];
-  readonly terraform_labels!: {
-    [key: string]: string;
-  };
+  readonly terraform_labels!: { [key: string]: string };
   readonly user_email!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleBigqueryJobArgs) {
     super(config, "resource", args, resourceName, "google_bigquery_job");
   }

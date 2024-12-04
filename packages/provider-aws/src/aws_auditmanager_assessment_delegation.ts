@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsAuditmanagerAssessmentDelegationArgs {
   assessment_id: string;
   comment?: string;
@@ -6,10 +7,12 @@ export interface AwsAuditmanagerAssessmentDelegationArgs {
   role_arn: string;
   role_type: string;
 }
+
 export class aws_auditmanager_assessment_delegation extends TerraformResource {
   readonly delegation_id!: string;
   readonly id!: string;
   readonly status!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAuditmanagerAssessmentDelegationArgs) {
     super(config, "resource", args, resourceName, "aws_auditmanager_assessment_delegation");
   }

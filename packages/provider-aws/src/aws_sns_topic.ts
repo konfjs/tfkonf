@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSnsTopicArgs {
   application_failure_feedback_role_arn?: string;
   application_success_feedback_role_arn?: string;
@@ -21,10 +22,9 @@ export interface AwsSnsTopicArgs {
   sqs_failure_feedback_role_arn?: string;
   sqs_success_feedback_role_arn?: string;
   sqs_success_feedback_sample_rate?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_sns_topic extends TerraformResource {
   readonly arn!: string;
   readonly beginning_archive_time!: string;
@@ -34,10 +34,9 @@ export class aws_sns_topic extends TerraformResource {
   readonly owner!: string;
   readonly policy?: string;
   readonly signature_version?: number;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly tracing_config?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSnsTopicArgs) {
     super(config, "resource", args, resourceName, "aws_sns_topic");
   }

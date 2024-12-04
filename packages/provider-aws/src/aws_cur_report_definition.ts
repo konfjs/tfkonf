@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCurReportDefinitionArgs {
   additional_artifacts?: string[];
   additional_schema_elements: string[];
@@ -10,17 +11,15 @@ export interface AwsCurReportDefinitionArgs {
   s3_bucket: string;
   s3_prefix?: string;
   s3_region: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   time_unit: string;
 }
+
 export class aws_cur_report_definition extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCurReportDefinitionArgs) {
     super(config, "resource", args, resourceName, "aws_cur_report_definition");
   }

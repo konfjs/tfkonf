@@ -1,27 +1,34 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleMonitoringUptimeCheckConfigArgsContentMatchersJsonPathMatcher {
   json_matcher?: string;
   json_path: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsContentMatchers {
   content: string;
   matcher?: string;
   json_path_matcher: GoogleMonitoringUptimeCheckConfigArgsContentMatchersJsonPathMatcher;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheckAcceptedResponseStatusCodes {
   status_class?: string;
   status_value?: number;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheckAuthInfo {
   password: string;
   username: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheckPingConfig {
   pings_count: number;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheckServiceAgentAuthentication {
   type?: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheck {
   body?: string;
   content_type?: string;
@@ -36,42 +43,46 @@ export interface GoogleMonitoringUptimeCheckConfigArgsHttpCheck {
   ping_config: GoogleMonitoringUptimeCheckConfigArgsHttpCheckPingConfig;
   service_agent_authentication: GoogleMonitoringUptimeCheckConfigArgsHttpCheckServiceAgentAuthentication;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsMonitoredResource {
-  labels: {
-    [key: string]: string;
-  };
+  labels: { [key: string]: string };
   type: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsResourceGroup {
   group_id?: string;
   resource_type?: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsSyntheticMonitorCloudFunctionV2 {
   name: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsSyntheticMonitor {
   cloud_function_v2: GoogleMonitoringUptimeCheckConfigArgsSyntheticMonitorCloudFunctionV2;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsTcpCheckPingConfig {
   pings_count: number;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsTcpCheck {
   port: number;
   ping_config: GoogleMonitoringUptimeCheckConfigArgsTcpCheckPingConfig;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleMonitoringUptimeCheckConfigArgs {
   display_name: string;
   period?: string;
   selected_regions?: string[];
   timeout: string;
-  user_labels?: {
-    [key: string]: string;
-  };
+  user_labels?: { [key: string]: string };
   content_matchers: GoogleMonitoringUptimeCheckConfigArgsContentMatchers;
   http_check: GoogleMonitoringUptimeCheckConfigArgsHttpCheck;
   monitored_resource: GoogleMonitoringUptimeCheckConfigArgsMonitoredResource;
@@ -80,12 +91,14 @@ export interface GoogleMonitoringUptimeCheckConfigArgs {
   tcp_check: GoogleMonitoringUptimeCheckConfigArgsTcpCheck;
   timeouts?: GoogleMonitoringUptimeCheckConfigArgsTimeouts;
 }
+
 export class google_monitoring_uptime_check_config extends TerraformResource {
   readonly checker_type?: string;
   readonly id?: string;
   readonly name!: string;
   readonly project?: string;
   readonly uptime_check_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleMonitoringUptimeCheckConfigArgs) {
     super(config, "resource", args, resourceName, "google_monitoring_uptime_check_config");
   }

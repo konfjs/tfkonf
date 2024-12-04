@@ -1,20 +1,19 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsApiGatewayRestApiArgsEndpointConfiguration {
   types: string[];
 }
+
 export interface AwsApiGatewayRestApiArgs {
   body?: string;
   fail_on_warnings?: boolean;
   name: string;
-  parameters?: {
-    [key: string]: string;
-  };
+  parameters?: { [key: string]: string };
   put_rest_api_mode?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   endpoint_configuration: AwsApiGatewayRestApiArgsEndpointConfiguration;
 }
+
 export class aws_api_gateway_rest_api extends TerraformResource {
   readonly api_key_source?: string;
   readonly arn!: string;
@@ -27,9 +26,8 @@ export class aws_api_gateway_rest_api extends TerraformResource {
   readonly minimum_compression_size?: string;
   readonly policy?: string;
   readonly root_resource_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsApiGatewayRestApiArgs) {
     super(config, "resource", args, resourceName, "aws_api_gateway_rest_api");
   }

@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDmsS3EndpointArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsDmsS3EndpointArgs {
   add_column_name?: boolean;
   add_trailing_padding_character?: boolean;
@@ -45,14 +47,13 @@ export interface AwsDmsS3EndpointArgs {
   row_group_length?: number;
   server_side_encryption_kms_key_id?: string;
   service_access_role_arn: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timestamp_column_name?: string;
   use_csv_no_sup_value?: boolean;
   use_task_start_time_for_full_load_timestamp?: boolean;
   timeouts?: AwsDmsS3EndpointArgsTimeouts;
 }
+
 export class aws_dms_s3_endpoint extends TerraformResource {
   readonly certificate_arn?: string;
   readonly endpoint_arn!: string;
@@ -62,9 +63,8 @@ export class aws_dms_s3_endpoint extends TerraformResource {
   readonly kms_key_arn?: string;
   readonly ssl_mode?: string;
   readonly status!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDmsS3EndpointArgs) {
     super(config, "resource", args, resourceName, "aws_dms_s3_endpoint");
   }

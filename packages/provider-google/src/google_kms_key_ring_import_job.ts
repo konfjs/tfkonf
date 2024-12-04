@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleKmsKeyRingImportJobArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleKmsKeyRingImportJobArgs {
   import_job_id: string;
   import_method: string;
@@ -10,6 +12,7 @@ export interface GoogleKmsKeyRingImportJobArgs {
   protection_level: string;
   timeouts?: GoogleKmsKeyRingImportJobArgsTimeouts;
 }
+
 export class google_kms_key_ring_import_job extends TerraformResource {
   readonly attestation!: any[];
   readonly expire_time!: string;
@@ -17,6 +20,7 @@ export class google_kms_key_ring_import_job extends TerraformResource {
   readonly name!: string;
   readonly public_key!: any[];
   readonly state!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleKmsKeyRingImportJobArgs) {
     super(config, "resource", args, resourceName, "google_kms_key_ring_import_job");
   }

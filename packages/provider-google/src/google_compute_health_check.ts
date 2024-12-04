@@ -1,10 +1,12 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeHealthCheckArgsGrpcHealthCheck {
   grpc_service_name?: string;
   port?: number;
   port_name?: string;
   port_specification?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsHttp2HealthCheck {
   host?: string;
   port?: number;
@@ -14,6 +16,7 @@ export interface GoogleComputeHealthCheckArgsHttp2HealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsHttpHealthCheck {
   host?: string;
   port?: number;
@@ -23,6 +26,7 @@ export interface GoogleComputeHealthCheckArgsHttpHealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsHttpsHealthCheck {
   host?: string;
   port?: number;
@@ -32,9 +36,11 @@ export interface GoogleComputeHealthCheckArgsHttpsHealthCheck {
   request_path?: string;
   response?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsLogConfig {
   enable?: boolean;
 }
+
 export interface GoogleComputeHealthCheckArgsSslHealthCheck {
   port?: number;
   port_name?: string;
@@ -43,6 +49,7 @@ export interface GoogleComputeHealthCheckArgsSslHealthCheck {
   request?: string;
   response?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsTcpHealthCheck {
   port?: number;
   port_name?: string;
@@ -51,11 +58,13 @@ export interface GoogleComputeHealthCheckArgsTcpHealthCheck {
   request?: string;
   response?: string;
 }
+
 export interface GoogleComputeHealthCheckArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeHealthCheckArgs {
   check_interval_sec?: number;
   description?: string;
@@ -73,12 +82,14 @@ export interface GoogleComputeHealthCheckArgs {
   tcp_health_check: GoogleComputeHealthCheckArgsTcpHealthCheck;
   timeouts?: GoogleComputeHealthCheckArgsTimeouts;
 }
+
 export class google_compute_health_check extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
   readonly project?: string;
   readonly self_link!: string;
   readonly type!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeHealthCheckArgs) {
     super(config, "resource", args, resourceName, "google_compute_health_check");
   }

@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDocdbClusterInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsDocdbClusterInstanceArgs {
   apply_immediately?: boolean;
   auto_minor_version_upgrade?: boolean;
@@ -13,11 +15,10 @@ export interface AwsDocdbClusterInstanceArgs {
   engine?: string;
   instance_class: string;
   promotion_tier?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsDocdbClusterInstanceArgsTimeouts;
 }
+
 export class aws_docdb_cluster_instance extends TerraformResource {
   readonly arn!: string;
   readonly availability_zone?: string;
@@ -36,10 +37,9 @@ export class aws_docdb_cluster_instance extends TerraformResource {
   readonly preferred_maintenance_window?: string;
   readonly publicly_accessible!: boolean;
   readonly storage_encrypted!: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly writer!: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDocdbClusterInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_docdb_cluster_instance");
   }

@@ -1,10 +1,14 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCognitoUserPoolClientArgsAnalyticsConfiguration {
   application_arn?: string;
   application_id?: string;
   external_id?: string;
 }
-export interface AwsCognitoUserPoolClientArgsTokenValidityUnits {}
+
+export interface AwsCognitoUserPoolClientArgsTokenValidityUnits {
+}
+
 export interface AwsCognitoUserPoolClientArgs {
   generate_secret?: boolean;
   name: string;
@@ -12,6 +16,7 @@ export interface AwsCognitoUserPoolClientArgs {
   analytics_configuration: AwsCognitoUserPoolClientArgsAnalyticsConfiguration;
   token_validity_units: AwsCognitoUserPoolClientArgsTokenValidityUnits;
 }
+
 export class aws_cognito_user_pool_client extends TerraformResource {
   readonly access_token_validity?: number;
   readonly allowed_oauth_flows?: string[];
@@ -32,6 +37,7 @@ export class aws_cognito_user_pool_client extends TerraformResource {
   readonly refresh_token_validity?: number;
   readonly supported_identity_providers?: string[];
   readonly write_attributes?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCognitoUserPoolClientArgs) {
     super(config, "resource", args, resourceName, "aws_cognito_user_pool_client");
   }

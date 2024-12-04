@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsS3ObjectCopyArgsGrant {
   email?: string;
   id?: string;
@@ -6,6 +7,7 @@ export interface AwsS3ObjectCopyArgsGrant {
   type: string;
   uri?: string;
 }
+
 export interface AwsS3ObjectCopyArgs {
   bucket: string;
   checksum_algorithm?: string;
@@ -26,11 +28,10 @@ export interface AwsS3ObjectCopyArgs {
   source_customer_key?: string;
   source_customer_key_md5?: string;
   tagging_directive?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   grant: AwsS3ObjectCopyArgsGrant;
 }
+
 export class aws_s3_object_copy extends TerraformResource {
   readonly acl?: string;
   readonly arn!: string;
@@ -52,9 +53,7 @@ export class aws_s3_object_copy extends TerraformResource {
   readonly kms_encryption_context?: string;
   readonly kms_key_id?: string;
   readonly last_modified!: string;
-  readonly metadata?: {
-    [key: string]: string;
-  };
+  readonly metadata?: { [key: string]: string };
   readonly object_lock_legal_hold_status?: string;
   readonly object_lock_mode?: string;
   readonly object_lock_retain_until_date?: string;
@@ -62,11 +61,10 @@ export class aws_s3_object_copy extends TerraformResource {
   readonly server_side_encryption?: string;
   readonly source_version_id!: string;
   readonly storage_class?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly version_id!: string;
   readonly website_redirect?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsS3ObjectCopyArgs) {
     super(config, "resource", args, resourceName, "aws_s3_object_copy");
   }

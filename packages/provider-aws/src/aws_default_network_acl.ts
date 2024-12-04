@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDefaultNetworkAclArgsEgress {
   action: string;
   cidr_block?: string;
@@ -10,6 +11,7 @@ export interface AwsDefaultNetworkAclArgsEgress {
   rule_no: number;
   to_port: number;
 }
+
 export interface AwsDefaultNetworkAclArgsIngress {
   action: string;
   cidr_block?: string;
@@ -21,23 +23,22 @@ export interface AwsDefaultNetworkAclArgsIngress {
   rule_no: number;
   to_port: number;
 }
+
 export interface AwsDefaultNetworkAclArgs {
   default_network_acl_id: string;
   subnet_ids?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   egress: AwsDefaultNetworkAclArgsEgress;
   ingress: AwsDefaultNetworkAclArgsIngress;
 }
+
 export class aws_default_network_acl extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
   readonly owner_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDefaultNetworkAclArgs) {
     super(config, "resource", args, resourceName, "aws_default_network_acl");
   }

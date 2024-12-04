@@ -1,10 +1,12 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsStoragegatewayGatewayArgsMaintenanceStartTime {
   day_of_month?: string;
   day_of_week?: string;
   hour_of_day: number;
   minute_of_hour?: number;
 }
+
 export interface AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings {
   domain_controllers?: string[];
   domain_name: string;
@@ -13,9 +15,11 @@ export interface AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings {
   timeout_in_seconds?: number;
   username: string;
 }
+
 export interface AwsStoragegatewayGatewayArgsTimeouts {
   create?: string;
 }
+
 export interface AwsStoragegatewayGatewayArgs {
   average_download_rate_limit_in_bits_per_sec?: number;
   average_upload_rate_limit_in_bits_per_sec?: number;
@@ -27,14 +31,13 @@ export interface AwsStoragegatewayGatewayArgs {
   medium_changer_type?: string;
   smb_file_share_visibility?: boolean;
   smb_guest_password?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   tape_drive_type?: string;
   maintenance_start_time: AwsStoragegatewayGatewayArgsMaintenanceStartTime;
   smb_active_directory_settings: AwsStoragegatewayGatewayArgsSmbActiveDirectorySettings;
   timeouts?: AwsStoragegatewayGatewayArgsTimeouts;
 }
+
 export class aws_storagegateway_gateway extends TerraformResource {
   readonly activation_key?: string;
   readonly arn!: string;
@@ -46,9 +49,8 @@ export class aws_storagegateway_gateway extends TerraformResource {
   readonly host_environment!: string;
   readonly id?: string;
   readonly smb_security_strategy?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsStoragegatewayGatewayArgs) {
     super(config, "resource", args, resourceName, "aws_storagegateway_gateway");
   }

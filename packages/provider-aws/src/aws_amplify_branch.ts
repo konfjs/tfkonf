@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsAmplifyBranchArgs {
   app_id: string;
   backend_environment_arn?: string;
@@ -10,17 +11,14 @@ export interface AwsAmplifyBranchArgs {
   enable_notification?: boolean;
   enable_performance_mode?: boolean;
   enable_pull_request_preview?: boolean;
-  environment_variables?: {
-    [key: string]: string;
-  };
+  environment_variables?: { [key: string]: string };
   framework?: string;
   pull_request_environment_name?: string;
   stage?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   ttl?: string;
 }
+
 export class aws_amplify_branch extends TerraformResource {
   readonly arn!: string;
   readonly associated_resources!: string[];
@@ -29,9 +27,8 @@ export class aws_amplify_branch extends TerraformResource {
   readonly display_name?: string;
   readonly id?: string;
   readonly source_branch!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAmplifyBranchArgs) {
     super(config, "resource", args, resourceName, "aws_amplify_branch");
   }

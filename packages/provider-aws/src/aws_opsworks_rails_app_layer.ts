@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksRailsAppLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksRailsAppLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksRailsAppLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksRailsAppLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksRailsAppLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksRailsAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksRailsAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksRailsAppLayerArgs {
   app_server?: string;
   auto_assign_elastic_ips?: boolean;
@@ -73,20 +80,18 @@ export interface AwsOpsworksRailsAppLayerArgs {
   rubygems_version?: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksRailsAppLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksRailsAppLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksRailsAppLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_rails_app_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksRailsAppLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_rails_app_layer");
   }

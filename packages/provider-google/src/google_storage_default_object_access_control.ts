@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleStorageDefaultObjectAccessControlArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleStorageDefaultObjectAccessControlArgs {
   bucket: string;
   entity: string;
@@ -11,6 +13,7 @@ export interface GoogleStorageDefaultObjectAccessControlArgs {
   role: string;
   timeouts?: GoogleStorageDefaultObjectAccessControlArgsTimeouts;
 }
+
 export class google_storage_default_object_access_control extends TerraformResource {
   readonly domain!: string;
   readonly email!: string;
@@ -18,6 +21,7 @@ export class google_storage_default_object_access_control extends TerraformResou
   readonly generation!: number;
   readonly id?: string;
   readonly project_team!: any[];
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleStorageDefaultObjectAccessControlArgs) {
     super(config, "resource", args, resourceName, "google_storage_default_object_access_control");
   }

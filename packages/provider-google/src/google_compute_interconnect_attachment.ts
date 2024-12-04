@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeInterconnectAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeInterconnectAttachmentArgs {
   admin_enabled?: boolean;
   candidate_subnets?: string[];
@@ -16,6 +18,7 @@ export interface GoogleComputeInterconnectAttachmentArgs {
   subnet_length?: number;
   timeouts?: GoogleComputeInterconnectAttachmentArgsTimeouts;
 }
+
 export class google_compute_interconnect_attachment extends TerraformResource {
   readonly bandwidth?: string;
   readonly cloud_router_ip_address!: string;
@@ -37,6 +40,7 @@ export class google_compute_interconnect_attachment extends TerraformResource {
   readonly state!: string;
   readonly type?: string;
   readonly vlan_tag8021q?: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeInterconnectAttachmentArgs) {
     super(config, "resource", args, resourceName, "google_compute_interconnect_attachment");
   }

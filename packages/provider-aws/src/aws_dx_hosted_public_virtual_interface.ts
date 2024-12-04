@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDxHostedPublicVirtualInterfaceArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsDxHostedPublicVirtualInterfaceArgs {
   address_family: string;
   bgp_asn: number;
@@ -13,6 +15,7 @@ export interface AwsDxHostedPublicVirtualInterfaceArgs {
   vlan: number;
   timeouts?: AwsDxHostedPublicVirtualInterfaceArgsTimeouts;
 }
+
 export class aws_dx_hosted_public_virtual_interface extends TerraformResource {
   readonly amazon_address?: string;
   readonly amazon_side_asn!: string;
@@ -21,6 +24,7 @@ export class aws_dx_hosted_public_virtual_interface extends TerraformResource {
   readonly bgp_auth_key?: string;
   readonly customer_address?: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDxHostedPublicVirtualInterfaceArgs) {
     super(config, "resource", args, resourceName, "aws_dx_hosted_public_virtual_interface");
   }

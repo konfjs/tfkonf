@@ -1,20 +1,25 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksInstanceArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
 }
+
 export interface AwsOpsworksInstanceArgsEphemeralBlockDevice {
   device_name: string;
   virtual_name: string;
 }
+
 export interface AwsOpsworksInstanceArgsRootBlockDevice {
   delete_on_termination?: boolean;
 }
+
 export interface AwsOpsworksInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsOpsworksInstanceArgs {
   agent_version?: string;
   architecture?: string;
@@ -32,6 +37,7 @@ export interface AwsOpsworksInstanceArgs {
   root_block_device: AwsOpsworksInstanceArgsRootBlockDevice;
   timeouts?: AwsOpsworksInstanceArgsTimeouts;
 }
+
 export class aws_opsworks_instance extends TerraformResource {
   readonly ami_id?: string;
   readonly availability_zone?: string;
@@ -65,6 +71,7 @@ export class aws_opsworks_instance extends TerraformResource {
   readonly subnet_id?: string;
   readonly tenancy?: string;
   readonly virtualization_type?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_instance");
   }
