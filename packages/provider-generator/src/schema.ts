@@ -19,7 +19,7 @@ export interface Attribute {
 }
 
 export interface BlockType {
-    nesting_mode: 'single' | 'list' | 'set';
+    nesting_mode: 'single' | 'list' | 'set' | 'map';
     block: Block;
     min_items?: number;
     max_items?: number;
@@ -35,6 +35,9 @@ export interface Block {
     };
 }
 
+/**
+ * https://developer.hashicorp.com/terraform/cli/commands/providers/schema
+ */
 export interface ProviderSchema {
     provider: {
         block: Block;

@@ -120,8 +120,10 @@ export function generateInterfaceDeclaration(
             properties.push({
                 kind: StructureKind.PropertySignature,
                 name: blockName,
+                // TODO: Check if the block is a list, set or map. Generate correct block type.
                 type: toPascalCase(childInterfaceName),
-                hasQuestionToken: blockName === 'timeouts',
+                hasQuestionToken:
+                    blockName === 'timeouts' || !blockType.min_items || blockType.min_items === 0,
             });
             generateInterfaceDeclaration(blockName, blockType.block, interfaces, interfaceName);
         }
