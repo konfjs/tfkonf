@@ -1,5 +1,10 @@
-import * as t from '@babel/types';
 import pc from 'picocolors';
+import {
+    InterfaceDeclarationStructure,
+    PropertySignatureStructure,
+    SourceFile,
+    StructureKind,
+} from 'ts-morph';
 import type { Attribute, AttributeType, Block } from './schema.js';
 import { toPascalCase } from './utils.js';
 
@@ -7,31 +12,30 @@ import { toPascalCase } from './utils.js';
  * Array's first element is always "list", "set" or "map".
  * jq '[.[] | select(type == "array")[0]] | unique' types.json
  */
-function getListType(type: AttributeType): t.TSType {
+function getListType(type: AttributeType) {
     if (type[0] === 'list' || type[0] === 'set') {
         if (type[1] === 'string') {
-            return t.tsArrayType(t.tsStringKeyword());
+            return 'string[]';
         }
         if (type[1] === 'number') {
-            return t.tsArrayType(t.tsNumberKeyword());
+            return 'number[]';
         }
         if (Array.isArray(type[1])) {
             // TODO: Recursively handle nested types.
         }
     }
     if (type[0] === 'map') {
-        let mapType: t.TSType = t.tsAnyKeyword();
+        let mapType = 'any';
         if (type[1] === 'string') {
-            mapType = t.tsStringKeyword();
+            mapType = 'string';
         }
         if (type[1] === 'number') {
-            mapType = t.tsNumberKeyword();
+            mapType = 'number';
         }
-        return t.tsTypeLiteral([
-            t.tsIndexSignature([t.identifier('key: string')], t.tsTypeAnnotation(mapType)),
-        ]);
+
+        return `{ [key: string]: ${mapType} }`;
     }
-    return t.tsArrayType(t.tsAnyKeyword());
+    return 'any[]';
 }
 
 /**
@@ -44,28 +48,40 @@ function getListType(type: AttributeType): t.TSType {
  * It seems attribute type is either "bool", "number", "string" or "array".
  * jq '.[] | select(type != "array")' types.json
  */
-export function getTSType(attr: Attribute): t.TSType {
+export function getTSType(attr: Attribute) {
     if (Array.isArray(attr.type) && attr.type.length === 2) {
         return getListType(attr.type);
     }
 
     switch (attr.type) {
         case 'string':
-            return t.tsStringKeyword();
+            return 'string';
         case 'number':
-            return t.tsNumberKeyword();
+            return 'number';
         case 'bool':
-            return t.tsBooleanKeyword();
+            return 'boolean';
         default:
             console.log(pc.dim(JSON.stringify(attr, null, 2)));
             throw new Error('Unknown attribute type');
     }
 }
 
-export function generateInterfaceDeclaration(
-    ast: t.Program,
+export function generateInterfaces(
+    sourceFile: SourceFile,
     resourceName: string,
     block: Block,
+    parentName = '',
+    topLevel = false,
+) {
+    const interfaces: InterfaceDeclarationStructure[] = [];
+    generateInterfaceDeclaration(resourceName, block, interfaces, parentName, topLevel);
+    sourceFile.addInterfaces(interfaces);
+}
+
+export function generateInterfaceDeclaration(
+    resourceName: string,
+    block: Block,
+    interfaces: InterfaceDeclarationStructure[],
     parentName = '',
     topLevel = false,
 ) {
@@ -83,17 +99,17 @@ export function generateInterfaceDeclaration(
         interfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceName)}`;
     }
 
-    const properties: t.TSPropertySignature[] = [];
+    const properties: PropertySignatureStructure[] = [];
 
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
             if (!attributeBody.computed) {
-                const i = t.tsPropertySignature(
-                    t.identifier(attributeName),
-                    t.tsTypeAnnotation(getTSType(attributeBody)),
-                );
-                i.optional = attributeBody.optional;
-                properties.push(i);
+                properties.push({
+                    kind: StructureKind.PropertySignature,
+                    name: attributeName,
+                    type: getTSType(attributeBody),
+                    hasQuestionToken: attributeBody.optional,
+                });
             }
         }
     }
@@ -101,29 +117,20 @@ export function generateInterfaceDeclaration(
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
             const childInterfaceName = `${interfaceName}${toPascalCase(blockName)}`;
-            const propertyToInterface = t.identifier(blockName);
-            const i = t.tsPropertySignature(
-                propertyToInterface,
-                t.tsTypeAnnotation(
-                    t.tsTypeReference(t.identifier(toPascalCase(childInterfaceName))),
-                ),
-            );
-            if (blockName === 'timeouts') {
-                i.optional = true;
-            }
-            properties.push(i);
-            generateInterfaceDeclaration(ast, blockName, blockType.block, interfaceName);
+            properties.push({
+                kind: StructureKind.PropertySignature,
+                name: blockName,
+                type: toPascalCase(childInterfaceName),
+                hasQuestionToken: blockName === 'timeouts',
+            });
+            generateInterfaceDeclaration(blockName, blockType.block, interfaces, interfaceName);
         }
     }
 
-    const newInterface = t.exportNamedDeclaration(
-        t.tsInterfaceDeclaration(
-            t.identifier(interfaceName),
-            null,
-            null,
-            t.tsInterfaceBody(properties),
-        ),
-    );
-
-    ast.body.push(newInterface);
+    interfaces.push({
+        kind: StructureKind.Interface,
+        name: interfaceName,
+        properties: properties,
+        isExported: true,
+    });
 }

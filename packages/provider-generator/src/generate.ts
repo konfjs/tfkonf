@@ -1,66 +1,74 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import generate from '@babel/generator';
-import * as t from '@babel/types';
 import pc from 'picocolors';
+import {
+    ExportDeclarationStructure,
+    IndentationText,
+    Project,
+    QuoteKind,
+    StructureKind,
+} from 'ts-morph';
 import { generateClassDeclaration } from './class.js';
-import { generateInterfaceDeclaration } from './interface.js';
+import { generateInterfaces } from './interface.js';
 import type { ProviderSchema } from './schema.js';
 
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
+    const project = new Project({
+        tsConfigFilePath: path.join(import.meta.dirname, '..', 'tsconfig.json'),
+        manipulationSettings: {
+            indentationText: IndentationText.TwoSpaces,
+            quoteKind: QuoteKind.Double,
+            insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces: true,
+            useTrailingCommas: true,
+        },
+    });
+
     for (const [providerName, schema] of Object.entries(providerSchemas)) {
         console.log(`Generating TypeScript code for provider: ${pc.green(providerName)}`);
         const outDir = `provider-${path.basename(providerName)}`;
         fs.rmSync(outDir, { recursive: true, force: true });
         fs.mkdirSync(outDir, { recursive: true });
 
-        const resources: string[] = [];
+        const indexTs = project.createSourceFile(
+            path.join(outDir, 'index.ts'),
+            {
+                kind: StructureKind.SourceFile,
+            },
+            {
+                overwrite: true,
+            },
+        );
+
+        /**
+         * Always collect Structures first.
+         * Because sourceFile.add() operations are very slow.
+         */
+        const exportDeclarations: ExportDeclarationStructure[] = [];
 
         for (const [resourceName, resourceBlock] of Object.entries(schema.resource_schemas)) {
             console.log(
                 `Generating TypeScript code for resource: ${pc.yellowBright(resourceName)}`,
             );
-            const ast = t.program(
-                [
-                    t.importDeclaration(
-                        [
-                            t.importSpecifier(
-                                t.identifier('TerraformConfig'),
-                                t.identifier('TerraformConfig'),
-                            ),
-                            t.importSpecifier(
-                                t.identifier('TerraformResource'),
-                                t.identifier('TerraformResource'),
-                            ),
-                        ],
-                        t.stringLiteral('@tfkonf/core'),
-                    ),
-                ],
-                [],
-                'module',
-            );
-            generateInterfaceDeclaration(ast, resourceName, resourceBlock.block, '', true);
-            generateClassDeclaration(ast, resourceName, resourceBlock.block);
-            const { code } = generate(ast, {});
-            resources.push(resourceName);
 
-            fs.writeFileSync(path.join(outDir, `${resourceName}.ts`), code, {
-                encoding: 'utf8',
+            const sourceFile = project.createSourceFile(
+                path.join(outDir, `${resourceName}.ts`),
+                '',
+                {
+                    overwrite: true,
+                },
+            );
+
+            generateInterfaces(sourceFile, resourceName, resourceBlock.block, '', true);
+            generateClassDeclaration(sourceFile, resourceName, resourceBlock.block);
+
+            exportDeclarations.push({
+                kind: StructureKind.ExportDeclaration,
+                namespaceExport: resourceName,
+                moduleSpecifier: `./${resourceName}.js`,
             });
         }
+        indexTs.addExportDeclarations(exportDeclarations);
 
-        const ast = t.program([], [], 'module');
-        for (const resource of resources) {
-            ast.body.push(
-                t.exportNamedDeclaration(
-                    null,
-                    [t.exportNamespaceSpecifier(t.identifier(resource))],
-                    t.stringLiteral(`./${resource}.js`),
-                ),
-            );
-        }
-        const { code } = generate(ast, {});
-
-        fs.writeFileSync(path.join(outDir, 'index.ts'), code, { encoding: 'utf8' });
+        project.saveSync();
     }
 }
