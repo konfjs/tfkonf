@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSqsQueueArgs {
   content_based_deduplication?: boolean;
   delay_seconds?: number;
@@ -7,11 +8,10 @@ export interface AwsSqsQueueArgs {
   max_message_size?: number;
   message_retention_seconds?: number;
   receive_wait_time_seconds?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   visibility_timeout_seconds?: number;
 }
+
 export class aws_sqs_queue extends TerraformResource {
   readonly arn!: string;
   readonly deduplication_scope?: string;
@@ -24,10 +24,9 @@ export class aws_sqs_queue extends TerraformResource {
   readonly redrive_allow_policy?: string;
   readonly redrive_policy?: string;
   readonly sqs_managed_sse_enabled?: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly url!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSqsQueueArgs) {
     super(config, "resource", args, resourceName, "aws_sqs_queue");
   }

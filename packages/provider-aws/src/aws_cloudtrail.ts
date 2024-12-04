@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCloudtrailArgsAdvancedEventSelectorFieldSelector {
   ends_with?: string[];
   equals?: string[];
@@ -8,23 +9,28 @@ export interface AwsCloudtrailArgsAdvancedEventSelectorFieldSelector {
   not_starts_with?: string[];
   starts_with?: string[];
 }
+
 export interface AwsCloudtrailArgsAdvancedEventSelector {
   name?: string;
   field_selector: AwsCloudtrailArgsAdvancedEventSelectorFieldSelector;
 }
+
 export interface AwsCloudtrailArgsEventSelectorDataResource {
   type: string;
   values: string[];
 }
+
 export interface AwsCloudtrailArgsEventSelector {
   exclude_management_event_sources?: string[];
   include_management_events?: boolean;
   read_write_type?: string;
   data_resource: AwsCloudtrailArgsEventSelectorDataResource;
 }
+
 export interface AwsCloudtrailArgsInsightSelector {
   insight_type: string;
 }
+
 export interface AwsCloudtrailArgs {
   cloud_watch_logs_group_arn?: string;
   cloud_watch_logs_role_arn?: string;
@@ -38,20 +44,18 @@ export interface AwsCloudtrailArgs {
   s3_bucket_name: string;
   s3_key_prefix?: string;
   sns_topic_name?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   advanced_event_selector: AwsCloudtrailArgsAdvancedEventSelector;
   event_selector: AwsCloudtrailArgsEventSelector;
   insight_selector: AwsCloudtrailArgsInsightSelector;
 }
+
 export class aws_cloudtrail extends TerraformResource {
   readonly arn!: string;
   readonly home_region!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCloudtrailArgs) {
     super(config, "resource", args, resourceName, "aws_cloudtrail");
   }

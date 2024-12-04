@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSubnetArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsSubnetArgs {
   assign_ipv6_address_on_creation?: boolean;
   cidr_block?: string;
@@ -16,12 +18,11 @@ export interface AwsSubnetArgs {
   map_customer_owned_ip_on_launch?: boolean;
   map_public_ip_on_launch?: boolean;
   outpost_arn?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   vpc_id: string;
   timeouts?: AwsSubnetArgsTimeouts;
 }
+
 export class aws_subnet extends TerraformResource {
   readonly arn!: string;
   readonly availability_zone?: string;
@@ -30,9 +31,8 @@ export class aws_subnet extends TerraformResource {
   readonly ipv6_cidr_block_association_id!: string;
   readonly owner_id!: string;
   readonly private_dns_hostname_type_on_launch?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSubnetArgs) {
     super(config, "resource", args, resourceName, "aws_subnet");
   }

@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDocdbClusterSnapshotArgsTimeouts {
   create?: string;
 }
+
 export interface AwsDocdbClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
   timeouts?: AwsDocdbClusterSnapshotArgsTimeouts;
 }
+
 export class aws_docdb_cluster_snapshot extends TerraformResource {
   readonly availability_zones!: string[];
   readonly db_cluster_snapshot_arn!: string;
@@ -20,6 +23,7 @@ export class aws_docdb_cluster_snapshot extends TerraformResource {
   readonly status!: string;
   readonly storage_encrypted!: boolean;
   readonly vpc_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDocdbClusterSnapshotArgs) {
     super(config, "resource", args, resourceName, "aws_docdb_cluster_snapshot");
   }

@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleDataCatalogEntryArgsGcsFilesetSpec {
   file_patterns: string[];
 }
+
 export interface GoogleDataCatalogEntryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleDataCatalogEntryArgs {
   description?: string;
   display_name?: string;
@@ -19,6 +22,7 @@ export interface GoogleDataCatalogEntryArgs {
   gcs_fileset_spec: GoogleDataCatalogEntryArgsGcsFilesetSpec;
   timeouts?: GoogleDataCatalogEntryArgsTimeouts;
 }
+
 export class google_data_catalog_entry extends TerraformResource {
   readonly bigquery_date_sharded_spec!: any[];
   readonly bigquery_table_spec!: any[];
@@ -26,6 +30,7 @@ export class google_data_catalog_entry extends TerraformResource {
   readonly integrated_system!: string;
   readonly linked_resource?: string;
   readonly name!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleDataCatalogEntryArgs) {
     super(config, "resource", args, resourceName, "google_data_catalog_entry");
   }

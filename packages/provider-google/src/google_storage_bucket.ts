@@ -1,26 +1,33 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleStorageBucketArgsAutoclass {
   enabled: boolean;
 }
+
 export interface GoogleStorageBucketArgsCors {
   max_age_seconds?: number;
   method?: string[];
   origin?: string[];
   response_header?: string[];
 }
+
 export interface GoogleStorageBucketArgsCustomPlacementConfig {
   data_locations: string[];
 }
+
 export interface GoogleStorageBucketArgsEncryption {
   default_kms_key_name: string;
 }
+
 export interface GoogleStorageBucketArgsHierarchicalNamespace {
   enabled: boolean;
 }
+
 export interface GoogleStorageBucketArgsLifecycleRuleAction {
   storage_class?: string;
   type: string;
 }
+
 export interface GoogleStorageBucketArgsLifecycleRuleCondition {
   age?: number;
   created_before?: string;
@@ -37,39 +44,45 @@ export interface GoogleStorageBucketArgsLifecycleRuleCondition {
   send_days_since_noncurrent_time_if_zero?: boolean;
   send_num_newer_versions_if_zero?: boolean;
 }
+
 export interface GoogleStorageBucketArgsLifecycleRule {
   action: GoogleStorageBucketArgsLifecycleRuleAction;
   condition: GoogleStorageBucketArgsLifecycleRuleCondition;
 }
+
 export interface GoogleStorageBucketArgsLogging {
   log_bucket: string;
 }
+
 export interface GoogleStorageBucketArgsRetentionPolicy {
   is_locked?: boolean;
   retention_period: number;
 }
+
 export interface GoogleStorageBucketArgsSoftDeletePolicy {
   retention_duration_seconds?: number;
 }
+
 export interface GoogleStorageBucketArgsTimeouts {
   create?: string;
   read?: string;
   update?: string;
 }
+
 export interface GoogleStorageBucketArgsVersioning {
   enabled: boolean;
 }
+
 export interface GoogleStorageBucketArgsWebsite {
   main_page_suffix?: string;
   not_found_page?: string;
 }
+
 export interface GoogleStorageBucketArgs {
   default_event_based_hold?: boolean;
   enable_object_retention?: boolean;
   force_destroy?: boolean;
-  labels?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
   location: string;
   name: string;
   requester_pays?: boolean;
@@ -87,21 +100,19 @@ export interface GoogleStorageBucketArgs {
   versioning: GoogleStorageBucketArgsVersioning;
   website: GoogleStorageBucketArgsWebsite;
 }
+
 export class google_storage_bucket extends TerraformResource {
-  readonly effective_labels!: {
-    [key: string]: string;
-  };
+  readonly effective_labels!: { [key: string]: string };
   readonly id?: string;
   readonly project?: string;
   readonly project_number!: number;
   readonly public_access_prevention?: string;
   readonly rpo?: string;
   readonly self_link!: string;
-  readonly terraform_labels!: {
-    [key: string]: string;
-  };
+  readonly terraform_labels!: { [key: string]: string };
   readonly uniform_bucket_level_access?: boolean;
   readonly url!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleStorageBucketArgs) {
     super(config, "resource", args, resourceName, "google_storage_bucket");
   }

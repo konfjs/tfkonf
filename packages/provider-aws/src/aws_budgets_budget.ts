@@ -1,15 +1,19 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsBudgetsBudgetArgsAutoAdjustDataHistoricalOptions {
   budget_adjustment_period: number;
 }
+
 export interface AwsBudgetsBudgetArgsAutoAdjustData {
   auto_adjust_type: string;
   historical_options: AwsBudgetsBudgetArgsAutoAdjustDataHistoricalOptions;
 }
+
 export interface AwsBudgetsBudgetArgsCostFilter {
   name: string;
   values: string[];
 }
+
 export interface AwsBudgetsBudgetArgsCostTypes {
   include_credit?: boolean;
   include_discount?: boolean;
@@ -23,6 +27,7 @@ export interface AwsBudgetsBudgetArgsCostTypes {
   use_amortized?: boolean;
   use_blended?: boolean;
 }
+
 export interface AwsBudgetsBudgetArgsNotification {
   comparison_operator: string;
   notification_type: string;
@@ -31,16 +36,16 @@ export interface AwsBudgetsBudgetArgsNotification {
   threshold: number;
   threshold_type: string;
 }
+
 export interface AwsBudgetsBudgetArgsPlannedLimit {
   amount: string;
   start_time: string;
   unit: string;
 }
+
 export interface AwsBudgetsBudgetArgs {
   budget_type: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   time_period_end?: string;
   time_unit: string;
   auto_adjust_data: AwsBudgetsBudgetArgsAutoAdjustData;
@@ -49,6 +54,7 @@ export interface AwsBudgetsBudgetArgs {
   notification: AwsBudgetsBudgetArgsNotification;
   planned_limit: AwsBudgetsBudgetArgsPlannedLimit;
 }
+
 export class aws_budgets_budget extends TerraformResource {
   readonly account_id?: string;
   readonly arn!: string;
@@ -57,10 +63,9 @@ export class aws_budgets_budget extends TerraformResource {
   readonly limit_unit?: string;
   readonly name?: string;
   readonly name_prefix?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly time_period_start?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsBudgetsBudgetArgs) {
     super(config, "resource", args, resourceName, "aws_budgets_budget");
   }

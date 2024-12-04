@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRdsGlobalClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRdsGlobalClusterArgs {
   database_name?: string;
   deletion_protection?: boolean;
@@ -11,6 +13,7 @@ export interface AwsRdsGlobalClusterArgs {
   global_cluster_identifier: string;
   timeouts?: AwsRdsGlobalClusterArgsTimeouts;
 }
+
 export class aws_rds_global_cluster extends TerraformResource {
   readonly arn!: string;
   readonly endpoint!: string;
@@ -23,6 +26,7 @@ export class aws_rds_global_cluster extends TerraformResource {
   readonly id?: string;
   readonly source_db_cluster_identifier?: string;
   readonly storage_encrypted?: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRdsGlobalClusterArgs) {
     super(config, "resource", args, resourceName, "aws_rds_global_cluster");
   }

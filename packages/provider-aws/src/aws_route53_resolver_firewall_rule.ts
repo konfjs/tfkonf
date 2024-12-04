@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRoute53ResolverFirewallRuleArgs {
   action: string;
   block_override_dns_type?: string;
@@ -12,8 +13,10 @@ export interface AwsRoute53ResolverFirewallRuleArgs {
   priority: number;
   q_type?: string;
 }
+
 export class aws_route53_resolver_firewall_rule extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRoute53ResolverFirewallRuleArgs) {
     super(config, "resource", args, resourceName, "aws_route53_resolver_firewall_rule");
   }

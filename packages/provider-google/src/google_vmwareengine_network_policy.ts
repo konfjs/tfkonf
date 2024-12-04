@@ -1,15 +1,19 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleVmwareengineNetworkPolicyArgsExternalIp {
   enabled?: boolean;
 }
+
 export interface GoogleVmwareengineNetworkPolicyArgsInternetAccess {
   enabled?: boolean;
 }
+
 export interface GoogleVmwareengineNetworkPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleVmwareengineNetworkPolicyArgs {
   description?: string;
   edge_services_cidr: string;
@@ -20,6 +24,7 @@ export interface GoogleVmwareengineNetworkPolicyArgs {
   internet_access: GoogleVmwareengineNetworkPolicyArgsInternetAccess;
   timeouts?: GoogleVmwareengineNetworkPolicyArgsTimeouts;
 }
+
 export class google_vmwareengine_network_policy extends TerraformResource {
   readonly create_time!: string;
   readonly id?: string;
@@ -27,6 +32,7 @@ export class google_vmwareengine_network_policy extends TerraformResource {
   readonly uid!: string;
   readonly update_time!: string;
   readonly vmware_engine_network_canonical!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleVmwareengineNetworkPolicyArgs) {
     super(config, "resource", args, resourceName, "google_vmwareengine_network_policy");
   }

@@ -1,10 +1,12 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsElasticacheClusterArgsLogDeliveryConfiguration {
   destination: string;
   destination_type: string;
   log_format: string;
   log_type: string;
 }
+
 export interface AwsElasticacheClusterArgs {
   auto_minor_version_upgrade?: string;
   cluster_id: string;
@@ -15,11 +17,10 @@ export interface AwsElasticacheClusterArgs {
   snapshot_arns?: string[];
   snapshot_name?: string;
   snapshot_retention_limit?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   log_delivery_configuration: AwsElasticacheClusterArgsLogDeliveryConfiguration;
 }
+
 export class aws_elasticache_cluster extends TerraformResource {
   readonly apply_immediately?: boolean;
   readonly arn!: string;
@@ -44,10 +45,9 @@ export class aws_elasticache_cluster extends TerraformResource {
   readonly security_group_ids?: string[];
   readonly snapshot_window?: string;
   readonly subnet_group_name?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly transit_encryption_enabled?: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsElasticacheClusterArgs) {
     super(config, "resource", args, resourceName, "aws_elasticache_cluster");
   }

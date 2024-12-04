@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleLoggingFolderExclusionArgs {
   description?: string;
   disabled?: boolean;
@@ -6,8 +7,10 @@ export interface GoogleLoggingFolderExclusionArgs {
   folder: string;
   name: string;
 }
+
 export class google_logging_folder_exclusion extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleLoggingFolderExclusionArgs) {
     super(config, "resource", args, resourceName, "google_logging_folder_exclusion");
   }

@@ -1,71 +1,85 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsInstanceArgsCapacityReservationSpecificationCapacityReservationTarget {
   capacity_reservation_id?: string;
   capacity_reservation_resource_group_arn?: string;
 }
+
 export interface AwsInstanceArgsCapacityReservationSpecification {
   capacity_reservation_preference?: string;
   capacity_reservation_target: AwsInstanceArgsCapacityReservationSpecificationCapacityReservationTarget;
 }
-export interface AwsInstanceArgsCpuOptions {}
+
+export interface AwsInstanceArgsCpuOptions {
+}
+
 export interface AwsInstanceArgsCreditSpecification {
   cpu_credits?: string;
 }
+
 export interface AwsInstanceArgsEbsBlockDevice {
   delete_on_termination?: boolean;
   device_name: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
-export interface AwsInstanceArgsEnclaveOptions {}
+
+export interface AwsInstanceArgsEnclaveOptions {
+}
+
 export interface AwsInstanceArgsEphemeralBlockDevice {
   device_name: string;
   no_device?: boolean;
   virtual_name?: string;
 }
-export interface AwsInstanceArgsInstanceMarketOptionsSpotOptions {}
+
+export interface AwsInstanceArgsInstanceMarketOptionsSpotOptions {
+}
+
 export interface AwsInstanceArgsInstanceMarketOptions {
   spot_options: AwsInstanceArgsInstanceMarketOptionsSpotOptions;
 }
+
 export interface AwsInstanceArgsLaunchTemplate {
   version?: string;
 }
-export interface AwsInstanceArgsMaintenanceOptions {}
+
+export interface AwsInstanceArgsMaintenanceOptions {
+}
+
 export interface AwsInstanceArgsMetadataOptions {
   http_endpoint?: string;
   http_protocol_ipv6?: string;
 }
+
 export interface AwsInstanceArgsNetworkInterface {
   delete_on_termination?: boolean;
   device_index: number;
   network_card_index?: number;
   network_interface_id: string;
 }
-export interface AwsInstanceArgsPrivateDnsNameOptions {}
+
+export interface AwsInstanceArgsPrivateDnsNameOptions {
+}
+
 export interface AwsInstanceArgsRootBlockDevice {
   delete_on_termination?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export interface AwsInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
   update?: string;
 }
+
 export interface AwsInstanceArgs {
   get_password_data?: boolean;
   hibernation?: boolean;
   source_dest_check?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   user_data_replace_on_change?: boolean;
-  volume_tags?: {
-    [key: string]: string;
-  };
+  volume_tags?: { [key: string]: string };
   capacity_reservation_specification: AwsInstanceArgsCapacityReservationSpecification;
   cpu_options: AwsInstanceArgsCpuOptions;
   credit_specification: AwsInstanceArgsCreditSpecification;
@@ -81,6 +95,7 @@ export interface AwsInstanceArgs {
   root_block_device: AwsInstanceArgsRootBlockDevice;
   timeouts?: AwsInstanceArgsTimeouts;
 }
+
 export class aws_instance extends TerraformResource {
   readonly ami?: string;
   readonly arn!: string;
@@ -116,13 +131,12 @@ export class aws_instance extends TerraformResource {
   readonly security_groups?: string[];
   readonly spot_instance_request_id!: string;
   readonly subnet_id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly tenancy?: string;
   readonly user_data?: string;
   readonly user_data_base64?: string;
   readonly vpc_security_group_ids?: string[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_instance");
   }

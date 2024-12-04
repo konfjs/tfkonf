@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLbTargetGroupArgsHealthCheck {
   enabled?: boolean;
   healthy_threshold?: number;
@@ -7,32 +8,39 @@ export interface AwsLbTargetGroupArgsHealthCheck {
   protocol?: string;
   unhealthy_threshold?: number;
 }
+
 export interface AwsLbTargetGroupArgsStickiness {
   cookie_duration?: number;
   cookie_name?: string;
   enabled?: boolean;
   type: string;
 }
+
 export interface AwsLbTargetGroupArgsTargetFailover {
   on_deregistration: string;
   on_unhealthy: string;
 }
+
 export interface AwsLbTargetGroupArgsTargetGroupHealthDnsFailover {
   minimum_healthy_targets_count?: string;
   minimum_healthy_targets_percentage?: string;
 }
+
 export interface AwsLbTargetGroupArgsTargetGroupHealthUnhealthyStateRouting {
   minimum_healthy_targets_count?: number;
   minimum_healthy_targets_percentage?: string;
 }
+
 export interface AwsLbTargetGroupArgsTargetGroupHealth {
   dns_failover: AwsLbTargetGroupArgsTargetGroupHealthDnsFailover;
   unhealthy_state_routing: AwsLbTargetGroupArgsTargetGroupHealthUnhealthyStateRouting;
 }
+
 export interface AwsLbTargetGroupArgsTargetHealthState {
   enable_unhealthy_connection_termination: boolean;
   unhealthy_draining_interval?: number;
 }
+
 export interface AwsLbTargetGroupArgs {
   deregistration_delay?: string;
   lambda_multi_value_headers_enabled?: boolean;
@@ -40,9 +48,7 @@ export interface AwsLbTargetGroupArgs {
   protocol?: string;
   proxy_protocol_v2?: boolean;
   slow_start?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   target_type?: string;
   vpc_id?: string;
   health_check: AwsLbTargetGroupArgsHealthCheck;
@@ -51,6 +57,7 @@ export interface AwsLbTargetGroupArgs {
   target_group_health: AwsLbTargetGroupArgsTargetGroupHealth;
   target_health_state: AwsLbTargetGroupArgsTargetHealthState;
 }
+
 export class aws_lb_target_group extends TerraformResource {
   readonly arn!: string;
   readonly arn_suffix!: string;
@@ -65,9 +72,8 @@ export class aws_lb_target_group extends TerraformResource {
   readonly name_prefix?: string;
   readonly preserve_client_ip?: string;
   readonly protocol_version?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLbTargetGroupArgs) {
     super(config, "resource", args, resourceName, "aws_lb_target_group");
   }

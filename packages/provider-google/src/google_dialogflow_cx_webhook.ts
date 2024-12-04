@@ -1,27 +1,28 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleDialogflowCxWebhookArgsGenericWebService {
   allowed_ca_certs?: string[];
-  request_headers?: {
-    [key: string]: string;
-  };
+  request_headers?: { [key: string]: string };
   uri: string;
 }
+
 export interface GoogleDialogflowCxWebhookArgsServiceDirectoryGenericWebService {
   allowed_ca_certs?: string[];
-  request_headers?: {
-    [key: string]: string;
-  };
+  request_headers?: { [key: string]: string };
   uri: string;
 }
+
 export interface GoogleDialogflowCxWebhookArgsServiceDirectory {
   service: string;
   generic_web_service: GoogleDialogflowCxWebhookArgsServiceDirectoryGenericWebService;
 }
+
 export interface GoogleDialogflowCxWebhookArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleDialogflowCxWebhookArgs {
   disabled?: boolean;
   display_name: string;
@@ -34,10 +35,12 @@ export interface GoogleDialogflowCxWebhookArgs {
   service_directory: GoogleDialogflowCxWebhookArgsServiceDirectory;
   timeouts?: GoogleDialogflowCxWebhookArgsTimeouts;
 }
+
 export class google_dialogflow_cx_webhook extends TerraformResource {
   readonly id?: string;
   readonly name!: string;
   readonly start_flow!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleDialogflowCxWebhookArgs) {
     super(config, "resource", args, resourceName, "google_dialogflow_cx_webhook");
   }

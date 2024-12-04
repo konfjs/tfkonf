@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDmsEndpointArgsElasticsearchSettings {
   endpoint_uri: string;
   error_retry_duration?: number;
@@ -6,6 +7,7 @@ export interface AwsDmsEndpointArgsElasticsearchSettings {
   service_access_role_arn: string;
   use_new_mapping_type?: boolean;
 }
+
 export interface AwsDmsEndpointArgsKafkaSettings {
   broker: string;
   include_control_details?: boolean;
@@ -26,6 +28,7 @@ export interface AwsDmsEndpointArgsKafkaSettings {
   ssl_client_key_password?: string;
   topic?: string;
 }
+
 export interface AwsDmsEndpointArgsKinesisSettings {
   include_control_details?: boolean;
   include_null_and_empty?: boolean;
@@ -37,6 +40,7 @@ export interface AwsDmsEndpointArgsKinesisSettings {
   service_access_role_arn?: string;
   stream_arn?: string;
 }
+
 export interface AwsDmsEndpointArgsMongodbSettings {
   auth_mechanism?: string;
   auth_source?: string;
@@ -45,6 +49,7 @@ export interface AwsDmsEndpointArgsMongodbSettings {
   extract_doc_id?: string;
   nesting_level?: string;
 }
+
 export interface AwsDmsEndpointArgsPostgresSettings {
   after_connect_script?: string;
   babelfish_database_name?: string;
@@ -63,6 +68,7 @@ export interface AwsDmsEndpointArgsPostgresSettings {
   plugin_name?: string;
   slot_name?: string;
 }
+
 export interface AwsDmsEndpointArgsRedisSettings {
   auth_password?: string;
   auth_type: string;
@@ -72,6 +78,7 @@ export interface AwsDmsEndpointArgsRedisSettings {
   ssl_ca_certificate_arn?: string;
   ssl_security_protocol?: string;
 }
+
 export interface AwsDmsEndpointArgsRedshiftSettings {
   bucket_folder?: string;
   bucket_name?: string;
@@ -79,6 +86,7 @@ export interface AwsDmsEndpointArgsRedshiftSettings {
   server_side_encryption_kms_key_id?: string;
   service_access_role_arn?: string;
 }
+
 export interface AwsDmsEndpointArgsS3Settings {
   add_column_name?: boolean;
   bucket_folder?: string;
@@ -119,10 +127,12 @@ export interface AwsDmsEndpointArgsS3Settings {
   use_csv_no_sup_value?: boolean;
   use_task_start_time_for_full_load_timestamp?: boolean;
 }
+
 export interface AwsDmsEndpointArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsDmsEndpointArgs {
   database_name?: string;
   endpoint_id: string;
@@ -135,9 +145,7 @@ export interface AwsDmsEndpointArgs {
   secrets_manager_arn?: string;
   server_name?: string;
   service_access_role?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   username?: string;
   elasticsearch_settings: AwsDmsEndpointArgsElasticsearchSettings;
   kafka_settings: AwsDmsEndpointArgsKafkaSettings;
@@ -149,6 +157,7 @@ export interface AwsDmsEndpointArgs {
   s3_settings: AwsDmsEndpointArgsS3Settings;
   timeouts?: AwsDmsEndpointArgsTimeouts;
 }
+
 export class aws_dms_endpoint extends TerraformResource {
   readonly certificate_arn?: string;
   readonly endpoint_arn!: string;
@@ -156,9 +165,8 @@ export class aws_dms_endpoint extends TerraformResource {
   readonly id?: string;
   readonly kms_key_arn?: string;
   readonly ssl_mode?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDmsEndpointArgs) {
     super(config, "resource", args, resourceName, "aws_dms_endpoint");
   }

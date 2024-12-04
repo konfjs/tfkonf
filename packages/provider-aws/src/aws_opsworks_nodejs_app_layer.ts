@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksNodejsAppLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksNodejsAppLayerArgsCloudwatchConfigurationLogStreams 
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksNodejsAppLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksNodejsAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksNodejsAppLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -68,20 +75,18 @@ export interface AwsOpsworksNodejsAppLayerArgs {
   nodejs_version?: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksNodejsAppLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksNodejsAppLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksNodejsAppLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_nodejs_app_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksNodejsAppLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_nodejs_app_layer");
   }

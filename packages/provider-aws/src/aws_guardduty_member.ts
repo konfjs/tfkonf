@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsGuarddutyMemberArgsTimeouts {
   create?: string;
   update?: string;
 }
+
 export interface AwsGuarddutyMemberArgs {
   account_id: string;
   detector_id: string;
@@ -12,9 +14,11 @@ export interface AwsGuarddutyMemberArgs {
   invite?: boolean;
   timeouts?: AwsGuarddutyMemberArgsTimeouts;
 }
+
 export class aws_guardduty_member extends TerraformResource {
   readonly id?: string;
   readonly relationship_status!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsGuarddutyMemberArgs) {
     super(config, "resource", args, resourceName, "aws_guardduty_member");
   }

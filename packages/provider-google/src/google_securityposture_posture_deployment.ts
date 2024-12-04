@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSecurityposturePostureDeploymentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSecurityposturePostureDeploymentArgs {
   description?: string;
   location: string;
@@ -14,6 +16,7 @@ export interface GoogleSecurityposturePostureDeploymentArgs {
   target_resource: string;
   timeouts?: GoogleSecurityposturePostureDeploymentArgsTimeouts;
 }
+
 export class google_securityposture_posture_deployment extends TerraformResource {
   readonly create_time!: string;
   readonly desired_posture_id!: string;
@@ -25,6 +28,7 @@ export class google_securityposture_posture_deployment extends TerraformResource
   readonly reconciling!: boolean;
   readonly state!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSecurityposturePostureDeploymentArgs) {
     super(config, "resource", args, resourceName, "google_securityposture_posture_deployment");
   }

@@ -1,14 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeServiceAttachmentArgsConsumerAcceptLists {
   connection_limit: number;
   network_url?: string;
   project_id_or_num?: string;
 }
+
 export interface GoogleComputeServiceAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeServiceAttachmentArgs {
   connection_preference: string;
   consumer_reject_lists?: string[];
@@ -21,6 +24,7 @@ export interface GoogleComputeServiceAttachmentArgs {
   consumer_accept_lists: GoogleComputeServiceAttachmentArgsConsumerAcceptLists;
   timeouts?: GoogleComputeServiceAttachmentArgsTimeouts;
 }
+
 export class google_compute_service_attachment extends TerraformResource {
   readonly connected_endpoints!: any[];
   readonly fingerprint!: string;
@@ -30,6 +34,7 @@ export class google_compute_service_attachment extends TerraformResource {
   readonly reconcile_connections?: boolean;
   readonly region?: string;
   readonly self_link!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeServiceAttachmentArgs) {
     super(config, "resource", args, resourceName, "google_compute_service_attachment");
   }

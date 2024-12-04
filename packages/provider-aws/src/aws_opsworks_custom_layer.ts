@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksCustomLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksCustomLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksCustomLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksCustomLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksCustomLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksCustomLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksCustomLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksCustomLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksCustomLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksCustomLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksCustomLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksCustomLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksCustomLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksCustomLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -68,20 +75,18 @@ export interface AwsOpsworksCustomLayerArgs {
   short_name: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksCustomLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksCustomLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksCustomLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_custom_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksCustomLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_custom_layer");
   }

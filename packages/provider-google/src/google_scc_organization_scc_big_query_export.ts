@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSccOrganizationSccBigQueryExportArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSccOrganizationSccBigQueryExportArgs {
   big_query_export_id: string;
   dataset?: string;
@@ -12,6 +14,7 @@ export interface GoogleSccOrganizationSccBigQueryExportArgs {
   organization: string;
   timeouts?: GoogleSccOrganizationSccBigQueryExportArgsTimeouts;
 }
+
 export class google_scc_organization_scc_big_query_export extends TerraformResource {
   readonly create_time!: string;
   readonly id?: string;
@@ -19,6 +22,7 @@ export class google_scc_organization_scc_big_query_export extends TerraformResou
   readonly name!: string;
   readonly principal!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSccOrganizationSccBigQueryExportArgs) {
     super(config, "resource", args, resourceName, "google_scc_organization_scc_big_query_export");
   }

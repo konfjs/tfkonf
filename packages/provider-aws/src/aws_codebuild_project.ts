@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCodebuildProjectArgsArtifacts {
   artifact_identifier?: string;
   bucket_owner_access?: string;
@@ -11,33 +12,40 @@ export interface AwsCodebuildProjectArgsArtifacts {
   path?: string;
   type: string;
 }
+
 export interface AwsCodebuildProjectArgsBuildBatchConfigRestrictions {
   compute_types_allowed?: string[];
   maximum_builds_allowed?: number;
 }
+
 export interface AwsCodebuildProjectArgsBuildBatchConfig {
   combine_artifacts?: boolean;
   service_role: string;
   timeout_in_mins?: number;
   restrictions: AwsCodebuildProjectArgsBuildBatchConfigRestrictions;
 }
+
 export interface AwsCodebuildProjectArgsCache {
   location?: string;
   modes?: string[];
   type?: string;
 }
+
 export interface AwsCodebuildProjectArgsEnvironmentEnvironmentVariable {
   name: string;
   type?: string;
   value: string;
 }
+
 export interface AwsCodebuildProjectArgsEnvironmentFleet {
   fleet_arn?: string;
 }
+
 export interface AwsCodebuildProjectArgsEnvironmentRegistryCredential {
   credential: string;
   credential_provider: string;
 }
+
 export interface AwsCodebuildProjectArgsEnvironment {
   certificate?: string;
   compute_type: string;
@@ -49,6 +57,7 @@ export interface AwsCodebuildProjectArgsEnvironment {
   fleet: AwsCodebuildProjectArgsEnvironmentFleet;
   registry_credential: AwsCodebuildProjectArgsEnvironmentRegistryCredential;
 }
+
 export interface AwsCodebuildProjectArgsFileSystemLocations {
   identifier?: string;
   location?: string;
@@ -56,21 +65,25 @@ export interface AwsCodebuildProjectArgsFileSystemLocations {
   mount_point?: string;
   type?: string;
 }
+
 export interface AwsCodebuildProjectArgsLogsConfigCloudwatchLogs {
   group_name?: string;
   status?: string;
   stream_name?: string;
 }
+
 export interface AwsCodebuildProjectArgsLogsConfigS3Logs {
   bucket_owner_access?: string;
   encryption_disabled?: boolean;
   location?: string;
   status?: string;
 }
+
 export interface AwsCodebuildProjectArgsLogsConfig {
   cloudwatch_logs: AwsCodebuildProjectArgsLogsConfigCloudwatchLogs;
   s3_logs: AwsCodebuildProjectArgsLogsConfigS3Logs;
 }
+
 export interface AwsCodebuildProjectArgsSecondaryArtifacts {
   artifact_identifier: string;
   bucket_owner_access?: string;
@@ -83,17 +96,21 @@ export interface AwsCodebuildProjectArgsSecondaryArtifacts {
   path?: string;
   type: string;
 }
+
 export interface AwsCodebuildProjectArgsSecondarySourceVersion {
   source_identifier: string;
   source_version: string;
 }
+
 export interface AwsCodebuildProjectArgsSecondarySourcesBuildStatusConfig {
   context?: string;
   target_url?: string;
 }
+
 export interface AwsCodebuildProjectArgsSecondarySourcesGitSubmodulesConfig {
   fetch_submodules: boolean;
 }
+
 export interface AwsCodebuildProjectArgsSecondarySources {
   buildspec?: string;
   git_clone_depth?: number;
@@ -105,13 +122,16 @@ export interface AwsCodebuildProjectArgsSecondarySources {
   build_status_config: AwsCodebuildProjectArgsSecondarySourcesBuildStatusConfig;
   git_submodules_config: AwsCodebuildProjectArgsSecondarySourcesGitSubmodulesConfig;
 }
+
 export interface AwsCodebuildProjectArgsSourceBuildStatusConfig {
   context?: string;
   target_url?: string;
 }
+
 export interface AwsCodebuildProjectArgsSourceGitSubmodulesConfig {
   fetch_submodules: boolean;
 }
+
 export interface AwsCodebuildProjectArgsSource {
   buildspec?: string;
   git_clone_depth?: number;
@@ -122,11 +142,13 @@ export interface AwsCodebuildProjectArgsSource {
   build_status_config: AwsCodebuildProjectArgsSourceBuildStatusConfig;
   git_submodules_config: AwsCodebuildProjectArgsSourceGitSubmodulesConfig;
 }
+
 export interface AwsCodebuildProjectArgsVpcConfig {
   security_group_ids: string[];
   subnets: string[];
   vpc_id: string;
 }
+
 export interface AwsCodebuildProjectArgs {
   badge_enabled?: boolean;
   build_timeout?: number;
@@ -137,9 +159,7 @@ export interface AwsCodebuildProjectArgs {
   resource_access_role?: string;
   service_role: string;
   source_version?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   artifacts: AwsCodebuildProjectArgsArtifacts;
   build_batch_config: AwsCodebuildProjectArgsBuildBatchConfig;
   cache: AwsCodebuildProjectArgsCache;
@@ -152,6 +172,7 @@ export interface AwsCodebuildProjectArgs {
   source: AwsCodebuildProjectArgsSource;
   vpc_config: AwsCodebuildProjectArgsVpcConfig;
 }
+
 export class aws_codebuild_project extends TerraformResource {
   readonly arn!: string;
   readonly badge_url!: string;
@@ -159,9 +180,8 @@ export class aws_codebuild_project extends TerraformResource {
   readonly encryption_key?: string;
   readonly id?: string;
   readonly public_project_alias!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCodebuildProjectArgs) {
     super(config, "resource", args, resourceName, "aws_codebuild_project");
   }

@@ -1,32 +1,39 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLexBotArgsAbortStatementMessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
+
 export interface AwsLexBotArgsAbortStatement {
   response_card?: string;
   message: AwsLexBotArgsAbortStatementMessage;
 }
+
 export interface AwsLexBotArgsClarificationPromptMessage {
   content: string;
   content_type: string;
   group_number?: number;
 }
+
 export interface AwsLexBotArgsClarificationPrompt {
   max_attempts: number;
   response_card?: string;
   message: AwsLexBotArgsClarificationPromptMessage;
 }
+
 export interface AwsLexBotArgsIntent {
   intent_name: string;
   intent_version: string;
 }
+
 export interface AwsLexBotArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsLexBotArgs {
   child_directed: boolean;
   create_version?: boolean;
@@ -43,6 +50,7 @@ export interface AwsLexBotArgs {
   intent: AwsLexBotArgsIntent;
   timeouts?: AwsLexBotArgsTimeouts;
 }
+
 export class aws_lex_bot extends TerraformResource {
   readonly arn!: string;
   readonly checksum!: string;
@@ -53,6 +61,7 @@ export class aws_lex_bot extends TerraformResource {
   readonly status!: string;
   readonly version!: string;
   readonly voice_id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLexBotArgs) {
     super(config, "resource", args, resourceName, "aws_lex_bot");
   }

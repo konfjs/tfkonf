@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDefaultVpcArgs {
   assign_generated_ipv6_cidr_block?: boolean;
   enable_dns_hostnames?: boolean;
@@ -6,10 +7,9 @@ export interface AwsDefaultVpcArgs {
   force_destroy?: boolean;
   ipv6_ipam_pool_id?: string;
   ipv6_netmask_length?: number;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_default_vpc extends TerraformResource {
   readonly arn!: string;
   readonly cidr_block!: string;
@@ -26,9 +26,8 @@ export class aws_default_vpc extends TerraformResource {
   readonly ipv6_cidr_block_network_border_group?: string;
   readonly main_route_table_id!: string;
   readonly owner_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDefaultVpcArgs) {
     super(config, "resource", args, resourceName, "aws_default_vpc");
   }

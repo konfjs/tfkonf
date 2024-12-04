@@ -1,28 +1,34 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRouterNatArgsLogConfig {
   enable: boolean;
   filter: string;
 }
+
 export interface GoogleComputeRouterNatArgsRulesAction {
   source_nat_active_ips?: string[];
   source_nat_drain_ips?: string[];
 }
+
 export interface GoogleComputeRouterNatArgsRules {
   description?: string;
   match: string;
   rule_number: number;
   action: GoogleComputeRouterNatArgsRulesAction;
 }
+
 export interface GoogleComputeRouterNatArgsSubnetwork {
   name: string;
   secondary_ip_range_names?: string[];
   source_ip_ranges_to_nat: string[];
 }
+
 export interface GoogleComputeRouterNatArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRouterNatArgs {
   icmp_idle_timeout_sec?: number;
   initial_nat_ips?: string[];
@@ -40,6 +46,7 @@ export interface GoogleComputeRouterNatArgs {
   subnetwork: GoogleComputeRouterNatArgsSubnetwork;
   timeouts?: GoogleComputeRouterNatArgsTimeouts;
 }
+
 export class google_compute_router_nat extends TerraformResource {
   readonly auto_network_tier?: string;
   readonly drain_nat_ips?: string[];
@@ -51,6 +58,7 @@ export class google_compute_router_nat extends TerraformResource {
   readonly nat_ips?: string[];
   readonly project?: string;
   readonly region?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRouterNatArgs) {
     super(config, "resource", args, resourceName, "google_compute_router_nat");
   }

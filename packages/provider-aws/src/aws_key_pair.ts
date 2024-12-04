@@ -1,10 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsKeyPairArgs {
   public_key: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_key_pair extends TerraformResource {
   readonly arn!: string;
   readonly fingerprint!: string;
@@ -13,9 +13,8 @@ export class aws_key_pair extends TerraformResource {
   readonly key_name_prefix?: string;
   readonly key_pair_id!: string;
   readonly key_type!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsKeyPairArgs) {
     super(config, "resource", args, resourceName, "aws_key_pair");
   }

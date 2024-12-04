@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRouteArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleComputeRouteArgs {
   description?: string;
   dest_range: string;
@@ -16,6 +18,7 @@ export interface GoogleComputeRouteArgs {
   tags?: string[];
   timeouts?: GoogleComputeRouteArgsTimeouts;
 }
+
 export class google_compute_route extends TerraformResource {
   readonly id?: string;
   readonly next_hop_instance_zone?: string;
@@ -23,6 +26,7 @@ export class google_compute_route extends TerraformResource {
   readonly next_hop_network!: string;
   readonly project?: string;
   readonly self_link!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRouteArgs) {
     super(config, "resource", args, resourceName, "google_compute_route");
   }

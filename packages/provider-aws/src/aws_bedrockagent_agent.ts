@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsBedrockagentAgentArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsBedrockagentAgentArgs {
   agent_name: string;
   agent_resource_role_arn: string;
@@ -11,11 +13,10 @@ export interface AwsBedrockagentAgentArgs {
   description?: string;
   foundation_model: string;
   guardrail_configuration?: any[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsBedrockagentAgentArgsTimeouts;
 }
+
 export class aws_bedrockagent_agent extends TerraformResource {
   readonly agent_arn!: string;
   readonly agent_id!: string;
@@ -26,9 +27,8 @@ export class aws_bedrockagent_agent extends TerraformResource {
   readonly prepare_agent?: boolean;
   readonly prompt_override_configuration?: any[];
   readonly skip_resource_in_use_check?: boolean;
-  readonly tags_all!: {
-    [key: string]: string;
-  };
+  readonly tags_all!: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsBedrockagentAgentArgs) {
     super(config, "resource", args, resourceName, "aws_bedrockagent_agent");
   }

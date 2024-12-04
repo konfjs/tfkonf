@@ -1,18 +1,22 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleGkeonpremVmwareNodePoolArgsConfigTaints {
   effect?: string;
   key: string;
   value: string;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfigTags {
   category?: string;
   tag?: string;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfig {
   datastore?: string;
   host_groups?: string[];
   tags: GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfigTags;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgsConfig {
   boot_disk_size_gb?: number;
   cpus?: number;
@@ -24,19 +28,20 @@ export interface GoogleGkeonpremVmwareNodePoolArgsConfig {
   taints: GoogleGkeonpremVmwareNodePoolArgsConfigTaints;
   vsphere_config: GoogleGkeonpremVmwareNodePoolArgsConfigVsphereConfig;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgsNodePoolAutoscaling {
   max_replicas: number;
   min_replicas: number;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleGkeonpremVmwareNodePoolArgs {
-  annotations?: {
-    [key: string]: string;
-  };
+  annotations?: { [key: string]: string };
   display_name?: string;
   location: string;
   name: string;
@@ -45,12 +50,11 @@ export interface GoogleGkeonpremVmwareNodePoolArgs {
   node_pool_autoscaling: GoogleGkeonpremVmwareNodePoolArgsNodePoolAutoscaling;
   timeouts?: GoogleGkeonpremVmwareNodePoolArgsTimeouts;
 }
+
 export class google_gkeonprem_vmware_node_pool extends TerraformResource {
   readonly create_time!: string;
   readonly delete_time!: string;
-  readonly effective_annotations!: {
-    [key: string]: string;
-  };
+  readonly effective_annotations!: { [key: string]: string };
   readonly etag!: string;
   readonly id?: string;
   readonly on_prem_version!: string;
@@ -60,6 +64,7 @@ export class google_gkeonprem_vmware_node_pool extends TerraformResource {
   readonly status!: any[];
   readonly uid!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleGkeonpremVmwareNodePoolArgs) {
     super(config, "resource", args, resourceName, "google_gkeonprem_vmware_node_pool");
   }

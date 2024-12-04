@@ -1,25 +1,28 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsVpnConnectionArgsTunnel1LogOptionsCloudwatchLogOptions {
   log_enabled?: boolean;
   log_group_arn?: string;
   log_output_format?: string;
 }
+
 export interface AwsVpnConnectionArgsTunnel1LogOptions {
   cloudwatch_log_options: AwsVpnConnectionArgsTunnel1LogOptionsCloudwatchLogOptions;
 }
+
 export interface AwsVpnConnectionArgsTunnel2LogOptionsCloudwatchLogOptions {
   log_enabled?: boolean;
   log_group_arn?: string;
   log_output_format?: string;
 }
+
 export interface AwsVpnConnectionArgsTunnel2LogOptions {
   cloudwatch_log_options: AwsVpnConnectionArgsTunnel2LogOptionsCloudwatchLogOptions;
 }
+
 export interface AwsVpnConnectionArgs {
   customer_gateway_id: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   transit_gateway_id?: string;
   transport_transit_gateway_attachment_id?: string;
   tunnel1_dpd_timeout_action?: string;
@@ -59,6 +62,7 @@ export interface AwsVpnConnectionArgs {
   tunnel1_log_options: AwsVpnConnectionArgsTunnel1LogOptions;
   tunnel2_log_options: AwsVpnConnectionArgsTunnel2LogOptions;
 }
+
 export class aws_vpn_connection extends TerraformResource {
   readonly arn!: string;
   readonly core_network_arn!: string;
@@ -73,9 +77,7 @@ export class aws_vpn_connection extends TerraformResource {
   readonly remote_ipv6_network_cidr?: string;
   readonly routes!: any[];
   readonly static_routes_only?: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly transit_gateway_attachment_id!: string;
   readonly tunnel1_address!: string;
   readonly tunnel1_bgp_asn!: string;
@@ -95,6 +97,7 @@ export class aws_vpn_connection extends TerraformResource {
   readonly tunnel2_vgw_inside_address!: string;
   readonly tunnel_inside_ip_version?: string;
   readonly vgw_telemetry!: any[];
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsVpnConnectionArgs) {
     super(config, "resource", args, resourceName, "aws_vpn_connection");
   }

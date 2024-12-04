@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNeptuneClusterSnapshotArgsTimeouts {
   create?: string;
 }
+
 export interface AwsNeptuneClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
   timeouts?: AwsNeptuneClusterSnapshotArgsTimeouts;
 }
+
 export class aws_neptune_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;
   readonly availability_zones!: string[];
@@ -22,6 +25,7 @@ export class aws_neptune_cluster_snapshot extends TerraformResource {
   readonly status!: string;
   readonly storage_encrypted!: boolean;
   readonly vpc_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNeptuneClusterSnapshotArgs) {
     super(config, "resource", args, resourceName, "aws_neptune_cluster_snapshot");
   }

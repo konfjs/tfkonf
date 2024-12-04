@@ -1,12 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
-export interface GoogleBigtableGcPolicyArgsMaxAge {}
+
+export interface GoogleBigtableGcPolicyArgsMaxAge {
+}
+
 export interface GoogleBigtableGcPolicyArgsMaxVersion {
   number: number;
 }
+
 export interface GoogleBigtableGcPolicyArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleBigtableGcPolicyArgs {
   column_family: string;
   deletion_policy?: string;
@@ -19,9 +24,11 @@ export interface GoogleBigtableGcPolicyArgs {
   max_version: GoogleBigtableGcPolicyArgsMaxVersion;
   timeouts?: GoogleBigtableGcPolicyArgsTimeouts;
 }
+
 export class google_bigtable_gc_policy extends TerraformResource {
   readonly id?: string;
   readonly project?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleBigtableGcPolicyArgs) {
     super(config, "resource", args, resourceName, "google_bigtable_gc_policy");
   }

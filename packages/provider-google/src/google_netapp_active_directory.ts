@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleNetappActiveDirectoryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleNetappActiveDirectoryArgs {
   administrators?: string[];
   aes_encryption?: boolean;
@@ -14,9 +16,7 @@ export interface GoogleNetappActiveDirectoryArgs {
   encrypt_dc_connections?: boolean;
   kdc_hostname?: string;
   kdc_ip?: string;
-  labels?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
   ldap_signing?: boolean;
   location: string;
   name: string;
@@ -28,19 +28,17 @@ export interface GoogleNetappActiveDirectoryArgs {
   username: string;
   timeouts?: GoogleNetappActiveDirectoryArgsTimeouts;
 }
+
 export class google_netapp_active_directory extends TerraformResource {
   readonly create_time!: string;
-  readonly effective_labels!: {
-    [key: string]: string;
-  };
+  readonly effective_labels!: { [key: string]: string };
   readonly id?: string;
   readonly organizational_unit?: string;
   readonly project?: string;
   readonly state!: string;
   readonly state_details!: string;
-  readonly terraform_labels!: {
-    [key: string]: string;
-  };
+  readonly terraform_labels!: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleNetappActiveDirectoryArgs) {
     super(config, "resource", args, resourceName, "google_netapp_active_directory");
   }

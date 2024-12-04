@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsLightsailDatabaseArgs {
   backup_retention_enabled?: boolean;
   blueprint_id: string;
@@ -10,10 +11,9 @@ export interface AwsLightsailDatabaseArgs {
   publicly_accessible?: boolean;
   relational_database_name: string;
   skip_final_snapshot?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_lightsail_database extends TerraformResource {
   readonly apply_immediately?: boolean;
   readonly arn!: string;
@@ -32,9 +32,8 @@ export class aws_lightsail_database extends TerraformResource {
   readonly ram_size!: number;
   readonly secondary_availability_zone!: string;
   readonly support_code!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsLightsailDatabaseArgs) {
     super(config, "resource", args, resourceName, "aws_lightsail_database");
   }

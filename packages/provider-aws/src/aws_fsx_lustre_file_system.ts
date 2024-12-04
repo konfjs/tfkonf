@@ -1,26 +1,30 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsFsxLustreFileSystemArgsLogConfiguration {
   level?: string;
 }
-export interface AwsFsxLustreFileSystemArgsMetadataConfiguration {}
+
+export interface AwsFsxLustreFileSystemArgsMetadataConfiguration {
+}
+
 export interface AwsFsxLustreFileSystemArgsRootSquashConfiguration {
   no_squash_nids?: string[];
   root_squash?: string;
 }
+
 export interface AwsFsxLustreFileSystemArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsFsxLustreFileSystemArgs {
   backup_id?: string;
   copy_tags_to_backups?: boolean;
   data_compression_type?: string;
   deployment_type?: string;
   drive_cache_type?: string;
-  final_backup_tags?: {
-    [key: string]: string;
-  };
+  final_backup_tags?: { [key: string]: string };
   import_path?: string;
   per_unit_storage_throughput?: number;
   security_group_ids?: string[];
@@ -28,14 +32,13 @@ export interface AwsFsxLustreFileSystemArgs {
   storage_capacity?: number;
   storage_type?: string;
   subnet_ids: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   log_configuration: AwsFsxLustreFileSystemArgsLogConfiguration;
   metadata_configuration: AwsFsxLustreFileSystemArgsMetadataConfiguration;
   root_squash_configuration: AwsFsxLustreFileSystemArgsRootSquashConfiguration;
   timeouts?: AwsFsxLustreFileSystemArgsTimeouts;
 }
+
 export class aws_fsx_lustre_file_system extends TerraformResource {
   readonly arn!: string;
   readonly auto_import_policy?: string;
@@ -50,11 +53,10 @@ export class aws_fsx_lustre_file_system extends TerraformResource {
   readonly mount_name!: string;
   readonly network_interface_ids!: string[];
   readonly owner_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_id!: string;
   readonly weekly_maintenance_start_time?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsFsxLustreFileSystemArgs) {
     super(config, "resource", args, resourceName, "aws_fsx_lustre_file_system");
   }

@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleSecureSourceManagerBranchRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleSecureSourceManagerBranchRuleArgs {
   allow_stale_reviews?: boolean;
   branch_rule_id: string;
@@ -18,6 +20,7 @@ export interface GoogleSecureSourceManagerBranchRuleArgs {
   require_pull_request?: boolean;
   timeouts?: GoogleSecureSourceManagerBranchRuleArgsTimeouts;
 }
+
 export class google_secure_source_manager_branch_rule extends TerraformResource {
   readonly create_time!: string;
   readonly id?: string;
@@ -25,6 +28,7 @@ export class google_secure_source_manager_branch_rule extends TerraformResource 
   readonly project?: string;
   readonly uid!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleSecureSourceManagerBranchRuleArgs) {
     super(config, "resource", args, resourceName, "google_secure_source_manager_branch_rule");
   }

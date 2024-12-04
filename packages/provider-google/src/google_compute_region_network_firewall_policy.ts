@@ -1,14 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionNetworkFirewallPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionNetworkFirewallPolicyArgs {
   description?: string;
   name: string;
   timeouts?: GoogleComputeRegionNetworkFirewallPolicyArgsTimeouts;
 }
+
 export class google_compute_region_network_firewall_policy extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly fingerprint!: string;
@@ -19,6 +22,7 @@ export class google_compute_region_network_firewall_policy extends TerraformReso
   readonly rule_tuple_count!: number;
   readonly self_link!: string;
   readonly self_link_with_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionNetworkFirewallPolicyArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_network_firewall_policy");
   }

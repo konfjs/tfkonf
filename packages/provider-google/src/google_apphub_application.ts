@@ -1,22 +1,28 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleApphubApplicationArgsAttributesBusinessOwners {
   display_name?: string;
   email: string;
 }
+
 export interface GoogleApphubApplicationArgsAttributesCriticality {
   type: string;
 }
+
 export interface GoogleApphubApplicationArgsAttributesDeveloperOwners {
   display_name?: string;
   email: string;
 }
+
 export interface GoogleApphubApplicationArgsAttributesEnvironment {
   type: string;
 }
+
 export interface GoogleApphubApplicationArgsAttributesOperatorOwners {
   display_name?: string;
   email: string;
 }
+
 export interface GoogleApphubApplicationArgsAttributes {
   business_owners: GoogleApphubApplicationArgsAttributesBusinessOwners;
   criticality: GoogleApphubApplicationArgsAttributesCriticality;
@@ -24,14 +30,17 @@ export interface GoogleApphubApplicationArgsAttributes {
   environment: GoogleApphubApplicationArgsAttributesEnvironment;
   operator_owners: GoogleApphubApplicationArgsAttributesOperatorOwners;
 }
+
 export interface GoogleApphubApplicationArgsScope {
   type: string;
 }
+
 export interface GoogleApphubApplicationArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleApphubApplicationArgs {
   application_id: string;
   description?: string;
@@ -41,6 +50,7 @@ export interface GoogleApphubApplicationArgs {
   scope: GoogleApphubApplicationArgsScope;
   timeouts?: GoogleApphubApplicationArgsTimeouts;
 }
+
 export class google_apphub_application extends TerraformResource {
   readonly create_time!: string;
   readonly id?: string;
@@ -49,6 +59,7 @@ export class google_apphub_application extends TerraformResource {
   readonly state!: string;
   readonly uid!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleApphubApplicationArgs) {
     super(config, "resource", args, resourceName, "google_apphub_application");
   }

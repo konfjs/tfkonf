@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksHaproxyLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksHaproxyLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksHaproxyLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksHaproxyLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksHaproxyLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksHaproxyLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksHaproxyLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksHaproxyLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksHaproxyLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -73,20 +80,18 @@ export interface AwsOpsworksHaproxyLayerArgs {
   stats_url?: string;
   stats_user?: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksHaproxyLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksHaproxyLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksHaproxyLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_haproxy_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksHaproxyLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_haproxy_layer");
   }

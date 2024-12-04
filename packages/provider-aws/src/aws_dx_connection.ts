@@ -1,14 +1,14 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDxConnectionArgs {
   bandwidth: string;
   location: string;
   name: string;
   request_macsec?: boolean;
   skip_destroy?: boolean;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_dx_connection extends TerraformResource {
   readonly arn!: string;
   readonly aws_device!: string;
@@ -21,10 +21,9 @@ export class aws_dx_connection extends TerraformResource {
   readonly partner_name!: string;
   readonly port_encryption_status!: string;
   readonly provider_name?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vlan_id!: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDxConnectionArgs) {
     super(config, "resource", args, resourceName, "aws_dx_connection");
   }

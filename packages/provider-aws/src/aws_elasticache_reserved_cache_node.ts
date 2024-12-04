@@ -1,16 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsElasticacheReservedCacheNodeArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsElasticacheReservedCacheNodeArgs {
   reserved_cache_nodes_offering_id: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsElasticacheReservedCacheNodeArgsTimeouts;
 }
+
 export class aws_elasticache_reserved_cache_node extends TerraformResource {
   readonly arn!: string;
   readonly cache_node_count?: number;
@@ -23,10 +24,9 @@ export class aws_elasticache_reserved_cache_node extends TerraformResource {
   readonly recurring_charges!: any[];
   readonly start_time!: string;
   readonly state!: string;
-  readonly tags_all!: {
-    [key: string]: string;
-  };
+  readonly tags_all!: { [key: string]: string };
   readonly usage_price!: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsElasticacheReservedCacheNodeArgs) {
     super(config, "resource", args, resourceName, "aws_elasticache_reserved_cache_node");
   }

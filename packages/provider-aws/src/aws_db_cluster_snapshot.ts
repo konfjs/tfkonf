@@ -1,16 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDbClusterSnapshotArgsTimeouts {
   create?: string;
 }
+
 export interface AwsDbClusterSnapshotArgs {
   db_cluster_identifier: string;
   db_cluster_snapshot_identifier: string;
   shared_accounts?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsDbClusterSnapshotArgsTimeouts;
 }
+
 export class aws_db_cluster_snapshot extends TerraformResource {
   readonly allocated_storage!: number;
   readonly availability_zones!: string[];
@@ -25,10 +26,9 @@ export class aws_db_cluster_snapshot extends TerraformResource {
   readonly source_db_cluster_snapshot_arn!: string;
   readonly status!: string;
   readonly storage_encrypted!: boolean;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly vpc_id!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDbClusterSnapshotArgs) {
     super(config, "resource", args, resourceName, "aws_db_cluster_snapshot");
   }

@@ -1,12 +1,12 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsIamPolicyArgs {
   description?: string;
   path?: string;
   policy: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
 }
+
 export class aws_iam_policy extends TerraformResource {
   readonly arn!: string;
   readonly attachment_count!: number;
@@ -14,9 +14,8 @@ export class aws_iam_policy extends TerraformResource {
   readonly name?: string;
   readonly name_prefix?: string;
   readonly policy_id!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsIamPolicyArgs) {
     super(config, "resource", args, resourceName, "aws_iam_policy");
   }

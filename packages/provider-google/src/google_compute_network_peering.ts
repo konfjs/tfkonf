@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeNetworkPeeringArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeNetworkPeeringArgs {
   export_custom_routes?: boolean;
   export_subnet_routes_with_public_ip?: boolean;
@@ -15,10 +17,12 @@ export interface GoogleComputeNetworkPeeringArgs {
   stack_type?: string;
   timeouts?: GoogleComputeNetworkPeeringArgsTimeouts;
 }
+
 export class google_compute_network_peering extends TerraformResource {
   readonly id?: string;
   readonly state!: string;
   readonly state_details!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeNetworkPeeringArgs) {
     super(config, "resource", args, resourceName, "google_compute_network_peering");
   }

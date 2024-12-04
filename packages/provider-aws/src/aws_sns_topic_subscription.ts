@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSnsTopicSubscriptionArgs {
   confirmation_timeout_in_minutes?: number;
   delivery_policy?: string;
@@ -12,6 +13,7 @@ export interface AwsSnsTopicSubscriptionArgs {
   subscription_role_arn?: string;
   topic_arn: string;
 }
+
 export class aws_sns_topic_subscription extends TerraformResource {
   readonly arn!: string;
   readonly confirmation_was_authenticated!: boolean;
@@ -19,6 +21,7 @@ export class aws_sns_topic_subscription extends TerraformResource {
   readonly id?: string;
   readonly owner_id!: string;
   readonly pending_confirmation!: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSnsTopicSubscriptionArgs) {
     super(config, "resource", args, resourceName, "aws_sns_topic_subscription");
   }

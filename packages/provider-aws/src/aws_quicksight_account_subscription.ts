@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsQuicksightAccountSubscriptionArgsTimeouts {
   create?: string;
   delete?: string;
   read?: string;
 }
+
 export interface AwsQuicksightAccountSubscriptionArgs {
   account_name: string;
   active_directory_name?: string;
@@ -22,10 +24,12 @@ export interface AwsQuicksightAccountSubscriptionArgs {
   realm?: string;
   timeouts?: AwsQuicksightAccountSubscriptionArgsTimeouts;
 }
+
 export class aws_quicksight_account_subscription extends TerraformResource {
   readonly account_subscription_status!: string;
   readonly aws_account_id?: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsQuicksightAccountSubscriptionArgs) {
     super(config, "resource", args, resourceName, "aws_quicksight_account_subscription");
   }

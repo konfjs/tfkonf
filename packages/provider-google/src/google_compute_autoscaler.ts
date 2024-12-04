@@ -1,24 +1,30 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyCpuUtilization {
   predictive_method?: string;
   target: number;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyLoadBalancingUtilization {
   target: number;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyMetric {
   name: string;
   target?: number;
   type?: string;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControlMaxScaledInReplicas {
   fixed?: number;
   percent?: number;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControl {
   time_window_sec?: number;
   max_scaled_in_replicas: GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControlMaxScaledInReplicas;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules {
   description?: string;
   disabled?: boolean;
@@ -28,6 +34,7 @@ export interface GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules {
   schedule: string;
   time_zone?: string;
 }
+
 export interface GoogleComputeAutoscalerArgsAutoscalingPolicy {
   cooldown_period?: number;
   max_replicas: number;
@@ -39,11 +46,13 @@ export interface GoogleComputeAutoscalerArgsAutoscalingPolicy {
   scale_in_control: GoogleComputeAutoscalerArgsAutoscalingPolicyScaleInControl;
   scaling_schedules: GoogleComputeAutoscalerArgsAutoscalingPolicyScalingSchedules;
 }
+
 export interface GoogleComputeAutoscalerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeAutoscalerArgs {
   description?: string;
   name: string;
@@ -51,12 +60,14 @@ export interface GoogleComputeAutoscalerArgs {
   autoscaling_policy: GoogleComputeAutoscalerArgsAutoscalingPolicy;
   timeouts?: GoogleComputeAutoscalerArgsTimeouts;
 }
+
 export class google_compute_autoscaler extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
   readonly project?: string;
   readonly self_link!: string;
   readonly zone?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeAutoscalerArgs) {
     super(config, "resource", args, resourceName, "google_compute_autoscaler");
   }

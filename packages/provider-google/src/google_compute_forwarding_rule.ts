@@ -1,12 +1,15 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeForwardingRuleArgsServiceDirectoryRegistrations {
   service?: string;
 }
+
 export interface GoogleComputeForwardingRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeForwardingRuleArgs {
   all_ports?: boolean;
   allow_global_access?: boolean;
@@ -14,9 +17,7 @@ export interface GoogleComputeForwardingRuleArgs {
   backend_service?: string;
   description?: string;
   is_mirroring_collector?: boolean;
-  labels?: {
-    [key: string]: string;
-  };
+  labels?: { [key: string]: string };
   load_balancing_scheme?: string;
   name: string;
   no_automate_dns_zone?: boolean;
@@ -28,12 +29,11 @@ export interface GoogleComputeForwardingRuleArgs {
   service_directory_registrations: GoogleComputeForwardingRuleArgsServiceDirectoryRegistrations;
   timeouts?: GoogleComputeForwardingRuleArgsTimeouts;
 }
+
 export class google_compute_forwarding_rule extends TerraformResource {
   readonly base_forwarding_rule!: string;
   readonly creation_timestamp!: string;
-  readonly effective_labels!: {
-    [key: string]: string;
-  };
+  readonly effective_labels!: { [key: string]: string };
   readonly forwarding_rule_id!: number;
   readonly id?: string;
   readonly ip_address?: string;
@@ -50,9 +50,8 @@ export class google_compute_forwarding_rule extends TerraformResource {
   readonly self_link!: string;
   readonly service_name!: string;
   readonly subnetwork?: string;
-  readonly terraform_labels!: {
-    [key: string]: string;
-  };
+  readonly terraform_labels!: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeForwardingRuleArgs) {
     super(config, "resource", args, resourceName, "google_compute_forwarding_rule");
   }

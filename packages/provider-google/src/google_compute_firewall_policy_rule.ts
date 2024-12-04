@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeFirewallPolicyRuleArgsMatchLayer4Configs {
   ip_protocol: string;
   ports?: string[];
 }
+
 export interface GoogleComputeFirewallPolicyRuleArgsMatch {
   dest_address_groups?: string[];
   dest_fqdns?: string[];
@@ -16,11 +18,13 @@ export interface GoogleComputeFirewallPolicyRuleArgsMatch {
   src_threat_intelligences?: string[];
   layer4_configs: GoogleComputeFirewallPolicyRuleArgsMatchLayer4Configs;
 }
+
 export interface GoogleComputeFirewallPolicyRuleArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeFirewallPolicyRuleArgs {
   action: string;
   description?: string;
@@ -36,10 +40,12 @@ export interface GoogleComputeFirewallPolicyRuleArgs {
   match: GoogleComputeFirewallPolicyRuleArgsMatch;
   timeouts?: GoogleComputeFirewallPolicyRuleArgsTimeouts;
 }
+
 export class google_compute_firewall_policy_rule extends TerraformResource {
   readonly id?: string;
   readonly kind!: string;
   readonly rule_tuple_count!: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeFirewallPolicyRuleArgs) {
     super(config, "resource", args, resourceName, "google_compute_firewall_policy_rule");
   }

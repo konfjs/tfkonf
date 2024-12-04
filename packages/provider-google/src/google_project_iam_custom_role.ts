@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleProjectIamCustomRoleArgs {
   description?: string;
   permissions: string[];
@@ -6,11 +7,13 @@ export interface GoogleProjectIamCustomRoleArgs {
   stage?: string;
   title: string;
 }
+
 export class google_project_iam_custom_role extends TerraformResource {
   readonly deleted!: boolean;
   readonly id?: string;
   readonly name!: string;
   readonly project?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleProjectIamCustomRoleArgs) {
     super(config, "resource", args, resourceName, "google_project_iam_custom_role");
   }

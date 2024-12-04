@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeHttpsHealthCheckArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeHttpsHealthCheckArgs {
   check_interval_sec?: number;
   description?: string;
@@ -16,11 +18,13 @@ export interface GoogleComputeHttpsHealthCheckArgs {
   unhealthy_threshold?: number;
   timeouts?: GoogleComputeHttpsHealthCheckArgsTimeouts;
 }
+
 export class google_compute_https_health_check extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly id?: string;
   readonly project?: string;
   readonly self_link!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeHttpsHealthCheckArgs) {
     super(config, "resource", args, resourceName, "google_compute_https_health_check");
   }

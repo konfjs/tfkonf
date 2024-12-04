@@ -1,11 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
-export interface AwsAmiCopyArgsEbsBlockDevice {}
-export interface AwsAmiCopyArgsEphemeralBlockDevice {}
+
+export interface AwsAmiCopyArgsEbsBlockDevice {
+}
+
+export interface AwsAmiCopyArgsEphemeralBlockDevice {
+}
+
 export interface AwsAmiCopyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsAmiCopyArgs {
   deprecation_time?: string;
   description?: string;
@@ -14,13 +20,12 @@ export interface AwsAmiCopyArgs {
   name: string;
   source_ami_id: string;
   source_ami_region: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   ebs_block_device: AwsAmiCopyArgsEbsBlockDevice;
   ephemeral_block_device: AwsAmiCopyArgsEphemeralBlockDevice;
   timeouts?: AwsAmiCopyArgsTimeouts;
 }
+
 export class aws_ami_copy extends TerraformResource {
   readonly architecture!: string;
   readonly arn!: string;
@@ -43,12 +48,11 @@ export class aws_ami_copy extends TerraformResource {
   readonly root_device_name!: string;
   readonly root_snapshot_id!: string;
   readonly sriov_net_support!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly tpm_support!: string;
   readonly usage_operation!: string;
   readonly virtualization_type!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsAmiCopyArgs) {
     super(config, "resource", args, resourceName, "aws_ami_copy");
   }

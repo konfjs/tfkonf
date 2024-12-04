@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCodecatalystSourceRepositoryArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsCodecatalystSourceRepositoryArgs {
   description?: string;
   name: string;
@@ -11,8 +13,10 @@ export interface AwsCodecatalystSourceRepositoryArgs {
   space_name: string;
   timeouts?: AwsCodecatalystSourceRepositoryArgsTimeouts;
 }
+
 export class aws_codecatalyst_source_repository extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCodecatalystSourceRepositoryArgs) {
     super(config, "resource", args, resourceName, "aws_codecatalyst_source_repository");
   }

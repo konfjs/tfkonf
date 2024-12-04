@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleApigeeTargetServerArgsSSlInfoCommonName {
   value?: string;
   wildcard_match?: boolean;
 }
+
 export interface GoogleApigeeTargetServerArgsSSlInfo {
   ciphers?: string[];
   client_auth_enabled?: boolean;
@@ -14,11 +16,13 @@ export interface GoogleApigeeTargetServerArgsSSlInfo {
   trust_store?: string;
   common_name: GoogleApigeeTargetServerArgsSSlInfoCommonName;
 }
+
 export interface GoogleApigeeTargetServerArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleApigeeTargetServerArgs {
   description?: string;
   env_id: string;
@@ -29,9 +33,11 @@ export interface GoogleApigeeTargetServerArgs {
   s_sl_info: GoogleApigeeTargetServerArgsSSlInfo;
   timeouts?: GoogleApigeeTargetServerArgsTimeouts;
 }
+
 export class google_apigee_target_server extends TerraformResource {
   readonly id?: string;
   readonly protocol?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleApigeeTargetServerArgs) {
     super(config, "resource", args, resourceName, "google_apigee_target_server");
   }

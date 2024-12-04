@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleActiveDirectoryDomainTrustArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleActiveDirectoryDomainTrustArgs {
   domain: string;
   selective_authentication?: boolean;
@@ -14,9 +16,11 @@ export interface GoogleActiveDirectoryDomainTrustArgs {
   trust_type: string;
   timeouts?: GoogleActiveDirectoryDomainTrustArgsTimeouts;
 }
+
 export class google_active_directory_domain_trust extends TerraformResource {
   readonly id?: string;
   readonly project?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleActiveDirectoryDomainTrustArgs) {
     super(config, "resource", args, resourceName, "google_active_directory_domain_trust");
   }

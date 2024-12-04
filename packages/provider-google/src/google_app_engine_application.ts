@@ -1,22 +1,27 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleAppEngineApplicationArgsFeatureSettings {
   split_health_checks: boolean;
 }
+
 export interface GoogleAppEngineApplicationArgsIap {
   enabled?: boolean;
   oauth2_client_id: string;
   oauth2_client_secret: string;
 }
+
 export interface GoogleAppEngineApplicationArgsTimeouts {
   create?: string;
   update?: string;
 }
+
 export interface GoogleAppEngineApplicationArgs {
   location_id: string;
   feature_settings: GoogleAppEngineApplicationArgsFeatureSettings;
   iap: GoogleAppEngineApplicationArgsIap;
   timeouts?: GoogleAppEngineApplicationArgsTimeouts;
 }
+
 export class google_app_engine_application extends TerraformResource {
   readonly app_id!: string;
   readonly auth_domain?: string;
@@ -30,6 +35,7 @@ export class google_app_engine_application extends TerraformResource {
   readonly project?: string;
   readonly serving_status?: string;
   readonly url_dispatch_rule!: any[];
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleAppEngineApplicationArgs) {
     super(config, "resource", args, resourceName, "google_app_engine_application");
   }

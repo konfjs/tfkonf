@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksStaticWebLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksStaticWebLayerArgsCloudwatchConfigurationLogStreams 
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksStaticWebLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksStaticWebLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksStaticWebLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksStaticWebLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksStaticWebLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksStaticWebLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksStaticWebLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -67,20 +74,18 @@ export interface AwsOpsworksStaticWebLayerArgs {
   name?: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksStaticWebLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksStaticWebLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksStaticWebLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_static_web_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksStaticWebLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_static_web_layer");
   }

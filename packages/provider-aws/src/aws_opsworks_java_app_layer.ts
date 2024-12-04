@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksJavaAppLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksJavaAppLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksJavaAppLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksJavaAppLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksJavaAppLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksJavaAppLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksJavaAppLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksJavaAppLayerArgs {
   app_server?: string;
   app_server_version?: string;
@@ -72,20 +79,18 @@ export interface AwsOpsworksJavaAppLayerArgs {
   name?: string;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksJavaAppLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksJavaAppLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksJavaAppLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_java_app_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksJavaAppLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_java_app_layer");
   }

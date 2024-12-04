@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleComputeRegionSslPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleComputeRegionSslPolicyArgs {
   custom_features?: string[];
   description?: string;
@@ -12,6 +14,7 @@ export interface GoogleComputeRegionSslPolicyArgs {
   profile?: string;
   timeouts?: GoogleComputeRegionSslPolicyArgsTimeouts;
 }
+
 export class google_compute_region_ssl_policy extends TerraformResource {
   readonly creation_timestamp!: string;
   readonly enabled_features!: string[];
@@ -20,6 +23,7 @@ export class google_compute_region_ssl_policy extends TerraformResource {
   readonly project?: string;
   readonly region?: string;
   readonly self_link!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleComputeRegionSslPolicyArgs) {
     super(config, "resource", args, resourceName, "google_compute_region_ssl_policy");
   }

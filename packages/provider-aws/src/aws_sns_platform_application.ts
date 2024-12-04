@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsSnsPlatformApplicationArgs {
   apple_platform_bundle_id?: string;
   apple_platform_team_id?: string;
@@ -14,9 +15,11 @@ export interface AwsSnsPlatformApplicationArgs {
   success_feedback_role_arn?: string;
   success_feedback_sample_rate?: string;
 }
+
 export class aws_sns_platform_application extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsSnsPlatformApplicationArgs) {
     super(config, "resource", args, resourceName, "aws_sns_platform_application");
   }

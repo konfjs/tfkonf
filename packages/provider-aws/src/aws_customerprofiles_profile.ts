@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsCustomerprofilesProfileArgsAddress {
   address_1?: string;
   address_2?: string;
@@ -11,6 +12,7 @@ export interface AwsCustomerprofilesProfileArgsAddress {
   province?: string;
   state?: string;
 }
+
 export interface AwsCustomerprofilesProfileArgsBillingAddress {
   address_1?: string;
   address_2?: string;
@@ -23,6 +25,7 @@ export interface AwsCustomerprofilesProfileArgsBillingAddress {
   province?: string;
   state?: string;
 }
+
 export interface AwsCustomerprofilesProfileArgsMailingAddress {
   address_1?: string;
   address_2?: string;
@@ -35,6 +38,7 @@ export interface AwsCustomerprofilesProfileArgsMailingAddress {
   province?: string;
   state?: string;
 }
+
 export interface AwsCustomerprofilesProfileArgsShippingAddress {
   address_1?: string;
   address_2?: string;
@@ -47,12 +51,11 @@ export interface AwsCustomerprofilesProfileArgsShippingAddress {
   province?: string;
   state?: string;
 }
+
 export interface AwsCustomerprofilesProfileArgs {
   account_number?: string;
   additional_information?: string;
-  attributes?: {
-    [key: string]: string;
-  };
+  attributes?: { [key: string]: string };
   birth_date?: string;
   business_email_address?: string;
   business_name?: string;
@@ -73,8 +76,10 @@ export interface AwsCustomerprofilesProfileArgs {
   mailing_address: AwsCustomerprofilesProfileArgsMailingAddress;
   shipping_address: AwsCustomerprofilesProfileArgsShippingAddress;
 }
+
 export class aws_customerprofiles_profile extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsCustomerprofilesProfileArgs) {
     super(config, "resource", args, resourceName, "aws_customerprofiles_profile");
   }

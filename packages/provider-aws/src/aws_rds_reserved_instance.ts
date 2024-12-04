@@ -1,18 +1,19 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRdsReservedInstanceArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRdsReservedInstanceArgs {
   instance_count?: number;
   offering_id: string;
   reservation_id?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsRdsReservedInstanceArgsTimeouts;
 }
+
 export class aws_rds_reserved_instance extends TerraformResource {
   readonly arn!: string;
   readonly currency_code!: string;
@@ -27,10 +28,9 @@ export class aws_rds_reserved_instance extends TerraformResource {
   readonly recurring_charges!: any[];
   readonly start_time!: string;
   readonly state!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly usage_price!: number;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRdsReservedInstanceArgs) {
     super(config, "resource", args, resourceName, "aws_rds_reserved_instance");
   }

@@ -1,21 +1,23 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNetworkmanagerConnectAttachmentArgsOptions {
   protocol?: string;
 }
+
 export interface AwsNetworkmanagerConnectAttachmentArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface AwsNetworkmanagerConnectAttachmentArgs {
   core_network_id: string;
   edge_location: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   transport_attachment_id: string;
   options: AwsNetworkmanagerConnectAttachmentArgsOptions;
   timeouts?: AwsNetworkmanagerConnectAttachmentArgsTimeouts;
 }
+
 export class aws_networkmanager_connect_attachment extends TerraformResource {
   readonly arn!: string;
   readonly attachment_id!: string;
@@ -27,9 +29,8 @@ export class aws_networkmanager_connect_attachment extends TerraformResource {
   readonly resource_arn!: string;
   readonly segment_name!: string;
   readonly state!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNetworkmanagerConnectAttachmentArgs) {
     super(config, "resource", args, resourceName, "aws_networkmanager_connect_attachment");
   }

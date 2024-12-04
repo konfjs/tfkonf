@@ -1,18 +1,22 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleIntegrationsAuthConfigArgsClientCertificate {
   encrypted_private_key: string;
   passphrase?: string;
   ssl_certificate: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialAuthToken {
   token?: string;
   type?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialJwt {
   jwt_header?: string;
   jwt_payload?: string;
   secret?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2AuthorizationCode {
   auth_endpoint?: string;
   client_id?: string;
@@ -20,25 +24,32 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2Author
   scope?: string;
   token_endpoint?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKeyLiteralValue {
   string_value?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKey {
   literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKeyLiteralValue;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValueLiteralValue {
   string_value?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValue {
   literal_value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValueLiteralValue;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntries {
   key: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesKey;
   value: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntriesValue;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParams {
   entries: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParamsEntries;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentials {
   client_id?: string;
   client_secret?: string;
@@ -47,18 +58,22 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2Client
   token_endpoint?: string;
   token_params: GoogleIntegrationsAuthConfigArgsDecryptedCredentialOauth2ClientCredentialsTokenParams;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialOidcToken {
   audience?: string;
   service_account_email?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialServiceAccountCredentials {
   scope?: string;
   service_account?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredentialUsernameAndPassword {
   password?: string;
   username?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsDecryptedCredential {
   credential_type: string;
   auth_token: GoogleIntegrationsAuthConfigArgsDecryptedCredentialAuthToken;
@@ -69,11 +84,13 @@ export interface GoogleIntegrationsAuthConfigArgsDecryptedCredential {
   service_account_credentials: GoogleIntegrationsAuthConfigArgsDecryptedCredentialServiceAccountCredentials;
   username_and_password: GoogleIntegrationsAuthConfigArgsDecryptedCredentialUsernameAndPassword;
 }
+
 export interface GoogleIntegrationsAuthConfigArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleIntegrationsAuthConfigArgs {
   description?: string;
   display_name: string;
@@ -85,6 +102,7 @@ export interface GoogleIntegrationsAuthConfigArgs {
   decrypted_credential: GoogleIntegrationsAuthConfigArgsDecryptedCredential;
   timeouts?: GoogleIntegrationsAuthConfigArgsTimeouts;
 }
+
 export class google_integrations_auth_config extends TerraformResource {
   readonly certificate_id!: string;
   readonly create_time!: string;
@@ -99,6 +117,7 @@ export class google_integrations_auth_config extends TerraformResource {
   readonly state!: string;
   readonly update_time!: string;
   readonly valid_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleIntegrationsAuthConfigArgs) {
     super(config, "resource", args, resourceName, "google_integrations_auth_config");
   }

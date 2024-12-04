@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsMemorydbClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsMemorydbClusterArgs {
   acl_name: string;
   auto_minor_version_upgrade?: boolean;
@@ -18,12 +20,11 @@ export interface AwsMemorydbClusterArgs {
   snapshot_arns?: string[];
   snapshot_name?: string;
   sns_topic_arn?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   tls_enabled?: boolean;
   timeouts?: AwsMemorydbClusterArgsTimeouts;
 }
+
 export class aws_memorydb_cluster extends TerraformResource {
   readonly arn!: string;
   readonly cluster_endpoint!: any[];
@@ -40,9 +41,8 @@ export class aws_memorydb_cluster extends TerraformResource {
   readonly snapshot_retention_limit?: number;
   readonly snapshot_window?: string;
   readonly subnet_group_name?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsMemorydbClusterArgs) {
     super(config, "resource", args, resourceName, "aws_memorydb_cluster");
   }

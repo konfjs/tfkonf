@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicyOsConstraints {
   minimum_version?: string;
   os_type: string;
 }
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy {
   allowed_device_management_levels?: string[];
   allowed_encryption_statuses?: string[];
@@ -11,17 +13,21 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicy 
   require_screen_lock?: boolean;
   os_constraints: GoogleAccessContextManagerAccessLevelConditionArgsDevicePolicyOsConstraints;
 }
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSourcesVpcSubnetwork {
   network: string;
   vpc_ip_subnetworks?: string[];
 }
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources {
   vpc_subnetwork: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSourcesVpcSubnetwork;
 }
+
 export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   access_level: string;
   ip_subnetworks?: string[];
@@ -33,8 +39,10 @@ export interface GoogleAccessContextManagerAccessLevelConditionArgs {
   timeouts?: GoogleAccessContextManagerAccessLevelConditionArgsTimeouts;
   vpc_network_sources: GoogleAccessContextManagerAccessLevelConditionArgsVpcNetworkSources;
 }
+
 export class google_access_context_manager_access_level_condition extends TerraformResource {
   readonly id?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleAccessContextManagerAccessLevelConditionArgs) {
     super(config, "resource", args, resourceName, "google_access_context_manager_access_level_condition");
   }

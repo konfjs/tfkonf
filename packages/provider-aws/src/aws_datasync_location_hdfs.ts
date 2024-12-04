@@ -1,9 +1,13 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsDatasyncLocationHdfsArgsNameNode {
   hostname: string;
   port: number;
 }
-export interface AwsDatasyncLocationHdfsArgsQopConfiguration {}
+
+export interface AwsDatasyncLocationHdfsArgsQopConfiguration {
+}
+
 export interface AwsDatasyncLocationHdfsArgs {
   agent_arns: string[];
   authentication_type?: string;
@@ -17,19 +21,17 @@ export interface AwsDatasyncLocationHdfsArgs {
   replication_factor?: number;
   simple_user?: string;
   subdirectory?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   name_node: AwsDatasyncLocationHdfsArgsNameNode;
   qop_configuration: AwsDatasyncLocationHdfsArgsQopConfiguration;
 }
+
 export class aws_datasync_location_hdfs extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
   readonly uri!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsDatasyncLocationHdfsArgs) {
     super(config, "resource", args, resourceName, "aws_datasync_location_hdfs");
   }

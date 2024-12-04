@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsRedshiftEventSubscriptionArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsRedshiftEventSubscriptionArgs {
   enabled?: boolean;
   event_categories?: string[];
@@ -12,19 +14,17 @@ export interface AwsRedshiftEventSubscriptionArgs {
   sns_topic_arn: string;
   source_ids?: string[];
   source_type?: string;
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   timeouts?: AwsRedshiftEventSubscriptionArgsTimeouts;
 }
+
 export class aws_redshift_event_subscription extends TerraformResource {
   readonly arn!: string;
   readonly customer_aws_id!: string;
   readonly id?: string;
   readonly status!: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsRedshiftEventSubscriptionArgs) {
     super(config, "resource", args, resourceName, "aws_redshift_event_subscription");
   }

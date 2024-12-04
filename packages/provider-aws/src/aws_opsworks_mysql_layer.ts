@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksMysqlLayerArgsCloudwatchConfigurationLogStreams {
   batch_count?: number;
   batch_size?: number;
@@ -12,10 +13,12 @@ export interface AwsOpsworksMysqlLayerArgsCloudwatchConfigurationLogStreams {
   multiline_start_pattern?: string;
   time_zone?: string;
 }
+
 export interface AwsOpsworksMysqlLayerArgsCloudwatchConfiguration {
   enabled?: boolean;
   log_streams: AwsOpsworksMysqlLayerArgsCloudwatchConfigurationLogStreams;
 }
+
 export interface AwsOpsworksMysqlLayerArgsEbsVolume {
   encrypted?: boolean;
   iops?: number;
@@ -25,6 +28,7 @@ export interface AwsOpsworksMysqlLayerArgsEbsVolume {
   size: number;
   type?: string;
 }
+
 export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingDownscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -34,6 +38,7 @@ export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingDownscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingUpscaling {
   alarms?: string[];
   cpu_threshold?: number;
@@ -43,11 +48,13 @@ export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingUpscaling {
   memory_threshold?: number;
   thresholds_wait_time?: number;
 }
+
 export interface AwsOpsworksMysqlLayerArgsLoadBasedAutoScaling {
   enable?: boolean;
   downscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingDownscaling;
   upscaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScalingUpscaling;
 }
+
 export interface AwsOpsworksMysqlLayerArgs {
   auto_assign_elastic_ips?: boolean;
   auto_assign_public_ips?: boolean;
@@ -69,20 +76,18 @@ export interface AwsOpsworksMysqlLayerArgs {
   root_password_on_all_instances?: boolean;
   stack_id: string;
   system_packages?: string[];
-  tags?: {
-    [key: string]: string;
-  };
+  tags?: { [key: string]: string };
   use_ebs_optimized_instances?: boolean;
   cloudwatch_configuration: AwsOpsworksMysqlLayerArgsCloudwatchConfiguration;
   ebs_volume: AwsOpsworksMysqlLayerArgsEbsVolume;
   load_based_auto_scaling: AwsOpsworksMysqlLayerArgsLoadBasedAutoScaling;
 }
+
 export class aws_opsworks_mysql_layer extends TerraformResource {
   readonly arn!: string;
   readonly id?: string;
-  readonly tags_all?: {
-    [key: string]: string;
-  };
+  readonly tags_all?: { [key: string]: string };
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksMysqlLayerArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_mysql_layer");
   }

@@ -1,14 +1,17 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsNeptuneGlobalClusterArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface AwsNeptuneGlobalClusterArgs {
   deletion_protection?: boolean;
   global_cluster_identifier: string;
   timeouts?: AwsNeptuneGlobalClusterArgsTimeouts;
 }
+
 export class aws_neptune_global_cluster extends TerraformResource {
   readonly arn!: string;
   readonly engine?: string;
@@ -19,6 +22,7 @@ export class aws_neptune_global_cluster extends TerraformResource {
   readonly source_db_cluster_identifier?: string;
   readonly status!: string;
   readonly storage_encrypted?: boolean;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsNeptuneGlobalClusterArgs) {
     super(config, "resource", args, resourceName, "aws_neptune_global_cluster");
   }

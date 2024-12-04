@@ -1,15 +1,18 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleBigqueryRoutineArgsArguments {
   argument_kind?: string;
   data_type?: string;
   mode?: string;
   name?: string;
 }
+
 export interface GoogleBigqueryRoutineArgsRemoteFunctionOptions {
   connection?: string;
   endpoint?: string;
   max_batching_rows?: string;
 }
+
 export interface GoogleBigqueryRoutineArgsSparkOptions {
   connection?: string;
   container_image?: string;
@@ -17,11 +20,13 @@ export interface GoogleBigqueryRoutineArgsSparkOptions {
   main_file_uri?: string;
   runtime_version?: string;
 }
+
 export interface GoogleBigqueryRoutineArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleBigqueryRoutineArgs {
   data_governance_type?: string;
   dataset_id: string;
@@ -39,11 +44,13 @@ export interface GoogleBigqueryRoutineArgs {
   spark_options: GoogleBigqueryRoutineArgsSparkOptions;
   timeouts?: GoogleBigqueryRoutineArgsTimeouts;
 }
+
 export class google_bigquery_routine extends TerraformResource {
   readonly creation_time!: number;
   readonly id?: string;
   readonly last_modified_time!: number;
   readonly project?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleBigqueryRoutineArgs) {
     super(config, "resource", args, resourceName, "google_bigquery_routine");
   }

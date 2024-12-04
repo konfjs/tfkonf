@@ -1,4 +1,5 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface AwsOpsworksApplicationArgsAppSource {
   password?: string;
   revision?: string;
@@ -7,16 +8,19 @@ export interface AwsOpsworksApplicationArgsAppSource {
   url?: string;
   username?: string;
 }
+
 export interface AwsOpsworksApplicationArgsEnvironment {
   key: string;
   secure?: boolean;
   value: string;
 }
+
 export interface AwsOpsworksApplicationArgsSslConfiguration {
   certificate: string;
   chain?: string;
   private_key: string;
 }
+
 export interface AwsOpsworksApplicationArgs {
   auto_bundle_on_deploy?: string;
   aws_flow_ruby_settings?: string;
@@ -35,9 +39,11 @@ export interface AwsOpsworksApplicationArgs {
   environment: AwsOpsworksApplicationArgsEnvironment;
   ssl_configuration: AwsOpsworksApplicationArgsSslConfiguration;
 }
+
 export class aws_opsworks_application extends TerraformResource {
   readonly id?: string;
   readonly short_name?: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: AwsOpsworksApplicationArgs) {
     super(config, "resource", args, resourceName, "aws_opsworks_application");
   }

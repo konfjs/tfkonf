@@ -1,8 +1,10 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleDiscoveryEngineTargetSiteArgsTimeouts {
   create?: string;
   delete?: string;
 }
+
 export interface GoogleDiscoveryEngineTargetSiteArgs {
   data_store_id: string;
   exact_match?: boolean;
@@ -11,6 +13,7 @@ export interface GoogleDiscoveryEngineTargetSiteArgs {
   type?: string;
   timeouts?: GoogleDiscoveryEngineTargetSiteArgsTimeouts;
 }
+
 export class google_discovery_engine_target_site extends TerraformResource {
   readonly failure_reason!: any[];
   readonly generated_uri_pattern!: string;
@@ -22,6 +25,7 @@ export class google_discovery_engine_target_site extends TerraformResource {
   readonly site_verification_info!: any[];
   readonly target_site_id!: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleDiscoveryEngineTargetSiteArgs) {
     super(config, "resource", args, resourceName, "google_discovery_engine_target_site");
   }

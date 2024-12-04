@@ -1,9 +1,11 @@
 import { TerraformConfig, TerraformResource } from "@tfkonf/core";
+
 export interface GoogleNetworkSecurityTlsInspectionPolicyArgsTimeouts {
   create?: string;
   delete?: string;
   update?: string;
 }
+
 export interface GoogleNetworkSecurityTlsInspectionPolicyArgs {
   ca_pool: string;
   custom_tls_features?: string[];
@@ -16,11 +18,13 @@ export interface GoogleNetworkSecurityTlsInspectionPolicyArgs {
   trust_config?: string;
   timeouts?: GoogleNetworkSecurityTlsInspectionPolicyArgsTimeouts;
 }
+
 export class google_network_security_tls_inspection_policy extends TerraformResource {
   readonly create_time!: string;
   readonly id?: string;
   readonly project?: string;
   readonly update_time!: string;
+
   constructor(config: TerraformConfig, resourceName: string, args: GoogleNetworkSecurityTlsInspectionPolicyArgs) {
     super(config, "resource", args, resourceName, "google_network_security_tls_inspection_policy");
   }
