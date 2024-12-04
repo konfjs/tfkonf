@@ -18,9 +18,16 @@ export function generateProperties(
 ) {
     const interfaces: InterfaceDeclarationStructure[] = [];
     const classProperties: PropertyDeclarationStructure[] = [];
-    traverseBlocks(resourceName, block, interfaces, classProperties, parentName);
+    const meta = {};
+    traverseBlocks(resourceName, block, interfaces, classProperties, meta, parentName);
     sourceFile.addInterfaces(interfaces);
     classDeclaration.properties = classProperties;
+    if (classDeclaration.ctors?.[0]) {
+        classDeclaration.ctors[0].statements = [
+            `const meta = ${JSON.stringify(meta)};`,
+            `super(terraformConfig, "resource", args, resourceName, "${resourceName}", meta);`,
+        ];
+    }
     sourceFile.addClass(classDeclaration);
 }
 
@@ -29,6 +36,7 @@ export function traverseBlocks(
     block: Block,
     interfaces: InterfaceDeclarationStructure[],
     classProperties: PropertyDeclarationStructure[],
+    meta: any,
     parentName = '',
 ) {
     /**
@@ -87,6 +95,9 @@ export function traverseBlocks(
                 type: `${toPascalCase(childInterfaceName)}${nestedBlockType}`,
                 hasQuestionToken: isOptional,
             });
+            if (!meta[blockName]) {
+                meta[blockName] = { isBlock: true };
+            }
             if (!parentName) {
                 classProperties.push({
                     kind: StructureKind.Property,
@@ -97,7 +108,14 @@ export function traverseBlocks(
                     hasExclamationToken: !isOptional,
                 });
             }
-            traverseBlocks(blockName, blockType.block, interfaces, classProperties, interfaceName);
+            traverseBlocks(
+                blockName,
+                blockType.block,
+                interfaces,
+                classProperties,
+                meta[blockName],
+                interfaceName,
+            );
         }
     }
 

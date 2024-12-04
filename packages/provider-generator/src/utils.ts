@@ -28,6 +28,8 @@ export function getListType(type: AttributeType) {
         }
         if (Array.isArray(type[1])) {
             // TODO: Recursively handle nested types.
+            // It seems, these types are usually computed values.
+            // So it's most likely gonna be a blocker for "data" resources.
         }
     }
     if (type[0] === 'map') {
