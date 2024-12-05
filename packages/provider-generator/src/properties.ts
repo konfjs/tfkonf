@@ -16,11 +16,21 @@ export function generateProperties(
     block: Block,
     parentName = '',
 ) {
-    const interfaces: InterfaceDeclarationStructure[] = [];
+    const argumentInterfaces: InterfaceDeclarationStructure[] = [];
+    const computedInterfaces: InterfaceDeclarationStructure[] = [];
     const classProperties: PropertyDeclarationStructure[] = [];
     const meta = {};
-    traverseBlocks(resourceName, block, interfaces, classProperties, meta, parentName);
-    sourceFile.addInterfaces(interfaces);
+    traverseBlocks(
+        resourceName,
+        block,
+        argumentInterfaces,
+        computedInterfaces,
+        classProperties,
+        meta,
+        parentName,
+    );
+    sourceFile.addInterfaces(argumentInterfaces);
+    sourceFile.addInterfaces(computedInterfaces);
     classDeclaration.properties = classProperties;
     if (classDeclaration.ctors?.[0]) {
         classDeclaration.ctors[0].statements = [
@@ -34,7 +44,8 @@ export function generateProperties(
 export function traverseBlocks(
     resourceName: string,
     block: Block,
-    interfaces: InterfaceDeclarationStructure[],
+    argumentInterfaces: InterfaceDeclarationStructure[],
+    computedInterfaces: InterfaceDeclarationStructure[],
     classProperties: PropertyDeclarationStructure[],
     meta: any,
     parentName = '',
@@ -46,19 +57,29 @@ export function traverseBlocks(
      * Each block_types.X.block is a new interface.
      * and so on...
      */
-    let interfaceName = '';
+    let argumentInterfaceName = '';
+    let attributeInterfaceName = '';
     if (!parentName) {
-        interfaceName = `${toPascalCase(resourceName)}Args`;
+        argumentInterfaceName = `${toPascalCase(resourceName)}Args`;
     } else {
-        interfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceName)}`;
+        argumentInterfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceName)}`;
     }
+    attributeInterfaceName = `${argumentInterfaceName}Attributes`;
 
-    const interfaceProperties: PropertySignatureStructure[] = [];
+    const argumentInterfaceProperties: PropertySignatureStructure[] = [];
+    const computedInterfaceProperties: PropertySignatureStructure[] = [];
 
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
             if (!attributeBody.computed) {
-                interfaceProperties.push({
+                argumentInterfaceProperties.push({
+                    kind: StructureKind.PropertySignature,
+                    name: attributeName,
+                    type: getTSType(attributeBody),
+                    hasQuestionToken: attributeBody.optional,
+                });
+            } else {
+                computedInterfaceProperties.push({
                     kind: StructureKind.PropertySignature,
                     name: attributeName,
                     type: getTSType(attributeBody),
@@ -69,7 +90,9 @@ export function traverseBlocks(
                 classProperties.push({
                     kind: StructureKind.Property,
                     name: attributeName,
-                    type: getTSType(attributeBody),
+                    type: attributeBody.computed
+                        ? attributeInterfaceName
+                        : getTSType(attributeBody),
                     isReadonly: true,
                     hasQuestionToken: attributeBody.optional,
                     hasExclamationToken: !attributeBody.optional,
@@ -80,7 +103,8 @@ export function traverseBlocks(
 
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
-            const childInterfaceName = `${interfaceName}${toPascalCase(blockName)}`;
+            const childInterfaceName = `${argumentInterfaceName}${toPascalCase(blockName)}`;
+            const childComputedInterfaceName = `${childInterfaceName}Attributes`;
             let nestedBlockType = '';
             if (
                 (blockType.nesting_mode === 'list' || blockType.nesting_mode === 'set') &&
@@ -89,10 +113,16 @@ export function traverseBlocks(
                 nestedBlockType = '[]';
             }
             const isOptional = blockName === 'timeouts' || !blockType.min_items;
-            interfaceProperties.push({
+            argumentInterfaceProperties.push({
                 kind: StructureKind.PropertySignature,
                 name: blockName,
                 type: `${toPascalCase(childInterfaceName)}${nestedBlockType}`,
+                hasQuestionToken: isOptional,
+            });
+            computedInterfaceProperties.push({
+                kind: StructureKind.PropertySignature,
+                name: blockName,
+                type: `${toPascalCase(childComputedInterfaceName)}${nestedBlockType}`,
                 hasQuestionToken: isOptional,
             });
             if (!meta[blockName]) {
@@ -102,7 +132,7 @@ export function traverseBlocks(
                 classProperties.push({
                     kind: StructureKind.Property,
                     name: blockName,
-                    type: `${toPascalCase(childInterfaceName)}${nestedBlockType}`,
+                    type: `${toPascalCase(childComputedInterfaceName)}${nestedBlockType}`,
                     isReadonly: true,
                     hasQuestionToken: isOptional,
                     hasExclamationToken: !isOptional,
@@ -111,18 +141,27 @@ export function traverseBlocks(
             traverseBlocks(
                 blockName,
                 blockType.block,
-                interfaces,
+                argumentInterfaces,
+                computedInterfaces,
                 classProperties,
                 meta[blockName],
-                interfaceName,
+                argumentInterfaceName,
             );
         }
     }
 
-    interfaces.push({
+    argumentInterfaces.push({
         kind: StructureKind.Interface,
-        name: interfaceName,
-        properties: interfaceProperties,
+        name: argumentInterfaceName,
+        properties: argumentInterfaceProperties,
         isExported: true,
+    });
+
+    computedInterfaces.push({
+        kind: StructureKind.Interface,
+        name: attributeInterfaceName,
+        properties: computedInterfaceProperties,
+        isExported: true,
+        extends: [argumentInterfaceName],
     });
 }

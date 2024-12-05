@@ -27,10 +27,15 @@ export abstract class TerraformResource implements HCLNode {
          * Some resources don't require names.
          */
         protected readonly args: { [key: string]: any },
+        /**
+         * The name of the resource.
+         * @example "my_service_account"
+         */
         protected readonly resourceName?: string,
         /**
          * The type of the resource.
          * If the resource has a type, then it requires a name.
+         * @example "google_service_account"
          */
         protected readonly resourceType?: string,
         /**
