@@ -1,7 +1,8 @@
+import JSON5 from 'json5';
 import {
     ClassDeclarationStructure,
+    GetAccessorDeclarationStructure,
     InterfaceDeclarationStructure,
-    PropertyDeclarationStructure,
     PropertySignatureStructure,
     SourceFile,
     StructureKind,
@@ -17,24 +18,21 @@ export function generateProperties(
     parentName = '',
 ) {
     const argumentInterfaces: InterfaceDeclarationStructure[] = [];
-    const computedInterfaces: InterfaceDeclarationStructure[] = [];
-    const classProperties: PropertyDeclarationStructure[] = [];
+    const classAttributeGetters: GetAccessorDeclarationStructure[] = [];
     const meta = {};
     traverseBlocks(
         resourceName,
         block,
         argumentInterfaces,
-        computedInterfaces,
-        classProperties,
+        classAttributeGetters,
         meta,
         parentName,
     );
     sourceFile.addInterfaces(argumentInterfaces);
-    sourceFile.addInterfaces(computedInterfaces);
-    classDeclaration.properties = classProperties;
+    classDeclaration.getAccessors = classAttributeGetters;
     if (classDeclaration.ctors?.[0]) {
         classDeclaration.ctors[0].statements = [
-            `const meta = ${JSON.stringify(meta)};`,
+            `const meta = ${JSON5.stringify(meta)};`,
             `super(terraformConfig, "resource", args, resourceName, "${resourceName}", meta);`,
         ];
     }
@@ -45,8 +43,7 @@ export function traverseBlocks(
     resourceName: string,
     block: Block,
     argumentInterfaces: InterfaceDeclarationStructure[],
-    computedInterfaces: InterfaceDeclarationStructure[],
-    classProperties: PropertyDeclarationStructure[],
+    classAttributeGetters: GetAccessorDeclarationStructure[],
     meta: any,
     parentName = '',
 ) {
@@ -57,20 +54,30 @@ export function traverseBlocks(
      * Each block_types.X.block is a new interface.
      * and so on...
      */
-    let argumentInterfaceName = '';
-    let attributeInterfaceName = '';
-    if (!parentName) {
-        argumentInterfaceName = `${toPascalCase(resourceName)}Args`;
-    } else {
-        argumentInterfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceName)}`;
-    }
-    attributeInterfaceName = `${argumentInterfaceName}Attributes`;
+    const argumentInterfaceName = parentName
+        ? `${toPascalCase(parentName)}${toPascalCase(resourceName)}`
+        : `${toPascalCase(resourceName)}Args`;
 
     const argumentInterfaceProperties: PropertySignatureStructure[] = [];
-    const computedInterfaceProperties: PropertySignatureStructure[] = [];
 
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
+            /**
+             * Top level computed or required attributes are exposed as terraform resource attributes.
+             */
+            if (!parentName && (attributeBody.computed || attributeBody.required)) {
+                classAttributeGetters.push({
+                    kind: StructureKind.GetAccessor,
+                    name: attributeName,
+                    returnType: 'string',
+                    statements: [
+                        `return \`\${this.resourceType}.\${this.resourceName}.${attributeName}\`;`,
+                    ],
+                });
+            }
+            /**
+             * Every other non-computed attributes become properties in the interface.
+             */
             if (!attributeBody.computed) {
                 argumentInterfaceProperties.push({
                     kind: StructureKind.PropertySignature,
@@ -78,33 +85,20 @@ export function traverseBlocks(
                     type: getTSType(attributeBody),
                     hasQuestionToken: attributeBody.optional,
                 });
-            } else {
-                computedInterfaceProperties.push({
-                    kind: StructureKind.PropertySignature,
-                    name: attributeName,
-                    type: getTSType(attributeBody),
-                    hasQuestionToken: attributeBody.optional,
-                });
-            }
-            if (!parentName) {
-                classProperties.push({
-                    kind: StructureKind.Property,
-                    name: attributeName,
-                    type: attributeBody.computed
-                        ? attributeInterfaceName
-                        : getTSType(attributeBody),
-                    isReadonly: true,
-                    hasQuestionToken: attributeBody.optional,
-                    hasExclamationToken: !attributeBody.optional,
-                });
             }
         }
     }
 
+    /**
+     * Recursively traverse the block_types.
+     * Each block_types.X should become a new interface.
+     */
     if (block.block_types) {
         for (const [blockName, blockType] of Object.entries(block.block_types)) {
-            const childInterfaceName = `${argumentInterfaceName}${toPascalCase(blockName)}`;
-            const childComputedInterfaceName = `${childInterfaceName}Attributes`;
+            if (!meta[blockName]) {
+                meta[blockName] = { isBlock: true };
+            }
+
             let nestedBlockType = '';
             if (
                 (blockType.nesting_mode === 'list' || blockType.nesting_mode === 'set') &&
@@ -112,38 +106,21 @@ export function traverseBlocks(
             ) {
                 nestedBlockType = '[]';
             }
+
             const isOptional = blockName === 'timeouts' || !blockType.min_items;
+            const childInterfaceName = `${argumentInterfaceName}${toPascalCase(blockName)}`;
             argumentInterfaceProperties.push({
                 kind: StructureKind.PropertySignature,
                 name: blockName,
                 type: `${toPascalCase(childInterfaceName)}${nestedBlockType}`,
                 hasQuestionToken: isOptional,
             });
-            computedInterfaceProperties.push({
-                kind: StructureKind.PropertySignature,
-                name: blockName,
-                type: `${toPascalCase(childComputedInterfaceName)}${nestedBlockType}`,
-                hasQuestionToken: isOptional,
-            });
-            if (!meta[blockName]) {
-                meta[blockName] = { isBlock: true };
-            }
-            if (!parentName) {
-                classProperties.push({
-                    kind: StructureKind.Property,
-                    name: blockName,
-                    type: `${toPascalCase(childComputedInterfaceName)}${nestedBlockType}`,
-                    isReadonly: true,
-                    hasQuestionToken: isOptional,
-                    hasExclamationToken: !isOptional,
-                });
-            }
+
             traverseBlocks(
                 blockName,
                 blockType.block,
                 argumentInterfaces,
-                computedInterfaces,
-                classProperties,
+                classAttributeGetters,
                 meta[blockName],
                 argumentInterfaceName,
             );
@@ -155,13 +132,5 @@ export function traverseBlocks(
         name: argumentInterfaceName,
         properties: argumentInterfaceProperties,
         isExported: true,
-    });
-
-    computedInterfaces.push({
-        kind: StructureKind.Interface,
-        name: attributeInterfaceName,
-        properties: computedInterfaceProperties,
-        isExported: true,
-        extends: [argumentInterfaceName],
     });
 }

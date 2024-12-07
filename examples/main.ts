@@ -1,4 +1,4 @@
-import { Provider, Terraform, TerraformConfig } from '@tfkonf/core';
+import { Terraform, TerraformConfig } from '@tfkonf/core';
 import { google_service_account } from '@tfkonf/provider-google/google_service_account';
 
 const main = new TerraformConfig('main.tf');
@@ -21,11 +21,6 @@ new Terraform(main, {
             version: '6.12.0',
         },
     },
-});
-
-new Provider(main, 'google', {
-    project: 'foo',
-    region: 'us-west1',
 });
 
 main.save();
