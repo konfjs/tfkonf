@@ -16,6 +16,10 @@ export interface Attribute {
      * If the attribute is computed, then it should not be included in the interface body.
      */
     computed?: boolean;
+    /**
+     * If the attribute is required, then it should be required in the interface.
+     */
+    required?: boolean;
 }
 
 /**

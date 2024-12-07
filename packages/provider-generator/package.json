@@ -52,6 +52,7 @@
   ],
   "dependencies": {
     "commander": "12.1.0",
+    "json5": "2.2.3",
     "picocolors": "1.1.1",
     "ts-morph": "24.0.0"
   },

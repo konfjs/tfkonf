@@ -47,6 +47,7 @@ export function getListType(type: AttributeType) {
 }
 
 /**
+ * Simple terraform to typescript mapping.
  * Extract all the types from the providers.json file.
  * jq '[.. | select(type == "object" and has("type") and (.type | type != "object" )) | .type] | unique' providers.json > types.json
  *
