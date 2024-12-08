@@ -12,6 +12,6 @@ export class Module extends TerraformResource {
         readonly resourceName: string,
         readonly args: ModuleArgs,
     ) {
-        super(config, 'module', args, resourceName);
+        super(config, 'module', args, undefined, undefined, resourceName);
     }
 }

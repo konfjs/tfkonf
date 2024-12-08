@@ -11,6 +11,6 @@ export class Output extends TerraformResource {
         readonly resourceName: string,
         readonly args: OutputArgs,
     ) {
-        super(config, 'output', args, resourceName);
+        super(config, 'output', args, undefined, undefined, resourceName);
     }
 }

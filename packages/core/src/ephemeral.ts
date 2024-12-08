@@ -7,11 +7,11 @@ interface EphemeralArgs {
 
 export class Ephemeral extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly resourceType: string,
         readonly resourceName: string,
         readonly args: EphemeralArgs,
     ) {
-        super(config, 'ephemeral', args, resourceName, resourceType);
+        super(terraformConfig, 'ephemeral', args, undefined, resourceType, resourceName);
     }
 }

@@ -73,6 +73,11 @@ data "google_service_account" "my-service-account-data" {
   account_id = "foo"
 }
 
+provider "google" {
+  access_token = "foo"
+  alias        = "bar"
+}
+
 resource "google_project_iam_member" "my-iam-member" {
   project = "my-project"
   role    = "roles/iam.Admin2"

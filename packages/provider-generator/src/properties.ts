@@ -45,13 +45,20 @@ export function generateProperties(
         meta,
         parentName,
     );
+    const constructorStatements = [`const meta = ${JSON5.stringify(meta)};`];
+    if (blockID === 'provider') {
+        constructorStatements.push(
+            `super(terraformConfig, "${blockID}", args, meta, "${resourceType.replace('_provider', '')}");`,
+        );
+    } else {
+        constructorStatements.push(
+            `super(terraformConfig, "${blockID}", args, meta, "${resourceType}", resourceName);`,
+        );
+    }
     sourceFile.addInterfaces(argumentInterfaces);
     classDeclaration.getAccessors = classAttributeGetters;
     if (classDeclaration.ctors?.[0]) {
-        classDeclaration.ctors[0].statements = [
-            `const meta = ${JSON5.stringify(meta)};`,
-            `super(terraformConfig, "${blockID}", args, resourceName, "${resourceType}", meta);`,
-        ];
+        classDeclaration.ctors[0].statements = constructorStatements;
     }
     sourceFile.addClass(classDeclaration);
 }
@@ -83,6 +90,15 @@ export function traverseBlocks(
     }
 
     const argumentInterfaceProperties: PropertySignatureStructure[] = [];
+
+    if (blockID === 'provider') {
+        argumentInterfaceProperties.push({
+            kind: StructureKind.PropertySignature,
+            name: 'alias',
+            type: 'string',
+            hasQuestionToken: true,
+        });
+    }
 
     // TODO: All input arguments also should become output attributes?
     if (block.attributes) {

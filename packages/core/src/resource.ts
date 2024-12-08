@@ -30,10 +30,10 @@ export abstract class TerraformResource implements HCLNode {
          */
         protected readonly args: { [key: string]: any },
         /**
-         * The name of the resource.
-         * @example "my_service_account"
+         * Additional metadata for the resource.
+         * E.g. block types etc.
          */
-        protected readonly resourceName?: string,
+        protected readonly meta?: any,
         /**
          * The type of the resource.
          * If the resource has a type, then it requires a name.
@@ -41,10 +41,10 @@ export abstract class TerraformResource implements HCLNode {
          */
         protected readonly resourceType?: string,
         /**
-         * Additional metadata for the resource.
-         * E.g. block types etc.
+         * The name of the resource.
+         * @example "my_service_account"
          */
-        protected readonly meta?: any,
+        protected readonly resourceName?: string,
     ) {
         terraformConfig.addResource(this);
     }
