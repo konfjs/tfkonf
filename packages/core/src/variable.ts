@@ -18,7 +18,7 @@ export class Variable extends TerraformResource {
     constructor(
         protected readonly terraformConfig: TerraformConfig,
         protected readonly resourceName: string,
-        protected readonly args: VariableArgs,
+        readonly args: VariableArgs,
     ) {
         super(
             terraformConfig,

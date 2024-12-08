@@ -8,9 +8,9 @@ interface MovedArgs {
 
 export class Moved extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly args: MovedArgs,
     ) {
-        super(config, 'moved', args);
+        super(terraformConfig, 'moved', args);
     }
 }

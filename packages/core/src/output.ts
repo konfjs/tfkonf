@@ -7,10 +7,10 @@ interface OutputArgs {
 
 export class Output extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
-        readonly resourceName: string,
+        protected readonly terraformConfig: TerraformConfig,
+        protected readonly resourceName: string,
         readonly args: OutputArgs,
     ) {
-        super(config, 'output', args, undefined, undefined, resourceName);
+        super(terraformConfig, 'output', args, undefined, undefined, resourceName);
     }
 }

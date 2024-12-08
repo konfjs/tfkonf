@@ -11,7 +11,7 @@ interface RemovedArgs {
 export class Removed extends TerraformResource {
     constructor(
         protected readonly config: TerraformConfig,
-        protected readonly args: RemovedArgs,
+        readonly args: RemovedArgs,
     ) {
         super(config, 'removed', args);
     }

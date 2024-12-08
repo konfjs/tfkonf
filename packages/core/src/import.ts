@@ -8,9 +8,9 @@ interface ImportArgs {
 
 export class Import extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly args: ImportArgs,
     ) {
-        super(config, 'import', args);
+        super(terraformConfig, 'import', args);
     }
 }

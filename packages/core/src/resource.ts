@@ -28,7 +28,7 @@ export abstract class TerraformResource implements HCLNode {
          * The arguments for the resource.
          * Some resources don't require names.
          */
-        protected readonly args: { [key: string]: any },
+        readonly args: { [key: string]: any },
         /**
          * Additional metadata for the resource.
          * E.g. block types etc.

@@ -11,9 +11,9 @@ interface CheckArgs {
 
 export class Check extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly args: CheckArgs,
     ) {
-        super(config, 'check', args);
+        super(terraformConfig, 'check', args);
     }
 }

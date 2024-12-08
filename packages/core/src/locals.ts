@@ -7,9 +7,9 @@ interface LocalsArgs {
 
 export class Locals extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly args: LocalsArgs,
     ) {
-        super(config, 'locals', args);
+        super(terraformConfig, 'locals', args);
     }
 }

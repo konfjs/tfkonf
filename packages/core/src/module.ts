@@ -8,10 +8,10 @@ interface ModuleArgs {
 
 export class Module extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
-        readonly resourceName: string,
+        protected readonly terraformConfig: TerraformConfig,
+        protected readonly resourceName: string,
         readonly args: ModuleArgs,
     ) {
-        super(config, 'module', args, undefined, undefined, resourceName);
+        super(terraformConfig, 'module', args, undefined, undefined, resourceName);
     }
 }

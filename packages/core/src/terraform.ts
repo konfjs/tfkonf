@@ -40,10 +40,10 @@ interface TerraformArgs {
 
 export class Terraform extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         readonly args: TerraformArgs,
     ) {
-        super(config, 'terraform', args);
+        super(terraformConfig, 'terraform', args);
     }
 
     toHCL(): string {

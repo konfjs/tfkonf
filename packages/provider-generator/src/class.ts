@@ -3,6 +3,7 @@ import {
     ClassDeclarationStructure,
     ParameterDeclarationStructure,
     Project,
+    Scope,
     SourceFile,
     StructureKind,
 } from 'ts-morph';
@@ -40,6 +41,8 @@ export function createClassDeclaration(
             kind: StructureKind.Parameter,
             name: 'terraformConfig',
             type: 'TerraformConfig',
+            isReadonly: true,
+            scope: Scope.Protected,
         },
     ];
     if (!isProvider) {
@@ -47,12 +50,15 @@ export function createClassDeclaration(
             kind: StructureKind.Parameter,
             name: 'resourceName',
             type: 'string',
+            isReadonly: true,
+            scope: Scope.Protected,
         });
     }
     constructorParameters.push({
         kind: StructureKind.Parameter,
         name: 'args',
         type: `${toPascalCase(resourceType)}Args`,
+        isReadonly: true,
     });
     const classDeclaration: ClassDeclarationStructure = {
         kind: StructureKind.Class,
