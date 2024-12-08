@@ -2,16 +2,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import pc from 'picocolors';
 import {
-    ClassDeclarationStructure,
     ExportDeclarationStructure,
     IndentationText,
     Project,
     QuoteKind,
     StructureKind,
 } from 'ts-morph';
+import { createClassDeclaration, createSourceFile } from './class.js';
 import { generateProperties } from './properties.js';
 import type { ProviderSchema } from './schema.js';
-import { toPascalCase } from './utils.js';
 
 export function generateProviders(providerSchemas: Record<string, ProviderSchema>) {
     const project = new Project({
@@ -51,47 +50,17 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                 `Generating TypeScript code for resource: ${pc.yellowBright(resourceName)}`,
             );
 
-            const sourceFile = project.createSourceFile(
-                path.join(outDir, `${resourceName}.ts`),
-                {
-                    kind: StructureKind.SourceFile,
-                },
-                {
-                    overwrite: true,
-                },
+            const sourceFile = createSourceFile(project, outDir, resourceName);
+            const classDeclaration = createClassDeclaration(resourceName);
+
+            generateProperties(
+                sourceFile,
+                classDeclaration,
+                'resource',
+                resourceName,
+                resourceBlock.block,
+                '',
             );
-
-            sourceFile.addImportDeclaration({
-                moduleSpecifier: '@tfkonf/core',
-                namedImports: ['TerraformConfig', 'TerraformResource'],
-            });
-
-            const classDeclaration: ClassDeclarationStructure = {
-                kind: StructureKind.Class,
-                name: resourceName,
-                extends: 'TerraformResource',
-                isExported: true,
-                ctors: [
-                    {
-                        parameters: [
-                            {
-                                name: 'terraformConfig',
-                                type: 'TerraformConfig',
-                            },
-                            {
-                                name: 'resourceName',
-                                type: 'string',
-                            },
-                            {
-                                name: 'args',
-                                type: `${toPascalCase(resourceName)}Args`,
-                            },
-                        ],
-                    },
-                ],
-            };
-
-            generateProperties(sourceFile, classDeclaration, resourceName, resourceBlock.block, '');
 
             exportDeclarations.push({
                 kind: StructureKind.ExportDeclaration,
@@ -99,6 +68,32 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
                 moduleSpecifier: `./${resourceName}.js`,
             });
         }
+
+        for (const [resourceName, resourceBlock] of Object.entries(schema.data_source_schemas)) {
+            const resourceType = `data_${resourceName}`;
+            console.log(
+                `Generating TypeScript code for data resource: ${pc.yellowBright(resourceType)}`,
+            );
+
+            const sourceFile = createSourceFile(project, outDir, resourceType);
+            const classDeclaration = createClassDeclaration(resourceType);
+
+            generateProperties(
+                sourceFile,
+                classDeclaration,
+                'data',
+                resourceName,
+                resourceBlock.block,
+                '',
+            );
+
+            exportDeclarations.push({
+                kind: StructureKind.ExportDeclaration,
+                namespaceExport: resourceType,
+                moduleSpecifier: `./${resourceType}.js`,
+            });
+        }
+
         indexTs.addExportDeclarations(exportDeclarations);
 
         project.saveSync();

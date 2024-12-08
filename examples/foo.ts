@@ -1,7 +1,9 @@
 import { TerraformConfig } from '@tfkonf/core';
 import { Import, Locals, Terraform, Variable } from '@tfkonf/core';
+import { data_google_service_account } from '@tfkonf/provider-google/data_google_service_account';
 import { google_access_context_manager_access_levels } from '@tfkonf/provider-google/google_access_context_manager_access_levels';
 import { google_alloydb_cluster } from '@tfkonf/provider-google/google_alloydb_cluster';
+import { google_project_iam_member } from '@tfkonf/provider-google/google_project_iam_member';
 import { google_service_account } from '@tfkonf/provider-google/google_service_account';
 import { google_service_account_iam_member } from '@tfkonf/provider-google/google_service_account_iam_member';
 
@@ -85,6 +87,16 @@ const sa = new google_service_account(m, 'my-service-account', {
     timeouts: {
         create: '10m',
     },
+});
+
+const d = new data_google_service_account(m, 'my-service-account-data', {
+    account_id: 'foo',
+});
+
+new google_project_iam_member(m, 'my-iam-member', {
+    project: 'my-project',
+    role: 'roles/iam.Admin2',
+    member: d.member,
 });
 
 new google_service_account_iam_member(m, 'my-iam-member', {

@@ -63,11 +63,14 @@ function attributeToHCL(value: any): string {
     if (typeof value === 'string') {
         const isResourceReference =
             /^([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)$/;
-        if (isResourceReference.test(value)) {
-            return value;
-        }
+        const dataReference =
+            /^data\.([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)\.([a-zA-Z_][a-zA-Z0-9_-]*)$/;
         const isLocalOrVariableReference = /^(local|var)\.[a-zA-Z_][a-zA-Z0-9_-]*$/;
-        if (isLocalOrVariableReference.test(value)) {
+        if (
+            isResourceReference.test(value) ||
+            dataReference.test(value) ||
+            isLocalOrVariableReference.test(value)
+        ) {
             return value;
         }
     }

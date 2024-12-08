@@ -56,7 +56,7 @@ export interface ProviderSchema {
             block: Block;
         };
     };
-    data_source_schemas?: {
+    data_source_schemas: {
         [resource: string]: {
             block: Block;
         };
