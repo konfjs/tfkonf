@@ -69,6 +69,16 @@ resource "google_service_account" "my-service-account" {
   }
 }
 
+data "google_service_account" "my-service-account-data" {
+  account_id = "foo"
+}
+
+resource "google_project_iam_member" "my-iam-member" {
+  project = "my-project"
+  role    = "roles/iam.Admin2"
+  member  = data.google_service_account.my-service-account-data.member
+}
+
 resource "google_service_account_iam_member" "my-iam-member" {
   service_account_id = google_service_account.my-service-account.account_id
   role               = "roles/iam.Admin"

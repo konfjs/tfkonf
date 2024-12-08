@@ -10,10 +10,26 @@ import {
 import type { Block } from './schema.js';
 import { getTSType, toPascalCase } from './utils.js';
 
+type BlockID =
+    | 'resource'
+    | 'data'
+    | 'provider'
+    | 'variable'
+    | 'output'
+    | 'locals'
+    | 'module'
+    | 'moved'
+    | 'terraform'
+    | 'check'
+    | 'import'
+    | 'removed'
+    | 'ephemeral';
+
 export function generateProperties(
     sourceFile: SourceFile,
     classDeclaration: ClassDeclarationStructure,
-    resourceName: string,
+    blockID: BlockID,
+    resourceType: string,
     block: Block,
     parentName = '',
 ) {
@@ -21,7 +37,8 @@ export function generateProperties(
     const classAttributeGetters: GetAccessorDeclarationStructure[] = [];
     const meta = {};
     traverseBlocks(
-        resourceName,
+        blockID,
+        resourceType,
         block,
         argumentInterfaces,
         classAttributeGetters,
@@ -33,14 +50,15 @@ export function generateProperties(
     if (classDeclaration.ctors?.[0]) {
         classDeclaration.ctors[0].statements = [
             `const meta = ${JSON5.stringify(meta)};`,
-            `super(terraformConfig, "resource", args, resourceName, "${resourceName}", meta);`,
+            `super(terraformConfig, "${blockID}", args, resourceName, "${resourceType}", meta);`,
         ];
     }
     sourceFile.addClass(classDeclaration);
 }
 
 export function traverseBlocks(
-    resourceName: string,
+    blockID: BlockID,
+    resourceType: string,
     block: Block,
     argumentInterfaces: InterfaceDeclarationStructure[],
     classAttributeGetters: GetAccessorDeclarationStructure[],
@@ -54,24 +72,34 @@ export function traverseBlocks(
      * Each block_types.X.block is a new interface.
      * and so on...
      */
-    const argumentInterfaceName = parentName
-        ? `${toPascalCase(parentName)}${toPascalCase(resourceName)}`
-        : `${toPascalCase(resourceName)}Args`;
+    let argumentInterfaceName = '';
+    if (parentName) {
+        argumentInterfaceName = `${toPascalCase(parentName)}${toPascalCase(resourceType)}`;
+    } else {
+        argumentInterfaceName = `${toPascalCase(resourceType)}Args`;
+        if (blockID === 'data') {
+            argumentInterfaceName = `Data${argumentInterfaceName}`;
+        }
+    }
 
     const argumentInterfaceProperties: PropertySignatureStructure[] = [];
 
+    // TODO: All input arguments also should become output attributes?
     if (block.attributes) {
         for (const [attributeName, attributeBody] of Object.entries(block.attributes)) {
             /**
              * Top level computed or required attributes are exposed as terraform resource attributes.
              */
             if (!parentName && (attributeBody.computed || attributeBody.required)) {
+                const getterValue = `\${this.resourceType}.\${this.resourceName}.${attributeName}\`;`;
                 classAttributeGetters.push({
                     kind: StructureKind.GetAccessor,
                     name: attributeName,
                     returnType: 'string',
                     statements: [
-                        `return \`\${this.resourceType}.\${this.resourceName}.${attributeName}\`;`,
+                        blockID === 'data'
+                            ? `return \`data.${getterValue}`
+                            : `return \`${getterValue}`,
                     ],
                 });
             }
@@ -117,6 +145,7 @@ export function traverseBlocks(
             });
 
             traverseBlocks(
+                blockID,
                 blockName,
                 blockType.block,
                 argumentInterfaces,

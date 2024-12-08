@@ -1,6 +1,21 @@
 import { TerraformConfig } from './config.js';
 import { BlockNode, HCLNode } from './hcl.js';
 
+type BlockID =
+    | 'resource'
+    | 'data'
+    | 'provider'
+    | 'variable'
+    | 'output'
+    | 'locals'
+    | 'module'
+    | 'moved'
+    | 'terraform'
+    | 'check'
+    | 'import'
+    | 'removed'
+    | 'ephemeral';
+
 /**
  * Represents a Terraform resource.
  * Each TerraformResource will belong to a TerraformConfig.
@@ -8,20 +23,7 @@ import { BlockNode, HCLNode } from './hcl.js';
 export abstract class TerraformResource implements HCLNode {
     constructor(
         protected readonly terraformConfig: TerraformConfig,
-        protected readonly blockType:
-            | 'resource'
-            | 'data'
-            | 'provider'
-            | 'variable'
-            | 'output'
-            | 'locals'
-            | 'module'
-            | 'moved'
-            | 'terraform'
-            | 'check'
-            | 'import'
-            | 'removed'
-            | 'ephemeral',
+        protected readonly blockID: BlockID,
         /**
          * The arguments for the resource.
          * Some resources don't require names.
@@ -48,13 +50,13 @@ export abstract class TerraformResource implements HCLNode {
     }
 
     toHCL(): string {
-        let blockType: string = this.blockType;
+        let blockID: string = this.blockID;
         if (this.resourceType) {
-            blockType = `${blockType} ${this.resourceType}`;
+            blockID = `${blockID} ${this.resourceType}`;
         }
         if (this.resourceName) {
-            blockType = `${blockType} ${this.resourceName}`;
+            blockID = `${blockID} ${this.resourceName}`;
         }
-        return new BlockNode(blockType, this.args, this.meta).toHCL(0);
+        return new BlockNode(blockID, this.args, this.meta).toHCL(0);
     }
 }
