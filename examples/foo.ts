@@ -4,6 +4,7 @@ import { data_google_service_account } from '@tfkonf/provider-google/data_google
 import { google_access_context_manager_access_levels } from '@tfkonf/provider-google/google_access_context_manager_access_levels';
 import { google_alloydb_cluster } from '@tfkonf/provider-google/google_alloydb_cluster';
 import { google_project_iam_member } from '@tfkonf/provider-google/google_project_iam_member';
+import { google_provider } from '@tfkonf/provider-google/google_provider';
 import { google_service_account } from '@tfkonf/provider-google/google_service_account';
 import { google_service_account_iam_member } from '@tfkonf/provider-google/google_service_account_iam_member';
 
@@ -91,6 +92,11 @@ const sa = new google_service_account(m, 'my-service-account', {
 
 const d = new data_google_service_account(m, 'my-service-account-data', {
     account_id: 'foo',
+});
+
+const provider = new google_provider(m, {
+    access_token: 'foo',
+    alias: 'bar',
 });
 
 new google_project_iam_member(m, 'my-iam-member', {

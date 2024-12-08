@@ -1,5 +1,11 @@
 import path from 'node:path';
-import { ClassDeclarationStructure, Project, SourceFile, StructureKind } from 'ts-morph';
+import {
+    ClassDeclarationStructure,
+    ParameterDeclarationStructure,
+    Project,
+    SourceFile,
+    StructureKind,
+} from 'ts-morph';
 import { toPascalCase } from './utils.js';
 
 export function createSourceFile(
@@ -25,7 +31,29 @@ export function createSourceFile(
     return sourceFile;
 }
 
-export function createClassDeclaration(resourceType: string): ClassDeclarationStructure {
+export function createClassDeclaration(
+    resourceType: string,
+    isProvider = false,
+): ClassDeclarationStructure {
+    const constructorParameters: ParameterDeclarationStructure[] = [
+        {
+            kind: StructureKind.Parameter,
+            name: 'terraformConfig',
+            type: 'TerraformConfig',
+        },
+    ];
+    if (!isProvider) {
+        constructorParameters.push({
+            kind: StructureKind.Parameter,
+            name: 'resourceName',
+            type: 'string',
+        });
+    }
+    constructorParameters.push({
+        kind: StructureKind.Parameter,
+        name: 'args',
+        type: `${toPascalCase(resourceType)}Args`,
+    });
     const classDeclaration: ClassDeclarationStructure = {
         kind: StructureKind.Class,
         name: resourceType,
@@ -33,20 +61,7 @@ export function createClassDeclaration(resourceType: string): ClassDeclarationSt
         isExported: true,
         ctors: [
             {
-                parameters: [
-                    {
-                        name: 'terraformConfig',
-                        type: 'TerraformConfig',
-                    },
-                    {
-                        name: 'resourceName',
-                        type: 'string',
-                    },
-                    {
-                        name: 'args',
-                        type: `${toPascalCase(resourceType)}Args`,
-                    },
-                ],
+                parameters: constructorParameters,
             },
         ],
     };

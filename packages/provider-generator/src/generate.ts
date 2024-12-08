@@ -94,6 +94,28 @@ export function generateProviders(providerSchemas: Record<string, ProviderSchema
             });
         }
 
+        console.log(
+            `Generating TypeScript code for provider resource: ${pc.yellowBright(providerName)}`,
+        );
+        const resourceType = `${path.basename(providerName)}_provider`;
+        const sourceFile = createSourceFile(project, outDir, resourceType);
+        const classDeclaration = createClassDeclaration(resourceType, true);
+
+        generateProperties(
+            sourceFile,
+            classDeclaration,
+            'provider',
+            resourceType,
+            schema.provider.block,
+            '',
+        );
+
+        exportDeclarations.push({
+            kind: StructureKind.ExportDeclaration,
+            namespaceExport: resourceType,
+            moduleSpecifier: `./${resourceType}.js`,
+        });
+
         indexTs.addExportDeclarations(exportDeclarations);
 
         project.saveSync();

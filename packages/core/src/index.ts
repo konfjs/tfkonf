@@ -8,7 +8,6 @@ export * from './locals.js';
 export * from './module.js';
 export * from './moved.js';
 export * from './output.js';
-export * from './provider.js';
 export * from './removed.js';
 export * from './resource.js';
 export * from './terraform.js';

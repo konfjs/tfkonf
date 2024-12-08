@@ -16,15 +16,22 @@ interface VariableArgs {
 
 export class Variable extends TerraformResource {
     constructor(
-        protected readonly config: TerraformConfig,
+        protected readonly terraformConfig: TerraformConfig,
         protected readonly resourceName: string,
         protected readonly args: VariableArgs,
     ) {
-        super(config, 'variable', args, resourceName, undefined, {
-            validation: {
-                isBlock: true,
+        super(
+            terraformConfig,
+            'variable',
+            args,
+            {
+                validation: {
+                    isBlock: true,
+                },
             },
-        });
+            undefined,
+            resourceName,
+        );
     }
 
     toHCL(): string {
