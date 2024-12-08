@@ -26,4 +26,26 @@ export class Variable extends TerraformResource {
             },
         });
     }
+
+    toHCL(): string {
+        let result = `variable "${this.resourceName}" {\n`;
+        for (const [key, value] of Object.entries(this.args)) {
+            /**
+             * Terraform variable's "type" attribute should be raw string without quotes.
+             * Validation is a block.
+             */
+            if (key === 'type') {
+                result += `type = ${value}\n`;
+            } else if (key === 'validation') {
+                result += 'validation {\n';
+                for (const [k, v] of Object.entries(value)) {
+                    result += `  ${k} = ${JSON.stringify(v)}\n`;
+                }
+                result += '}\n';
+            } else {
+                result += `${key} = ${JSON.stringify(value)}\n`;
+            }
+        }
+        return `${result}}`;
+    }
 }

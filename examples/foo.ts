@@ -101,9 +101,12 @@ const l = new Locals(m, {
 });
 
 const v = new Variable(m, 'cluster_name22', {
-    // TODO: Variable type should not have string quotes in the HCL.
     type: 'list(string)',
     default: ['foo', 'bar'],
+    validation: {
+        condition: true,
+        error_message: 'foo',
+    },
 });
 
 new Import(m, {

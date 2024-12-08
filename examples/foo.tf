@@ -83,8 +83,12 @@ locals {
 }
 
 variable "cluster_name22" {
-  type    = "list(string)"
+  type    = list(string)
   default = ["foo", "bar"]
+  validation {
+    condition     = true
+    error_message = "foo"
+  }
 }
 
 import {
