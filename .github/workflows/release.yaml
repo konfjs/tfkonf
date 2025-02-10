@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
+jobs:
+  release:
+    outputs:
+      releases_created: ${{ steps.release.outputs.releases_created }}
+      paths_released: ${{ steps.release.outputs.paths_released }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print release outputs
+        run: |
+          echo "Release created: ${{ steps.release.outputs.releases_created }}"
+          echo "Paths released: ${{ steps.release.outputs.paths_released }}"
+
+  publish:
+    runs-on: ubuntu-24.04
+    needs: release
+    if: needs.release.outputs.releases_created == 'true'
+    strategy:
+      matrix:
+        package: ${{ fromJSON(needs.release.outputs.paths_released) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: ./pnpm-lock.yaml
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        working-directory: ${{ matrix.package }}
+        run: pnpm install
+
+      - name: Build package
+        working-directory: ${{ matrix.package }}
+        run: pnpm build
+
+      - name: Publish package
+        working-directory: ${{ matrix.package }}
+        run: pnpm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true

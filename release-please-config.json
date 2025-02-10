@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/refs/heads/main/schemas/config.json",
+  "release-type": "node",
+  "bump-minor-pre-major": true,
+  "include-component-in-tag": true,
+  "changelog-sections": [
+    {
+      "type": "feat",
+      "hidden": false,
+      "section": "New Features"
+    },
+    {
+      "type": "fix",
+      "hidden": false,
+      "section": "Bug Fixes"
+    },
+    {
+      "type": "chore",
+      "hidden": false,
+      "section": "Chores"
+    },
+    {
+      "type": "ci",
+      "hidden": false,
+      "section": "Chores"
+    },
+    {
+      "type": "deps",
+      "hidden": false,
+      "section": "Dependencies"
+    },
+    {
+      "type": "deps-dev",
+      "hidden": false,
+      "section": "Dependencies"
+    }
+  ],
+  "packages": {
+    "packages/core": {
+      "package-name": "@tfkonf/core"
+    },
+    "packages/provider-generator": {
+      "package-name": "@tfkonf/provider-generator"
+    }
+  }
+}
