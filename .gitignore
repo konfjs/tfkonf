@@ -136,3 +136,5 @@ dist
 .terraform
 schema.json
 packages/provider-generator/provider-*
+
+.DS_Store
