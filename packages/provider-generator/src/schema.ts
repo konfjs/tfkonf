@@ -1,4 +1,14 @@
-export type AttributeType = 'bool' | 'number' | 'string' | unknown[];
+/**
+ * https://developer.hashicorp.com/terraform/language/expressions/type-constraints
+ */
+export type PrimitiveType = 'string' | 'number' | 'bool';
+export type CollectionType = 'list' | 'map' | 'set';
+export type StructuralType = 'object' | 'tuple';
+
+export type AttributeType =
+    | PrimitiveType
+    | [CollectionType, PrimitiveType]
+    | [CollectionType, [StructuralType, { [key: string]: AttributeType }]];
 
 export interface Attribute {
     /**
@@ -8,6 +18,7 @@ export interface Attribute {
      */
     type: AttributeType;
     description?: string;
+    description_kind?: 'markdown' | 'plain';
     /**
      * If attribute is marked as optional, then it should be optional in the interface.
      */
@@ -20,6 +31,8 @@ export interface Attribute {
      * If the attribute is required, then it should be required in the interface.
      */
     required?: boolean;
+    sensitive?: boolean;
+    deprecated?: boolean;
 }
 
 /**
@@ -28,20 +41,22 @@ export interface Attribute {
  * jq '[.. | objects | select(has("nesting_mode")) | {nesting_mode, min_items, max_items}] | unique' google/schema.json
  */
 export interface BlockType {
-    nesting_mode: 'single' | 'list' | 'set';
+    nesting_mode: 'list' | 'set' | 'single';
     block: Block;
     min_items?: number;
     max_items?: number;
 }
 
 export interface Block {
-    description?: string;
     attributes?: {
         [key: string]: Attribute;
     };
     block_types?: {
         [key: string]: BlockType;
     };
+    description?: string;
+    description_kind?: 'markdown' | 'plain';
+    deprecated?: boolean;
 }
 
 /**
@@ -52,14 +67,30 @@ export interface ProviderSchema {
         block: Block;
     };
     resource_schemas: {
-        [resource: string]: {
+        [resource_name: string]: {
             block: Block;
         };
     };
-    data_source_schemas: {
-        [resource: string]: {
+    data_source_schemas?: {
+        [resource_name: string]: {
             block: Block;
         };
     };
-    functions?: Record<string, any>;
+    ephemeral_resource_schemas?: {
+        [resource_name: string]: {
+            block: Block;
+        };
+    };
+    functions?: {
+        [function_name: string]: {
+            description?: string;
+            summary?: string;
+            return_type?: string;
+            parameters?: {
+                name: string;
+                description?: string;
+                type: string;
+            }[];
+        };
+    };
 }
