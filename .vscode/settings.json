@@ -1,8 +1,12 @@
 {
   "biome.enabled": true,
   "deno.enable": false,
+  "prettier.enable": false,
   "editor.defaultFormatter": "biomejs.biome",
   "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
