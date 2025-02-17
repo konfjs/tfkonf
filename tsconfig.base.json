@@ -1,15 +1,18 @@
 {
   "compilerOptions": {
+    "lib": ["ES2022"],
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    // "erasableSyntaxOnly": true, // TypeScript 5.8 feature. So we can use native NodeJS support.
+
     "declaration": true,
-    "lib": ["ES2022", "DOM"],
-    "module": "Node16",
-    "moduleResolution": "node16",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUncheckedIndexedAccess": true,
-    "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022"
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmitOnError": true
   }
 }
