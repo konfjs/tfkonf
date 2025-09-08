@@ -32,8 +32,8 @@ importers:
   packages/provider-generator:
     dependencies:
       commander:
-        specifier: 13.1.0
-        version: 13.1.0
+        specifier: 14.0.0
+        version: 14.0.0
       json5:
         specifier: 2.2.3
         version: 2.2.3
@@ -430,9 +430,9 @@ packages:
   code-block-writer@13.0.3:
     resolution: {integrity: sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg==}
 
-  commander@13.1.0:
-    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
-    engines: {node: '>=18'}
+  commander@14.0.0:
+    resolution: {integrity: sha512-2uM9rYjPvyq39NwLRqaiLtWHyDC1FvryJDa2ATTVims5YAS4PupsEQsDvP14FqhFr0P49CYDugi59xaxJlTXRA==}
+    engines: {node: '>=20'}
 
   debug@4.4.0:
     resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
@@ -946,7 +946,7 @@ snapshots:
 
   code-block-writer@13.0.3: {}
 
-  commander@13.1.0: {}
+  commander@14.0.0: {}
 
   debug@4.4.0:
     dependencies:
