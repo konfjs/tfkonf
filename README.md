@@ -2,6 +2,20 @@
 
 Terraform / OpenTofu in Typescript. Like CDKTF but simpler.
 
+## ⚠️ CDKTF deprecation
+
+CDKTF was officially deprecated on Dec 10, 2025. <https://github.com/hashicorp/terraform-cdk/pull/3949>
+
+I believe there is a genuine need for an alternative for people who preferred CDKTF's approach of using familiar programming languages to define infrastructure as code. I will be maintaining this project to provide a simpler and more focused alternative to CDKTF.
+
+For now, tfkonf is focused on TypeScript, but I may consider adding support for other languages in the future based on demand. If you are interested in contributing to this effort, please reach out!
+
+This library is currently in early development. Not every feature of Terraform is supported yet. Please open issues or PRs for any missing features you need.
+
+**Contributions are welcome!**
+
+---
+
 ## Concepts
 
 `@tfkonf/core` - Core library that provides the basic building blocks for creating Terraform configurations.
