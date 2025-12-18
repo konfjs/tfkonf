@@ -1,9 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directories:
-      - "/"
-      - "/packages/**"
+    directory: "/"
     schedule:
       interval: "daily"
     commit-message:
