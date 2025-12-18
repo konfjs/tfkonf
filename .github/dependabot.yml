@@ -7,3 +7,7 @@ updates:
     commit-message:
       prefix: "deps"
       prefix-development: "deps(dev)"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
