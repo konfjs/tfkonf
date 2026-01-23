@@ -11,7 +11,7 @@
     "@biomejs/biome": "2.3.11",
     "@types/node": "24.10.9",
     "typescript": "5.9.3",
-    "vitest": "4.0.17"
+    "vitest": "4.0.18"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
