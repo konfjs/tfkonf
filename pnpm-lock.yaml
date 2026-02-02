@@ -32,8 +32,8 @@ importers:
   packages/provider-generator:
     dependencies:
       commander:
-        specifier: 14.0.2
-        version: 14.0.2
+        specifier: 14.0.3
+        version: 14.0.3
       json5:
         specifier: 2.2.3
         version: 2.2.3
@@ -453,8 +453,8 @@ packages:
   code-block-writer@13.0.3:
     resolution: {integrity: sha512-Oofo0pq3IKnsFtuHqSF7TqBfr71aeyZDVJ0HpmqB7FBM2qEigL0iPONSCZSO9pE9dZTAxANe5XHG9Uy0YMv8cg==}
 
-  commander@14.0.2:
-    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
+  commander@14.0.3:
+    resolution: {integrity: sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw==}
     engines: {node: '>=20'}
 
   es-module-lexer@1.7.0:
@@ -910,7 +910,7 @@ snapshots:
 
   code-block-writer@13.0.3: {}
 
-  commander@14.0.2: {}
+  commander@14.0.3: {}
 
   es-module-lexer@1.7.0: {}
 
